@@ -1,0 +1,23 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2096
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- FM 452 CAM MODULE
+[_S7H_HSP_6ES7_452_1AH01_0AE0_CT]
+ObjType=2366543
+prefix=OM
+server=S7FK45CX.DLL
+basetype=_S7H_6ES7_452_1AH00_0AE0_CT
+IsCatEntry=1
+MLFB=6ES7 452-1AH01-0AE0
+SHORTNAME=FM 452 CAM
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_CRITICAL_FWEXCHANGE=1
+FW_VERSION=V1.0
+HSP_ID=2096
+HSP_NAME=FM 452 CAM MODULE
+HWCNFX_FOR_HWU=5.2.1.0
+HWCNFX_VER=5.5.4.0|0
+

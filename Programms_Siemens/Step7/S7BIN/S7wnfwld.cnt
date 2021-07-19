@@ -1,0 +1,16 @@
+:Base S7wnfwld.hlp
+1 cargador de firmware
+2 Campo de aplicación=HDD_S0
+2 Cargar el firmware=Firmware_laden
+1 PROFIBUS
+2 Paso 1 - abrir archivo a cargar=HDD_S1
+2 Paso 2 - seleccionar interface=HDD_S2
+2 Paso 3 - establecer enlace con el módulo (módulo PROFIBUS)=HDD_S3_PB
+2 Paso 4 - ejecutar el proceso de carga (módulo PROFIBUS)=HDD_S4_PB
+1 Ethernet
+2 Paso 1 - abrir archivo a cargar=HDD_S1
+2 Paso 2 - seleccionar interface=HDD_S2
+2 Paso 3 (módulo Ethernet / Dirección IP)=HID_S3_IEIP
+2 Paso 3 - ejecutar el proceso de carga (módulo Ethernet / dirección MAC)=HDD_S3_IE
+2 Paso 4 - ejecutar el proceso de carga (módulo Ethernet - CP con PROFINET)=HDD_S4_PN
+2 Paso 4 (módulo Ethernet)=HID_S4_IEIP

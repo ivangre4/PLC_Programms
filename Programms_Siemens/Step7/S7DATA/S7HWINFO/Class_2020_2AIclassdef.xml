@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200S ClassDefinition AI-Modules Class_2020_2AIclassdef.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+             http://www.siemens.com/Industry/2002/07/Automation/Base                ADBaseV1.xsd
+             http://www.siemens.com/Industry/2002/07/Automation/HWKonfig            HWKV1.xsd
+             " DefaultLanguage="de">
+    <prim:FileInfo Version="1.0">
+        <prim:Created Timestamp="2007-04-01T08:18:00Z" Tool="STEP7 Version V5.3SP2" User="BH9668"/>
+        <prim:LastModified Timestamp="2007-04-01T08:18:00Z" Tool="Textpad" User="BH9668"/>
+    </prim:FileInfo>
+    <base:Project ID="{544E0358-AD27-435e-9554-3E1FB8932762}" Name="Class Definition for ET200S 2AI-Modules">
+        <base:StructuralFeature>
+            <base:Device ID="1" OType="Module">
+                <base:SettingsFeature>
+                    <hwk:DatasetList>
+                        <hwk:Dataset Name="Dataset0" DSNr="0" DSLen="12">
+                            <!-- Bereichseinstellungen -->
+                            <hwk:Par Name="AI_Type" PNr="7">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Messart/-bereich Kanal 0"/>
+                                </base:DisplayNameFeature>
+                                <hwk:datatype>FIELD4</hwk:datatype>
+                                <hwk:byteAddr>3</hwk:byteAddr>
+                                <hwk:bitAddr>0</hwk:bitAddr>
+                                <hwk:distance>4</hwk:distance>
+                            </hwk:Par>
+                            <hwk:Par Name="AI_Type" PNr="8">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Messart/-bereich Kanal 1"/>
+                                </base:DisplayNameFeature>
+                                <hwk:datatype>FIELD4</hwk:datatype>
+                                <hwk:byteAddr>3</hwk:byteAddr>
+                                <hwk:bitAddr>4</hwk:bitAddr>
+                                <hwk:distance>4</hwk:distance>
+                            </hwk:Par>
+                        </hwk:Dataset>
+                    </hwk:DatasetList>
+		    <hwk:TransformTable Name="Transform Table for ET200S to Values of ET200M">
+			<hwk:AI_Range Name="4..20 mA 2DMU" Nr="1">
+				<hwk:mod_val>0x01</hwk:mod_val>
+				<hwk:exp_art>0x03</hwk:exp_art>
+				<hwk:exp_range>0x03</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="0..20 mA 4DMU" Nr="2">
+				<hwk:mod_val>0x02</hwk:mod_val>
+				<hwk:exp_art>0x02</hwk:exp_art>
+				<hwk:exp_range>0x02</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="4..20 mA 4DMU" Nr="3">
+				<hwk:mod_val>0x03</hwk:mod_val>
+				<hwk:exp_art>0x02</hwk:exp_art>
+				<hwk:exp_range>0x03</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="+-20 mA" Nr="4">
+				<hwk:mod_val>0x04</hwk:mod_val>
+				<hwk:exp_art>0x02</hwk:exp_art>
+				<hwk:exp_range>0x04</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="+-2.5 V" Nr="5">
+				<hwk:mod_val>0x05</hwk:mod_val>
+				<hwk:exp_art>0x01</hwk:exp_art>
+				<hwk:exp_range>0x05</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="+-5 V" Nr="6">
+				<hwk:mod_val>0x06</hwk:mod_val>
+				<hwk:exp_art>0x01</hwk:exp_art>
+				<hwk:exp_range>0x06</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="1..5 V" Nr="7">
+				<hwk:mod_val>0x07</hwk:mod_val>
+				<hwk:exp_art>0x01</hwk:exp_art>
+				<hwk:exp_range>0x07</hwk:exp_range>
+			</hwk:AI_Range>
+			<hwk:AI_Range Name="+-10 V" Nr="9">
+				<hwk:mod_val>0x09</hwk:mod_val>
+				<hwk:exp_art>0x01</hwk:exp_art>
+				<hwk:exp_range>0x09</hwk:exp_range>
+			</hwk:AI_Range>
+		    </hwk:TransformTable>
+                </base:SettingsFeature>
+            </base:Device>
+        </base:StructuralFeature>
+    </base:Project>
+</prim:Document>

@@ -1,0 +1,204 @@
+;---------------------------------------------
+;----------- Device
+;---------------------------------------------
+
+; ========================================================================================
+; PROFINET IO
+;	|_ Gateway
+; 		|_ 
+; ========================================================================================
+
+; ---------------------- Katalogobjekt für Gateway-Eintrag
+[_S7H_HSP_KAT_PN_GATEWAY_KAT]
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316787
+HWCNFX_FOR_HWU=5.3.2.1
+HWCNFX_VER=5.3.2.1|0
+IsCatEntry=1
+ObjType=2363996
+
+
+;---------------------------------------------
+; IWLAN/PB Link Katalog
+;---------------------------------------------
+
+[_IWLAN_PB_LINK_PNIO_KAT_HSP]
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=2367397
+CatalogParent=2363996
+IsCatEntry=1
+IsInKatVisible=1
+
+;---------------------------------------------
+; IWLAN/PB Link 
+;---------------------------------------------
+
+[_IWLAN_PB_LINK_6GK1_411_5AB00_PN_KAT_HSP]
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=2367398
+CatalogParent=2367397
+IsCatEntry=1
+IsInKatVisible=1
+
+
+;---------------------------------------------
+; IWLAN/PB Link IO Device V1.1
+;---------------------------------------------
+
+[_S7H_6GK1_417_5AB00_V11_CT_HSP]
+basetype=_IE_PB_LINK_PNIO_AT
+
+ObjType=2367413
+prefix=OM
+server=S7WBPROX.DLL
+
+FW_VERSION=V1.1
+MLFB=6GK1 417-5AB00
+MLFB_PREFIX=PN_DPV1
+
+CatalogParent=2367398
+IsCatEntry=1
+AdditionalKatalogInfo=0x03
+
+DEVICE_INSTANCE=0
+PN_DEVICE_ID=0x0602
+HEAD_OBJTYPE=2367414
+MAX_SLAVES=8
+
+DP_OBJTYPE=2367415
+
+INFO_SECTION3_COUNT=3
+INFO_SECTION3_1=164089,4
+INFO_SECTION3_2=164095,4
+INFO_SECTION3_3=164097,2
+
+IS_IWLAN=1
+; RQ AP00216013 nie kleiner als 4 ms Aktualisierungszeit
+; ist in Vielfache von 1/32 ms 
+PN_MIN_DEVICE_INT=128
+
+MIN_SV_UPDATE_TIME=128
+SLAVE_BMP_FILE=WLANLINK
+
+CAN_DO_CLOCK=yes
+CAN_DO_CLOCK_DIR=1
+
+
+
+;---------------------------------------------
+; IWLAN/PB Link Kopfbaugruppe (IE Anschluß)
+;---------------------------------------------
+
+[_S7H_6GK1_417_5AB00_IO_V11_CT_HSP]
+basetype=_S7H_6GK1_411_5AB00_IO_V10_CT
+ObjType=2367414
+prefix=OM
+server=S7WBPROX.DLL
+ALTERNATIVE_MLFB=6GK1 417-5AB00
+IO_TYPE=0x41
+CAN_DO_CLOCK=yes
+CAN_DO_CLOCK_DIR=1
+DS_ROUTING_ACTIV=1
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=0
+
+
+
+; ---------------------- IE/PB Link DP Master S7/DPV1-Slaveable
+[_S7H_6GK1_411_7AB00_DP_V11_CT_HSP]
+basetype=_S7H_6GK1_411_5AB00_DP_V20_CT
+ObjType=2367415
+prefix=OM
+server=S7HKDMAX.DLL
+CLASS_PROPERTIES=0
+nKatChilds=0
+MAX_INPUT_DATA_LEN=256
+MAX_OUTPUT_DATA_LEN=256
+
+PNO_IDENT_NO=0x812C
+
+
+;---------------------------------------------
+;----------- Netzübergang
+;---------------------------------------------
+
+;------------------------------ IWLAN/PB Link Katalog
+[_S7H_IWLAN_PB_LINK_PN_KAT_AT_HSP]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=2367400
+CatalogParent=1335414
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+
+;--------------------------------
+
+;---------------------------------------------
+;----------- IWLAN/PB Link Katalog 5AB00 Netzübergang
+;---------------------------------------------
+[_S7H_IWLAN_PB_LINK_5AB00_KAT_AT_HSP]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=2367401
+CatalogParent=2367400
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+;--------------------------------
+
+; ----------------------------- S7-300 Rack für IWLAN/PB Link Basic V1.1
+[_S7H_6ES7_RACK_IWLAN_PB_LINK_5AB00_V11_CT_HSP]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=2367416
+MLFB=6GK1 417-5AB00
+FW_VERSION=V1.1
+CatalogParent=2367401
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=2367417, 2, FIXED
+
+
+; ----------------------------- IWLAN/PB Link PNIO V1.1
+[_S7H_CBA_IWLAN_PB_LINK_5AB00_V11_CT_HSP] 
+server=s7wblnkx.dll 
+prefix=OM
+ObjType=2367417 
+basetype=_S7H_CBA_IE_PB_LINK_CT 
+AutoCreatedChild1=1335510, 1,FIXED 
+; geändertes neues DP-Modul verwenden 
+AutoCreatedChild2=2367418, 2, FIXED
+FW_VERSION=V1.1
+MLFB=6GK1 417-5AB00 
+ALTERNATIVE_MLFB=6GK1 417-5AB00 
+MAX_SLAVES=8
+DO_DS_ROUTING_SELECTION=1 
+DS_ROUTING_ACTIV=1 
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=0 
+; DP-Master Submodul hat das gleiche Metawissen, mal wird der eine gefragt, mal der andere 
+                         
+PNO_IDENT_NO=0x812C
+
+
+; ----------------------------- DP-Master-Submodul für Link BASIC V1.1
+[_S7H_WLAN_PB_LINK_DPMASTER_SUBMODUL_FW11_CT_HSP]
+basetype=_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_V20_CT
+ObjType=2367418
+prefix=OM
+server=S7HKDMAX.DLL
+CLASS_PROPERTIES=0
+nKatChilds=0
+PNO_IDENT_NO=0x812C
+
+
+MLFB=6GK1 417-5AB00
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.3.2.1
+HSP_NAME=IWLAN/PB Link DPV1
+HSP_ID=1009

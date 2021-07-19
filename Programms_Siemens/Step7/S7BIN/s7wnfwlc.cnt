@@ -1,0 +1,16 @@
+:Base S7wnfwlc.hlp
+1 Domaine d'utilisation=HDD_S0@s7wnfwlc.hlp
+1 Appel du chargeur de firmware=Firmware_laden
+1 Dialogues / Marche à suivre
+1 Dialogues / Marche à suivre - Modules PROFIBUS
+2 1e étape : Ouvrir le fichier de chargement=HDD_S1
+2 2e étape : Sélectionner l'interface=HDD_S2
+2 3e étape : Etablir une liaison au module=HDD_S3_PB
+2 4e étape : Réaliser le chargement=HDD_S4_PB
+1 Dialogues / Marche à suivre - Modules Ethernet
+2 1e étape : Ouvrir le fichier de chargement=HDD_S1
+2 2e étape : Sélectionner l'interface=HDD_S2
+2 3e étape : Réaliser le chargement directement via l'adresse MAC (adresse MAC sélectionnée)=HDD_S3_IE
+2 3e étape : Déterminer l'adresse MAC /  Contrôle de compatibilité (adresse IP sélectionnée)=HID_S3_IEIP
+2 4e étape : Réaliser le chargement (CP avec PROFINET)=HDD_S4_PN
+2 4e étape : Réaliser le chargement (CP sans PROFINET)=HID_S4_IEIP

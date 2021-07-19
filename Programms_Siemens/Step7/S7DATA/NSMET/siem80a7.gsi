@@ -1,0 +1,979 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; GSI (italienisch) fuer Diagnose-Repeater
+; Stand: 8.06.2001
+; Version 0.3
+; 
+; Die Diagnose der Segmente liegt parallel vor
+; Laengenverkuerzung der Diagnose ueber das Prm-Telegramm
+; ===============
+; Version 0.2
+; minTSDR Werte korrigiert
+; kleine Korrekturen
+; 
+; ===============
+; Version 0.3
+; Verzeichnis: Netzkomponenten eingefuehrt
+; Bei den Parametriertexten ON/OFF entfernt
+;
+; from:
+; Albert Tretter 
+; SIEMENS AG
+; A&D AS E 321
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#Profibus_DP
+; <Unit-Definition-List>
+GSD_Revision=3
+Vendor_Name="SIEMENS AG"
+Model_Name="Diagnostic Repeater"
+Revision="1.0"
+Ident_Number=0x80a7
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="hardware release 1.0"
+Software_Release="software release 1.0"
+Info_Text="Repeater per la diagnostica delle linee del PROFIBUS-DP (RS485), IP20, fino a 12 Mbaud"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+45.45_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=15
+MaxTsdr_19.2=15
+MaxTsdr_93.75=15
+MaxTsdr_187.5=15
+MaxTsdr_500=15
+MaxTsdr_45.45=15
+MaxTsdr_1.5M=25
+MaxTsdr_3M=50
+MaxTsdr_6M=100
+MaxTsdr_12M=200
+Implementation_Type="DPC31"			
+Bitmap_Device="Si80A7_N"
+Bitmap_SF="Si80A7_S"
+;
+;
+; Slave-Specification:
+;
+;
+OrderNumber="6ES7 972-0AB00-0XA0"
+Set_Slave_Add_supp=0
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+Auto_Baud_supp=1
+Fail_Safe=1	
+Min_Slave_Intervall=1 
+Max_Diag_Data_Len=84
+Modular_Station=0
+Modul_Offset=0
+Slave_Family=0@Componenti di rete
+SI_ControlProgId="DiagRepeaterCtl.DiagRepeaterCtl"
+;
+;
+;
+; DPV1 Keys
+;
+DPV1_Slave=1
+WD_Base_1ms_supp=1
+Publisher_supp=0; dies macht beim DR keinen Sinn
+;
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; UnitDiag-Area fuer Leitungsfehlerstatus
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+;
+; Segment
+Unit_Diag_Bit(28)="====== Segmento DP3 ======"
+Unit_Diag_Bit(29)="====== Segmento DP2 ======"
+Unit_Diag_Bit(30)="====== Segment DP1 ======"
+Unit_Diag_Bit(31)="====== Interfaccia PG ======"
+;
+; Segment ON/OFF
+Unit_Diag_Bit(33)="Segmento disattivato"
+;
+;
+; Topologieermittlung ON/OFF
+Unit_Diag_Bit(34)="Rilevamento topologico disattivo"
+;
+;
+; Reflexionsfehlerrate Bit 7 = 0
+;
+Unit_Diag_Area=40-47
+Value(0)  ="Perc. errori riflessione: 0%"
+Value(1)  ="Perc. errori riflessione: 1%"
+Value(2)  ="Perc. errori riflessione: 2%"
+Value(3)  ="Perc. errori riflessione: 3%"
+Value(4)  ="Perc. errori riflessione: 4%"
+Value(5)  ="Perc. errori riflessione: 5%"
+Value(6)  ="Perc. errori riflessione: 6%"
+Value(7)  ="Perc. errori riflessione: 7%"
+Value(8)  ="Perc. errori riflessione: 8%"
+Value(9)  ="Perc. errori riflessione: 9%"
+Value(10) ="Perc. errori riflessione: 10%"
+Value(11) ="Perc. errori riflessione: 11%"
+Value(12) ="Perc. errori riflessione: 12%"
+Value(13) ="Perc. errori riflessione: 13%"
+Value(14) ="Perc. errori riflessione: 14%"
+Value(15) ="Perc. errori riflessione: 15%"
+Value(16) ="Perc. errori riflessione: 16%"
+Value(17) ="Perc. errori riflessione: 17%"
+Value(18) ="Perc. errori riflessione: 18%"
+Value(19) ="Perc. errori riflessione: 19%"
+Value(20) ="Perc. errori riflessione: 20%"
+Value(21) ="Perc. errori riflessione: 21%"
+Value(22) ="Perc. errori riflessione: 22%"
+Value(23) ="Perc. errori riflessione: 23%"
+Value(24) ="Perc. errori riflessione: 24%"
+Value(25) ="Perc. errori riflessione: 25%"
+Value(26) ="Perc. errori riflessione: 26%"
+Value(27) ="Perc. errori riflessione: 27%"
+Value(28) ="Perc. errori riflessione: 28%"
+Value(29) ="Perc. errori riflessione: 29%"
+Value(30) ="Perc. errori riflessione: 30%"
+Value(31) ="Perc. errori riflessione: 31%"
+Value(32) ="Perc. errori riflessione: 32%"
+Value(33) ="Perc. errori riflessione: 33%"
+Value(34) ="Perc. errori riflessione: 34%"
+Value(35) ="Perc. errori riflessione: 35%"
+Value(36) ="Perc. errori riflessione: 36%"
+Value(37) ="Perc. errori riflessione: 37%"
+Value(38) ="Perc. errori riflessione: 38%"
+Value(39) ="Perc. errori riflessione: 39%"
+Value(40) ="Perc. errori riflessione: 40%"
+Value(41) ="Perc. errori riflessione: 41%"
+Value(42) ="Perc. errori riflessione: 42%"
+Value(43) ="Perc. errori riflessione: 43%"
+Value(44) ="Perc. errori riflessione: 44%"
+Value(45) ="Perc. errori riflessione: 45%"
+Value(46) ="Perc. errori riflessione: 46%"
+Value(47) ="Perc. errori riflessione: 47%"
+Value(48) ="Perc. errori riflessione: 48%"
+Value(49) ="Perc. errori riflessione: 49%"
+Value(50) ="Perc. errori riflessione: 50%"
+Value(51) ="Perc. errori riflessione: 51%"
+Value(52) ="Perc. errori riflessione: 52%"
+Value(53) ="Perc. errori riflessione: 53%"
+Value(54) ="Perc. errori riflessione: 54%"
+Value(55) ="Perc. errori riflessione: 55%"
+Value(56) ="Perc. errori riflessione: 56%"
+Value(57) ="Perc. errori riflessione: 57%"
+Value(58) ="Perc. errori riflessione: 58%"
+Value(59) ="Perc. errori riflessione: 59%"
+Value(60) ="Perc. errori riflessione: 60%"
+Value(61) ="Perc. errori riflessione: 61%"
+Value(62) ="Perc. errori riflessione: 62%"
+Value(63) ="Perc. errori riflessione: 63%"
+Value(64) ="Perc. errori riflessione: 64%"
+Value(65) ="Perc. errori riflessione: 65%"
+Value(66) ="Perc. errori riflessione: 66%"
+Value(67) ="Perc. errori riflessione: 67%"
+Value(68) ="Perc. errori riflessione: 68%"
+Value(69) ="Perc. errori riflessione: 69%"
+Value(70) ="Perc. errori riflessione: 70%"
+Value(71) ="Perc. errori riflessione: 71%"
+Value(72) ="Perc. errori riflessione: 72%"
+Value(73) ="Perc. errori riflessione: 73%"
+Value(74) ="Perc. errori riflessione: 74%"
+Value(75) ="Perc. errori riflessione: 75%"
+Value(76) ="Perc. errori riflessione: 76%"
+Value(77) ="Perc. errori riflessione: 77%"
+Value(78) ="Perc. errori riflessione: 78%"
+Value(79) ="Perc. errori riflessione: 79%"
+Value(80) ="Perc. errori riflessione: 80%"
+Value(81) ="Perc. errori riflessione: 81%"
+Value(82) ="Perc. errori riflessione: 82%"
+Value(83) ="Perc. errori riflessione: 83%"
+Value(84) ="Perc. errori riflessione: 84%"
+Value(85) ="Perc. errori riflessione: 85%"
+Value(86) ="Perc. errori riflessione: 86%"
+Value(87) ="Perc. errori riflessione: 87%"
+Value(88) ="Perc. errori riflessione: 88%"
+Value(89) ="Perc. errori riflessione: 89%"
+Value(90) ="Perc. errori riflessione: 90%"
+Value(91) ="Perc. errori riflessione: 91%"
+Value(92) ="Perc. errori riflessione: 92%"
+Value(93) ="Perc. errori riflessione: 93%"
+Value(94) ="Perc. errori riflessione: 94%"
+Value(95) ="Perc. errori riflessione: 95%"
+Value(96) ="Perc. errori riflessione: 96%"
+Value(97) ="Perc. errori riflessione: 97%"
+Value(98) ="Perc. errori riflessione: 98%"
+Value(99) ="Perc. errori riflessione: 99%"
+Value(100) ="Perc. errori riflessione: 100%"
+;
+;
+;Telegrammfehlerrate Bit 7 = 1
+;
+;
+Value(128)="Perc. errori telegramma: 0%"
+Value(129)="Perc. errori telegramma: 1%"
+Value(130)="Perc. errori telegramma: 2%"
+Value(131)="Perc. errori telegramma: 3%"
+Value(132)="Perc. errori telegramma: 4%"
+Value(133)="Perc. errori telegramma: 5%"
+Value(134)="Perc. errori telegramma: 6%"
+Value(135)="Perc. errori telegramma: 7%"
+Value(136)="Perc. errori telegramma: 8%"
+Value(137)="Perc. errori telegramma: 9%"
+Value(138)="Perc. errori telegramma: 10%"
+Value(139)="Perc. errori telegramma: 11%"
+Value(140)="Perc. errori telegramma: 12%"
+Value(141)="Perc. errori telegramma: 13%"
+Value(142)="Perc. errori telegramma: 14%"
+Value(143)="Perc. errori telegramma: 15%"
+Value(144)="Perc. errori telegramma: 16%"
+Value(145)="Perc. errori telegramma: 17%"
+Value(146)="Perc. errori telegramma: 18%"
+Value(147)="Perc. errori telegramma: 19%"
+Value(148)="Perc. errori telegramma: 20%"
+Value(149)="Perc. errori telegramma: 21%"
+Value(150)="Perc. errori telegramma: 22%"
+Value(151)="Perc. errori telegramma: 23%"
+Value(152)="Perc. errori telegramma: 24%"
+Value(153)="Perc. errori telegramma: 25%"
+Value(154)="Perc. errori telegramma: 26%"
+Value(155)="Perc. errori telegramma: 27%"
+Value(156)="Perc. errori telegramma: 28%"
+Value(157)="Perc. errori telegramma: 29%"
+Value(158)="Perc. errori telegramma: 30%"
+Value(159)="Perc. errori telegramma: 31%"
+Value(160)="Perc. errori telegramma: 32%"
+Value(161)="Perc. errori telegramma: 33%"
+Value(162)="Perc. errori telegramma: 34%"
+Value(163)="Perc. errori telegramma: 35%"
+Value(164)="Perc. errori telegramma: 36%"
+Value(165)="Perc. errori telegramma: 37%"
+Value(166)="Perc. errori telegramma: 38%"
+Value(167)="Perc. errori telegramma: 39%"
+Value(168)="Perc. errori telegramma: 40%"
+Value(169)="Perc. errori telegramma: 41%"
+Value(170)="Perc. errori telegramma: 42%"
+Value(171)="Perc. errori telegramma: 43%"
+Value(172)="Perc. errori telegramma: 44%"
+Value(173)="Perc. errori telegramma: 45%"
+Value(174)="Perc. errori telegramma: 46%"
+Value(175)="Perc. errori telegramma: 47%"
+Value(176)="Perc. errori telegramma: 48%"
+Value(177)="Perc. errori telegramma: 49%"
+Value(178)="Perc. errori telegramma: 50%"
+Value(179)="Perc. errori telegramma: 51%"
+Value(180)="Perc. errori telegramma: 52%"
+Value(181)="Perc. errori telegramma: 53%"
+Value(182)="Perc. errori telegramma: 54%"
+Value(183)="Perc. errori telegramma: 55%"
+Value(184)="Perc. errori telegramma: 56%"
+Value(185)="Perc. errori telegramma: 57%"
+Value(186)="Perc. errori telegramma: 58%"
+Value(187)="Perc. errori telegramma: 59%"
+Value(188)="Perc. errori telegramma: 60%"
+Value(189)="Perc. errori telegramma: 61%"
+Value(190)="Perc. errori telegramma: 62%"
+Value(191)="Perc. errori telegramma: 63%"
+Value(192)="Perc. errori telegramma: 64%"
+Value(193)="Perc. errori telegramma: 65%"
+Value(194)="Perc. errori telegramma: 66%"
+Value(195)="Perc. errori telegramma: 67%"
+Value(196)="Perc. errori telegramma: 68%"
+Value(197)="Perc. errori telegramma: 69%"
+Value(198)="Perc. errori telegramma: 70%"
+Value(199)="Perc. errori telegramma: 71%"
+Value(200)="Perc. errori telegramma: 72%"
+Value(201)="Perc. errori telegramma: 73%"
+Value(202)="Perc. errori telegramma: 74%"
+Value(203)="Perc. errori telegramma: 75%"
+Value(204)="Perc. errori telegramma: 76%"
+Value(205)="Perc. errori telegramma: 77%"
+Value(206)="Perc. errori telegramma: 78%"
+Value(207)="Perc. errori telegramma: 79%"
+Value(208)="Perc. errori telegramma: 80%"
+Value(209)="Perc. errori telegramma: 81%"
+Value(210)="Perc. errori telegramma: 82%"
+Value(211)="Perc. errori telegramma: 83%"
+Value(212)="Perc. errori telegramma: 84%"
+Value(213)="Perc. errori telegramma: 85%"
+Value(214)="Perc. errori telegramma: 86%"
+Value(215)="Perc. errori telegramma: 87%"
+Value(216)="Perc. errori telegramma: 88%"
+Value(217)="Perc. errori telegramma: 89%"
+Value(218)="Perc. errori telegramma: 90%"
+Value(219)="Perc. errori telegramma: 91%"
+Value(220)="Perc. errori telegramma: 92%"
+Value(221)="Perc. errori telegramma: 93%"
+Value(222)="Perc. errori telegramma: 94%"
+Value(223)="Perc. errori telegramma: 95%"
+Value(224)="Perc. errori telegramma: 96%"
+Value(225)="Perc. errori telegramma: 97%"
+Value(226)="Perc. errori telegramma: 98%"
+Value(227)="Perc. errori telegramma: 99%"
+Value(228)="Perc. errori telegramma: 100%"
+Unit_Diag_Area_End
+;
+; Station x
+Unit_Diag_Area=48-55
+Value(0)  ="Stazione x: 0!"
+Value(1)  ="Stazione x: 1!"
+Value(2)  ="Stazione x: 2!"
+Value(3)  ="Stazione x: 3!"
+Value(4)  ="Stazione x: 4!"
+Value(5)  ="Stazione x: 5!"
+Value(6)  ="Stazione x: 6!"
+Value(7)  ="Stazione x: 7!"
+Value(8)  ="Stazione x: 8!"
+Value(9)  ="Stazione x: 9!"
+Value(10) ="Stazione x: 10!"
+Value(11) ="Stazione x: 11!"
+Value(12) ="Stazione x: 12!"
+Value(13) ="Stazione x: 13!"
+Value(14) ="Stazione x: 14!"
+Value(15) ="Stazione x: 15!"
+Value(16) ="Stazione x: 16!"
+Value(17) ="Stazione x: 17!"
+Value(18) ="Stazione x: 18!"
+Value(19) ="Stazione x: 19!"
+Value(20) ="Stazione x: 20!"
+Value(21) ="Stazione x: 21!"
+Value(22) ="Stazione x: 22!"
+Value(23) ="Stazione x: 23!"
+Value(24) ="Stazione x: 24!"
+Value(25) ="Stazione x: 25!"
+Value(26) ="Stazione x: 26!"
+Value(27) ="Stazione x: 27!"
+Value(28) ="Stazione x: 28!"
+Value(29) ="Stazione x: 29!"
+Value(30) ="Stazione x: 30!"
+Value(31) ="Stazione x: 31!"
+Value(32) ="Stazione x: 32!"
+Value(33) ="Stazione x: 33!"
+Value(34) ="Stazione x: 34!"
+Value(35) ="Stazione x: 35!"
+Value(36) ="Stazione x: 36!"
+Value(37) ="Stazione x: 37!"
+Value(38) ="Stazione x: 38!"
+Value(39) ="Stazione x: 39!"
+Value(40) ="Stazione x: 40!"
+Value(41) ="Stazione x: 41!"
+Value(42) ="Stazione x: 42!"
+Value(43) ="Stazione x: 43!"
+Value(44) ="Stazione x: 44!"
+Value(45) ="Stazione x: 45!"
+Value(46) ="Stazione x: 46!"
+Value(47) ="Stazione x: 47!"
+Value(48) ="Stazione x: 48!"
+Value(49) ="Stazione x: 49!"
+Value(50) ="Stazione x: 50!"
+Value(51) ="Stazione x: 51!"
+Value(52) ="Stazione x: 52!"
+Value(53) ="Stazione x: 53!"
+Value(54) ="Stazione x: 54!"
+Value(55) ="Stazione x: 55!"
+Value(56) ="Stazione x: 56!"
+Value(57) ="Stazione x: 57!"
+Value(58) ="Stazione x: 58!"
+Value(59) ="Stazione x: 59!"
+Value(60) ="Stazione x: 60!"
+Value(61) ="Stazione x: 61!"
+Value(62) ="Stazione x: 62!"
+Value(63) ="Stazione x: 63!"
+Value(64) ="Stazione x: 64!"
+Value(65) ="Stazione x: 65!"
+Value(66) ="Stazione x: 66!"
+Value(67) ="Stazione x: 67!"
+Value(68) ="Stazione x: 68!"
+Value(69) ="Stazione x: 69!"
+Value(70) ="Stazione x: 70!"
+Value(71) ="Stazione x: 71!"
+Value(72) ="Stazione x: 72!"
+Value(73) ="Stazione x: 73!"
+Value(74) ="Stazione x: 74!"
+Value(75) ="Stazione x: 75!"
+Value(76) ="Stazione x: 76!"
+Value(77) ="Stazione x: 77!"
+Value(78) ="Stazione x: 78!"
+Value(79) ="Stazione x: 79!"
+Value(80) ="Stazione x: 80!"
+Value(81) ="Stazione x: 81!"
+Value(82) ="Stazione x: 82!"
+Value(83) ="Stazione x: 83!"
+Value(84) ="Stazione x: 84!"
+Value(85) ="Stazione x: 85!"
+Value(86) ="Stazione x: 86!"
+Value(87) ="Stazione x: 87!"
+Value(88) ="Stazione x: 88!"
+Value(89) ="Stazione x: 89!"
+Value(90) ="Stazione x: 90!"
+Value(91) ="Stazione x: 91!"
+Value(92) ="Stazione x: 92!"
+Value(93) ="Stazione x: 93!"
+Value(94) ="Stazione x: 94!"
+Value(95) ="Stazione x: 95!"
+Value(96) ="Stazione x: 96!"
+Value(97) ="Stazione x: 97!"
+Value(98) ="Stazione x: 98!"
+Value(99) ="Stazione x: 99!"
+Value(100)="Stazione x: 100!"
+Value(101)="Stazione x: 101!"
+Value(102)="Stazione x: 102!"
+Value(103)="Stazione x: 103!"
+Value(104)="Stazione x: 104!"
+Value(105)="Stazione x: 105!"
+Value(106)="Stazione x: 106!"
+Value(107)="Stazione x: 107!"
+Value(108)="Stazione x: 108!"
+Value(109)="Stazione x: 109!"
+Value(110)="Stazione x: 110!"
+Value(111)="Stazione x: 111!"
+Value(112)="Stazione x: 112!"
+Value(113)="Stazione x: 113!"
+Value(114)="Stazione x: 114!"
+Value(115)="Stazione x: 115!"
+Value(116)="Stazione x: 116!"
+Value(117)="Stazione x: 117!"
+Value(118)="Stazione x: 118!"
+Value(119)="Stazione x: 119!"
+Value(120)="Stazione x: 120!"
+Value(121)="Stazione x: 121!"
+Value(122)="Stazione x: 122!"
+Value(123)="Stazione x: 123!"
+Value(124)="Stazione x: 124!"
+Value(125)="Stazione x: 125!"
+Value(126)="Stazione x: 126!"
+;
+;
+Value(128)="Stazione x: 0"
+Value(129)="Stazione x: 1"
+Value(130)="Stazione x: 2"
+Value(131)="Stazione x: 3"
+Value(132)="Stazione x: 4"
+Value(133)="Stazione x: 5"
+Value(134)="Stazione x: 6"
+Value(135)="Stazione x: 7"
+Value(136)="Stazione x: 8"
+Value(137)="Stazione x: 9"
+Value(138)="Stazione x: 10"
+Value(139)="Stazione x: 11"
+Value(140)="Stazione x: 12"
+Value(141)="Stazione x: 13"
+Value(142)="Stazione x: 14"
+Value(143)="Stazione x: 15"
+Value(144)="Stazione x: 16"
+Value(145)="Stazione x: 17"
+Value(146)="Stazione x: 18"
+Value(147)="Stazione x: 19"
+Value(148)="Stazione x: 20"
+Value(149)="Stazione x: 21"
+Value(150)="Stazione x: 22"
+Value(151)="Stazione x: 23"
+Value(152)="Stazione x: 24"
+Value(153)="Stazione x: 25"
+Value(154)="Stazione x: 26"
+Value(155)="Stazione x: 27"
+Value(156)="Stazione x: 28"
+Value(157)="Stazione x: 29"
+Value(158)="Stazione x: 30"
+Value(159)="Stazione x: 31"
+Value(160)="Stazione x: 32"
+Value(161)="Stazione x: 33"
+Value(162)="Stazione x: 34"
+Value(163)="Stazione x: 35"
+Value(164)="Stazione x: 36"
+Value(165)="Stazione x: 37"
+Value(166)="Stazione x: 38"
+Value(167)="Stazione x: 39"
+Value(168)="Stazione x: 40"
+Value(169)="Stazione x: 41"
+Value(170)="Stazione x: 42"
+Value(171)="Stazione x: 43"
+Value(172)="Stazione x: 44"
+Value(173)="Stazione x: 45"
+Value(174)="Stazione x: 46"
+Value(175)="Stazione x: 47"
+Value(176)="Stazione x: 48"
+Value(177)="Stazione x: 49"
+Value(178)="Stazione x: 50"
+Value(179)="Stazione x: 51"
+Value(180)="Stazione x: 52"
+Value(181)="Stazione x: 53"
+Value(182)="Stazione x: 54"
+Value(183)="Stazione x: 55"
+Value(184)="Stazione x: 56"
+Value(185)="Stazione x: 57"
+Value(186)="Stazione x: 58"
+Value(187)="Stazione x: 59"
+Value(188)="Stazione x: 60"
+Value(189)="Stazione x: 61"
+Value(190)="Stazione x: 62"
+Value(191)="Stazione x: 63"
+Value(192)="Stazione x: 64"
+Value(193)="Stazione x: 65"
+Value(194)="Stazione x: 66"
+Value(195)="Stazione x: 67"
+Value(196)="Stazione x: 68"
+Value(197)="Stazione x: 69"
+Value(198)="Stazione x: 70"
+Value(199)="Stazione x: 71"
+Value(200)="Stazione x: 72"
+Value(201)="Stazione x: 73"
+Value(202)="Stazione x: 74"
+Value(203)="Stazione x: 75"
+Value(204)="Stazione x: 76"
+Value(205)="Stazione x: 77"
+Value(206)="Stazione x: 78"
+Value(207)="Stazione x: 79"
+Value(208)="Stazione x: 80"
+Value(209)="Stazione x: 81"
+Value(210)="Stazione x: 82"
+Value(211)="Stazione x: 83"
+Value(212)="Stazione x: 84"
+Value(213)="Stazione x: 85"
+Value(214)="Stazione x: 86"
+Value(215)="Stazione x: 87"
+Value(216)="Stazione x: 88"
+Value(217)="Stazione x: 89"
+Value(218)="Stazione x: 90"
+Value(219)="Stazione x: 91"
+Value(220)="Stazione x: 92"
+Value(221)="Stazione x: 93"
+Value(222)="Stazione x: 94"
+Value(223)="Stazione x: 95"
+Value(224)="Stazione x: 96"
+Value(225)="Stazione x: 97"
+Value(226)="Stazione x: 98"
+Value(227)="Stazione x: 99"
+Value(228)="Stazione x: 100"
+Value(229)="Stazione x: 101"
+Value(230)="Stazione x_102"
+Value(231)="Stazione x: 103"
+Value(232)="Stazione x: 104"
+Value(233)="Stazione x: 105"
+Value(234)="Stazione x: 106"
+Value(235)="Stazione x: 107"
+Value(236)="Stazione x: 108"
+Value(237)="Stazione x: 109"
+Value(238)="Stazione x: 110"
+Value(239)="Stazione x: 111"
+Value(240)="Stazione x: 112"
+Value(241)="Stazione x: 113"
+Value(242)="Stazione x: 114"
+Value(243)="Stazione x: 115"
+Value(244)="Stazione x: 116"
+Value(245)="Stazione x: 117"
+Value(246)="Stazione x: 118"
+Value(247)="Stazione x: 119"
+Value(248)="Stazione x: 120"
+Value(249)="Stazione x: 121"
+Value(250)="Stazione x: 122"
+Value(251)="Stazione x: 123"
+Value(252)="Stazione x: 124"
+Value(253)="Stazione x: 125"
+Value(254)="Stazione x: 126"
+Unit_Diag_Area_End
+;
+; Station y
+Unit_Diag_Area=56-63
+Value(0)  ="Stazione y: 0!"
+Value(1)  ="Stazione y: 1!"
+Value(2)  ="Stazione y: 2!"
+Value(3)  ="Stazione y: 3!"
+Value(4)  ="Stazione y: 4!"
+Value(5)  ="Stazione y: 5!"
+Value(6)  ="Stazione y: 6!"
+Value(7)  ="Stazione y: 7!"
+Value(8)  ="Stazione y: 8!"
+Value(9)  ="Stazione y: 9!"
+Value(10) ="Stazione y: 10!"
+Value(11) ="Stazione y: 11!"
+Value(12) ="Stazione y: 12!"
+Value(13) ="Stazione y: 13!"
+Value(14) ="Stazione y: 14!"
+Value(15) ="Stazione y: 15!"
+Value(16) ="Stazione y: 16!"
+Value(17) ="Stazione y: 17!"
+Value(18) ="Stazione y: 18!"
+Value(19) ="Stazione y: 19!"
+Value(20) ="Stazione y: 20!"
+Value(21) ="Stazione y: 21!"
+Value(22) ="Stazione y: 22!"
+Value(23) ="Stazione y: 23!"
+Value(24) ="Stazione y: 24!"
+Value(25) ="Stazione y: 25!"
+Value(26) ="Stazione y: 26!"
+Value(27) ="Stazione y: 27!"
+Value(28) ="Stazione y: 28!"
+Value(29) ="Stazione y: 29!"
+Value(30) ="Stazione y: 30!"
+Value(31) ="Stazione y: 31!"
+Value(32) ="Stazione y: 32!"
+Value(33) ="Stazione y: 33!"
+Value(34) ="Stazione y: 34!"
+Value(35) ="Stazione y: 35!"
+Value(36) ="Stazione y: 36!"
+Value(37) ="Stazione y: 37!"
+Value(38) ="Stazione y: 38!"
+Value(39) ="Stazione y: 39!"
+Value(40) ="Stazione y: 40!"
+Value(41) ="Stazione y: 41!"
+Value(42) ="Stazione y: 42!"
+Value(43) ="Stazione y: 43!"
+Value(44) ="Stazione y: 44!"
+Value(45) ="Stazione y: 45!"
+Value(46) ="Stazione y: 46!"
+Value(47) ="Stazione y: 47!"
+Value(48) ="Stazione y: 48!"
+Value(49) ="Stazione y: 49!"
+Value(50) ="Stazione y: 50!"
+Value(51) ="Stazione y: 51!"
+Value(52) ="Stazione y: 52!"
+Value(53) ="Stazione y: 53!"
+Value(54) ="Stazione y: 54!"
+Value(55) ="Stazione y: 55!"
+Value(56) ="Stazione y: 56!"
+Value(57) ="Stazione y: 57!"
+Value(58) ="Stazione y: 58!"
+Value(59) ="Stazione y: 59!"
+Value(60) ="Stazione y: 60!"
+Value(61) ="Stazione y: 61!"
+Value(62) ="Stazione y: 62!"
+Value(63) ="Stazione y: 63!"
+Value(64) ="Stazione y: 64!"
+Value(65) ="Stazione y: 65!"
+Value(66) ="Stazione y: 66!"
+Value(67) ="Stazione y: 67!"
+Value(68) ="Stazione y: 68!"
+Value(69) ="Stazione y: 69!"
+Value(70) ="Stazione y: 70!"
+Value(71) ="Stazione y: 71!"
+Value(72) ="Stazione y: 72!"
+Value(73) ="Stazione y: 73!"
+Value(74) ="Stazione y: 74!"
+Value(75) ="Stazione y: 75!"
+Value(76) ="Stazione y: 76!"
+Value(77) ="Stazione y: 77!"
+Value(78) ="Stazione y: 78!"
+Value(79) ="Stazione y: 79!"
+Value(80) ="Stazione y: 80!"
+Value(81) ="Stazione y: 81!"
+Value(82) ="Stazione y: 82!"
+Value(83) ="Stazione y: 83!"
+Value(84) ="Stazione y: 84!"
+Value(85) ="Stazione y: 85!"
+Value(86) ="Stazione y: 86!"
+Value(87) ="Stazione y: 87!"
+Value(88) ="Stazione y: 88!"
+Value(89) ="Stazione y: 89!"
+Value(90) ="Stazione y: 90!"
+Value(91) ="Stazione y: 91!"
+Value(92) ="Stazioney: 92!"
+Value(93) ="Stazione y: 93!"
+Value(94) ="Stazione y: 94!"
+Value(95) ="Stazione y: 95!"
+Value(96) ="Stazione y: 96!"
+Value(97) ="Stazione y: 97!"
+Value(98) ="Stazione y: 98!"
+Value(99) ="Stazione y: 99!"
+Value(100)="Stazione y: 100!"
+Value(101)="Stazione y: 101!"
+Value(102)="Stazione y: 102!"
+Value(103)="Stazione y: 103!"
+Value(104)="Stazione y: 104!"
+Value(105)="Stazione y: 105!"
+Value(106)="Stazione y: 106!"
+Value(107)="Stazione y: 107!"
+Value(108)="Stazione y: 108!"
+Value(109)="Stazione y: 109!"
+Value(110)="Stazione y: 110!"
+Value(111)="Stazione y: 111!"
+Value(112)="Stazione y: 112!"
+Value(113)="Stazione y: 113!"
+Value(114)="Stazione y: 114!"
+Value(115)="Stazione y: 115!"
+Value(116)="Stazione y: 116!"
+Value(117)="Stazione y: 117!"
+Value(118)="Stazione y: 118!"
+Value(119)="Stazione y: 119!"
+Value(120)="Stazione y: 120!"
+Value(121)="Stazione y: 121!"
+Value(122)="Stazione y: 122!"
+Value(123)="Stazione y: 123!"
+Value(124)="Stazione y: 124!"
+Value(125)="Stazione y: 125!"
+Value(126)="Station y: 126!"
+Value(127)="Err. local. dopo ult. stazione"
+Value(128)="Stazione y: 0"
+Value(129)="Stazione y: 1"
+Value(130)="Stazione y: 2"
+Value(131)="Stazione y: 3"
+Value(132)="Stazione y: 4"
+Value(133)="Stazione y: 5"
+Value(134)="Stazione y: 6"
+Value(135)="Stazione y: 7"
+Value(136)="Stazione y: 8"
+Value(137)="Stazione y: 9"
+Value(138)="Stazione y: 10"
+Value(139)="Stazione y: 11"
+Value(140)="Stazione y: 12"
+Value(141)="Stazione y: 13"
+Value(142)="Stazione y: 14"
+Value(143)="Stazione y: 15"
+Value(144)="Stazione y: 16"
+Value(145)="Stazione y: 17"
+Value(146)="Stazione y: 18"
+Value(147)="Stazione y: 19"
+Value(148)="Stazione y: 20"
+Value(149)="Stazione y: 21"
+Value(150)="Stazione y: 22"
+Value(151)="Stazione y: 23"
+Value(152)="Stazione y: 24"
+Value(153)="Stazione y: 25"
+Value(154)="Stazione y: 26"
+Value(155)="Stazione y: 27"
+Value(156)="Stazione y: 28"
+Value(157)="Stazione y: 29"
+Value(158)="Stazione y: 30"
+Value(159)="Stazione y: 31"
+Value(160)="Stazione y: 32"
+Value(161)="Stazione y: 33"
+Value(162)="Stazione y: 34"
+Value(163)="Stazione y: 35"
+Value(164)="Stazione y: 36"
+Value(165)="Stazione y: 37"
+Value(166)="Stazione y: 38"
+Value(167)="Stazione y: 39"
+Value(168)="Stazione y: 40"
+Value(169)="Stazione y: 41"
+Value(170)="Stazione y: 42"
+Value(171)="Stazione y: 43"
+Value(172)="Stazione y: 44"
+Value(173)="Stazione y: 45"
+Value(174)="Stazione y: 46"
+Value(175)="Stazione y: 47"
+Value(176)="Stazione y: 48"
+Value(177)="Stazione y: 49"
+Value(178)="Stazione y: 50"
+Value(179)="Stazione y: 51"
+Value(180)="Stazione y: 52"
+Value(181)="Stazione y: 53"
+Value(182)="Stazione y: 54"
+Value(183)="Stazione y: 55"
+Value(184)="Stazione y: 56"
+Value(185)="Stazione y: 57"
+Value(186)="Stazione y: 58"
+Value(187)="Stazione y: 59"
+Value(188)="Stazione y: 60"
+Value(189)="Stazione y: 61"
+Value(190)="Stazione y: 62"
+Value(191)="Stazione y: 63"
+Value(192)="Stazione y: 64"
+Value(193)="Stazione y: 65"
+Value(194)="Stazione y: 66"
+Value(195)="Stazione y: 67"
+Value(196)="Stazione y: 68"
+Value(197)="Stazione y: 69"
+Value(198)="Stazione y: 70"
+Value(199)="Stazione y: 71"
+Value(200)="Stazione y: 72"
+Value(201)="Stazione y: 73"
+Value(202)="Stazione y: 74"
+Value(203)="Stazione y: 75"
+Value(204)="Stazione y: 76"
+Value(205)="Stazione y: 77"
+Value(206)="Stazione y: 78"
+Value(207)="Stazione y: 79"
+Value(208)="Stazione y: 80"
+Value(209)="Stazione y: 81"
+Value(210)="Stazione y: 82"
+Value(211)="Stazione y: 83"
+Value(212)="Stazione y: 84"
+Value(213)="Stazione y: 85"
+Value(214)="Stazione y: 86"
+Value(215)="Stazione y: 87"
+Value(216)="Stazione y: 88"
+Value(217)="Stazione y: 89"
+Value(218)="Stazione y: 90"
+Value(219)="Stazione y: 91"
+Value(220)="Stazione y: 92"
+Value(221)="Stazione y: 93"
+Value(222)="Stazione y: 94"
+Value(223)="Stazione y: 95"
+Value(224)="Stazione y: 96"
+Value(225)="Stazione y: 97"
+Value(226)="Stazione y: 98"
+Value(227)="Stazione y: 99"
+Value(228)="Stazione y: 100"
+Value(229)="Stazione y: 101"
+Value(230)="Stazione y: 102"
+Value(231)="Stazione y: 103"
+Value(232)="Stazione y: 104"
+Value(233)="Stazione y: 105"
+Value(234)="Stazione y: 106"
+Value(235)="Stazione y: 107"
+Value(236)="Stazione y: 108"
+Value(237)="Stazione y: 109"
+Value(238)="Stazione y: 110"
+Value(239)="Stazione y: 111"
+Value(240)="Stazione y: 112"
+Value(241)="Stazione y: 113"
+Value(242)="Stazione y: 114"
+Value(243)="Stazione y: 115"
+Value(244)="Stazione y: 116"
+Value(245)="Stazione y: 117"
+Value(246)="Stazione y: 118"
+Value(247)="Stazione y: 119"
+Value(248)="Stazione y: 120"
+Value(249)="Stazione y: 121"
+Value(250)="Stazione y: 122"
+Value(251)="Stazione y: 123"
+Value(252)="Stazione y: 124"
+Value(253)="Stazione y: 125"
+Value(254)="Stazione y: 126"
+Unit_Diag_Area_End
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fehlerursache
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Bit A.0
+Unit_Diag_Bit(112)="Loc./causa err. indefiniti"
+;
+; Bit A.1
+Unit_Diag_Bit(113)="Errore sconosciuto (err. A.1)"
+;
+; Bit A.2
+Unit_Diag_Bit(114)="Errore sconosciuto (err. A.2)"
+;
+; Bit A.3
+Unit_Diag_Bit(115)="Ulteriore DR cablato con DP2"
+;
+; Bit A.4
+Unit_Diag_Bit(116)="Ulteriore DR cablato con DP3"
+;
+; Bit A.5
+Unit_Diag_Bit(117)="Errore sconosciuto (err. A.5)"
+;
+; Bit A.6
+Unit_Diag_Bit(118)="Causa errore non identificabile"
+;
+; Bit A.7
+Unit_Diag_Bit(119)="Perc. errori telegr. critica"
+;
+; Bit B.0
+Unit_Diag_Bit(120)="Interr. linea di segnali A"
+;
+; Bit B.1
+Unit_Diag_Bit(121)="Cortocircuito B verso schermo"
+;
+; Bit B.2
+Unit_Diag_Bit(122)="Errore sconosciuto (err. B.2)"
+;
+; Bit B.3
+Unit_Diag_Bit(123)="Cortocircuito A verso schermo"
+;
+; Bit B.4
+Unit_Diag_Bit(124)="Inter. linea di segnali B"
+;
+; Bit B.5
+Unit_Diag_Bit(125)="Errore sconosciuto (err. B.5)"
+;
+; Bit B.6
+Unit_Diag_Bit(126)="Interr. linee di segnali A/B"
+;
+; Bit B.7
+Unit_Diag_Bit(127)="Circuito A/B; troppe resist."
+;
+; Bit C.0
+Unit_Diag_Bit(128)="Segmento disattiv.: zero cont."
+;
+; Bit C.1
+Unit_Diag_Bit(129)="Segmento disattiv: instabile"
+;
+; Bit C.2
+Unit_Diag_Bit(130)="Errore sconosciuto (err. C.2)"
+;
+; Bit C.3
+Unit_Diag_Bit(131)="Errore sconosciuto (err. C.3)"
+;
+; Bit C.4
+Unit_Diag_Bit(132)="Più di 32 nodi nel segmento"
+;
+; Bit C.5
+Unit_Diag_Bit(133)="Nodo troppo distante"
+;
+; Bit C.6
+Unit_Diag_Bit(134)="Superam. profond. cascata"
+;
+; Bit C.7
+Unit_Diag_Bit(135)="Presenza ulteriori errori"
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+; Prm-Text-Def-List
+PrmText=1
+Text(0)= "ON"
+Text(1)= "OFF"
+EndPrmText
+;
+PrmText=2
+Text(0x1b)= "Segmento DP2"
+Text(0x2e)= "Segmento DP2, DP3"
+Text(0x41)= "Segmento DP2, DP3, DP1"
+Text(0x54)= "Segmento DP2, DP3, DP1, PG"
+EndPrmText
+;
+;
+ExtUserPrmData=1 "Rilevamento topologico DP2"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=2 "Rilevamento topologico DP3"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=3 "Telegramma di diagnostica per"
+BitArea(0-7) 0x54 0x54,0x41,0x2e,0x1b
+Prm_Text_Ref=2
+EndExtUserPrmData
+;
+;
+; UserPrmData: Length and Preset
+;
+; DPV1_Status_1 = 0x00, DPV1_Status_2 = 0x00, DPV1_Status_3 = 0x08 => Prm_Structure = 1
+;
+Max_User_Prm_Data_Len=10
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08,0x07,0x81,0x00,0x00,0x54,0x00,0x00
+;
+;
+; Einstellung der Diagnoselaenge
+;
+Ext_User_Prm_Data_Ref(7)=3
+;
+;
+; Einstellung Topologieermittlung DP2 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=1
+;
+;
+; Einstellung Topologieermittlung DP3 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=2
+;
+; <Module-Definition-List>
+; 1 Byte A, 0 Byte E
+Module="DR-CfgData" 0x20
+1
+EndModule
+;
+;
+; Ende GSD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ 

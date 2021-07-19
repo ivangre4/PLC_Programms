@@ -1,0 +1,705 @@
+{\rtf1\ansi\ansicpg1252\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}{\f1\froman\fcharset2 Symbol;}{\f2\fswiss Arial;}{\f3\froman Times New Roman;}{\f4\froman\fcharset2 Symbol;}{\f5\fswiss Swiss;}}
+{\colortbl\red0\green0\blue0;\red255\green0\blue0;}
+\deflang1031\horzdoc{\*\fchars }{\*\lchars }\pard\qc\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs32\b Normerf\'fcllung nach IEC 61131-3\tab \tab 
+\par \plain\f2\fs32 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs24\b\ul 1. Einf\'fchrung:\plain\f2\fs20 
+\par 
+\par F\'fcr die Speicherprogrammierbaren Steuerungen (SPS) ist die Norm \plain\f2\fs20\b IEC 61131 \plain\f2\fs20 anwendbar. 
+\par Diese internationale Norm wurde nach den Regeln der Europ\'e4ischen Gemeinschaft in Deutschland als DIN EN 61131, in Frankreich als NF EN 61131 und in England als BS EN 61131 \'fcbernommen. 
+\par Im folgenden sind die wichtigsten Stellen dieser Norm zitiert und die Zitate durch Kursivschrift gekennzeichnet.
+\par 
+\par \plain\f2\fs20\b Der Teil 3 dieser Norm definiert in Kapitel 1.1 Anwendungsbereich\plain\f2\fs20  
+\par  "\plain\f2\fs20\i die Darstellung der Programmiersprachen auf Drucker und Bildschirm; dabei ist der ISO/IEC-646-Zeichensatz anzuwenden. Grapische und semigraphische Darstellungen der Sprachelemente, die in diesem Teil definiert sind, sind zwar zul\'e4\'dfig, aber nicht in diesem Teil definiert. Die Funktionen der Programmeingabe, des Tests, der \'dcberwachung, des Betriebssystems usw. sind in Teil 1 festgelegt." 
+\par 
+\par \plain\f2\fs20\b In Kapitel 1.4 \'dcbersicht und allgemeine Anforderungen wird erl\'e4utert:\plain\f2\fs20 
+\par \plain\f2\fs20\i  "Dieser Teil der IEC 1131 legt die Syntax und Semantik der vereinheitlichten Reihe von Programmiersprachen f\'fcr SPS fest. Diese umfassen Textsprachen , AWL (Anweisungsliste)  und ST (Strukturierter Text) und zwei graphische Sprachen KOP (Kontaktplan) und FBS (Funktionsbaustein-Sprache)."
+\par "Die Elemente der Ablaufsprache (AS) sind zur Strukturierung der internen Organisation von SPS-Programmen und Funktionsbausteinen definiert. Au\'dferdem sind Konfigurationselemente  definiert, die zur Installation von SPS-Programmen in die SPS-Systeme dienen...."
+\par "Die Elemente der Programmiersprachen k\'f6nnen in einer interaktiven Programmierumgebung angewendet werden. Die Festlegung derartiger Umgebungen geh\'f6rt nicht zum Geltungsbereich dieses Teils; eine solche Umgebung mu\'df jedoch eine Programmdokumentation in Text- oder Graphik-Format erzeugen, wie sie in diesem Teil festgelegt sind."
+\par 
+\par \plain\f2\fs20\b Das Kapitel 1.5 Normerf\'fcllung legt fest:\plain\f2\fs20  \plain\f2\fs20\i 
+\par  "Ein SPS-System, wie es in IEC 1131-1 definiert ist, das den Anspruch erhebt, vollst\'e4ndig oder teilweise die Anforderungen diese Teils der IEC 1131 zu erf\'fcllen, mu\'df dies genau so tun, wie unten beschrieben ist.
+\par Eine Aussage zur Normerf\'fcllung mu\'df in der Dokumentation enthalten sein, die mit dem System geliefert wird oder mu\'df vom System selbst erzeugt werden. Die Form der Aussage zur Normerf\'fcllung mu\'df lauten:
+\par "Dieses System erf\'fcllt die Anforderungen der IEC 1131-3 in folgenden Eigenschaften der Sprache", gefolgt von einer Reihe von Tabellen ..."
+\par 
+\par \plain\f2\fs24\b 2. Normerf\'fcllung STEP 7
+\par \plain\f2\fs20\b 
+\par Die Programmiersprachen von \plain\f2\fs20\b\ul SIMATIC STEP 7 \plain\f2\fs20\b erf\'fcllen die Anforderungen der IEC 1131-3:
+\par 
+\par \pard\li283\fi-283\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f4\fs20\b \'b7\tab \plain\f2\fs20\b Anweisungsliste\tab \tab AWL/STL\tab (entspricht der IEC 1131-3 Sprache "AWL/IL")
+\par \plain\f4\fs20\b \'b7\tab \plain\f2\fs20\b Kontaktplan\tab \tab KOP/LAD\tab (entspricht der IEC 1131-3 Sprache "KOP/LD")
+\par \plain\f4\fs20\cf0\b \'b7\tab \plain\f2\fs20\cf0\b Funktionsplan\tab \tab FUP/FBD\tab (entspricht der IEC 1131-3 Sprache "FUP/FBD")\plain\f2\fs20\cf1\b 
+\par \plain\f4\fs20\b \'b7\tab \plain\f2\fs20\b Structured Control Language SCL \tab (entspricht der IEC 1131-3 Sprache "ST")
+\par \plain\f4\fs20\b \'b7\tab \plain\f2\fs20\b S7-GRAPH \tab \tab \tab \tab \tab (entspricht der IEC 1131-3 Sprache "AS/SFC") 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20\b 
+\par in den Eigenschaften, die  gem\'e4\'df dem folgenden  Abschnitt 4 und in den Anh\'e4ngen beschrieben sind.
+\par 
+\par \plain\f2\fs20\cf0\b\ul SIMATIC STEP 7 Lite\plain\f2\fs20\cf0\b  bietet nur die Programmiersprachen AWL/KOP/FUP. Entsprechend gelten die folgenden Aussagen, die die IEC Sprachen ST / AS betreffen nicht f\'fcr STEP 7 Lite.\plain\f2\fs20\b 
+\par 
+\par \plain\f2\fs24\b 3. Ersatz- und Zusatz-Sprachelemente
+\par \plain\f2\fs20 
+\par Die Norm schreibt au\'dferdem vor, da\'df 
+\par 
+\par \pard\li284\fi-284\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 a) \tab ein normgerechtes SPS-System keine Ersatz- und Zusatz-Sprachelemente umfassen darf, um eine genormte Eigenschaft zu erreichen 
+\par b)\tab alle implementierungsabh\'e4ngigen Parameter nach \plain\f2\fs20\i\ul Anhang D\plain\f2\fs20  angegeben werden
+\par c)\tab Anwenderfehler aus \plain\f2\fs20\i\ul Anhang E\plain\f2\fs20  gemeldet werden; (bei einer teilweisen \'dcberpr\'fcfung des Programms mu\'df auf die Unvollst\'e4ndigkeit hingewiesen werden)
+\par d)\tab Anwenderfehler beim \'dcbersetzen und/oder beim Ablauf gemeldet werden und geeignete Ma\'dfnahmen angegeben oder einleitet werden
+\par e)\tab alle Eigenschaften, die in der Norm unzul\'e4\'dfig oder nicht vorhanden sind, als "Erweiterungen" 
+\par \tab beschrieben sind
+\par f) \tab diese Erweiterungen in der gleichen Weise behandelt werden, wie es f\'fcr Fehler fest\tab 
+\par \tab gelegt ist (als optionell einschaltbare Pr\'fcfung)
+\par g)\tab alle implementierungsabh\'e4ngigen Eigenschaften aus \plain\f2\fs20\i Anhang D \plain\f2\fs20 behandelt werden, wie es f\'fcr Fehler festgelegt ist (als optionell einschaltbare Pr\'fcfung)
+\par h)\tab keine genormten Namen mit abweichender Bedeutung f\'fcr herstellerdefinierte Eigenschaften verwendet werden
+\par i)\tab die formale Syntax der Textsprachen gem\'e4\'df \plain\f2\fs20\i\ul Anhang A\plain\f2\fs20  beschrieben ist.
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 
+\par 
+\par \plain\f2\fs20\b Die Programmiersoftware STEP 7 erf\'fcllt die o.g. Anforderungen b), c), d), e), h),  i) der Norm. Bez\'fcglich a) gibt es aus Kompatibilit\'e4tsgr\'fcnden zu STEP5 Sprachelemente,die unter Umst\'e4nden als Zusatzelemente verstanden werden k\'f6nnten.Die Anforderungen f) und g) sind bei STEP 7 sind nicht einschaltbar.
+\par \plain\f2\fs20   
+\par 
+\par 
+\par \plain\f2\fs28\b 4. Normgerecht realisierte Elemente 
+\par 
+\par \plain\f2\fs20 Die Norm definiert alle standardisierten Sprachelemente in Form von Tabellen, deren Zeilen das realisierte Feature \'fcber eine Nr. referenzieren. 
+\par Im folgenden ist angegeben, welche Sprachelemente bei STEP 7 normgerecht realisiert sind.
+\par 
+\par (Zum Verst\'e4ndnis der nachfolgenden Tabellen ist die genaue Kenntnis der genannten Norm Voraussetzung. 
+\par Die deutsche Fassung \plain\f2\fs20\b DIN IEC 61131-3 : 1994-08\plain\f2\fs20  ist erh\'e4ltlich beim Beuth Verlag GmbH, 10772 Berlin, Fax (030) 2601-1231.)
+\par 
+\par \plain\f2\fs24\b 4.1  Gemeinsame Elemente
+\par \plain\f2\fs20 
+\par \plain\f2\fs20\b Tabelle    \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 1\tab \tab \tab \tab \plain\f2\fs20\b Zeichensatz\tab -Eigenschaften\plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Erforderlicher Zeichensatz\tab 
+\par \tab \tab \tab \tab 2\tab \tab Kleinbuchstaben\tab 
+\par \tab \tab \tab \tab 3a\tab \tab Nummernzeichen\tab 
+\par \tab \tab \tab \tab 3b\tab \tab Pfundzeichen\tab 
+\par \tab \tab \tab \tab 4a\tab \tab Dollarzeichen\tab 
+\par \tab \tab \tab \tab 4b\tab \tab W\'e4hrungszeichen\tab 
+\par \tab \tab \tab \tab 5a\tab \tab Senkrechter Strich\tab 
+\par \tab \tab \tab \tab 5b\tab \tab Ausrufungszeichen\tab 
+\par \tab \tab \tab \tab 6a\tab \tab Linke und rechte Klammer (eckig)\tab 
+\par \tab \tab \tab \tab 6b\tab \tab Linke und rechte Klammer (rund)\tab 
+\par \tab \tab 
+\par \tab \tab \tab \tab Hinweis: Windows-Zeichensatz, der diese Zeichen umfa\'dft. 
+\par \tab \tab \tab \tab Bei Kennungen wird Gro\'df- und Kleinschreibung unterschieden.
+\par \tab 
+\par 2\tab \tab \tab \tab \plain\f2\fs20\b Bezeichner-Eigenschaften\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Gro\'dfbuchstaben und Zahlen\tab 
+\par \tab \tab \tab \tab 2\tab \tab Gro\'df- und Kleinbuchstaben, Zahlen, eingebettete Unterstriche\tab 
+\par \tab \tab \tab \tab 3\tab \tab Gro\'df- und Kleinbuchstaben, Zahlen
+\par \tab 
+\par 3\tab \tab \tab \tab \plain\f2\fs20\b Kommentar-Eigenschaften\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Kommentar
+\par \tab 
+\par \tab \tab \tab \tab Hinweis: bei AWL nur Zeilenkommentare, Beginn mit //, Ende Zeilenumbruch\tab 
+\par 
+\par 4\tab \tab \tab \tab \plain\f2\fs20\b Numerische Literale\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Literal Ganzzahl\tab 
+\par \tab \tab \tab \tab 2\tab \tab Literal Gleitpunktzahl\tab 
+\par \tab \tab \tab \tab 3\tab \tab Literal Gleitpunktzahl mit Exponent\tab 
+\par \tab \tab \tab \tab 4\tab \tab Literal Basis 2\tab 
+\par \tab \tab \tab \tab 5\tab \tab Literal Basis 8\tab \tab (nur SCL)
+\par \tab \tab \tab \tab 6\tab \tab Literal Basis 16 *)\tab 
+\par \tab \tab \tab \tab 7\tab \tab Boolesche Ziffern 0/1\tab \tab (nur SCL)
+\par \tab \tab \tab \tab 8\tab \tab Boolesche FALSE und TRUE\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis *): Bitl\'e4nge erforderlich: W#16#ADAC, DW#16#ADAC_4711
+\par \tab 
+\par 5\tab \tab \tab \tab 1\tab \tab \plain\f2\fs20\b  Zeichenfolge Literale\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab \tab Hinweis: keine Druck-Hexadezimalzeichen
+\par \tab 
+\par 6\tab \tab \tab \tab \plain\f2\fs20\b Zwei-Zeichen-Kombinationen in Zeichenfolgen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 2\tab \tab $$\tab 
+\par \tab \tab \tab \tab 3\tab \tab $'\tab 
+\par \tab \tab \tab \tab 4\tab \tab $L bzw. $l
+\par \tab \tab \tab \tab 5\tab \tab $N\tab 
+\par \tab \tab \tab \tab 6\tab \tab $P bzw. $p\tab 
+\par \tab \tab \tab \tab 7\tab \tab $R bzw. $r\tab 
+\par \tab \tab \tab \tab 8\tab \tab $T bzw. $t
+\par \tab 
+\par 7\tab \tab \tab \tab \plain\f2\fs20\b  Zeitdauer Literale\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1a\tab \tab ohne Unterstriche: kurzes Pr\'e4fix\tab 
+\par \tab \tab \tab \tab 1b\tab \tab langes Pr\'e4fix\tab 
+\par \tab \tab \tab \tab 2a\tab \tab mit Unterstrichen: kurzes Pr\'e4fix\tab 
+\par \tab \tab \tab \tab 2b\tab \tab langes Pr\'e4fix
+\par 
+\par \tab \tab \tab \tab Hinweis: Bei allen Schl\'fcsselw\'f6rtern ist Gro\'df- und Kleinschreibung 
+\par \tab \tab \tab \tab irrelevant.\tab 
+\par \tab 
+\par 8\tab \tab \tab \tab \plain\f2\fs20\b Literale f\'fcr Datum und Tageszeit\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Literale Datum (langes Pr\'e4fix)\tab 
+\par \tab \tab \tab \tab 2\tab \tab Literale Datum (kurzes Pr\'e4fix)\tab 
+\par \tab \tab \tab \tab 3\tab \tab Literale Tageszeit (langes Pr\'e4fix)\tab 
+\par \tab \tab \tab \tab 4\tab \tab Literale Tageszeit (kurzes Pr\'e4fix)\tab 
+\par \tab \tab \tab \tab 5\tab \tab Literale Datum und Zeit (langes Pr\'e4fix)\tab 
+\par \tab \tab \tab \tab 6\tab \tab Literale Datum und Zeit (kurzes Pr\'e4fix)\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: Bei allen Schl\'fcsselw\'f6rtern ist Gro\'df- und Kleinschreibung 
+\par \tab \tab \tab \tab irrelevant.\tab 
+\par 
+\par 10\tab \tab \tab \tab \plain\f2\fs20\b Schl\'fcsselw\'f6rter\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab BOOL\tab 
+\par \tab \tab \tab \tab 3\tab \tab INT\tab 
+\par \tab \tab \tab \tab 4\tab \tab DINT\tab 
+\par \tab \tab \tab \tab 10\tab \tab REAL\tab 
+\par \tab \tab \tab \tab 12\tab \tab TIME\tab 
+\par \tab \tab \tab \tab 13\tab \tab DATE\tab 
+\par \tab \tab \tab \tab 14\tab \tab TIME_OF_DAY bzw. TOD\tab 
+\par \tab \tab \tab \tab 15\tab \tab DATE_AND_TIME bzw. DT\tab 
+\par \tab \tab \tab \tab 16\tab \tab STRING *)\tab 
+\par \tab \tab \tab \tab 17\tab \tab BYTE\tab 
+\par \tab \tab \tab \tab 18\tab \tab WORD\tab 
+\par \tab \tab \tab \tab 19\tab \tab DWORD
+\par \tab 
+\par \tab \tab \tab \tab *): STRING [n] mit der L\'e4nge n; andernfalls 254 Bytes\tab 
+\par 
+\par 12\tab \tab \tab \tab \plain\f2\fs20\b Datentyp-Deklaration \tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 4\tab \tab Datentyp Feld\tab 
+\par \tab \tab \tab \tab 5\tab \tab Zusammengesetzte Datentypen *)
+\par 
+\par \tab \tab \tab \tab *): Datentypen m\'fcssen einzeln deklariert werden.
+\par 
+\par 14\tab \tab \tab \tab \plain\f2\fs20\b Deklaration Datentyp-Anfangswert \tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 4\tab \tab Initialisierung von Elementen des Datentyps Feld\tab 
+\par \tab \tab \tab \tab 5\tab \tab Initialisierung von Elementen aus zusammengesetzten 
+\par \tab \tab \tab \tab \tab \tab Datentypen
+\par \tab 
+\par 15\tab \tab \tab \tab \plain\f2\fs20\b Pr\'e4fix f\'fcr Speicherort und Gr\'f6\'dfe bei direkt dargestellten Variablen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab I oder E\tab je nach Spracheinstellung\tab 
+\par \tab \tab \tab \tab 2\tab \tab Q oder A\tab je nach Spracheinstellung\tab 
+\par \tab \tab \tab \tab 3\tab \tab M\tab 
+\par \tab \tab \tab \tab 4\tab \tab X *)\tab 
+\par \tab \tab \tab \tab 5\tab \tab ohne\tab 
+\par \tab \tab \tab \tab 6\tab \tab B\tab 
+\par \tab \tab \tab \tab 7\tab \tab W\tab 
+\par \tab \tab \tab \tab 8\tab \tab D
+\par \tab 
+\par \tab \tab \tab \tab Hinweis *): nur bei DB und DI\tab 
+\par 
+\par 16\tab \tab \tab \tab \plain\f2\fs20\b Schl\'fcsselw\'f6rter f\'fcr Variablendeklarationen \tab \plain\f2\fs20 
+\par \tab \tab \tab \tab VAR, VAR_INPUT, VAR_OUTPUT, VAR_IN_OUT gem\'e4\'df IEC
+\par 
+\par 17\tab \tab \tab \tab \plain\f2\fs20\b Typzuweisung f\'fcr Variable\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 5\tab \tab Automatische Speicherzuordnung f\'fcr symbolische Variablen, *) siehe 
+\par \tab \tab \tab \tab \tab \tab Hinweis in Tabelle 10\tab 
+\par \tab \tab \tab \tab 6\tab \tab Deklaration f\'fcr Feld\tab 
+\par \tab \tab \tab \tab 8\tab \tab Deklaration f\'fcr zusammengesetzte Variable
+\par \tab 
+\par 18\tab \tab \tab \tab \plain\f2\fs20\b Zuweisung von Anfangswerten f\'fcr Variable\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 5\tab \tab Initialisierung von symbolischen Variablen, *) siehe Hinweis in Tabelle 10\tab 
+\par \tab \tab \tab \tab 6\tab \tab Initialisierung von Feldern
+\par \tab 
+\par 20\tab \tab \tab \tab \plain\f2\fs20\b Verwendung Eingang EN und Ausgang ENO\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Verwendung von "EN" und "ENO" bei KOP
+\par \tab \tab \tab \tab 2\tab \tab Verwendung von "EN" und "ENO" bei FUP
+\par 
+\par 21\tab \tab \tab \tab \plain\f2\fs20\b Typisierte und \'fcberladene Funktionen
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab \'dcberladene Funktionen   (nur SCL)
+\par \plain\f2\fs20\b \tab \plain\f2\fs20 \tab \tab \tab 2\tab \tab Typisierte Funktionen\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: bei KOP/FUP nur 2 Parameter, zus\'e4tzlich EN + ENO\tab 
+\par 
+\par 22\tab \tab \tab \tab \plain\f2\fs20\b Funktionen Datentyp-Umwandlung\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab *_TO_**\tab 
+\par \tab \tab \tab \tab 2\tab \tab TRUNC\tab 
+\par \tab \tab \tab \tab 3\tab \tab BCD_TO_**  (nicht bei SCL)
+\par \tab \tab \tab \tab 4\tab \tab *_TO_BCD   (nicht bei SCL)
+\par 
+\par 
+\par 
+\par 23\tab \tab \tab \tab \plain\f2\fs20\b Standardfunktionen mit einer numerischen Variablen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab ABS\tab 
+\par \tab \tab \tab \tab 2\tab \tab SQRT\tab 
+\par \tab \tab \tab \tab 3\tab \tab LN *)
+\par \tab \tab \tab \tab 4\tab \tab LOG\tab \tab (nur SCL)\tab 
+\par \tab \tab \tab \tab 5\tab \tab EXP\tab 
+\par \tab \tab \tab \tab 6\tab \tab SIN *)\tab 
+\par \tab \tab \tab \tab 7\tab \tab COS *)\tab 
+\par \tab \tab \tab \tab 8\tab \tab TAN *)\tab 
+\par \tab \tab \tab \tab 9\tab \tab ASIN *)\tab 
+\par \tab \tab \tab \tab 10\tab \tab ACOS *)\tab 
+\par \tab \tab \tab \tab 11\tab \tab ATAN *)\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis *): Die Implementierung dieser Operationen ist von der CPU abh\'e4ngig. 
+\par \tab \tab \tab \tab Hinweis: Der Datentyp der E/A dieser Operationen ist REAL.\tab 
+\par 
+\par 24\tab \tab \tab \tab \plain\f2\fs20\b Arithmetische Standardfunktionen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 12\tab \tab ADD +\tab 
+\par \tab \tab \tab \tab 13\tab \tab MUL *\tab 
+\par \tab \tab \tab \tab 14\tab \tab SUB -\tab 
+\par \tab \tab \tab \tab 15\tab \tab DIV /\tab 
+\par \tab \tab \tab \tab 16\tab \tab MOD\tab 
+\par \tab \tab \tab \tab 18\tab \tab MOVE :=\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: Alle Operationen sind bei KOP/FUP typisiert (z. B. Integer).
+\par 
+\par \tab 
+\par 
+\par 25\tab \tab \tab \tab \plain\f2\fs20\b Standard-Bitschiebe-Funktionen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab SHL\tab 
+\par \tab \tab \tab \tab 2\tab \tab SHR\tab 
+\par \tab \tab \tab \tab 3\tab \tab ROR\tab 
+\par \tab \tab \tab \tab 4\tab \tab ROL\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: Alle Funktionen sind typisiert (z. B. Word).
+\par \tab 
+\par 26\tab \tab \tab \plain\f2\fs20\b \tab Bitweise boolesche Standardfunktionen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 5\tab \tab AND\tab 
+\par \tab \tab \tab \tab 6\tab \tab OR\tab 
+\par \tab \tab \tab \tab 7\tab \tab XOR *)\tab 
+\par \tab \tab \tab \tab 8\tab \tab NOT\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: nicht in KOP
+\par 
+\par 27\tab \tab \tab \plain\f2\fs20\b \tab Standardfunktionen f\'fcr Auswahl\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab SEL\tab 
+\par \tab \tab \tab \tab 2a\tab \tab MAX\tab 
+\par \tab \tab \tab \tab 2b\tab \tab MIN\tab 
+\par \tab \tab \tab \tab 3\tab \tab LIMIT\tab 
+\par 
+\par 28\tab \tab \tab \plain\f2\fs20\b \tab Standardfunktionen f\'fcr Vergleich\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 5\tab \tab GT\tab \tab >\tab 
+\par \tab \tab \tab \tab 6\tab \tab GE\tab >=\tab 
+\par \tab \tab \tab \tab 7\tab \tab EQ\tab =\tab 
+\par \tab \tab \tab \tab 8\tab \tab LE\tab \tab <=\tab 
+\par \tab \tab \tab \tab 9\tab \tab LT\tab \tab <\tab 
+\par \tab \tab \tab \tab 10\tab \tab NE\tab \tab <>\tab 
+\par \tab 
+\par \tab \tab \tab \tab Hinweis: Alle Funktionen sind bei KOP/FUP typisiert (z. B. Word).
+\par 
+\par 29\tab \tab \tab \tab \plain\f2\fs20\b Standardfunktionen f\'fcr Zeichenfolgen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab LEN\tab 
+\par \tab \tab \tab \tab 2\tab \tab LEFT\tab 
+\par \tab \tab \tab \tab 3\tab \tab RIGHT\tab 
+\par \tab \tab \tab \tab 4\tab \tab MID\tab 
+\par \tab \tab \tab \tab 5\tab \tab CONCAT\tab 
+\par \tab \tab \tab \tab 6\tab \tab INSERT\tab 
+\par \tab \tab \tab \tab 7\tab \tab DELETE\tab 
+\par \tab \tab \tab \tab 8\tab \tab REPLACE\tab 
+\par \tab \tab \tab \tab 9\tab \tab FIND\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: Die Implementation dieser Operationen ist CPU-abh\'e4ngig.
+\par 
+\par 30\tab \tab \tab \tab \plain\f2\fs20\b Funktionen f\'fcr Datentypen der Zeit\plain\f2\fs20 
+\par \tab \tab \tab \tab 3\tab \tab ADD_DT_T\tab 
+\par \tab \tab \tab \tab 8\tab \tab SUB_DT_T\tab 
+\par \tab \tab \tab \tab 9\tab \tab SUB_DT_DT\tab 
+\par \tab \tab \tab \tab 12\tab \tab CONCAT_D_TOD\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: Die Implementation dieser Operationen ist CPU-abh\'e4ngig.
+\par \tab \tab 
+\par 33\tab \tab \tab \tab \plain\f2\fs20\b Funktionsbaustein-Deklaration \tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 4a\tab \tab Deklaration Eingang/Ausgang (als Text)\tab 
+\par \tab \tab \tab \tab 4b\tab \tab Deklaration Eingang/Ausgang (graphisch)
+\par 
+\par 34\tab \tab \tab \tab \plain\f2\fs20\b Bistabile Standard-Funktionsbausteine\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab SR\tab 
+\par \tab \tab \tab \tab 2\tab \tab RS\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: SR_FF wird vorrangig zur\'fcckgesetzt, RS_FF wird vorrangig gesetzt.\tab 
+\par 
+\par 
+\par 
+\par \plain\f2\fs20\b 
+\par \plain\f2\fs24\b 4.2    S7-GRAPH -Elemente (Sequential Function Chart, SFC)
+\par 
+\par \plain\f2\fs20\b Tabelle \tab \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 40\tab \plain\f2\fs20\b \tab \tab \tab Schritt\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Graphische Form: \tab Schritt, Anfangsschritt\tab 
+\par \tab \tab \tab \tab 2\tab \tab Textform: *\tab Schritt, Anfangsschritt\tab 
+\par \tab \tab \tab \tab 3a\tab \tab Schrittmerker - allgemeine Form\tab 
+\par \tab \tab \tab \tab 3b\tab \tab Schrittmerker - direkte Verbindung\tab 
+\par \tab \tab \tab \tab 4\tab \tab Verstrichene Schrittzeit\tab 
+\par \tab \tab \tab \tab Hinweis *): Textform: *.GR7
+\par 
+\par 41\tab \plain\f2\fs20\b \tab \tab \tab Transitionen und Transitionsbedingungen\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 2\tab \tab Bedingung in KOP\tab 
+\par \tab \tab \tab \tab 5\tab \tab Bedingung in Textform\tab 
+\par \tab \tab \tab \tab 7d\tab \tab Name\tab 
+\par \tab \tab \tab 
+\par 42\tab \plain\f2\fs20\b \tab \tab \tab Deklaration von Aktionen\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Beliebige Boolesche Variable
+\par \tab \tab 
+\par 43\tab \plain\f2\fs20\b \tab \tab \tab Zuordnung Schritt/Aktion\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Aktionsbaustein\tab 
+\par \tab \tab \tab \tab 2\tab \tab Aneinandergereihte Aktionen
+\par \tab \tab \tab \tab 3\tab \tab Schrittrumpf in Textform\tab 
+\par 
+\par 44\tab \plain\f2\fs20\b \tab \tab \tab Eigenschaften Aktionsblock\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab "a": Bestimmungszeichen\tab 
+\par \tab \tab \tab \tab 2\tab \tab "b": Aktionsname\tab 
+\par \tab \tab \tab 
+\par 
+\par 45\tab \tab \tab \plain\f2\fs20\b \tab Bestimmungszeichen f\'fcr Aktionen \plain\f2\fs20 \tab \plain\f2\fs20\b 
+\par \plain\f2\fs20 \tab \tab \tab \tab 2\tab \tab N\tab 
+\par \tab \tab \tab \tab 3\tab \tab R\tab 
+\par \tab \tab \tab \tab 4\tab \tab S\tab 
+\par \tab \tab \tab \tab 5\tab \tab L\tab 
+\par \tab \tab \tab \tab 6\tab \tab D\tab 
+\par \tab \tab \tab \tab Hinweis: Ausf\'fchrliche Informationen - siehe S7-Graph. S7-Graph verf\'fcgt \'fcber 
+\par \tab \tab \tab \tab zus\'e4tzliche Bestimmungszeichen von Aktionen mit Bedingungen.\tab 
+\par 
+\par 46\tab \tab \tab \plain\f2\fs20\b \tab Kettenablauf\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Einfache Kette\tab 
+\par \tab \tab \tab \tab 2a\tab \tab Verzweigung bei Kettenauswahl\plain\f2\fs20\ul \tab \plain\f2\fs20 
+\par \plain\f2\fs20\b \tab \tab \tab \tab \plain\f2\fs20 3\tab \tab Zusammenf\'fchrung einer Kettenauswahl\tab 
+\par \tab \tab \tab \tab 4\tab \tab Simultanketten: Verzweigung/Zusammenf\'fchrung\tab 
+\par \tab \tab \tab \tab 5a\tab \tab Kettensprung\tab 
+\par \tab \tab \tab \tab 6a\tab \tab Kettenschleife\tab 
+\par \tab \tab \tab \tab 7\tab \tab Richtungspfeile\tab 
+\par \plain\f2\fs20\b \tab \tab 
+\par \plain\f2\fs24\b 4.3 \tab Konfigurationselemente
+\par \plain\f2\fs20 
+\par \plain\f2\fs20\b 
+\par \plain\f2\fs20 50\tab \tab \tab \tab 1-5\tab \plain\f2\fs20\b Tasks\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab \tab Tasks werden  bei STEP7 in Form von Organisationsbausteinen (OBs) zur
+\par  \tab \tab \tab \tab Verf\'fcgung gestellt\tab 
+\par 
+\par 
+\par \plain\f2\fs24\b 4.4  Sprache: Anweisungsliste (AWL)
+\par \plain\f2\fs20 
+\par Vorbemerkung zu Nr. 52:
+\par Die wesentliche Abweichung von AWL bei STEP 7 zur Norm besteht in der abweichenden Befehlssyntax (siehe Nr. 52). Diese Abweichung wurde in Kauf genommen, um die Kompatibilit\'e4tsanforderungen zu AWL bei STEP 5 zu erf\'fcllen.
+\par Dar\'fcberhinaus enthalten AWL bei STEP 5 und STEP 7 weit mehr Befehle, als im Grundbefehlsvorrat der Norm definiert sind.
+\par 
+\par 
+\par \plain\f2\fs20\b Tabelle \tab \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 52\tab \tab \tab \tab \plain\f2\fs20\b Operatoren\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1-21\tab Hinweis: unterschiedliche Syntax, aber gleiche Funktionalit\'e4t
+\par \tab 
+\par 53\tab \tab \tab \tab \plain\f2\fs20\b Funktionsbaustein-Aufruf in AWL\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1-3\tab \tab CAL mit Liste der Eingangsparameter, mit Laden / Speichern der \tab \tab \tab \tab \tab \tab Eingangsparameter, Verwendung von Eingabeoperatoren\tab 
+\par \tab \tab \tab \tab 3\tab \tab Verwendung von Eingabeoperatoren *)\tab 
+\par 
+\par \tab \tab \tab \tab Hinweis: unterschiedliche Syntax, aber gleiche Funktionalit\'e4t\tab 
+\par 
+\par 
+\par \plain\f2\fs24\b 4.5 Sprache: SCL  (Structured Text ,ST)
+\par \plain\f2\fs20 
+\par \plain\f2\fs20\b Tabelle\tab \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 55\tab \tab \plain\f2\fs20\b \tab \tab Operatoren der Sprache ST\tab \tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Klammerung\tab ( )\tab 
+\par \tab \tab \tab \tab 2\tab \tab Funktionsbearbeitung
+\par \tab \tab \tab \tab 3\tab \tab Potenzierung\tab **\tab 
+\par \tab \tab \tab \tab 4\tab \tab Negation\tab -\tab 
+\par \tab \tab \tab \tab 5\tab \tab Komplement\tab NOT\tab 
+\par \tab \tab \tab \tab 6\tab \tab Multiplikation\tab *\tab 
+\par \tab \tab \tab \tab 7\tab \tab Division\tab /\tab 
+\par \tab \tab \tab \tab 8\tab \tab Modulo\tab MOD\tab 
+\par \tab \tab \tab \tab 9\tab \tab Addition\tab +\tab 
+\par \tab \tab \tab \tab 10\tab \tab Subtraktion\tab -\tab 
+\par \tab \tab \tab \tab 11\tab \tab Vergleich\tab <, >, <=, >=\tab 
+\par \tab \tab \tab \tab 12\tab \tab Gleichheit\tab =\tab 
+\par \tab \tab \tab \tab 13\tab \tab Ungleichheit\tab <>\tab 
+\par \tab \tab \tab \tab 14\tab \tab Boolesches UND\tab &, AND\tab 
+\par \tab \tab \tab \tab 16\tab \tab Boolesches Exklusiv Oder\tab XOR\tab 
+\par \tab \tab \tab \tab 17\tab \tab Boolesches ODER\tab OR\tab 
+\par 
+\par 56\tab \plain\f2\fs20\b \tab \tab \tab Anweisungen der Sprache ST\tab 
+\par \plain\f2\fs20 \tab \tab \tab \tab 1\tab \tab Zuweisung\tab 
+\par \tab \tab \tab \tab 2\tab \tab Funktionsbaustein-Aufruf und Verwendung des FB-Ausgangs\tab 
+\par \tab \tab \tab \tab 3\tab \tab RETURN\tab 
+\par \tab \tab \tab \tab 4\tab \tab IF\tab 
+\par \tab \tab \tab \tab 5\tab \tab CASE \tab 
+\par \tab \tab \tab \tab 6\tab \tab FOR \tab 
+\par \tab \tab \tab \tab 7\tab \tab WHILE\tab 
+\par \tab \tab \tab \tab 8\tab \tab REPEAT\tab 
+\par \tab \tab \tab \tab 9\tab \tab EXIT\tab 
+\par \tab \tab \tab \tab 10\tab \tab Leer-Anweisung\tab 
+\par \plain\f2\fs24\b 
+\par \plain\f2\fs20 
+\par 
+\par \plain\f2\fs24\b 4.6 Gemeinsame graphische Elemente
+\par 
+\par \plain\f2\fs20\b Tabelle \tab \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 57\tab \tab \tab \tab \plain\f2\fs20\b Darstellung Linien und Bausteine\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab \tab \tab Waagerechte Linien:
+\par \tab \tab \tab \tab 1\tab \tab ISO 646-Zeichen "Minus"
+\par \tab \tab \tab \tab 2\tab \tab graphisch oder semigraphisch\tab 
+\par \tab \tab \tab \tab \tab \tab Senkrechte Linien:
+\par \tab \tab \tab \tab 3\tab \tab ISO 646-Zeichen "senkrechte Linie"
+\par \tab \tab \tab \tab 4\tab \tab graphisch oder semigraphisch\tab 
+\par \tab \tab \tab \tab \tab \tab Waagerechte/senkrechte Verbindung:\tab 
+\par \tab \tab \tab \tab 5\tab \tab ISO 646-Zeichen "Plus"
+\par 
+\par \tab \tab \tab \tab 6\tab \tab graphisch oder semigraphisch\tab 
+\par \tab \tab \tab \tab \tab \tab Bausteine mit Verbindungslinien:
+\par \tab \tab \tab \tab 11\tab \tab ISO 646-Zeichen
+\par \tab \tab \tab \tab 12\tab \tab graphisch oder semigraphisch\tab 
+\par 
+\par 58\tab \tab \tab \tab \plain\f2\fs20\b Graphische Elemente zur Ausf\'fchrungssteuerung\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab \tab 2\tab \tab Absoluter Sprung KOP
+\par \tab \tab \tab \tab 3\tab \tab Bedingter Sprung FUP\tab 
+\par \tab \tab \tab \tab 4\tab \tab Bedingter Sprung KOP\tab 
+\par \tab \tab \tab \tab 5\tab \tab Bedingter R\'fccksprung KOP\tab 
+\par \tab \tab \tab \tab 6\tab \tab Bedingter R\'fccksprung FUP\tab 
+\par \tab \tab \tab \tab 7\tab \tab Absoluter R\'fccksprung\tab 
+\par \pard\ri-6\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab \tab Hinweis: wird in KOP als Spule dargestellt\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 
+\par 
+\par \plain\f2\fs24\b 4.7 Sprache: Kontaktplan (KOP)
+\par 
+\par \plain\f2\fs20\b Tabelle \tab \tab Nr.\tab \tab Sprachelemente
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 59\tab \tab \tab \tab \plain\f2\fs20\b Stromschienen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Linke Stromschiene\tab 
+\par \tab \tab \tab \tab 2\tab \tab Rechte Stromschiene\tab 
+\par 
+\par 60\tab \tab \tab \tab \plain\f2\fs20\b Verbindungselemente\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Waagerechte Verbindung\tab 
+\par \tab \tab \tab \tab 2\tab \tab Senkrechte Verbindung
+\par \tab 
+\par 61\tab \tab \tab \tab \plain\f2\fs20\b Kontakte\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Schlie\'dferkontakt\tab 
+\par \tab \tab \tab \tab 3\tab \tab \'d6ffnerkontakt\tab 
+\par \tab \tab \tab \tab 5\tab \tab Kontakt zur Erkennung von steigenden Flanken\tab 
+\par \tab \tab \tab \tab 7\tab \tab Kontakt zur Erkennung von fallenden Flanken\tab 
+\par 
+\par 62\tab \tab \tab \tab \plain\f2\fs20\b Spulen\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 1\tab \tab Spule\tab 
+\par \tab \tab \tab \tab 2\tab \tab Negierte Spule\tab 
+\par \tab \tab \tab \tab 3\tab \tab Spule SET (Selbsthaltung)\tab 
+\par \tab \tab \tab \tab 4\tab \tab Spule RESET (speicherndes R\'fccksetzen)\tab 
+\par 
+\par \tab \tab \tab \tab \tab \tab 
+\par 
+\par \plain\f5\fs24\b Anhang A - Syntax
+\par \plain\f2\fs20 
+\par siehe Handb\'fccher zu AWL und SCL
+\par \plain\f2\fs20\b 
+\par \plain\f2\fs24\b 
+\par Anhang D - Implementierungsspezifische Parameter
+\par \plain\f2\fs20 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4260\tx4536\tx4544\tx6106\tx6248\plain\f2\fs20 Im folgenden werden die Parameter zu den in der Norm definierten Sprachelementen und die bei STEP 7 realisierten Grenzwerte aufgef\'fchrt.
+\par 
+\par \plain\f2\fs20\b IEC-Referenz\tab \tab \tab \plain\f2\fs20 I\tab \plain\f2\fs20\b Parameter\plain\f2\fs20 \tab \tab \tab I\tab \plain\f2\fs20\b STEP 7\plain\f2\fs20 \tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 1 Allgemein\tab \tab \tab \tab I\tab Fehlerbehandlung\tab \tab \tab I Siehe Anhang E
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2 Gemeinsame Elemente\tab I\tab Jeweils verwendete Zeichen\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab # bzw. "Pfund Sterling"-Zeichen\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab $ bzw. "W\'e4hrungs"-Zeichen\tab I
+\par \tab \tab \tab \tab \tab \tab \tab l\tab bzw. ! Ja\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale L\'e4nge der Kennung\tab I\tab 24
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Kommentarl\'e4nge\tab I\tab Netzwerkkommentar 
+\par \tab \tab \tab \tab \tab \tab \tab |\tab \tab \tab \tab |\tab     max. 64 kB
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Zeilenkommentar 
+\par \tab \tab \tab \tab \tab \tab \tab |\tab \tab \tab \tab |\tab     max. 255 Zeichen
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Operandenkommentar 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab     max. 40 Zeichen\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Wertebereich der Zeitdauer\tab I\tab - 24D_20H_31m_23.648s \tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab bis 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab 24D_20H_31m_23.647s
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2.3 Datentypen\tab \tab \tab I\tab Wertebereich von Variablen\tab I - 24D_20H_31m_23.648s \tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab vom Datentyp TIME \tab \tab \tab I\tab bis 24D_20H_31m_23.647s
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Genauigkeit der Darstellung \tab I\tab Millisekunden\tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab der Sekunden bei den \tab \tab I\tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Datentypen TIME_OF_DAY \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab und DATE_AND_TIME\tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Feld-Indizes\tab I\tab 6
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximal Feldgr\'f6\'dfe\tab \tab \tab I\tab Max. 65536 Elemente je 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Struktur-\tab I\tab nach Speicherbegrenzung 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab elemente\tab \tab \tab I\tab und Datentyp
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Strukturgr\'f6\'dfe\tab \tab I\tab Max. 64 kB Daten
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Max. Anzahl Variablen pro\tab I\tab Ca. 4000 (gesch\'e4tzt)\tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Deklaration\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl aufgez\'e4hlter Werte\tab I\tab Nicht verf\'fcgbar\tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Max. Standardl\'e4nge STRING-Variablen\tab I\tab 254
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Max. zul\'e4ssige L\'e4nge STRING-Variablen\tab I\tab 254
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2.4 Variablen\tab \tab \tab I\tab Maximale Anzahl Hierarchieebenen\tab I\tab 2
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Logische oder physikalische Abbildung\tab I\tab Physikalische Abbildung\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Indizes\tab I\tab 6
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximaler Bereich Indexwerte\tab I\tab 65536 Eintr\'e4ge
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Strukturebenen\tab I\tab 8
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Initialisierung der Systemeing\'e4nge\tab I\tab System: 0
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Anwender: definierbare 
+\par \tab \tab \tab \tab \tab \tab \tab |\tab \tab \tab \tab |\tab Anfangswerte
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Max. Anzahl Variablen pro Deklaration\tab I\tab Ca. 4000 (gesch\'e4tzt)\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2.5 Einheiten Programm-\tab I\tab Informationen zum Feststellen der\tab I\tab Nicht verf\'fcgbar
+\par organisation\tab \tab \tab \tab I\tab der Ausf\'fchrungszeiten f\'fcr Einheiten der\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Programmorganisation\tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Art der Operationsdarstellung \tab I\tab Symbole
+\par \tab \tab \tab \tab \tab \tab \tab I\tab (Namen oder Symbole)\tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximal zul\'e4ssige Anzahl \tab I\tab Je nach AS 128 bis 65536
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Operationen\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Eing\'e4nge \tab I\tab Nicht verf\'fcgbar\tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab f\'fcr erweiterbare Operationen\tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Genauigkeit der Umwandlung \tab I\tab Nicht verf\'fcgbar
+\par \tab \tab \tab \tab \tab \tab \tab I\tab von Datentypen\tab \tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Genauigkeit der Operationen mit einer\tab I\tab IEEE-Gleitpunkt 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Variablen\tab \tab \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Implementierung von arithmetischen\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Operationen \tab \tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximal zul\'e4ssige Anzahl Funktions-\tab I\tab Je nach AS 128 bis \tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab bausteine und FB-Instanzen\tab I\tab 65536
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab PVmin, PVmax bei Z\'e4hlern\tab I\tab -32568 bis 32567\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Begrenzung Anzahl/L\'e4nge bei \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Eing\'e4ngen SEND und Ausg\'e4ngen RCV\tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Grenzwerte Programmgr\'f6\'dfe\tab I\tab Abh\'e4ngig vom Speicher des 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab AS, ca. 1000 Anweisungen \tab 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab pro Baustein\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2.6 Sequential Function \tab I\tab Auswirkungen der Elemente zur Aus-\tab I
+\par Chart (SFC)\tab \tab \tab \tab I\tab f\'fchrungssteuerung auf Zeitregelung\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \'dcbertragbarkeit\tab \tab \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Genauigkeit der verstrichenen Schrittzeit\tab I\tab 1 ms
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Schritte pro SFC und \tab I\tab 250
+\par \tab \tab \tab \tab \tab \tab \tab I\tab pro Schritt\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Transitionen pro SFC\tab I\tab 250
+\par \tab \tab \tab \tab \tab \tab \tab I\tab und pro Schritt\tab \tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Steuermechanismus Aktionen mit\tab I\tab alle Bestimmungszeichen
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Ausnahme von "gespeichert und ver-\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab z\'f6gert"\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Aktionen pro Schritt\tab I\tab 100
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Graphische Anzeige des Schrittzustands\tab I\tab Farben ausw\'e4hlbar
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Transitionsschaltzeit\tab \tab \tab I\tab < 10 ms
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Breite von Verzeigung/\tab I\tab 8 parallele / alternative 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Zusammenf\'fchrung\tab \tab \tab I \tab Verzweigungen 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab in 8 Ketten (64)
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 2.7 Konfigurations-\tab \tab I\tab Inhalt der RESOURCE-Bibliothek\tab I\tab Integrierte Funktionen\tab 
+\par elemente\tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Integrierte Funktionen / 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab FB und FC
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl Tasks\tab \tab I\tab Nicht verf\'fcgbar
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Task-Intervall-Aufl\'f6sung\tab \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Bevorrechtigter oder nicht-berechtigter\tab I
+\par \tab \tab \tab \tab \tab \tab \tab I Zeitplan\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par 3.3 Structured Text (ST)\tab I\tab Maximale Ausdrucksl\'e4nge Teilaus-\tab I\tab Keine Begrenzung
+\par \tab \tab \tab \tab \tab \tab \tab I\tab wertung von Booleschen Ausdr\'fccken\tab I\tab Nein
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anweisungsl\'e4nge\tab I\tab Keine Begrenzung
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Maximale Anzahl CASE-Selektoren\tab I\tab Keine Begrenzung
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Wert der Steuervariablen bei Beenden\tab I\tab Endwert +1
+\par \tab \tab \tab \tab \tab \tab \tab I der Schleife FOR\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par 4  Graphische Sprachen\tab I\tab Graphische/semigraphische \tab I\tab Graphisch
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Darstellung Begrenzung \tab I
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Netzwerk-Topologie\tab \tab \tab I
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \tab \tab \tab \tab \tab \tab \tab I\tab Auswertungsreihenfolge von \tab I\tab Nicht verf\'fcgbar
+\par \tab \tab \tab \tab \tab \tab \tab I\tab R\'fcckkopplungsschleifen\tab I\tab 
+\par - - - - - - - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - 
+\par \plain\f5\fs24\b 
+\par \plain\f2\fs20 
+\par \plain\f2\fs24\b ANHANG E - Fehlerbedingungen
+\par \plain\f2\fs20 
+\par Im folgenden werden die in der Norm genannten Fehlerursachen und die jeweiligen Zeitpunkte, wann diese bei STEP 7 auftreten, aufgef\'fchrt.
+\par 
+\par \plain\f2\fs20\b Fehlerbedingungen\tab \tab \tab \tab \plain\f2\fs20 I\plain\f2\fs20\b \tab (AWL) und \tab \plain\f2\fs20 I\plain\f2\fs20\b \tab ST (SCL) nur 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \plain\f2\fs20 I\plain\f2\fs20\b \tab (KOP)\tab \plain\f2\fs20 I\tab \plain\f2\fs20\b Erweiterungen\tab 
+\par \plain\f2\fs20 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Wert einer Variablen \'fcberschreitet den\tab I\tab Zur Laufzeit \tab I\tab Zur Laufzeit 
+\par festgelegten Bereich \tab \tab \tab \tab I\tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par L\'e4nge der Initialisierungsliste entspricht \tab I\tab Bei \'dcbersetzung\tab I\tab Bei \'dcbersetzung
+\par nicht der Anzahl der Feldeintr\'e4ge\tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Falsche Verwendung von direkt darge-\tab I\tab Bei \'dcbersetzung\tab I\tab Bei \'dcbersetzung
+\par stellten oder externen Variablen in \tab I\tab \tab I
+\par Operationen \tab \tab \tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Datentyp-Umwandlungsfehler\tab I\tab Bei \'dcbersetzung\tab I\tab Bei \'dcbersetzung
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Numerisches Ergebnis \'fcberschreitet \tab I\tab Zur Laufzeit\tab I\tab Anforderung OK-Merker
+\par den Bereich f\'fcr Datentyp\tab \tab \tab I\tab Systemmerker\tab I
+\par Division durch Null\tab \tab \tab \tab I\tab \tab I\tab 
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Gemischte Eingangsdatentypen bei \tab I\tab Bei \'dcbersetzung\tab I\tab Bei \'dcbersetzung
+\par einer Auswahloperation\tab \tab \tab I\tab \tab I
+\par Selektor (K) au\'dferhalb des Bereichs \tab I\tab \tab I
+\par der Operation MUX\tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Ung\'fcltige Zeichenposition\tab \tab \tab I Zur Laufzeit\tab I\tab Zur Laufzeit
+\par Ergebnis \'fcberschreitet maximale L\'e4nge \tab I\tab \tab I
+\par der Zeichenkette\tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Ergebnis \'fcberschreitet Bereich des \tab I\tab Anforderung \tab I\tab Anforderung OK-Merker\tab 
+\par Datentyps\tab \tab \tab \tab \tab \tab I\tab Systemmerker\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Null oder mehr als ein Anfangsschritt im \tab I\tab Null > \'dcber-\tab I
+\par SFC-Netzwerk, Anwenderprogramm versucht \tab I\tab setzermeldung\tab I
+\par Schrittzustand oder Schrittzeit zu \'e4ndern\tab I\tab max.8 Anfangs-\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab schritte m\'f6glich\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab keine Fehler-\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab meldung beim \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab \'c4ndern von \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab Schrittzustand \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab oder Schrittzeit\tab I\tab 
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Gleichzeitig erf\'fcllte, nicht-priorisierte \tab I\tab Keine nicht-pri-\tab I 
+\par Transitionen in einer Auswahl-Verzweigung\tab I\tab Transitionen \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab m\'f6glich\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Nebenwirkungen bei Auswertung\tab I\tab Nein, Meldung \tab I 
+\par einer Transitionsbedingung \tab \tab I\tab beim \'dcbersetzen\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Aktionssteuerungsfehler\tab \tab \tab I\tab SD fehlt, deshalb\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab keine Meldung\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par "Unsichere" oder "unerreichbare" \tab I\tab Keine Meldung\tab I
+\par Sprache SFC\tab \tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Datentypkonflikt in VAR_ACCESS\tab I\tab Nicht verf\'fcgbar\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Task erfordert zu viele Prozessor-Ressourcen\tab I\tab Nicht verf\'fcgbar\tab I
+\par Ausf\'fchrungsende nicht erreicht\tab I\tab \tab I
+\par Weitere Task-Zeitplan-Konflikte\tab I\tab \tab I\tab \tab \tab 
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Numerisches Ergebnis \'fcberschreitet \tab I\tab Anforderung\tab I \tab Anforderung OK-Merker\tab 
+\par den Bereich des Datentyps\tab \tab I\tab Systemmerker\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Division durch Null\tab \tab \tab \tab I\tab Anforderung\tab I\tab Anforderung OK-Merker
+\par Ung\'fcltiger Datentyp f\'fcr Operation\tab I\tab Systemmerker\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par R\'fccksprung von Operation ohne \tab I\tab Bei \'dcbersetzung\tab I\tab Bei \'dcbersetzung
+\par zugeordneten Wert\tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Wiederholung erreicht kein Ende\tab I\tab Zur Laufzeit\tab I  Zur Laufzeit
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Bezeichner mit Konnektormarke \tab I\tab Nicht m\'f6glich\tab I
+\par und Name des Elements identisch\tab I\tab Fehlermeldung \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab beim \'dcbersetzen\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par R\'fcckkopplungsvariable nicht initialisiert\tab I\tab Nicht verf\'fcgbar\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab 
+\par 
+\par }
+ 

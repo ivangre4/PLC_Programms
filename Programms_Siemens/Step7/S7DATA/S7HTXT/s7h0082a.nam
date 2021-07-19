@@ -1,0 +1,237 @@
+; ==================================================================================================
+; ET200pro
+;  |_ Motorstarter
+;		|_ Direktsanftstarter
+;			|_ <4Starter>
+;		|_ Direktstarter
+;			|_ <8Starter>
+;		|_ Reversiersanftstarter
+;			|_ <4Starter>
+;		|_ Reversierstarter
+;			|_ <8Starter>
+;		|_ Sondermodule
+;			|_ <3Module>
+; ==================================================================================================
+
+; ==================================================================================================
+; --------------------------- Katalogfolder Motorstarter
+[2363722]
+KatEntryName=Motorstarter
+InfoText=Motorstartermodule für ET 200pro
+SHORTNAME=Motorstarter
+Comment=ET 200pro Motorstartermodule
+
+; --------------------------- Katalogfolder Direktstarter
+[2363723]
+KatEntryName=Direktstarter
+InfoText=Motorstarter für eine Drehrichtung für ET 200pro
+SHORTNAME=Direktstarter
+; --------------------------- Katalogfolder Reversierstarter
+[2363724]
+KatEntryName=Reversierstarter
+InfoText=Motorstarter für zwei Drehrichtungen für ET 200pro
+SHORTNAME=Reversierstarter
+; --------------------------- Katalogfolder Sondermodule
+[2363734]
+KatEntryName=Sondermodule
+InfoText=Sondermodule für ET 200pro
+SHORTNAME=Sondermodule
+; --------------------------- Katalogfolder Direktsanftstarter
+[2363725]
+KatEntryName=Direktsanftstarter
+InfoText=Motorstarter für Sanftanlauf/-auslauf für eine Drehrichtung für ET 200pro
+SHORTNAME=Direktsanftstarter
+; --------------------------- Katalogfolder Reversiersanftstarter
+[2363726]
+KatEntryName=Reversiersanftstarter
+InfoText=Motorstarter für Sanftanlauf/-auslauf für zwei Drehrichtungen für ET 200pro
+SHORTNAME=Reversiersanftstarter
+; ==================================================================================================
+
+; --------------------------- 3RK1-304-5KS40-2AA0
+[2363698]
+KatEntryName=DSe HF 4DI 0,15-2A
+InfoText=Motorstarter ET200pro DSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA0
+[2363699]
+KatEntryName=RSe HF 4DI 0,15-2A
+InfoText=Motorstarter ET200pro RSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA0
+[2363700]
+KatEntryName=DSe ST 0,15-2A
+InfoText=Motorstarter ET200pro DSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA0
+[2363701]
+KatEntryName=RSe ST 0,15-2A
+InfoText=Motorstarter ET200pro RSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-2AA3
+[2363702]
+KatEntryName=DSe HF 4DI/1BO 0,15-2A
+InfoText=Motorstarter ET200pro DSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA3
+[2363703]
+KatEntryName=RSe HF 4DI/1BO 0,15-2A
+InfoText=Motorstarter ET200pro RSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA3
+[2363704]
+KatEntryName=DSe ST 1BO 0,15-2A
+InfoText=Motorstarter ET200pro DSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA3
+[2363705]
+KatEntryName=RSe ST 1BO 0,15-2A
+InfoText=Motorstarter ET200pro RSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA0
+[2363706]
+KatEntryName=DSe HF 4DI 1,5-12A
+InfoText=Motorstarter ET200pro DSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA0
+[2363707]
+KatEntryName=RSe HF 4DI 1,5-12A
+InfoText=Motorstarter ET200pro RSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA0
+[2363708]
+KatEntryName=DSe ST 1,5-12A
+InfoText=Motorstarter ET200pro DSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA0
+[2363709]
+KatEntryName=RSe ST 1,5-12A
+InfoText=Motorstarter ET200pro RSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA3
+[2363710]
+KatEntryName=DSe HF 4DI/1BO 1,5-12A
+InfoText=Motorstarter ET200pro DSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA3
+[2363711]
+KatEntryName=RSe HF 4DI/1BO 1,5-12A
+InfoText=Motorstarter ET200pro RSe HF; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA3
+[2363712]
+KatEntryName=DSe ST 1BO 1,5-12A
+InfoText=Motorstarter ET200pro DSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A, Bremskontakt AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA3
+[2363713]
+KatEntryName=RSe ST 1BO 1,5-12A
+InfoText=Motorstarter ET200pro RSe ST; mech. schalten; elektro. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; Bremskontakt AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA0
+[2363735]
+KatEntryName=sDSSte HF 4DI 0,15-2A
+InfoText=Motorstarter ET200pro sDSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA3
+[2363736]
+KatEntryName=sDSSte HF 4DI/1B 0,15-2A
+InfoText=Motorstarter ET200pro sDSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA0
+[2363737]
+KatEntryName=sRSSte HF 4DI 0,15-2A
+InfoText=Motorstarter ET200pro sRSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA3
+[2363738]
+KatEntryName=sRSSte HF 4DI/1B 0,15-2A
+InfoText=Motorstarter ET200pro sRSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/0,9kW; 0,15A...2,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA0
+[2363739]
+KatEntryName=sDSSte HF 4DI 1,5-12A
+InfoText=Motorstarter ET200pro sDSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA3
+[2363740]
+KatEntryName=sDSSte HF 4DI/1B 1,5-12A
+InfoText=Motorstarter ET200pro sDSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA0
+[2363741]
+KatEntryName=sRSSte HF 4DI 1,5-12A
+InfoText=Motorstarter ET200pro sRSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; ohne Bremskontakt; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA3
+[2363742]
+KatEntryName=sRSSte HF 4DI/1B 1,5-12A
+InfoText=Motorstarter ET200pro sRSSte HF; elektro. schalten; elektro./therm. UE-Schutz; 3 AC 400V/5,5kW; 1,50A...12,00A; Bremskontakt AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 1,5-12A
+
+
+
+; ==================================================================================================
+; --------------------------- Sondermodule
+[2363731]
+KatEntryName=RSM 25A
+InfoText=Motorstarter Sondermodul ET200pro RSM; mech. trennend; 3 AC 400V; 25A; Han Q4/2; Reparaturschaltermodul; Trennerfunktion für Hauptstromkreis
+SHORTNAME=RSM 25A
+
+
+[2363732]
+KatEntryName=F-RSM 16A
+InfoText=Motorstarter Sondermodul ET200pro F-RSM; mech. trennend; 3 AC 400V; 16A; Han Q4/2; Safety Local Reparaturschaltermodul
+SHORTNAME=F-RSM 16A
+
+
+[2363733]
+KatEntryName=ASM 400V 25A
+InfoText=Motorstarter Sondermodul ET200pro ASM; mech. trennend; 3 AC 400V; 25A; Han Q4/2; Abschaltmodul 400V; 2-fache Anschaltung der Hauptstromkreisversorgung
+SHORTNAME=ASM 400V 25A

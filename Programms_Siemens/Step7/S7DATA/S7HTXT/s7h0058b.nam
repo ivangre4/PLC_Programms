@@ -1,0 +1,39 @@
+;------------------------------ SI-Module Modbus Master/Slave und USS Master
+[2363658]
+KatEntryName = 1 SI Modbus Master (4 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus master log with 4 byte I/O interface
+SHORTNAME = 1 SI Modbus Master (4 B)
+Comment=Communication module with a serial interface (RS485, RS232) and USS master log or Modbus slave log or Modbus master log
+
+[2363659]
+KatEntryName = 1 SI Modbus Master (8 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus master log with 8 byte I/O interface
+SHORTNAME = 1 SI Modbus Master (8 B)
+[2363660]
+KatEntryName = 1 SI Modbus Master (32 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus master log with 32 byte I/O interface
+SHORTNAME = 1 SI Modbus Master(32 B)
+[2363661]
+KatEntryName = 1 SI Modbus Slave (4 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus slave log with 4 byte I/O interface
+SHORTNAME = 1 SI Modbus Slave (4 B)
+[2363662]
+KatEntryName = 1 SI Modbus Slave (8 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus slave log with 8 byte I/O interface
+SHORTNAME = 1 SI Modbus Slave (8 B)
+[2363663]
+KatEntryName = 1 SI Modbus Slave (32 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and Modbus slave log with 32 byte I/O interface
+SHORTNAME = 1 SI Modbus Slave (32 B)
+[2363664]
+KatEntryName = 1 SI USS Master (4 Byte)
+InfoText =Communication module with a serial interface (RS485, RS232) and USS Master  log with 4 byte I/O interface
+SHORTNAME = 1 SI USS Master (4 B)
+[2363665]
+KatEntryName = 1 SI USS Master (8 Byte)
+InfoText =Communication module with a serial interface (RS485, RS232) and USS Master log with 8 byte I/O interface
+SHORTNAME = 1 SI USS Master (8 B)
+[2363666]
+KatEntryName = 1 SI USS Master (32 Byte)
+InfoText =Communication module with a serial interface (RS485, RS232) and USS Master log with 32 byte I/O interface
+SHORTNAME = 1 SI USS Master (32 B)

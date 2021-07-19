@@ -1,0 +1,1098 @@
+S7HPROFX V0.1
+
+//  Weil man die Eintraege von "Weitere Feldgeraete" durch einen Aufruf
+//  von "GetHwChilds" erzeugt (--> Applikations-Objekt), muss man den
+//  Katalog-Ordner "Kompatible Profibus-DP-Slaves" zunaechst NEBEN den
+//  "Weiteren Feldgeraeten" anlegen.
+//  Mit den nachfolgenden Anweisungen schiebt man den Ordner "Kompatible
+//  Profibus-DP-Slaves" IN die "Weiteren Feldgeraete".
+//
+[PROFIBUS-DP\Esclavos DP Profibus compatibles]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo"
+
+// Schaltgeräte
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\Aparatos de maniobra]
+ObjectName="Aparatos de maniobra"
+ObjectType="0x001411f5"
+
+// DP/AS-i
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\DP/AS-i]
+ObjectName="DP/AS-i"
+ObjectType="0x00141148"
+
+// ENCODER
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ENCODER]
+ObjectName="ENCODER"
+ObjectType="0x001414c5"
+
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ENCODER\SIMODRIVE sensor::6FX2001-xxxxx]
+ObjectName="SIMODRIVE sensor"
+ObjectType="0x001411fb"
+
+
+//  ET 200B
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B]
+ObjectName="ET 200B"
+ObjectType="0x0014111d"
+
+// ET 200C
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C]
+ObjectName="ET 200C"
+ObjectType="0x001411ec"
+
+// ET 200L
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L]
+ObjectName="ET 200L"
+ObjectType="0x00141128"
+
+// ET 200M
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200M]
+ObjectName="ET 200M"
+ObjectType="0x00141222"
+
+// ET 200U
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200U]
+ObjectName="ET 200U"
+ObjectType="0x001411ed"
+
+/ ET 200X
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200X]
+ObjectName="ET 200X"
+ObjectType="0x0014113b"
+
+// IDENT
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\IDENT]
+ObjectName="IDENT"
+ObjectType="0x001411f0"
+
+// NC
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\NC]
+ObjectName="NC"
+ObjectType="0x001411f2"
+
+// Regler
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\Regulador]
+ObjectName="Regulador"
+ObjectType="0x001411ef"
+
+// SIMADYN
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMADYN]
+ObjectName="SIMADYN"
+ObjectType="0x001414c8"
+
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMADYN\SS52 Slave::SS52: 6DD1688-0AE2]
+ObjectName="SS52 Slave"
+ObjectType="0x0014120c"
+
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMADYN\SS52 Slave::SS52: 6DD1688-0AE2\Módulo universal]
+ObjectName="Módulo universal"
+ObjectType="0x001410b3"
+ExtObjectString="META\SI8037AX.200\S~~"
+
+
+// SIMATIC
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC]
+ObjectName="SIMATIC"
+ObjectType="0x001411eb"
+
+
+// SIMODRIVE
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMODRIVE]
+ObjectName="SIMODRIVE"
+ObjectType="0x0014125f"
+
+
+// SIMOREG
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOREG]
+ObjectName="SIMOREG"
+ObjectType="0x001411f3"
+
+// SIMOVERT
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT]
+ObjectName="SIMOVERT"
+ObjectType="0x001411f1"
+
+//  SIPOS
+[PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIPOS]
+ObjectName="SIPOS"
+ObjectType="0x0014122e"
+
+//-------------------------------------------------------------------
+// die Typdatei-Slaves werden in die neu angegelegten Kataloge
+// unter "Weitere Feldgeraete\Kompatible Profibus-DP-Slaves" verschoben
+// und die bisherigen Katalogeinträge unter "PROFIBUS-DP" bzw.
+// "PROFIBUS-DP\Esclavos DP V0" werden gelöscht
+//-------------------------------------------------------------------
+
+// DP/AS-i
+//0804F
+[PROFIBUS-DP\DP/AS-i\DP/AS-i Link 20::6GK1415-2AA00]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\DP/AS-i"
+[PROFIBUS-DP\Esclavos DP V0\DP/AS-i\DP/AS-i Link 20::6GK1415-2AA00]
+@DELETE
+
+
+// ET 200B
+//00001
+[PROFIBUS-DP\ET 200B\B-16DI::6ES7 131-0BH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DI::6ES7 131-0BH00-0XB0]
+@DELETE
+
+//00019
+[PROFIBUS-DP\ET 200B\B-16DI-AC::6ES7 131-0HF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DI-AC::6ES7 131-0HF00-0XB0]
+@DELETE
+
+//0000A
+[PROFIBUS-DP\ET 200B\B-16DI/16DO::6ES7 133-0BL00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DI/16DO::6ES7 133-0BL00-0XB0]
+@DELETE
+
+//00002
+[PROFIBUS-DP\ET 200B\B-16DO::6ES7 132-0BH0.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DO::6ES7 132-0BH0.-0XB0]
+@DELETE
+
+//0001A
+[PROFIBUS-DP\ET 200B\B-16DO-AC::6ES7 132-0HF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DO-AC::6ES7 132-0HF00-0XB0]
+@DELETE
+
+//0005
+[PROFIBUS-DP\ET 200B\B-16DO/2A::6ES7 132-0BH1.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16DO/2A::6ES7 132-0BH1.-0XB0]
+@DELETE
+
+//0001C
+[PROFIBUS-DP\ET 200B\B-16RO-AC::6ES7 132-0HH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-16RO-AC::6ES7 132-0HH00-0XB0]
+@DELETE
+
+//0000F
+[PROFIBUS-DP\ET 200B\B-24DI/8DO::6ES7 133-0BN0.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-24DI/8DO::6ES7 133-0BN0.-0XB0]
+@DELETE
+
+//0000E
+[PROFIBUS-DP\ET 200B\B-24DI/8DO.2::6ES7 133-0BN10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-24DI/8DO.2::6ES7 133-0BN10-0XB0]
+@DELETE
+
+//00004
+[PROFIBUS-DP\ET 200B\B-32DI::6ES7 131-0BL00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-32DI::6ES7 131-0BL00-0XB0]
+@DELETE
+
+//0000C
+[PROFIBUS-DP\ET 200B\B-32DI 0.2ms::6ES7 131-0BL10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-32DI 0.2ms::6ES7 131-0BL10-0XB0]
+@DELETE
+
+//0000D
+[PROFIBUS-DP\ET 200B\B-32DO::6ES7 132-0BL0.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-32DO::6ES7 132-0BL0.-0XB0]
+@DELETE
+
+//08018
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-4 AO::6ES7 135-0HF01-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+
+//0801A
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-4/8 AI::6ES7 134-0KH01-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+
+//00010
+[PROFIBUS-DP\ET 200B\B-8DI/8DO::6ES7 133-0BH10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-8DI/8DO::6ES7 133-0BH10-0XB0]
+@DELETE
+
+//0000B
+[PROFIBUS-DP\ET 200B\B-8DI/8DO::6ES7 133-0BH0.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-8DI/8DO::6ES7 133-0BH0.-0XB0]
+@DELETE
+
+//0001D
+[PROFIBUS-DP\ET 200B\B-8DI/8RO-AC::6ES7 133-0HH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-8DI/8RO-AC::6ES7 133-0HH00-0XB0]
+@DELETE
+
+//00003
+[PROFIBUS-DP\ET 200B\B-8RO::6ES7 132-0GF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200B"
+[PROFIBUS-DP\Esclavos DP V0\ET 200B\B-8RO::6ES7 132-0GF00-0XB0]
+@DELETE
+
+
+// ET 200C
+//0800F
+[PROFIBUS-DP\ET 200C\C-AI4/8x12Bit::6ES7 144-0KH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-AI4/8x12Bit::6ES7 144-0KH00-0XB0]
+@DELETE
+
+//0800E
+[PROFIBUS-DP\ET 200C\C-AI4x12Bit::6ES7 144-0HF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-AI4x12Bit::6ES7 144-0HF00-0XB0]
+@DELETE
+
+//0800D
+[PROFIBUS-DP\ET 200C\C-AO4x12Bit::6ES7 145-0HF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-AO4x12Bit::6ES7 145-0HF00-0XB0]
+@DELETE
+
+//08013
+[PROFIBUS-DP\ET 200C\C-DI16/DO16 DC24V::6ES7 143-0BL..-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-DI16/DO16 DC24V::6ES7 143-0BL..-0XB0]
+@DELETE
+
+//08010
+[PROFIBUS-DP\ET 200C\C-DI8xDC24V::6ES7 141-0BF00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-DI8xDC24V::6ES7 141-0BF00-0XB0]
+@DELETE
+
+//08011
+[PROFIBUS-DP\ET 200C\C-DO8xDC24V/0.5A::6ES7 142-0BF0.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-DO8xDC24V/0.5A::6ES7 142-0BF0.-0XB0]
+@DELETE
+
+//08012
+[PROFIBUS-DP\ET 200C\C-DO8xDC24V/2A::6ES7 142-0BF1.-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200C"
+[PROFIBUS-DP\Esclavos DP V0\ET 200C\C-DO8xDC24V/2A::6ES7 142-0BF1.-0XB0]
+@DELETE
+
+
+// ET 200L
+//0802C
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-SC DI16/DO16xDC24V/0.5A::6ES7 133-1BL10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+
+//0002A
+[PROFIBUS-DP\ET 200L\L-16DI-120VAC::6ES7 131-1EH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-16DI-120VAC::6ES7 131-1EH00-0XB0]
+@DELETE
+
+//00017
+[PROFIBUS-DP\ET 200L\L-16DI/16DO::6ES7 133-1BL00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-16DI/16DO::6ES7 133-1BL00-0XB0]
+@DELETE
+
+//00028
+[PROFIBUS-DP\ET 200L\L-16DO-120VAC::6ES7 132-1EH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-16DO-120VAC::6ES7 132-1EH00-0XB0]
+@DELETE
+
+//00026
+[PROFIBUS-DP\ET 200L\L-16RO-120VAC::6ES7 132-1JH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-16RO-120VAC::6ES7 132-1JH00-0XB0]
+@DELETE
+
+//00029
+[PROFIBUS-DP\ET 200L\L-8DI/8DO-120VAC::6ES7 133-1EH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-8DI/8DO-120VAC::6ES7 133-1EH00-0XB0]
+@DELETE
+
+//00027
+[PROFIBUS-DP\ET 200L\L-8DI/8RO-120VAC::6ES7 133-1JH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-8DI/8RO-120VAC::6ES7 133-1JH00-0XB0]
+@DELETE
+
+//00014
+[PROFIBUS-DP\ET 200L\L-DI 16xDC24V::6ES7 131-1BH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-DI 16xDC24V::6ES7 131-1BH00-0XB0]
+@DELETE
+
+//00015
+[PROFIBUS-DP\ET 200L\L-DI 32xDC24V::6ES7 131-1BL00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-DI 32xDC24V::6ES7 131-1BL00-0XB0]
+@DELETE
+
+//00016
+[PROFIBUS-DP\ET 200L\L-DO 16xDC24V/0.5A::6ES7 132-1BH00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-DO 16xDC24V/0.5A::6ES7 132-1BH00-0XB0]
+@DELETE
+
+//00011
+[PROFIBUS-DP\ET 200L\L-DO 32xDC24V/0.5A::6ES7 132-1BL00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-DO 32xDC24V/0.5A::6ES7 132-1BL00-0XB0]
+@DELETE
+
+//08027
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-SC DI 16xDC24V/def.::6ES7 131-1BH10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+
+//08029
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-SC DI 32xDC24V/def.::6ES7 131-1BL10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+
+//08028
+[PROFIBUS-DP\Esclavos DP V0\ET 200L\L-SC DO 16xDC24V/0.5A/def.::6ES7 132-1BH10-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200L"
+
+
+// ET 200M
+//0801D
+[PROFIBUS-DP\Esclavos DP V0\ET 200M\IM 153-1::6ES7 153-1AA0*-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200M"
+
+//0801E
+[PROFIBUS-DP\Esclavos DP V0\ET 200M\IM 153-2::6ES7 153-2AA00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200M"
+
+// ET 200U
+//08008
+[PROFIBUS-DP\ET 200U\U-IM 318-B::6ES5 318-8MB1.]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200U"
+[PROFIBUS-DP\Esclavos DP V0\ET 200U\U-IM 318-B::6ES5 318-8MB1.]
+@DELETE
+
+//08009
+[PROFIBUS-DP\ET 200U\U-IM 318-C::6ES5 318-8MC1.]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200U"
+[PROFIBUS-DP\Esclavos DP V0\ET 200U\U-IM 318-C::6ES5 318-8MC1.]
+@DELETE
+
+
+/ ET 200X
+//0803C
+[PROFIBUS-DP\Esclavos DP V0\ET 200X\X 4DO-2::6ES7 142-1BD11-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200X"
+
+//0803D
+[PROFIBUS-DP\Esclavos DP V0\ET 200X\X 8DI-2::6ES7 141-1BF01-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\ET 200X"
+
+
+// IDENT
+//08021
+[PROFIBUS-DP\IDENT\ASM 440::6GT2 002-0EA00]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\IDENT"
+[PROFIBUS-DP\Esclavos DP V0\IDENT\ASM 440::6GT2 002-0EA00]
+@DELETE
+
+//08030
+[PROFIBUS-DP\IDENT\ES30K::6AW5 451-xxxx3]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\IDENT"
+[PROFIBUS-DP\Esclavos DP V0\IDENT\ES30K::6AW5 451-xxxx3]
+@DELETE
+
+
+// NC
+//08024
+[PROFIBUS-DP\NC\IM 329N (Slave)::6FC 5012-0CA02-0AA0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\NC"
+[PROFIBUS-DP\Esclavos DP V0\NC\IM 329N (Slave)::6FC 5012-0CA02-0AA0]
+@DELETE
+
+
+// Regler
+//000A7
+[PROFIBUS-DP\Regulador\SIPART DR**::6DR2***-.....]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\Regulador"
+[PROFIBUS-DP\Esclavos DP V0\Regulador\SIPART DR**::6DR2***-.....]
+@DELETE
+
+
+// Schaltgeräte
+//08032
+[PROFIBUS-DP\Aparatos de maniobra\Interfase DP/RS485::3RK1000-0JC80-0BA1]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\Aparatos de maniobra"
+[PROFIBUS-DP\Esclavos DP V0\Aparatos de maniobra\Interfase DP/RS485::3RK1000-0JC80-0BA1]
+@DELETE
+
+//08031
+[PROFIBUS-DP\Aparatos de maniobra\SIMOCODE-DP::3UF50*]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\Aparatos de maniobra"
+[PROFIBUS-DP\Esclavos DP V0\Aparatos de maniobra\SIMOCODE-DP::3UF50*]
+@DELETE
+
+
+// SIMATIC
+//0BCD0
+[PROFIBUS-DP\SIMATIC\505-6870 DP RBC::PPX: 505-6870]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\505-6870 DP RBC::PPX: 505-6870]
+@DELETE
+
+//0801C
+[PROFIBUS-DP\SIMATIC\IM 308-C Esclavo DP::6ES5 308-3UC11]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\IM 308-C Esclavo DP::6ES5 308-3UC11]
+@DELETE
+
+//0800C
+[PROFIBUS-DP\SIMATIC\S5-95U         DP::6ES5 095-8MD01]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\S5-95U         DP::6ES5 095-8MD01]
+@DELETE
+
+//08049
+[PROFIBUS-DP\SIMATIC\S7-200 CP 242-8 Esclavo DP::6GK7 242-8DP00-0XA0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\S7-200 CP 242-8 Esclavo DP::6GK7 242-8DP00-0XA0]
+@DELETE
+
+//02150
+[PROFIBUS-DP\SIMATIC\S7-200 CPU 215-2DP::6ES7 215-2.D00-0XB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\S7-200 CPU 215-2DP::6ES7 215-2.D00-0XB0]
+@DELETE
+
+//09001
+[PROFIBUS-DP\SIMATIC\S7-300 CP 342-5 DP::6GK7 342-5DA00-0XE0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMATIC"
+[PROFIBUS-DP\Esclavos DP V0\SIMATIC\S7-300 CP 342-5 DP::6GK7 342-5DA00-0XE0]
+@DELETE
+
+
+// SIMODRIVE
+[PROFIBUS-DP\SIMODRIVE\SIMODRIVE 611 universal, PROFIBUS-DP1::6SN1 114-0NB00-0AA0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMODRIVE"
+[PROFIBUS-DP\Esclavos DP V0\SIMODRIVE\SIMODRIVE 611 universal, PROFIBUS-DP1::6SN1 114-0NB00-0AA0]
+@DELETE
+
+
+// SIMOREG
+//0802D
+[PROFIBUS-DP\SIMOREG\6RA24 CB24::6RX1240-0AK01]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOREG"
+[PROFIBUS-DP\Esclavos DP V0\SIMOREG\6RA24 CB24::6RX1240-0AK01]
+@DELETE
+
+//08045
+[PROFIBUS-DP\SIMOREG\DC MASTER CBP/CBP2::6SE7090-0xx84-0FF0/0FF5]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOREG"
+[PROFIBUS-DP\Esclavos DP V0\SIMOREG\DC MASTER CBP/CBP2::6SE7090-0xx84-0FF0/0FF5]
+@DELETE
+
+
+// SIMOVERT
+//08022
+[PROFIBUS-DP\SIMOVERT\MASTERDRIVES CB1::6SE7090-0XX84-0AK0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT"
+[PROFIBUS-DP\Esclavos DP V0\SIMOVERT\MASTERDRIVES CB1::6SE7090-0XX84-0AK0]
+@DELETE
+
+//08045
+[PROFIBUS-DP\SIMOVERT\MASTERDRIVES CBP/CBP2::6SE7090-0xx84-0FF0/0FF5]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT"
+[PROFIBUS-DP\Esclavos DP V0\SIMOVERT\MASTERDRIVES CBP/CBP2::6SE7090-0xx84-0FF0/0FF5]
+@DELETE
+
+//08046
+[PROFIBUS-DP\SIMOVERT\MICRO-/MIDI-/COMBIMASTER CB15/CB155::6SE3(9)290-0XX87-8PB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT"
+[PROFIBUS-DP\Esclavos DP V0\SIMOVERT\MICRO-/MIDI-/COMBIMASTER CB15/CB155::6SE3(9)290-0XX87-8PB0]
+@DELETE
+
+//08023
+[PROFIBUS-DP\SIMOVERT\MICRO-/MIDIMASTER OPMP::6SE3190-0XX87-8PB0]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT"
+[PROFIBUS-DP\Esclavos DP V0\SIMOVERT\MICRO-/MIDIMASTER OPMP::6SE3190-0XX87-8PB0]
+@DELETE
+
+//08026
+[PROFIBUS-DP\SIMOVERT\PM/P 6SE42/P 6SE48::6SE4800-2PB01]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIMOVERT"
+[PROFIBUS-DP\Esclavos DP V0\SIMOVERT\PM/P 6SE42/P 6SE48::6SE4800-2PB01]
+@DELETE
+
+
+//  SIPOS
+//0009C
+[PROFIBUS-DP\SIPOS\SIPOS 3 MC/P]
+@MOVE = "PROFIBUS-DP\Otros aparatos de campo\Esclavos DP Profibus compatibles\SIPOS"
+[PROFIBUS-DP\Esclavos DP V0\SIPOS\SIPOS 3 MC/P]
+@DELETE
+
+
+//  Man schiebt DIE Diagnose-Repeater VON den "Weiteren Feldgeraeten"
+//  in den dafuer vorgesehenen Katalog-Ordner "PROFIBUS-DP\Netzkomponenten".
+//
+[PROFIBUS-DP\Otros aparatos de campo\Diagnostic Repeater]
+@MOVE = "PROFIBUS-DP\Componentes de red"
+
+[PROFIBUS-DP\Otros aparatos de campo\Diagnostic Repeater]
+@MOVE = "PROFIBUS-DP\Componentes de red"
+
+[PROFIBUS-DP\Otros aparatos de campo\Diagnostic Repeater]
+@MOVE = "PROFIBUS-DP\Componentes de red"
+
+//  Man schiebt das Direkttastenmodul "OP012 Direct key module" VON
+//  den "Weiteren Feldgeraeten" in den Katalog-Ordner "PROFIBUS-DP\IPC".
+//
+[PROFIBUS-DP\Otros aparatos de campo\OP012 Direct key module]
+@MOVE = "PROFIBUS-DP\IPC"
+
+//  Man schiebt den "ERSATZ"-Normslave fuer "ENCODER\SIMODRIVE sensor"
+//  VON den "Weiteren Feldgeraeten" IN DIE BEIDEN dafuer vorgesehenen
+//  Katalog-Ordner.
+//
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE sensor]
+@COPY = "PROFIBUS-DP\ENCODER"
+
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE sensor]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ENCODER"
+
+//  Man schiebt den "ERSATZ"-Normslave fuer "SIMADYN\SS52 Slave"
+//  VON den "Weiteren Feldgeraeten" IN DIE BEIDEN dafuer vorgesehenen
+//  Katalog-Ordner.
+//
+[PROFIBUS-DP\Otros aparatos de campo\SIMADYN D SS52]
+@COPY = "PROFIBUS-DP\SIMADYN"
+
+[PROFIBUS-DP\Otros aparatos de campo\SIMADYN D SS52]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMADYN"
+
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 16DI]
+@COPY = "PROFIBUS-DP\ET 200eco"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 16DI]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200eco"
+
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DI]
+@COPY = "PROFIBUS-DP\ET 200eco"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DI]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200eco"
+
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DI/8DO 2A]
+@COPY = "PROFIBUS-DP\ET 200eco"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DI/8DO 2A]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200eco"
+
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DO 2A]
+@COPY = "PROFIBUS-DP\ET 200eco"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200eco 8DO 2A]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200eco"
+
+
+//-------------------------------------------------------------------
+//  Man schiebt die "ERSATZ"-Normslave aus den GSD-Dateien
+//  VON den "Weiteren Feldgeraeten" IN DIE BEIDEN dafuer vorgesehenen
+//  Katalog-Ordner.
+//-------------------------------------------------------------------
+
+
+// DP/AS-i
+//0804F
+[PROFIBUS-DP\Otros aparatos de campo\DP/AS-i Link 20]
+@COPY = "PROFIBUS-DP\DP/AS-i"
+[PROFIBUS-DP\Otros aparatos de campo\DP/AS-i Link 20]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\DP/AS-i"
+
+
+//  ET 200 B
+//0801A
+[PROFIBUS-DP\Otros aparatos de campo\B-4/8AI-2      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//08018
+[PROFIBUS-DP\Otros aparatos de campo\B-4AO-2        DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00001
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI         DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00004
+[PROFIBUS-DP\Otros aparatos de campo\B-32DI         DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-32DI         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00019
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI-AC      DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI-AC      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000C
+[PROFIBUS-DP\Otros aparatos de campo\B-32DI.2       DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-32DI.2       DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000B
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8DO      DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8DO      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00010
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8DO HWA  DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8DO HWA  DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0001D
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8RO-AC   DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-8DI/8RO-AC   DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000A
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI/16DO    DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DI/16DO    DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000F
+[PROFIBUS-DP\Otros aparatos de campo\B-24DI/8DO     DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-24DI/8DO     DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000E
+[PROFIBUS-DP\Otros aparatos de campo\B-24DI/8DO.2   DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-24DI/8DO.2   DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00003
+[PROFIBUS-DP\Otros aparatos de campo\B-8RO          DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-8RO          DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00002
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO         DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//00005
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO/2A      DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO/2A      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0001A
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO-AC      DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16DO-AC      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0001C
+[PROFIBUS-DP\Otros aparatos de campo\B-16RO-AC      DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-16RO-AC      DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+//0000D
+[PROFIBUS-DP\Otros aparatos de campo\B-32DO         DP]
+@COPY = "PROFIBUS-DP\ET 200B"
+[PROFIBUS-DP\Otros aparatos de campo\B-32DO         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200B"
+
+
+// ET 200C
+//0800E
+[PROFIBUS-DP\Otros aparatos de campo\C-4AI          DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-4AI          DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//0800F
+[PROFIBUS-DP\Otros aparatos de campo\C-4/8AI        DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-4/8AI        DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//0800D
+[PROFIBUS-DP\Otros aparatos de campo\C-4AO          DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-4AO          DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//08010
+[PROFIBUS-DP\Otros aparatos de campo\C-8DI          DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-8DI          DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//08013
+[PROFIBUS-DP\Otros aparatos de campo\C-16DI/16DO/2A DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-16DI/16DO/2A DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//08011
+[PROFIBUS-DP\Otros aparatos de campo\C-8DO/0,5A     DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-8DO/0,5A     DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+//08012
+[PROFIBUS-DP\Otros aparatos de campo\C-8DO/2A       DP]
+@COPY = "PROFIBUS-DP\ET 200C"
+[PROFIBUS-DP\Otros aparatos de campo\C-8DO/2A       DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200C"
+
+
+//  ET 200L
+//00014
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI         DP]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//0002A
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI-120VAC]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI-120VAC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00015
+[PROFIBUS-DP\Otros aparatos de campo\L-32DI         DP]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-32DI         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00029
+[PROFIBUS-DP\Otros aparatos de campo\L-8DI/8DO-120VAC]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-8DI/8DO-120VAC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00027
+[PROFIBUS-DP\Otros aparatos de campo\L-8DI/8RO-120VAC]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-8DI/8RO-120VAC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00017
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI/16DO    DP]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16DI/16DO    DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00016
+[PROFIBUS-DP\Otros aparatos de campo\L-16DO         DP]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16DO         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00028
+[PROFIBUS-DP\Otros aparatos de campo\L-16DO-120VAC]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16DO-120VAC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00026
+[PROFIBUS-DP\Otros aparatos de campo\L-16RO-120VAC]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-16RO-120VAC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//00011
+[PROFIBUS-DP\Otros aparatos de campo\L-32DO        DP]
+@COPY = "PROFIBUS-DP\ET 200L"
+[PROFIBUS-DP\Otros aparatos de campo\L-32DO        DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//08027
+[PROFIBUS-DP\Otros aparatos de campo\L-SC 16DI/def. DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//08029
+[PROFIBUS-DP\Otros aparatos de campo\L-SC 32DI/def. DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//0802C
+[PROFIBUS-DP\Otros aparatos de campo\L-SC 16DI/DO/d.DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+//08028
+[PROFIBUS-DP\Otros aparatos de campo\L-SC 16DO/def. DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200L"
+
+
+// ET 200M
+//0801D
+[PROFIBUS-DP\Otros aparatos de campo\ET 200M (IM153-1)]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200M"
+
+//0801E
+[PROFIBUS-DP\Otros aparatos de campo\ET 200M (IM153-2)]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200M"
+
+// ET 200R
+//080A8
+[PROFIBUS-DP\Otros aparatos de campo\ET200R]
+@COPY = "PROFIBUS-DP\ET 200R"
+[PROFIBUS-DP\Otros aparatos de campo\ET200R]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200R"
+
+// ET 200U
+//08008
+[PROFIBUS-DP\Otros aparatos de campo\ET 200U        DP]
+@COPY = "PROFIBUS-DP\ET 200U"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200U        DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200U"
+
+//08009
+[PROFIBUS-DP\Otros aparatos de campo\ET 200U    DP/FMS]
+@COPY = "PROFIBUS-DP\ET 200U"
+[PROFIBUS-DP\Otros aparatos de campo\ET 200U    DP/FMS]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200U"
+
+//0BCD0
+[PROFIBUS-DP\Otros aparatos de campo\505/500-6870 RBC]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\505/500-6870 RBC]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+
+/ ET 200X
+//0803D
+[PROFIBUS-DP\Otros aparatos de campo\ET 200X 8DI-5  DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200X"
+
+//0803C
+[PROFIBUS-DP\Otros aparatos de campo\ET 200X 4DO-5  DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\ET 200X"
+
+
+// IDENT
+//08021
+[PROFIBUS-DP\Otros aparatos de campo\Identsy. ASM440]
+@COPY = "PROFIBUS-DP\IDENT"
+[PROFIBUS-DP\Otros aparatos de campo\Identsy. ASM440]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\IDENT"
+
+//08030
+[PROFIBUS-DP\Otros aparatos de campo\Identsy. ES30K]
+@COPY = "PROFIBUS-DP\IDENT"
+[PROFIBUS-DP\Otros aparatos de campo\Identsy. ES30K]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\IDENT"
+
+
+// NC
+//08024
+[PROFIBUS-DP\Otros aparatos de campo\IM 329N Slave  DP]
+@COPY = "PROFIBUS-DP\NC"
+[PROFIBUS-DP\Otros aparatos de campo\IM 329N Slave  DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\NC"
+
+
+// Regler
+//000A7
+[PROFIBUS-DP\Otros aparatos de campo\SIPART DR**]
+@COPY = "PROFIBUS-DP\Regulador"
+[PROFIBUS-DP\Otros aparatos de campo\SIPART DR**]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Regulador"
+
+
+// Schaltgeräte
+//08032
+[PROFIBUS-DP\Otros aparatos de campo\Gateway 3WN6]
+@COPY = "PROFIBUS-DP\Aparatos de maniobra"
+[PROFIBUS-DP\Otros aparatos de campo\Gateway 3WN6]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Aparatos de maniobra"
+
+//08031
+[PROFIBUS-DP\Otros aparatos de campo\SIMOCODE-DP]
+@COPY = "PROFIBUS-DP\Aparatos de maniobra"
+[PROFIBUS-DP\Otros aparatos de campo\SIMOCODE-DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Aparatos de maniobra"
+
+
+// SIMATIC
+//02150
+[PROFIBUS-DP\Otros aparatos de campo\CPU 215-2 DP]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\CPU 215-2 DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//08049
+[PROFIBUS-DP\Otros aparatos de campo\CP 242-8]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\CP 242-8]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//0801C
+[PROFIBUS-DP\Otros aparatos de campo\IM 308-C DP-Slave]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\IM 308-C DP-Slave]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//0800C
+[PROFIBUS-DP\Otros aparatos de campo\S5-95U         DP]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\S5-95U         DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//09001
+[PROFIBUS-DP\Otros aparatos de campo\S7-300 CP342-5 DP]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\S7-300 CP342-5 DP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//080D6
+[PROFIBUS-DP\Otros aparatos de campo\CP 342-5]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\CP 342-5]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+//080D7
+[PROFIBUS-DP\Otros aparatos de campo\CP 342-5 FO]
+@COPY = "PROFIBUS-DP\SIMATIC"
+[PROFIBUS-DP\Otros aparatos de campo\CP 342-5 FO]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMATIC"
+
+
+// SIMODRIVE
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE 611U MC,POSMO SI/CA/CD]
+@COPY = "PROFIBUS-DP\SIMODRIVE"
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE 611U MC,POSMO SI/CA/CD]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMODRIVE"
+
+//  SIEM80F9.GSS, 07.07.04
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE sensor isochron]
+@COPY = "PROFIBUS-DP\SIMODRIVE"
+[PROFIBUS-DP\Otros aparatos de campo\SIMODRIVE sensor isochron]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMODRIVE"
+
+
+// SIMOREG
+//0802D
+[PROFIBUS-DP\Otros aparatos de campo\6RA24 CB24]
+@COPY = "PROFIBUS-DP\SIMOREG"
+[PROFIBUS-DP\Otros aparatos de campo\6RA24 CB24]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOREG"
+
+//08045 
+// Achtung: es gibt 2 Katalogeinträge (unter SIMOREG 
+// und SIMOVERT) für diesen Slave. Deshalb 2 mal COPY!!
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBPx]
+@COPY = "PROFIBUS-DP\SIMOREG"
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBPx]
+@COPY = "PROFIBUS-DP\Esclavos DP V0\SIMOREG"
+
+//SI028045.GSS
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBP2 DPV1]
+@COPY = "PROFIBUS-DP\SIMOREG"
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBP2 DPV1]
+@COPY = "PROFIBUS-DP\Esclavos DP V0\SIMOREG"
+
+
+// SIMOVERT
+//08022
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES CB1]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES CB1]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//08045
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBPx]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBPx]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//SI028045.GSS
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBP2 DPV1]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MASTERDRIVES/DC MASTER CBP2 DPV1]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//  SI0280B5.GSS
+[PROFIBUS-DP\Otros aparatos de campo\MICROMASTER 4]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MICROMASTER 4]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//08023
+[PROFIBUS-DP\Otros aparatos de campo\MICRO/MIDIMASTER OPMP]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MICRO/MIDIMASTER OPMP]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//08046
+[PROFIBUS-DP\Otros aparatos de campo\MICRO/MIDI/COMBIMASTER CB15/155]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\MICRO/MIDI/COMBIMASTER CB15/155]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+//08026
+[PROFIBUS-DP\Otros aparatos de campo\PM/P 6SE42/P 6SE48]
+@COPY = "PROFIBUS-DP\SIMOVERT"
+[PROFIBUS-DP\Otros aparatos de campo\PM/P 6SE42/P 6SE48]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIMOVERT"
+
+
+//  SIPOS
+//0009C
+[PROFIBUS-DP\Otros aparatos de campo\SIPOS MC/P]
+@COPY = "PROFIBUS-DP\SIPOS"
+[PROFIBUS-DP\Otros aparatos de campo\SIPOS MC/P]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\SIPOS"
+
+
+//  --- Sensorik ---
+//  SIEM8102.GSD
+[PROFIBUS-DP\Otros aparatos de campo\VS Link]
+@COPY = "PROFIBUS-DP\Sensores"
+
+[PROFIBUS-DP\Otros aparatos de campo\VS Link]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Sensores"
+
+//  SIEM0738.GSD
+[PROFIBUS-DP\Otros aparatos de campo\VS710 Variable]
+@COPY = "PROFIBUS-DP\Sensores"
+
+[PROFIBUS-DP\Otros aparatos de campo\VS710 Variable]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Sensores"
+
+//  SIEM8111.GSS, 07.07.04
+[PROFIBUS-DP\Otros aparatos de campo\VS130-2]
+@COPY = "PROFIBUS-DP\Sensores"
+
+[PROFIBUS-DP\Otros aparatos de campo\VS130-2]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Sensores"
+
+//  SI0180ED.GSG, 13.01.06
+[PROFIBUS-DP\Otros aparatos de campo\VS120]
+@COPY = "PROFIBUS-DP\Sensores"
+
+[PROFIBUS-DP\Otros aparatos de campo\VS120]
+@MOVE = "PROFIBUS-DP\Esclavos DP V0\Sensores"
+
+//  --- SINAMICS ---
+//  si0280e5.gss
+[PROFIBUS-DP\Otros aparatos de campo\SINAMICS S]
+@MOVE = "PROFIBUS-DP\SINAMICS"
+
+//  si018105.gss
+[PROFIBUS-DP\Otros aparatos de campo\SINAMICS G130/G150]
+@MOVE = "PROFIBUS-DP\SINAMICS"

@@ -1,0 +1,677 @@
+@DB_TYP FMS_SDB_RECONV V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#
+#-----------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für das Rueckkovertieren des  FMS SDB
+#
+# Historie:
+# 31.08.96 RO: Ersterstellung
+# 
+#
+#------------------------------------------------------------------------
+#
+
+SDB_Buffer
+{
+
+	#--------------------------------------------------------------------
+	# FMS SDB 
+	#--------------------------------------------------------------------
+
+	# die Gesamtlänge ( für den LongBinary Buffer )
+	FMS_SDB$LNG									DM||||
+
+	FMS_SDB$NAM										_M||||
+	FMS_SDB
+	{
+	
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+
+			# Typ der Baugruppe
+			Baugruppentyp							SM||||
+
+			# SDB Inhalt :
+			SDB_Inhalt								WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+
+			Reserved								BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP								BM|0|||		
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID								BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1								BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2								BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR								BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR								BM|0|||		
+		}
+
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+
+		SDB_ParameterArea$NAM						_M||||
+		SDB_ParameterArea
+		{
+
+			#------------------------------------------------------------
+			# FMS LAN Struktur
+			#------------------------------------------------------------
+
+			FMS_LanStruct$NAM						_M||||
+			FMS_LanStruct
+			{
+
+				# -- Parameterblock Header
+				PblkId								BC|4|||			
+				Version								BC|0|||
+				FMS_LanStruct$LNG					WM||||
+				# -- 
+
+				# KBus Referenz
+				KBusRef								WM||||
+
+				# Job Überwachungszeit
+				JobSupervisionTime					WM||||
+
+				# Typ Access 
+				TypeAccess							BM||||
+
+				# reserviert
+				Reserved							BC|0|||
+	
+			} # -- Ende FMS_LanStruct
+
+			#------------------------------------------------------------
+			# FMS Verbindungsbeschreibung
+			#------------------------------------------------------------
+
+			FmsConnDescription$NAM					_M||||	
+			FmsConnDescription
+			{
+		
+
+				# -- Parameterblock Header
+				PblkId								BC|5|||			
+				Version								BC|0|||
+				FmsConnDescription$LNG				WM||||
+				# -- 
+
+				# lokaler LSAP
+				LocLsap								BM||||
+
+				# remote Profibus Adresse
+				RemPbAdr							BM||||
+
+				# remoter LSAP
+				RemLsap								BM||||
+
+				# max. Anzahl hochprior gesendeter PDUs
+				MaxPduSendingHigh					BM||||
+
+				# max. Anzahl lowprior gesendeter PDUs
+				MaxPduSendingLow					BM||||
+
+				# max. Anzahl hochprior empfangener PDUs
+				MaxPduReceivingHigh					BM||||
+
+				# max. Anzahl lowprior empfangener PDUs
+				MaxPduReceivingLow					BM||||
+
+				# Kommunikationstyp
+				CommType							BM||||
+
+				# maximale Anzahl gesendeter paralleler confirmed Services
+				MaxScc								BM||||
+
+				# maximale Anzahl empfangener paralleler confirmed Services
+				MaxRcc								BM||||
+
+				# maximale Anzahl gesendeter paralleler unconfirmed Services
+				MaxSac								BM||||
+
+				# maximale Anzahl empfangener paralleler unconfirmed Services
+				MaxRac								BM||||
+
+				# ??
+				lCI									OM||||
+
+				# LLI Sap
+				LliSap								BM||||
+
+				# Multiplier ( Wie oft wird ein Auftrag in die Polliste eingetragen ! )
+				Multiplier							BM||||
+	
+				# Verbindungsattribut
+				ConnAttribut						BM||||
+		
+				# FMS Features Supported
+				FmsFeaturesSupported				HM||6|6|6
+
+				# Verbindungsname ( maximal 24 lesbare Zeichen )
+	  			VerbName							AM||0|32|32
+
+				# FMS Zugriffsschutz aktiviert
+				AccessProtection					BM||||
+
+				# FMS Password für den FMS Zugriffsschutz
+				Password							BM||||
+
+				# FMS Accessgruppen
+				AccessGroups						BM||||
+			}
+
+			PBL_OPC_FMS$NAM					_O||||
+			PBL_OPC_FMS
+			{
+				PBL_OPC_FMS_ID				BC|0x20|||
+				PBL_OPC_FMS_VERSION			BC|0|||
+				PBL_OPC_FMS$LNG				WM||||
+				
+				INITIATE						WM||||
+				ACCEPT_INITIATE_IND				WM||||
+				FMS_OD							WM||||
+				ABORT_CONNECTION_AFTER			WM||||
+				TIMEOUT							DM||||
+				TIMEOUT_CONNECT					DM||||
+			}
+			
+			PBL_FMS_CON_EXT$NAM					_O||||
+			PBL_FMS_CON_EXT
+			{
+				PBL_FMS_CON_EXT_ID				BC|0x21|||
+				PBL_FMS_CON_EXT_VERSION			BC|0|||
+				PBL_FMS_CON_EXT$LNG				WM||||
+				
+				VFD_NUMBER						WM||||
+			}
+			
+			#------------------------------------------------------------
+			# FMS Typbeschreibung
+			#------------------------------------------------------------
+
+			Type_Descr$NAM						_A||||
+			Type_Descr
+			{
+	
+				# Parameterblock Typbeschreibung
+				PblkId							BC|0x09|||			# PBL_FMS_TYPE
+				Version							BC|0x00|||
+				Type_Descr$LNG					WM||0x0004|0xff86|1
+	
+	            # Anzahl der Typbeschreibungen
+	            Type$CNT						SM||0|977|1
+	
+	            # Liste der Typbeschreibung
+	            Type$NAM						_A||||
+	            Type												# T_FMS
+	            {
+					# Index der Typbeschreibung
+					Index						SM|0x000f|0x000f|0x8000|1
+	
+					# ObjectCode = Structure
+					Object_Code					BC|0x06|||
+					
+					# Anzahl der Structur Elemente
+					Array_of_Elements$CNT		BM||0x01|0x4c|1
+					
+					# Liste der Strukturelemente
+					Array_of_Elements$NAM		_S||||
+					Array_of_Elements
+					{
+						# Index des Datentyps
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index			SM||0x0000|0x8000|1
+						
+						# Laenge des Datentyps
+						# Boolean            : 1
+						# Integer8           : 1
+						# Integer16          : 2
+						# Integer32          : 4
+						# Unsigned8          : 1
+						# Unsigned16         : 2
+						# Unsigned32         : 4
+						# Float              : 4
+						# Visible String     : Laenge des String
+						# Octet String       : Laenge des String
+						# Date               : 7
+						# Time of Day        : 4 oder 6
+						# Time Difference    : 4 oder 6
+						# Bit String         : Laenge des String
+						# user Typen         : Laenge der Struktur in Byte
+						Length					BM||1|237|
+
+					} # Ende Array_of_Elements
+					
+					#----------------------------------------------------
+					# Liste der Variablen Bit Offsets der ersten 
+					# Strukturebene für den Teilzugriff
+					#----------------------------------------------------
+					# Größe der VarOffset Struktur ( nicht die aktuelle Länge )
+					VarOffsetLNG				BC|4|||
+					
+					# Anzahl nachfolgender Fms Variablen Beschreibungen
+					VarOffset$CNT				BM||||
+					
+					# Liste der Bit Offsets der ersten Strukturebene
+					VarOffset$NAM				_A||||
+					VarOffset
+					{
+						# Bitoffset des Strukturelements relativ zum DB Anfang
+						BitOffset				OM||||
+					
+					} # Ende VarOffset
+
+				} # Ende Type
+			} # Ende Type_Descr
+
+			#------------------------------------------------------------
+			# Remote Variablenbeschreibung bei zyklischen Verbindungen
+			# die Variablenbeschreibungen werden aus der Profildatei des
+			# Partners ermittelt
+			# !! Hier werden auch Variablenbeschreibungen für Meldevariablen 
+			# !! abgelegt. 													 
+			# -> PblkId = PBL_FMS_REM_VAR0
+			#------------------------------------------------------------
+
+			RemFmsVar$NAM						_O||||
+			RemFmsVar
+			{
+			
+				# Parameterblock FmsVar Beschreibung
+				PblkId							BC|0x0d||| 
+				Version							BC|0x00|||
+				RemFmsVar$LNG					WM||0x0000|0xffba|1
+			
+				# Anzahl nachfolgender Fms Variablen Beschreibungen
+				Var$CNT							SM||0x0001|0x0443|1 # 0x0001
+			
+				# Liste der Variablen Beschreibungen
+				Var$NAM							_A||||
+				Var                                        
+				{
+					# Index der Variablen
+					Index						SM||||
+					
+					Type_Simple$NAM							_H||||
+					Type_Simple                                        
+					{
+						# Objectcode der Variablen
+						Object_Code					BC|7|||
+						
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+						
+						# Laenge der Variable in Byte ( bei Record fehlt der Parameter)
+						Length1						BO||1|237|1
+						
+						# FMS Password
+						Password					BM|0x00|||
+						
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+						
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+						
+					}
+					Type_Record$NAM							_H||||
+					Type_Record                                        
+					{
+						# Objectcode der Variablen
+						Object_Code					BC|9|||
+						
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+						
+						# FMS Password
+						Password					BM|0x00|||
+						
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+						
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+						
+						# Variablenlaenge ( nur fuer Records )
+						Length2						BO||0x01|0xec|1
+					}
+
+					Type_Array$NAM							_H||||
+					Type_Array                                        
+					{
+						# Objectcode der Variablen
+						Object_Code					BC|8|||
+						
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+						
+						# Laenge der Variable in Byte ( bei Record fehlt der Parameter)
+						Length1						BO||1|237|1
+						
+						# Anzahl der Array Elemente ( nur bei Array )
+						Number_of_Elements			BO||||
+					
+						# FMS Password
+						Password					BM|0x00|||
+						
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+						
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+						
+					}
+					
+					
+					# Länge des Variablennamens 
+					Variable_Name$LNG			BM||0|32|1
+	
+					# Name der Variable
+					Variable_Name				AO||0|32|0
+	
+				} # Ende Var
+			} # Ende RemFmsVar
+			
+			#------------------------------------------------------------
+			# Steuerung GetOv() Modus
+			# -> PblkId = PBL_FMS_GETOV_MODE
+			#------------------------------------------------------------
+
+			GetOvMode$NAM						_O||||
+			GetOvMode
+			{
+				# Parameterblock Variablen Modus
+				PblkId							BC|0x0a||| 
+				Version							BC|0x00|||
+				GetOvMode$LNG					WM||||
+				
+				# Steuert den GetOv
+				# Kein GetOv          : 0 : Keine
+				# alle proj. Var.	  : 1 : Liste
+				# GetOv fuer alle Var.: 2 : Alle
+				Imp_ID							SM||||
+				
+			} # Ende GetOvMode
+
+			#------------------------------------------------------------
+			# Variablenliste für GetOv( Single) und GetOv( All)
+			# -> PblkId = PBL_FMS_GETOV_LIST
+			#------------------------------------------------------------
+
+			GetOvVarList$NAM					_O||||
+			GetOvVarList
+			{
+			
+				# Parameterblock Export Variablen Beschreibung
+				PblkId							BC|0x0b||| 
+				Version							BC|0x00|||
+				GetOvVarList$LNG				WM||0x0000|0xffba|1
+				
+				# Anzahl Import Variablen Beschreibungen
+				Var_Imp$CNT						SM||0x0001|0x0443|1
+				Var_Imp$NAM						_A||||
+				Var_Imp
+				{
+					# Index der Variable
+					# fuer die Import Variable kann der Index auch 0 sein.
+					Index						SM|0x0000|0x0000|0xffff|1
+
+					# Indexrange
+					IndexRange					SM|1|1|0xffff|1
+			
+					# Länge des Variablen Namens
+					Variable_Name$LNG			BM||0|32|1
+
+					# Variablen Name
+					Variable_Name				AM|""|0|32|0
+
+				} # Ende Var_Imp
+			} # Ende GetOvVarList
+
+			#------------------------------------------------------------
+			# Meldevariablen für azyklische und zyklische Verbindungen
+			# -> PblkId = PBL_FMS_REPORT_LIST
+			#------------------------------------------------------------
+
+			ReportVarList$NAM					_O||||
+			ReportVarList
+			{
+			
+				# Parameterblock Export Variablen Beschreibung
+				PblkId							BC|0x0e||| 
+				Version							BC|0x00|||
+				ReportVarList$LNG				WM||0x0000|0xffba|1
+				
+				# Anzahl Import Variablen Beschreibungen
+				Var_Imp$CNT						SM||0x0001|0x0443|1
+				Var_Imp$NAM						_A||||
+				Var_Imp
+				{
+					# Index der Variable
+					# fuer die Import Variable kann der Index auch 0 sein.
+					Index						SM|0x000f|0x0000|0xffff|1
+
+					# Zugriffsschutz
+					# Kein Zugriffsschutz   : 0xFFFF
+					# Access DB Index       : != 0xFFFF
+					VAC							SM|0xFFFF|0|0xffff|    1
+			
+					# AS 400: SDB Inhalt der K- Bus Verbindung zwischen CP und CPU	
+					# AS 300: LADDR der CP 
+					CPU							SM||0x0000|0xffff|1
+			
+					# S7 Any Pointer : siehe Step7 Entwerfen von Anwenderprogrammen B- 30
+					S7_Address
+					{
+						Syntax_Id				BM|0x00|||
+						Type					BM|0x00|||
+						ElementCntr				SM|0x00|||
+						Subarea					SM|0x0000||| 
+						Area					BM|0x00|||
+						Offset1					BM|0x00|||
+						Offset2					SM|0x0000|||
+			
+					} # Ende S7_Address
+
+					# Subindex der Variable
+					SubIndex					BM||0|0xff|1
+
+					# Länge des Variablen Namens
+					Variable_Name$LNG			BM||0|32|1
+
+					# Variablen Name
+					Variable_Name				AM|""|0|32|0
+
+				} # Ende Var_Imp
+			} # Ende ReportVarList
+
+
+			#------------------------------------------------------------
+			# Reserved for further UPLOADs 
+			#------------------------------------------------------------
+			RESV_ALL_BLK0$NAM	_A||||
+			RESV_ALL_BLK0
+			{
+				RESV_ALL_ID0		BM||0x10|0xFD|
+				RESV_ALL_RESV0		BM||||
+				RESV_ALL_BLK0$LNG	WM||||
+				RESV_ALL_DATA0		BA||||
+			}
+
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+
+			SdbRucksack$NAM							_O||||
+			SdbRucksack
+			{
+				
+				SdbRucksack0$NAM							_H||||
+				SdbRucksack0
+				{
+				
+					# -- Parameterblock SDB Rucksack
+					PblkId								BC|0xFE||| 
+					Version								BC|0x00|||
+					SdbRucksack0$LNG						WM||0x0000|0xffff|1
+					# -- 
+
+					Alignment							BC|0|||
+				}
+
+				SdbRucksack1$NAM							_H||||
+				SdbRucksack1
+				{
+				
+					# -- Parameterblock SDB Rucksack
+					PblkId								BC|0xFE||| 
+					Version								BC|0x01|||
+					SdbRucksack1$LNG					WM||0x0000|0xffff|1
+					# -- 
+
+					# die anderen Elemente als Unterblöcke
+					Subblock1$NAM							_M||||
+					Subblock1
+					{
+					
+						# -- Parameterblock SDB Rucksack
+						SblkId								BC|0x01||| 
+						Version								BC|0x00|||
+						Subblock1$LNG					WM||0x0000|0xffff|1
+						# -- 
+						# Länge des Variablennamens 
+						Stationsprofil$LNG			BM||0|33|1
+		
+						# Name der Variable
+						Stationsprofil				AM||0|33|0
+
+						# Länge des Variablennamens 
+						Verb_profil$LNG				BM||0|33|1
+		
+						# Name der Variable
+						Verb_profil					AM||0|33|0
+
+					}
+
+					#------------------------------------------------------------
+					# Reserved for further UPLOADs 
+					#------------------------------------------------------------
+					# -- 
+					RESV_ALL_BLK0$NAM	_A||||
+					RESV_ALL_BLK0
+					{
+						RESV_ALL_ID0		BM||0x02|0xFD|
+						RESV_ALL_RESV0		BM||||
+						RESV_ALL_BLK0$LNG	WM|||| 
+						RESV_ALL_DATA0		BA||||
+					}
+
+					# ALLIGN 
+					AllignBlock$NAM							_O||||
+					AllignBlock
+					{
+					
+						# -- Parameterblock SDB Rucksack
+						PblkId								BC|0xFE||| 
+						Version								BC|0x00|||
+						AllignBlock$LNG						WM||0x0000|0xffff|1
+						# -- 
+
+						Alignment							BC|0|||
+					}
+
+				}
+
+			} # Ende SDB Rucksack
+
+
+		} # Ende FMS_ParameterArea
+
+	} # Ende FMS_SDB
+
+} # Ende SDB_Buffer
+
+

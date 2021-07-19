@@ -1,0 +1,48 @@
+[2364908]
+KatEntryName = V3.3
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI10/DO6 integrati; 2 uscite di impulsi (2,5kHz); a 2 canali per conteggio e misura con encoder incrementali 24V (10kHz); connettore MPI; configurazione ad una fila fino a 8 unità; firmware V3.3
+SHORTNAME=CPU 312C
+Comment=6ES7 312-5BF04-0AB0 V3.3, 6ES7 313-5BG04-0AB0 V3.3, 6ES7 313-6CG04-0AB0 V3.3, 6ES7 314-6CH04-0AB0 V3.3
+
+[2364910]
+KatEntryName = V3.3
+InfoText = Memoria di lavoro 128KB; 0,07ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI; configurazione a più file fino a 31 unità; firmware V3.3
+SHORTNAME=CPU 313C
+
+[2364912]
+KatEntryName = V3.3
+InfoText = Memoria di lavoro 128KB; 0,07ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI+DP (master DP o Slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7(FB/FC caricabili); firmware V3.3
+SHORTNAME=CPU 313C-2 DP
+
+[2364915]
+KatEntryName = V3.3
+InfoText = Memoria di lavoro 192KB; 0,06ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ DP (master DP o slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V3.3
+SHORTNAME=CPU 314C-2 DP
+
+[2364909]
+KatEntryName = 6ES7 312-5BF04-0AB0
+InfoText = 
+SHORTNAME=CPU 312C
+
+[2364911]
+KatEntryName = 6ES7 313-5BG04-0AB0
+InfoText = 
+SHORTNAME=CPU 313C
+
+[2364914]
+KatEntryName = 6ES7 313-6CG04-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 DP
+
+[2364917]
+KatEntryName = 6ES7 314-6CH04-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 DP
+
+[2364913]		
+SHORTNAME=DP
+InfoText=
+
+[2364916]		
+SHORTNAME=DP
+InfoText=

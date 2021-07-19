@@ -1,0 +1,19 @@
+<Schema name="FDTApplicationIdSchema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:fdt="x-schema:FDTDataTypesSchema.xml">
+	<!--Definition of Attributes-->
+	<AttributeType name="applicationId" dt:type="enumeration" dt:values="fdtAdjustSetValue fdtAssetManagement fdtAuditTrail fdtConfiguration fdtDiagnosis fdtForce fdtManagement fdtObserve fdtOfflineCompare fdtOfflineParameterize fdtOnlineCompare fdtOnlineParameterize fdtIdentify fdtCalibration fdtMainOperation fdtNetworkManagement"/>
+	<!-- ApplicationId specifies the standard user interface called -->
+	<ElementType name="ApplicationId" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="applicationId" required="yes"/>
+	</ElementType>
+	<!-- FDTApplicationIds: a list of application -->
+	<ElementType name="FDTApplicationIds" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="ApplicationId" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!-- main FDT element -->
+	<ElementType name="FDT" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="FDTApplicationIds" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+</Schema>

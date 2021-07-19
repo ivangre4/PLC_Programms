@@ -1,0 +1,136 @@
+data_block db20	//для глобального DB задается структура данных и начальные значения переменных(обязательно только BEGIN)
+struct
+d1:int;
+d2:int;
+end_struct
+
+begin						//это слово ставится обязательно
+							//При программировании исходных файлов удобно использовать шаблоны
+							//шаблоны кодовых блоков и DB(команда Insert Block Template)
+
+end_data_block 
+
+function_block fb40
+know_how_protect
+var_input 			//определение входных переменных
+position1:int;
+position2:int;
+end_var
+
+var_output 			//определение выходных переменных
+pos_1:bool;
+pos_2:bool;
+pos_3:bool;
+pos_4:bool;
+end_var
+
+begin 				//это слово ставится обязательно как разделитель областей определения 
+					//переменных и кодовой области
+
+network			//сегменты определяются произвольно как по количеству так и по размеру
+l position1;
+l 1500;
+>i;
+= pos_1;
+l position1;
+l 500;
+<i;
+= pos_2;
+l position2;
+l 1500;
+>i;
+=pos_3;
+l position2;
+l 500;
+<i;
+= pos_4;
+end_function_block
+
+DATA_BLOCK DB40
+
+fb40		//указание номера FB определяет структуру экземплярного DB и для него задаются только
+					//начальные значения, при этом началные значения нодо задавать обязательно
+
+BEGIN		//здесь слово BEGIN тоже обязательно. Оно отделяет неявную область переменных от 
+			//кодовой области 
+
+position1:=0;
+position2:=0;
+pos_1:=false;
+pos_2:=false;
+END_DATA_BLOCK
+
+function fc 5:int //(для возвращаемого значения используется либо VOID,
+//либо элементарный  или составной тип данных,)
+
+var_input
+d1:int;
+d2:int;
+end_var
+var_output
+out1:int;
+out2:int;
+end_var
+
+begin
+
+network
+l d1;t out1;
+l d2;t out2;
++ 100;
+t ret_val;
+end_function
+
+organization_block ob1
+VAR_TEMP
+  OB1_System: array [1..20] of byte;
+END_VAR
+begin
+network
+call fc5 (d1:=mw0,d2:=mw2,ret_val:=mw50,out1:=db20.dbw0,out2:=db20.dbw2); //параметр ret_val
+					// ставится вначале списка выходных переменных
+network
+call fb40, db40 (		//параметры  можно располагать в одной или нескольких строках.Команды										//в несколких строках
+position1:=db20.dbw0,	//в кодовой части блоков тоже можно располагать в одной или нескольких строках
+position2:=db20.dbw2,
+pos_1:=q0.0,pos_2:=q0.1,pos_3:=q0.2,pos_4:=q0.3);
+end_organization_block
+
+
+FUNCTION FC 1 : VOID
+TITLE =
+//организация цикла командой  LOOP
+VERSION : 0.1
+
+BEGIN
+NETWORK
+TITLE =
+
+      L     0; 
+      T     MB    24; 
+      A(    ; 
+      O     M    100.0; 
+      ON    M    100.0; 
+      )     ; 
+      L     S5T#1S; 
+      SP    T      1; 
+      A     T      1; 
+      JCN   m001; 
+      L     5; 
+      T     MW    14; 
+m001: L     MW    14; 
+m002: T     MW    10; //счетчик циклов
+      L     MB    24; 
+      INC   1; 
+      T     MB    24; 
+      L     MW    10; 
+      LOOP  m002; 
+
+
+
+END_FUNCTION
+
+
+
+
+

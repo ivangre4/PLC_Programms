@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2025
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=S7 400 ALU-Racks
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 400-1TA11-0AA0
+[2367007]
+KatEntryName=UR1ALU
+InfoText=Alu Universal-Rack, 18 Einbauplätze
+SHORTNAME=UR1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1TA11-0AA0
+[2367008]
+KatEntryName=ER1ALU
+InfoText=Alu-Erweiterungs-Rack, 18 Einbauplätze, nur für SM-Baugruppen (P-Bus)
+SHORTNAME=ER1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1JA11-0AA0
+[2367009]
+KatEntryName=ER2ALU
+InfoText=Alu-Erweiterungs-Rack, 9 Einbauplätze, nur für SM-Baugruppen (P-Bus)
+SHORTNAME=ER2ALU
+

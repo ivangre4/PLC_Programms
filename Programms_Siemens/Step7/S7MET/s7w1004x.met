@@ -1,0 +1,175 @@
+; -------- -------------------------------------------------------------------------------
+; DK-1616 PN IO Katalog Klasse
+; --------
+[_S7H_PC_CP_1616_RT_DK_KAT_AT]
+
+ObjType=2367393
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+CatalogParent=1335387
+IsCatEntry=1
+
+; Besser nur über CatalogParent= anorndnen
+;nKatChilds=2
+					; CP 1616 RT ab V6.3 (11/04)
+;KatChild1=2367394
+					; CP 1616 RT ab V6.3 FW 1.1(iRT)
+;KatChild2=2367412
+
+; --------
+; DK-1616 PN IO
+; --------
+[_S7H_PC_CP_1616_RT_DK_V63_CT]
+server=S7W1004X.DLL
+prefix=OM
+ObjType=2367394
+basetype=_S7H_PC_IE_CP1612_PN_CT
+
+CatalogParent=2367393
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V1.0
+
+MLFB=6GK1 161-6AA00
+SHORTNAME=CP 1616
+
+PN_DEVICE_ID=0x0003
+
+PN_CAPABILITY_SEND=10000
+PN_CAPABILITY_RECEIVE=10000
+PN_MAX_STATION_NO=125
+PN_MAX_DEVICES=125
+
+; Einschränkung aus Softnet aufheben
+PN_SUPP_REDUCTIONS=1,2,4,8,16,32,64,128,256,512
+PN_BANDWIDTH=32768
+PN_MIN_DEVICE_INT=1
+PN_MAX_FRAMES_PER_CYCLE=125
+
+; geändertes Rul-file, daher für CP1616 keine PC-Bgr Block im System-SDB
+GenPcBgrParam=0
+
+PLUG_CLASS=0x04000100
+
+; nur ein CP 1616 TCP im Rack möglich
+SS_ISO_NAME1=""
+SS_ISO_NAME2=""
+SS_TCP_NAME1="CP 1616 (RFC1006)"
+SS_TCP_NAME2=""
+
+AUI_SS=0
+HIDE_PARAM_DLG=1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3118|3119|3129|3002|2003|2004|2005
+SDB3129_CARRIER=1
+
+; auch bei Ablage auf CP den 3118 erzeugen
+; bei Ablage auf CP wird ohne ..ALWAYS die PN IO SDB mit Kons-bit angelegt -> OVS erwartet dann 3118 statt 2005
+; bei Ablage auf CP wird mit ..ALWAYS hat OCS Probleme beim Überladen
+GENERATE_SDB_3118_ALWAYS=1
+
+; Keine Altbaugruppe -> bei SDB 3118 Generierung in Header reinschauen
+; Header wird bei dieser Baugruppe selbst und richtig erzeugt
+SMART_SDB3118_CREATION=1
+
+; bisher nur zur Unterscheidung, ob es eine SDB 3129 Bgr ist
+SMART_SDB3129_CREATION=1
+
+SDB3100=SDB3100_H1PCNEU_CONVERT
+
+; kein ISO
+NET_PROTOCOLS=IP
+NET_PROTOCOLS_SELECT=IP
+
+; Es braucht keine Applikations gesteckt werden
+PREVENT_APPLIKATION=1
+
+; Kann sowohl Controller als auch Device sein
+CAN_DO_PN_IO_DEVICE=1
+
+; Neuer Header fuer SDB 2003, 2004, 2005
+CAN_SDB1XXX_HEADER_0D=1
+
+; 4Port-Einstellungen entfernt, da nur 100MBit/s erlaubt AP00230746
+;ITP_PORT_CNT=4
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=0
+
+; keine PC Options, da auch keine Verbindungen
+CAN_DO_ETHERNET_KEEP_ALIVE=0
+CAN_DO_CN_RQ_TIMEOUT=0
+
+; Upload ermöglichen, damit assume aufgerufen wird
+D_UPL=1
+
+; neues Rule-File ohne Uhrzeit-Pbl, Keep-Alive-Pbl, etc
+USE_DISJUNCT_SYSTEM_PBL=1
+
+; Attribute, die normalerweise bei der CPU liegen
+; max Lock am K-RAM
+MAX_STATION_SIZE_A_KONSIST=250
+; max Frame-Size
+MAX_STATION_SIZE_E=1440
+MAX_STATION_SIZE_A=1440
+; geprüft und ok
+MAX_OUTPUT_LOG_ADR=32768
+MAX_INPUT_LOG_ADR=32768
+; durch ERTEC400-KRAM begrenzt
+MAX_OUTPUT_DATA_LEN=8192 
+MAX_INPUT_DATA_LEN=8192 
+MAX_INPUT_P_DATA_LEN=8192 
+MAX_OUTPUT_P_DATA_LEN=8192
+; analog MAX_STATION_SIZE_A_KONSIST
+MAX_KONSIST_DATA_LEN=250
+
+
+; -------- -------------------------------------------------------------------------------
+; DK-1604 PN IO Katalog Klasse
+; --------
+[_S7H_PC_CP_1604_RT_DK_KAT_AT]
+
+ObjType=2367410
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+CatalogParent=1335387
+IsCatEntry=1
+nKatChilds=1
+					; CP 1604 RT ab V6.3 (11/04)
+KatChild1=2367411
+
+; --------
+; DK-1604 PN IO
+; --------
+[_S7H_PC_CP_1604_RT_DK_V63_CT]
+server=S7W1004X.DLL
+prefix=OM
+ObjType=2367411
+basetype=_S7H_PC_CP_1616_RT_DK_V63_CT
+
+CatalogParent=2367410
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V1.0
+PN_DEVICE_ID=0x0003
+
+SS_TCP_NAME1="CP 1604 (RFC1006)"
+
+; CP 1604 - CP1616 Unterschied
+PN_DEVICE_ID=0x0004
+
+MLFB=6GK1 160-4AA00
+SHORTNAME=CP 1604
+
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+HSP_NAME=CP 1616/04
+HSP_ID=1004
+
+[_S7H_PC_RACK_CT]
+; RQ246425: Rack grauen, wenn bereits WinLC, Applikation o.Ä gesteckt
+Rule_04000100=INCL(1,1),MAXC(1), CONF(0x00000002,0x00010002,0x00020002,0x00040002,0x00080002,0x00100002,0x00200002,0x00400002,0x00800002,0x01000002,0x00010100,0x00020100,0x00040100,0x00080100,0x00100100,0x00200100,0x00400100,0x00800100,0x01000100,0x02000100)

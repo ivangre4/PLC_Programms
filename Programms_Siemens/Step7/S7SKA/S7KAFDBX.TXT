@@ -1,0 +1,34 @@
+
+DATA_BLOCK DB21  
+TITLE =   <interner Baustein-Titel/ Internal block title>
+
+//  <Baustein-Kommentar/ Block comment>
+//   Hier können Sie Informationen zu Ihrem Baustein hinterlegen
+//   You can store information about your block here
+//
+//   statt DB<Baustein-Nr> kann auch <Name aus Symboltabelle> angegeben werden;
+//   In place of DB<block no.>, <symbolic name> can also be entered; 
+
+AUTHOR:   Andy     //  max. 8 Zeichen / max. 8 characters
+FAMILY:   plant1   //  max. 8 Zeichen / max. 8 characters
+NAME:     db_mot1  //  max. 8 Zeichen / max. 8 characters 
+VERSION:  01.01    //  max. 15.15
+//KNOW_HOW_PROTECT
+// (falls angegeben, kann im generierten Baustein keine Änderungen mehr vorgenommen werden)
+// (If specified, no more changes can be made once the block is generated)
+//UNLINKED
+// (falls angegeben, ist der generierte Baustein nur im AG Ladespeicher vorhanden) 
+// (If specified, the generated block is only available in the PLC load memory)
+//READ_ONLY
+// (falls angegeben, ist der generierte Baustein im AG nicht änderbar)
+// (If specified, the generated block cannot be changed in the programmable controller)
+
+
+STRUCT
+  b0: BYTE;
+END_STRUCT;
+
+BEGIN
+  b0:= b#16#01;
+END_DATA_BLOCK
+

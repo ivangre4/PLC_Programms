@@ -1,0 +1,26 @@
+;----------------------------------------------------------------
+; Namfile für ET200Pro DO
+;----------------------------------------------------------------
+
+
+
+; ----------------------------- 4 DO DC24V 2A		6ES7 142-4BD00-0AA0
+[2363620]
+KatEntryName =4 DO DC24V 2A
+InfoText = Module de sorties TOR 4 DO DC24V 2A
+SHORTNAME=4 DO DC24V 2A
+Comment=Modules de sorties TOR pour ET 200pro
+
+
+; ----------------------------- 4 DO DC24V 2A HF	6ES7 142-4BD00-0AB0 	
+[2363621]
+KatEntryName = 4 DO DC24V 2A HF
+InfoText = Module de sorties TOR 4 DO DC24V 2A High Feature
+SHORTNAME=4 DO DC24V 2A HF
+
+
+; ----------------------------- 8 DO DC24V 0.5A HF	6ES7 142-4BF00-0AA0
+[2363929]
+KatEntryName=8 DO DC24V 0,5A
+InfoText=Module électronique 8 DO DC24V 0,5A
+SHORTNAME=8 DO DC24V 0.5A

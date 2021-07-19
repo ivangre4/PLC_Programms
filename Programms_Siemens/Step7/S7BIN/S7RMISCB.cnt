@@ -1,0 +1,80 @@
+:Base s7rmiscb.hlp
+1 Summary
+2 Time of day synchronization
+3 FB SET_SW (FB 60)
+4 Area of Application=Anwendungsbereich_FB60
+4 How It Works=Arbeitsweise_FB60
+4 Calling OBs=Aufrufende_OBs_FB60
+4 Call Environment=Aufrufumgebung_FB60
+4 Adjusting the Time=Verstellen_der_Uhrzeit_FB60
+4 Hardware Configuration=Hardware_Konfiguration_FB60
+4 Parameter List=Parameterliste_FB60
+4 Output Values / Errors=Ausgabewerte_FB60
+4 Execution Times of the Block=Laufzeiten_FB60
+3 FB SET_SW_S (FB 61)
+4 Area of Application=Anwendungsbereich_FB61
+4 How It Works=Arbeitsweise_FB61
+4 Calling OBs=Aufrufende_OBS_FB61
+4 Call Environment=Aufrufumgebung_FB61
+4 Adjusting the Time=Verstellen_der_Uhrzeit_FB61
+4 Hardware Configuration=Hardware-Konfiguration_FB61
+4 Parameter List=Parameterliste_FB61
+4 Output Values / Errors=Ausgabewerte_FB61
+4 Execution Times of the Block=Laufzeiten_FB61
+3 FC LOC_TIME (FC 60)
+4 Area of Application=Anwendungsbereich_FC60
+4 How It Works=Arbeitsweise_FC60
+4 Calling OBs=Aufrufende_OBs_FC60
+4 Call Environment=Aufrufumgebung_FC60
+4 Parameter List=Parameterliste_FC60
+4 Output Values / Errors=Ausgabewerte_FC60
+4 Execution Time of the Block=Laufzeiten_FC60
+3 FC BT_LT (FC 61)
+4 Area of Application=Anwendungsbereich_FC61
+4 How It Works=Arbeitsweise_FC61
+4 Calling OBs=Aufrufende_OBs_FC61
+4 Call Environment=Aufrufumgebung_FC61
+4 Parameter List=Parameterliste_FC61
+4 Output Values / Errors=Ausgabewerte_FC61
+4 Execution Time of the Block=Laufzeiten_FC61
+3 FC LT_BT (FC 62)
+4 Area of Application=Anwendungsbereich_FC62
+4 How It Works=Arbeitsweise_FC62
+4 Forbidden Hour=Verbotene_Stunde_FC62
+4 Double Hour=Doppelte_Stunde_FC62
+4 Calling OBs=Aufrufende_OBs_FC62
+4 Call Environment=Aufrufumgebung_FC62
+4 Parameter List=Parameterliste_FC62
+4 Output Values / Errors=Ausgabewerte_FC62
+4 Execution Time of the Block=Laufzeiten_FC62
+3 FC S_LTINT (FC 63)
+4 Area of Application=Anwendungsbereich_FC63
+4 How It Works=Arbeitsweise_FC63
+4 Forbidden Hour=Verbotene_Stunde_FC63
+4 Double Hour=Doppelte_Stunde_FC63
+4 Calling OBs=Aufrufende_OBs_FC63
+4 Parameter List=Parameterliste_FC63
+4 Output Values / Errors=Ausgabewerte_FC63
+4 Execution Time of the Block=Laufzeiten_FC63
+3 Rule DB / UDT60
+4 Rule DB / UDT60=Regel_DB_UDT_60
+2 Time stamp
+3 FB TIMESTMP (FB 62)
+4 Range of application=Anwendungsbereich_FB62
+4 How it works=Arbeitsweise_FB62
+4 Hardware configuration=Hardware-Konfiguration_FB62
+4 Software configuration=Software-Konfiguration_FB62
+4 Error handling=Fehlerbehandlung_FB62
+4 M 153-2 startup behavior=Anlaufverhalten_IM153-2_FB62
+4 FB TIMESTMP startup behavior=Anlaufverhalten_FB62
+4 Redundancy=Redundanz_FB62
+4 Message buffer structure=Aufbau_des_Meldepuffers_FB62
+4 Block operation under CFC=Bausteineinsatz_CFC_FB62
+4 Time formats=Zeitformate_FB62
+4 Parameter list=Parameterliste_FB62
+4 Block runtimes=Laufzeiten_FB62
+3 IM 153-2 interface
+4 Data records=Datensätze_der_IM_153-2
+4 Structure of a signal message=Aufbau_einer_Signalmeldung_der_IM_153-2
+4 Structure of a special message=Aufbau_einer_Sondermeldung_von_IM_153-2
+4 Interrupt information=Alarminformation_der_IM153-2

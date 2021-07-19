@@ -1,0 +1,16 @@
+[IM460_3]
+[IM460-4]
+
+[PARAMETERS]
+001;000;000.0;003;000;0002;  ;000;Transfer_Length
+
+[Transfer_Length]
+000=10 m
+001=50 m
+002=100 m
+003=250 m
+004=450 m
+005=600 m
+
+// [CONSISTENCY_CRITERIA=1|1|6]
+

@@ -1,0 +1,55 @@
+:Base s7wndxhd.hlp
+:Title diagnóstico NCM
+1 diagnóstico NCM
+2 Panorámica=panorámica
+2 Zona de navegación=HIDD_TREE_DIALOG
+2 Iniciar el diagnóstico: Establecer el enlace con el CP=No hay enlace online con el CP
+2 Comandos de menú=HIDR_MAINFRAME
+2 Ajustes diagnóstico NCM=HIDD_OPTIONSL2
+2 Funciones generales de diagnóstico
+3 Información sobre el CP=HIDD_STATEFIRST
+3 Tipos de enlace utilizados=HIDD_CONNECTIONS
+3 Búfer de diagnóstico=HIDD_DIAGBUFFERS
+3 Estado operativo CP=HIDD_STATEL2
+3 Objeto de diagnóstico "C-PLUG"=HIDD_CPLUG
+2 PROFIBUS
+3 Estación PROFIBUS=HIDD_L2STATIONEN
+3 Parámetros de bus PROFIBUS=HIDD_L2BUSPARAMS
+3 Estadística PROFIBUS=HIDD_L2STATISTIC
+3 Diagnóstico de maestro DP=HIDD_DPMASTER
+3 Diagnóstico de esclavo DP=HIDD_DPSLAVE
+3 Diagnóstico referido a aparato para esclavo DP=HIDD_DPDEVICE
+3 Diagnóstico de módulo individual de esclavo DP=HIDD_DPMODUL
+3 DP-Slave Reserve=HIDD_CIR_Slave_Res
+3 DP-Modul Reserve=HIDD_CiR_Modul_Res
+3 Enlaces FDL - panorámica=HIDD_FDL_VLISTE
+3 Enlace FDL detallado=HIDD_FDL_CONN
+3 Enlaces FMS - panorámica=HIDD_FMS_VLISTE
+3 Enlace FMS detallado=HIDD_FMS_CONN
+3 FMS: Peticiones=HIDD_FMSAUFTRAGSZUSTAND
+3 FMS: Variables a  notificar=HIDD_FMSMELDEVAR
+3 FMS: Variables interlocutor=HIDD_FMSREMOTE
+2 Ethernet
+3 Industrial Ethernet - Informaciones generales=IDD_IEBUS
+3 Estadística para Industrial Ethernet=IDD_IESTAT
+3 Diagnóstico de la hora=IDD_zeit
+3 Enlaces de transporte ISO - panorámica=HIDD_ISO_VLISTE
+3 Enlace de transporte ISO detallado=HIDD_ISO_CONN
+3 Enlaces TCP - panorámica=HIDD_TCP_VLISTE
+3 Enlace TCP detallado=HIDD_NATTCP_CONN
+3 Enlaces UDP - panorámica=HIDD_UDP_VLISTE
+3 Enlace UDP detallado=HIDD_UDP_CONN
+3 Enlaces ISO-on-TCP - panorámica=HIDD_ONTCP_VLISTE
+3 Enlace ISO-on-TCP detallado=HIDD_TCP_CONN
+3 Enlace E-Mail=HIDD_EMAIL
+3 Estadística de enlaces S/R=HIDD_SR_Verb_statistik
+2 PROFINET
+3 Enlaces TCP para PROFInet=IDD_TPN
+3 Enlace TCP para PROFInet, detalles=IDD_TPN_CON
+3 Diagnóstico de componentes de PROFInet=IDD_CBA_PNET
+3 Componente PROFInet=IDD_CBA_COMPONENT
+3 Dispositivo PROFInet=IDD_CBA_LD
+2 Enlaces S7
+3 Enlaces S7, general=IDD_pbk_tab
+3 Enlaces S7, detalles=IDD_pbk
+3 Estadística para enlaces S7=HIDD_S7_VERB_Statistik

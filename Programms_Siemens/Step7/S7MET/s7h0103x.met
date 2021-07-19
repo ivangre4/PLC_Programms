@@ -1,0 +1,218 @@
+; ----------------------------- CPU 312C
+[_S7H_HSP_6ES7_312_5BE03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363865
+basetype=_S7H_6ES7_312_5BD01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363866
+IsCatEntry=1
+MLFB=6ES7 312-5BE03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 312C
+CountAutoCreatedChilds=2
+AutoCreatedChild1=1316293, 2, FIXED
+AutoCreatedChild2=1322030, 4, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- CPU 313C
+[_S7H_HSP_6ES7_313_5BF03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363867
+basetype=_S7H_6ES7_313_5BE01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363868
+IsCatEntry=1
+MLFB=6ES7 313-5BF03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 313C
+CountAutoCreatedChilds=3
+AutoCreatedChild1=1316294, 2, FIXED
+AutoCreatedChild2=1316295, 3, FIXED
+AutoCreatedChild3=1322031, 4, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- CPU 313C-2 PtP
+[_S7H_HSP_6ES7_313_6BF03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363869
+basetype=_S7H_6ES7_313_6BE01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363870
+IsCatEntry=1
+MLFB=6ES7 313-6BF03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 313C-2 PtP
+CountAutoCreatedChilds=3
+AutoCreatedChild1=1322013, 1, FIXED
+AutoCreatedChild2=1316297, 2, FIXED
+AutoCreatedChild3=1322033, 4, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- CPU 313C-2 DP
+[_S7H_HSP_6ES7_313_6CF03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363871
+basetype=_S7H_6ES7_313_6CE01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363872
+IsCatEntry=1
+MLFB=6ES7 313-6CF03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 313C-2 DP
+CountAutoCreatedChilds=3
+AutoCreatedChild1=1316607, 1, FIXED
+AutoCreatedChild2=1316296, 2, FIXED
+AutoCreatedChild3=1322032, 4, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- CPU 314C-2 PtP
+[_S7H_HSP_6ES7_314_6BG03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363873
+basetype=_S7H_6ES7_314_6BF01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363874
+IsCatEntry=1
+MLFB=6ES7 314-6BG03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 314C-2 PtP
+CountAutoCreatedChilds=5
+AutoCreatedChild1=1322014, 1, FIXED
+AutoCreatedChild2=1316239, 2, FIXED
+AutoCreatedChild3=1316237, 3, FIXED
+AutoCreatedChild4=1322035, 4, FIXED
+AutoCreatedChild5=1322037, 5, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- CPU 314C-2 DP
+[_S7H_HSP_6ES7_314_6CG03_FW20_0AB0_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363875
+basetype=_S7H_6ES7_314_6CF01_FW20_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=2363876
+IsCatEntry=1
+MLFB=6ES7 314-6CG03-0AB0
+FW_VERSION=V2.0
+SHORTNAME=CPU 314C-2 DP
+CountAutoCreatedChilds=5
+AutoCreatedChild1=1316608, 1, FIXED
+AutoCreatedChild2=1316238, 2, FIXED
+AutoCreatedChild3=1316236, 3, FIXED
+AutoCreatedChild4=1322034, 4, FIXED
+AutoCreatedChild5=1322036, 5, FIXED
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_312_5BE03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363866
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316285
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 312-5BE03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_313_5BF03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363868
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316286
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 313-5BF03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_313_6BF03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363870
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316288
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 313-6BF03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_313_6CF03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363872
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316287
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 313-6CF03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_314_6BG03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363874
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316230
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 314-6BG03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_314_6CG03_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363876
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1316229
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 314-6CG03-0AB0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_ID=0103
+HSP_NAME=CPU 31XC DP/PtP V2.0

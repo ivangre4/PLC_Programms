@@ -1,0 +1,57 @@
+:Base s7wndxhk.hlp
+:Title NCM诊断的帮助
+1 NCM S7 诊断
+2 概述=uebersicht
+2 诊断窗口结构=HIDD_TREE_DIALOG
+2 启动诊断：建立到CP的连接=Keine_Online_Verbindung_zum_CP
+2 菜单命令=HIDR_MAINFRAME
+2 诊断设置=HIDD_OPTIONSL2
+2 常规诊断功能
+3 模块信息=HIDD_STATEFIRST
+3 所使用的连接类型=HIDD_CONNECTIONS
+3 诊断缓冲区=HIDD_DIAGBUFFERS
+3 模块的操作模式=HIDD_STATEL2
+3 "C-PLUG"诊断对象=HIDD_CPLUG
+2 PROFIBUS诊断
+3 PROFIBUS节点=HIDD_L2STATIONEN
+3 PROFIBUS 总线参数=HIDD_L2BUSPARAMS
+3 PROFIBUS统计信息=HIDD_L2STATISTIC
+3 DP主站诊断=HIDD_DPMASTER
+3 DP从站诊断=HIDD_DPSLAVE
+3 DP从站的与设备有关的诊断=HIDD_DPDEVICE
+3 DP从站的子模块诊断=HIDD_DPMODUL
+3 保留的DP从站=HIDD_CIR_Slave_Res
+3 保留的DP子模块=HIDD_CiR_Modul_Res
+3 FDL连接 - 概述=HIDD_FDL_VLISTE
+3 FDL连接 - 详细信息=HIDD_FDL_CONN
+3 FMS连接 - 概述=HIDD_FMS_VLISTE
+3 FMS连接 - 详细信息=HIDD_FMS_CONN
+3 FMS：作业=HIDD_FMSAUFTRAGSZUSTAND
+3 FMS：报表变量=HIDD_FMSMELDEVAR
+3 FMS：伙伴变量=HIDD_FMSREMOTE
+2 以太网诊断
+3 工业以太网 - 常规信息=IDD_IEBUS
+3 关于工业以太网的统计信息=IDD_IESTAT
+3 时间诊断=IDD_zeit
+3 ISO传输连接 - 概述=HIDD_ISO_VLISTE
+3 ISO传输连接 - 详细信息=HIDD_ISO_CONN
+3 TCP连接 - 概述=HIDD_TCP_VLISTE
+3 TCP连接 - 详细信息=HIDD_NATTCP_CONN
+3 UDP连接 - 概述=HIDD_UDP_VLISTE
+3 UDP连接 - 详细信息=HIDD_UDP_CONN
+3 ISO-on-TCP连接 - 概述=HIDD_ONTCP_VLISTE
+3 ISO-on-TCP连接 - 详细信息=HIDD_TCP_CONN
+3 电子邮件连接=HIDD_EMAIL
+3 IP访问保护=HID_IP_DIAGACCESS
+3 S/R连接的统计数据=HIDD_SR_Verb_statistik
+2 PROFINET诊断
+3 用于PROFInet的TCP连接=IDD_TPN
+3 用于PRFOInet的TCP连接 - 详细信息=IDD_TPN_CON
+3 诊断PROFInet组件=IDD_CBA_PNET
+3 PROFINET设备=IDD_CBA_LD
+3 PROFINET组件=IDD_CBA_COMPONENT
+2 S7 连接
+3 S7 连接 - 概述=IDD_pbk_tab
+3 S7 连接 - 详细信息=IDD_pbk
+3 3 S7连接的统计信息 =HIDD_S7_VERB_Statistik
+

@@ -1,0 +1,679 @@
+;==========================================================
+; GSD-File  for AG 95U-DP               SIEMENS AG 
+; MLFB  : 6ES5 095-8MD01
+;
+; Stand   : 12.01.99 V1.3  SX  entspr. TD V1.2 
+;        27.02.02  V 2.0
+; File    : SIEM800C.GSE
+;===========================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+; <Ext-User-Prm-Data-Def-List>
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "S5-95U/DP with connection as DP slave"
+Vendor_Name="SIEMENS                       "
+Model_Name="S5-95U         DP             "
+Revision="V 2.0"
+Ident_Number=0x800C
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0                          "
+Software_Release="Z1.0                          "
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Bitmap_Device="AG95DP_N"
+Bitmap_SF="AG95DP_S"
+; Slave-Specification:
+OrderNumber="6ES5 095-8MD01                "
+;OffsetFirstMPDBlock=0
+Auto_Baud_supp=1
+Min_Slave_Intervall=30
+Max_Diag_Data_Len=16
+Modul_Offset=0
+Slave_Family=10@SIMATIC
+Modular_Station=1
+Max_Module=32
+Max_Input_Len=32
+Max_Output_Len=32
+Max_Data_Len=64
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=25
+User_Prm_Data = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Max_User_Prm_Data_Len=25
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+; Unit-Diagnostics:
+Unit_Diag_Bit(0017)="STEUB - Block stack overflow  "
+Unit_Diag_Bit(0018)="STS - STOP from PG/Prog.      "
+Unit_Diag_Bit(0019)="NNN - Command Unknown         "
+Unit_Diag_Bit(0020)="TRAF - Transfer Error         "
+Unit_Diag_Bit(0021)="SUF - Substitution Error      "
+Unit_Diag_Bit(0022)="KEIN AS - Insuf. user memory  "
+Unit_Diag_Bit(0023)="STOPS - Switch in STOP        "
+Unit_Diag_Bit(0024)="ASPFA - Invalid Memory Module "
+Unit_Diag_Bit(0026)="PEU - Powerfail in Exp. Unit  "
+Unit_Diag_Bit(0027)="SYS FEH - Error in DB1        "
+Unit_Diag_Bit(0028)="ZYK - Cycle Time Timeout      "
+Unit_Diag_Bit(0029)="NINEU - Restart Not Possible  "
+Unit_Diag_Bit(0030)="SYN FEH - Synchronization Err."
+; <Module-Definition-List>
+Module = "1byte DI/constcy 1byte   " 0x10
+1
+EndModule
+Module = "2bytes DI/constcy 1byte   " 0x11
+2
+EndModule
+Module = "3bytes DI/constcy 1byte   " 0x12
+3
+EndModule
+Module = "4bytes DI/constcy 1byte   " 0x13
+4
+EndModule
+Module = "5bytes DI/constcy 1byte   " 0x14
+5
+EndModule
+Module = "6bytes DI/constcy 1byte   " 0x15
+6
+EndModule
+Module = "7bytes DI/constcy 1byte   " 0x16
+7
+EndModule
+Module = "8bytes DI/constcy 1byte   " 0x17
+8
+EndModule
+Module = "9bytes DI/constcy 1byte   " 0x18
+9
+EndModule
+Module = "10bytes DI/constcy 1byte  " 0x19
+10
+EndModule
+Module = "11bytes DI/constcy 1byte  " 0x1A
+11
+EndModule
+Module = "12bytes DI/constcy 1byte  " 0x1B
+12
+EndModule
+Module = "13bytes DI/constcy 1byte  " 0x1C
+13
+EndModule
+Module = "14bytes DI/constcy 1byte  " 0x1D
+14
+EndModule
+Module = "15bytes DI/constcy 1byte  " 0x1E
+15
+EndModule
+Module = "16bytes DI/constcy 1byte  " 0x1F
+16
+EndModule
+;
+; Modulebytes-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1bytes DO/constcy 1byte   " 0x20
+17
+EndModule
+Module = "2bytes DO/constcy 1byte   " 0x21
+18
+EndModule
+Module = "3bytes DO/constcy 1byte   " 0x22
+19
+EndModule
+Module = "4bytes DO/constcy 1byte   " 0x23
+20
+EndModule
+Module = "5bytes DO/constcy 1byte   " 0x24
+21
+EndModule
+Module = "6bytes DO/constcy 1byte   " 0x25
+22
+EndModule
+Module = "7bytes DO/constcy 1byte   " 0x26
+23
+EndModule
+Module = "8bytes DO/constcy 1byte   " 0x27
+24
+EndModule
+Module = "9bytes DO/constcy 1byte   " 0x28
+25
+EndModule
+Module = "10bytes DO/constcy 1byte  " 0x29
+26
+EndModule
+Module = "11bytes DO/constcy 1byte  " 0x2A
+27
+EndModule
+Module = "12bytes DO/constcy 1byte  " 0x2B
+28
+EndModule
+Module = "13bytes DO/constcy 1byte  " 0x2C
+29
+EndModule
+Module = "14bytes DO/constcy 1byte  " 0x2D
+30
+EndModule
+Module = "15bytes DO/constcy 1byte  " 0x2E
+31
+EndModule
+Module = "16bytes DO/constcy 1byte  " 0x2F
+32
+EndModule
+;
+; Modulebytes-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1byte DI/DO/constcy 1bytes" 0x30
+33
+EndModule
+Module = "2bytes DI/DO/constcy 1byte" 0x31
+34
+EndModule
+Module = "3bytes DI/DO/constcy 1byte" 0x32
+35
+EndModule
+Module = "4bytes DI/DO/constcy 1byte" 0x33
+36
+EndModule
+Module = "5bytes DI/DO/constcy 1byte" 0x34
+37
+EndModule
+Module = "6bytes DI/DO/constcy 1byte" 0x35
+38
+EndModule
+Module = "7bytes DI/DO/constcy 1byte" 0x36
+39
+EndModule
+Module = "8bytes DI/DO/constcy 1byte" 0x37
+40
+EndModule
+Module = "9bytes DI/DO/constcy 1byte" 0x38
+41
+EndModule
+Module = "10bytes DI/DO/constcy 1byte" 0x39
+42
+EndModule
+Module = "11bytes DI/DO/constcy 1byte" 0x3A
+43
+EndModule
+Module = "12bytes DI/DO/constcy 1byte" 0x3B
+44
+EndModule
+Module = "13bytes DI/DO/constcy 1byte" 0x3C
+45
+EndModule
+Module = "14bytes DI/DO/constcy 1byte" 0x3D
+46
+EndModule
+Module = "15bytes DI/DO/constcy 1byte" 0x3E
+47
+EndModule
+Module = "16bytes DI/DO/constcy 1byte" 0x3F
+48
+EndModule
+;
+; Module wort-organisiert mit Sendedaten des S5-95U
+;
+Module = "1word AI/constcy 1word   " 0x50
+49
+EndModule
+Module = "2word AI/constcy 1word   " 0x51
+50
+EndModule
+Module = "3word AI/constcy 1word   " 0x52
+51
+EndModule
+Module = "4word AI/constcy 1word   " 0x53
+52
+EndModule
+Module = "5word AI/constcy 1word   " 0x54
+53
+EndModule
+Module = "6word AI/constcy 1word   " 0x55
+54
+EndModule
+Module = "7word AI/constcy 1word   " 0x56
+55
+EndModule
+Module = "8word AI/constcy 1word   " 0x57
+56
+EndModule
+Module = "9word AI/constcy 1word   " 0x58
+57
+EndModule
+Module = "10word AI/constcy 1word  " 0x59
+58
+EndModule
+Module = "11word AI/constcy 1word  " 0x5A
+59
+EndModule
+Module = "12word AI/constcy 1word  " 0x5B
+60
+EndModule
+Module = "13word AI/constcy 1word  " 0x5C
+61
+EndModule
+Module = "14word AI/constcy 1word  " 0x5D
+62
+EndModule
+Module = "15word AI/constcy 1word  " 0x5E
+63
+EndModule
+Module = "16word AI/constcy 1word  " 0x5F
+64
+EndModule
+;
+; Module wort-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1word AO/constcy 1word   " 0x60
+65
+EndModule
+Module = "2word AO/constcy 1word   " 0x61
+66
+EndModule
+Module = "3word AO/constcy 1word   " 0x62
+67
+EndModule
+Module = "4word AO/constcy 1word   " 0x63
+68
+EndModule
+Module = "5word AO/constcy 1word   " 0x64
+69
+EndModule
+Module = "6word AO/constcy 1word   " 0x65
+70
+EndModule
+Module = "7word AO/constcy 1word   " 0x66
+71
+EndModule
+Module = "8word AO/constcy 1word   " 0x67
+72
+EndModule
+Module = "9word AO/constcy 1word   " 0x68
+73
+EndModule
+Module = "10word AO/constcy 1word  " 0x69
+74
+EndModule
+Module = "11word AO/constcy 1word  " 0x6A
+75
+EndModule
+Module = "12word AO/constcy 1word  " 0x6B
+76
+EndModule
+Module = "13word AO/constcy 1word  " 0x6C
+77
+EndModule
+Module = "14word AO/constcy 1word  " 0x6D
+78
+EndModule
+Module = "15word AO/constcy 1word  " 0x6E
+79
+EndModule
+Module = "16word AO/constcy 1word  " 0x6F
+80
+EndModule
+;
+; Module wort-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1word AI/AO/constcy 1word" 0x70
+81
+EndModule
+Module = "2word AI/AO/constcy 1word" 0x71
+82
+EndModule
+Module = "3word AI/AO/constcy 1word" 0x72
+83
+EndModule
+Module = "4word AI/AO/constcy 1word" 0x73
+84
+EndModule
+Module = "5word AI/AO/constcy 1word" 0x74
+85
+EndModule
+Module = "6word AI/AO/constcy 1word" 0x75
+86
+EndModule
+Module = "7word AI/AO/constcy 1word" 0x76
+87
+EndModule
+Module = "8word AI/AO/constcy 1word" 0x77
+88
+EndModule
+Module = "9word AI/AO/constcy 1word" 0x78
+89
+EndModule
+Module = "10word AI/AO/constcy 1word" 0x79
+90
+EndModule
+Module = "11word AI/AO/constcy 1word" 0x7A
+91
+EndModule
+Module = "12word AI/AO/constcy 1word" 0x7B
+92
+EndModule
+Module = "13word AI/AO/constcy 1word" 0x7C
+93
+EndModule
+Module = "14word AI/AO/constcy 1word" 0x7D
+94
+EndModule
+Module = "15word AI/AO/constcy 1word" 0x7E
+95
+EndModule
+Module = "16word AI/AO/constcy 1word" 0x7F
+96
+EndModule
+;
+; Modulebytes-organisiert mit Sendedaten des S5-95U
+;
+Module = "1bytes DI/constcy overall   " 0x90
+97
+EndModule
+Module = "2bytes DI/constcy overall   " 0x91
+98
+EndModule
+Module = "3bytes DI/constcy overall   " 0x92
+99
+EndModule
+Module = "4bytes DI/constcy overall   " 0x93
+100
+EndModule
+Module = "5bytes DI/constcy overall   " 0x94
+101
+EndModule
+Module = "6bytes DI/constcy overall   " 0x95
+102
+EndModule
+Module = "7bytes DI/constcy overall   " 0x96
+103
+EndModule
+Module = "8bytes DI/constcy overall   " 0x97
+104
+EndModule
+Module = "9bytes DI/constcy overall   " 0x98
+105
+EndModule
+Module = "10bytes DI/constcy overall  " 0x99
+106
+EndModule
+Module = "11bytes DI/constcy overall  " 0x9A
+107
+EndModule
+Module = "12bytes DI/constcy overall  " 0x9B
+108
+EndModule
+Module = "13bytes DI/constcy overall  " 0x9C
+109
+EndModule
+Module = "14bytes DI/constcy overall  " 0x9D
+110
+EndModule
+Module = "15bytes DI/constcy overall  " 0x9E
+111
+EndModule
+Module = "16bytes DI/constcy overall  " 0x9F
+112
+EndModule
+;
+; Modulebytes-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1bytes DO/constcy overall   " 0xA0
+113
+EndModule
+Module = "2bytes DO/constcy overall   " 0xA1
+114
+EndModule
+Module = "3bytes DO/constcy overall   " 0xA2
+115
+EndModule
+Module = "4bytes DO/constcy overall   " 0xA3
+116
+EndModule
+Module = "5bytes DO/constcy overall   " 0xA4
+117
+EndModule
+Module = "6bytes DO/constcy overall   " 0xA5
+118
+EndModule
+Module = "7bytes DO/constcy overall   " 0xA6
+119
+EndModule
+Module = "8bytes DO/constcy overall   " 0xA7
+120
+EndModule
+Module = "9bytes DO/constcy overall   " 0xA8
+121
+EndModule
+Module = "10bytes DO/constcy overall  " 0xA9
+122
+EndModule
+Module = "11bytes DO/constcy overall  " 0xAA
+123
+EndModule
+Module = "12bytes DO/constcy overall  " 0xAB
+124
+EndModule
+Module = "13bytes DO/constcy overall  " 0xAC
+125
+EndModule
+Module = "14bytes DO/constcy overall  " 0xAD
+126
+EndModule
+Module = "15bytes DO/constcy overall  " 0xAE
+127
+EndModule
+Module = "16bytes DO/constcy overall  " 0xAF
+128
+EndModule
+;
+; Modulebytes-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1bytes DI/DO/constcy overall" 0xB0
+129
+EndModule
+Module = "2bytes DI/DO/constcy overall" 0xB1
+130
+EndModule
+Module = "3bytes DI/DO/constcy overall" 0xB2
+131
+EndModule
+Module = "4bytes DI/DO/constcy overall" 0xB3
+132
+EndModule
+Module = "5bytes DI/DO/constcy overall" 0xB4
+133
+EndModule
+Module = "6bytes DI/DO/constcy overall" 0xB5
+134
+EndModule
+Module = "7bytes DI/DO/constcy overall" 0xB6
+135
+EndModule
+Module = "8bytes DI/DO/constcy overall" 0xB7
+136
+EndModule
+Module = "9bytes DI/DO/constcy overall" 0xB8
+137
+EndModule
+Module = "10bytes DI/DO/constcy overall" 0xB9
+138
+EndModule
+Module = "11bytes DI/DO/constcy overall" 0xBA
+139
+EndModule
+Module = "12bytes DI/DO/constcy overall" 0xBB
+140
+EndModule
+Module = "13bytes DI/DO/constcy overall" 0xBC
+141
+EndModule
+Module = "14bytes DI/DO/constcy overall" 0xBD
+142
+EndModule
+Module = "15bytes DI/DO/constcy overall" 0xBE
+143
+EndModule
+Module = "16bytes DI/DO/constcy overall" 0xBF
+144
+EndModule
+;
+; Module wort-organisiert mit Sendedaten des S5-95U
+;
+Module = "1word AI/constcy overall   " 0xD0
+145
+EndModule
+Module = "2word AI/constcy overall   " 0xD1
+146
+EndModule
+Module = "3word AI/constcy overall   " 0xD2
+147
+EndModule
+Module = "4word AI/constcy overall   " 0xD3
+148
+EndModule
+Module = "5word AI/constcy overall   " 0xD4
+149
+EndModule
+Module = "6word AI/constcy overall   " 0xD5
+150
+EndModule
+Module = "7word AI/constcy overall   " 0xD6
+151
+EndModule
+Module = "8word AI/constcy overall   " 0xD7
+152
+EndModule
+Module = "9word AI/constcy overall   " 0xD8
+153
+EndModule
+Module = "10word AI/constcy overall  " 0xD9
+154
+EndModule
+Module = "11word AI/constcy overall  " 0xDA
+155
+EndModule
+Module = "12word AI/constcy overall  " 0xDB
+156
+EndModule
+Module = "13word AI/constcy overall  " 0xDC
+157
+EndModule
+Module = "14word AI/constcy overall  " 0xDD
+158
+EndModule
+Module = "15word AI/constcy overall  " 0xDE
+159
+EndModule
+Module = "16word AI/constcy overall  " 0xDF
+160
+EndModule
+;
+; Module wort-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1word AO/constcy overall   " 0xE0
+161
+EndModule
+Module = "2word AO/constcy overall   " 0xE1
+162
+EndModule
+Module = "3word AO/constcy overall   " 0xE2
+163
+EndModule
+Module = "4word AO/constcy overall   " 0xE3
+164
+EndModule
+Module = "5word AO/constcy overall   " 0xE4
+165
+EndModule
+Module = "6word AO/constcy overall   " 0xE5
+166
+EndModule
+Module = "7word AO/constcy overall   " 0xE6
+167
+EndModule
+Module = "8word AO/constcy overall   " 0xE7
+168
+EndModule
+Module = "9word AO/constcy overall   " 0xE8
+169
+EndModule
+Module = "10word AO/constcy overall  " 0xE9
+170
+EndModule
+Module = "11word AO/constcy overall  " 0xEA
+171
+EndModule
+Module = "12word AO/constcy overall  " 0xEB
+172
+EndModule
+Module = "13word AO/constcy overall  " 0xEC
+173
+EndModule
+Module = "14word AO/constcy overall  " 0xED
+174
+EndModule
+Module = "15word AO/constcy overall  " 0xEE
+175
+EndModule
+Module = "16word AO/constcy overall  " 0xEF
+176
+EndModule
+;
+; Module wort-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1word AI/AO/constcy overall" 0xF0
+177
+EndModule
+Module = "2word AI/AO/constcy overall" 0xF1
+178
+EndModule
+Module = "3word AI/AO/constcy overall" 0xF2
+179
+EndModule
+Module = "4word AI/AO/constcy overall" 0xF3
+180
+EndModule
+Module = "5word AI/AO/constcy overall" 0xF4
+181
+EndModule
+Module = "6word AI/AO/constcy overall" 0xF5
+182
+EndModule
+Module = "7word AI/AO/constcy overall" 0xF6
+183
+EndModule
+Module = "8word AI/AO/constcy overall" 0xF7
+184
+EndModule
+Module = "9word AI/AO/constcy overall" 0xF8
+185
+EndModule
+Module = "10word AI/AO/constcy overall" 0xF9
+186
+EndModule
+Module = "11word AI/AO/constcy overall" 0xFA
+187
+EndModule
+Module = "12word AI/AO/constcy overall" 0xFB
+188
+EndModule
+Module = "13word AI/AO/constcy overall" 0xFC
+189
+EndModule
+Module = "14word AI/AO/constcy overall" 0xFD
+190
+EndModule
+Module = "15word AI/AO/constcy overall" 0xFE
+191
+EndModule
+Module = "16word AI/AO/constcy overall" 0xFF
+192
+EndModule

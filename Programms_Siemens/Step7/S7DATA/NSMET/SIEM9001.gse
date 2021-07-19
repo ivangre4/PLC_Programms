@@ -1,0 +1,363 @@
+;==========================================================
+; GSD-File  for SINEC CP 3425 DP       SIEMENS AG 
+; MLFB  : 6GK7 342-5DA00-0XE0
+;
+; Stand   : 02.03.99 V1.2 SX  
+;        27.02.02  V 2.0
+; File    : SIEM9001.GSD
+;===========================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+; <Ext-User-Prm-Data-Def-List>
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "CP 342-5 as PROFIBUS DP Slave"
+Vendor_Name="SIEMENS"
+Model_Name="S7-300 CP342-5 DP"
+Revision="V 2.0"
+Ident_Number=0x9001
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V 1.0"
+Software_Release="V 1.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Bitmap_Device="SI9001TN"
+Bitmap_SF="SI9001TN"
+; Slave-Specification:
+OrderNumber="6GK7 342-5DA0*-0XE0"
+Auto_Baud_supp=0
+Min_Slave_Intervall=50
+Max_Diag_Data_Len=10
+Modul_Offset=0
+Slave_Family=3@SIMATIC
+Modular_Station=1
+Max_Module=32
+Max_Input_Len=86
+Max_Output_Len=86
+Max_Data_Len=172
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=0
+; Unit-Diagnostics:
+Unit_Diag_Bit(0000)="Konfigurierungsphase"
+Unit_Diag_Bit(0001)="Konfigurierungsaenderung"
+Unit_Diag_Bit(0002)="CPU im Zustand STOP"
+Unit_Diag_Bit(0003)="Min. Tsdr Aenderung"
+Unit_Diag_Bit(0004)="SAP-Aktivierung"
+; <Module-Definition-List>
+; Module byte-organisiert mit Sendedaten des CP 3425 DP
+;
+Module = "1 Byte DE/Konsistenz 1 Byte" 0x10
+1
+EndModule
+Module = "2 Byte DE/Konsistenz 1 Byte" 0x11
+2
+EndModule
+Module = "3 Byte DE/Konsistenz 1 Byte" 0x12
+3
+EndModule
+Module = "4 Byte DE/Konsistenz 1 Byte" 0x13
+4
+EndModule
+Module = "5 Byte DE/Konsistenz 1 Byte" 0x14
+5
+EndModule
+Module = "6 Byte DE/Konsistenz 1 Byte" 0x15
+6
+EndModule
+Module = "7 Byte DE/Konsistenz 1 Byte" 0x16
+7
+EndModule
+Module = "8 Byte DE/Konsistenz 1 Byte" 0x17
+8
+EndModule
+Module = "9 Byte DE/Konsistenz 1 Byte" 0x18
+9
+EndModule
+Module = "10 Byte DE/Konsistenz 1 Byte" 0x19
+10
+EndModule
+Module = "11 Byte DE/Konsistenz 1 Byte" 0x1A
+11
+EndModule
+Module = "12 Byte DE/Konsistenz 1 Byte" 0x1B
+12
+EndModule
+Module = "13 Byte DE/Konsistenz 1 Byte" 0x1C
+13
+EndModule
+Module = "14 Byte DE/Konsistenz 1 Byte" 0x1D
+14
+EndModule
+Module = "15 Byte DE/Konsistenz 1 Byte" 0x1E
+15
+EndModule
+Module = "16 Byte DE/Konsistenz 1 Byte" 0x1F
+16
+EndModule
+;
+; Module byte-organisiert mit Empfangsdaten des CP 3425 DP
+;
+Module = "1 Byte DA/Konsistenz 1 Byte" 0x20
+17
+EndModule
+Module = "2 Byte DA/Konsistenz 1 Byte" 0x21
+18
+EndModule
+Module = "3 Byte DA/Konsistenz 1 Byte" 0x22
+19
+EndModule
+Module = "4 Byte DA/Konsistenz 1 Byte" 0x23
+20
+EndModule
+Module = "5 Byte DA/Konsistenz 1 Byte" 0x24
+21
+EndModule
+Module = "6 Byte DA/Konsistenz 1 Byte" 0x25
+22
+EndModule
+Module = "7 Byte DA/Konsistenz 1 Byte" 0x26
+23
+EndModule
+Module = "8 Byte DA/Konsistenz 1 Byte" 0x27
+24
+EndModule
+Module = "9 Byte DA/Konsistenz 1 Byte" 0x28
+25
+EndModule
+Module = "10 Byte DA/Konsistenz 1 Byte" 0x29
+26
+EndModule
+Module = "11 Byte DA/Konsistenz 1 Byte" 0x2A
+27
+EndModule
+Module = "12 Byte DA/Konsistenz 1 Byte" 0x2B
+28
+EndModule
+Module = "13 Byte DA/Konsistenz 1 Byte" 0x2C
+29
+EndModule
+Module = "14 Byte DA/Konsistenz 1 Byte" 0x2D
+30
+EndModule
+Module = "15 Byte DA/Konsistenz 1 Byte" 0x2E
+31
+EndModule
+Module = "16 Byte DA/Konsistenz 1 Byte" 0x2F
+32
+EndModule
+;
+; Module wort-organisiert mit Sendedaten des CP 3425 DP
+;
+Module = "1 Wort AE/Konsistenz 1 Wort" 0x50
+33
+EndModule
+Module = "2 Wort AE/Konsistenz 1 Wort" 0x51
+34
+EndModule
+Module = "3 Wort AE/Konsistenz 1 Wort" 0x52
+35
+EndModule
+Module = "4 Wort AE/Konsistenz 1 Wort" 0x53
+36
+EndModule
+Module = "5 Wort AE/Konsistenz 1 Wort" 0x54
+37
+EndModule
+Module = "6 Wort AE/Konsistenz 1 Wort" 0x55
+38
+EndModule
+Module = "7 Wort AE/Konsistenz 1 Wort" 0x56
+39
+EndModule
+Module = "8 Wort AE/Konsistenz 1 Wort" 0x57
+40
+EndModule
+Module = "9 Wort AE/Konsistenz 1 Wort" 0x58
+41
+EndModule
+Module = "10 Wort AE/Konsistenz 1 Wort" 0x59
+42
+EndModule
+Module = "11 Wort AE/Konsistenz 1 Wort" 0x5A
+43
+EndModule
+Module = "12 Wort AE/Konsistenz 1 Wort" 0x5B
+44
+EndModule
+Module = "13 Wort AE/Konsistenz 1 Wort" 0x5C
+45
+EndModule
+Module = "14 Wort AE/Konsistenz 1 Wort" 0x5D
+46
+EndModule
+Module = "15 Wort AE/Konsistenz 1 Wort" 0x5E
+47
+EndModule
+Module = "16 Wort AE/Konsistenz 1 Wort" 0x5F
+48
+EndModule
+;
+; Module wort-organisiert mit Empfangsdaten des CP 3425 DP
+;
+Module = "1 Wort AA/Konsistenz 1 Wort" 0x60
+49
+EndModule
+Module = "2 Wort AA/Konsistenz 1 Wort" 0x61
+50
+EndModule
+Module = "3 Wort AA/Konsistenz 1 Wort" 0x62
+51
+EndModule
+Module = "4 Wort AA/Konsistenz 1 Wort" 0x63
+52
+EndModule
+Module = "5 Wort AA/Konsistenz 1 Wort" 0x64
+53
+EndModule
+Module = "6 Wort AA/Konsistenz 1 Wort" 0x65
+54
+EndModule
+Module = "7 Wort AA/Konsistenz 1 Wort" 0x66
+55
+EndModule
+Module = "8 Wort AA/Konsistenz 1 Wort" 0x67
+56
+EndModule
+Module = "9 Wort AA/Konsistenz 1 Wort" 0x68
+57
+EndModule
+Module = "10 Wort AA/Konsistenz 1 Wort" 0x69
+58
+EndModule
+Module = "11 Wort AA/Konsistenz 1 Wort" 0x6A
+59
+EndModule
+Module = "12 Wort AA/Konsistenz 1 Wort" 0x6B
+60
+EndModule
+Module = "13 Wort AA/Konsistenz 1 Wort" 0x6C
+61
+EndModule
+Module = "14 Wort AA/Konsistenz 1 Wort" 0x6D
+62
+EndModule
+Module = "15 Wort AA/Konsistenz 1 Wort" 0x6E
+63
+EndModule
+Module = "16 Wort AA/Konsistenz 1 Wort" 0x6F
+64
+EndModule
+;
+; Module Konsistenz gesamte Länge mit Sendedaten des CP 3425 DP
+;
+Module = "1 Wort AE/Konsist. ges. Laenge" 0xD0
+65
+EndModule
+Module = "2 Wort AE/Konsist. ges. Laenge" 0xD1
+66
+EndModule
+Module = "3 Wort AE/Konsist. ges. Laenge" 0xD2
+67
+EndModule
+Module = "4 Wort AE/Konsist. ges. Laenge" 0xD3
+68
+EndModule
+Module = "5 Wort AE/Konsist. ges. Laenge" 0xD4
+69
+EndModule
+Module = "6 Wort AE/Konsist. ges. Laenge" 0xD5
+70
+EndModule
+Module = "7 Wort AE/Konsist. ges. Laenge" 0xD6
+71
+EndModule
+Module = "8 Wort AE/Konsist. ges. Laenge" 0xD7
+72
+EndModule
+Module = "9 Wort AE/Konsist. ges. Laenge" 0xD8
+73
+EndModule
+Module = "10 Wort AE/Konsist. ges. Laenge" 0xD9
+74
+EndModule
+Module = "11 Wort AE/Konsist. ges. Laenge" 0xDA
+75
+EndModule
+Module = "12 Wort AE/Konsist. ges. Laenge" 0xDB
+76
+EndModule
+Module = "13 Wort AE/Konsist. ges. Laenge" 0xDC
+77
+EndModule
+Module = "14 Wort AE/Konsist. ges. Laenge" 0xDD
+78
+EndModule
+Module = "15 Wort AE/Konsist. ges. Laenge" 0xDE
+79
+EndModule
+Module = "16 Wort AE/Konsist. ges. Laenge" 0xDF
+80
+EndModule
+;
+; Module Konsistenz gesamte Laenge mit Empfangsdaten des CP 3425 DP
+;
+Module = "1 Wort AA/Konsist. ges. Laenge" 0xE0
+81
+EndModule
+Module = "2 Wort AA/Konsist. ges. Laenge" 0xE1
+82
+EndModule
+Module = "3 Wort AA/Konsist. ges. Laenge" 0xE2
+83
+EndModule
+Module = "4 Wort AA/Konsist. ges. Laenge" 0xE3
+84
+EndModule
+Module = "5 Wort AA/Konsist. ges. Laenge" 0xE4
+85
+EndModule
+Module = "6 Wort AA/Konsist. ges. Laenge" 0xE5
+86
+EndModule
+Module = "7 Wort AA/Konsist. ges. Laenge" 0xE6
+87
+EndModule
+Module = "8 Wort AA/Konsist. ges. Laenge" 0xE7
+88
+EndModule
+Module = "9 Wort AA/Konsist. ges. Laenge" 0xE8
+89
+EndModule
+Module = "10 Wort AA/Konsist. ges. Laenge" 0xE9
+90
+EndModule
+Module = "11 Wort AA/Konsist. ges. Laenge" 0xEA
+91
+EndModule
+Module = "12 Wort AA/Konsist. ges. Laenge" 0xEB
+92
+EndModule
+Module = "13 Wort AA/Konsist. ges. Laenge" 0xEC
+93
+EndModule
+Module = "14 Wort AA/Konsist. ges. Laenge" 0xED
+94
+EndModule
+Module = "15 Wort AA/Konsist. ges. Laenge" 0xEE
+95
+EndModule
+Module = "16 Wort AA/Konsist. ges. Laenge" 0xEF
+96
+EndModule
+

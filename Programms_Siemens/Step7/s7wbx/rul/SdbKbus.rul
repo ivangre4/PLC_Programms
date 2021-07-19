@@ -1,0 +1,205 @@
+@DB_TYP KBUS_SDB V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#
+#------------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den KBUS SDB
+#
+# Historie:
+# 04.12.97 GS: Ersterstellung
+# 06.07.98 GS: SDB Gesamtlänge aus dem SDB entfernt
+# 
+#
+#------------------------------------------------------------------------
+#
+
+SDB_Buffer
+{
+
+	#--------------------------------------------------------------------
+	# KBUS SDB 
+	#--------------------------------------------------------------------
+
+	# die Gesamtlänge ( für den LongBinary Buffer )
+	KBUS_SDB$LNG									DM||||
+
+	KBUS_SDB$NAM									_M||||
+	KBUS_SDB
+	{
+
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+
+			# Typ der Baugruppe
+			Baugruppentyp							SM||||
+
+			# SDB Inhalt :
+			SDB_Inhalt								WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+
+			Reserved								BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP								BM|0|||		
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID								BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1								BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2								BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR								BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR								BM|0|||		
+		}
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+
+		SDB_ParameterArea$NAM						_M||||
+		SDB_ParameterArea
+		{
+
+			#------------------------------------------------------------
+			# KBUS Verwaltungssubblock
+			#------------------------------------------------------------
+
+			KBUS_Managementblock$NAM				_M||||
+			KBUS_Managementblock
+			{
+				# -- Parameterblock Header
+				PblkId								BC|1|||			
+				Version								BC|0|||
+				KBUS_Managementblock$LNG			WM||||
+				# -- 
+
+				# Identifier der Verbindung
+				CID									WM||||
+
+				# Verbindungsaufbautyp	
+				Typ									BC|1|||
+
+				# Priorität	
+				Prio								BC|0|||
+
+				# Verbindungsaufbau Wiederholungscounter
+				ConReqCtr							WC|0|||
+		
+				# Verbindungsaufbau Timeout
+				ConReqTime							WC|0|||
+
+				# Daten Wiederholungscounter	
+				DataReqCtr							WC|0|||
+
+				# Daten Timeout
+				DataReqTime							WC|0|||
+
+				# Verbindungsüberwachungstimeout
+				SupervisionTime						WC|0|||
+			
+				# ??
+				value								WC|0|||
+
+				# Länge des Verbindungsnamens
+				VerbNameLNG							BC|32|||
+
+				# Der Verbindungsname
+				VerbName							AM||0|32|32
+			}
+
+			#--------------------------------------------------------
+			# TA Buffer spezifischer Teil der KBUS Verbindung
+			#--------------------------------------------------------
+
+			KBUS_ConnDescrTa$NAM					_M||||
+			KBUS_ConnDescrTa
+			{
+				# -- Parameterblock Header
+				PblkId								BC|2|||			
+				Version								BC|0|||
+				KBUS_ConnDescrTa$LNG				WM||||
+				# -- 
+					
+				# TA Buffer Typ immer 0
+			  	TaTyp								BC|0|||
+
+				# Länge lokaler TSAP
+				LocTsapLNG							BC|2|||
+		
+				# lokaler TSAP
+				LocTsap								HM||2|2|2
+				
+				# Länge der remoten Netzadresse
+				RemNetAddrLNG						BC|6|||
+					
+				# remote Netzadresse
+				RemNetAddr							HM||6|6|6
+
+				# Länge remoter TSAP
+				RemTsapLNG							BC|2|||
+
+				# remoter TSAP
+				RemTsap								HM||2|2|2
+
+			} # Ende KBUS_ConnDescrTa
+
+
+			#------------------------------------------------------------
+			# Reserved for further UPLOADs 
+			#------------------------------------------------------------
+			RESV_ALL_BLK0$NAM	_A||||
+			RESV_ALL_BLK0
+			{
+				RESV_ALL_ID0		BM||||
+				RESV_ALL_RESV0		BM||||
+				RESV_ALL_BLK0$LNG	WM||||
+				RESV_ALL_DATA0		BA||||
+			}
+			RESV_ALL_BLK1$NAM	_A||||
+			RESV_ALL_BLK1
+			{
+				RESV_ALL_DATA1		BM||||
+			}
+
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+
+			SdbRucksack$NAM							_O||||
+			SdbRucksack
+			{
+			
+				# -- Parameterblock SDB Rucksack
+				PblkId								BC|0xFE||| 
+				Version								BC|0x00|||
+				SdbRucksack$LNG						WM||0x0000|0xffff|1
+				# -- 
+
+				Alignment							BC|0|||
+
+			} # Ende SDB Rucksack
+
+		} # Ende KBUS_ParameterArea
+
+	} # Ende KBUS_SDB
+
+} # Ende SDB_Buffer
+
+

@@ -1,0 +1,422 @@
+;
+; Metafile DP/AS-Interface Link 20E
+; Neuerstellung: Schawe 21.1.99
+; Achtung: Die NAM Einträge befinden sich in s7wbasi?.nam
+;
+; Anpassung für neue Erzeugnisstände DP/AS-i Link 20E und CP343-2
+; (CP34x-2 wurde von s7wbmore.met hierher verlegt.)
+; Traupe, März/April 2002
+;
+
+; D P/ A S - I n t e r f a c e L i n k  2 0  E  K a t a l o g ----------------------
+; D P/ A S - I n t e r f a c e L i n k  2 0  E  K a t a l o g ----------------------
+
+[_S7H_DPASI_LINK_20_2_PLUS_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1335428
+CatalogParent=1315144
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.2.0.0|0
+;--------------------------------
+
+
+
+; D P/ A S - I n t e r f a c e L i n k  2 0  E ------------------------------------
+; D P/ A S - I n t e r f a c e L i n k  2 0  E ------------------------------------
+
+; S7HWAPIX.MET ----------------------------- S7-DP-Slave - Basis 
+;[_S7H_DP_S7SLAVE300_AT]
+;server=S7HSL7AX.DLL
+;SubType=_S7H_DPASI_AT
+;relation=1315826,_S7H_MODULE300_AT[1315827];deep
+
+; S7HWAPIX.MET ----------------------------- S7SLAVE compact 
+[_S7H_DPASI_AT]
+;server=S7HSL7AX.DLL
+;abstract=true
+;prefix=OM
+;ObjType=1315144
+;SubType=_S7H_DPASI_156_0AA01_CT
+SubType=_S7H_DPASI_LINK_20_2_PLUS_CT
+
+; S7HWAPIX.MET ----------------------------- S7SLAVE DP/AS-Interface Link 20E
+[_S7H_DPASI_LINK_20_2_PLUS_CT]
+server=S7HSL7AX.DLL
+prefix=OM
+ObjType=1335372
+SLAVE_BMP_FILE=SI8098_N
+
+[_S7H_DPASI_LINK_20_2_PLUS_CT]
+IsInKatVisible=1
+nKatChilds=0
+
+; S7HATTRX.MET ----------------------------- S7SLAVE DP/AS-Interface Link 20E
+[_S7H_DPASI_LINK_20_2_PLUS_CT]
+CLASS_PROPERTIES=0
+IsCatEntry=1
+CatalogParent=1335428
+SHORTNAME=DP/AS-i Link 20E
+MLFB=6GK1 415-2AA01
+DP_STATION_TYPE=DP/AS-i Link 
+CountAutoCreatedChilds=2
+AutoCreatedChild1=1335374, 2, FIXED
+AutoCreatedChild2=1335373, 4, FIXED
+SUPP_BY_STEP7_VER=30
+S7_TYPE_CODE_VIRTUAL_PS=0xADC0
+S7_TYPE_CODE_VIRTUAL_IM=0x8FC0
+SLOT_NO_TYPE=" , , , , "
+HWCNFX_VER=5.0.3.0|0
+
+
+; D P/ A S - I n t e r f a c e L i n k  2 0  E ---------Erzeugnisstand 4-----------
+
+; ----------------------------- S7SLAVE DP/AS-Interface Link 20E
+[_S7H_DPASI_LINK_20_2_PLUS_FW2_C]
+server=S7HSL7AX.DLL
+prefix=OM
+ObjType=1335426
+CatalogParent=1335428
+basetype=_S7H_DPASI_LINK_20_2_PLUS_CT
+FW_VERSION=400
+CP_FW_VERSION=400
+
+CountAutoCreatedChilds=2
+AutoCreatedChild1=1335374, 2, FIXED
+AutoCreatedChild2=1335427, 4, FIXED
+HWCNFX_VER=5.2.0.0|0
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=2
+KatChild1=1335376
+KatChild2=1335377
+
+
+
+; A S I - V I R T U E L L E - G R U N D B A U G R U P P E -------------------------------
+; A S I - V I R T U E L L E - G R U N D B A U G R U P P E -------------------------------
+
+
+; S7HWAPIX.MET ----------------- Klassenobjekt Digital Input/Output S7-300
+[_S7H_CLASS_DIO_300_CT]
+;server=S7HK32CX.DLL
+;prefix=OM
+;ObjType=1314952
+;basetype=_S7H_MODULE300_AT
+;subtype=_S7H_6ES7_323_1BH00_0AA0_CT
+;subtype=_S7H_6ES7_323_1BL00_0AA0_CT
+;subtype=_S7H_CAS_DI16_DO16_CT
+;subtype=_S7H_GRUNDBAUGRUPPE_ET200L_CT
+;subtype=_S7H_GRUNDBAUGRUPPE_ASI_CT
+;subtype=_S7H_GRUNDBAUGRUPPE_ET200L_IMSC_CT
+subtype=_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT
+
+; S7HWAPIX.MET ----------------------------- Virtuelle Grundbaugruppe für DP/AS-Interface Link 20E
+[_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT]
+server=S7HK46AX.DLL
+prefix=OM
+ObjType=1335373
+
+; ----------------------------- Virtuelle Grundbaugruppe für DP/AS-Interface Link 20E
+[_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT]
+paramDescr=AA15601x.dsc
+
+; S7HATTRX.MET ----------------------------- Virtuelle Grundbaugruppe für DP/AS-Interface Link 20E
+[_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT] 
+CLASS_PROPERTIES=0
+S7_TYPE_CODE=0x2340
+nKatChilds=0
+MLFB=
+SHORTNAME=DP/AS-i 
+IO_TYPE=4 
+SIGNAL_TYPE=1 
+					 ;MM32
+MODULE_TYPE=2080
+IS_PARAMETRIZEABLE=1 
+CAPABLE_DIAG=0
+SDB_CAUSED_LIST=1|100 
+SC_DIGITAL_IN_DEFAULT_LEN=32
+SC_DIGITAL_OUT_DEFAULT_LEN=32
+SC_ANALOG_IN_DEFAULT_LEN=0
+SC_ANALOG_OUT_DEFAULT_LEN=0
+SC_MAX_NUM_OF_TERMBLOCKS=1
+IN_ADDRESS_RANGE=32
+OUT_ADDRESS_RANGE=32
+IO_ADDRESS_EQUAL=1
+SUPP_BY_STEP7_VER=30
+SLOT_NO_TYPE=ASCII
+HWCNFX_VER=5.0.3.0|0
+
+
+; A S I - V I R T U E L L E - G R U N D B A U G R U P P E ------Erzeugnisstand 4---------
+
+[_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_FW2_CT]
+server=S7HK46AX.DLL
+prefix=OM
+ObjType=1335427
+basetype=_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT
+
+HWCNFX_VER=5.2.0.0|0
+
+
+
+
+; A S I - E T / E R ---------------------------------------------------------------------
+; A S I - E T / E R ---------------------------------------------------------------------
+
+; ----------------------------- DP-Slave-Module - Basis 
+[_S7H_DP_ETER_AT]
+;server=S7HSL7AX.DLL	
+;HW_DB_V3=S7HK15AX
+;prefix=OM
+;ObjType=1314987
+;abstract=true
+;SubType=_S7H_6ES7_153_1AA00_0XB0_CT
+;SubType=_S7H_NORM_SLAVE_ETER_CT
+;SubType=_S7H_NORM_ISLAVE_ETER_CT
+SubType=_S7H_ETER_ASI_20_2_PLUS_CT
+
+; S7HWAPIX.MET ----------------------------- ET-ER für DP/AS-Interface Link 20E
+[_S7H_ETER_ASI_20_2_PLUS_CT]
+server=S7HSL7AX.DLL	
+HW_DB_V3=S7HK15AX
+prefix=OM
+ObjType=1335374
+
+; S7HATTRX.MET ----------------------------- ET-ER für DP/AS-Interface Link 20E
+[_S7H_ETER_ASI_20_2_PLUS_CT]
+CLASS_PROPERTIES=0
+nKatChilds=0
+SHORTNAME=ETER DP/AS-i
+MLFB=ETER DP-ASI LINK 20E
+S7_TYPE_CODE=0xBB40
+PNO_IDENT_NO=0x8098 
+LSPM_ASIC_TYPE=0 
+ASIC_TYPE_SLAVE=2
+SUPPORTED_BAUDRATES=0,1,2,3,4,6,7,8,9,11
+SUPPORTED_BAUDRATES_L2=0,1,2,3,4,6,7,8,9,11
+SYNC_ABLE=1 
+FREEZE_ABLE=1 
+MIN_SLAVE_INTERVAL=5 
+ER_DELAY=200 
+FAIL_SAVE_ABLE=0 
+LOCK_REQUEST=1 
+UNLOCKREQUEST=0 
+WD_BASE_1MS=1 
+MAX_DIAG_RESP_LEN=28 
+MAX_DIAG_DATA_LEN=28 
+MAX_INPUT_DATA_LEN=16 
+MAX_OUTPUT_DATA_LEN=16 
+DAL_ENABLE=0 
+PRAL_ENABLE=0
+RUN_ON_CONFIG_FAULT=0
+POSS_ACTIVE_BACK=0 
+KBUS_ENABLE=0
+KBUS_MOD_NUM=0
+IO_TYPE=0x0041 
+SIGNAL_TYPE=1 
+MODULE_TYPE=0x0080
+SUPP_BY_STEP7_VER=30
+HWCNFX_VER=5.0.3.0|0
+
+; A S I - K G P - S Y S T E M -----------------------------------------------------------
+; A S I - K G P - S Y S T E M -----------------------------------------------------------
+
+; S7HWAPIX.MET ----------------- KGP-System (abstrakte Basisklasse)
+;[_S7H_KGPSYSTEM_AT]
+;server=S7HSS30X.DLL	
+;HW_DB_V3=S7HDPSSX
+;prefix=OM
+;ObjType=1315234
+;abstract=true
+;basetype=_S7H_HWEXTAPI_AT
+;SubType=_S7H_KGPSYSTEM_CT
+;SubType=_S7H_KGPSYSTEM_ASI_CT
+;SYSTEM_TYPE=0x0c
+;relation=1315854,_S7H_TERM_BLOCK_AT[1315855];deep
+;relation=1315856,_S7H_HWMODULE_AT{1}[1315857]
+;SubType=_S7H_KGPSYSTEM_ASI_CT
+
+; S7HWAPIX.MET ----------------------------- DP/AS-I-Link KGP-System
+;[_S7H_KGPSYSTEM_ASI_CT]
+;server=S7HSS30X.DLL	
+;HW_DB_V3=S7HDPSSX
+;prefix=OM
+;ObjType=1315304
+;abstract=false
+
+;[_S7H_KGPSYSTEM_ASI_CT]
+;SUPP_BY_STEP7_VER=30
+
+; A S I - T E R M I N A L - B L O C K ---------------------------------------------------
+; A S I - T E R M I N A L - B L O C K ---------------------------------------------------
+
+; S7HWAPIX.MET ----------------------------- Terminalblock
+[_S7H_TERM_BLOCK_AT]
+;server=S7HSS30X.DLL
+;prefix=OM
+;ObjType=1315191
+;abstract=true
+;SubType=_S7H_CLASS_SC_TB_400_CT
+;SubType=_S7H_CLASS_SC_TB_IMSC_CT
+;relation=1315826,_S7H_SC400_AT[1315827];deep
+
+; S7HWAPIX.MET ----------------------------- SC Klassenobjekt Kanalgranulare Peripherie  Terminalblock S7-400
+[_S7H_CLASS_SC_TB_400_CT]      
+;server=S7HSS30X.DLL
+;prefix=OM
+;ObjType=1315190
+;subtype=_S7H_6ES7_120_0AH00_0AA0_CT
+;subtype=_S7H_6ES7_120_0BH00_0AA0_CT
+;subtype=_S7H_6ES7_120_0AH01_0AA0_CT
+;subtype=_S7H_6ES7_120_0BH01_0AA0_CT
+;subtype=_S7H_TERMBLOCK_ASI_CT
+subtype=_S7H_TERMBLOCK_ASI_20_2_PLUS_CT
+
+; S7HWAPIX.MET ----------------------------- Virtuelles Terminal für DP/AS-Interface Link 20E
+[_S7H_TERMBLOCK_ASI_20_2_PLUS_CT]   
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335375
+
+; S7HATTRX.MET ----------------------------- Virtuelles Terminal für DP/AS-Interface Link 20E
+;[_S7H_TERMBLOCK_ASI_20_2_PLUS_CT]      
+;CLASS_PROPERTIES=0x80000000
+;nKatChilds=4
+;KatChild1=1315192
+;KatChild2=1315193
+;KatChild3=1315194
+;KatChild4=1315195
+;MLFB=
+;SHORTNAME=TB
+;MAX_NUM_OF_CHILDS=64
+;SLOT_NO_TYPE=ASCII
+;SUPP_BY_STEP7_VER=30
+
+; S7HATTRX.MET ----------------------------- Virtuelles Terminal für DP/AS-Interface Link 20E
+[_S7H_TERMBLOCK_ASI_20_2_PLUS_CT]   
+CLASS_PROPERTIES=0
+nKatChilds=0
+MLFB= 
+SHORTNAME=DP/AS-i Link 20E
+FIRST_VISIBLE_CHILD_NO=1
+MAX_NUM_OF_CHILDS=62
+SLOT_NO_TYPE="0,1A,B,2A,B,3A,B,4A,B,5A,B,6A,B,7A,B,8A,B,9A,B,10A,B,11A,B,12A,B,13A,B,14A,B,15A,B,16A,B,17A,B,18A,B,19A,B,20A,B,21A,B,22A,B,23A,B,24A,B,25A,B,26A,B,27A,B,28A,B,29A,B,30A,B,31A,B,32A,B"
+SUPP_BY_STEP7_VER=30
+HWCNFX_VER=5.0.3.0|0
+
+; A S I - S L A V E ----------------------------------------------------------------------
+; A S I - S L A V E ----------------------------------------------------------------------
+
+; S7HWAPIX.MET ----------------------------------------------
+;[_S7H_HWMODULE_AT]
+;server=XXX.DLL
+;prefix=OM
+;ObjType=1314982
+;abstract=true
+;basetype=_S7H_HWEXTAPI_AT
+;subtype=_S7H_MODULE_AT
+;subtype=_S7H_SUBMODULE_AT
+;subtype=_S7H_SC400_AT
+;relation=1315835,_S7H_DPSUBSYSTEM_CT[1315834]
+;relation=1315837,_S7H_SEGMENT_AT[1315836]
+;relation=0x00000034,_AUT_CONN_LIST_AT{1}[0x00000035];deep
+;relation=0x0000003B,_AUT_CONNECTION_AT[0x0000003A]
+;relation=1315843,_S7H_NORM_ISLAVE_ETER_CT
+
+; S7HWAPIX.MET----------------------------- Abstrakter Typ für Kanalmodule
+[_S7H_SC400_AT]
+;server=S7HK12AX.DLL
+;prefix=OM
+;ObjType=1315240
+;abstract=true
+;subtype=_S7H_CLASS_SC_DI_400_CT
+;subtype=_S7H_CLASS_SC_DO_400_CT
+;subtype=_S7H_CLASS_SC_AI_400_CT
+;subtype=_S7H_CLASS_SC_AO_400_CT
+;subtype=_S7H_CLASS_SC_DPASI_LINK_CT
+;subtype=_S7H_CLASS_SC_DIO_400_AT
+;subtype=_S7H_CLASS_SC_AIO_400_AT
+subtype=_S7H_CLASS_SC_DPASI_SLV_STANDARD_CT
+subtype=_S7H_CLASS_SC_DPASI_SLV_AB_CT
+subtype=_S7H_CLASS_SC_DPASI_SLV_CT
+
+; S7HWAPIX.MET ----------------------------- DP AS-I-Link Standard AS-i Slave
+[_S7H_CLASS_SC_DPASI_SLV_STANDARD_CT]      
+server=S7HK12AX.DLL
+prefix=OM
+ObjType=1335376
+CLASS_PROPERTIES=0
+IsCatEntry=1
+CatalogParent=1335372
+ICON_TYPE=3
+nKatChilds=0
+MLFB=DPASI Standard
+SHORTNAME=AS-i Standard Slave
+HWCNFX_VER=5.0.3.0|0
+
+; S7HWAPIX.MET ----------------------------- DP AS-I-Link A/B AS-i Slave
+[_S7H_CLASS_SC_DPASI_SLV_AB_CT]      
+server=S7HK12AX.DLL
+prefix=OM
+ObjType=1335377
+CLASS_PROPERTIES=0
+IsCatEntry=1
+CatalogParent=1335372
+ICON_TYPE=3
+nKatChilds=0
+MLFB=DPASI A/B
+SHORTNAME=AS-i A/B Slave
+HWCNFX_VER=5.0.3.0|0
+
+
+
+; -------------- C P 3 4 x - 2 E i n t r ä g e ----------------------
+; -------------- C P 3 4 x - 2 E i n t r ä g e ----------------------
+
+;------------------------------ CP AS-i
+[_S7H_6GK7_342_2AH01_0XA0_CT]
+server=S7HK33BX.DLL
+prefix=OM
+ObjType=1336000
+basetype=_S7H_6GK7_342_2AH00_0XA0_CT
+CatalogParent=1316131
+IsCatEntry=1
+nKatChilds=0
+MLFB=6GK7 342-2AH01-0XA0
+HWCNFX_VER=5.0.0.0|0
+
+
+;------------------------------ CP AS-i 343-2AH00-0XA0
+[_S7H_6GK7_343_2AH00_0XA0_CT]
+server=S7HK33BX.DLL
+prefix=OM
+ObjType=1336001
+basetype=_S7H_6GK7_342_2AH01_0XA0_CT
+CatalogParent=1316131
+IsCatEntry=1
+nKatChilds=0
+MLFB=6GK7 343-2AH00-0XA0
+HWCNFX_VER=5.1.1.0|0
+
+
+;------------------------------ CP AS-i, 343-2AH10-0XA0
+[_S7H_6GK7_343_2AH00_0XA0_FW2_CT]
+server=S7HK33BX.DLL
+prefix=OM
+ObjType=1335449
+basetype=_S7H_6GK7_343_2AH00_0XA0_CT
+CatalogParent=1316131
+IsCatEntry=1
+nKatChilds=0
+
+; CP in AS300, parametrierbar
+S7_TYPE_CODE=0x3CC3
+MLFB=6GK7 343-2AH10-0XA0
+SHORTNAME=CP 343-2 P
+IS_PARAMETRIZEABLE=1
+PARAMDESCR=cp343_2x.dsc
+
+HWCNFX_VER=5.2.0.0|0

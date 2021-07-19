@@ -1,0 +1,255 @@
+@DB_TYP ISO_SDB V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#
+#------------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den ISO SDB
+#
+# Historie:
+# 13.11.97 GS: Ersterstellung
+# 06.07.98 GS: SDB Gesamtlänge aus dem SDB entfernt
+# 
+#
+#------------------------------------------------------------------------
+#
+
+SDB_Buffer
+{
+	#--------------------------------------------------------------------
+	# ISO SDB 
+	#--------------------------------------------------------------------
+
+	# die Gesamtlänge ( für den LongBinary Buffer )
+	ISO_SDB$LNG									DM||||
+
+	ISO_SDB$NAM									_M||||
+	ISO_SDB
+	{
+
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+
+			# Typ der Baugruppe
+			Baugruppentyp							SM||||
+
+			# SDB Inhalt :
+			SDB_Inhalt								WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+
+			Reserved								BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP								BM|0|||		
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID								BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1								BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2								BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR								BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR								BM|0|||		
+		}
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+
+		SDB_ParameterArea$NAM						_M||||
+		SDB_ParameterArea
+		{
+
+			#------------------------------------------------------------
+			# ISO Management Block
+			#------------------------------------------------------------
+
+			# -- Parameterblock Header
+			PblkId									BC|3|||			
+			Version									BC|0|||
+			ISO_ManagementblockLen					WC|6|||
+			# -- 
+
+			# Anzahl der folgenden ISO Verbindungen
+			ISO_ConnDescription$CNT					WM||||
+
+			# -- Ende ISO_Managementblock
+		
+			#------------------------------------------------------------
+			# ISO Verbindungsbeschreibung
+			#------------------------------------------------------------
+
+			ISO_ConnDescription$NAM					_A||||
+			ISO_ConnDescription
+			{
+
+				#--------------------------------------------------------
+				# allgemeiner Teil einer ISO Verbindungsbeschreibung
+				#--------------------------------------------------------
+
+				ISO_ConnDescrGeneral$NAM			_M||||
+				ISO_ConnDescrGeneral
+				{
+					# -- Parameterblock Header
+					PblkId							BC|1|||			
+					Version							BC|0|||
+					ISO_ConnDescrGeneral$LNG		WM||||
+					# -- 
+
+					# Identifier der Verbindung
+					CID								WM||||
+
+					# Verbindungsaufbautyp	
+					Typ								BM||||
+
+					# Priorität
+					Prio							BM||||
+
+					# Verbindungsaufbau Wiederholungscounter
+					ConReqCtr						WM||||
+	
+					# Verbindungsaufbau Timeout
+					ConReqTime						WM||||
+
+					# Daten Wiederholungscounter	
+					DataReqCtr						WM||||
+
+					# Daten Timeout
+					DataReqTime						WM||||
+
+					# Verbindungsüberwachungstimeout
+					SupervisionTime					WM||||
+			
+					# ??
+					value							WM||||
+
+					# Länge des Verbindungsnamens
+					VerbName$LNG					BM||||
+
+					# Der Verbindungsname
+					VerbName						AM||0|25|
+				}
+
+				#--------------------------------------------------------
+				# TA Buffer spezifischer Teil der Verbindungsbeschreibung
+				#--------------------------------------------------------
+
+				ISO_ConnDescrTa$NAM					_M||||
+				ISO_ConnDescrTa
+				{
+					# -- Parameterblock Header
+					PblkId							BC|2|||			
+					Version							BC|0|||
+					ISO_ConnDescrTa$LNG				WM||||
+					# -- 
+					
+					# TA Buffer Typ immer 0
+			  		TaTyp							BC|0|||
+
+					# Länge lokaler TSAP
+					LocTsap$LNG						BM||||
+	
+					# lokaler TSAP
+					LocTsap							HO||0|32|
+				
+					# Länge der remoten Netzadresse
+					RemNetAddr$LNG					BM||||
+				
+					# remote Netzadresse
+					RemNetAddr						HO||0|6|
+
+					# Länge remoter TSAP
+					RemTsap$LNG						BM||||
+
+					# remoter TSAP
+					RemTsap							HO||0|33|
+
+					RESV_ALL_BLK1$NAM				_A||||
+					RESV_ALL_BLK1
+					{
+						RESV_ALL_DATA1				BM||||
+					}
+
+
+				} # Ende ISO_ConnDescrTa
+				
+				PBL_OPC_SR_ALL$NAM					_O||||
+				PBL_OPC_SR_ALL
+				{
+					PBL_OPC_SR_ALL_ID				BC|0x20|||
+					PBL_OPC_SR_ALL_VERSION			BC|0|||
+					PBL_OPC_SR_ALL$LNG				WM||||
+					
+					CONN_ABORT_TIMEOUT				WM||||
+					CONN_NEGOT_OPTIONS				WM||||
+					INITIATE						WM||||
+					ABORT_CONNECTION_AFTER			WM||||
+					TIMEOUT							DM||||
+					TIMEOUT_CONNECT					DM||||
+					LEN_SEND						WM||||
+					FETCH_S7_ADDRESS_MODE			WM||||
+					SR_OPTIMIZE						WM||||
+					MAX_SEND_CREDITS				WM||||
+					FAST_CONSTATE_RETURN_ENABLE		WO||||
+				}
+
+				RESV_ALL_BLK0$NAM	_A||||
+				RESV_ALL_BLK0
+				{
+					RESV_ALL_ID0		BM||3|0xFD|
+					RESV_ALL_RESV0		BM||||
+					RESV_ALL_BLK0$LNG	WM||||
+					RESV_ALL_DATA0		BA||||
+				}
+			} # Ende ISO_ConnDescription
+
+			RESV_ALL_BLK0$NAM	_A||||
+			RESV_ALL_BLK0
+			{
+				RESV_ALL_ID0		BM||3|0xFD|
+				RESV_ALL_RESV0		BM||||
+				RESV_ALL_BLK0$LNG	WM||||
+				RESV_ALL_DATA0		BA||||
+			}
+
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+
+			SdbRucksack$NAM							_O||||
+			SdbRucksack
+			{
+			
+				# -- Parameterblock SDB Rucksack
+				PblkId								BC|0xFE||| 
+				Version								BC|0x00|||
+				SdbRucksack$LNG						WM||0x0000|0xffff|1
+				# -- 
+
+				Alignment							BC|0|||
+
+			} # Ende SDB Rucksack
+
+		} # Ende ISO_ParameterArea
+
+	} # Ende ISO_SDB
+
+} # Ende SDB_Buffer
+
+

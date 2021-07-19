@@ -1,0 +1,530 @@
+;------------------------------ SIMATIC 300 -> Netzübergang Katalog
+[_S7H_CP300_LINK_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_NCM_AT
+prefix=OM
+ObjType=1335414
+CatalogParent=1314969
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.1.2.0|0
+;--------------------------------
+
+;------------------------------ IE/PB Link Katalog
+[_S7H_IE_PB_LINK_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=1335425
+CatalogParent=1335414
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.1.4.0|0
+;--------------------------------
+
+;------------------------------ IE/PB Link PN Katalog
+[_S7H_IE_PB_LINK_PN_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=1335482
+CatalogParent=1335414
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.3.1.0|0
+;--------------------------------
+
+;------------------------------ IE/PB Link Katalog 5AA00
+[_S7H_IE_PB_LINK_5AA00_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=1335432
+CatalogParent=1335425
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.3.0.0|0
+;--------------------------------
+
+;------------------------------ IE/PB Link Katalog 5AA20
+;[_S7H_IE_PB_LINK_5AA20_KAT_AT]
+;ABSTRACT=true
+;basetype=_S7H_CP300_LINK_KAT_AT
+;prefix=OM
+;ObjType=1335473
+;CatalogParent=1335425
+;IsCatEntry=1
+;IsInKatVisible=1
+;nKatChilds=0
+;HWCNFX_VER=5.3.0.0|0
+;--------------------------------
+
+;------------------------------ IE/PB Link Katalog 5AB00
+[_S7H_IE_PB_LINK_5AB00_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_CP300_LINK_KAT_AT
+prefix=OM
+ObjType=1335476
+CatalogParent=1335482
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.3.1.0|0
+;--------------------------------
+
+;------------------------------ IWLAN/PB Link Katalog
+;[_S7H_IWLAN_PB_LINK_PN_KAT_AT]
+;ABSTRACT=true
+;basetype=_S7H_CP300_LINK_KAT_AT
+;prefix=OM
+;ObjType=1335503
+;CatalogParent=1335414
+;IsCatEntry=1
+;IsInKatVisible=1
+;nKatChilds=0
+;HWCNFX_VER=5.3.2.0|0
+;--------------------------------
+
+;------------------------------ IWLAN/PB Link Katalog 5AB00
+;[_S7H_IWLAN_PB_LINK_5AB00_KAT_AT]
+;ABSTRACT=true
+;basetype=_S7H_CP300_LINK_KAT_AT
+;prefix=OM
+;ObjType=1335504
+;CatalogParent=1335503
+;IsCatEntry=1
+;IsInKatVisible=1
+;nKatChilds=0
+;HWCNFX_VER=5.3.2.0|0
+;--------------------------------
+
+; ----------------------------- S7-300 Rack für IE/PB Link
+[_S7H_6ES7_RACK_IE_PB_LINK_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335408
+basetype=_S7H_RACK300_CT
+CLASS_PROPERTIES=0
+CatalogParent=1335432
+IsCatEntry=1
+nKatChilds=0
+MLFB=6GK1 411-5AA00
+ICON_TYPE=3
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1335406, 2, FIXED
+MAX_NUM_OF_CHILDS=2
+FIRST_VISIBLE_CHILD_NO=1
+SHORTNAME=Link Profilschiene
+PLUG_CLASS=0x02000001
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- S7-300 Rack für IE/PB Link V1.3
+[_S7H_6ES7_RACK_IE_PB_LINK_FW2_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335423
+FW_VERSION=V1.3
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=1335422, 2, FIXED
+HWCNFX_VER=5.1.4.0|0
+
+; ----------------------------- S7-300 Rack für IE/PB Link V2.0
+[_S7H_6ES7_RACK_IE_PB_LINK_V20_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335431
+MLFB=6GK1 411-5AA20
+FW_VERSION=V2.0
+CatalogParent=1335473
+IsCatEntry=0
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=1335429, 2, FIXED
+HWCNFX_VER=5.3.0.0|0
+
+; ----------------------------- S7-300 Rack für IE/PB Link Basic V1.0
+[_S7H_6ES7_RACK_IE_PB_LINK_5AB00_V10_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335434
+MLFB=6GK1 411-5AB00
+FW_VERSION=V1.0
+CatalogParent=1335476
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=1335460, 2, FIXED
+HWCNFX_VER=5.3.1.0|0
+
+; ----------------------------- S7-300 Rack für IE/PB Link Basic V2.0
+[_S7H_6ES7_RACK_IE_PB_LINK_5AB00_V20_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335502
+MLFB=6GK1 411-5AB00
+FW_VERSION=V2.0
+CatalogParent=1335476
+IsCatEntry=0
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=1335500, 2, FIXED
+HWCNFX_VER=5.3.2.0|0
+
+; ----------------------------- S7-300 Rack für IWLAN/PB Link Basic V1.0
+[_S7H_6ES7_RACK_IWLAN_PB_LINK_5AB00_V10_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1335505
+MLFB=6GK1 417-5AB00
+FW_VERSION=V1.0
+CatalogParent=1335504
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=1335506, 2, FIXED
+HWCNFX_VER=5.3.2.0|0
+
+; ----------------------------- Basisklasse für CBA Link Baugruppen
+[_S7H_CBA_LINK_AT]
+ABSTRACT=true
+basetype=_S7H_CPU_AT
+ObjType=1335415
+prefix=OM
+IsCatEntry=0
+nKatChilds=0
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- IE/PB Link
+[_S7H_CBA_IE_PB_LINK_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335406
+basetype=_S7H_CBA_LINK_AT
+basetype=_S7H_MODULE300_AT
+basetype=_AUT_CP_BOARD_AT
+IsCatEntry=0
+nKatChilds=0
+ICON_TYPE=3
+CountAutoCreatedChilds=2
+AutoCreatedChild1=1335407, 1, FIXED
+AutoCreatedChild2=1335409, 2, FIXED
+FIRST_VISIBLE_CHILD_NO=1
+MAX_NUM_OF_CHILDS=2
+SLOT_NO_TYPE="X1,X2"
+SHORTNAME=IE/PB Link
+AUTOCREATE_OBJECTS=_S7O_PROGF_OFFLINE_CT
+
+MLFB=
+FW_VERSION=V1.2
+ALTERNATIVE_MLFB=6GK1 411-5AA00
+ADDRESS_MODE=2
+CASING_FORMAT=1
+CLASS_PROPERTIES=0
+COMMUNICATION_TYPES=
+CAPABLE_AGAG=0
+CAPABLE_ALARM=0
+CAPABLE_TPA=0
+GLOBAL_DATA_CAPABLE=0
+IN_ADDRESS_RANGE=0
+					;IOTypErsatz
+IO_TYPE=16
+IS_PARAMETRIZEABLE=0
+MAX_CONN_CNT=0
+MAX_CONN_CNT_PGOP=0
+MAX_COUNT_ER=0
+MAX_COUNT_RACKS=1
+MAX_SLAVES=125
+MOD_4_ADDR=0
+MODULE_TYPE=16
+;folgende Zeile reinnehmen, wenn HW-diagnostizieren beim Link geht
+;ONLINE_FUNCTIONS=0x00005A07
+ONLINE_FUNCTIONS=0x00001A07
+PARAMDESCR=
+PARTILINE_ADDRESS_CONFIGURABLE=0
+PARTYLINE_BUS=0
+PLUG_CLASS=
+PNO_IDENT_NO=0x80C1
+REDUNDANZ=0
+REGISTER_ADR_IMPORT_VERB=0
+ROUTING_CAPABILITY=11
+PROGRAM_CAPABILITY=0
+CBA_CAPABILITY=0x4
+SIGNAL_TYPE=0
+					; O_SYSTEM300
+SYSTEM_TYPE=0x4
+WIDTH=1
+ZS_ENABLE=0
+LOC_DEV_ID_SCHEMA=MECHANISCH_1_1
+
+;--- necessary for DP-master: address space etc. ---
+MAX_INPUT_DATA_LEN=32767
+MAX_OUTPUT_DATA_LEN=32767
+MAX_INPUT_P_DATA_LEN=32767
+MAX_OUTPUT_P_DATA_LEN=32767
+MAX_INPUT_LOG_ADR=32766
+MAX_OUTPUT_LOG_ADR=32766
+MAX_SLAVE_SLOTS=32767
+MAX_KONSIST_DATA_LEN=128
+T_BSC_CALC_K503=1
+CPU_CONSIST_RANGE=244
+; -----------------------------
+
+SDB_CARRIER=1
+SDB_CAUSED_LIST=1|3100|3002|3300
+SDB_CARRIER_LIST=1|3|20,3|2000,4|3100|3002|3113
+RAM_TO_ROM_COPY=1
+
+S7_TYPE_CODE=0x9600
+
+;--- Link spezifische Attribute-----------------
+DO_DS_ROUTING_SELECTION=1
+DS_ROUTING_ACTIV=1
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=1
+ETHERNET_MEDIUM_DUPLEX_MODE=8
+SDB3100=SDB3100_H1LNK_CONVERT
+
+; für Uhrzeitsynchronisation
+CAN_DO_CLOCK=yes
+CAN_DO_CLOCK_DIR=1
+HWCNFX_VER=5.1.2.0|0
+
+
+; ----------------------------- IE/PB Link V1.3
+[_S7H_CBA_IE_PB_LINK_FW2_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335422
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335407, 1, FIXED
+AutoCreatedChild2=1335424, 2, FIXED
+FW_VERSION=V1.3
+
+CPU_CONSIST_RANGE=128
+
+HWCNFX_VER=5.1.4.0|0
+
+; ----------------------------- IE/PB Link V2.0
+[_S7H_CBA_IE_PB_LINK_V20_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335429
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335474, 1, FIXED
+AutoCreatedChild2=1335424, 2, FIXED
+ALTERNATIVE_MLFB=6GK1 411-5AA20
+FW_VERSION=V2.0
+
+CPU_CONSIST_RANGE=128
+GENERATE_SDB_3118_ALWAYS=1
+SDB_CAUSED_LIST=1|3100|3002|3118|3300|3302
+SDB_CARRIER_LIST=1|3|20,3|2000,4|3100|3002|3113|3118
+
+CAN_DO_CBA_USAGE=1
+CBA_CAPABILITY=12
+CBA_RTVERSION=2.1.0.0
+CBA_SDB_VERSION=2
+CBA_PERFCHARS=33|33|2048|1000|0|35|452|20000|6000|6000|500|4000|500|6000|10|125|125|2240|2240|70|70|70|6400|100|75|75|600|600|20|40|40
+
+HWCNFX_VER=5.3.0.0|0
+
+; ----------------------------- IE/PB Link PNIO V1.0
+[_S7H_CBA_IE_PB_LINK_5AB00_V10_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335460
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335474, 1, FIXED
+AutoCreatedChild2=1335430, 2, FIXED
+ALTERNATIVE_MLFB=6GK1 411-5AB00
+FW_VERSION=V1.0
+
+CPU_CONSIST_RANGE=128
+GENERATE_SDB_3118_ALWAYS=1
+CREATE_ISO_TCP_PBL=1
+SDB_CAUSED_LIST=1|3100|3002|3118|3300|3302
+SDB_CARRIER_LIST=1|3|20,3|2000,4|3100|3002|3113|3118
+
+ZS_ENABLE=1
+CAN_DO_CBA_USAGE=1
+CBA_CAPABILITY=12
+CBA_RTVERSION=2.0.0.0
+CBA_SDB_VERSION=2
+CBA_PERFCHARS=33|65|2048|1000|0|35|452|20000|6000|6000|500|4000|500|6000|10|125|125|2240|2240|70|70|70|6400|100|75|75|600|600|20|40|40
+MAX_SLAVES=64
+PNIO_LINK=1
+
+HWCNFX_VER=5.3.1.0|0
+
+; ----------------------------- IE/PB Link PNIO V2.0
+[_S7H_CBA_IE_PB_LINK_5AB00_V20_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335500
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335474, 1, FIXED
+AutoCreatedChild2=1335501, 2, FIXED
+FW_VERSION=V2.0
+
+HWCNFX_VER=5.3.2.0|0
+
+; ----------------------------- IWLAN/PB Link PNIO V1.0
+[_S7H_CBA_IWLAN_PB_LINK_5AB00_V10_CT]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=1335506
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335510, 1, FIXED
+AutoCreatedChild2=1335501, 2, FIXED
+FW_VERSION=V1.0
+ALTERNATIVE_MLFB=6GK1 417-5AB00
+MAX_SLAVES=4
+DO_DS_ROUTING_SELECTION=1
+DS_ROUTING_ACTIV=0
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=0
+CAN_DO_CLOCK=no
+
+HWCNFX_VER=5.3.2.0|0
+
+
+; ----------------------------- TCP/IP-Submodul für Link
+[_S7H_IE_PB_LINK_TCPIP_SUBMODUL_CT]
+server=S7WBTCPX.DLL
+prefix=OM
+ObjType=1335407
+basetype=_S7H_CAS_VIRTCP_CT
+basetype=_S7H_SUBMODULE_AT
+CLASS_PROPERTIES=0
+CASING_FORMAT=1
+IsCatEntry=0
+MLFB=
+ALTERNATIVE_MLFB=
+ICON_TYPE=0
+SHORTNAME=Ind. Ethernet
+REGISTER_ADR_IMPORT_VERB=0
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=1
+; no ISO-protocol possible with submodul, IP only
+NET_PROTOCOLS_SELECT=IP
+; filter for searching the net for first set of ip-address
+FILTER_NET_SEARCH="IE/PB Link"
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- TCP-Subsystem on IE/PB-Link is identical to baseclass, except the AUI-Port is not present
+[_S7H_IE_PB_LINK_TCPIP_SUBMODUL_V20_CT]
+server=S7WBTCPX.DLL
+prefix=OM
+ObjType=1335474
+basetype=_S7H_IE_PB_LINK_TCPIP_SUBMODUL_CT
+IsCatEntry=0
+SHORTNAME=Ind. Ethernet
+AUI_SS=0
+HWCNFX_VER=5.3.0.0|0
+
+; ----------------------------- TCP-Subsystem on IWLAN/PB-Link
+[_S7H_WLAN_PB_LINK_WLAN_SUBMODUL_V20_CT]
+server=S7WBTCPX.DLL
+prefix=OM
+ObjType=1335510
+basetype=_S7H_IE_PB_LINK_TCPIP_SUBMODUL_V20_CT
+IsCatEntry=0
+SHORTNAME=IWLAN Anschluss
+CAN_DO_ETHERNET_MEDIUM_DUPLEX=0
+HWCNFX_VER=5.3.2.0|0
+
+; ----------------------------- Basisklasse für Link DP-Master Submodule
+[_S7H_CBA_LINK_DPMASTER_SUBMODUL_AT]
+ABSTRACT=true
+basetype=_S7H_DP_ETCR_INTEGR_ISLAVE_318_99_10_CT
+ObjType=1335416
+prefix=OM
+IsCatEntry=0
+nKatChilds=0
+MLFB=
+SHORTNAME=PROFIBUS/DP
+REDUNDANZ=0
+ETCR_S7_ISLAVE_ABLE=0
+REGISTER_ADR_IMPORT_VERB=0
+ASIC_TYPE_MASTER=5
+PUB_SUB_FUNCTION=0
+
+SDB_CAUSED_LIST=3|20,3|2000,4|3113
+; settings for correct type in SDB
+S7_TYPE_CODE=0x9600
+PNO_IDENT_NO=0x80C1
+
+; address space dp-master
+MAX_INPUT_DATA_LEN=32767
+MAX_OUTPUT_DATA_LEN=32767
+MAX_INPUT_P_DATA_LEN=32767
+MAX_OUTPUT_P_DATA_LEN=32767
+MAX_INPUT_LOG_ADR=32766
+MAX_OUTPUT_LOG_ADR=32766
+MAX_SLAVE_SLOTS=32767
+MAX_KONSIST_DATA_LEN=128
+T_BSC_CALC_K503=1
+; no s7-slaves supported
+S7SLAVE_ABLE=0
+; new slotmodell (DPV1)
+SLOT_VERSION_SUPPORT=2
+; only DPV0 slaves supported
+DP_VERSION_SUPPORT=4
+
+; AP00223225 
+WD_CORR_FACTOR_AEQU=2
+
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- DP-Master-Submodul für Link
+[_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+basetype=_S7H_CBA_LINK_DPMASTER_SUBMODUL_AT
+ObjType=1335409
+CLASS_PROPERTIES=0
+IsCatEntry=0
+nKatChilds=0
+MLFB=
+SHORTNAME=PROFIBUS/DP
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- DP-Master-Submodul für Link V1.3
+[_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_FW2_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+basetype=_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_CT
+ObjType=1335424
+CAPABLE_BUSPAR_PROPAGATION=1
+MODE_NO_DP_ABLE=1
+
+HWCNFX_VER=5.1.4.0|0
+
+; ----------------------------- DP-Master-Submodul für Link BASIC
+[_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_FW3_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+basetype=_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_FW2_CT
+ObjType=1335430
+CAPABLE_BUSPAR_PROPAGATION=1
+MODE_NO_DP_ABLE=1
+S7SLAVE_ABLE=0
+; only DPV0 slaves supported
+DP_VERSION_SUPPORT=4
+RUN_ON_CONFIG_FAULT=1
+MPI_DP_KOEXISTENZ=1
+SUPPORTED_BAUDRATES_MPI=1,3,6,7,8,9
+MAX_INPUT_DATA_LEN=2048
+MAX_OUTPUT_DATA_LEN=2048
+MAX_SLAVES=64
+CAN_GENERATE_DDB_REQUEST=0
+
+HWCNFX_VER=5.3.1.0|0
+
+; ----------------------------- DP-Master-Submodul für Link BASIC V2.0
+[_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_V20_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+basetype=_S7H_IE_PB_LINK_DPMASTER_SUBMODUL_FW3_CT
+ObjType=1335501
+S7SLAVE_ABLE=1
+; only DPV0 slaves supported
+DP_VERSION_SUPPORT=7
+CAN_GENERATE_DDB_REQUEST=1
+
+HWCNFX_VER=5.3.2.0|0

@@ -1,0 +1,6 @@
+[SIWAREX_CS]
+[PARAMETERS]
+
+001;001;001.0;001;000;0001;  ;000;Diagnostics
+002;001;001.1;001;000;0001;  ;000;Hardware_Interrupt
+

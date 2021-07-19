@@ -1,0 +1,22 @@
+[2363560]
+KatEntryName=V2.3
+InfoText=128 KB work memory; 0.1 ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier configuration up to 32 modules; constant DP bus cycle time; routing; firmware V2.3;also available as SIPLUS module with order number 6AG1 317-6FF00-2AB0
+SHORTNAME=CPU 315-2 PN/DP
+Comment=128 KB work memory; 0.1 ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier configuration up to 32 modules; constant DP bus cycle time; routing; firmware V2.3;also available as SIPLUS module with order number 6AG1 317-6FF00-2AB0
+
+[2363561]
+SHORTNAME=MPI/DP
+
+[2363562]
+InfoText=PROFINET IO-Controller of CPU 315-2 PN/DP
+SHORTNAME=PN-IO
+
+[2363563]
+KatEntryName=CPU 315-2 PN/DP
+InfoText=Central modules of type CPU 315-2 PN/DP
+
+[2363564]
+KatEntryName=6ES7 315-2EG10-0AB0
+SHORTNAME=CPU 315-2 PN/DP
+InfoText=
+

@@ -1,0 +1,227 @@
+;------------------------------ Ports for IRT switches
+[_S7H_IRT_PORT_SUBMODULE_CP_CT]
+server=S7HDEVNX.DLL
+prefix=OM
+ObjType=2367428
+basetype=_S7H_IRT_PORT_SUBMODULE_CT
+; Sendedelay bei ERTEC400 Stempel vor MAC in ns
+IRT_PORT_TX_DELAY=1192
+; Empfangsdelay
+IRT_PORT_RX_DELAY=363
+
+;------------------------------ IO-Controller for IRT switches
+[_S7H_IO_CONTROLLER_SWITCH_CP_CT]
+server=S7HSSIOX.DLL
+prefix=OM
+ObjType=2367420
+basetype=_S7H_IO_CONTROLLER_SWITCH_CT
+
+; neue Ports mit geänderten Delay-Zeiten
+AutoCreatedPort0=2367428
+AutoCreatedPort1=2367428
+AutoCreatedPort2=2367428
+AutoCreatedPort3=2367428
+
+S7_TYPE_CODE=0xAC05
+PN_DEVICE_ID=0x0003
+PN_VENDOR_ID=0x002A
+CAN_DO_PN_IO_DEVICE=1
+; Is API supported or not
+CAPABLE_DEV_V102=1
+; Multiple Write noch nicht supported
+;CAPABLE_MULTIPLEWRITE=1
+PLUG_CLASS=0x10000100
+
+; wird beim Einkopieren geprüft, bisher 0xC und damit fälschlicherweise CP 300 Station
+; AP00297060
+SYSTEM_TYPE=0x10
+
+
+; Max RT/IRTadr-Devices
+PN_MAX_RT_DEVICES_TEST=256
+; Max IRTtop-Devices
+PN_MAX_IRT_DEVICES_TEST=64
+; Max MC-Provider
+PN_MAX_PROVIDERS_TEST=1
+; Max MC-Consumer
+PN_MAX_CONSUMERS_TEST=64
+; Max. Devices from Formel "Max. Devices - RT/IRTaddr-Devices  -  IRTtop-Devices - MC-Provider - MC-Consumer > 0"
+PN_DEVICES_CAPACITY_TEST=385
+; Anzahl von Komunikationsframes 
+PN_FRAME_RESSOURCE_CAPACITY_TEST=705
+; RQ 253965
+PN_MAX_DEVICES=256
+PN_MAX_STATION_NO=256
+; RQ 250844 wieder rückgängig
+PN_SUPP_REDUCTIONS=1,2,4,8,16,32,64,128,256,512
+;PN_SUPP_REDUCTIONS=1,2,3,4,5,6,7,8,9,10,12,14,16,32,64,128,256,512
+; PN-Parameter vom CP in den Controller verschoben
+PN_CAPABILITY_SEND=1536
+PN_CAPABILITY_RECEIVE=1536
+PN_BANDWIDTH=32768
+PN_MIN_DEVICE_INT=1
+PN_MAX_FRAMES_PER_CYCLE=256
+
+; Supported Send Clocks 8,16 werden noch nicht unterstützt
+; SendClocks 256 bis 4096 werden nicht unterstützt
+IRT_SUPP_SENDCLOCKS=32|40|48|56|64|72|80|88|96|104|112|120|128
+; Unterstützt nur Untersetzung 1
+IRT_SUPP_REDUCTION_RATIOS=1
+
+;DeviceID für Schattendevices wieder von unten vergeben
+PN_MC_DEVICEID_ASSIGNMENT_OLD=1
+
+; E/A Datenlänge der Submodule gem. PEG 16xx v. 13.1.2006
+PN_MAX_DEVICE_SUBMODULE_DATA_LENGTH=1438
+
+; AP00274998: PDEV-Block nur falls unterstützt
+PDEV_100_SUPPORTED=1
+
+;AP00251192: keine Beschränkung für IRT auf 50% Bandbreite
+IRT_NRT_MIN=0
+
+; Watchdog für IOCR cancelled
+;PN_WDF_MIN=3
+;PN_WDF_MAX=256
+
+
+; 1: RT
+; 3: RT, IRTflex 
+; 5: RT, IRTtop
+; 7: RT, IRTflex, IRTtop
+; CONTROLLER_RT_CLASS=7
+
+CHECK_IS_SAME_OBJECT=1
+ALLOW_DISABLE_DEVICE_IPADRESS=1
+IS_NCM_PNCONTROLLERSWITCH=1
+
+; --------
+; DK-1616 PN IO V2.0
+; --------
+[_S7H_PC_CP_1616_RT_DK_V63_FW11_CT]
+server=S7WBPCHX.DLL
+HW_DB_V3=S7WBPCHX
+prefix=OM
+ObjType=2367412
+basetype=_S7H_PC_CP_1616_RT_DK_V63_CT
+
+CatalogParent=2367393
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V2.0
+REQUIRED_DEVICE_SWVERSION=V1.0
+CPU_CONSIST_RANGE=512
+
+; fuer Export wenn Controller und Device gleichen TOGI haben
+TOGI_EXPORT_PREFIX=IRT-Controller
+
+; keine IE-Schnittstelle, da jetzt auf Controller Modul
+COMMUNICATION_TYPES=
+DO_LINK_NET_CREA=0
+
+; keine Port-Optionen
+ITP_PORT_CNT=0
+
+; Gesetzt für CP300 und CP1616IRT
+DYNAMIC_PROPERTIES=1
+
+; CPU 400 Adressbereich
+ADDRESS_RANGE_CODE=0
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3118|3119|3129|3002
+SDB3129_CARRIER=1
+SDB3_CARRIER=1
+SDB2006_CARRIER=1
+SDB2008_CARRIER=1
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=2367420, 1, FIXED
+
+CAN_DO_PN_IO=0
+CAN_DO_IRT=1
+CAN_DO_QVK=1
+
+; Topologiedarstellung der Ports
+SLOT_NO_TYPE="X1,X1 P1,X1 P2,X1 P3,X1 P4"
+
+; neues Rulefile für IRT
+SDB3100=SDB3100_H1PCIRT_CONVERT
+
+; Attribute, die normalerweise bei der CPU liegen
+; max Lock am K-RAM
+MAX_STATION_SIZE_A_KONSIST=250
+; max Frame-Size
+MAX_STATION_SIZE_E=1440
+MAX_STATION_SIZE_A=1440
+; geprüft und ok
+MAX_OUTPUT_LOG_ADR=32768
+MAX_INPUT_LOG_ADR=32768
+; durch ERTEC400-KRAM begrenzt
+MAX_OUTPUT_DATA_LEN=8192 
+MAX_INPUT_DATA_LEN=8192 
+MAX_INPUT_P_DATA_LEN=8192 
+MAX_OUTPUT_P_DATA_LEN=8192
+; analog MAX_STATION_SIZE_A_KONSIST
+MAX_KONSIST_DATA_LEN=250
+
+; PN-Parameter vom CP in den Controller verschoben
+PN_CAPABILITY_SEND=
+PN_CAPABILITY_RECEIVE=
+PN_MAX_STATION_NO=
+PN_MAX_DEVICES=
+PN_SUPP_REDUCTIONS=
+PN_BANDWIDTH=
+PN_MIN_DEVICE_INT=
+PN_MAX_FRAMES_PER_CYCLE=
+
+;AP00293830: Meldung falls IO-System gelöscht wurde
+; wurde zwischenzeitlich deaktiviert wg. AUTLogError-Problem in V5.4
+; jetzt neues Metadatum -> wirkt nur in V5.4.1
+FW_DEFECT_ALWAYS_NEEDS_IO_SYSTEM=1
+
+;AP00297069 Tausch möglich, obwohl unterschiedliche OM(Basis) Verion
+OM_VERSION_INDEPENDENT=1
+
+CHECK_IS_SAME_OBJECT=1
+ALLOW_DISABLE_DEVICE_IPADRESS=1
+
+
+; --------
+; DK-1604 PN IO V2.0
+; --------
+[_S7H_PC_CP_1604_RT_DK_V63_FW11_CT]
+server=S7WBPCHX.DLL
+HW_DB_V3=S7WBPCHX
+prefix=OM
+ObjType=2367419
+basetype=_S7H_PC_CP_1616_RT_DK_V63_FW11_CT
+
+CatalogParent=2367410
+IsCatEntry=1
+nKatChilds=0
+
+PN_DEVICE_ID=0x0004
+
+FW_VERSION=V2.0
+REQUIRED_DEVICE_SWVERSION=V1.0
+MLFB=6GK1 160-4AA00
+
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.4.0.0
+HSP_NAME=CP 1616/04 iRT
+HSP_ID=1008
+
+CHECK_IS_SAME_OBJECT=1
+ALLOW_DISABLE_DEVICE_IPADRESS=1
+
+IGNORE_DEVICE_ID_IN_COUPLING=1
+
+[_S7H_PC_RACK_CT]
+; kein Tausch der IF-Module mit CP 5611, 5613 Submodulen
+; eigentlich in s7h0046x.met definiert und gehört da auch hin
+; entfernt, da HSP 46 Update verfügbar
+;Rule_00400100=CONF (0x10000100), MAXC(1) 
+;Rule_00800100=CONF (0x10000100), MAXC(1)
+;Rule_01000100=CONF (0x10000100), MAXC(1) 
+;Rule_02000100=CONF (0x10000100), MAXC(4)

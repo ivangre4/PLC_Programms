@@ -1,0 +1,449 @@
+@DB_TYP VAR_FMS_DECOD V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#------------------------------------------------------------------------
+# Beschreibung:
+# Dieses Regelfile enthält die Struktur des Server Variablen SDB
+#
+#------------------------------------------------------------------------
+VarFMSSDB$NAM								_A||||
+VarFMSSDB
+{
+	#--------------------------------------------------------------------
+	# Der SDB Parameterbereich
+	#--------------------------------------------------------------------
+
+	SDBParameterbereich$NAM					_M||||
+	SDBParameterbereich
+	{
+
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+
+		SDBIdentblock$NAM					_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG				BM||||
+			Parameterblock_ID				BC|0x01|||
+
+			# Typ der Baugruppe
+			# CP 443-5 : 0x2c98
+			# CP 342-5 : 0x2ccb
+			# CP 343-5 : 0x2ceb
+			Baugruppentyp					SM||||
+
+			# SDB Inhalt :
+			# Typ : Export Var 0x0008
+			# Nr  : fortlaufende Nummer 
+			SDB_Inhalt						WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut			BM|0x03|0x00|0x04|1
+
+			Reserved						BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP						BM|0|||		
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID						BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1						BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2						BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR						BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR						BM|0|||		
+		}
+
+		#----------------------------------------------------------------
+		# Der Parameterblock
+		#----------------------------------------------------------------
+		Parameterblock$NAM						_M||||
+		Parameterblock
+		{
+
+			#------------------------------------------------------------
+			# FMS Typbeschreibung
+			#------------------------------------------------------------
+
+			Type_Descr$NAM						_A||||
+			Type_Descr
+			{
+	
+				# Parameterblock Typbeschreibung
+				PblkId							BC|0x09|||			
+				Version							BC|0x00|||
+				Type_Descr$LNG					WM||0x0004|0xff86|1
+	
+	            # Anzahl der Typbeschreibungen
+	            Type$CNT						SM||0|977|1
+	
+	            # Liste der Typbeschreibung
+	            Type$NAM						_A||||
+	            Type												
+	            {
+					# Index der Typbeschreibung
+					Index						SM|0x000f|0x000f|0x7fff|1
+	
+					# ObjectCode = Structure
+					Object_Code					BC|0x06|||
+					
+					# Anzahl der Structur Elemente
+					Array_of_Elements$CNT		BM||0x01|0x4c|1
+					
+					# Liste der Strukturelemente
+					Array_of_Elements$NAM		_S||||
+					Array_of_Elements
+					{
+						# Index des Datentyps
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index			SM||0x0000|0x7fff|1
+						
+						# Laenge des Datentyps
+						# Boolean            : 1
+						# Integer8           : 1
+						# Integer16          : 2
+						# Integer32          : 4
+						# Unsigned8          : 1
+						# Unsigned16         : 2
+						# Unsigned32         : 4
+						# Float              : 4
+						# Visible String     : Laenge des String
+						# Octet String       : Laenge des String
+						# Date               : 7
+						# Time of Day        : 4 oder 6
+						# Time Difference    : 4 oder 6
+						# Bit String         : Laenge des String
+						# user Typen         : Laenge der Struktur in Byte
+						Length					BM||1|237|
+
+					} # Ende Array_of_Elements
+					
+					#----------------------------------------------------
+					# Liste der Variablen Bit Offsets der ersten 
+					# Strukturebene für den Teilzugriff
+					#----------------------------------------------------
+					# Größe der VarOffset Struktur ( nicht die aktuelle Länge )
+					VarOffsetLNG				BC|4|||
+					
+					# Anzahl nachfolgender Fms Variablen Beschreibungen
+					VarOffset$CNT				BM||||
+					
+					# Liste der Bit Offsets der ersten Strukturebene
+					VarOffset$NAM				_A||||
+					VarOffset
+					{
+						# Bitoffset des Strukturelements relativ zum DB Anfang
+						BitOffset				OM||||
+					
+					} # Ende VarOffset
+
+				} # Ende Type
+			} # Ende Type_Descr
+	
+			
+			#------------------------------------------------------------
+			#
+			# FMS Server Variablenbeschreibungen
+			# -> PblkId = PBL_FMS_SRV_VAR
+			#
+			#------------------------------------------------------------
+
+			FmsVar$NAM							_O||||
+			FmsVar
+			{
+			
+				# Parameterblock FmsVar Beschreibung
+				PblkId							BC|0x0c||| 
+				Version							BC|0x00|||
+				FmsVar$LNG						WM||0x0000|0xffba|1
+			
+				# Anzahl nachfolgender Fms Variablen Beschreibungen
+				Var$CNT							SM||0x0001|0x0443|1 # 0x0001
+			
+				# Liste der Variablen Beschreibungen
+				Var$NAM							_A||||
+				Var                                        
+				{
+					VarSimple$NAM				_H||||
+					VarSimple
+					{
+						# Index der Variablen
+						Index						SM||||
+					
+						# Objectcode der Variablen
+						Object_Code					BC|7|||
+					
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+					
+						# Laenge der Variable in Byte ( bei Record fehlt der Parameter)
+						Length1						BM||1|237|1
+					
+						# FMS Password
+						Password					BM|0x00|||
+					
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+					
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+					
+						# Zugriffsschutz
+						# Kein Zugriffsschutz   : 0xFFFF
+						# Access DB Index       : != 0xFFFF
+						VAC							SM|0xFFFF|||
+					
+						# AS 400: SDB Inhalt der K- Bus Verbindung zwischen CP und CPU	
+						# AS 300: LADDR der CP 
+						CPU							SM|0x0700|0x0000|0xffff|1
+					
+						# S7 Any Pointer : siehe Step7 Entwerfen von Anwenderprogrammen B- 30
+						S7_Address
+						{
+							Syntax_Id				BM|0x00|||
+							Type			        BM|0x00|||
+							ElementCntr			    SM|0x00|||
+							Subarea					SM|0x0000|||
+							Area					BM|0x00|||
+							Offset1					BM|0x00|||
+							Offset2					SM|0x0000|||  
+							
+						} # End S7_Adress
+					
+						# Länge des Variablennamens 
+						Variable_Name$LNG			BM||0|32|1
+	
+						# Name der Variable
+						Variable_Name				AM||0|32|0
+					}
+	
+					VarArray$NAM				_H||||
+					VarArray
+					{
+						# Index der Variablen
+						Index						SM||||
+					
+						# Objectcode der Variablen
+						Object_Code					BC|8|||
+					
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+					
+						# Laenge der Variable in Byte ( bei Record fehlt der Parameter)
+						Length1						BM||1|237|1
+					
+						# Anzahl der Array Elemente ( nur bei Array )
+						Number_of_Elements			BM||||
+					
+						# FMS Password
+						Password					BM|0x00|||
+					
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+					
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+					
+						# Zugriffsschutz
+						# Kein Zugriffsschutz   : 0xFFFF
+						# Access DB Index       : != 0xFFFF
+						VAC							SM|0xFFFF|||
+					
+						# AS 400: SDB Inhalt der K- Bus Verbindung zwischen CP und CPU	
+						# AS 300: LADDR der CP 
+						CPU							SM|0x0700|0x0000|0xffff|1
+					
+						# S7 Any Pointer : siehe Step7 Entwerfen von Anwenderprogrammen B- 30
+						S7_Address
+						{
+							Syntax_Id				BM|0x00|||
+							Type			        BM|0x00|||
+							ElementCntr			    SM|0x00|||
+							Subarea					SM|0x0000|||
+							Area					BM|0x00|||
+							Offset1					BM|0x00|||
+							Offset2					SM|0x0000|||  
+							
+						} # End S7_Adress
+					
+						# Länge des Variablennamens 
+						Variable_Name$LNG			BM||0|32|1
+	
+						# Name der Variable
+						Variable_Name				AM||0|32|0
+					}
+					VarRecord$NAM				_H||||
+					VarRecord
+					{
+						# Index der Variablen
+						Index						SM||||
+					
+						# Objectcode der Variablen
+						Object_Code					BC|9|||
+					
+						# Datentyp  Index
+						# Boolean            : 1
+						# Integer8           : 2
+						# Integer16          : 3
+						# Integer32          : 4
+						# Unsigned8          : 5
+						# Unsigned16         : 6
+						# Unsigned32         : 7
+						# Float              : 8
+						# Visible String     : 9
+						# Octet String       : 10
+						# Date               : 11
+						# Time of Day        : 12
+						# Time Difference    : 13
+						# Bit String         : 14
+						# user Typen         : >= 15
+						Data_Type_Index				SM|||| 
+					
+						# FMS Password
+						Password					BM|0x00|||
+					
+						# FMS Access Gruppe
+						Access_Groups				BM|0xFF|||
+					
+						# FMS Zugriffsrechte
+						Access_Rights				SM|0x0003|||  
+					
+						# Variablenlaenge ( nur fuer Records )
+						Length2						BM||0x01|0xec|1
+					
+						# Zugriffsschutz
+						# Kein Zugriffsschutz   : 0xFFFF
+						# Access DB Index       : != 0xFFFF
+						VAC							SM|0xFFFF|||
+					
+						# AS 400: SDB Inhalt der K- Bus Verbindung zwischen CP und CPU	
+						# AS 300: LADDR der CP 
+						CPU							SM|0x0700|0x0000|0xffff|1
+					
+						# S7 Any Pointer : siehe Step7 Entwerfen von Anwenderprogrammen B- 30
+						S7_Address
+						{
+							Syntax_Id				BM|0x00|||
+							Type			        BM|0x00|||
+							ElementCntr			    SM|0x00|||
+							Subarea					SM|0x0000|||
+							Area					BM|0x00|||
+							Offset1					BM|0x00|||
+							Offset2					SM|0x0000|||  
+							
+						} # End S7_Adress
+					
+						# Länge des Variablennamens 
+						Variable_Name$LNG			BM||0|32|1
+	
+						# Name der Variable
+						Variable_Name				AM||0|32|0
+					}
+				} # Ende Var
+			
+			} # Ende FmsVar
+			
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+
+			SdbRucksack$NAM						_O||||
+			SdbRucksack
+			{
+			
+				# Parameterblock SDB Rucksack
+				PblkId							BM|0xFE||| 
+				Version							BC|0x00|||
+				SdbRucksack$LNG					WM||0x0000|0xffff|1
+
+				# Alignment Subblock für gerade Länge bei Haltung der SDB auf der CPU
+				AlignmentBlock$NAM				_H||||
+				AlignmentBlock
+				{
+					Alignment					BC|0|||
+				}
+
+
+				# Subblock enthält eine Liste aller nicht getragenen KV
+				NotCarriedKvBlock$NAM			_H||||
+				NotCarriedKvBlock
+				{
+				
+					# Array von nicht getragenen KV 
+					NotCarriedKv$CNT				WM||0x0000|0xFFFF|1
+					NotCarriedKv$NAM				_A||||
+					NotCarriedKv
+					{
+						# Symbolname
+						SymbolName					AM|""|0|24|0
+	
+						# Operand
+						Operand						HM||0|10|10
+
+						# Rack / Steckplatz zur Identifizierung der CPU, auf der die KV liegt
+						Rack						BM|0|0|0xFF|1
+						Slot						BM|0|0|0xFF|1
+
+						# das eigentliche KV Attribut in ASCII HEX Darstellung
+						KvAttribut					HM||0|32|32
+
+					} # Ende NotCarriedKv
+				} # Ende NotCarriedKvBlock
+			} # Ende SdbRucksack
+		} # Ende Parameterblock
+	} # Ende Parameterbereich
+} # Ende VarFMSSDB

@@ -1,0 +1,48 @@
+[2364933]
+KatEntryName=V3.3
+InfoText=Memoria de trabajo 32KB; 0,1ms/1000 instr.; conexión MPI; configuración en una fila de hasta 8 módulos; comunicación S7 (FBs/FCs cargables); firmware V3.3
+SHORTNAME=CPU 312
+Comment=6ES7 312-1AE14-0AB0 V3.3, 6ES7 314-1AG14-0AB0 V3.3, 6ES7 315-2AH14-0AB0 V3.3, 6ES7 315-6FF04-0AB0 V3.3
+
+[2364507]
+KatEntryName = 6ES7 312-1AE14-0AB0
+InfoText = 
+SHORTNAME=CPU 312
+
+[2364934]
+KatEntryName=V3.3
+InfoText=Memoria de trabajo 128KB; 0,06ms/1000 instr.; conexión MPI; configuración en varias filas de hasta 32 módulos; comunicación S7 (FBs/FCs cargables); firmware V3.3
+SHORTNAME=CPU 314
+
+[2364505]
+KatEntryName = 6ES7 314-1AG14-0AB0
+InfoText = 
+SHORTNAME=CPU 314
+
+[2364935]
+KatEntryName=V3.3
+InfoText = Memoria de trabajo 256KB; 0,05ms/1000 instr.; conexión MPI+ DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32 módulos; emisor y receptor para comunicación directa, equidistancia, routing, comunicación S7 (FBs/FCs cargables), firmware V3.3
+SHORTNAME=CPU 315-2 DP
+
+[2364936]		
+SHORTNAME=DP
+InfoText=
+
+[2364510]
+KatEntryName = 6ES7 315-2AH14-0AB0
+InfoText = 
+SHORTNAME=CPU 315-2 DP
+
+[2364937]
+KatEntryName=V3.3
+InfoText = Memoria de trabajo 384KB; 0,05ms/1000 instr.; conexiones MPI + DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32, emisor y receptor para comunicación directa, equidistancia, routing, comunicación S7 (FBs/FCs cargables), firmware V3.3, para aplicaciones de seguridad; soporta PROFIsafe V2
+SHORTNAME=CPU 315F-2 DP
+
+[2364938]		
+SHORTNAME=DP
+InfoText=
+
+[2364513]
+KatEntryName = 6ES7 315-6FF04-0AB0
+InfoText = 
+SHORTNAME=CPU 315F-2 DP

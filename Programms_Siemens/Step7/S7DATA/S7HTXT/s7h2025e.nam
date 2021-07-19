@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2025
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=S7 400 ALU-Racks
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 400-1TA11-0AA0
+[2367007]
+KatEntryName=UR1ALU
+InfoText=Telaio universale in alluminio, 18 posti connettore
+SHORTNAME=UR1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1TA11-0AA0
+[2367008]
+KatEntryName=ER1ALU
+InfoText=Telaio di montaggio di espansione in alluminio, 18 posti connettore, solo per unità SM (P bus)
+SHORTNAME=ER1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1JA11-0AA0
+[2367009]
+KatEntryName=ER2ALU
+InfoText=Telaio di montaggio di espansione in alluminio, 9 posti connettore, solo per unità SM (P bus)
+SHORTNAME=ER2ALU
+

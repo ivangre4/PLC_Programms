@@ -1,0 +1,19 @@
+[AI 2x U (+/-10V)]
+[PARAMETERS]
+001;130;000.4;004;024;0002;AI;000;AI_Type
+002;130;000.0;004;024;0002;AI;001;AI_Range
+003;130;001.2;002;024;0002;AI;000;Smoothing
+004;130;002.4;001;024;0001;AI;000;Wire_Break
+
+[AI_Type]
+000=Deactivated
+001=Voltage
+
+[Voltage]
+009=-27648;27648;-10.000;10.000;+/-_10_V
+
+[Smoothing]
+000=None
+001=Weak
+002=Medium
+003=Strong

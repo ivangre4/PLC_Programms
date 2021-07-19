@@ -1,0 +1,25 @@
+[_AUT_CONNECTION_AT]
+subtype=_S7V_CONN_HETERO_FMS_CT
+
+ 
+[_S7V_CONN_HETERO_FMS_CT]
+server= s7wnfmsx.dll
+objtype=0x00145406
+prefix=LANVERB
+zweiseitig=1
+spezifiziert=0
+LoadViaCPUPossible=1
+Extended_SDB=1 
+Fetch_Write=0
+Fast=0
+OPC=1
+BROADCAST=1
+MULTICAST=1
+NO_MULTI_PROJECT=1
+
+[_S7H_CPU_AT]
+SDB3103_CARRIER=1
+SDB3104_CARRIER=1
+SDB3105_CARRIER=1
+
+

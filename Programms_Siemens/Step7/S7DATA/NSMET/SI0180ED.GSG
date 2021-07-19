@@ -1,0 +1,114 @@
+;==========================================================
+; GSD-File  for SIMATIC Vision Sensor VS120 SIEMENS AG 
+; MLFB  :  6GF1 018-2AA10
+; Saenger, A&D PT 7 D3
+; Stand   : 21.02.06 
+; File    : SI0180ED.GSD
+;==========================================================
+#Profibus_DP
+;
+GSD_Revision=3
+Vendor_Name="SIEMENS AG"
+Model_Name="VS120"
+Revision="V2.0"
+Ident_Number=0x80ED
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V2.0"
+Software_Release="V2.0"
+Info_Text="VS120 (Objektprüfung)"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6	=   15
+MaxTsdr_19.2	=   15
+MaxTsdr_45.45	=   15
+MaxTsdr_93.75	=   15
+MaxTsdr_187.5	=   15
+MaxTsdr_500	=   15
+MaxTsdr_1.5M	=   25
+MaxTsdr_3M	=   50
+MaxTsdr_6M	= 100
+MaxTsdr_12M	= 200
+
+Implementation_Type="DPC31"
+Bitmap_Device="VS1X0__N"
+Slave_Family=0@Machine Vision              ;0 = General
+Family_Name = "SIMATIC"
+;
+OrderNumber="6GF1 018-2AA10"
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+Auto_Baud_supp=1
+Set_Slave_Add_supp=0
+Min_Slave_Intervall=1
+24V_Pins=2                                  ; Signal M24V and P24V connected
+;
+;Modular_Station=1
+;Max_Module=244
+;Max_Input_Len=244
+;Max_Output_Len=244
+;Max_Data_Len=488
+;
+Fail_Safe=1
+;
+Max_Diag_Data_Len=244
+;Plain-text display of the station diagnosis	(O)
+;Bit position in the station diagnosis unsigned 16
+;Plain-text display max. 32 characters
+Unit_Diag_Bit( 0) = "Ungültiger Sensor"
+Unit_Diag_Bit( 1) = "Sensor nicht gefunden"
+Unit_Diag_Bit( 2) = "Diagnosebit 2"
+Unit_Diag_Bit( 3) = "Fehler bei DISA-Sig. Wechsel"
+Unit_Diag_Bit( 4) = "Diagnosebit 4"
+Unit_Diag_Bit( 5) = "Modell fehlerhaft"
+Unit_Diag_Bit( 6) = "Diagnosebit 6"
+Unit_Diag_Bit( 7) = "Übertragungsfehler"
+Unit_Diag_Bit( 8) = "Ungültige PROFIBUS DP Parameter"
+Unit_Diag_Bit( 9) = "Diagnosebit 9"
+Unit_Diag_Bit(10) = "Diagnosebit 10"
+Unit_Diag_Bit(11) = "Diagnosebit 11"
+Unit_Diag_Bit(12) = "Diagnosebit 12"
+Unit_Diag_Bit(13) = "PROFIBUS/DP Fehler"
+Unit_Diag_Bit(14) = "TCP/RS232 Kommunikationsfehler"
+Unit_Diag_Bit(15) = "Lampe überlastet"
+Unit_Diag_Bit(16) = "Diagnosebit 16"
+Unit_Diag_Bit(17) = "Diagnosebit 17"
+Unit_Diag_Bit(18) = "Diagnosebit 18"
+Unit_Diag_Bit(19) = "Diagnosebit 19"
+Unit_Diag_Bit(20) = "Diagnosebit 20"
+Unit_Diag_Bit(21) = "Diagnosebit 21"
+Unit_Diag_Bit(22) = "Diagnosebit 22"
+Unit_Diag_Bit(23) = "Diagnosebit 23"
+Unit_Diag_Bit(24) = "Diagnosebit 24"
+Unit_Diag_Bit(25) = "Diagnosebit 25"
+Unit_Diag_Bit(26) = "Diagnosebit 26"
+Unit_Diag_Bit(27) = "Diagnosebit 27"
+Unit_Diag_Bit(28) = "Diagnosebit 28"
+Unit_Diag_Bit(29) = "Diagnosebit 29"
+Unit_Diag_Bit(30) = "Diagnosebit 30"
+Unit_Diag_Bit(31) = "Diagnosebit 31"
+;
+;
+Module = "VS120 1 byte + 16 word I/O" 0x30,0xFF
+1
+Info_Text="VS120 (Objektprüfung)"
+EndModule
+
+
+
+
+
+
+
+
+
+
+

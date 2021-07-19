@@ -1,0 +1,14 @@
+[2363637]
+KatEntryName = 6ES7 314-6CF02-0AB0
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ DP (master DP o slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+Comment=6ES7 314-6BF02-0AB0, 6ES7 314-6CF02-0AB0
+
+[2363638]
+SHORTNAME=DP
+InfoText=
+
+[2363639]
+KatEntryName = 6ES7 314-6BF02-0AB0
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configurazione a più file fino a 31 unità; firmware V2.0
+SHORTNAME=CPU 314C-2 PtP

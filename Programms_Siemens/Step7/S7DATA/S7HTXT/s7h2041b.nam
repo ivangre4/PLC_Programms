@@ -1,0 +1,20 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2041
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=FM 350-2, counter module, 8 channels, with or without extended user data
+
+;---------- FM 350-2 COUNTER MODULE,   6ES7 350-2AH01-0AE0
+[2367070]
+KatEntryName=FM 350-2 COUNTER MODULE
+InfoText=Counter module, 8 channels
+SHORTNAME=FM350-2 COUNTER
+
+
+;---------- FM 350-2 COUNTER MODULE E,   6ES7 350-2AH01-0AE0
+[2367071]
+KatEntryName=FM 350-2 COUNTER MODULE E
+InfoText=Counter module, 8 channels, extended user data
+SHORTNAME=FM350-2 COUNTER E
+

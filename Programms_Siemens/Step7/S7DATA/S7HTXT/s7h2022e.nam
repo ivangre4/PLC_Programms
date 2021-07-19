@@ -1,0 +1,20 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2022
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S 1 SSI, 1 SSI Fast
+
+;---------- 1 SSI,   6ES7 138-4DB03-0AB0
+[2366958]
+KatEntryName=1 SSI 
+InfoText=Modulo SSI per il collegamento diretto di encoder assoluti con funzioni di ritenzione e confronto, sincronismo di clock
+SHORTNAME=1 SSI 
+
+
+;---------- 1 SSI Fast-Mode,   6ES7 138-4DB03-0AB0 Fast
+[2366959]
+KatEntryName=1 SSI Fast-Mode
+InfoText=Modulo SSI per il collegamento diretto di encoder assoluti con ottimizzazione del tempo di trasmissione dei valori dell'encoder, sincronismo di clock
+SHORTNAME=1 SSI Fast-Mode
+

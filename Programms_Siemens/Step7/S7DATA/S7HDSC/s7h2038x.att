@@ -1,0 +1,19 @@
+
+/ UMC-Version<47.24.00.00>
+
+/0->BYTE
+/1->SHORT
+/2->LONG
+/3->STRING
+/4->LONGBINARY
+
+/ Slave-Attribute von MLFB 00 
+111169,4,1,slave_setprm_data
+111982,3,1,s7_drive_type_version
+111986,4,1,s7_encoder_setprm_data
+111987,2,1,s7_telegram_id
+111988,4,1,s7_telegram_id_ext
+111989,2,1,s7_drive_id
+111031,2,1,s7_private_8
+
+

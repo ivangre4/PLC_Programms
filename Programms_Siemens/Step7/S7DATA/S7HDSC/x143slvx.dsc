@@ -1,0 +1,4 @@
+[X-BM 143 / DESINA]
+
+[PARAMETERS]
+001;000;000.0;001;000;0000;  ;000;Missing_Load_Voltage_LP

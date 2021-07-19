@@ -1,0 +1,68 @@
+[2364041]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 32KB; 0,2ms/1000 istr.; DI10/DO6 integrati; 2 uscite di impulsi (2,5kHz); a 2 canali per conteggio e misura con encoder incrementali 24V (10kHz); connettore MPI; configurazione ad una fila fino a 8 unità; firmware V2.6
+SHORTNAME=CPU 312C
+Comment=6ES7 312-5BE03-0AB0 V2.6, 6ES7 313-5BF03-0AB0 V2.6, 6ES7 313-6BF03-0AB0 V2.6, 6ES7 313-6CF03-0AB0 V2.6, 6ES7 314-6BG03-0AB0 V2.6, 6ES7 314-6CG03-0AB0 V2.6
+
+[2364043]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI; configurazione a più file fino a 31 unità; firmware V2.6
+SHORTNAME=CPU 313C
+
+[2364045]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI+ PtP (RS422/485 (ASCII, 3964(R))); configurazione a più file fino a 31 unità; firmware V2.6
+SHORTNAME=CPU 313C-2 PtP
+
+[2364047]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 64KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI+DP (master DP o Slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7(FB/FC caricabili); firmware V2.6
+SHORTNAME=CPU 313C-2 DP
+
+[2364049]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 96KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configurazione a più file fino a 31 unità; firmware V2.6
+SHORTNAME=CPU 314C-2 PtP
+
+[2364051]
+KatEntryName = V2.6
+InfoText = Memoria di lavoro 96KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ DP (master DP o slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V2.6
+SHORTNAME=CPU 314C-2 DP
+
+[2363866]
+KatEntryName = 6ES7 312-5BE03-0AB0
+InfoText = 
+SHORTNAME=CPU 312C
+
+[2363868]
+KatEntryName = 6ES7 313-5BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C
+
+[2363870]
+KatEntryName = 6ES7 313-6BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 PtP
+
+[2363872]
+KatEntryName = 6ES7 313-6CF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 DP
+
+[2363874]
+KatEntryName = 6ES7 314-6BG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 PtP
+
+[2363876]
+KatEntryName = 6ES7 314-6CG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 DP
+
+[2364053]		
+SHORTNAME=DP
+InfoText=
+
+[2364054]		
+SHORTNAME=DP
+InfoText=

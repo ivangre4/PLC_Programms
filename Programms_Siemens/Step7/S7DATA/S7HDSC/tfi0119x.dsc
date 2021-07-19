@@ -1,0 +1,63 @@
+[AI8xHART, Ex]
+[PARAMETERS]
+001;000;000.0;001;001;0001;AI;000;Group_Diagnosis
+002;000;001.0;001;001;0001;AI;000;Wire_Break
+003;000;002.0;001;001;0001;AI;000;HART_Diagnosis
+004;001;000.6;001;000;0001;  ;000;Diagnostics
+005;001;000.7;001;000;0001;  ;000;Limit_Violation
+006;001;002.0;002;002;0002;AI;000;Smoothing
+007;001;004.0;002;002;0002;AI;000;Integration_Time
+008;001;006.4;004;008;0002;AI;000;AI_Type
+009;001;006.0;004;008;0002;AI;008;AI_Range
+010;001;014.0;016;032;0004;AI;009;Upper_Limit_Value
+011;001;016.0;016;032;0004;AI;009;Lower_Limit_Value
+012;131;002.0;008;000;0001;  ;000;Count_Of_Retries_131
+013;131;006.0;001;000;0001;  ;000;HART_Function_131
+014;132;002.0;008;000;0001;  ;000;Count_Of_Retries_132
+015;132;006.0;001;000;0001;  ;000;HART_Function_132
+016;133;002.0;008;000;0001;  ;000;Count_Of_Retries_133
+017;133;006.0;001;000;0001;  ;000;HART_Function_133
+018;134;002.0;008;000;0001;  ;000;Count_Of_Retries_134
+019;134;006.0;001;000;0001;  ;000;HART_Function_134
+020;135;002.0;008;000;0001;  ;000;Count_Of_Retries_135
+021;135;006.0;001;000;0001;  ;000;HART_Function_135
+022;136;002.0;008;000;0001;  ;000;Count_Of_Retries_136
+023;136;006.0;001;000;0001;  ;000;HART_Function_136
+024;137;002.0;008;000;0001;  ;000;Count_Of_Retries_137
+025;137;006.0;001;000;0001;  ;000;HART_Function_137
+026;138;002.0;008;000;0001;  ;000;Count_Of_Retries_138
+027;138;006.0;001;000;0001;  ;000;HART_Function_138
+028;140;004.0;008;016;0001;AI;000;HART_Var_Channel
+029;140;005.0;008;016;0002;AI;000;HART_Variable
+
+[Smoothing]
+000=none
+001=weak
+002=medium
+003=strong
+
+[Integration_Time]
+001=16.6_ms
+002=20_ms
+003=100_ms
+
+[AI_Type]
+000=Deactivated
+002=Current_4_Wire_Transducer
+003=Current_2_Wire_Transducer
+
+[Current_4_Wire_Transducer]
+002=0;27648;0.000;20.000;0_to_20_mA
+003=0;27648;4.000;20.000;4_to_20_mA
+004=-27648;27648;-20.000;20.000;+/-20_mA
+
+[Current_2_Wire_Transducer]
+003=0;27648;4.000;20.000;4_to_20_mA
+
+[HART_Variable]
+000=None
+001=Primary_Variable
+002=Secondary_Variable
+003=Tertiary_Variable
+004=Quatenary_Variable
+015=CiR

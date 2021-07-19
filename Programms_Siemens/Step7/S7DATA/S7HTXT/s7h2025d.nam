@@ -1,0 +1,28 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2025
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=S7 400 ALU-Racks
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 400-1TA11-0AA0
+[2367007]
+KatEntryName=UR1ALU
+InfoText=Bastidor universal de aluminio, 18 slots
+SHORTNAME=UR1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1TA11-0AA0
+[2367008]
+KatEntryName=ER1ALU
+InfoText=Bastidor de ampliación de aluminio, 18 slots, sólo para módulos SM (bus P)
+SHORTNAME=ER1ALU
+
+
+;---------- ALU-Rack, funktional identisch zur Stahl-Variante,   6ES7 403-1JA11-0AA0
+[2367009]
+KatEntryName=ER2ALU
+InfoText=Bastidor de ampliación de aluminio, 9 slots, sólo para módulos SM (bus P)
+SHORTNAME=ER2ALU
+
+

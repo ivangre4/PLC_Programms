@@ -1,0 +1,25 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2032
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- 4 AI RTD
+[_S7H_HSP_6ES7_134_7SD51_0AB0_CT]
+ObjType=2367027
+prefix=OM
+server=s7hkcomx.dll
+basetype=_S7H_HSP_6ES7_134_7SD50_0AB0_CT
+CLSID={2D27F6A3-D10F-4ca0-9354-6A3CCC655E57}
+CUSTOM_SITE_1={F8FA14BF-AF23-45b9-928C-26E3BA3784FD}
+USER_DIALOG_1=STANDARD
+USER_DIALOG_2={FD3D47FA-A296-46d6-8E9C-EE28F3668517},s7h2032x.dll
+IsCatEntry=1
+MLFB=6ES7 134-7SD51-0AB0
+paramDescr=AI_2032x.dsc 
+SHORTNAME=4 AI RTD
+HSP_ID=2032
+HSP_NAME=ET 200iSP 4AI-RTD
+HWCNFX_FOR_HWU=5.3.2.0
+HWCNFX_VER=5.4.4.0|0
+

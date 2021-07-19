@@ -1,0 +1,40 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2045
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S Módulos de entradas/salidas 2/4AI RTD ST, 2/4AI TC ST, 2RO
+
+;---------- 2RO NO/NC DC24..48V/5A AC24..230V/5A,   6ES7 132-4HB50-0AB0
+[2367202]
+KatEntryName=2RO NO/NC DC24..48V/5A AC24..230V/5A
+InfoText=Módulo de salidas digitales 2xRelais NO/NC DC24..48V/5A AC24..230V/5A con mando manual
+SHORTNAME=2RO NO/NC 24..230V/5A
+
+
+;---------- 2AI TC ST,   6ES7 134-4JB01-0AB0
+[2367203]
+KatEntryName=2AI TC ST
+InfoText=Módulo de entradas analógicas AI 2xTC / 15 bits+signo, estándar, termopares: E, N, J, K, L, S, R, B, T
+SHORTNAME=2AI TC ST
+
+
+;---------- 2/4 AI RTD ST; 2ch,   6ES7 134-4JB51-0AB0 (2 Kanäle)
+[2367204]
+KatEntryName=2/4 AI RTD ST; 2ch; 2-, 3-, 4-wire
+InfoText=Módulo de entradas analógicas 2/4xAI RTD 2ch / 15 bits+signo, estándar, R: 150 ohmios, 300 ohmios, 600 ohmios, PTC; RTD: Pt100, Ni100
+SHORTNAME=2/4 AI RTD ST; 2ch
+
+
+;---------- 2/4 AI RTD ST; 4ch,   6ES7 134-4JB51-0AB0 (4 Kanäle)
+[2367205]
+KatEntryName=2/4 AI RTD ST; 4ch; 2-wire
+InfoText=Módulo de entradas analógicas 2/4xAI RTD 4ch / 15 bits+signo, estándar, R: 150 ohmios, 300 ohmios, 600 ohmios, PTC; RTD: Pt100, Ni100
+SHORTNAME=2/4 AI RTD ST; 4ch
+
+
+;---------- 4AI TC ST,   6ES7 134-4JD00-0AB0
+[2367378]
+KatEntryName=4AI TC ST
+InfoText=Módulo de entradas analógicas AI 4xTC / 15 bits+signo, estándar, termopares: E, N, J, K, L, S, R, B, T
+SHORTNAME=4AI TC ST

@@ -1,0 +1,6 @@
+<Schema name="DTMProtocolsSchema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:fdt="x-schema:FDTDataTypesSchema.xml" >
+	<!--Definition of Elements-->
+	<ElementType name="FDT" content="eltOnly" model="closed">
+		<element type="fdt:BusCategories" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+</Schema>

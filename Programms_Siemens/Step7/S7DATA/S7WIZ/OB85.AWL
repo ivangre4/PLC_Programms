@@ -1,0 +1,22 @@
+ORGANIZATION_BLOCK "OB Not Loaded Fault"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB85_EV_CLASS : BYTE ;	//16#35 Event class 3
+  OB85_FLT_ID : BYTE ;	//16#XX, Fault identification code
+  OB85_PRIORITY : BYTE ;	//26 (Priority of 1 is lowest)
+  OB85_OB_NUMBR : BYTE ;	//85 (Organization block 85, OB85)
+  OB85_RESERVED_1 : BYTE ;	//Reserved for system
+  OB85_RESERVED_2 : BYTE ;	//Reserved for system
+  OB85_RESERVED_3 : INT ;	//Reserved for system
+  OB85_ERR_EV_CLASS : BYTE ;	//Class of event causing error
+  OB85_ERR_EV_NUM : BYTE ;	//Number of event causing error
+  OB85_OB_PRIOR : BYTE ;	//Priority of OB causing error
+  OB85_OB_NUM : BYTE ;	//Number of OB causing error
+  OB85_DATE_TIME : DATE_AND_TIME ;	//Date and time OB85 started   
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

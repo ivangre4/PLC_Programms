@@ -1,0 +1,920 @@
+S7HPROFX V0.1
+
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\DP V0 slaves\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Basic::6ES7 151-1CA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 Standard::6ES7 151-1AA03-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// IM151-1 FO Standard::6ES7 151-1AB01-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// IM151-1 FO Standard::6ES7 151-1AB02-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 FO Standard::6ES7 151-1AB02-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-1 HF::6ES7 151-1BA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0]
+ObjectName="IM151-7 CPU-X"
+
+// PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU-X::6ES7 151-7AA10-0AB0]
+ObjectName="IM151-7 CPU"
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU::6ES7 151-7AA11-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200SIM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 CPU FO::6ES7 151-7AB00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+// PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFIBUS DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA01-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================
+
+
+// PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 0,3-3A::3RK1 301-0AB10-0AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-8A::3RK1 301-0BB10-0AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct starter\DS1e-x HF 2,4-16A::3RK1 301-0CB10-0AB4]
+@DELETE
+
+// ---------------
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 0,3-3A::3RK1 301-0AB10-1AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-8A::3RK1 301-0BB10-1AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Reversing starter\RS1e-x HF 2,4-16A::3RK1 301-0CB10-1AB4]
+@DELETE
+
+// ---------------
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 0,3-3A::3RK1 301-0AB20-0AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-8A::3RK1 301-0BB20-0AB4]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\Motor starter\Direct soft starter\DSS1e-x HF 2,4-16A::3RK1 301-0CB20-0AB4]
+@DELETE
+
+// ===========================================

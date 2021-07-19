@@ -1,0 +1,15 @@
+:Base S7w1021d.hlp
+:Title Ayuda para propiedades IE/AS-INTERFACE LINK PN IO
+1 IE/ASI LINK PN IO
+2 Ficha "General"=IDD_ALLG_PNIO_ASILINK_DEVICE
+2 Ficha "Identificación"=IDD_DLG_SLAVE_IDENTIFICATION
+1 Ramal AS-i
+2 Ficha "General"=IDD_DLG_HEAD_BASE
+2 Ficha "Direcciones"=IDD_DIAGADDRESS
+2 Ficha "Paquete"=IDD_SC_ADR
+2 Ficha "Parámetros"=IDD_DLG_HEAD_PARAMS
+2 Ficha "Opciones AS-i Slaves=IDD_DLG_UPLOAD
+1 PROFINET IO
+2 Ficha "General"=IDD_DIALOG_ALLGEMEIN_INTERFACE_PORT
+2 Ficha "Direcciones"=IDD_DIAGADDRESS
+2 Ficha Ciclo IO=IDD_DLG_SLV_IO_CYCLE

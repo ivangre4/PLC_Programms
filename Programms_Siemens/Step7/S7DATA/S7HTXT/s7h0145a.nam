@@ -1,0 +1,133 @@
+[2364158]
+KatEntryName=V5.1
+SHORTNAME=CPU 412-1
+InfoText=Arbeitsspeicher 144KB Code und 144KB Daten; 0,075 ms/kAW; 4KB DI/O; 32 Verbindungen; 1*DP/MPI; Sende- und Empfangsfähigkeit für direkten Datenaustausch; DP-Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+Comment=6ES7 412-1XJ05-0AB0 V5.1, 6ES7 412-2XJ05-0AB0 V5.1, 6ES7 414-2XK05-0AB0 V5.1, 6ES7 414-3XM05-0AB0 V5.1, 6ES7 416-2XN05-0AB0 V5.1, 6ES7 416-2FN05-0AB0 V5.1, 6ES7 416-3XR05-0AB0 V5.1, 6ES7 417-4XT05-0AB0 V5.1
+
+[2364159]
+SHORTNAME=MPI/DP
+
+
+[2364160]
+KatEntryName=V5.1
+SHORTNAME=CPU 412-2 DP
+InfoText=Arbeitsspeicher 256KB Code und 256KB Daten; 0,075 ms/kAW; 4KB DI/O; 32 Verbindungen; 1*DP/MPI und 1*DP; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+
+[2364161]
+SHORTNAME=DP
+
+[2364162]
+SHORTNAME=MPI/DP
+
+
+[2364163]
+KatEntryName=V5.1
+SHORTNAME=CPU 414-2 DP
+InfoText=Arbeitsspeicher 512KB Code und 512KB Daten; 0,045 ms/kAW; 8KB DI/O; 32 Verbindungen; 1*DP/MPI und 1*DP; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+
+[2364164]
+SHORTNAME=DP
+
+[2364165]
+SHORTNAME=MPI/DP
+
+
+[2364166]
+KatEntryName=V5.1
+SHORTNAME=CPU 414-3 DP
+InfoText=Arbeitsspeicher 1,4MB Code und 1,4MB Daten; 0,045 ms/kAW; 8KB DI/O; 32 Verbindungen; 1*DP/MPI, 1*DP und 1 Schacht für IF-Module; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+
+[2364167]
+SHORTNAME=DP
+
+[2364168]
+SHORTNAME=MPI/DP
+
+
+[2364169]
+KatEntryName=V5.1
+SHORTNAME=CPU 416-2 DP
+InfoText=Arbeitsspeicher 2,8MB Code und 2,8MB Daten; 0,030 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI und 1*DP; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+
+[2364170]
+SHORTNAME=DP
+
+[2364171]
+SHORTNAME=MPI/DP
+
+
+[2364172]
+KatEntryName=V5.1
+SHORTNAME=CPU 416F-2
+InfoText=Arbeitsspeicher 2,8MB Code und 2,8MB Daten; 0,030 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI und 1*DP; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1; einsetzbar für Sicherheitsanwendungen; unterstützt PROFIsafe V2 
+
+[2364173]
+SHORTNAME=DP
+
+[2364174]
+SHORTNAME=MPI/DP
+
+
+[2364175]
+KatEntryName=V5.1
+SHORTNAME=CPU 416-3 DP
+InfoText=Arbeitsspeicher 5,6MB Code und 5,6MB Daten; 0,030 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI, 1*DP und 1 Schacht für IF-Module; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Datensatzrouting; Multicomputingfähig; Firmware V5.1
+
+[2364176]
+SHORTNAME=DP
+
+[2364177]
+SHORTNAME=MPI/DP
+
+
+[2364178]
+KatEntryName=V5.1
+SHORTNAME=CPU 417-4
+InfoText=Arbeitsspeicher 15MB Code und 15MB Daten; 0,018 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI, 1*DP  und 2 Schächte für IF-Module; Multicomputingfähig, Sende- und Empfangsfähigkeit für direkten Datenaustausch, Äquidistanz und taktsynchrone Bearbeitung, Routing, Datensatzrouting; Firmware V5.1
+
+[2364179]
+SHORTNAME=DP
+
+[2364180]
+SHORTNAME=MPI/DP
+
+
+[2363956]
+KatEntryName=6ES7 412-1XJ05-0AB0
+SHORTNAME=CPU 412-1
+InfoText=
+
+[2363960]
+KatEntryName=6ES7 412-2XJ05-0AB0
+SHORTNAME=CPU 412-2 DP
+InfoText=
+
+[2363964]
+KatEntryName=6ES7 414-2XK05-0AB0
+SHORTNAME=CPU 414-2 DP
+InfoText=
+
+[2363968]
+KatEntryName=6ES7 414-3XM05-0AB0
+SHORTNAME=CPU 414-3 DP
+InfoText=
+
+[2363972]
+KatEntryName=6ES7 416-2XN05-0AB0
+SHORTNAME=CPU 416-2 DP
+InfoText=
+
+[2363976]
+KatEntryName=6ES7 416-2FN05-0AB0
+SHORTNAME=CPU 416F-2
+InfoText=
+
+[2363980]
+KatEntryName=6ES7 416-3XR05-0AB0
+SHORTNAME=CPU 416-3 DP
+InfoText=
+
+[2363984]
+KatEntryName=6ES7 417-4XT05-0AB0
+SHORTNAME=CPU 417-4
+InfoText=

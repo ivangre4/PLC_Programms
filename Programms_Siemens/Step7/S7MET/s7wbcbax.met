@@ -1,0 +1,39 @@
+;------------------------------ CP343-1HX00 Firmware-Katalog
+[_S7H_6GK7_343_1HX00_0XE0_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_NCM_AT
+prefix=OM
+ObjType=1338005
+CatalogParent=1335343
+IsCatEntry=1
+nKatChilds=0
+HWCNFX_VER=5.1.0.0|2
+;--------------------------------
+
+;------------------------------ CP300-MP CBA
+[_S7H_6GK7_343_1HX00_0XE0_CT]
+server=S7WB53AX.DLL
+basetype=_S7H_6GK7_343_1EX11_0XEO_CT
+prefix=OM
+ObjType=1338004
+CLASS_PROPERTIES=0
+CatalogParent=1338005
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V1.0
+MLFB=6GK7 343-1HX00-0XE0
+SHORTNAME=CP 343-1 PN
+
+SDB_CAUSED_LIST=1|5|3100|3107|3108|3111|3002|3118|3119|3003|3300
+SDB_CARRIER_LIST=3100|3107|3108|3111|3002|3119|3003|3300
+RESERVED_PORTS=102,135
+
+ROUTING_CAPABILITY=1
+PROGRAM_CAPABILITY=2
+CBA_CAPABILITY=0x2
+CAN_DO_S7300_PBK=
+
+HWCNFX_VER=5.1.0.0|2
+;------------------------------------------------------------------------------
+

@@ -1,0 +1,212 @@
+;=================================================================
+; GSD-Datei fuer ET200B - 4AO -2 /SPC3    SIEMENS AG
+; MLFB    : 6ES7 135-0HF01-0XB0
+;
+; Date    : 12.09.02 V3.1 SX,GW
+; File    : SIEM8018.GSG
+;=================================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+PrmText=1
+Text(0)="sperren"
+Text(1)="freigeben"
+EndPrmText
+PrmText=2
+Text(0)="Kanal nicht aktiviert"
+Text(25)="Spannung              +/- 10 V"
+Text(24)="Spannung            0 ... 10 V"
+Text(36)="Strom                +/- 20 mA"
+Text(34)="Strom              0 ... 20 mA"
+Text(35)="Strom              4 ... 20 mA"
+EndPrmText
+PrmText=3
+Text(0)="Ersatzwert: parametrierbar"
+Text(1)="Ersatzwert: letzter Wert"
+EndPrmText
+PrmText=4
+Text(1)="SIMATIC S5"
+Text(0)="SIMATIC S7"
+EndPrmText
+; <Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=1 "Diagnosealarm"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Diagnosefreigabe        K 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "Diagnosefreigabe        K 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=4 "Diagnosefreigabe        K 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=5 "Diagnosefreigabe        K 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "Ausgabeart / -bereich   K 0"
+Unsigned8 025 000-036
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=7 "Ausgabeart / -bereich   K 1"
+Unsigned8 025 000-036
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=8 "Ausgabeart / -bereich   K 2"
+Unsigned8 025 000-036
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=9 "Ausgabeart / -bereich   K 3"
+Unsigned8 025 000-036
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=10 "Darstellung Ausgabewert"
+Bit(2) 1 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=11 "Art Ersatzwert          K 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=12 "Art Ersatzwert          K 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=13 "Art Ersatzwert          K 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=14 "Art Ersatzwert          K 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=15 "Ersatzwert              K 0"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=16 "Ersatzwert              K 1"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=17 "Ersatzwert              K 2"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=18 "Ersatzwert              K 3"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "Analogausgabe 4 AO,+/-10V, +/-20mA, 0(4)-20mA;"
+Vendor_Name="SIEMENS"
+Model_Name="B-4AO-2        DP"
+Revision="V 3.1"
+Ident_Number=0x8018
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=20
+MaxTsdr_19.2=20
+MaxTsdr_45.45=20
+MaxTsdr_93.75=20
+MaxTsdr_187.5=20
+MaxTsdr_500=20
+MaxTsdr_1.5M=25
+MaxTsdr_3M=50
+MaxTsdr_6M=100
+MaxTsdr_12M=200
+Implementation_Type="SPC3"
+Bitmap_Device="ET200B_N"
+Bitmap_SF="ET200B_S"
+; Slave-Specification:
+OrderNumber="6ES7 135-0HF01-0XB0"
+Sync_Mode_supp=1
+Auto_Baud_supp=1
+Fail_Safe=1
+Min_Slave_Intervall=10
+Max_Diag_Data_Len=29
+Modul_Offset=1
+Slave_Family=3@ET200B
+Modular_Station=1
+Max_Module=1
+Max_Input_Len=0
+Max_Output_Len=8
+Max_Data_Len=8
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=29
+User_Prm_Data = 0x00,0x20,0x0D,0x07,0x5F,0x04,0x00,0x02,0x00,0x00,0x13,0x5F,0x04,\
+0x01,0x0E,0x00,0x00,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Max_User_Prm_Data_Len=29
+Ext_User_Prm_Data_Const(0)=0x00,0x20,0x0D,0x07,0x5F,0x04,0x00,0x02,0x00,0x00,\
+0x13,0x5F,0x04,0x01,0x0E,0x00,0x00,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(15)=1
+Ext_User_Prm_Data_Ref(8)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(8)=4
+Ext_User_Prm_Data_Ref(8)=5
+Ext_User_Prm_Data_Ref(17)=6
+Ext_User_Prm_Data_Ref(18)=7
+Ext_User_Prm_Data_Ref(19)=8
+Ext_User_Prm_Data_Ref(20)=9
+Ext_User_Prm_Data_Ref(2)=10
+Ext_User_Prm_Data_Ref(16)=11
+Ext_User_Prm_Data_Ref(16)=12
+Ext_User_Prm_Data_Ref(16)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(21)=15
+Ext_User_Prm_Data_Ref(23)=16
+Ext_User_Prm_Data_Ref(25)=17
+Ext_User_Prm_Data_Ref(27)=18
+; Unit-Diagnostics:
+Unit_Diag_Bit(0031)="Parametrierfehler Baugruppe"
+Unit_Diag_Bit(0040)="Baugruppenfehler"
+Unit_Diag_Bit(0052)="DAU - Fehler"
+Unit_Diag_Bit(0088)="Parametrierfehler       K 0"
+Unit_Diag_Bit(0091)="Kurzschluss zu M        K 0"
+Unit_Diag_Bit(0092)="            Drahtbruch  K 0"
+Unit_Diag_Bit(0096)="Parametrierfehler       K 1"
+Unit_Diag_Bit(0099)="Kurzschluss zu M        K 1"
+Unit_Diag_Bit(0100)="            Drahtbruch  K 1"
+Unit_Diag_Bit(0104)="Parametrierfehler       K 2"
+Unit_Diag_Bit(0107)="Kurzschluss zu M        K 2"
+Unit_Diag_Bit(0108)="            Drahtbruch  K 2"
+Unit_Diag_Bit(0112)="Parametrierfehler       K 3"
+Unit_Diag_Bit(0115)="Kurzschluss zu M        K 3"
+Unit_Diag_Bit(0116)="            Drahtbruch  K 3"
+; <Module-Definition-List>
+Module="Konfiguration 1:     4AO" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x83,0x43,0x00,0x25,0xE0
+1
+EndModule
+Module="Konfiguration 2: 4 x 1AO" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x83,0x40,0x00,0x25,0xD0,0x83,0x40,0x00,\
+0xA5,0xD0,0x83,0x40,0x00,0xA5,0xD0,0x83,0x40,0x00,0xA5,0xD0
+2
+EndModule
+Module="Konfiguration 3: 3 x 1AO" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x83,0x40,0x00,0x25,0xD0,0x83,0x40,0x00,\
+0xA5,0xD0,0x83,0x40,0x00,0xA5,0xD0
+3
+EndModule
+Module="Konfiguration 4: 2 x 1AO" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x83,0x40,0x00,0x25,0xD0,0x83,0x40,0x00,\
+0xA5,0xD0
+4
+EndModule
+Module="Konfiguration 5: 1 x 1AO" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x83,0x40,0x00,0x25,0xD0
+5
+EndModule

@@ -1,0 +1,1169 @@
+[Version]
+
+Version=4.0
+
+[Attribute]
+
+
+S7UP_APWAKTIV_STR=   < 6102E 1 2 0 >
+S7UP_APWAKTIV=       < 6102E 3 0 0 >
+S7UP_APWOPSYM=       < 6102A 1 2 0 >
+S7UP_APWOPABS=       < 6102B 1 2 0 >
+
+S7UP_ANAME=          < 1001 8000001 2 0 >
+S7UP_ACREATOR=       < 1005 8000001 2 0 >
+S7UP_ACRDATE=        < 1003 2 0 0 >
+S7UP_ALMDATE=        < 1004 2 0 0 >
+S7UP_ACOMMENT=       < 1006 8000001 2 0 >
+S7UP_AOPABS=         < 6100C 1 2 0 >
+
+S7UP_ACRDATE_D=      < 1003 2 0 1 >
+S7UP_ACRDATE_T=      < 1003 2 0 2 >
+
+S7UP_ALMDATE_D=      < 1004 2 0 1 >
+S7UP_ALMDATE_T=      < 1004 2 0 2 >
+
+S7UP_AFEHLTYP_0=     < 61010 5 0 0 >
+S7UP_AFEHLTYP_2=     < 61010 1 2 0 >
+
+S7UP_AFDFEHERK=      < 61014 1 2 0 >
+S7UP_AFDEWERF=       < 61016 1 2 0 >
+S7UP_AFDKRITPOS=     < 61018 1 2 0 >
+
+S7UP_AFDLOGIK=       < 61038 1 2 0 >
+
+S7UP_AVUSERDEO=      < 61100 1 2 0 >
+S7UP_AVFEHLTYP=      < 61101 1 2 0 >
+S7UP_AVMELDNR=       < 61104 1 2 0 >
+S7UP_AVMELDTEXT=     < 61105 1 2 0 >
+S7UP_AVMELDPRIO=     < 61107 1 2 0 >
+S7UP_AVFDLOGIKUSER = < 61103 1 2 0 >
+
+S7UP_ARBITABS=       < 61311 1 2 0 >
+S7UP_AVUSERARBIT=    < 61113 1 2 0 >
+
+S7UP_AQBITABS=       < 61329 1 2 0 >
+S7UP_AVUSERAQBIT=    < 61114 1 2 0 >
+
+S7UP_AVAUSLOESER=    < 61108 1 2 0 >
+S7UP_AVFDLOGIKZEIT=  < 61102 1 2 0 >
+
+S7UP_AFEFBBLKNR=     < 6109F 1 2 0 >
+S7UP_AFEDBBLKNR=     < 610A0 1 2 0 >
+
+S7UP_AEEFBBLKNR=     < 610A1 1 2 0 >
+S7UP_AEEDBBLKNR=     < 610A2 1 2 0 >
+
+S7UP_AAWFBBLKNR=     < 61078 1 2 0 >
+S7UP_AAWDBBLKNR=     < 61079 1 2 0 >
+
+S7UP_AALARMQUITT=    < 610A3 1 2 0 >
+S7UP_AMELDEQUELLE=   < 61004 5 0 0 >
+
+;Pdiag Object Attribute
+
+S7UP_ASONR=          < 61061 1 2 0 >
+S7UP_ABILDNR=        < 61062 1 2 0 >
+S7UP_ABILDPOSNR=     < 61063 1 2 0 >
+S7UP_AVSOURCEBLOCK=  < 61106 1 2 0 >
+
+S7UP_TEXTRI1=        < 6107B 1 2 0 >
+S7UP_TEXTRI2=        < 6107C 1 2 0 >
+S7UP_ASOEL1=         < 6107D 1 2 0 >
+S7UP_ASOEL2=         < 6107E 1 2 0 >
+
+S7UP_AMWPRIONR=      < 61065 1 2 0 >
+
+S7UP_AANWFBCALL=     < 61058 3 0 0 >
+S7UP_AMWPRIOAKTIV=   < 61059 3 0 0 >
+
+S7UP_AVABBO= <61110 100001 2 0>
+S7UP_AVAUSO= <61111 100001 2 0>
+
+;Pdiag Applikation: Interne Attribute
+
+S7PD_AROOTNAME= < 80000001 1 0 0 > 
+
+;Quadruddel - Attribute
+
+S7PD_AGROUPNAME= < 80000002 1 0 0 >
+S7PD_AFEFBNUM=   < 80000003 1 0 0 >
+S7PD_AFEDBNUM=   < 80000004 1 0 0 >
+S7PD_AEWFBNUM=   < 80000005 1 0 0 >
+S7PD_AEWDBNUM=   < 80000006 1 0 0 >
+
+;Name der uebergeordneten Einheiten bei verschobenen Einheiten
+
+S7PD_ANAME=          < 80001001 8000001 2 0 >
+S7PD_AVSOURCEBLOCK=  <80061106 1 2 0 >
+
+;Name der Gruppe fuer die Einheit, erstmal Attribut Gruppennummer lesen
+S7PD_AGROUP= 	 < 8006107A 6 1 0 >
+
+
+;----------------------------------
+;Root: Pdiag-Header (Koffer)
+;----------------------------------
+[00161001]
+
+layout1=koffer1
+
+;----------------------------------
+;Root: Bausteinbehaelter
+;----------------------------------
+[00116001]
+
+layout1=baustein1
+export1=csv00116001
+
+;----------------------------------
+;Root: Einheit
+;----------------------------------
+[00161101]
+
+layout1=einheit1
+export1=csv00161101
+
+;----------------------------------
+;Root: Verschobene Einheit
+;----------------------------------
+[80161101]
+
+layout1=einheit2
+export1=csv00161101
+
+;----------------------------------
+;Root: Fdef
+;----------------------------------
+[00161102]
+
+layout1=fdef1
+export1=csv00161102
+
+;----------------------------------
+;Root: Template
+;----------------------------------
+[00161FFE]
+
+layout1=template1
+
+;----------------------------------
+;Root: Bewegung
+;----------------------------------
+[00161103]
+
+layout1=bewegung1
+export1=csv00161103
+
+;----------------------------------
+;Root: Zustand
+;----------------------------------
+[00161106]
+
+layout1=zustand1
+export1=csv00161106
+
+;----------------------------------
+;Root: Transition
+;----------------------------------
+[00161105]
+
+layout1=transition1
+export1=csv00161105
+
+
+;----------------------------------
+;Root: Schritt
+;----------------------------------
+[00161104]
+
+layout1=schritt1
+export1=csv00161104
+
+;----------------------------------
+;Root: Aktions Fehlerdef.
+;----------------------------------
+[00161108]
+
+layout1=aktionsfdef1
+export1=csv00161108
+
+
+;----------------------------------
+;Print Descript: Pdiag-Header
+;----------------------------------
+
+[koffer1]
+
+000=<S:>
+001=<F:B>Prozessdiagnose - Projektierung
+002=<S:>
+003=<F:I>Reservierte Bausteinnamen
+
+004=<W:1>
+005=<S:>
+006=Gruppe:<P:31><V:S7PD_AGROUPNAME>
+007=<I:3>Fehlererkennung:<P:31>FB <V:S7PD_AFEFBNUM><P:43>DB <V:S7PD_AFEDBNUM>
+008=<I:3>Erstwerte/Statuserfassung:<P:31>FB <V:S7PD_AEWFBNUM><P:43>DB <V:S7PD_AEWDBNUM>
+009=<W:1>
+
+010=<G:S7UP_AANWFBCALL 0 13>
+011=Anwenderbaustein:<P:31>FB <V:S7UP_AAWFBBLKNR><P:43>DB <V:S7UP_AAWDBBLKNR>
+012=<J:14>
+013=Anwenderbaustein:<P:31>---
+014=<S:>
+015=<F:I>Reservierte Adressen
+016=<S:>
+017=<G:S7UP_AMWPRIOAKTIV 0 20>
+018=Sammelpriorität:<P:31>MW <V:S7UP_AMWPRIONR>
+019=<J:21>
+020=Sammelpriorität:<P:31>---
+021=<S:>
+022=Ausschlussoperanden: <P:31><V:S7UP_AVAUSO>
+023=<S:>
+024=Abbruchoperanden:<P:31><V:S7UP_AVABBO>
+025=<S>
+
+----------------------------------
+;Print Descript: Bausteinbehaelter
+;----------------------------------
+
+[baustein1]
+
+000=<S:>
+001=<F:B>Bausteinbehälter:<P:24><F:B><V:S7UP_ANAME>
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+006=<S:>
+
+;----------------------------------
+;Print Descript: Einheit
+;----------------------------------
+
+[einheit1]
+
+000=<S:>
+001=<F:B>Einheit:<P:24><F:B>[<V:S7UP_AVSOURCEBLOCK>] <V:S7UP_ANAME>
+002=Gruppe:<P:24><V:S7PD_AGROUP>
+003=Autor:<P:24><V:S7UP_ACREATOR>
+004=Erstellt am:<P:24><V:S7UP_ACRDATE>
+005=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+006=Kommentar:<P:24><V:S7UP_ACOMMENT>
+007=<S:>
+008=<F:I>Attribute
+009=<S:>
+010=<L:3,30;35>
+011<S:>
+
+;----------------------------------
+;Print Descript: Verschobene Einheit
+;----------------------------------
+
+[einheit2]
+
+000=<S:>
+001=<F:B>Einheit:<P:24><F:B>[<V:S7UP_AVSOURCEBLOCK>] <V:S7UP_ANAME>
+002=Gruppe:<P:24><V:S7PD_AGROUP>
+003=<F:I>Verschoben unter:<P:24>[<V:S7PD_AVSOURCEBLOCK>] <V:S7PD_ANAME>
+004=Autor:<P:24><V:S7UP_ACREATOR>
+005=Erstellt am:<P:24><V:S7UP_ACRDATE>
+006=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+007=Kommentar:<P:24><V:S7UP_ACOMMENT>
+008=<S:>
+009=<F:I>Attribute
+010=<S:>
+011=<L:3,30;35>
+012<S:>
+
+
+;----------------------------------
+;Print Descript: Fdef
+;----------------------------------
+
+[fdef1]
+
+000=<S:>
+001=<F:B>Fehlerdefinition:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+008=<S:>
+009=Diagnoseeinstiegsoperand
+010=<I:3>Absolutoperand:<P:24><V:S7UP_AOPABS>
+011=<I:3>Symbol:<P:24><V:S7UP_AVUSERDEO>
+
+012=<S:>
+013=Diagnoseeigenschaften
+014=<I:3>Fehlererkennung:<P:24><V:S7UP_AFDFEHERK>
+015=<I:3>Erstwerterfassung:<P:24><V:S7UP_AFDEWERF>
+016=<I:3>Kriterienanalyse:<P:24><V:S7UP_AFDKRITPOS>
+
+017=<G:S7UP_AFEHLTYP_0  3  40>
+018=<G:S7UP_AFEHLTYP_0  1  50>
+019=<G:S7UP_AFEHLTYP_0  2  50>
+020=<G:S7UP_AFEHLTYP_0 10  50>
+021=<G:S7UP_AFEHLTYP_0 11  50>
+022=<G:S7UP_AFEHLTYP_0  4  60>
+023=<G:S7UP_AFEHLTYP_0  5  70>
+024=<G:S7UP_AFEHLTYP_0  6  80>
+025=<G:S7UP_AFEHLTYP_0  7  90>
+026=<J:150>
+
+040=<S:>
+041=Überwachung
+042=<I:3><V:S7UP_AVFDLOGIKUSER>
+043=<J:150>
+
+050=<S:>
+051=Überwachung
+052=<I:3>Ereignis:<P:24,-1><V:S7UP_AFEHLTYP_2>
+053=<I:3>Zeit:<P:24><V:S7UP_AFDLOGIK>
+054=<J:150>
+
+060=<S:>
+061=Überwachung
+062=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+063=<I:3>Anlaufzeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+064=<J:150>
+
+070=<S:>
+071=Überwachung
+072=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+073=<I:3>Aktionszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+074=<J:150>
+
+080=<S:>
+081=Überwachung
+082=<I:3>Lagemerker:<P:24,-1><V:S7UP_AVAUSLOESER>
+083=<I:3>Reaktionszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+084=<J:150>
+
+090=<S:>
+091=Überwachung
+092=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+093=<I:3>Verriegelungsszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+094=<J:150>
+
+150=<S:>
+151=Überwachungsstatus
+152=<I:3>Absolutoperand:<P:24><V:S7UP_ARBITABS>
+153=<I:3>Symbol:<P:24><V:S7UP_AVUSERARBIT>
+154=<J:160>
+
+160=<S:>
+161=Quittierstatus
+162=<I:3>Absolutoperand:<P:24><V:S7UP_AQBITABS>
+163=<I:3>Symbol:<P:24><V:S7UP_AVUSERAQBIT>
+164=<J:200>
+
+200=<S:>
+201=Melden
+202=<I:3>Meldenr.:<P:24><V:S7UP_AVMELDNR>
+203=<I:3>Priorität:<P:24><V:S7UP_AVMELDPRIO>
+204=<I:3>Quittung:<P:24><V:S7UP_AALARMQUITT>
+
+205=<G:S7UP_AMELDEQUELLE 0 210>
+206=<G:S7UP_AMELDEQUELLE 1 212>
+207=<G:S7UP_AMELDEQUELLE 2 214>
+208=<G:S7UP_AMELDEQUELLE 3 216>
+209=<J:210>
+
+210=<I:3>Textquelle:<P:24>---
+211=<J:220>
+212=<I:3>Textquelle:<P:24>Meldeprojektierung
+213=<J:220>
+214=<I:3>Textquelle:<P:24>Symbolname als Meldung
+215=<J:220>
+216=<I:3>Textquelle:<P:24>Symbolkommentar als Meldung
+217=<J:220>
+
+220=<I:3>Text:<P:24><V:S7UP_AVMELDTEXT>
+221=<S:>
+222=<J:230>
+
+230=<G:S7UP_APWAKTIV 0 235>
+
+231=Begleitwert
+232=<I:3>Absolutoperand:<P:24><V:S7UP_APWOPABS>
+233=<I:3>Symbol:<P:24><V:S7UP_APWOPSYM>
+234=<J:240>
+
+235=Begleitwerte erfassen:<P:24><V:S7UP_APWAKTIV_STR> 
+236=<J:240>
+
+240=<S:>
+
+
+;----------------------------------
+;Print Descript: Template
+;----------------------------------
+
+[template1]
+
+
+000=<S:>
+001=<F:B>Vorlage:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+;DEO gibt es in einer Vorlage nicht!
+;008=<S:>
+;009=Diagnoseeinstiegsoperand
+;010=<I:3>Absolutoperand:<P:24><V:S7UP_AOPABS>
+;011=<I:3>Symbol:<P:24><V:S7UP_AVUSERDEO>
+
+008=<S:>
+009=Diagnoseeigenschaften
+010=<I:3>Fehlererkennung:<P:24><V:S7UP_AFDFEHERK>
+011=<I:3>Erstwerterfassung:<P:24><V:S7UP_AFDEWERF>
+012=<I:3>Kriterienanalyse:<P:24><V:S7UP_AFDKRITPOS>
+
+013=<G:S7UP_AFEHLTYP_0  3  40>
+014=<G:S7UP_AFEHLTYP_0  1  50>
+015=<G:S7UP_AFEHLTYP_0  2  50>
+016=<G:S7UP_AFEHLTYP_0 10  50>
+017=<G:S7UP_AFEHLTYP_0 11  50>
+018=<G:S7UP_AFEHLTYP_0  4  60>
+019=<G:S7UP_AFEHLTYP_0  5  70>
+020=<G:S7UP_AFEHLTYP_0  6  80>
+021=<G:S7UP_AFEHLTYP_0  7  90>
+022=<J:150>
+
+040=<S:>
+041=Überwachung
+042=<I:3><V:S7UP_AVFDLOGIKUSER>
+043=<J:150>
+
+050=<S:>
+051=Überwachung
+052=<I:3>Ereignis:<P:24,-1><V:S7UP_AFEHLTYP_2>
+053=<I:3>Zeit:<P:24><V:S7UP_AFDLOGIK>
+054=<J:150>
+
+060=<S:>
+061=Überwachung
+062=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+063=<I:3>Anlaufzeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+064=<J:150>
+
+070=<S:>
+071=Überwachung
+072=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+073=<I:3>Aktionszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+074=<J:150>
+
+080=<S:>
+081=Überwachung
+082=<I:3>Lagemerker:<P:24,-1><V:S7UP_AVAUSLOESER>
+083=<I:3>Reaktionszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+084=<J:150>
+
+090=<S:>
+091=Überwachung
+092=<I:3>Auslöser:<P:24,-1><V:S7UP_AVAUSLOESER>
+093=<I:3>Verriegelungsszeit:<P:24><V:S7UP_AVFDLOGIKZEIT>
+094=<J:150>
+
+150=<S:>
+151=Überwachungsstatus
+152=<I:3>Absolutoperand:<P:24><V:S7UP_ARBITABS>
+153=<I:3>Symbol:<P:24><V:S7UP_AVUSERARBIT>
+154=<J:160>
+
+160=<S:>
+161=Quittierstatus
+162=<I:3>Absolutoperand:<P:24><V:S7UP_AQBITABS>
+163=<I:3>Symbol:<P:24><V:S7UP_AVUSERAQBIT>
+164=<J:200>
+
+200=<S:>
+201=Melden
+;Vorlagen haben keine Meldenummer
+;202=<I:3>Meldenr.:<P:24><V:S7UP_AVMELDNR>
+202=<I:3>Priorität:<P:24><V:S7UP_AVMELDPRIO>
+203=<I:3>Quittung:<P:24><V:S7UP_AALARMQUITT>
+
+204=<G:S7UP_AMELDEQUELLE 0 210>
+205=<G:S7UP_AMELDEQUELLE 1 212>
+206=<G:S7UP_AMELDEQUELLE 2 214>
+207=<G:S7UP_AMELDEQUELLE 3 216>
+208=<J:210>
+
+210=<I:3>Textquelle:<P:24>---
+211=<J:220>
+212=<I:3>Textquelle:<P:24>Meldeprojektierung
+213=<J:220>
+214=<I:3>Textquelle:<P:24>Symbolname als Meldung
+215=<J:220>
+216=<I:3>Textquelle:<P:24>Symbolkommentar als Meldung
+217=<J:220>
+
+220=<I:3>Text:<P:24><V:S7UP_AVMELDTEXT>
+221=<S:>
+222=<J:230>
+
+230=<G:S7UP_APWAKTIV 0 235>
+
+231=Begleitwert
+232=<I:3>Absolutoperand:<P:24><V:S7UP_APWOPABS>
+233=<I:3>Symbol:<P:24><V:S7UP_APWOPSYM>
+234=<J:240>
+
+235=Begleitwerte erfassen:<P:24><V:S7UP_APWAKTIV_STR> 
+236=<J:240>
+
+240=<S:>
+
+;----------------------------------
+;Print Descript: Bewegung
+;----------------------------------
+
+[bewegung1]
+
+000=<S:>
+001=<F:B>Bewegung:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+006=<S:>
+007=<F:I>Attribute
+008=<S:>
+009=<L:3,30;35>
+010<S:>
+
+;----------------------------------
+;Print Descript: Zustand
+;----------------------------------
+
+[zustand1]
+
+000=<S:>
+001=<F:B>Zustand:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+006=<S:>
+007=Attribute
+008=<I:3>Zustandsnummer:<P:24><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: Transition
+;----------------------------------
+
+[transition1]
+
+000=<S:>
+001=<F:B>Transition:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+006=<S:>
+007=Attribute
+008=<I:3>Transitionsnummer:<P:24><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: Schritt
+;----------------------------------
+
+[schritt1]
+
+000=<S:>
+001=<F:B>Schritt:<P:24><F:B><V:S7UP_ANAME> 
+002=Autor:<P:24><V:S7UP_ACREATOR>
+003=Erstellt am:<P:24><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:24><V:S7UP_ALMDATE>
+005=Kommentar:<P:24><V:S7UP_ACOMMENT>
+006=<S:>
+007=Attribute
+008=<I:3>Schrittnummer:<P:24><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: Aktions Fehlerdef.
+;----------------------------------
+
+[aktionsfdef1]
+
+000=<S:>
+001=<F:B>Aktions Fehlerdefinition:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Erstellt am:<P:27><V:S7UP_ACRDATE>
+004=Zuletzt geändert am:<P:27><V:S7UP_ALMDATE>
+005=Kommentar:<P:27><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+008=<S:>
+009=Diagnoseeigenschaften
+010=<I:3>Kriterienanalyse:<P:24><V:S7UP_AFDKRITPOS>
+
+011=<S:>
+012=Überwachung
+013=<I:3><V:S7UP_AFDLOGIK>
+
+014=<S:>
+015=Melden
+016=<I:3>Meldenr.:<P:24><V:S7UP_AVMELDNR>
+017=<I:3>Text:<P:24><V:S7UP_AVMELDTEXT>
+018=<S:>
+
+;----------------------------------
+;Root: Objects to export
+;----------------------------------
+[ObjHead]
+000=csv00116001
+001=csv00161101
+002=csv00161103
+003=csv00161106
+004=csv00161105
+005=csv00161104
+006=csv00161102.1
+007=csv00161102.2
+008=csv00161102.3
+009=csv00161102.4
+010=csv00161102.5
+011=csv00161102.6
+012=csv00161108
+
+;----------------------------------
+;Export Descript: Bausteinbehaelter
+;----------------------------------
+
+[csv00116001]
+headlst=head00116001
+attrlst=attr00116001
+
+;Export : Bausteinbehaelter Attribut List
+
+[attr00116001]
+000=Bausteinbehälter;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Einheit
+;----------------------------------
+
+[csv00161101]
+headlst=head00161101
+attrlst=attr00161101
+
+;Export : Einheit Attribut List
+
+[attr00161101]
+000=Einheit;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Bewegung
+;----------------------------------
+
+[csv00161103]
+headlst=head00161103
+attrlst=attr00161103
+
+;Export : Bewegung Attribut List
+
+[attr00161103]
+000=Bewegung;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Zustand
+;----------------------------------
+
+[csv00161106]
+headlst=head00161106
+attrlst=attr00161106
+
+;Export : Zustand Attribut List
+
+[attr00161106]
+000=Zustand;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Transition
+;----------------------------------
+
+[csv00161105]
+headlst=head00161105
+attrlst=attr00161105
+
+;Export : Transition Attribut List
+
+[attr00161105]
+000=Transition;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<V:S7UP_ASONR>;
+009=<R:><N:>
+
+;----------------------------------
+;Export Descript: Schritt
+;----------------------------------
+
+[csv00161104]
+headlst=head00161104
+attrlst=attr00161104
+
+;Export : Schritt Attribut List
+
+[attr00161104]
+000=Schritt;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<V:S7UP_ASONR>;
+009=<R:><N:>
+
+;----------------------------------
+;Export Descript: Fdef
+;----------------------------------
+
+[csv00161102.1]
+headlst=head00161102.1
+[csv00161102.2]
+headlst=head00161102.2
+[csv00161102.3]
+headlst=head00161102.3
+[csv00161102.4]
+headlst=head00161102.4
+[csv00161102.5]
+headlst=head00161102.5
+[csv00161102.6]
+headlst=head00161102.6
+
+[csv00161102]
+;headlst=head00161102
+attrlst=attr00161102
+
+;Export : Fdef Attribut List
+
+[attr00161102]
+; switch : Ueberwachung
+000=<G:S7UP_AFEHLTYP_0  3 5; 1 10; 2 10; 10 10; 11 10; 4 15; 5 20; 6 25; 7 30>
+001=<J:05>
+
+005=Allg.Überwachung;
+006=<J:40>
+
+010=Operandenüberwachung;
+011=<J:40>
+
+015=Anlaufüberwachung;
+016=<J:40>
+
+020=Aktionsüberwachung;
+021=<J:40>
+
+025=Reaktionsüberwachung;
+026=<J:40>
+
+030=Verriegelungsüberwachung;
+031=<J:40>
+
+040=<V:S7UP_ANAME>;
+041=<V:S7UP_ACREATOR>;
+042=<V:S7UP_ACRDATE_D>;
+043=<V:S7UP_ACRDATE_T>;
+044=<V:S7UP_ALMDATE_D>;
+045=<V:S7UP_ALMDATE_T>;
+046=<V:S7UP_ACOMMENT>;
+047=<J:50>
+
+050=<V:S7UP_AVMELDNR>;
+051=<V:S7UP_AVMELDPRIO>;
+052=<V:S7UP_AALARMQUITT>;
+053=<V:S7UP_AVMELDTEXT>;
+
+054=<V:S7UP_AOPABS>;
+055=<V:S7UP_AVUSERDEO>;
+056=<V:S7PD_AROOTNAME>;
+
+057=<V:S7UP_AFDFEHERK>;
+058=<V:S7UP_AFDEWERF>;
+059=<V:S7UP_AFDKRITPOS>;
+060=<J:70>
+
+; switch : Ueberwachung
+070=<G:S7UP_AFEHLTYP_0  3  80; 1 90; 2 90; 10 90; 11 90; 4 100; 5 110; 6 120; 7 130>
+071=<J:80>
+
+; Allgemeine Ueberwachung
+080=<V:S7UP_AVFDLOGIKUSER>;
+081=<J:500>
+
+; Operanden Ueberwachung
+090=<V:S7UP_AFEHLTYP_2>;
+091=<V:S7UP_AFDLOGIK>;
+092=<J:500>
+
+; Anlauf Ueberwachung
+100=<V:S7UP_AVAUSLOESER>;
+101=<V:S7UP_AVFDLOGIKZEIT>;
+102=<J:500>
+
+; Aktion Ueberwachung
+110=<V:S7UP_AVAUSLOESER>;
+111=<V:S7UP_AVFDLOGIKZEIT>;
+112=<J:500>
+
+; Reaktion Ueberwachung
+120=<V:S7UP_AVAUSLOESER>;
+121=<V:S7UP_AVFDLOGIKZEIT>;
+122=<J:500>
+
+; Verriegelung Ueberwachung
+130=<V:S7UP_AVAUSLOESER>;
+131=<V:S7UP_AVFDLOGIKZEIT>;
+132=<J:500>
+
+500=<V:S7UP_APWOPABS>;
+501=<V:S7UP_APWOPSYM>;
+
+502=<R:><N:>
+
+;----------------------------------
+;Export Descript: Aktions Fehlerdef.
+;----------------------------------
+
+[csv00161108]
+headlst=head00161108
+attrlst=attr00161108
+
+;Export : Aktions Fdef Attribut List
+
+[attr00161108]
+000=Aktionsfehler;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+
+008=<V:S7UP_AVMELDNR>;
+009=<V:S7UP_AVMELDTEXT>;
+
+010=<V:S7UP_AFDKRITPOS>;
+011=<V:S7UP_AFDLOGIK>;
+012=<R:><N:>
+
+
+;----------------------------------
+;Export : Attribut Names
+;----------------------------------
+
+;Bausteincontainer
+[head00116001]
+000=C:Bausteinbehälter;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=<R:><N:>
+
+;Einheit
+[head00161101]
+000=C:Einheit;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=<R:><N:>
+
+;Bewegung
+[head00161103]
+000=C:Bewegung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=<R:><N:>
+
+;Zustand
+[head00161106]
+000=C:Zustand;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=<R:><N:>
+
+;Transition
+[head00161105]
+000=C:Transition;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Transitionsnummer;
+009=<R:><N:>
+
+;Schritt
+[head00161104]
+000=C:Schritt;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Schrittnummer;
+009=<R:><N:>
+
+;Fehlerdefinition
+[head00161102.1]
+000=C:Allg.Überwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Überwachungslogik;
+
+019=Begleitwert(abs);
+020=Begleitwert(sym);
+021=<R:><N:>
+
+[head00161102.2]
+000=C:Operandenüberwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Ereignis;
+019=Zeit;
+
+020=Begleitwert(abs);
+021=Begleitwert(sym);
+022=<R:><N:>
+
+
+[head00161102.3]
+000=C:Anlaufüberwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Auslöser;
+019=Anlaufzeit;
+
+020=Begleitwert(abs);
+021=Begleitwert(sym);
+022=<R:><N:>
+
+
+[head00161102.4]
+000=C:Aktionsüberwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Auslöser;
+019=Aktionszeit;
+
+020=Begleitwert(abs);
+021=Begleitwert(sym);
+022=<R:><N:>
+
+
+[head00161102.5]
+000=C:Reaktionsüberwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Lagemerker;
+019=Reaktionszeit;
+
+020=Begleitwert(abs);
+021=Begleitwert(sym);
+022=<R:><N:>
+
+
+[head00161102.6]
+000=C:Verriegelungsüberwachung;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Priorität;
+010=Quittung;
+011=Meldetext;
+012=Deo(abs);
+013=Deo(sym);
+014=Bst-Name;
+015=Fehlererkennung;
+016=Erstwerterfassung;
+017=Kriterienanalyse;
+
+018=Auslöser;
+019=Verriegelungsszeit;
+
+020=Begleitwert(abs);
+021=Begleitwert(sym);
+022=<R:><N:>
+
+
+;Aktionsfehler
+[head00161108]
+000=C:Aktionsfehler;
+001=Name;
+002=Autor;
+003=Erstellt Datum;
+004=Erstellt Zeit;
+005=Geändert Datum;
+006=Geändert Zeit;
+007=Kommentar;
+008=Meldenummer;
+009=Meldetext;
+010=Kriterienanalyse;
+011=Überwachungslogik;
+012=<R:><N:>
+013=<R:><N:>

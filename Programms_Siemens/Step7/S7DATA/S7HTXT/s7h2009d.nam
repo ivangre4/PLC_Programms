@@ -1,0 +1,100 @@
+Comment=Módulos de salida digital, Watchdog para ET 200iSP
+
+; Katalog-Objekte
+[2366941]
+KatEntryName=DO SD 'H'
+InfoText=Módulos de salida digital para ET 200iSP; Shut Down 'H'
+SHORTNAME=DO SD 'H'
+
+[2366942]
+KatEntryName=DO SD 'L'
+InfoText=Módulos de salida digital para ET 200iSP; Shut Down 'L'
+SHORTNAME=DO SD 'L'
+
+[2366943]
+KatEntryName=DO SD 'L' x
+InfoText=Módulos de salida digital para ET 200iSP; Shut Down 'L', desconexión externa desactivable
+SHORTNAME=DO SD 'L' x
+
+
+; Baugruppen
+[2366923]
+KatEntryName=4DO DC23,1V/20mA SD 'H'
+InfoText=Módulo de salida digital 4DO DC23,1V/20mA Shut Down 'H'
+SHORTNAME=4DO DC23,1V/20mA SD 'H'
+
+[2366924]
+KatEntryName=4DO DC17,4V/27mA SD 'H'
+InfoText=Módulo de salida digital 4DO DC17,4V/27mA Shut Down 'H'
+SHORTNAME=4DO DC17,4V/27mA SD 'H'
+
+[2366925]
+KatEntryName=4DO DC17,4V/40mA SD 'H'
+InfoText=Módulo de salida digital DO DC17,4V/40mA Shut Down 'H'
+SHORTNAME=4DO DC17,4V/40mA SD 'H'
+
+[2366926]
+KatEntryName=4DO DC23,1V/20mA SD 'L'x
+InfoText=Módulo de salida digital 4DO DC23,1V/20mA Shut Down 'L', desconexión externa desactivable
+SHORTNAME=4DO DC23,1V/20mA SD 'L'x
+
+[2366927]
+KatEntryName=4DO DC17,4V/27mA SD 'L'x
+InfoText=Módulo de salida digital 4DO DC17,4V/27mA Shut Down 'L', desconexión externa desactivable
+SHORTNAME=4DO DC17,4V/27mA SD 'L'x
+
+[2366928]
+KatEntryName=4DO DC17,4V/40mA SD 'L'x
+InfoText=Módulo de salida digital 4DO DC17,4V/40mA Shut Down 'L', desconexión externa desactivable
+SHORTNAME=4DO DC17,4V/40mA SD 'L'x
+
+[2366985]
+KatEntryName=4DO DC23,1V/20mA SD 'L'
+InfoText=Módulo de salida digital 4DO DC23,1V/20mA Shut Down 'L'
+SHORTNAME=4DO DC23,1V/20mA SD 'L'
+
+[2366986]
+KatEntryName=4DO DC17,4V/27mA SD 'L'
+InfoText=Módulo de salida digital 4DO DC17,4V/27mA Shut Down 'L'
+SHORTNAME=4DO DC17,4V/27mA SD 'L'
+
+[2366987]
+KatEntryName=4DO DC17,4V/40mA SD 'L'
+InfoText=Módulo de salida digital 4DO DC17,4V/40mA Shut Down 'L'
+SHORTNAME=4DO DC17,4V/40mA SD 'L'
+
+[2366930]
+KatEntryName=Watchdog
+InfoText=Mópdulo Watchdog, Emisión de una alimentación intrínsicamente segura
+SHORTNAME=Watchdog
+
+;----------------- neue Module in V2.0 ----------------------
+[2366397]
+KatEntryName=4DO DC17,4V/40mA SD 'H'
+InfoText=Módulo de salida digital 4DO DC17,4V/40mA Shut Down 'H'
+SHORTNAME=4DO DC17,4V/40mA SD 'H'
+
+[2366398]
+KatEntryName=4DO DC17,4V/40mA SD 'L'
+InfoText=Módulo de salida digital 4DO DC17,4V/40mA Shut Down 'L'
+SHORTNAME=4DO DC17,4V/40mA SD 'L'
+
+[2366399]
+KatEntryName=4DO DC17,4V/40mA SD 'L'x
+InfoText=Módulo de salida digital 4DO DC17,4V/40mA Shut Down 'L', desconexión externa desactivable
+SHORTNAME=4DO DC17,4V/40mA SD 'L'x
+
+[2366400]
+KatEntryName=4DO DC25,5V/22mA SD 'H'
+InfoText=Módulo de salida digital 4DO DC25,5V/22mA Shut Down 'H'
+SHORTNAME=4DO DC25,5V/22mA SD 'H'
+
+[2366401]
+KatEntryName=4DO DC25,5V/22mA SD 'L'
+InfoText=Módulo de salida digital 4DO DC25,5V/22mA Shut Down 'L'
+SHORTNAME=4DO DC25,5V/22mA SD 'L'
+
+[2366402]
+KatEntryName=4DO DC25,5V/22mA SD 'L'x
+InfoText=Módulo de salida digital 4DO DC25,5V/22mA Shut Down 'L', desconexión externa desactivable
+SHORTNAME=4DO DC25,5V/22mA SD 'L'x

@@ -1,0 +1,1524 @@
+@DB_TYP CP3425DP  V1.0  TIS
+@CONVERTER        V1.0
+@LANGUAGE         ENGLISH
+
+# NCM ASCII Converter Rule File for CP 3525
+# Copyright (C) Siemens AG 1997, 1998  All Rights Reserved. Confidential
+# A&D PT2 
+
+# ****************************************************************************
+# Systemgrenzen
+# ****************************************************************************
+SysProperties$NAM             _O||||
+SysProperties
+  {
+  BTRV_CLASS_A_HEADER
+    {
+    Language        EM|NCM|16|NCM(16)       # Erstellungssprache (KEY) [language]
+    BlockType       WC|0x000B|||            # Type of the block (KEY) [bsttyp]
+    BlockNumber     WC|0xFFFF|||            # Block number (KEY). [bstnr]
+    Attribut        EM|STD|8|STD(1)         # AS header byte 3: loca- [attribut]
+    agres           BC|0|||                 # AS header byte 2: For
+    SdbLen          DC|0|||                 # whole SDB len
+    ParaBlkLen      WC|0|||                 # SDB len 1 of Parameterblock
+    Block2LNG       WC|0|||
+    Block3LNG       WC|0|||
+    locdatalen      WC|0|||                 # Local data length.
+    MMSTime         HM|0h000000000000|1|6|6 # MMS Time Stamp
+    timestamp2      HM|0h000000000000|1|6|6 # MMS Time Stamp
+    Password        HM|0h00000000|1|4|4     # password dont care
+    producer_name   AM|"SIEMENS"|1|8|8      # Company, department, etc
+    bl_family_name  AM|"SDB"|1|8|8          # Block family name.
+    bl_name         AM|"UNKNOWN"|1|8|8      # Block name.
+    version         BM|0|||                 # Version (release number)
+    res1            BM|0|||                 # Reserved.
+    checksum        WM|0|||                 # Checksum.
+    cpu_typ         DM|0|||                 # Type of PLC-CPU.
+    res2            DM|0|||                 # Reserved.
+    }                                       #
+
+  MaxSlave              WM|126|0|127|1           # maximale Anzahl an gleichzeitig angeschlossenen Slave
+  MaxMasterInputSize    WM|240|0|240|1           # maximale Groesse des Input IO Bereiches
+  MaxMasterOutputSize   WM|240|0|240|1           # maximale Groesse des Output IO Bereiches
+  DftModInLen           BM|1|0|4|1               # Default Input Laenge eines neuen Modules
+  DftModOutLen          BM|1|0|4|1               # Default Output Laenge eines neuen Modules
+  DftAlignment          AM|Byte|1|4|4            # Default Alignment eines neuen Modules
+  DftConsistency        AM|Value|1|5|5           # Default Konsistenz eines neuen Modules
+  DftInModName          AM|"xxxE"|1|24|24        # Default Input Module Name
+  DftOutModName         AM|"xxxA"|1|24|24        # Default Output Module Name
+  DftInOutModName       AM|"xxxX"|1|24|24        # Default InOutput Module Name
+  DftEmptyModName       AM|"Leerplatz"|1|24|24   # Default Leerplatz Module Name
+
+  # Watchdog AddOn Zeiten in [ ms]
+  TWdAdd9_6             WM|0x0000|0|0xffff|1     # bei 9.6    KBaud
+  TWdAdd19_2            WM|0x0000|0|0xffff|1     # bei 19.2   KBaud
+  TWdAdd93_75           WM|0x0000|0|0xffff|1     # bei 93.75  KBaud
+  TWdAdd187_5           WM|0x0000|0|0xffff|1     # bei 187.5  KBaud
+  TWdAdd500             WM|0x0000|0|0xffff|1     # bei 500    KBaud
+  TWdAdd1_5             WM|0x0000|0|0xffff|1     # bei 1500   KBaud
+  TWdAdd3_0             WM|0x0000|0|0xffff|1     # bei 3000   KBaud
+  TWdAdd6_0             WM|0x0000|0|0xffff|1     # bei 6000   KBaud
+  TWdAdd12              WM|0x0000|0|0xffff|1     # bei 12000  KBaud
+
+  # Granularitätsfaktor bei der Anzeige der DP Raktionszeit
+  GranFaktor            WM|1|0|0xffff|1
+
+  # DP Zeit Tabelle Ttab  _x ; x= Anzahl Slave ;
+  TTab_1                WM|00150|0|0xffff|1
+  TTab_2                WM|00180|0|0xffff|1
+  TTab_3                WM|00210|0|0xffff|1
+  TTab_4                WM|00240|0|0xffff|1
+  TTab_5                WM|00270|0|0xffff|1
+  TTab_6                WM|00300|0|0xffff|1
+  TTab_7                WM|00330|0|0xffff|1
+  TTab_8                WM|00360|0|0xffff|1
+  TTab_9                WM|00390|0|0xffff|1
+  TTab_10               WM|00420|0|0xffff|1
+  TTab_11               WM|00450|0|0xffff|1
+  TTab_12               WM|00480|0|0xffff|1
+  TTab_13               WM|00510|0|0xffff|1
+  TTab_14               WM|00540|0|0xffff|1
+  TTab_15               WM|00570|0|0xffff|1
+  TTab_16               WM|00600|0|0xffff|1
+  TTab_17               WM|00630|0|0xffff|1
+  TTab_18               WM|00660|0|0xffff|1
+  TTab_19               WM|00690|0|0xffff|1
+  TTab_20               WM|00720|0|0xffff|1
+  TTab_21               WM|00750|0|0xffff|1
+  TTab_22               WM|00780|0|0xffff|1
+  TTab_23               WM|00810|0|0xffff|1
+  TTab_24               WM|00840|0|0xffff|1
+  TTab_25               WM|00870|0|0xffff|1
+  TTab_26               WM|00900|0|0xffff|1
+  TTab_27               WM|00930|0|0xffff|1
+  TTab_28               WM|00960|0|0xffff|1
+  TTab_29               WM|00990|0|0xffff|1
+  TTab_30               WM|01020|0|0xffff|1
+  TTab_31               WM|01050|0|0xffff|1
+  TTab_32               WM|01080|0|0xffff|1
+  TTab_33               WM|01110|0|0xffff|1
+  TTab_34               WM|01140|0|0xffff|1
+  TTab_35               WM|01170|0|0xffff|1
+  TTab_36               WM|01200|0|0xffff|1
+  TTab_37               WM|01230|0|0xffff|1
+  TTab_38               WM|01260|0|0xffff|1
+  TTab_39               WM|01290|0|0xffff|1
+  TTab_40               WM|01320|0|0xffff|1
+  TTab_41               WM|01350|0|0xffff|1
+  TTab_42               WM|01380|0|0xffff|1
+  TTab_43               WM|01410|0|0xffff|1
+  TTab_44               WM|01440|0|0xffff|1
+  TTab_45               WM|01470|0|0xffff|1
+  TTab_46               WM|01500|0|0xffff|1
+  TTab_47               WM|01530|0|0xffff|1
+  TTab_48               WM|01560|0|0xffff|1
+  TTab_49               WM|01590|0|0xffff|1
+  TTab_50               WM|01620|0|0xffff|1
+  TTab_51               WM|01650|0|0xffff|1
+  TTab_52               WM|01680|0|0xffff|1
+  TTab_53               WM|01710|0|0xffff|1
+  TTab_54               WM|01740|0|0xffff|1
+  TTab_55               WM|01770|0|0xffff|1
+  TTab_56               WM|01800|0|0xffff|1
+  TTab_57               WM|01830|0|0xffff|1
+  TTab_58               WM|01860|0|0xffff|1
+  TTab_59               WM|01890|0|0xffff|1
+  TTab_60               WM|01920|0|0xffff|1
+  TTab_61               WM|01950|0|0xffff|1
+  TTab_62               WM|01980|0|0xffff|1
+  TTab_63               WM|02010|0|0xffff|1
+  TTab_64               WM|02040|0|0xffff|1
+  TTab_65               WM|02070|0|0xffff|1
+  TTab_66               WM|02100|0|0xffff|1
+  TTab_67               WM|02130|0|0xffff|1
+  TTab_68               WM|02160|0|0xffff|1
+  TTab_69               WM|02190|0|0xffff|1
+  TTab_70               WM|02220|0|0xffff|1
+  TTab_71               WM|02250|0|0xffff|1
+  TTab_72               WM|02280|0|0xffff|1
+  TTab_73               WM|02310|0|0xffff|1
+  TTab_74               WM|02340|0|0xffff|1
+  TTab_75               WM|02370|0|0xffff|1
+  TTab_76               WM|02400|0|0xffff|1
+  TTab_77               WM|02430|0|0xffff|1
+  TTab_78               WM|02460|0|0xffff|1
+  TTab_79               WM|02490|0|0xffff|1
+  TTab_80               WM|02520|0|0xffff|1
+  TTab_81               WM|02550|0|0xffff|1
+  TTab_82               WM|02580|0|0xffff|1
+  TTab_83               WM|02610|0|0xffff|1
+  TTab_84               WM|02640|0|0xffff|1
+  TTab_85               WM|02670|0|0xffff|1
+  TTab_86               WM|02700|0|0xffff|1
+  TTab_87               WM|02730|0|0xffff|1
+  TTab_88               WM|02760|0|0xffff|1
+  TTab_89               WM|02790|0|0xffff|1
+  TTab_90               WM|02820|0|0xffff|1
+  TTab_91               WM|02850|0|0xffff|1
+  TTab_92               WM|02880|0|0xffff|1
+  TTab_93               WM|02910|0|0xffff|1
+  TTab_94               WM|02940|0|0xffff|1
+  TTab_95               WM|02970|0|0xffff|1
+  TTab_96               WM|03000|0|0xffff|1
+  TTab_97               WM|03030|0|0xffff|1
+  TTab_98               WM|03060|0|0xffff|1
+  TTab_99               WM|03090|0|0xffff|1
+  TTab_100              WM|03120|0|0xffff|1
+  TTab_101              WM|03150|0|0xffff|1
+  TTab_102              WM|03180|0|0xffff|1
+  TTab_103              WM|03210|0|0xffff|1
+  TTab_104              WM|03240|0|0xffff|1
+  TTab_105              WM|03270|0|0xffff|1
+  TTab_106              WM|03300|0|0xffff|1
+  TTab_107              WM|03330|0|0xffff|1
+  TTab_108              WM|03360|0|0xffff|1
+  TTab_109              WM|03390|0|0xffff|1
+  TTab_110              WM|03420|0|0xffff|1
+  TTab_111              WM|03450|0|0xffff|1
+  TTab_112              WM|03480|0|0xffff|1
+  TTab_113              WM|03510|0|0xffff|1
+  TTab_114              WM|03540|0|0xffff|1
+  TTab_115              WM|03570|0|0xffff|1
+  TTab_116              WM|03600|0|0xffff|1
+  TTab_117              WM|03630|0|0xffff|1
+  TTab_118              WM|03660|0|0xffff|1
+  TTab_119              WM|03690|0|0xffff|1
+  TTab_120              WM|03720|0|0xffff|1
+  TTab_121              WM|03750|0|0xffff|1
+  TTab_122              WM|03780|0|0xffff|1
+  TTab_123              WM|03810|0|0xffff|1
+  TTab_124              WM|03850|0|0xffff|1
+  TTab_125              WM|03880|0|0xffff|1
+  TTab_126              WM|03410|0|0xffff|1
+
+  # Laufzeit der FW für die Bearbeitung eines zyklischen Global Control
+  Tg                    WM|00500|0|0xffff|1
+
+  # Typ des verwendeten ASIC / SPC2 = 1 ASPC2 = 2
+  ASIC_Typ              WM|1|0|0xffff|1
+
+  # Parameter fuer Busparameterberechnung SMART ( Universell )
+
+  DftBusPar_9_6_SMART$NAM _M||||           # Baudrate 9.6 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_9_6_SMART
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|40|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|10|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|2|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_19_2_SMART$NAM _M||||          # Baudrate 19.2 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_19_2_SMART
+    {
+    Tsl                 WM|120|35|4095|1   # Slot Time
+    MaxTsdr             WM|65|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|15|0|255|1      # Minimum Station Delay Time
+    Tset                WM|15|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|4|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_93_75_SMART$NAM _M||||         # Baudrate 93.75 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_93_75_SMART
+    {
+    Tsl                 WM|240|35|4095|1   # Slot Time
+    MaxTsdr             WM|200|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|45|0|255|1      # Minimum Station Delay Time
+    Tset                WM|45|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|20|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_187_5_SMART$NAM _M||||         # Baudrate 187.5 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_187_5_SMART
+    {
+    Tsl                 WM|400|35|4095|1   # Slot Time
+    MaxTsdr             WM|360|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|80|0|255|1      # Minimum Station Delay Time
+    Tset                WM|80|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|20|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_500_SMART$NAM _M||||           # Baudrate 500 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_500_SMART
+    {
+    Tsl                 WM|1000|35|4095|1  # Slot Time
+    MaxTsdr             WM|360|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|80|0|255|1      # Minimum Station Delay Time
+    Tset                WM|80|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|30|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_1_5_SMART$NAM _M||||           # Baudrate 1500 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_1_5_SMART
+    {
+    Tsl                 WM|3000|35|4095|1  # Slot Time
+    MaxTsdr             WM|980|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|150|0|255|1     # Minimum Station Delay Time
+    Tset                WM|80|0|1024|1     # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|50|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_3_0_SMART$NAM _M||||            # Baudrate 3000 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_3_0_SMART
+    {
+    Tsl                 WM|400|35|4095|1    # Slot Time
+    MaxTsdr             WM|250|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|5|0|1024|1       # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_6_0_SMART$NAM _M||||            # Baudrate 6000 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_6_0_SMART                      
+    {
+    Tsl                 WM|500|35|4095|1    # Slot Time
+    MaxTsdr             WM|350|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|10|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_12_0_SMART$NAM _M||||           # Baudrate 12000 KBaud SMART Berechnung Buchholz 1
+  DftBusPar_12_0_SMART
+    {
+    Tsl                 WM|750|35|4095|1    # Slot Time
+    MaxTsdr             WM|550|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|20|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  # Parameter fuer Busparameterberechnung FAST ( Standard )
+
+  DftBusPar_9_6_FAST$NAM _M||||            # Baudrate 9.6 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_9_6_FAST
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_19_2_FAST$NAM _M||||           # Baudrate 19.2 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_19_2_FAST
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_93_75_FAST$NAM _M||||          # Baudrate 93.75 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_93_75_FAST
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_187_5_FAST$NAM _M||||          # Baudrate 187.5 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_187_5_FAST
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_500_FAST$NAM _M||||            # Baudrate 500 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_500_FAST
+    {
+    Tsl                 WM|200|35|4095|1   # Slot Time
+    MaxTsdr             WM|100|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_1_5_FAST$NAM _M||||            # Baudrate 1500 KBaud FAST Berechnung Buchholz 2
+  DftBusPar_1_5_FAST
+    {
+    Tsl                 WM|300|35|4095|1   # Slot Time
+    MaxTsdr             WM|150|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    }
+
+  DftBusPar_3_0_FAST$NAM _M||||             # Baudrate 3000 KBaud FAST Berechnung Buchholz 1
+  DftBusPar_3_0_FAST
+    {
+    Tsl                 WM|400|35|4095|1    # Slot Time
+    MaxTsdr             WM|250|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|5|0|1024|1       # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    }
+
+  DftBusPar_6_0_FAST$NAM _M||||             # Baudrate 6000 KBaud FAST Berechnung Buchholz 1
+  DftBusPar_6_0_FAST
+    {
+    Tsl                 WM|500|35|4095|1    # Slot Time
+    MaxTsdr             WM|350|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|10|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    }
+
+  DftBusPar_12_0_FAST$NAM _M||||            # Baudrate 12000 KBaud FAST Berechnung Buchholz 1
+  DftBusPar_12_0_FAST
+    {
+    Tsl                 WM|750|35|4095|1    # Slot Time
+    MaxTsdr             WM|550|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|20|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    }
+
+
+  # Parameter fuer Busparameterberechnung DP Mono Master
+
+  DftBusPar_9_6_DPMONO$NAM _M||||          # Baudrate 9.6 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_9_6_DPMONO
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|385000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_19_2_DPMONO$NAM _M||||         # Baudrate 19.2 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_19_2_DPMONO
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|385000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_93_75_DPMONO$NAM _M||||        # Baudrate 93.75 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_93_75_DPMONO
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|750000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_187_5_DPMONO$NAM _M||||        # Baudrate 187.5 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_187_5_DPMONO
+    {
+    Tsl                 WM|100|35|4095|1   # Slot Time
+    MaxTsdr             WM|60|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|750000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_500_DPMONO$NAM _M||||          # Baudrate 500 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_500_DPMONO
+    {
+    Tsl                 WM|200|35|4095|1   # Slot Time
+    MaxTsdr             WM|100|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_1_5_DPMONO$NAM _M||||          # Baudrate 1500 KBaud DPMONO Berechnung Buchholz 3
+  DftBusPar_1_5_DPMONO
+    {
+    Tsl                 WM|300|35|4095|1   # Slot Time
+    MaxTsdr             WM|150|0|1024|1    # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1      # Minimum Station Delay Time
+    Tset                WM|1|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1        # Transmitter Fall Time
+    G                   BM|10|1|100|1      # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1    # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_3_0_DPMONO$NAM _M||||           # Baudrate 3000 KBaud DPMONO Berechnung Buchholz 1
+  DftBusPar_3_0_DPMONO
+    {
+    Tsl                 WM|400|35|4095|1    # Slot Time
+    MaxTsdr             WM|250|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|5|0|1024|1       # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_6_0_DPMONO$NAM _M||||           # Baudrate 6000 KBaud DPMONO Berechnung Buchholz 1
+  DftBusPar_6_0_DPMONO
+    {
+    Tsl                 WM|500|35|4095|1    # Slot Time
+    MaxTsdr             WM|350|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|10|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  DftBusPar_12_0_DPMONO$NAM _M||||          # Baudrate 12000 KBaud DPMONO Berechnung Buchholz 1
+  DftBusPar_12_0_DPMONO
+    {
+    Tsl                 WM|750|35|4095|1    # Slot Time
+    MaxTsdr             WM|550|0|1024|1     # Maximum Station Delay Time
+    MinTsdr             WM|11|0|255|1       # Minimum Station Delay Time
+    Tset                WM|20|0|1024|1      # Setup Time
+    Tqui                WM|0|0|15|1         # Transmitter Fall Time
+    G                   BM|10|1|100|1       # Gap Update Factor
+    RetryCtr            WM|1|0|0xffff|1     # Requester Send Retry Counter
+    Ttr                 DM|1000000|35|0xffffffff|1 # Target Rotation Time
+    }
+
+  }
+
+
+# ****************************************************************************
+# SDB for System-Parameter ( 0x7800 )
+# ****************************************************************************
+SystemSDB$NAM     _M||||                   # SDB for System-Parameter
+SystemSDB
+  {
+  BTRV_CLASS_A_HEADER
+	{
+	Language                EM|NCM|16|NCM(16)       # Erstellungssprache (KEY) [language]
+	BlockType               WC|0x000B|||            # Type of the block (KEY) [bsttyp]
+	BlockNumber             WC|0x7800|||            # Block number (KEY). [bstnr]
+	Attribut                EM|STD|8|STD(1)         # AS header byte 3: loca- [attribut]
+	agres                   BC|0|||                 # AS header byte 2: For
+	SystemSDB$LNG           DM||||                  # whole SDB len
+	SDBParameterblock$LNG   WM||||                  # SDB len 1 of Parameterblock
+	Block2$LNG              WM|0|||
+	Block3$LNG              WM|0|||
+	locdatalen              WC|0|||                 # Local data length.
+	MMSTime                 HM|0h000000000000|1|6|6 # MMS Time Stamp
+	timestamp2              HM|0h000000000000|1|6|6 # MMS Time Stamp
+	Password                HM|0h00000000|1|4|4     # password dont care
+	producer_name           AM|"SIEMENS"|1|8|8      # Company, department, etc
+	bl_family_name          AM|"SDB"|1|8|8          # Block family name.
+	bl_name                 AM|"UNKNOWN"|1|8|8      # Block name.
+	version                 BM|0|||                 # Version (release number)
+	res1                    BM|0|||                 # Reserved.
+	checksum                WM|0|||                 # Checksum.
+	cpu_typ                 DM|0|||                 # Type of PLC-CPU.
+	res2                    DM|0|||                 # Reserved.
+	}
+
+
+  SDBParameterblock$NAM  _M||||
+  SDBParameterblock
+	{
+
+	SDBIdentblock
+	{
+	SDBIdentblock$LNG      BM||||          # len is 14
+	PblNo                  BC|1|||         # Parameter Block Number is 1
+	BaugruppenTyp          WM|1|||         # like AS-BESY
+	SDBIdent               WM|0|||         # 0 is ident for System Parameter
+	LoadAttribut           BM|0|||         # load Attribute for SDB
+	BaugruppenID           BM|0|||         # like AS-BESY
+	CPUInterface           BM|0|||         # like AS-BESY
+	RemTSAP                WM|0|||         # remote TSAP
+	NextStaddr             BM|0|||         # address of next station
+	RemStaddr              BM|0|||         # address of end  station
+	Reserved               BM|0|||         # alignment on word bounday
+	}
+
+	BusParHeader                         # Busparameter Header
+	{
+	# Parameterblock
+	# ********
+	PblkNo1             BC|1|||        # Parameterblock Number
+	PblkVersion1        BC|0|||        # Version  0
+	BusParHeader$LNG    WM||||         # Parameterblock Length
+	# ********
+
+	# Are Busparameter local edited ?
+	LocalEdit                               EM|FALSE|8|FALSE(0)|TRUE(1)
+	*Were bus parameters edited locally?
+
+	# Maximum Amount Masters
+	MaxMaster<max.Masteranzahl>             BM|126|1|127|1
+	*Number of master modules in network
+
+	# Busparameter Calculation Algorithm
+	BusParCalculate<Busparameterberechnung> EM|Fast|8|Smart<universal>(1)|Fast<standard>(2)|DpMono<dpmono>(3)|UserDefined<userdefined>(0)
+	*Algorithm for calculating the bus parameters
+
+	# logical Subnet Profile
+	ProfileType<Profiltyp>                  BM|0|0|255|1
+	*Type of subnet
+
+	# maximale Anzahl Slave
+	MaxSlave<max.Slaveanzahl>               BM|10|0|126|1
+	*Number of DP slaves in the network
+
+	}
+
+	BusParBlk                                 # SINEC Busparameter Block
+	{
+	# Parameterblock
+	# ********
+	PblkNo2                  BC|2|||             # Parameterblock Number
+	PblkVersion2             BC|0|||             # Version  0
+	BusParBlk$LNG            WM||||              # Parameterblock Length
+	# ********
+
+	# Highest Station Adress
+	Hsa<HSA>                 BM|126|2|126|1
+	*HSA
+
+	# ( Parameter ignored )SINEC L2 Adress
+	Ts<L2-Adresse>           BM|4|1|126|1
+	*L2 address
+
+	# Stationtype ( Master or Slave )
+	StationType<Stationstyp>         EM|ACTIVE|16|ACTIVE(1)|PASSIVE(0)
+	*Station type
+
+	# Baudrate
+	BaudRate<Baudrate>       EM|"187.5"|16|"9.6"(0)
+					   |"19.2"(1)
+					   |"93.75"(2)
+					   |"187.5"(3)
+					   |"500.0"(4)
+					   |"1500.0"(7)
+	*Transmission rate
+
+	# ( Parameter ignored ) Medium Redundancy
+	MediumRed<mittl.Redundanz>           WC|0|||
+        *Medium redundancy
+
+	# ( Parameter ignored ) Requester Send Retry Counter
+	RetryCtr<max.Telegrammwiederholungen> WM|1|1|7|1
+	*Maximum retries
+
+	# Default Adress, used for Telegram without Adress Extension
+	DefaultSap<DefaultSAP>               BM|0xff|0|255|1
+	*Default SAP
+
+	# Network Connection Sap
+	NetwkConSap<NSAP>                    BM||0|255|1
+	*NSAP
+
+	# Slot Time
+	Tsl<TSL>                             WM||35|4095|1
+	*TSL [ bit times]
+
+	# Transmitter Fall Time
+	Tqui<TQUI>                           WM|0|0|15|1
+	*TQUI [ bit times]
+
+	# Setup Time
+	Tset<TSET>                           WM||0|1024|1
+	*TSET [ bit times]
+
+	# Minimum Station Delay Time
+	MinTsdr<min.TSDR>                    WM||0|255|1
+	*min.TSDR [ bit times]
+
+	# Maximum Station Delay Time
+	MaxTsdr<max.TSDR>                    WM||0|1024|1
+	*max.TSDR [ bit times]
+
+	# Target Rotation Time
+	Ttr<TTR>                             DM||35|16776960|1
+	*TTR [ bit times]
+
+	# Gap Update Factor
+	G<Gap-Aktualisierungsfaktor>         BM||1|100|1
+	*Gap update factor
+
+	# Always True
+	InRingDesired                        WC|1|||
+	*In the logical ring
+
+	# Always RS485
+	PhysLayer                            WC|0|||
+	*Physical bus characteristics
+	}
+
+	ReconvertPBLK
+	{
+	PblkNo4             BC|4|||                 # Parameterblock Number
+	PblkVersion4        BC|0|||                 # Version  0
+	ReconvertPBLK$LNG   WM||||                  # Parameterblock Length
+
+	RuleIdent           AC|"@@DB_TYP CP3425DP  V1.0 ENGLISH TIS"||| # corresponding Rule Ident
+	}
+
+	DpSlavePblk
+	{
+	PblkNo6             BC|6|||                 # Parameterblock Number
+	PblkVersion6        BC|0|||                 # Version  0
+	DpSlavePblk$LNG     WM||||                  # Parameterblock Length
+
+	# Activate Dp Slave Functionality
+	DpSlaveActivated    EM|MASTER|8|NODP(0)|MASTER(1)|SLAVE(2)
+	*DP functionality
+	}
+
+	# Erweiterte Lade Informationen
+	loadingPblk
+	{
+	PblkNo7             BC|7|||                 # Parameterblock Number
+	PblkVersion7        BC|0|||                 # Version  0
+	loadingPblk$LNG     WM||||                  # Parameterblock Length
+
+	# Interface über das geladen werden soll
+	Interface           EM|MPI|8|MPI(0)|SINEC_L2(1)
+	*Load interface
+
+	# MPI Adresse der CP
+	MpiAdr              BM|3|1|126|1
+	*Load MPI address of the CP
+
+	# L2 Adresse des CP zu dem übertragen werden soll
+	loadL2Adr           BM|1|1|126|1
+	*Load L2 address of the CP
+
+	# Soll der System SDB übertragen werden
+	loadSystemSDB       EM|TRUE|1|FALSE(0b0)|TRUE(0b1)
+	*Load bus parameters
+
+	# Soll der DP SDB geladen
+	loadDpSDB           EM|TRUE|1|FALSE(0b0)|TRUE(0b1)
+	*Load DP
+
+	# Reserve
+	loadReserve         IM|0b000000|0|6|6
+	}
+
+	}
+	Block2                      HO||0|65535|0
+	Block3                      HO||0|65535|0
+	Block4                      HO||0|65535|0
+  }
+
+
+
+# ****************************************************************************
+# SDB for SINEC L2 DP ( 0x7802 )
+# ****************************************************************************
+DpSDB$NAM                           _O||||
+DpSDB
+  {
+  BTRV_CLASS_A_HEADER
+    {
+    # Erstellungssprache (KEY) [language]
+    Language                        EM|NCM|16|NCM(16)
+    # Type of the block (KEY) [bsttyp]
+    BlockType                       WC|0x000B|||
+    # Block number (KEY). [bstnr]
+    BlockNumber                     WC|0x7802|||
+    # AS header byte 3: loca- [attribut]
+    Attribut                        EM|STD|8|STD(1)
+    # AS header byte 2: For
+    agres                           BC|0|||
+    # whole SDB len
+    DpSDB$LNG                       DM||||
+    # Länge des SDB Parameterblocks
+    SDBParameterblock$LNG           WM||||            
+
+    Block2$LNG                      WM|0|||
+    Block3$LNG                      WM|0|||
+    # Local data length.
+    locdatalen                      WC|0|||
+    # MMS Time Stamp
+    MMSTime                         HM|0h000000000000|1|6|6
+    # MMS Time Stamp
+    timestamp2                      HM|0h000000000000|1|6|6
+    # password dont care
+    Password                        HM|0h00000000|1|4|4
+    # Company, department, etc
+    producer_name                   AM|"SIEMENS"|1|8|8
+    # Block family name.
+    bl_family_name                  AM|"SDB"|1|8|8
+    # Block name.
+    bl_name                         AM|"UNKNOWN"|1|8|8
+    # Version (release number)
+    version                         BM|0|||
+    # Reserved.
+    res1                            BM|0|||
+    # Checksum.
+    checksum                        WM|0|||
+    # Type of PLC-CPU.
+    cpu_typ                         DM|0|||
+    # Reserved.
+    res2                            DM|0|||                 
+    }                                       
+
+  SDBParameterblock$NAM             _M||||
+  SDBParameterblock
+    {
+    SDBIdentblock
+      {
+      # len is 14
+      SDBIdentblock$LNG             BM||||
+      # Parameter Block Number is 1
+      PblNo                         BC|1|||
+      # like AS-BESY
+      BaugruppenTyp                 WM|1|||
+      # 2 is ident for SINEC L2 DP
+      SDBIdent                      WM|2|||
+      # load Attribute for SDB
+      LoadAttribut                  BM|0|||
+      # like AS-BESY
+      BaugruppenID                  BM|0|||
+      # like AS-BESY
+      CPUInterface                  BM|0|||
+      # remote TSAP
+      RemTSAP                       WM|0|||
+      # address of next station
+      NextStaddr                    BM|0|||
+      # address of end  station
+      RemStaddr                     BM|0|||
+      # alignment on word bounday
+      Reserved                      BM|0|||     
+      }
+
+    #
+    # DP Management Parameterblock
+    #
+    # Parameterblock 1
+    PblkDpMgt                       BC|1|||
+    # Version  0
+    PblkVersion                     BC|0|||
+    # Parameterblock Length
+    #DpManagement$LNG      WM||||
+    DpManagementLEN                 WC|37|||                
+
+
+    # Anzahl Poll Cyclen bis zum Reset der Stations Liste
+    CtrPollToResetStatLst           BM|1|0|255|1
+    *Number of polling cycles before the station list is reset
+
+    # ueberwacht Datentransfer und Benutzer Interface ( 6 * Watchdog [ 10 ms])
+    DataControlTime                 WM|0|0|0xffff|1
+    *Monitoring time for DP data transfer [ 10 ms]
+
+    # minimale Pollzykluszeit des  Master [ 1 ms]
+    MasterPollTimeout               WM|1000|1|0xffff|1
+    *Minimum polling cycle of the master [ ms]
+
+    # Poll_Timeout fuer den Master 2
+    Master2PollTimeout              WM|200|0|0xffff|1
+    *Polling timeout of a master class 2 [ 10 ms]
+
+    # Name of corresponding Master GSD File
+    MasterGsdFile                   AM|"CP3425DP.GSD  "|1|14|14
+    *Name of the master GSD file
+
+    # Watchdog Timeout für die Oberfläche [ 10 ms]
+    reservedWdTimeout               WM|400|10|0xfe01|1
+    *waatchdog time [ 10 ms]
+
+    # Im Fehlerfall DP löschen
+    ClearDP                         EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+    *Response when transferring the DP output area
+
+    # Ist ein Zyklisches Steuertelegramm gefordert
+    zyklGlobalCtrlCommand           EM|NONE|2|NONE(0b00)|SYNC(0b01)|FREEZE(0b10)|SYNC_FREEZE(0b11)
+    *Which cyclic control frame is requested?
+
+    # Soll die Watchdog Zeit automatisch berechnet werden
+    bWdDefault                      EM|TRUE|1|FALSE(0b0)|TRUE(0b1)
+    *Calculate watchdog time automatically
+
+    # Reserve
+    ReservedDp                      IC|0b0000|4|4|4
+
+    # Gruppen Identifikation für zyklisches Steuertelegramm
+    zyklGlobalCtrlGrpIdent          BM|0|0|255|1
+    *Group identification for cyclic control frame
+
+    # maximaler Wert des Min Slave Intervall in der Datenbasis [ 1 ms]
+    maxMinSlvIntervall              WM|0|0|0xffff|1
+    *Maximum value of the min slave interval [ ms]
+
+    # DP Bremszeit [ 1 ms]
+    DpDelayTime                     WM|0|0|0xffff|1
+    *Time delay for DP [ ms]
+
+
+    # Anzahl nicht Norm Slave ( gibt es bei CP 3425 nicht )
+    NotNormSlaveCnt                 WC|0|||
+
+    # Anzahl Norm Slave
+    NormSlave$CNT                   WO||0|126|1
+    ##
+    ##
+
+
+    # **********************************************************************
+    # Beschreibung eines Norm Slave
+    # **********************************************************************
+    NormSlave$NAM                   _A||||
+    NormSlave
+      { *contains the complete description of a standard slave
+
+      # Parameterblock 2
+      PblkDpMgt                     BC|2|||
+      # Version 0
+      PblkVersion                   BC|0|||
+      # Parameterblock Länge
+      NormSlave$LNG                 WM||||
+
+      # Slave Header
+      SlvHeader   
+	{
+	# Länge des Slave Header
+	SlvHeader$LNG               WM||||
+
+	# L2 Adresse des Slave
+	SlvAdr                      BM|1|1|126|1
+	*SINEC-L2 station address of the slave
+
+	# Identifikation für eine Norm Slave Beschreibung
+	NormSlaveKey$KEY            BC|0|||
+
+	# Slave Name 
+	SlvName                     AM|"                        "|0|24|24
+	*Name of slave
+
+	# Name des zugehörigen GSD Files des Slave
+	GsdFile                     AM|"              "|1|14|14
+	*Name of slave GSD file
+
+	# minimales Slave Intervall [ 100 ys ]
+	MinSlvIntervall             WM|20|0|0xffff|1
+	*Minimum slave interval
+
+	# Slave aktivieren oder deaktivieren
+	SlvActivate                 EM|Activated|1|Activated(0b1)|NotActivated(0b0)
+	*Should the slave be polled by the master?
+
+	# Slave Modus im Zustand aktiviert
+	ActivatedSlvMode            EM|SlvDataExchange|2|SlvDataExchange(0b00)|Unknown1(0b01)|Unknown2(0b10)|Unknown3(0b11)
+	*Slave mode in activated state
+
+	# Slave Modus im Zustand deaktiviert
+	DeActivatedSlvMode          EM|SlvDoNothing|2|SlvDoNothing(0b00)|SlvReadInput(0b01)|SlvReadOutput(0b10)|Unknown3(0b11)
+	*Slave mode in deactivated state
+
+	# Ist es ein passiver Slave
+	Passiv                      EM|Active|1|Active(0b0)|Passive(0b1)
+	*is a passive slave
+
+	# Reserve zum Ausfüllen auf Byte Grenze
+	Reserved                    IC|0b00|2|2|2
+	}
+
+
+      # Slave Parametrierungsdaten
+      SlvParData                   
+	{
+	# Länge der Slave Parametrierungsdaten
+	SlvParData$LNG              WM||||
+
+	# reserviert
+	Reserved1                   IC|0b000|3|3|3
+
+	# Watchdog ein/ ausschalten
+	Watchdog                    EM|On|1|On(1)|Off(0)
+	*Activate watchdog
+
+	# Freeze Mode prüfen
+	FreezeMode                  EM|On|1|On(1)|Off(0)
+	*Check FREEZE mode ?
+
+	# Sync Modus prüfen
+	SyncMode                    EM|On|1|On(1)|Off(0)
+	*Check SYNC mode ?
+
+	# Master Acces Einschränkungen
+	MstAccess                   IC|0b01|2|2|2
+
+	# Watchdog Timeout Faktor 1
+	WdFact1                     BM|22|1|255|1
+	*Watchdog timeout factor 1
+
+	# Watchdog Timeout Faktor 2
+	WdFact2                     BM|22|1|255|1           
+	*Watchdog timeout factor 2
+
+	# Minimum Station Delay Time
+	MinTsdr                     BM|0|0|255|1
+	*min.TSDR
+
+	# Hersteller Identifikation des Slave
+	IdentNumber                 SM|0|0|64535|1
+	*Unique slave identification number
+
+	# Gruppenzuordnung des Slave
+	GrpIdent                    BM|0|0|255|1
+	*Group identification
+
+	# Anwender spezifische Daten des Slave
+	UserParData                 HO||0|235|0            
+	*User-specific data
+	}
+
+      # Slave Modul Liste, enthält alle Angaben die in den Norm Konfigurationsdaten
+      # nicht unterzubringen waren
+      SlvModLst
+	{
+	# Länge der Slave Modul Liste
+	SlvModLst$LNG               WM||||
+
+	# Gesamtlänge aller Ausgänge des Slave
+	OutLenAll                   BM|0|0|0xff|1
+	*Total length of slave output area
+
+	# Gesamtlänge aller Eingänge des Slave
+	InLenAll                    BM|0|0|0xff|1
+	*Total length of slave input area
+
+	# enthält eine Liste aller Module in der Reihenfolge der Konfigurationsdaten
+	# Ein ModEntry enthält die Daten eines Moduls, die nicht in den Norm
+	# Konfigurationsdaten definiert sind
+
+	# Anzahl Module
+	ModEntry$CNT               BO||||
+	ModEntry$NAM               _S||||
+	ModEntry                  
+	  { * Additional description of modules not included in the standard
+	  # Länge eines ModulEntry
+	  ModEntry$LNG             WM||||
+
+	  # Name eines Moduls
+	  ModType                  AM|""|0|24|24
+	  *Module name
+
+	  # Offset des Ausgangsbereichs des Moduls
+	  OutBegin                 WM|0|0|0xffff|1
+	  *Offset to start of output area
+
+	  # Offset des Eingangsbereichs eines Moduls
+	  InBegin                  WM|0|0|0xffff|1       
+	  *Offset to start of input area
+
+	  # Verweis auf Typdatei Parametrierungsdaten Strukturierung
+	  paraDataIdx		   WO||0|0xffff|1
+	  *Reference to type file structuring
+	  }
+	}
+
+
+      # Slave Konfigurationsdaten
+      SlvCfgData                 
+	{
+
+	# Länge der Konfigurationsdaten
+	SlvCfgData$LNG             WM||||
+
+	# Liste aller dem Slave zugehörenden Module ( Konfigurationsdaten )
+	Module$NAM                 _S||||   
+	Module
+	  { *Standard module description
+
+	  # einfache Modul Beschreibung für Datenlängen bis 16 Byte/Worten
+	  SimpleModDescr$NAM       _H||||
+	  SimpleModDescr
+	    { *Simple module description
+
+	    # Länge des IO Bereichs
+	    IoLen                  IM|0b1000|0|4|4
+	    *I/O area length
+
+	    # Typ des IO Bereichs
+	    IoType$KEY             EM|Input|2|Input(1)|Output(2)|InOutput(3)
+	    *I/O area type
+
+	    # legt fest ob die IO Länge in Byte oder Wort ist
+	    Alignment              EM|Byte|1|Byte(0)|Word(1)
+	    *Granularity of the I/O area
+
+	    # legt die Konsistenz des IO Bereichs fest
+	    Consistency            EM|Value|1|Value(0)|Area(1)
+	    *Consistency of the I/O area
+	    }
+
+	  # erweiterte Modulbeschreibung für Datenlängen über 16 Byte/Worte
+	  ExtModDescr$NAM          _H||||          
+	  ExtModDescr
+	    { *contains an extended module description
+
+	    # Länge der Hersteller spezifischen Daten
+	    ManufData$LNG          IM||4|4|4
+
+	    # legt fest, das es sich um eine erweiterte Modulbeschreibung handelt
+	    IoTypeKey$KEY          IC|0b00|2|2|2
+
+	    # leeres Modul
+	    EmptyMod$NAM           _H||||
+	    EmptyMod
+	      { *contains the description of an empty module
+
+	      # Identifier für Leermodul
+	      ExtIoTypeKey$KEY     IC|0b00|2|2|2
+	      }
+
+	    # Eingangs Modul
+	    InDescr$NAM            _H||||
+	    InDescr
+	      { *contains the description of an input module
+
+	      # Identifier für Eingangs Modul xxxx:Vo 14.07.95 b10 instead b01
+	      ExtIoTypeKey$KEY     IC|0b10|2|2|2
+
+	      # Länge des Eingangs Modul
+	      IoLen                IM|0b100000|0|6|6
+	      *Length of the I/O area
+
+	      # Ausrichtung des Eingangs Modul
+	      Alignment            EM|Byte|1|Byte(0)|Word(1)
+	      *Granularity of the I/O area
+
+	      # Konsistenz des Eingangs Modul
+	      Consistency          EM|Area|1|Value(0)|Area(1)
+	      *Consistency of the I/O area
+
+	      }
+
+	    # Ausgangs Modul
+	    OutDescr$NAM           _H||||
+	    OutDescr
+	      { *contains the description of an ouput module
+
+	      # Identifier für Ausgangs Modul xxxx:Vo 14.07.95 b01 instead b10
+	      ExtIoTypeKey$KEY     IC|0b01|2|2|2
+
+	      # Länge des Ausgangs Moduls
+	      IoLen                IM|0b100000|0|6|6
+	      *Length of the I/O area
+
+	      # Ausrichtung des Ausgangs Moduls
+	      Alignment            EM|Byte|1|Byte(0)|Word(1)
+	      *Granularity of the I/O area
+
+	      # Konsistenz des Ausgangs Moduls
+	      Consistency          EM|Area|1|Value(0)|Area(1)
+	      *Consistency of the I/O area
+
+	      }
+
+	    # Ein- Ausgangs Modul
+	    InOutDescr$NAM         _H||||
+	    InOutDescr
+	      { *contains the description of an input/output module
+
+	      # Identifier für Ein- Ausgangs Modul
+	      ExtIoTypeKey$KEY     IC|0b11|2|2|2
+
+	      # Länge des Ausgangs Moduls
+	      OutLength            IM|0b100000|0|6|6
+	      *Length of the output area
+
+	      # Ausrichtung des Ausgangs Moduls
+	      OutAlignment         EM|Byte|1|Byte(0)|Word(1)
+	      *Granularity of the output I/O area
+
+	      # Konsistenz des Ausgangs Moduls
+	      OutConsistency       EM|Area|1|Value(0)|Area(1)
+	      *Consistency of the output I/O area
+
+	      # Länge des Eingangs Moduls
+	      InLength             IM|0b100000|0|6|6
+	      *Length of the input I/O area
+
+	      # Ausrichtung des Eingangs Moduls
+	      InAlignment          EM|Byte|1|Byte(0)|Word(1)
+	      *Granularity of the input I/O area
+
+	      # Konsistenz des Eingangs Moduls
+	      InConsistency        EM|Area|1|Value(0)|Area(1)
+	      *Consistency of the input I/O area
+	      }
+
+	    # optionale Hersteller spezifische Daten
+	    ManufData                               
+	      {
+	      # Hersteller spezifische Daten
+	      ManufactData         HO||0|14|0
+	      *Vendor data
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  Block2                           HO||0|65535|0
+  Block3                           HO||0|65535|0
+  Block4                           HO||0|65535|0
+  }
+
+ 
+# ****************************************************************************
+# SDB for GD-Relay ( 0x7803 )
+# ****************************************************************************
+GDRelaySDB$NAM     _O||||                   # SDB for GD-Relay         
+GDRelaySDB
+  {
+
+  BTRV_CLASS_A_HEADER
+    {
+    Language        EM|COM|16|COM(13)   # Erstellungssprache (KEY) [language]
+    BlockType       WC|0x000B|||        # Type of the block (KEY) [bsttyp]
+    BlockNumber     WC|0x7803|||        # Block number (KEY). [bstnr]
+    Attribut        EM|STD|8|STD(1)     # AS header byte 3: loca- [attribut]
+    agres           BC|0|||             # AS header byte 2: For
+    GDRelaySDB$LNG  DM||||              # whole SDB len
+    SDBParameterblock$LNG WM||||        # SDB len 1 of Parameterblock
+    Block2$LNG      WM|0|||
+    Block3$LNG      WM|0|||
+    locdatalen      WM|0|||             # Local data length.
+    MMSTime         HM|0h000000000000|1|6|6 # MMS Time Stamp
+    timestamp2      HM|0h000000000000|1|6|6 # MMS Time Stamp
+    Password        HM|0h00000000|1|4|4 # password dont care
+    producer_name   AM|"SIEMENS"|0|8|8  # Company, department, etc
+    bl_family_name  AM|"SDB"|0|8|8      # Block family name.
+    bl_name         AM|"UNKNOWN"|0|8|8  # Block name.
+    version         BM|0|||             # Version (release number)
+    res1            BM|0|||             # Reserved.
+    checksum        WM|0|||             # Checksum.
+    cpu_typ         DM|0|||             # Type of PLC-CPU.
+    res2            DM|0|||             # Reserved.
+    }                           #
+
+
+  SDBParameterblock$NAM  _M||||
+  SDBParameterblock
+    {
+    SDBIdentblock
+      {
+      SDBIdentblock$LNG           BM||||          # len is 14
+      PblNo                       BC|1|||         # Parameter Block Number is 1
+      BaugruppenTyp               WM|1|||         # like AS-BESY
+      SDBIdent                    WM|3|||           # 3 is ident for GD Relay
+      LoadAttribut                BM|0|||         # load Attribute for SDB
+      BaugruppenID                BM|0|||         # like AS-BESY
+      CPUInterface                BM|0|||         # like AS-BESY
+      RemTSAP                     WM|0|||         # remote TSAP
+      NextStaddr                  BM|0|||         # address of next station
+      RemStaddr                   BM|0|||         # address of end  station
+      Reserved                    BM|0|||         # alignment on word bounday
+      }
+    GDRelHeader                             # Header
+      {
+      PblkNo              BC|1|||           # Parameterblock Number
+      PblkVersion         BC|0|||           # Version  0
+      GDRelHeader$LNG     WM||||            # Parameterblock Length
+      GDCircle$CNT        WO||||            # Anzahl GD-Kreise
+      GDCircle$NAM       _S||||
+      GDCircle
+	{
+	GDCircle$LNG    WM||||
+	GDCircleNr      BM||1|16|
+	GDCircleLsap    BM||1|16|
+	GDSndBlkId$CNT  BO||0|32|
+	GDSndBlkId      BA||1|32|
+	GDRcvBlkId$CNT  BO||0|32|
+	GDRcvBlkId      BA||1|32|
+	}
+      }
+    }
+  Block2                    HO||0|65535|0
+  Block3                    HO||0|65535|0
+  Block4                    HO||0|65535|0
+  }
+
+# ****************************************************************************
+# SDB for Routing table ( 0x7804 )
+# ****************************************************************************
+RoutingSDB$NAM     _O||||                   # SDB for routing
+RoutingSDB
+  {
+  BTRV_CLASS_A_HEADER
+    {
+    Language        EM|NCM|16|NCM(16)       # Erstellungssprache (KEY) [language]
+    BlockType       WC|0x000B|||            # Type of the block (KEY) [bsttyp]
+    BlockNumber     WC|0x7804|||            # Block number (KEY). [bstnr]
+    Attribut        EM|STD|8|STD(1)         # AS header byte 3: loca- [attribut]
+    agres           BC|0|||                 # AS header byte 2: For
+    RoutingSDB$LNG  DM||||                  # whole SDB len
+    SDBParameterblock$LNG WM||||            # SDB len 1 of Parameterblock
+    Block2$LNG      WM|0|||
+    Block3$LNG      WM|0|||
+    locdatalen      WC|0|||                 # Local data length.
+    MMSTime         HM|0h000000000000|1|6|6 # MMS Time Stamp
+    timestamp2      HM|0h000000000000|1|6|6 # MMS Time Stamp
+    Password        HM|0h00000000|1|4|4     # password dont care
+    producer_name   AM|"SIEMENS"|1|8|8      # Company, department, etc
+    bl_family_name  AM|"SDB"|1|8|8          # Block family name.
+    bl_name         AM|"UNKNOWN"|1|8|8      # Block name.
+    version         BM|0|||                 # Version (release number)
+    res1            BM|0|||                 # Reserved.
+    checksum        WM|0|||                 # Checksum.
+    cpu_typ         DM|0|||                 # Type of PLC-CPU.
+    res2            DM|0|||                 # Reserved.
+    }                                       #
+
+
+  SDBParameterblock$NAM  _M||||
+  SDBParameterblock
+    {
+    SDBIdentblock
+      {
+      SDBIdentblock$LNG           BM||||      # len is 14
+      PblNo                       BC|1|||     # Parameter Block Number is 1
+      BaugruppenTyp               WM|1|||     # like AS-BESY
+      SDBIdent                    WM|4|||     # 4 is ident for routing table
+      LoadAttribut                BM|0|||     # load Attribute for SDB
+      BaugruppenID                BM|0|||     # like AS-BESY
+      CPUInterface                BM|0|||     # like AS-BESY
+      RemTSAP                     WM|0|||     # remote TSAP
+      NextStaddr                  BM|0|||     # address of next station
+      RemStaddr                   BM|0|||     # address of end  station
+      Reserved                    BM|0|||     # alignment on word bounday
+      }
+    L2OwnSubnet                         # Eigene L2 Subnetz-Kennung
+      {
+      PblkNo1             BC|1|||           # Parameterblock Number
+      PblkVersion1        BC|0|||           # Version  0
+      L2OwnSubnet$LNG     WM||||            # Parameterblock Length
+      L2OwnSubnetID       HM|0h000000000000|1|32|0    # Subnetz-Kennung
+      }
+
+    MPIOwnSubnet                              # Eigene MPI Subnetz-Kennung
+      {
+      PblkNo2             BC|2|||           # Parameterblock Number
+      PblkVersion2        BC|0|||           # Version  0
+      MPIOwnSubnet$LNG    WM||||            # Parameterblock Length
+      MPIOwnSubnetID      HM|0h000000000000|1|32|0    # Subnetz-Kennung
+      }
+    }
+  Block2                    HO||0|65535|0
+  Block3                    HO||0|65535|0
+  Block4                    HO||0|65535|0
+  }
+
+
+# ****************************************************************************
+# SDB for AGAG Connections ( 0x7805 )
+# ****************************************************************************
+AgAgSDB$NAM                           _O||||
+AgAgSDB
+  {
+  BTRV_CLASS_A_HEADER
+    {
+    # Erstellungssprache (KEY) [language]
+    Language                        EM|NCM|16|NCM(16)
+    # Type of the block (KEY) [bsttyp]
+    BlockType                       WC|0x000B|||
+    # Block number (KEY). [bstnr]
+    BlockNumber                     WC|0x7805|||
+    # AS header byte 3: loca- [attribut]
+    Attribut                        EM|STD|8|STD(1)
+    # AS header byte 2: For
+    agres                           BC|0|||
+    # whole SDB len
+    AgAgSDB$LNG                     DM||||
+    # Länge des SDB Parameterblocks
+    SDBParameterblock$LNG           WM||||            
+
+    Block2$LNG                      WM|0|||
+    Block3$LNG                      WM|0|||
+
+    # Local data length.
+    locdatalen                      WC|0|||
+    # MMS Time Stamp
+    MMSTime                         HM|0h000000000000|1|6|6
+    # MMS Time Stamp
+    timestamp2                      HM|0h000000000000|1|6|6
+    # password dont care
+    Password                        HM|0h00000000|1|4|4
+    # Company, department, etc
+    producer_name                   AM|"SIEMENS"|1|8|8
+    # Block family name.
+    bl_family_name                  AM|"SDB"|1|8|8
+    # Block name.
+    bl_name                         AM|"UNKNOWN"|1|8|8
+    # Version (release number)
+    version                         BM|0|||
+    # Reserved.
+    res1                            BM|0|||
+    # Checksum.
+    checksum                        WM|0|||
+    # Type of PLC-CPU.
+    cpu_typ                         DM|0|||
+    # Reserved.
+    res2                            DM|0|||                 
+    }                                       
+
+  SDBParameterblock$NAM             _M||||
+  SDBParameterblock
+    {
+    SDBIdentblock
+      {
+      # len is 14
+      SDBIdentblock$LNG             BM||||
+      # Parameter Block Number is 1
+      PblNo                         BC|1|||
+      # like AS-BESY
+      BaugruppenTyp                 WM|1|||
+      # 2 is ident for SINEC L2 DP
+      SDBIdent                      WM|5|||
+      # load Attribute for SDB
+      LoadAttribut                  BM|0|||
+      # like AS-BESY
+      BaugruppenID                  BM|0|||
+      # like AS-BESY
+      CPUInterface                  BM|0|||
+      # remote TSAP
+      RemTSAP                       WM|0|||
+      # address of next station
+      NextStaddr                    BM|0|||
+      # address of end  station
+      RemStaddr                     BM|0|||
+      # alignment on word bounday
+      Reserved                      BM|0|||     
+      }
+
+    #
+    # AGAG Verwaltungssubblock
+    #
+
+    # Parameterblock 1
+    PblkAGAGMgt                     BC|1|||
+    # Version  0
+    PblkVersion                     BC|0|||
+    # Parameterblock Length
+    AgAgMgtLEN                      WC|7|||
+
+    # Sollen Default AGAG Verbindungen angelegt werden
+    CreateAgAgDft                   EM|FALSE|8|FALSE(0)|TRUE(1)
+    *Create default IPLC connections
+
+    # Anzahl AGAG Verbindungen
+    AgAgCon$CNT                     WM||1|16|1
+    *Number of IPLC connections
+    ##
+    ##
+
+
+    # **********************************************************************
+    # Liste der AGAG Verbindungsbeschreibungen
+    # **********************************************************************
+    AgAgCon$NAM                   _A||||
+    AgAgCon
+      { *contains the complete description of an IPLC connection
+
+      #
+      # AGAG Beschreibungssubblock
+      #
+
+      # Parameterblock 2
+      PblkAgAgConMgt                BC|2|||
+      # Version 0
+      PblkVersion                   BC|0|||
+      # Parameterblock Länge
+      AgAgCon$LNG                   WM||||
+
+      ##
+      ##
+
+      # CPU Nummer für AS 400
+      CpuNumber                     BC|0|||
+      *CPU number for AS 400
+
+      # Identifier der Verbindung
+      CID                           BM||1|16|1
+      *Connection identifier
+
+      # L2 Adresse des Remote AGs
+      RemoteAdr                     BM||1|126|1
+      *L2 address of remote PLC
+
+      # lokaler SAP
+      LocalSap                      BM||2|33|1
+      *SAP of the local station
+
+      # remoter SAP
+      RemoteSap                     BM||2|33|1
+      *SAP of the remote station
+
+      # Service der Verbindung
+      Service                       EM|AgSendReceive|8|AgSendReceive(1)|Fetch(2)
+      *Service used
+      }
+    }
+  Block2                    HO||0|65535|0
+  Block3                    HO||0|65535|0
+  Block4                    HO||0|65535|0
+  }

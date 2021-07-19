@@ -1,0 +1,20 @@
+:Base S7WBPCAB.HLP
+1 Overview=Welcome
+1 "General" Tab=HIDD_ALLG_BASE
+1 "Standard" PC Application
+2 "FMS" Tab=HIDD_FMS
+1 "OPC Server" PC Application
+2 "DP" Tab=HIDD_DP
+2 "DP Master Class 2" Tab=HIDD_OPC_DPC2
+2 "FDL" Tab=HIDD_FDL
+2 "FMS" Tab=HIDD_FMS
+2 "ISO/TCP" Tab=HIDD_SENDRECV
+2 "S7" Tab=HIDD_S7
+2 Editing the Object Dictionary=HIDD_OVZ
+2 Assigning Access Rights to a Specific OPC Item=HIDD_ITEM
+2 "Edit VFD" Dialog=HIDD_VFD
+2 "SNMP" Tab=ID_Register_SNMP
+2 "PROFInet" Tab=HIDD_OPC_PROFINET
+2 "PROFINET IO" Tab=HID_OPC_PNIO
+2 SNMP: Edit Plant Configuration=ID_Anlagenkonfiguration_bearbeiten
+2 SNMP: Add Node=ID_Teilnehmerdaten_bearbeiten

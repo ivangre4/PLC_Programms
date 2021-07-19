@@ -1,0 +1,132 @@
+S7HPROFX V0.1
+
+
+// ==================
+// ET 200X
+// ==================
+
+
+//--------------------------------------------------------------------------------
+// X-BM141 DI 8xDC24V
+// Basismodul ET200X-DI 8xDC24V, nicht mit analogen EMs erweiterbar
+//--------------------------------------------------------------------------------
+
+
+// DO mit Diagnose
+//-------------------
+[PROFIBUS-DP\ET 200X\X-BM141 DI 8xDC24V::6ES7 141-1BF00-0XB0\DO\EM 142 DO 4xDC24V/2A, kurz, Diag::6ES7 142-1BD40-0XB0]
+@DELETE
+
+
+// Motorstarter
+//-------------------
+
+//eDS
+//-------------------
+[PROFIBUS-DP\ET 200X\X-BM141 DI 8xDC24V::6ES7 141-1BF00-0XB0\Motorstarter\Direktstarter\EM 300 eDS DI4/DO4::3RK1 300-0*S10-0AA*]
+@DELETE
+
+
+//eRS
+//-------------------
+[PROFIBUS-DP\ET 200X\X-BM141 DI 8xDC24V::6ES7 141-1BF00-0XB0\Motorstarter\Reversierstarter\EM 300 eRS DI4/DO4::3RK1 300-0*S10-1AA*]
+@DELETE
+
+
+//RQ 50015
+// Folgende EMs dürfen nicht an folgenden BMs steckbar sein und werden aus Katalog entfernt:
+//------------------------------------------------------------------------------------------
+
+//RQ 50015
+// Pneumatik 6ES7 148-1DA00-0XA0
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF00-0AB0\Pneumatik\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V Diag::6ES7 141-1BF40-0AB0\Pneumatik\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina::6ES7 143-1BF00-0AB0\Pneumatik\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina-FO::6ES7 143-1BF00-0XB0\Pneumatik\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+
+//RQ 50015
+// 6ES7 141-1BD30-0XA0
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF00-0AB0\DI\EM 141 DI 4xDC24V, kurz::6ES7 141-1BD30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V Diag::6ES7 141-1BF40-0AB0\DI\EM 141 DI 4xDC24V, kurz::6ES7 141-1BD30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina::6ES7 143-1BF00-0AB0\DI\EM 141 DI 4xDC24V, kurz::6ES7 141-1BD30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina-FO::6ES7 143-1BF00-0XB0\DI\EM 141 DI 4xDC24V, kurz::6ES7 141-1BD30-0XA0]
+@DELETE
+
+//RQ 50015
+// 6ES7 141-1BF30-0XA0
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF00-0AB0\DI\EM 141 DI 8xDC24V, kurz::6ES7 141-1BF30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM141 Ecofast DI 8xDC24V Diag::6ES7 141-1BF40-0AB0\DI\EM 141 DI 8xDC24V, kurz::6ES7 141-1BF30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina::6ES7 143-1BF00-0AB0\DI\EM 141 DI 8xDC24V, kurz::6ES7 141-1BF30-0XA0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM143 Desina-FO::6ES7 143-1BF00-0XB0\DI\EM 141 DI 8xDC24V, kurz::6ES7 141-1BF30-0XA0]
+@DELETE
+
+//------------------------------------------------------------------------------------------------------------------------------
+// RQ 50253	
+// Im Baugruppenkatalog zur ET200X (Slave 6ES7 141 1BF00-0XB0) sollen die EM141 Diag. 
+// (6ES7 141 1BF40-0XB0 und 6ES7 141 1BF30-0XB0) nicht erscheinen
+//------------------------------------------------------------------------------------------------------------------------------
+
+[PROFIBUS-DP\ET 200X\X-BM141 DI 8xDC24V::6ES7 141-1BF00-0XB0\DI\EM 141 DI 8xDC24V, lang, Diag::6ES7 141-1BF40-0XB0]
+@DELETE
+[PROFIBUS-DP\ET 200X\X-BM141 DI 8xDC24V::6ES7 141-1BF00-0XB0\DI\EM 141 DI 8xDC24V, kurz, Diag::6ES7 141-1BF30-0XB0]
+@DELETE
+
+//------------------------------------------------------------------------------------------------------------------------------
+// RQ AP00424665   V5.4 SP2	
+// Baugruppen 6ES7 134-4GB52-0AB0 (2AI I 2WIRE HS) und 6ES7 135-4FB52-0AB0 (2AO U HS) (HSP2020)
+// sollen unter folgenden IMs im Katalog von HW-Konfig nicht erscheinen:
+//   6ES7 151-7FA00-0AB0 (IM151-7 F-CPU), 6ES7 151-3AA10-0AB0 (IM151-3 PN), 6ES7 151-3AA20-0AB0 (IM151-3 PN)
+//   6ES7 151-3BA20-0AB0 (IM151-3 PN HF)
+// Info von Büscher, Hans-Georg  28.02.2007
+//------------------------------------------------------------------------------------------------------------------------------
+
+[PROFIBUS-DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\AI\2AI I 2WIRE HS::6ES7 134-4GB52-0AB0]
+@DELETE
+[PROFIBUS-DP\ET 200S\IM151-7 F-CPU::6ES7 151-7FA00-0AB0\AO\2AO U HS::6ES7 135-4FB52-0AB0]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\AI\2AI I 2WIRE HS::6ES7 134-4GB52-0AB0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\AO\2AO U HS::6ES7 135-4FB52-0AB0]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA20-0AB0\AI\2AI I 2WIRE HS::6ES7 134-4GB52-0AB0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA20-0AB0\AO\2AO U HS::6ES7 135-4FB52-0AB0]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN HF::6ES7 151-3BA20-0AB0\AI\2AI I 2WIRE HS::6ES7 134-4GB52-0AB0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN HF::6ES7 151-3BA20-0AB0\AO\2AO U HS::6ES7 135-4FB52-0AB0]
+@DELETE
+
+//------------------------------------------------------------------------------------------------------------------------------
+// Baugruppen aus HSP2018 sollen unter folgenden IMs im Katalog von HW-Konfig nicht erscheinen:
+//   6ES7 151-3AA10-0AB0 (IM151-3 PN), 6ES7 151-3AA20-0AB0 (IM151-3 PN), 6ES7 151-3BA20-0AB0 (IM151-3 PN HF)
+// Info von Büscher, Hans-Georg  28.03.2007
+//------------------------------------------------------------------------------------------------------------------------------
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\DI\8DI DC24V::6ES7 131-4BF00-0AA0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA10-0AB0\DO\8DO DC24V/0,5A::6ES7 132-4BF00-0AA0]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA20-0AB0\DI\8DI DC24V::6ES7 131-4BF00-0AA0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN::6ES7 151-3AA20-0AB0\DO\8DO DC24V/0,5A::6ES7 132-4BF00-0AA0]
+@DELETE
+
+[PROFINET IO\I/O\ET 200S\IM151-3 PN HF::6ES7 151-3BA20-0AB0\DI\8DI DC24V::6ES7 131-4BF00-0AA0]
+@DELETE
+[PROFINET IO\I/O\ET 200S\IM151-3 PN HF::6ES7 151-3BA20-0AB0\DO\8DO DC24V/0,5A::6ES7 132-4BF00-0AA0]
+@DELETE

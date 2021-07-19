@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Hardware Interrupt 3"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB43_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB43_STRT_INF : BYTE ;	//16#41/42/43/44 (Interrupt 1/2/3/4)
+  OB43_PRIORITY : BYTE ;	//19 (Priority of 1 is lowest)
+  OB43_OB_NUMBR : BYTE ;	//43 (Organization block 43, OB43)
+  OB43_RESERVED_1 : BYTE ;	//Reserved for system
+  OB43_RESERVED_2 : BYTE ;	//Reserved for system
+  OB43_MDL_ADDR : WORD ;	//Base address of module initiating interrupt
+  OB43_POINT_ADDR : DWORD ;	//Address of interrupt point on module
+  OB43_DATE_TIME : DATE_AND_TIME ;	//Date and time OB43 started  
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

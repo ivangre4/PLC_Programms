@@ -1,0 +1,205 @@
+; Catalog entry "SIMATIC HMI" for "Dirkettasten"
+; ==============================================
+[_S7H_HMI_ISLAVE_CAT_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+basetype=_S7H_KATALOGFOLDDER_AT
+ObjType=19005750
+; structure within catalog
+CanHavePrivateChildren=1
+; Hint: it is NOT possible to use the object ID _S7H_PROJEKTIERTE_STATION_CT as a value for "CalaogParent" we have to use the number directly
+CatalogParent=1315365
+IsCatEntry=1
+SHORTNAME=SIMATIC HMI-Station
+
+
+; the following chiles have to be addes explizit by "KatChild" because they are shared with ProTool
+; because the amount of devices in ProTool will never more change, this block HAS TO BE FIX!!!!
+; do not change this list!!!
+nKatChilds=4
+KatChild1=19005705
+KatChild2=19005706
+KatChild3=19005707
+KatChild4=19005708
+; ATTENTION: All new devices supported bei WinCC flexible are references in the belonging metafile by "CatalogParent" relation
+; !!! do not add them here !!!
+
+[_S7H_HMI_ISLAVE_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+basetype=_S7H_ISLAVE_AT
+ObjType=19005749
+
+; entries within catalog parent "SIMATIC HMI-Station" for a single devices / device groups
+; ========================================================================================
+; Device: MP270
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_MP270_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005705
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+; Do not use CatalogParent for this device because they are referenced by ProTool and by a CatChild relation
+; to enter this item into the catalog we have to use "KatChild" in the catalog item itself
+; CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC MP270
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 542-0Ax15-1AX0
+EXT_OBJ_NAME=META\siem8078.gsd
+
+; Devices: OP170, TP170B, MobilePanel 170
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_OP170_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005706
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+; Do not use CatalogParent for this device because they are referenced by ProTool and by a CatChild relation
+; to enter this item into the catalog we have to use "KatChild" in the catalog item itself
+; CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC OP170/TP170
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 54x-0Bx15-2AX0
+EXT_OBJ_NAME=META\siem80b3.gsd
+
+; Devices: MP370 and MP370 Touch
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_MP370_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005707
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+; Do not use CatalogParent for this device because they are referenced by ProTool and by a CatChild relation
+; to enter this item into the catalog we have to use "KatChild" in the catalog item itself
+; CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC MP370
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 54x-0DA10-0AX0
+MLFB_PREFIX=101
+EXT_OBJ_NAME=META\siem80be.gsd
+
+; Devices: MP270B, OP270 and TP270
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_MP270B_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005708
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+; Do not use CatalogParent for this device because they are referenced by ProTool and by a CatChild relation
+; to enter this item into the catalog we have to use "KatChild" in the catalog item itself
+; CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC MP270B
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 54x-0DA10-0AX0
+MLFB_PREFIX=102
+EXT_OBJ_NAME=META\siem80e4.gsd
+
+; Device: OP77B
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_OP77B_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005709
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC OP77B
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 641-0CA01-0AX0
+MLFB_PREFIX=103
+EXT_OBJ_NAME=META\Siem8107.gsd
+; Device: OP77B
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_OP277_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005710
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC OP277
+;MLFB=6AV3 527-.....	revised 2.3.06
+MLFB=6AV6 641-0CA01-0AX0
+MLFB_PREFIX=104
+EXT_OBJ_NAME=META\Siem813F.gsd
+; ----------------------------------------------------------------------------------------
+[_P7_TDOP_MP377_DP_CT]
+; structure within object model
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=19005711
+basetype=_S7H_HMI_ISLAVE_CT
+; structure within catalog
+CLASS_PROPERTIES=0
+; Hint: it is NOT possible to use the object ID _S7H_HMI_ISLAVE_CAT_CT as a value for "CalaogParent" we have to use the number directly
+CatalogParent=19005750
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=18
+SHORTNAME=SIMATIC MP377
+MLFB=6AV6 644-0xx01-2AX0
+;MLFB=6AV6 641-0CA01-0AX0
+EXT_OBJ_NAME=META\Siem815A.gsd

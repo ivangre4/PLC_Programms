@@ -1,0 +1,107 @@
+;-------------------------------------
+; Katalog-Folder: PROFINET IO >> I\O
+;-------------------------------------
+
+[_S7H_HSP_PNIO_FAMILY_IO_KAT_AT]
+ObjType=2363840
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+;basetype=1315971
+;CatalogParent=S7H_IO_SUBSYSTEM_CT
+CatalogParent=1316787
+IsCatEntry=1
+prefix=OM
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+HSP_ID=0092
+HSP_NAME=ET 200pro IM 154-4 PN HF
+
+;------------------------------------------------
+; Katalog-Folder: PROFINET IO >> I\O >> ET200PRO
+;------------------------------------------------
+
+[_S7H_HSP_PNIO_IO_ET200PRO_KAT_AT]
+basetype=_S7H_KATALOGFOLDDER_AT
+;basetype=1315971
+ObjType=2363842
+abstract=true
+CatalogParent=2363840
+IsCatEntry=1
+prefix=OM
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+HSP_ID=0092
+HSP_NAME=ET 200pro IM 154-4 PN HF
+
+; ----------------------------- ET200pro-Device IM 154-4AB00-0AB0
+[_S7H_HSP_IO_ET200PRO_154_4AB00_CT]
+server=s7h0092x.dll
+prefix=OM
+ObjType=2363831
+basetype=_S7H_HSP_ET200PRO_AT
+basetype=_S7H_IO_S7_DEVICE_AT
+CatalogParent=2363842
+IsCatEntry=1
+relation=1315826,_S7H_HSP_ET200PRO_MODULE_AT[1315827];deep
+ICON_TYPE = 4
+
+KatChild1 = 2363608
+KatChild2 = 2363609
+KatChild3 = 2363610
+KatChild4 = 2363611
+KatChild5 = 2363612
+nKatChilds= 5
+
+MLFB=6ES7 154-4AB00-0AB0
+PRODUCT_FAMILY = ET200pro
+CLASS_PROPERTIES = 0
+ALARM_MODE = 2
+CountAutoCreatedChilds=0
+FIRST_VISIBLE_CHILD_NO=1
+MAX_NUM_OF_CHILDS=18
+IAM_THIS_SLAVE=1
+IAMA_S7SLAVE=0
+DP_STATION_TYPE=ET200pro
+
+Rule_00000010=INCL(2,18)
+
+SLAVE_FAMILY=ET200pro
+SLAVE_BMP_FILE=ET200pro_f
+PN_VENDOR_ID=0x002A
+PN_DEVICE_ID=0x0305
+PN_MIN_DEVICE_INTERVAL=32
+PN_DEVICE_SUPPORTS_MMC=1
+IS_PARAMETRIZEABLE=1
+
+;  AP00346475: KEIN I&M-Support
+IUA_SUPPORT=0
+IUM_SUPPORT=0
+FW_DOWNLOAD_CAPABLE=0
+
+paramDescr=s151_1_x.dsc
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+HSP_ID=0092
+HSP_NAME=ET 200pro IM 154-4 PN HF
+
+GSDML_DEVICE_NAME=ET200pro
+
+; Laenge der IM inkl. Abschlusswiderstand=100 minus Laenge des integr. PM=45 ergibt einzutragende Laenge=55
+PHYSICAL_LENGTH=55
+
+; ----------------------------- PROFINET-Kopf fuer IM 154-4AB00
+[_S7H_HSP_IO_ET200PRO_ETER_154_4AB00_CT]
+server=s7h0092x.dll
+prefix=OM
+ObjType=2363832
+basetype=_AUT_GENCOMM_AT
+basetype=_S7H_IO_S7_ETER_AT
+PN_MODULE_IDENTNUMBER=0x0321
+PN_MAX_INPUT_LEN=256
+PN_MAX_OUTPUT_LEN=256
+PN_MAX_DATA_LEN=512
+PN_OBJECTUUID_LOCAL_INDEX=1
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+HSP_ID=0092
+HSP_NAME=ET 200pro IM 154-4 PN HF

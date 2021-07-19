@@ -1,0 +1,14 @@
+[2363637]
+KatEntryName = 6ES7 314-6CF02-0AB0
+InfoText = Mémoire de travail 64 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ DP (Maître ou esclave DP); configuration multi-rangées jusqu'à 31 modules; échange de données direct possible (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); Firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+Comment=6ES7 314-6BF02-0AB0, 6ES7 314-6CF02-0AB0
+
+[2363638]
+SHORTNAME=DP
+InfoText=
+
+[2363639]
+KatEntryName = 6ES7 314-6BF02-0AB0
+InfoText = Mémoire de travail 64 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configuration multi-rangées jusqu'à 31 modules; Firmware V2.0
+SHORTNAME=CPU 314C-2 PtP

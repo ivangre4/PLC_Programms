@@ -1,0 +1,24 @@
+;----------------------------------------------------------------
+; Namfile für ET200Pro DO Pneumatik
+;----------------------------------------------------------------
+
+Comment=Digitalausgabemodule Pneumatik für ET 200pro
+
+; Katalog-Objekt für ET200pro Pneumatik-Baugruppen
+[2366936]
+KatEntryName=Pneumatik
+InfoText=Pneumatikmodule für ET 200pro
+SHORTNAME=Pneumatik
+
+; ----------------------------- 16 DO DC24V CPV10        6ES7 148-4EA00-0AA0
+[2366937]
+KatEntryName=16 DO DC24V CPV10
+InfoText=Digitalausgabemodul 16 DO DC24V CPV10
+SHORTNAME=16 DO DC24V CPV10
+
+; ----------------------------- 16 DO DC24V CPV14        6ES7 148-4EB00-0AA0
+[2366938]
+KatEntryName=16 DO DC24V CPV14
+InfoText=Digitalausgabemodul 16 DO DC24V CPV14
+SHORTNAME=16 DO DC24V CPV14
+

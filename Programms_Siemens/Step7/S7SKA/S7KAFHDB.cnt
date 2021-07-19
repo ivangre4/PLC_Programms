@@ -1,0 +1,69 @@
+:Base S7kafhdb.HLP
+:Title Help on LAD/STL/FBD: Programming S7 Blocks
+1 Introduction=HIDU_HELP_INTRODUCTION
+1 What's New?=Was_ist_neu
+1 Help on Help=Info_zur_Hilfe
+1 Getting Started=HIDU_FIRST_HELP
+1 Buttons in the Toolbar=Symbole
+1 Status Bar=Statuszeile
+1 Menu Commands
+2 File Menu=HIDU_DATEI_MENU
+2 Edit Menu=HIDU_BEARBEITEN_MENU
+2 Insert Menu=HIDU_EINFGEN_MENU
+2 PLC Menu=HIDU_ZIELSYSTEM_MENU
+2 Debug Menu=HIDU_TEST_MENU
+2 View Menu=HIDU_ANSICHT_MENU
+2 Options Menu=HIDU_OPTIONEN_MENU
+2 Window Menu=HIDU_FENSTER_MENU
+2 Help Menu=HIDU_HILFE_MENU
+1 Dialog Boxes
+2 "Compiler Report" and "Consistency Check" Dialog Boxes=HIDD_ATC_REPORT
+2 "Go To" Dialog Box, Network/Line=HIDD_SKAGOTO
+2 "Go To" Dialog Box, Network/Line in STL Source File=HIDD_ATCGOTO
+2 "Go To" Dialog Box, Block Address=HIDD_ADRGOTO
+2 "Generate Source File" Dialog Box=HIDD_SKABROWSER
+2 "Block Call Environment" Dialog Box=HIDD_TRIGGERCOND
+2 "Defining Multi-Instance Calls" Dialog box=HIDD_INSTANZ_ABFRAG
+2 "Contents of the PLC Tabs" Dialog Box=HIDD_BREAKPOINTCONTROL
+2 "General" Tab ("Customize" Dialog Box)=HIDD_OPT_EDI
+2 "STL" Tab ("Customize" Dialog Box)=HIDD_OPT_AWL
+2 "LAD/FBD" Tab ("Customize" Dialog Box)=HIDD_OPT_KOP
+2 "Create Block" Tab ("Customize" Dialog Box)=HIDD_OPT_COMP
+2 "Source Files" Tab ("Customize" Dialog Box)=HIDD_OPT_SOURCE
+2 "Source Text" Tab ("Customize" Dialog Box)=HIDD_OPT_SOURCETEXT
+2 "Symbol Selection" Tab ("Customize" Dialog Box)=HIDD_OPT_VARBROW
+2 "Zoom Factor" Dialog Box=HIDD_ZOOMFAKTOR
+2 "Parameter Properties" Dialog Box=HIDD_TCGRID
+2 "Select Window" Dialog Box=HIDD_FENSTERLISTE
+2 "Dialog box "Search/Replace" Dialog Box=HIDD_SEARCH_REPLACE_ERW_V4
+2 "Operation" Dialog Box=HIDD_TESTMODE
+2 "Create Network Template" Dialog box=HIDD_SET_NETWORKTEMPLATE_PARAMETERS
+2 "Set Comments on Network Templates" Dialog Box=HIDU_SET_NETWORKTEMPLATE_PARAMETERS
+2 "Modify" Dialog Box=HIDD_RSTATUS_EINGABE
+2 "Status Change" Dialog box=HIDD_STOPSTATUS
+2 "About" Dialog Box=HIDD_ABOUTBOX
+2 "Interface Update" Dialog box=HIDD_SCHNITTSTELLENABGLEICH
+2 "Text" Dialog Box=HIDU_FONTDIALOG
+2 "New Data Block" Dialog Box=HIDD_DB_ERSTELLEN
+2 "Print/Print Preview" Dialog Box=HIDD_PRINT
+1 Keyboard
+2 Shortcuts for Menu Commands (General)=Shortcuts_fuer_Menuebefehle
+2 Shortcuts for Menu Commands in the Code Section (STL)=Shortcuts_f_r_Men_befehle_im_Anweisungsteil_Sprache_AWL_
+2 Shortcuts for Menu Commands in the Code Section (FBD)=Shortcuts_f_r_Men_befehle_FUP_
+2 Shortcuts for Menu Commands in the Code Section (LAD)=Shortcuts_f_r_Men_befehle_Kop_
+2 Working with Keyboard Commands in the Program Elements Catalog=Arbeiten_im_Programmelemente_Katalog_mit_Tastenbefehlen
+2 Positioning the Cursor in Networks=Positionieren_auf_Netzwerke
+2 Selecting a Number of Networks Using the Mouse=Auswahl_Netzwerk_mit_Maus
+2 Selecting a Number of Networks Using the Keyboard=Auswahl_Netzwerk_mit_Tastatur
+2 Selecting Tabs in the Output Window=Ausw_hlen_der_Register_im_Ausgabefenster
+1 Programming Language References
+2 Statement List Language Representation=!JumpId(`s7rawl_b.hlp',`IDH_CONTENTS')
+2 Ladder Logic Language Representation=!JumpId(`s7rkop_b.hlp',`IDH_CONTENTS')
+2 Function Block Diagram Language Representation=!JumpId(`s7rfup_b.hlp',`CONTENTS')
+1 Help on Blocks
+2 Help on Organization Blocks=!JumpId(`s7rstobb.hlp',`IDH_CONTENTS')
+2 Help on Standard Function Blocks/Standard Functions=!JI(`s7rsfbcb.hlp',`HelpContents1')
+2 Help on IEC Standard Functions=!JumpId(`s7riec_b.hlp',`IDH_CONTENTS')
+2 Help on S5/S7 Functions=!JumpId(`s7rs5s7b.hlp',`IDH_CONTENTS')
+1 System Attributes
+2 Help on System Attributes=!JumpId(`s7ruda_b.hlp',`IDH_CONTENTS')

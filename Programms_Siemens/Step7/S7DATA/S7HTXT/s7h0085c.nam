@@ -1,0 +1,45 @@
+[2363744]
+KatEntryName=IM 153-2
+InfoText=IM 153-2, coupleur de bus pour SM, FM S7-300 (sans le FM356-4), remplacement de module en fonctionnement. Mise en oeuvre redondante dans système H avec bus interne actif possible, prend en charge le synchronisme d'horloge.
+SHORTNAME=IM 153-2, redondant
+Comment=IM 153-2 R4
+
+[2363745]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique FO, coupleur de bus pour SM ,FM S7-300 (sans le FM356-4), remplacement de module en fonctionnement. Mise en oeuvre redondante dans système H avec bus interne actif possible
+SHORTNAME=IM 153-2 FO, redondant
+
+[2363746]
+KatEntryName=IM 153-2 OD
+InfoText=IM 153-2 (OUTDOOR), coupleur de bus pour SM, FM S7-300 (sans le FM356-4), remplacement de module en fonctionnement. Mise en oeuvre redondante dans système H avec bus interne actif possible, prend en charge le synchronisme d'horloge.
+SHORTNAME=IM 153-2 OD, redondant
+
+[2363752]
+KatEntryName=IM 153-2
+SHORTNAME=IM 153-2, redondant
+InfoText=IM 153, coupleur redondant pour PROFIBUS-PA. Reconfiguration durant le fonctionnement. Coupleur redondant pour la connexion d'un POFIBUS-DP ("Y-Link") non redondant.
+
+[2363753]
+KatEntryName=IM 153-2 FO
+SHORTNAME=IM 153-2 FO, redondant
+InfoText=IM 153 (avec physique FO), coupleur redondant pour PROFIBUS-PA. Reconfiguration en Run. Coupleur redondant pour la connexion d'un PROFIBUS-DP ("Y-Link") non redondant.
+
+[2363754]
+KatEntryName=IM 153-2 OD
+SHORTNAME=IM 153-2 OD, redondant
+InfoText=IM 153 (OUTDOOR), coupleur redondant pour PROFIBUS-PA. Reconfiguration en Run. Coupleur redondant pour la connexion d'un PROFIBUS-DP ("Y-Link") non redondant.
+
+[2363760]
+KatEntryName=IMaître IM153 PA
+SHORTNAME=Maître IM153 PA
+InfoText=Maître IM153 PA
+
+[2363761]
+KatEntryName=IMaître IM153 PA
+SHORTNAME=Maître IM153 PA
+InfoText=Maître IM153 PA
+
+[2363762]
+KatEntryName=IMaître IM153 PA
+SHORTNAME=Maître IM153 PA
+InfoText=Maître IM153 PA

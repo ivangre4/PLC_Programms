@@ -1,0 +1,141 @@
+/ Aufbau des ATT Files
+/ AttributID, Datentyp, Use, [CLSID,] Name [,Grenzwerte]
+/
+/ AttributID:
+/	AttributID des Attributes, das Beschrieben ist (Dezimal)
+/
+/Datentyp:
+/	0->BYTE
+/	1->SHORT
+/	2->LONG
+/	3->STRING
+/	4->LONGBINARY
+/	5->LONGBINARY, für das ein COM-Interface Existiert (dual)
+/
+/Use:
+/	0->Steht für die Kommandoschnittstelle und dem Export / Import nicht zur Verfügung
+/	1->Steht für die Kommandoschnittstelle und dem Export / Import voll zur Verfügung
+/	2->Steht für die Kommandoschnittstelle und dem Export / Import eingeschränkt zur Verfügung
+/		d.H. Das Attribut kann zwar Importiert werden wird aber nicht Exportiert.
+/			 Über die Kommandoschnittstelle kann auf das Attribut zugegriffen werden,
+/			 es wird jedoch nicht über die Funktionen GetAllAttributes 
+/			 und GetFirst-, -NextAttribute angeboten.
+/
+/CLSID: Achtung Nur Datentyp 5!
+/	ClassID eines Cominterfaces, das für den Zugriff auf ein Longbinary-Attribut
+/	verwendet werden soll. Dadurch ist es möglich Longbinarysstrukturiert zu exportieren / 
+/	Importieren, oder über die Kommandoschnittstelle zu bearbeiten
+/
+/Name:
+/	Attributname, wie das Attribut im Import-/Exportfile erscheint, bzw. über die 
+/	Kommandoschnittselle auf das Attribut zugegriffen werden kann.
+/
+/Gerenzwerte: (Optional und nicht für Datentyp 3, 4 u. 5)
+/	, Min, Max	-> Es sind Werte von Min bis Max, einschließlich der Grenzen, zugelassen
+/   , Min		-> Werte >= Min sind zugelassen
+/	, -, Max	-> Werte <= Max sind zugelassen
+/	, enum (a, b, ... , c)
+/				-> Nur die Werte a, b, ... und c sind zugelassen
+
+/ Conn. attributes
+
+/ S7 Verbindungen obermenge
+004097,3,0,NAME
+004098,3,0,TYPE
+/ 004101,3,1,CREATOR
+/ 004104,2,1,VERSION, 0, 2147483647
+004110,2,1,MODIFIED
+/ 004111,2,1,FLAGS, 0, 2147483647
+
+049154,0,1,VISIBLY				, 0, 1
+/ 049156,0,1,DYNAMIC				, 0, 1
+049663,0,1,DYNAMIC				, 0, 1
+049157,0,1,ACTIVE_CONN_SETUP	, 0, 1
+049158,0,1,SEND_MESSAGES		, 0, 1
+049159,0,1,UNSPECIFIED			, 0, 1
+049161,0,1,OBK_TYPE,			, 0, 1
+049174,0,1,GENERATED			, 0, 1
+/ 049183,0,1,ONE_WAY				, 0, 1
+049662,0,1,ONE_WAY				, 0, 1
+049195,0,1,GENERATED_SEL_OBJ	, 0, 255
+049197,0,1,UPLOADED				, 0, 1
+049654,0,1,WAY_INIT				, 0, 1
+049655,0,1,PC_PG_CONN			, 0, 1
+049860,0,1,MIRRORED_CONN		, 0, 1
+049199,0,0,DIAG_STATUS_ACTIV	, 0, 1
+049201,0,0,DIAG_TEMP_OBJ		, 0, 1
+049672,0,1,OPC_CONN_SETUP		, 0, 2
+049673,0,1,OPC_CONN			, 0, 1
+049674,0,1,OPC_OPTIMIZE_WRITE 		, 0, 1
+049675,0,1,OPC_OPTIMIZE_READ		, 0, 1
+049676,0,1,OPC_AUTO_PASSWORD_RESET	, 0, 1
+049677,0,1,OPC_CONN_ENABLE		, 0, 1
+049702,0,1,OPC_FAST_CONNSTATE_RETURN	, 0, 1
+049661,0,1,HIGH_RED				, 0, 1
+049665,0,1,HIGH_LOC_RED			, 0, 1
+049666,0,1,HIGH_REM_RED			, 0, 1
+
+049688,0,1,MULTIPROJECT_CONN	, 0, 1
+049664,3,1,LOCAL_IF_MOD
+
+/ 0:Lokal->Partner(default), 1:Lokal<-Partner, 2:Lokal<->Partner
+049164,0,1,PTP_COMM_DIRECTION,	enum (0 = Lokal->Partner, 1 = Local<-Partner, 2 = Local<->Partner)
+
+049160,1,1,SDB_NO				, 701, 956
+049155,1,1,LFD_NO				, 1, 254
+049185,1,1,SDB_NO_CP
+049184,1,1,LFD_NO_CP
+049652,1,1,LOCAL_WAY_TYPE,	enum (0 = ASINTERN, 1 = CBUS, 2 = PARTYLINE, 4 = MPI, 8 = PROFIBUS, 16 = ETHERNET, 32 = TCPIP, 64 = PBK300, 4096 = IRRELEVANT, 8192 = INVALID)
+049653,1,1,REMOTE_WAY_TYPE,	enum (0 = ASINTERN, 1 = CBUS, 2 = PARTYLINE, 4 = MPI, 8 = PROFIBUS, 16 = ETHERNET, 32 = TCPIP, 64 = PBK300, 4096 = IRRELEVANT, 8192 = INVALID)
+049853,1,1,REMMOD_LFDNR			, 1, 254
+049854,1,1,REMMOD_RACKNO
+049855,1,1,REMMOD_SLOTNO		, 0, 32
+049861,1,1,MULTIPROT
+049678,1,1,OPC_MESSAGES
+049698,1,1,OPC_ADMIN_MESSAGES
+049699,4,1,OPC_ALARMS
+049700,4,1,OPC_DIAGS
+049865,3,1,PTP_LOC_INTERFACE1
+049866,3,1,PTP_LOC_INTERFACE2
+049867,3,1,PTP_REM_INTERFACE1
+049868,3,1,PTP_REM_INTERFACE2
+
+049171,1,1,PTP_SDB_NO7
+049172,1,1,PTP_SDB_NO1
+049163,1,1,PTP_CHANNEL_NO
+049169,1,1,PTP_S5CPU_NO
+049170,1,1,PTP_VERBNO_RK512
+049173,1,1,PTP_LFD_NO
+
+049153,2,1,LOCAL_ID
+049182,2,0,OBJECT_ID
+049187,2,1,CBUS_ID
+049186,2,1,CBUS_REF_ID
+049679,2,1,OPC_ALARM
+049680,2,1,OPC_ENABLE_TIME
+049681,2,1,OPC_TIMEOUT_CONN
+049682,2,1,OPC_FAULT_TIME
+049683,2,1,OPC_MAX_REQUEST
+049684,2,1,OPC_PUD_SIZE
+
+049162,3,1,REMOTE_PARTNER_INFO
+049659,3,1,REMOTE_PARTNER
+049856,3,1,REMOTE_ADDRESS
+049857,3,1,S7SAPI_CONN_NAME
+049858,3,1,S7SAPI_VFD_NAME
+049656,3,1,PCPG_CONN_NAME
+049657,3,1,LOCAL_ID_NAME
+049658,3,1,REMOTE_ID_NAME
+049200,3,0,CONN_STATUS
+049685,5,1,OPC_LOCAL_VFD_NAME
+049686,5,1,OPC_REMOTE_VFD_NAME
+049692,5,1,{0C6E669B-EB93-40A5-888C-18DD5EA39A13}, RED_CONN_2WAY_CONFIG
+049693,5,1,{F5AC8409-C8AD-4C2C-9FED-DFFBBAFE04BD}, RED_CONN_4WAY_CONFIG
+
+049165,3,1,PTP_PROTOCOL_TYPE
+049167,3,1,PTP_REMOTE_STATION_TYPE
+049175,3,1,PTP_CP_RACK_SLOT
+049168,3,1,PTP_REM_STATION_NAME
+049687,3,1,REFERENCE_NAME
+
+049863,4,0,NET_INFO

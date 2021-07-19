@@ -1,0 +1,34 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2063
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S Módulos de salidas digitales 4DO HF 0,5A, 4DO HF 2A, 8DO HF 0,5A; módulo de potencia DC24V HF
+
+;---------- PM-E DC24V HF,   6ES7 138-4CA60-0AB0
+[2367373]
+KatEntryName=PM-E DC24V HF
+InfoText=Módulo de potencia PM-E DC24V HF, con detección de tensión de realimentación
+SHORTNAME=PM-E DC24V HF
+
+
+;---------- 4DO DC24V/0,5A HF,   6ES7 132-4BD00-0AB0
+[2367374]
+KatEntryName=4DO DC24V/0,5A HF
+InfoText=Módulo de salidas digitales DO 4xDC24V/0.5A, High Feature, diagnóstico, soporta modo isócrono
+SHORTNAME=4DO DC24V/0,5A HF
+
+
+;---------- 4DO DC24V/2A HF,   6ES7 132-4BD30-0AB0
+[2367375]
+KatEntryName=4DO DC24V/2A HF
+InfoText=Módulo de salidas digitales DO 4xDC24V/2A, High Feature, diagnóstico, soporta modo isócrono
+SHORTNAME=4DO DC24V/2A HF
+
+
+;---------- 8DO DC24V/0,5A HF,   6ES7 132-4BF00-0AB0
+[2367376]
+KatEntryName=8DO DC24V/0,5A HF
+InfoText=Módulo de salidas digitales DO 8xDC24V/0.5A, High Feature, diagnóstico, soporta modo isócrono
+SHORTNAME=8DO DC24V/0,5A HF
+

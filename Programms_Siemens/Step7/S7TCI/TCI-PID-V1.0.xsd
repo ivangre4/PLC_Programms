@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pid="http://www.profibus.com/TCI/2006/03/PID" xmlns:prim="http://www.profibus.com/TCI/2006/03/Primitives" targetNamespace="http://www.profibus.com/TCI/2006/03/PID" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.profibus.com/TCI/2006/03/Primitives" schemaLocation="TCI-Primitives-v1.0.xsd"/>
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xsd:element name="ProgramInterface">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="prim:DocumentT">
+					<xsd:sequence>
+						<xsd:element name="General">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="ToolDescription" maxOccurs="unbounded">
+										<xsd:complexType>
+											<xsd:attribute ref="xml:lang" use="required"/>
+											<xsd:attribute name="ToolName" type="xsd:string" use="required"/>
+											<xsd:attribute name="ToolDescription" type="xsd:string" use="required"/>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="InvocationPrefix" type="prim:ParameterT" minOccurs="0"/>
+								</xsd:sequence>
+								<xsd:attribute name="VendorName" type="xsd:string" use="required"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="ConformanceClass">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="OptionalFeature" type="prim:ParameterT" minOccurs="0" maxOccurs="unbounded"/>
+								</xsd:sequence>
+								<xsd:attribute name="Name" type="prim:ConformanceClassEnumT" use="required"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="EntryPoints" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="EntryPoint" maxOccurs="unbounded">
+										<xsd:complexType>
+											<xsd:complexContent>
+												<xsd:extension base="prim:ObjectT">
+													<xsd:sequence>
+														<xsd:element name="InfoText" maxOccurs="unbounded">
+															<xsd:complexType>
+																<xsd:attribute ref="xml:lang" use="required"/>
+																<xsd:attribute name="EntryPointName" type="xsd:string" use="required"/>
+																<xsd:attribute name="EntryPointDescription" type="xsd:string" use="required"/>
+															</xsd:complexType>
+														</xsd:element>
+													</xsd:sequence>
+													<xsd:attribute name="ID" type="prim:IdT" use="required"/>
+												</xsd:extension>
+											</xsd:complexContent>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

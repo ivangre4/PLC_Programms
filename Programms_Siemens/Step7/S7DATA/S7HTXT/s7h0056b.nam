@@ -1,0 +1,41 @@
+;------------------------------ SI-Module ASCII- und 3964(R)-Protokoll-Treiber
+[2363652]
+KatEntryName = 1 SI  ASCII  (4 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 4 byte I/O interface
+SHORTNAME=1 SI  ASCII  (4 Byte)
+Comment=Communication module with a serial interface (RS232, RS422 or RS485) and 3964(R) log or ASCII log
+
+[2363653]
+KatEntryName = 1 SI  ASCII  (8 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 8 byte I/O interface
+SHORTNAME=1 SI  ASCII  (8 Byte)
+[2363654]
+KatEntryName = 1 SI  ASCII  (32 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 32 byte I/O interface
+SHORTNAME=1 SI  ASCII  (32 Byte)
+[2363655]
+KatEntryName = 1 SI  3964(R)  (4 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and 3964(R) log with 4 byte I/O interface
+SHORTNAME=1 SI  3964(R)  (4 Byte)
+[2363656]
+KatEntryName = 1 SI  3964(R)  (8 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and 3964(R) log with 8 byte I/O interface
+SHORTNAME=1 SI  3964(R)  (8 Byte)
+[2363657]
+KatEntryName = 1 SI  3964(R)  (32 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and 3964(R) log with 32 byte I/O interface
+SHORTNAME=1 SI  3964(R)  (32 Byte)
+
+;---------- V1.3
+[2364748]
+KatEntryName = 1 SI  ASCII  V1.3 (4 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 4 byte I/O interface, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (4 B)
+[2364749]
+KatEntryName = 1 SI  ASCII  V1.3 (8 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 8 byte I/O interface, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (8 B)
+[2364750]
+KatEntryName = 1 SI  ASCII  V1.3 (32 Byte)
+InfoText =Communication module with a serial interface (RS232, RS422 or RS485) and ASCII log with 32 byte I/O interface, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (32 B)

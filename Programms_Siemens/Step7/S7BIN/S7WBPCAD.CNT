@@ -1,0 +1,20 @@
+:Base s7wbpcad.hlp
+1 Resumen=Welcome
+1 Ficha "General"=HIDD_ALLG_BASE
+1 Ficha / Dialogo
+2 Ficha "FMS"=HIDD_FMS
+1 Ficha / Dialogo - OPC
+2 Ficha "DP"=HIDD_DP
+2 Ficha "Maestro DP Clase 2"=HIDD_OPC_DPC2
+2 Ficha "SEND/RECEIVE (FDL)"=HIDD_FDL
+2 Ficha "FMS"=HIDD_FMS
+2 Ficha "SEND/RECEIVE (ISO/TCP)"=HIDD_SENDRECV
+2 Ficha "S7"=HIDD_S7
+2 Editar directorio de objetos=HIDD_OVZ
+2 Asignar derechos de acceso específicos de ítem OPC=HIDD_ITEM
+2 Diálogo "Editar VFD"=HIDD_VFD
+2 Ficha "SNMP"=ID_Register_SNMP
+2 Ficha "PROFINET"=HIDD_OPC_PROFINET
+2 Register "PROFINET IO"=HID_OPC_PNIO
+2 Cuadro de diálogo "Editar configuración del sistema..."=ID_Anlagenkonfiguration_bearbeiten
+2 Cuadro de diálogo "Editar datos de estación"=ID_Teilnehmerdaten_bearbeiten

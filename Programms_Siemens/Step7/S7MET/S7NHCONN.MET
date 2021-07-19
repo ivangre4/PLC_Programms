@@ -1,0 +1,17 @@
+[_AUT_CONNECTION_AT]
+subtype=_S7V_CONN_H_AT
+relation=0x000000be,_AUT_CONNECTION_AT[0x000000bf]
+
+[_S7V_CONN_H_AT]
+Abstract=true
+subtype=_S7V_CONN_HOMO_H_CT
+server= s7nhhomx.dll
+objtype=0x00145440
+prefix=HOMO
+
+[_S7V_CONN_HOMO_H_CT]
+server= s7nhhomx.dll
+objtype=0x00145441
+prefix=HOMO
+zweiseitig=3
+spezifiziert=0

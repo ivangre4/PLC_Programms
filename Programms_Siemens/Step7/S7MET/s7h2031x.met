@@ -1,0 +1,32 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2031
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- 2RO UC 60V / 2A
+[_S7H_HSP_6ES7_132_7HB00_0AB0_CT]
+ObjType=2367024
+prefix=OM
+server=s7hkcomx.dll
+basetype=_S7H_HSP_CLASS_ET200ISP_MODULE_DO_AT
+CatalogParent=2363571
+CLSID={02E31EDE-5DE1-4f4e-8B33-73CE9E91BB95}
+USER_DIALOG_1=STANDARD
+USER_DIALOG_2={27C75DC3-852A-45f0-A10B-3705F014DC91},s7h2031x.dll
+IsCatEntry=1
+MLFB=6ES7 132-7HB00-0AB0
+SHORTNAME=2RO UC60V/2A
+IS_PARAMETRIZEABLE=1
+COUNT_OUTPUT_CHANNELS_DIGITAL=16
+COUNT_OUTPUT_GROUPS_DIGITAL=2
+IO_TYPE=2
+OUT_ADDRESS_RANGE=2
+SIGNAL_TYPE=1
+S7_TYPE_CODE=0x79D4
+paramDescr=DOR2031x.dsc 
+HSP_ID=2031
+HSP_NAME=ET 200iSP 2RO
+HWCNFX_FOR_HWU=5.3.2.0
+HWCNFX_VER=5.4.4.0|0
+

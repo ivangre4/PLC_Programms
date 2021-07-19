@@ -1,0 +1,22 @@
+[2364019]
+KatEntryName=V2.5
+InfoText=256 KB work memory; 0.1 ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; supports RT; PROFINET interface and 1 port; PROFINET CBA; PROFINET CBA-Proxy; TCP/IP transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier configuration up to 32 modules; constant DP bus cycle time; routing; firmware V2.5
+SHORTNAME=CPU 315-2 PN/DP
+Comment=6ES7 315-2EH13-0AB0 V2.5, 6ES7 317-2EK13-0AB0 V2.5
+
+[2364020]
+SHORTNAME=MPI/DP
+
+[2364021]
+SHORTNAME=PN-IO
+
+[2364022]
+KatEntryName=V2.5
+InfoText=1024 KB work memory; 0.05ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; supports RT; PROFINET interface and 1 port; PROFINET CBA; PROFINET CBA-Proxy; TCP/IP transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier configuration up to 32 modules; constant DP bus cycle time; routing; firmware V2.5
+SHORTNAME=CPU 317-2 PN/DP
+
+[2364023]
+SHORTNAME=MPI/DP
+
+[2364024]
+SHORTNAME=PN-IO

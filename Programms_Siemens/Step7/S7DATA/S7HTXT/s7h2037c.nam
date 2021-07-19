@@ -1,0 +1,40 @@
+;---------------------------------------------------------
+;    Copyright (c) Siemens AG 2006 All Rights Reserved 
+;    s7h2037x   21.06.07
+;---------------------------------------------------------
+
+Comment=SIWAREX U
+
+[2367058]
+KatEntryName = Modules de pesage
+InfoText = Modules de function SIWAREX pour le pesage et le dosage
+
+[2367040]
+KatEntryName = Modules de pesage
+InfoText = Modules de function SIWAREX pour le pesage et le dosage
+
+[2367059]
+KatEntryName = SIWAREX U-1
+InfoText = Module de pesage, SIWAREX U avec 1 canal
+
+;[2367064]
+;KatEntryName = 7MH4601-1AA01
+;InfoText = Module de pesage, SIWAREX U avec 1 canal
+
+[2367060]
+;KatEntryName = SIWAREX U-1 7MH4950-1AA01
+KatEntryName = SIWAREX U-1
+InfoText = Module de pesage, SIWAREX U avec 1 canal
+
+[2367063]
+KatEntryName = SIWAREX U-2
+InfoText = Module de pesage, SIWAREX U avec 2 canaux
+
+;[2367065]
+;KatEntryName = 7MH4601-1BA01
+;InfoText = Module de pesage, SIWAREX U avec 2 canaux
+
+[2367062]
+;KatEntryName = SIWAREX U-2 7MH4950-2AA01
+KatEntryName = SIWAREX U-2
+InfoText = Module de pesage, SIWAREX U avec 2 canaux

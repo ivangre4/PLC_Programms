@@ -1,0 +1,238 @@
+; ==================================================================================================
+; ET200pro
+;  |_ Motorstarter
+;		|_ Direktsanftstarter
+;			|_ <4Starter>
+;		|_ Direktstarter
+;			|_ <8Starter>
+;		|_ Reversiersanftstarter
+;			|_ <4Starter>
+;		|_ Reversierstarter
+;			|_ <8Starter>
+;		|_ Sondermodule
+;			|_ <3Module>
+; ==================================================================================================
+
+; ==================================================================================================
+; --------------------------- Katalogfolder Motorstarter
+[2363722]
+; Änderung der KatEntryNames nicht möglich, da in cat-Files darauf verwiesen wird
+KatEntryName=Démarreurs de moteur
+InfoText=Modules démarreurs de moteur pour ET 200pro
+SHORTNAME=Démarreurs de moteur
+Comment=Modules démarreurs de moteur ET 200pro
+
+; --------------------------- Katalogfolder Direktstarter
+[2363723]
+KatEntryName=Démarreurs directs
+InfoText=Démarreurs de moteurs pour un sens de rotation pour ET 200pro
+SHORTNAME=Démarreurs directs
+; --------------------------- Katalogfolder Reversierstarter
+[2363724]
+KatEntryName=Démarreurs-inverseurs
+InfoText=Démarreurs de moteur pour deux sens de rotation pour ET 200pro
+SHORTNAME=Démarreurs-inverseurs
+; --------------------------- Katalogfolder Sondermodule
+[2363734]
+KatEntryName=Modules spéciaux
+InfoText=Modules spéciaux pour ET 200pro
+SHORTNAME=Modules spéciaux
+; --------------------------- Katalogfolder Direktsanftstarter
+[2363725]
+KatEntryName=Démarreurs progressifs directs
+InfoText=Démarreurs pour démarrage progressif/ralentissement contrôlé pour un sens de rotation pour ET 200pro
+SHORTNAME=Démarreurs progressifs directs
+; --------------------------- Katalogfolder Reversiersanftstarter
+[2363726]
+KatEntryName=Démarreurs-inverseurs progressifs
+InfoText=Démarreurs de moteur pour démarrage progressif/ralentissement contrôlé pour deux sens de rotation pour ET 200pro
+SHORTNAME=Démarreurs-inverseurs progressifs
+; ==================================================================================================
+
+; --------------------------- 3RK1-304-5KS40-2AA0
+[2363698]
+KatEntryName=DSe HF 4DI 0,15-2A
+InfoText=Démarreur de moteur ET200pro DSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA0
+[2363699]
+KatEntryName=RSe HF 4DI 0,15-2A
+InfoText=Démarreur de moteur ET200pro RSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA0
+[2363700]
+KatEntryName=DSe ST 0,15-2A
+InfoText=Démarreur de moteur ET200pro DSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA0
+[2363701]
+KatEntryName=RSe ST 0,15-2A
+InfoText=Démarreur de moteur ET200pro RSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-2AA3
+[2363702]
+KatEntryName=DSe HF 4DI/1BO 0,15-2A
+InfoText=Démarreur de moteur ET200pro DSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA3
+[2363703]
+KatEntryName=RSe HF 4DI/1BO 0,15-2A
+InfoText=Démarreur de moteur ET200pro RSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA3
+[2363704]
+KatEntryName=DSe ST 1BO 0,15-2A
+InfoText=Démarreur de moteur ET200pro DSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA3
+[2363705]
+KatEntryName=RSe ST 1BO 0,15-2A
+InfoText=Démarreur de moteur ET200pro RSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA0
+[2363706]
+KatEntryName=DSe HF 4DI 1,5-12A
+InfoText=Démarreur de moteur ET200pro DSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA0
+[2363707]
+KatEntryName=RSe HF 4DI 1,5-12A
+InfoText=Démarreur de moteur ET200pro RSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA0
+[2363708]
+KatEntryName=DSe ST 1,5-12A
+InfoText=Démarreur de moteur ET200pro DSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA0
+[2363709]
+KatEntryName=RSe ST 1,5-12A
+InfoText=Démarreur de moteur ET200pro RSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA3
+[2363710]
+KatEntryName=DSe HF 4DI/1BO 1,5-12A
+InfoText=Démarreur de moteur ET200pro DSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA3
+[2363711]
+KatEntryName=RSe HF 4DI/1BO 1,5-12A
+InfoText=Démarreur de moteur ET200pro RSe HF; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA3
+[2363712]
+KatEntryName=DSe ST 1BO 1,5-12A
+InfoText=Démarreur de moteur ET200pro DSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A, contact de freinage AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA3
+[2363713]
+KatEntryName=RSe ST 1BO 1,5-12A
+InfoText=Démarreur de moteur ET200pro RSe ST; commutation méc.; protection électron. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; contact de freinage AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA0
+[2363735]
+KatEntryName=sDSSte HF 4DI 0,15-2A
+InfoText=Démarreur de moteur ET200pro sDSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA3
+[2363736]
+KatEntryName=sDSSte HF 4DI/1B 0,15-2A
+InfoText=Démarreur de moteur ET200pro sDSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA0
+[2363737]
+KatEntryName=sRSSte HF 4DI 0,15-2A
+InfoText=Démarreur de moteur ET200pro sRSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA3
+[2363738]
+KatEntryName=sRSSte HF 4DI/1B 0,15-2A
+InfoText=Démarreur de moteur ET200pro sRSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/0,9kW; 0,15A...2,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA0
+[2363739]
+KatEntryName=sDSSte HF 4DI 1,5-12A
+InfoText=Démarreur de moteur ET200pro sDSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA3
+[2363740]
+KatEntryName=sDSSte HF 4DI/1B 1,5-12A
+InfoText=Démarreur de moteur ET200pro sDSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA0
+[2363741]
+KatEntryName=sRSSte HF 4DI 1,5-12A
+InfoText=Démarreur de moteur ET200pro sRSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; sans contact de freinage; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA3
+[2363742]
+KatEntryName=sRSSte HF 4DI/1B 1,5-12A
+InfoText=Démarreur de moteur ET200pro sRSSte HF; commutation électro.; protection électr./therm. contre les surcharges; 3 AC 400V/5,5kW; 1,50A...12,00A; contact de freinage AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 1,5-12A
+
+
+
+; ==================================================================================================
+; --------------------------- Sondermodule
+[2363731]
+KatEntryName=RSM 25A
+InfoText=Module spécial démarreur de moteur ET200pro RSM; coupure méc.; 3 AC 400V; 25A; Han Q4/2; module d'isolement ; fonction de sectionneur pour le circuit principal
+SHORTNAME=RSM 25A
+
+
+[2363732]
+KatEntryName=F-RSM 16A
+InfoText=Module spécial démarreur de moteur ET200pro F-RSM; coupure méc.; 3 AC 400V; 16A; Han Q4/2; module d'isolement de sécurité autonome
+SHORTNAME=F-RSM 16A
+
+
+[2363733]
+KatEntryName=ASM 400V 25A
+InfoText=Module spécial démarreur de moteur ET200pro ASM; coupure méc.; 3 AC 400V; 25A; Han Q4/2; module de coupure sélective 400V; double alimentation du circuit principal
+SHORTNAME=ASM 400V 25A

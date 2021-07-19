@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Samrat (Siemens AG) -->
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Hr. Vogt (Siemens AG) -->
+<SNMP_Alarms DefaultDeviceType="SNMP_DEFAULT" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./s7snmpalarm.xsd">
+	<DeviceType Name="SNMP_SWITCH">
+		<AlarmMessage Class="PCS1_PLC" Type="PCS_TROUBLE">
+			<InfoText>Switch is in a fault state. Indicates OSM/ESM fault state
+			</InfoText>
+			<MsgVar Bit="1">
+				<Name>snOsmfaultstate</Name>
+			</MsgVar>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<Action>
+				<Name>LoopInAlarm</Name>
+				<Param>Dummy</Param>
+			</Action>
+			<TextOrigin TextRef="1"/>
+			<TextArea TextRef="2"/>
+			<TextEvent TextRef="30"/>
+		</AlarmMessage>
+	</DeviceType>
+	<DeviceType Name="SNMP_IPC">
+		<AlarmMessage Class="PCS3_MAINTANCE" Type="PCS_MAINTANCE">
+			<InfoText>IPC status.
+			</InfoText>
+			<MsgVar Bit="29">
+				<Name>AlarmNotificationRegister</Name>
+			</MsgVar>
+			<QuitVar Bit="29">
+				<Name>AlarmAcknowledgeRegister</Name>
+			</QuitVar>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<Action>
+				<Name>LoopInAlarm</Name>
+				<Param>Dummy</Param>
+			</Action>
+			<TextOrigin TextRef="1"/>
+			<TextArea TextRef="2"/>
+			<TextEvent TextRef="22"/>
+		</AlarmMessage>
+		<AlarmMessage Class="PCS1_PLC" Type="PCS_ERROR">
+			<InfoText>IPC status.
+			</InfoText>
+			<MsgVar Bit="30">
+				<Name>AlarmNotificationRegister</Name>
+			</MsgVar>
+			<QuitVar Bit="30">
+				<Name>AlarmAcknowledgeRegister</Name>
+			</QuitVar>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<Action>
+				<Name>LoopInAlarm</Name>
+				<Param>Dummy</Param>
+			</Action>
+			<TextOrigin TextRef="1"/>
+			<TextArea TextRef="2"/>
+			<TextEvent TextRef="21"/>
+		</AlarmMessage>
+		<AlarmMessage Class="PCS1_PLC" Type="PCS_TROUBLE">
+			<InfoText>IPC status.
+			</InfoText>
+			<MsgVar Bit="31">
+				<Name>AlarmNotificationRegister</Name>
+			</MsgVar>
+			<QuitVar Bit="31">
+				<Name>AlarmAcknowledgeRegister</Name>
+			</QuitVar>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<Action>
+				<Name>LoopInAlarm</Name>
+				<Param>Dummy</Param>
+			</Action>
+			<TextOrigin TextRef="1"/>
+			<TextArea TextRef="2"/>
+			<TextEvent TextRef="20"/>
+		</AlarmMessage>
+	</DeviceType>
+	<DeviceType Name="SNMP_DEFAULT">
+		<AlarmMessage Class="PCS1_PLC" Type="PCS_TROUBLE">
+			<InfoText>SNMP path status.
+			</InfoText>
+			<MsgVar Bit="0">
+				<Name>&amp;statepathval()</Name>
+			</MsgVar>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<ProcessValue/>
+			<Action>
+				<Name>LoopInAlarm</Name>
+				<Param>Dummy</Param>
+			</Action>
+			<TextOrigin TextRef="1"/>
+			<TextArea TextRef="2"/>
+			<TextEvent TextRef="3"/>
+		</AlarmMessage>
+	</DeviceType>
+	<AlarmText Id="TextId_1">
+		<LocalizedText LanguageId="7">
+			Dummy
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Dummy
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Dummy</LocalizedText>
+		<LocalizedText LanguageId="12">Dummy</LocalizedText>
+		<LocalizedText LanguageId="10">Dummy</LocalizedText>
+		<LocalizedText LanguageId="4">Dummy</LocalizedText>
+		<LocalizedText LanguageId="17">Dummy</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_2">
+		<LocalizedText LanguageId="7">
+			Dummy
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Dummy
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Dummy</LocalizedText>
+		<LocalizedText LanguageId="12">Dummy</LocalizedText>
+		<LocalizedText LanguageId="10">Dummy</LocalizedText>
+		<LocalizedText LanguageId="4">Dummy</LocalizedText>
+		<LocalizedText LanguageId="17">Dummy</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_3">
+		<LocalizedText LanguageId="7">
+			SNMP-Geraet ist nicht erreichbar.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			SNMP device is not answering.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">apparecchio SNMP non aggiungibile. </LocalizedText>
+		<LocalizedText LanguageId="12">L’appareil SNMP ne répond pas. </LocalizedText>
+		<LocalizedText LanguageId="10">El dispositivo SNMP no responde.</LocalizedText>
+		<LocalizedText LanguageId="4">SNMP设备没有应答。</LocalizedText>
+		<LocalizedText LanguageId="17">SNMPデバイスの応答がありません。</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_10">
+		<LocalizedText LanguageId="7">
+			Alarm von Sensor 1.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 1.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 1.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 1.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 1.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器1的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ1からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_11">
+		<LocalizedText LanguageId="7">
+			Alarm von sensor 2.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 2.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 2.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 2.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 2.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器2的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ2からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_12">
+		<LocalizedText LanguageId="7">
+			Alarm von Sensor 3.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 3.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 3.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 3.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 3.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器3的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ3からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_13">
+		<LocalizedText LanguageId="7">
+			Alarm von Sensor 4.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 4.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 4.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 4.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 4.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器4的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ4からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_14">
+		<LocalizedText LanguageId="7">
+			Alarm von Sensor 5.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 5.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 5.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 5.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 5.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器5的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ5からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_15">
+		<LocalizedText LanguageId="7">
+			Alarm von Sensor 6.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Alarm from sensor 6.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">Allarme del sensore 6.</LocalizedText>
+		<LocalizedText LanguageId="12">Alarme du capteur 6.</LocalizedText>
+		<LocalizedText LanguageId="10">Alarma del sensor 6.</LocalizedText>
+		<LocalizedText LanguageId="4">来自传感器6的报警。</LocalizedText>
+		<LocalizedText LanguageId="17">センサ6からのアラーム</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_20">
+		<LocalizedText LanguageId="7">
+Gerät schlecht, Wartungsalarm</LocalizedText>
+		<LocalizedText LanguageId="9">Device bad, Maintenance alarm. </LocalizedText>
+		<LocalizedText LanguageId="16">Apparecchio difettoso, allarme di manutenzione.</LocalizedText>
+		<LocalizedText LanguageId="12">Appareil dctueux, alarme de maintenance. </LocalizedText>
+		<LocalizedText LanguageId="10">Dispositivo mal, alarma de mantenimiento. </LocalizedText>
+		<LocalizedText LanguageId="4">设备坏，维护报警。</LocalizedText>
+		<LocalizedText LanguageId="17">デバイス不良、メンテナンスアラーム。</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_21">
+		<LocalizedText LanguageId="7">
+Gerät unsicher, Wartungsanforderung</LocalizedText>
+		<LocalizedText LanguageId="9">Device Uncertain, Maintenance Required.</LocalizedText>
+		<LocalizedText LanguageId="16">Apparecchio inaffidabile, richiesta di manutenzione.</LocalizedText>
+		<LocalizedText LanguageId="12">Appareil incertain, maintenance requise.</LocalizedText>
+		<LocalizedText LanguageId="10">Dispositivo inseguro, requiere mantenimiento.</LocalizedText>
+		<LocalizedText LanguageId="4">设备不确定，要求维护。</LocalizedText>
+		<LocalizedText LanguageId="17">デバイス不明、メンテナンスが必要です。</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_22">
+		<LocalizedText LanguageId="7">
+Gerät Gut, Wartungsbedarf</LocalizedText>
+		<LocalizedText LanguageId="9">Device Good, Maintenance needed.</LocalizedText>
+		<LocalizedText LanguageId="16">Apparecchio funzionante, manutenzione necessaria.</LocalizedText>
+		<LocalizedText LanguageId="12">Appareil en ordre, maintenance requise. </LocalizedText>
+		<LocalizedText LanguageId="10">Dispositivo bien, necesita mantenimiento. </LocalizedText>
+		<LocalizedText LanguageId="4">设备正常，需要维护。</LocalizedText>
+		<LocalizedText LanguageId="17">デバイス良好、メンテナンスが必要です。</LocalizedText>
+	</AlarmText>
+	<AlarmText Id="TextId_30">
+		<LocalizedText LanguageId="7">
+			Switch ist in einem fehlerhaften Zustand.
+		</LocalizedText>
+		<LocalizedText LanguageId="9">
+			Switch is in fault state.
+		</LocalizedText>
+		<LocalizedText LanguageId="16">
+			Switch uno stato errato.
+		</LocalizedText>
+		<LocalizedText LanguageId="12">
+			Switch en erreur
+		</LocalizedText>
+		<LocalizedText LanguageId="10">
+			Switch en estado de fallo. 
+		</LocalizedText>
+		<LocalizedText LanguageId="4">交换机故障。</LocalizedText>
+		<LocalizedText LanguageId="17">スイッチが故障しています。</LocalizedText>
+	</AlarmText>
+</SNMP_Alarms>

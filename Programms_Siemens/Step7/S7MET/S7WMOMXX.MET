@@ -1,0 +1,108 @@
+;=============================================================================
+;	Ab Step7 V5.2 
+;	 - Code moved from gesamts7.met to here
+;	 - Definition of new Alarm und SubAlarm Objects
+;=============================================================================
+;
+;
+;=============================================================================
+;===Possible Parents of Alarm Header==========================================
+;=============================================================================
+    [_S7R_S7RESOFF_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7R_M7RESOFF_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7Y_SYMBOL_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    ;---Symbol-OMEnde
+
+   [_S7O_BLOCK_FB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    [_S7O_BLOCK_DB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+   
+    [_S7O_BLOCK_SFB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+
+    [_AUT_PACK_TABLE_AT]
+    Subtype=_S7WM_ALARM_HEADER_CT
+ 
+;=============================================================================
+;===Object tree of Alarm Header===============================================
+;=============================================================================
+  ;--- S7 Meldungsliste Anfang
+	[_AUT_CAPABLE_MELDNR_AT]
+    Abstract=true
+    ObjType=0x00000046
+	subtype=_S7R_S7RESOFF_CT
+	subtype=_S7R_M7RESOFF_CT
+
+    [_S7WM_ALARM_HEADER_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121001
+    relation=0x00000059,_S7R_S7RESOFF_CT{1}[0x00000058]
+    relation=0x00000059,_S7R_M7RESOFF_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_FB_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_DB_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_SFB_CT{1}[0x00000058]
+    relation=0x00000059,_S7Y_SYMBOL_CT{1}[0x00000058]
+    relation=0x0000006A,_S7WM_ALARM_OBJ_CT[0x0000006B];deep
+    relation=0x0000006A,_S7WM_ALARM_OBJ_VIEWLESS_CT[0x0000006B];deep
+    relation=0x000000A8,_S7UT_TEXTLIST_CT{1}[0x000000A9];deep
+    
+    [_S7WM_ALARM_OBJ_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121002
+    relation=0x0000006B,_S7WM_ALARM_HEADER_CT{1}[0x0000006A]
+    relation=0x000000AA,_S7WM_ALARM_SUB_CT[0x000000AB];deep
+    
+    [_S7WM_ALARM_SUB_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121003
+    relation=0x000000AB,_S7WM_ALARM_OBJ_CT{1}[0x000000AA]
+    relation=0x000000AC,_S7WM_ALARM_VIEW_WINCC_CT[0x000000AD];deep
+    relation=0x000000AC,_S7WM_ALARM_VIEW_PROTOOL_CT[0x000000AD];deep
+    
+    [_S7WM_ALARM_VIEW_WINCC_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121004
+    relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+    
+    [_S7WM_ALARM_VIEW_PROTOOL_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121005
+    relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+    
+    [_S7WM_ALARM_NUMBERS_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121006
+    
+    [_S7WM_ALARM_OBJ_VIEWLESS_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121007
+    relation=0x0000006B,_S7WM_ALARM_HEADER_CT{1}[0x0000006A]
+    relation=0x000000AA,_S7WM_ALARM_SUB_VIEWLESS_CT[0x000000AB];deep
+    
+    [_S7WM_ALARM_SUB_VIEWLESS_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121008
+    relation=0x000000AB,_S7WM_ALARM_OBJ_VIEWLESS_CT{1}[0x000000AA]
+
+    [_S7UT_TEXTLIST_CT]
+    ObjType=0x00164001
+    relation=0x000000A9,_S7WM_ALARM_HEADER_CT{1}[0x000000A8]
+    
+    ;---S7 Meldungsliste Ende

@@ -1,0 +1,381 @@
+@DB_TYP FMS-Typ V1.0
+@LANGUAGE ENGLISH
+#@@VERSION V1.02.6
+## [V1.00.2] ConnectionProfil: UserDefined -> ConnectionType_MULT/ConnectionType_BRCT  = FALSE
+## [V1.00.2] ConnectionProfil: StandardA/B -> Änderung CI auf Wertebereich
+## [V1.00.3] ConnectionProfil: StandardB   -> Profil ohne GetLongOD
+## [V1.00.4] ConnectionProfil: StandardA/B/UserDefined -> MaxPduSendingHighPrio/MaxReceivingHighPrio = 32/0
+## [V1.00.5] ConnectionProfil: StandardA/B/UserDefined -> ControlInterval_Default = 3000
+## [V1.00.5] ConnectionProfil: UserDefined -> InformationReport = FALSE
+## [V1.00.5] ConnectionProfil: UserDefined -> Defaultwert MaxRAC/MaxSAC/MaxPduSendingHighPrio/MaxReceivingHighPrio = 0
+## [V1.01.1] Sprachanpassungen
+## [V1.02.1] Baudrate > 1,5 MBaud fuer FMS freigeben
+## [V1.02.2] ConnectionProfil: UserDefined -> AddressableWithName= FALSE
+## [V1.02.3] ConnectionProfil: UserDefined ->MaxPduSendingHighPrio/MaxPduReceivingHighPrio = 241
+## [V1.02.6] ConnectionProfil: UserDefined ->MaxMaxSCC/MaxMaxRCC/MaxMaxSAC/MaxMaxRAC = 1
+## [V1.02.6] ImplementationAndSystem -> FMSFeaturesSupported -> AddressableWithName = TRUE
+General     
+{	
+   	Version         				= 1
+	OrderString						= "CP 343-5"
+	VendorName    					= "SIEMENS AG"
+   	ModelNameG             			= "S7-300 CP343-5 FMS"
+   	ModelNameE             			= "S7-300 CP343-5 FMS"
+   	ModelNameS             			= "S7-300 CP343-5 FMS"
+   	ModelNameI             			= "S7-300 CP343-5 FMS"
+   	ModelNameF             			= "S7-300 CP343-5 FMS"
+	Revision						= " "
+	ProfileNumber					= 0
+	LogicalStatus					= 0
+	PhysicalStatus					= 0
+	ControllerType					= " "
+	HardwareRelease					= "A_._"
+	SoftwareRelease					= " "
+	VendorFmsStack					= "SIEMENS AG"
+	Comment     					= " " 
+   	FamilyG                			= "SIMATIC" 
+   	FamilyE                			= "SIMATIC" 
+   	FamilyI                			= "SIMATIC" 
+   	FamilyS                			= "SIMATIC" 
+   	FamilyF                			= "SIMATIC" 
+	OrderNumber    					= "6GK7 343-5FA00-0XE0"
+	CompatibleTo					= 3 
+	SiemensStation					= TRUE 
+	SiemensVendorID    				= 2
+	BitmapFile    					= "CP3435.BMP" 
+}  
+
+BusSpecificCharacteristics	
+{
+	ActiveStation					= TRUE	
+	PassiveStation					= FALSE
+	Baudrate9.6   					= TRUE
+	Baudrate19.2					= TRUE
+	Baudrate93.75					= TRUE
+	Baudrate187.5					= TRUE
+	Baudrate500    					= TRUE
+	Baudrate1500					= TRUE
+	Baudrate3000					= TRUE
+	Baudrate6000					= TRUE
+	Baudrate12000					= TRUE
+}
+
+ImplementationAndSystem   
+{ 
+	PollListSap   					= 58
+	TimeOutAssociate				= 3000
+	SymLenFmsKbl 					= 0
+	VfdPointerSupported				= FALSE
+	FMSFeaturesSupported   			= 0h80.30.81.80.30.81
+	FMA7FeaturesSupported   		= 0h00.00.00.00.00.00
+	MaxSap	            			= 62
+	MaxNoSap    					= 0
+	MaxNoOv    						= 1
+	MaxNoVfd    					= 1
+	MaxCr	    					= 256
+	MaxNoCrl						= 48
+	MaxNoCycleCon					= 32
+	MaxNoActiveCon					= 48
+	MaxPduLen						= 241
+	MaxOvIndex						= 65535
+	MinVarIndex						= 100
+	MaxVarIndex						= 65535
+	MaxParServices					= 4
+	MaxCntOutServicesCalling		= 4
+	MaxCntOutServicesCalled			= 4
+   	MaxMultiplier		    		= 4
+   	DefMultiplier		    		= 1
+   	DefLsap      		    		= 1
+   	ServiceFeaturesAnded			= FALSE
+}
+
+AdditionalCharacteristics  
+{
+   	MaxNameLen             			= 32
+   	AccessProtectSupport   			= TRUE
+   	MaxLenExtension       		 	= 0
+   	MaxLenExecArgument     			= 0
+}
+
+ConnectionProfile # No. 1
+{
+	General
+    {
+    	ConnProfileBetriebsart 		= MASTER
+        ConnOrderString 			= "StandardA"
+    	ConnProfileNameG 			= "SIMATICNET_StandardA"
+    	ConnProfileNameE 			= "SIMATICNET_StandardA"
+    	ConnProfileNameI 			= "SIMATICNET_StandardA"
+        ConnProfileNameF 			= "SIMATICNET_StandardA"
+        ConnProfileNameS 			= "SIMATICNET_StandardA"
+        LocalLSAP       			= 0                                   
+        RemoteLSAP     				= 0                                   
+        RemoteAddress   			= 0                                   
+	   	Userdefined          		= FALSE
+    }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = TRUE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MMAZ
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = FALSE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 99999
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	 	#MultiplierMin              = 1
+     	#MultiplierMax              = 1
+	 	#Multiplier_Default         = 1
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 1
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 1
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 1
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 32
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 32
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = FALSE
+	}
+	
+	SupportedServices_O
+	{                               
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = FALSE
+	}
+}
+
+ConnectionProfile # No. 2
+{
+	General
+    {
+    	ConnProfileBetriebsart 		= MASTER
+        ConnOrderString 			= "StandardB"
+    	ConnProfileNameG 			= "SIMATICNET_StandardB"
+    	ConnProfileNameE 			= "SIMATICNET_StandardB"
+    	ConnProfileNameI 			= "SIMATICNET_StandardB"
+        ConnProfileNameF 			= "SIMATICNET_StandardB"
+        ConnProfileNameS 			= "SIMATICNET_StandardB"
+        LocalLSAP       			= 0                                   
+        RemoteLSAP     				= 0                                   
+        RemoteAddress   			= 0                                   
+	   	Userdefined          		= FALSE
+    }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = TRUE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MMAZ
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = FALSE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 99999
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	 	#MultiplierMin              = 1
+     	#MultiplierMax              = 1
+	 	#Multiplier_Default         = 1
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 1
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 1
+	   	DefMaxRAC                   = 1
+	   	
+	   	MaxMaxSCC                   = 1
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 1
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 32
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 32
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 32
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 32
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = TRUE
+	}
+	
+	SupportedServices_O
+	{                               
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = TRUE
+	}
+}
+
+ConnectionProfile # No. 3
+{
+	General
+    {
+    	ConnProfileBetriebsart 		= MASTER
+        ConnOrderString 			= "UserDefined"
+        ConnProfileNameG 			= "BenutzerDefiniert"
+        ConnProfileNameE 			= "UserDefined"
+        ConnProfileNameI 			= "DefinitoUtente"
+        ConnProfileNameF 			= "DéfiniUtilisateur"
+        ConnProfileNameS 			= "DefinidoUsuario"
+        LocalLSAP       			= 0                                   
+        RemoteLSAP     				= 0                                   
+        RemoteAddress   			= 0                                   
+	   	Userdefined          		= TRUE
+    }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = TRUE
+	   	ConnectionType_MSAZ         = TRUE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = TRUE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MMAZ
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = FALSE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 99999
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	 	#MultiplierMin              = 1
+     	#MultiplierMax              = 1
+	 	#Multiplier_Default         = 1
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 1
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 1
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 1
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 241
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 241
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = FALSE
+	   	GetLongOD                   = TRUE
+		AddressableWithName = FALSE
+	}
+	
+	SupportedServices_O
+	{                               
+		Read                        = TRUE
+		Write                       = TRUE
+		InformationReport           = FALSE
+	   	GetLongOD                   = TRUE
+		AddressableWithName = FALSE
+	}
+}

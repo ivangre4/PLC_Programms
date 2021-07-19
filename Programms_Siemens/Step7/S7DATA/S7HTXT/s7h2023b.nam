@@ -1,0 +1,19 @@
+;------------------------------------------------------------------------
+; Nam-Datei for HSP 2023
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Frequency Converter ET 200S ICU24, Standard and Failsafe
+
+;---------- ET 200S ICU24, Standard telegram 1,   6SL3 244-0SA00-1AA1 ST
+[2366954]
+KatEntryName=ICU24; Standard telegram 1
+InfoText=Control module ET 200S FC, control via PROFIdrive, IBN tool starter via fieldbus. For use with power section IPM25 or external PM2xx; Power section is not configured in HW Config; Option: Brake control module (only with IPM25)
+SHORTNAME=ICU24; Standard telegram 1
+
+
+;---------- ET 200S ICU24F, Standard telegram 1,   6SL3 244-0SA01-1AA1 ST
+[2366956]
+KatEntryName=ICU24F; Standard telegram 1
+InfoText=Control module ET 200S FC with integrated safety functions, control via PROFIdrive, IBN tool starter über fieldbus. For use with power section IPM25 or external PM2xx; Power section is not configured in HW Config; Option: Brake control module (only with IPM25)
+SHORTNAME=ICU24F; Standard telegram 1

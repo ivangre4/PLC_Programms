@@ -1,0 +1,653 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1315851]		
+KatEntryName = ET 200S
+InfoText = Unidad de periferia descentralizada con grado de protección IP 20 como esclavo DP
+SHORTNAME=ET 200S
+;e.t.  Pfade/Knoten für Motorstarter
+[1315979]
+KatEntryName = PM
+InfoText = Módulos de potencia para arrancadores de motor del ET 200S
+[1315980]
+KatEntryName = Arrancador directo
+InfoText = Arrancadores de motor con un solo sentido de giro para ET 200S
+[1315981]
+KatEntryName = Arrancador inversor
+InfoText = Arrancador con dos sentidos de giro para ET 200S
+;--------------e.t. finish
+[1315852]
+KatEntryName = DI
+InfoText = Módulos de entradas digitales para ET 200S
+[1315853]
+KatEntryName = DO
+InfoText = Módulos de salidas digitales para ET 200S
+[1315854]
+KatEntryName = AI
+InfoText = Módulos de entradas analógicas para ET 200S
+[1315855]
+KatEntryName = AO
+InfoText = Módulos de salidas analógicas para ET 200S
+[1315856]
+KatEntryName = PM
+InfoText = Módulos de potencia para módulos electrónicos del ET 200S
+[1315857]
+KatEntryName = FM
+InfoText = Módulos de función para lectura de recorrido, contaje y posicionamiento para ET 200S
+[1315858]
+KatEntryName = Arrancadores de motor
+InfoText = Módulos arrancadores de motor para ET 200S
+[1315896]
+KatEntryName = PM-E DC24V
+InfoText = Módulo de potencia PM-E para módulos electrónicos, DC24V, con diagnóstico; también disponible como módulo SIPLUS con referencia 6AG1 138-4CA00-2AA0
+SHORTNAME=PM-E DC24V
+[1315898]
+KatEntryName = 1 SSI
+InfoText = Módulo SSI para conexión directa de encoders absolutos con funciones de congelación y comparación, a partir de la versión 3
+SHORTNAME=1 SSI
+;---------------------------------------
+[1315902]
+KatEntryName = 2 PULSE
+InfoText = Módulo generador de impulsos 2 canales para salida de impulsos y modulación por ancho de impulsos
+SHORTNAME=2 PULSE
+
+; ----------------------------- DS
+[1315927]
+KatEntryName = DS
+InfoText = Arrancador directo electromecánico, sin fusibles
+SHORTNAME=DS
+
+; ----------------------------- DSx
+[1315928]
+KatEntryName = DS-x
+InfoText = Arrancador directo electromecánico, sin fusibles y ampliable
+SHORTNAME=DS-x
+
+; ----------------------------- RS
+[1315929]
+KatEntryName = RS
+InfoText = Arrancador inversor electromecánico, sin fusibles
+SHORTNAME=RS
+
+; ----------------------------- RSx
+[1315930]
+KatEntryName = RS-x
+InfoText = Arrancador inversor electromecánico, sin fusibles y ampliable
+SHORTNAME=RS-x
+
+; ----------------------------- PM-D  DC24V
+[1315931]
+KatEntryName = PM-D DC24V
+InfoText = Módulo de potencia PM-D para arrancadores de motor; 2xDC24V
+SHORTNAME=PM-D DC24V
+
+; ----------------------------- PM-D F1  SIGUARD
+[1315932]
+KatEntryName = PM-D F1 SIGUARD
+InfoText = Módulo de potencia; conexión de paro de emergencia; arranque vigilado; 2 canales
+SHORTNAME=PM-D F1 SIGUARD
+
+; ----------------------------- PM-D F2 SIGUARD
+[1315933]
+KatEntryName = PM-D F2 SIGUARD
+InfoText = Módulo de potencia;puerta de protección; arr. automático; 2 canales
+SHORTNAME=PM-D F2 SIGUARD
+
+; ----------------------------- PM-D F3  SIGUARD
+[1315934]
+KatEntryName = PM-D F3 SIGUARD
+InfoText = Módulo de potencia; ampliación de F1/F2 para otro grupo de potencial; retardado
+SHORTNAME=PM-D F3 SIGUARD
+
+; ----------------------------- PM-D F4  SIGUARD
+[1315935]
+KatEntryName = PM-D F4 SIGUARD
+InfoText = Módulo de potencia; ampliación de F1/2 para otro grupo de potencial
+SHORTNAME=PM-D F4 SIGUARD
+
+; ----------------------------- PM-X SIGUARD
+[1315936]
+KatEntryName = PM-X SIGUARD
+InfoText = Módulo de conexión para el contactor de alimentación; circuitos de seguridad externos
+SHORTNAME=PM-X SIGUARD
+[1315905]
+KatEntryName = 1 SSI Fast-Mode
+InfoText = Módulo SSI para conexión directa de encoders absolutos con transferencia rápida de valores, a partir de la versión 3
+SHORTNAME=1 SSI Fast-Mode
+;------------------------------ SI-Module ASCII- und 3964(R)-Protokoll-Treiber
+[1316065]
+KatEntryName = CP
+InfoText = Procesadores de comunicación para ET 200S
+[1316066]
+KatEntryName = 1 SI  ASCII  (8 Byte)
+InfoText =Procesador de comunicación con puerto RS232/RS422/RS485 y driver ASCII para interface E/S de 8 bytes.
+SHORTNAME=1 SI  ASCII  (8 Byte)
+[1316067]
+KatEntryName = 1 SI  ASCII  (4 Byte)
+InfoText =Procesador de comunicación con puerto RS232/RS422/RS485 y driver ASCII para interface E/S de 4 bytes.
+SHORTNAME=1 SI  ASCII  (4 Byte)
+[1316068]
+KatEntryName = 1 SI  3964(R)  (8 Byte)
+InfoText =Procesador de comunicación con puerto RS232/RS422/RS485 y driver 3964(R) para interface E/S de 8 bytes.
+SHORTNAME=1 SI  3964(R)  (8 Byte)
+[1316069]
+KatEntryName = 1 SI  3964(R)  (4 Byte)
+InfoText =Procesador de comunicación con puerto RS232/RS422/RS485 y driver 3964(R) para interface E/S de 5 bytes.
+SHORTNAME=1 SI  3964(R)  (4 Byte)
+
+; ----------------------------- Kataloghierarchieobjekt VA EM
+[1316072]
+KatEntryName = Módulos de ampliación
+InfoText = Módulos de ampliación para arrancandores de motor del ET 200S
+
+; ----------------------------- RS1-x
+[1316075]
+KatEntryName = RS1-x
+InfoText = Arrancador inversor, electromecánico, sin fusibles, ampliable (freno, Local Control) 
+SHORTNAME=RS1-x
+
+; ----------------------------- xB3 DC24V/4A
+[1316073]
+KatEntryName = xB3 DC24V/4A
+InfoText = Mando de freno DC 24V/4A; DI 2xDC24V Local Control
+SHORTNAME=xB3 DC24V/4A
+
+; ----------------------------- xB4 DC500V/0,7A
+[1316074]
+KatEntryName = xB4 DC500V/0,7A
+InfoText = Mando de freno DC 500V/0,7A; DI 2xDC24V Local Control
+SHORTNAME=xB4 DC500V/0,7A
+[1316103]
+KatEntryName = 1 CTR 24V/100 kHz Modo de contaje
+InfoText = Módulo de contaje, 24 V/100 kHz para contaje único, sin fin y periódico
+SHORTNAME=1 CTR 24V/100 kHz C
+[1316137]
+KatEntryName = 1 CTR 24V/100 kHz Modo de medición
+InfoText = Módulo de contaje, 24 V/100 kHz para medir velocidades, frecuencias y periodos
+SHORTNAME=1 CTR 24V/100 kHz M
+;
+;
+;
+;
+;
+;
+[1316216]
+KatEntryName = DS1-x
+InfoText = Arrancador directo electromecánico, sin fusibles, ampliable (freno, Local Control) 
+SHORTNAME=DS1-x
+[1316217]
+KatEntryName = PM-D F5 SIGUARD
+InfoText = Módulo de potencia; Ampliación de PM-D F1 a PM-D F4, multiplicador de contactos
+SHORTNAME=PM-D F5 SIGUARD
+;
+;
+;
+[1315859]
+KatEntryName =Módulo estándar ET200S
+InfoText =Módulo estándar ET200S
+SHORTNAME=Módulo estándar ET200S
+;
+;
+;
+[1316477]
+KatEntryName=1 Pos Inc / Digital
+InfoText = Módulo para posicionamiento controlado, encoder incremental señales diferenciales 5V, accionamiento controlado por salidas digitales desplaz. +, desplaz -, vel. rápida/lenta
+SHORTNAME=1 Pos Inc / Digital
+[1316478]
+KatEntryName=1 Pos SSI / Digital
+InfoText = Módulo para posicionamiento controlado, encoder SSI, accionamiento controlado por salidas digitales desplaz. +, desplaz. - , vel. rápida/lenta
+SHORTNAME=1 Pos SSI / Digital
+[1316479]
+KatEntryName=1 Pos Inc / Analógico
+InfoText = Módulo para posicionamiento controlado, encoder incremental señales diferenciales 5V, accionamiento controlado por salida analógica +/-10V
+SHORTNAME=1 Pos Inc / Analógico
+[1316480]
+KatEntryName=1 Pos SSI / Analógico
+InfoText = Módulo para posicionamiento controlado, encoder SSI, accionamiento controlado por salida analógica +/-10V
+SHORTNAME=1 Pos SSI / Analógico
+;RQ 28756 : geändert zu V5.1 SP2
+[1316490]
+KatEntryName = Arrancador directo suave
+InfoText = Arrancador de arranque y parada suaves para un solo sentido de giro para ET 200S
+;RQ 28756 : neu zu V5.1 SP2
+[1316543]
+KatEntryName = Arrancador inversor suave
+InfoText = Arrancador de arranque y parada suaves para dos sentidos de giro para ET 200S
+[1316481]
+KatEntryName = DS1e-x 0,3-3A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DS1e-x 0,3-3A HF
+[1316482]
+KatEntryName = DS1e-x 2,4-8A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DS1e-x 2,4-8A HF
+[1316483]
+KatEntryName = DS1e-x 2,4-16A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DS1e-x 2,4-16A HF
+[1316484]
+KatEntryName = RS1e-x 0,3-3A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=RS1e-x 0,3-3A HF
+[1316485]
+KatEntryName = RS1e-x 2,4-8A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=RS1e-x 2,4-8A HF
+[1316486]
+KatEntryName = RS1e-x 2,4-16A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=RS1e-x 2,4-16A HF
+[1316487]
+KatEntryName = DSS1e-x 0,3-3A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DSS1e-x 0,3-3A HF
+[1316488]
+KatEntryName = DSS1e-x 2,4-8A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DSS1e-x 2,4-8A HF
+[1316489]
+KatEntryName = DSS1e-x 2,4-16A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; High Feature
+SHORTNAME=DSS1e-x 2,4-16A HF
+[1316500]
+KatEntryName = 2 DO DC24V/0.5A
+InfoText = Módulo de salidas digitales DO 2xDC24V/0.5A, estándar
+SHORTNAME=2 DO DC24V/0.5A
+[1316501]
+KatEntryName = 2 DO DC24V/0.5A HF
+InfoText = Módulo de salidas digitales DO 2xDC24V/0.5A, High Feature, con diagnóstico
+SHORTNAME=2 DO DC24V/0.5A HF
+[1316502]
+KatEntryName = 2 DO DC24V/2A
+InfoText = Módulo de salidas digitales DO 2xDC24V/2A, estándar
+SHORTNAME=2 DO DC24V/2A
+[1316503]
+KatEntryName = 2 DO DC24V/2A HF
+InfoText = Módulo de salidas digitales DO 2xDC24V/2A, High Feature, con diagnóstico
+SHORTNAME=2 DO DC24V/2A HF
+[1316504]
+KatEntryName = 4 DO DC24V/0.5A
+InfoText = Módulo de salidas digitales DO 4xDC24V/0.5A, estándar
+SHORTNAME=4 DO DC24V/0.5A
+[1316505]
+KatEntryName = 4 DO DC24V/2A
+InfoText = Módulo de salidas digitales DO 4xDC24V/2A, estándar
+SHORTNAME=4 DO DC24V/2A
+[1316507]
+KatEntryName = 2 AI I RTD HF
+InfoText = Módulo de entradas analógicas AI 2xRTD / 15 Bit+signo, estándar, R: 150 ohmios, 300 ohmios, 600 ohmios; RTD: Pt100, Ni100 ; High Feature
+SHORTNAME=2 AI I RTD HF
+[1316521]
+KatEntryName = 1 SI Modbus Master (4 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS232, RS422 o RS485) y protocolo Modbus Master con puerto E/S 4 bytes 
+SHORTNAME = 1 SI Modbus Master (4 B)
+[1316520]
+KatEntryName = 1 SI Modbus Master (8 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS232, RS422 o RS485) y protocolo Modbus Master con interfaz E/S 8 bytes
+SHORTNAME = 1 SI Modbus Master (8 B)
+[1316523]
+KatEntryName = 1 SI Modbus Slave (4 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS232, RS422 o RS485) y protocolo Modbus Slave con interfaz E/S 4 bytes
+SHORTNAME = 1 SI Modbus Slave (4 B)
+[1316522]
+KatEntryName = 1 SI Modbus Slave (8 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS232, RS422 o RS485) y protocolo Modbus Slave con interfaz E/S 8 bytes 
+SHORTNAME = 1 SI Modbus Slave (8 B)
+[1316525]
+KatEntryName = 1 SI USS Master (4 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS485) y protocolo USS Master con interfaz E/S 4 bytes
+SHORTNAME = 1 SI USS Master (4 Byte)
+[1316524]
+KatEntryName = 1 SI USS Master (8 Byte)
+InfoText = Módulo de comunicación con puerto serie (RS485) y protocolo USS Master con interfaz E/S 8 bytes
+SHORTNAME = 1 SI USS Master (8 Byte)
+;
+;
+;
+[1316551]
+KatEntryName = F-DS1e-x 0,3-3A HF
+SHORTNAME    = F-DS1e-x 0,3-3A HF
+InfoText     = Arrancador seguro directo; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta 1,1 KW/400 V; 0,30 A hasta 3,00 A; opción: Brake Control Module, Control Module; High Feature; para PM-D F PROFIsafe
+[1316552]
+KatEntryName = F-DS1e-x 2,4-8A HF
+SHORTNAME    = F-DS1e-x 2,4-8A HF
+InfoText     = Arrancador directo seguro; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta 3,0 KW/400 V; 2,40 A hasta 8,00 A; opción: Brake Control Module, Control Module; High Feature; para PM-D F PROFIsafe
+[1316553]
+KatEntryName = F-DS1e-x 2,4-16A HF
+SHORTNAME    = F-DS1e-x 2,4-16A HF
+InfoText     = Arrancador directo seguro; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta  7,5 KW/400 V; 2,40 A hasta 16 A; opción: Brake Control Module, Control Module; High Feature; para PM-D F PROFIsafe
+[1316554]
+KatEntryName = F-RS1e-x 0,3-3A HF
+SHORTNAME    = F-RS1e-x 0,3-3A HF
+InfoText     = Arrancador inversor seguro; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta 1,1 KW/400 V; 0,30 A hasta 3,00 A; opción: Brake Control Modul, Control Modul; High Feature; para PM-D F PROFIsafe
+[1316555]
+KatEntryName = F-RS1e-x 2,4-8A HF
+SHORTNAME    = F-RS1e-x 2,4-8A HF
+InfoText     = Arrancador inversor seguro; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta 3,0 KW/400 V; 2,40 A hasta 8,00 A; opción: Brake Control Module, Control Module; High Feature; para PM-D F PROFIsafe
+[1316556]
+KatEntryName = F-RS1e-x 2,4-16A HF
+SHORTNAME    = F-RS1e-x 2,4-16A HF
+InfoText     = Arrancador inversor seguro; maniobra mecánica; protección sobretensión electrónica; sin fusible; hasta 7,5 KW/400 V; 2,40 A hasta 16 A; opción: Brake Control Module, Control Module; High Feature; para PM-D F PROFIsafe
+[1316557]
+KatEntryName = F-CM
+SHORTNAME    = F-CM
+InfoText     = Contact Multiplier F-CM; ampliación para PM-D F PROFIsafe;  multiplicador de contactos
+[1316558]
+KatEntryName = 4 IQ-SENSE Opto E
+InfoText = Módulo de entrada 4_IQ-SENSE para la conexión de sensores ópticos IQ-SENSE; con diagnóstico, función Intelli Teach y valor de umbral especificado por el PLC
+SHORTNAME=4 IQ-SENSE Opto E
+[1316559]
+KatEntryName = 4 IQ-SENSE Opto S
+InfoText = Módulo de entrada 4_IQ-SENSE para la conexión de sensores ópticos IQ-SENSE; con diagnóstico, función Intelli Teach
+SHORTNAME=4 IQ-SENSE Opto S
+[1316560]
+KatEntryName = IQ-SENSE
+InfoText = Módulos sensores con interface IQ para ET 200S
+;
+;
+;
+[1316649]
+KatEntryName = PM-D F X1
+InfoText = Módulo de alimentación/ampliación PM-D F X1; protección de sobretensiones; para alimentar señales externas de PARO DE EMERGENCIA; para 6 grupos de maniobra
+SHORTNAME=PM-D F X1
+;
+;
+;
+[1316561]
+KatEntryName = IM151-1 HF
+InfoText = Módulo interfase IM151-1 para módulos electrónicos ET 200S, emisor para comunicación directa, soporta modo isócrono
+SHORTNAME=IM151-1 HF
+[1316633]
+KatEntryName = 1 SSI
+InfoText = Módulo SSI para conexión directa de encoders absolutos con funciones de congelación y comparación, soporta modo isócrono
+SHORTNAME=1 SSI
+[1316634]
+KatEntryName = 1 SSI Fast-Mode
+InfoText = Módulo SSI para conexión directa de encoders absolutos con transferencia rápida de valores, soporta modo isócrono
+SHORTNAME=1 SSI Fast-Mode
+;
+;
+;
+[1316709]
+KatEntryName = IM151-1 Basic
+InfoText = Módulo interfase IM151-1 para módulos electrónicos ET 200S, emisor para comunicación directa
+SHORTNAME=IM151-1 Basic
+[1316724]
+KatEntryName = DS1e-x 0,3-3A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DS1e-x 0,3-3A HF
+[1316725]
+KatEntryName = DS1e-x 2,4-8A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DS1e-x 2,4-8A HF
+[1316726]
+KatEntryName = DS1e-x 2,4-16A HF
+InfoText = Arrancador directo; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DS1e-x 2,4-16A HF
+[1316727]
+KatEntryName = RS1e-x 0,3-3A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=RS1e-x 0,3-3A HF
+[1316728]
+KatEntryName = RS1e-x 2,4-8A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=RS1e-x 2,4-8A HF
+[1316729]
+KatEntryName = RS1e-x 2,4-16A HF
+InfoText = Arrancador inversor; maniobra mecánica; protección electrónica sobretensión; sin fusibles; de hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=RS1e-x 2,4-16A HF
+[1316730]
+KatEntryName = DSS1e-x 0,3-3A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 1,1 KW/400 V; 0,30 A a 3,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 0,3-3A HF
+[1316731]
+KatEntryName = DSS1e-x 2,4-8A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 3,0 KW/400 V; 2,40 A a 8,00 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2,4-8A HF
+[1316732]
+KatEntryName = DSS1e-x 2,4-16A HF
+InfoText = Arrancador directo suave; maniobra electrónica; protección electrónica sobretensión; sin fusibles; hasta 7,5 KW/400 V; 2,40 A a 16 A; Opcional: Brake Control Module, Control Module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2,4-16A HF
+[1316737]
+KatEntryName = 4 DI NAMUR
+InfoText = Módulo de entrada digital DI 4xNAMUR, con alarma de diagnóstico
+SHORTNAME=4 DI NAMUR
+;
+;
+;
+[1316733]
+KatEntryName = 2AO U HF
+InfoText = Módulo de salida analógica AO 2xU  (1..5V /15 bits, +/-10V /15 bits+signo), High Feature, a partir de la versión 2, soporta modo isócrono
+SHORTNAME=2AO U HF
+[1315904]
+KatEntryName = IM151-1 Standard
+InfoText = Interfase IM151-1 para módulos electrónicos ET 200S, emisor para comunicación directa
+SHORTNAME=IM151-1 Standard
+[1316106]
+KatEntryName = IM151-1 Standard
+InfoText = Módulo interfase IM151-1 para módulos electrónicos ET 200S, emisor para comunicación directa
+SHORTNAME=IM151-1 Standard
+[1316009]
+KatEntryName = IM151-1 FO Standard
+InfoText = Interfase IM151-1 con conexión de fibra óptica para módulos electrónicos ET 200S, emisor para comunicación directa
+SHORTNAME=IM151-1 FO Standard
+[1316309]
+KatEntryName = IM151-1 FO Standard
+InfoText = Módulo interfase IM151-1 con conexión de fibra óptica para módulos electrónicos ET 200S, emisor para comunicación directa
+SHORTNAME=IM151-1 FO Standard
+[1315897]
+KatEntryName = PM-E DC24..48V/ AC24..230V
+InfoText = Módulo de potencia PM-E DC24..48V/ AC24..230V, con diagnóstico y fusible
+SHORTNAME=PM-E DC24/48V/ AC24/230V
+[1316115]
+KatEntryName = PM-E DC24..48V/ AC24..230V
+InfoText = Módulo de potencia PM-E DC24..48V/ AC24..230V, con diagnóstico y fusible
+SHORTNAME=PM-E DC24/48V/ AC24/230V
+[1315864]
+KatEntryName = 4DI DC24V ST
+InfoText = Módulo de entrada digital DI 4xDC24V, estándar; también disponible como módulo SIPLUS con referencia 6AG1 131-4BD00-2AA0
+SHORTNAME=4DI DC24V ST
+[1316750]
+KatEntryName = 4DI DC24V/SRC ST
+InfoText = Módulo de entrada digital 4 DI DC24V, SOURCE INPUT; de tipo M
+SHORTNAME=4DI DC24V/SRC ST
+[1315861]
+KatEntryName = 2DI DC24V HF
+InfoText = Módulos de entradas digitales DI 2xDC24V, High Feature; diagnóstico, soporta modo isócrono
+SHORTNAME=2DI DC24V HF
+[1315865]
+KatEntryName = 4DI DC24V HF
+InfoText = Módulo de entradas digitales 4 DI DC24V, High Feature; diagnóstico, soporta modo isócrono
+SHORTNAME=4DI DC24V HF
+[1315862]
+;e.t. die mir bekannte MLFB lautet: 6ES7 131-4EB00-0AB0
+KatEntryName = 2DI AC120V ST
+InfoText = Módulos de entradas digitales DI 2xAC120V
+SHORTNAME=2DI AC120V ST
+[1315863]
+;e.t. die mir bekannte MLFB lautet: 6ES7 131-4FB00-0AB0
+KatEntryName = 2DI AC230V ST
+InfoText = Módulos de entradas digitales DI 2xAC230V
+SHORTNAME=2DI AC230V ST
+[1316637]
+KatEntryName = 4 DI UC24..48V
+InfoText = Módulo de entradas digitales DI 4xUC 24-48V, High Feature; diagnóstico, soporta modo isócrono
+SHORTNAME=4 DI UC24..48V
+[1315867]
+KatEntryName = 2DO DC24V/0,5A ST
+InfoText = Módulos de salidas digitales DO 2xDC24V/0.5A, estándar
+SHORTNAME=2DO DC24V/0,5A ST
+[1315873]
+KatEntryName = 4DO DC24V/0,5A ST
+InfoText = Módulo de salida digital DO 4xDC24V/0.5A, estándar, soporta modo isócrono; también disponible como módulo SIPLUS con referencia 6AG1 132-4BD00-2AA0
+SHORTNAME=4DO DC24V/0,5A ST
+[1315868]
+KatEntryName = 2DO DC24V/0,5A HF
+InfoText = Módulos de salidas digitales DO 2xDC24V/0.5A, High Feature, diagnóstico, soporta modo isócrono
+SHORTNAME=2DO DC24V/0,5A HF
+[1315869]
+KatEntryName = 2DO DC24V/2A ST
+InfoText = Módulos de salidas digitales DO 2xDC24V/2A, estándar
+SHORTNAME=2DO DC24V/2A ST
+[1315874]
+KatEntryName = 4DO DC24V/2A ST
+InfoText = Módulo de salidas digitales DO 4xDC24V/2A, estándar, soporta modo isócrono
+SHORTNAME=4DO DC24V/2A ST
+[1315870]
+KatEntryName = 2DO DC24V/2A HF
+InfoText = Módulos de salidas digitales DO 2xDC24V/2A, High Feature, diagnóstico, soporta modo isócrono
+SHORTNAME=2DO DC24V/2A HF
+[1315872]
+KatEntryName = 2DO AC24..230V/1A
+InfoText = Módulos de salidas digitales DO 2xAC120/230 V, 1A
+SHORTNAME=2DO AC24..230V/1A
+[1315871]
+KatEntryName = 2RO NO DC24..120V/5A AC24..230V/5A
+InfoText = Módulos de salidas digitales 2xrelés UC 24..230V/5A
+SHORTNAME=2RO NO 24..230V/5A
+[1316640]
+KatEntryName = 2RO NO/NC DC24..120V/5A AC24..230V/5A
+InfoText = Módulo de salidas digitales 2xRelais Form C UC 24..230V/5A
+SHORTNAME=2RO NO/NC 24..230V/5A
+[1315876]
+KatEntryName = 2AI U ST
+InfoText = Módulos de entradas analógicas AI 2xU (+/-5V /13 Bit+S, 1..5V/13 Bit, +/-10V /13 Bit+S), estándar
+SHORTNAME=2AI U ST
+[1315884]
+KatEntryName = 2AI U HF
+InfoText = Módulos de entradas analógicas AI 2xU (1..5V /15 Bit, +/-5V /15 Bit+S, +/-10V /15 Bit+S), High Feature
+SHORTNAME=2AI U HF
+[1315877]
+KatEntryName = 2AI U HS
+InfoText = Módulos de entradas analógicas AI 2xU, (+/-10V) / 11 Bit+S, High Speed
+SHORTNAME=2AI U HS
+[1316628]
+KatEntryName = 2AI U HS
+InfoText = Módulo de entradas analógicas AI 2xU, (+/-10V) / 14 bits, High Speed, soporta modo isócrono
+SHORTNAME=2AI U HS
+[1315878]
+KatEntryName = 2AI I 2WIRE ST
+InfoText = Módulos de entradas analógicas AI 2xI, transductores de medida a 2 hilos (4..20mA) / 13 Bit, estándar
+SHORTNAME=2AI I 2WIRE ST
+[1315885]
+;RQ_201568
+KatEntryName = 2AI I 2/4WIRE HF
+InfoText = Módulo de entradas analógicas AI 2xI, 2/TM4hilos (+/-20mA /15 Bit+signo, 4..20mA /15 Bit), High Feature
+SHORTNAME=2AI I 2/4WIRE HF
+[1315880]
+KatEntryName = 2AI I 2WIRE HS
+InfoText = Módulos de entradas analógicas AI 2xI, transductores de medida a 2 hilos (4..20mA) / 12 Bit, High Speed
+SHORTNAME=2AI I 2WIRE HS
+[1316626]
+KatEntryName = 2AI I 2WIRE HS
+InfoText = Módulo de entradas analógicas AI 2xI,  TM2hilos (4..20mA) / 14 bits, High Speed, soporta modo isócrono
+SHORTNAME=2AI I 2WIRE HS
+[1315879]
+KatEntryName = 2AI I 4WIRE ST
+InfoText = Módulos de entradas analógicas AI 2xI, transductores de medida a 4 hilos (+/-20mA /13 Bit+signo, 4..20mA/13 Bit), estándar
+SHORTNAME=2AI I 4WIRE ST
+[1315881]
+KatEntryName = 2AI I 4WIRE HS
+InfoText = Módulos de entradas analógicas AI 2xI, transductores de medida a 4 hilos (4..20mA) / 12 Bit, High Speed
+SHORTNAME=2AI I 4WIRE HS
+[1316627]
+KatEntryName = 2AI I 4WIRE HS
+InfoText = Módulo de entradas analógicas AI 2xI,  TM4hilos (4..20mA) / 14 bits, High Speed, soporta modo isócrono
+SHORTNAME=2AI I 4WIRE HS
+[1315883]
+KatEntryName = 2AI RTD ST
+InfoText = Módulos de entradas analógicas AI 2xRTD / 15 Bit+S, estándar, R: 150 ohmios, 300 ohmios, 600 ohmios; RTD: Pt100, Ni100
+SHORTNAME=2AI RTD ST
+[1316641]
+KatEntryName = 2AI RTD HF
+InfoText = Módulo de entradas analógicas AI 2xRTD / 15 Bit+signo, High Feature, R: 150, 300, 600, 3000 ohmios, PTC ; RTD: Pt100, 200, 500, 1000, Ni100, 120, 200, 500, 1000, Cu10
+SHORTNAME=2AI RTD HF
+[1315882]
+KatEntryName = 2AI TC ST
+InfoText = Módulos de entradas analógicas AI 2xTC / 15 Bit+S, estándar, termopares: E, N, J, K, L, S, R, B, T 
+SHORTNAME=2AI TC ST
+[1316506]
+KatEntryName = 2AI TC HF
+InfoText = Módulo de entradas analógicas AI 2xTC / 15 Bit+signo, termopares: E, N, J, K, L, S, R, B, T, C ; High Feature
+SHORTNAME=2AI TC HF
+[1315889]
+KatEntryName = 2AO U ST
+InfoText = Módulos de salidas analógicas AO 2xU (1..5V /13 Bit, +/-10V /13 Bit+S), estándar, a partir de la versión 3
+SHORTNAME=2AO U ST
+[1315891]
+KatEntryName = 2AO U HF
+InfoText = Módulos de salidas analógicas AO 2xU  (1..5V /15 Bit, +/-10V /15 Bit+S), High Feature, a partir de la versión 2
+SHORTNAME=2AO U HF
+[1315890]
+KatEntryName = 2AO I ST
+InfoText = Módulos de salidas analógicas AO 2xI (+/-20mA /13 Bit+S, 4..20mA /13 Bit), estándar, a partir de la versión 3
+SHORTNAME=2AO I ST
+[1315892]
+KatEntryName = 2AO I HF
+InfoText = Módulos de salidas analógicas AO 2xI (+/-20mA /15 Bit+S, 4..20mA /15 Bit), High Feature, a partir de la versión 2
+SHORTNAME=2AO I HF
+[1316734]
+KatEntryName = 2AO I HF
+InfoText = Módulo de salida analógica AO 2xI (+/-20mA /15 bits+signo, 4..20mA /15 bits), High Feature, a partir de la versión 2, soporta modo isócrono
+SHORTNAME=2AO I HF
+[1315899]
+KatEntryName = 1STEP 5V/204kHz
+InfoText = Módulo de posicionamiento para motores paso a paso, 1 canal, 5V/204KHz, a partir de la versión 2
+SHORTNAME=1STEP 5V/204kHz
+[1315900]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de contaje
+InfoText = Módulo de contador, 24 V/100 kHz para contaje único, sin fin o periódico, a partir de la versión 3
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1315901]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de medición
+InfoText = Módulo de contador, 24 V/100 kHz para medir velocidades, frecuencias y periodos, a partir de la versión 3
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316103]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de contaje
+InfoText = Módulo de contaje, 24 V/100 kHz para contaje único, sin fin y periódico
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316137]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de medición
+InfoText = Módulo de contaje, 24 V/100 kHz para medir velocidades, frecuencias y periodos
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316219]
+KatEntryName = 1 COUNT 5V/500 kHz Modo de contaje
+InfoText = Módulo contador, 5 V/500 kHz para contaje único, sin fin y periódico
+SHORTNAME=1 COUNT 5V/500 kHz C
+[1316220]
+KatEntryName = 1 COUNT 5V/500 kHz Modo de medición
+InfoText = Módulo contador, 5 V/500 kHz para medir velocidades, frecuencias y periodos
+SHORTNAME=1 COUNT 5V/500 kHz M
+[1316535]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de contaje
+InfoText = Módulo de contaje, 24 V/100 kHz para contaje único, sin fin y periódico
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316536]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de medición
+InfoText = Módulo de contaje, 24 V/100 kHz para medir velocidades, frecuencias y periodos
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316629]
+KatEntryName = 1 COUNT 5V/500 kHz Modo de contaje
+InfoText = Módulo contador, 5 V/500 kHz para contaje único, sin fin y periódico, soporta modo isócrono
+SHORTNAME=1 COUNT 5V/500 kHz C
+[1316630]
+KatEntryName = 1 COUNT 5V/500 kHz Modo de medición
+InfoText = Módulo contador, 5 V/500 kHz para medición de velocidad, frecuencia y periodo, soporta modo isócrono
+SHORTNAME=1 COUNT 5V/500 kHz M
+[1316631]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de contaje
+InfoText = Módulo contador, 24 V/100 kHz para contaje único, sin fin y periódico, soporta modo isócrono
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316632]
+KatEntryName = 1 COUNT 24V/100 kHz Modo de medición
+InfoText = Módulo contador, 24 V/100 kHz para medición de velocidad, frecuencia y periodo, soporta modo isócrono
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1315860]
+KatEntryName = 2DI DC24V ST
+InfoText = Módulos de entradas digitales DI 2xDC24V, estándar
+SHORTNAME=2DI DC24V ST
+[1316849]
+KatEntryName = ET 200S
+InfoText = Unidad periférica descentralizada con grado de protección IP 20 como esclavo DP
+SHORTNAME=ET 200S
+
+; -- DO NOT ALTER THIS LINE -----

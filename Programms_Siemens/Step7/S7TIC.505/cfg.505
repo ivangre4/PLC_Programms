@@ -1,0 +1,3598 @@
+0000
+0000  primary entries
+0000  ---------------
+0000  0000 comment
+0000  0001 meta [meta ...]
+0000  0002 AWL line + %meta [meta ...]%
+0000  0003 LIS line + %meta [meta ...]%
+0000  0004 SCL line + %meta [meta ...]%
+0000  0005 DRUM FB line + %meta [meta ...]%
+0000  0006 DRUM DB line + %meta [meta ...]%
+0000  0007 SCL support line + %meta [meta ...]%
+0000  0008 end of configuration commands
+0000  0009 DCAT FB line + %meta [meta ...]%
+0000  000A DCAT DB line + %meta [meta ...]%
+0000  000B MCAT FB line + %meta [meta ...]%
+0000  000C MCAT DB line + %meta [meta ...]%
+0000  000D IMC FB  line + %meta [meta ...]%
+0000  000E IMC DB  line + %meta [meta ...]%
+0000  000F SMC FB  line + %meta [meta ...]%
+0000  0010 SMC DB  line + %meta [meta ...]%
+0000  0011 LOOP FC line + %meta [meta ...]%
+0000  0012 LOOPDB2 line + %meta [meta ...]%
+0000  0013 AA FC   line + %meta [meta ...]%
+0000  0014 LOOPDB1 line + %meta [meta ...]%
+0000  0015 TCP     line + %meta [meta ...]%
+0000
+0000  meta-entries
+0000  ------------
+0000  0100 - 01FF argument names 0 to 255 as descretes
+0000  0200 - 027F argument names 0 to 127 as words
+0000  0280 - 02FF argument names 0 to 127 as bytes
+0000  0300 - 037F argument names 0 to 127 as long words
+0000  0380 - 03FF argument names 0 to 127 as hexadecimal
+0000  0400 - 047F argument names 0 to 127 as floats (reals)
+0000  0480 - 04FF argument names 0 to 127 as time
+0000  0500 - 050F set descrete temps
+0000  0510 - 051F use descrete temps
+0000  0520 - 052F set descrete work
+0000  0530 - 053F use descrete work
+0000  0540 - 054F set work variable
+0000  0550 - 055F use work variable as descrete
+0000  0560 - 056F use work variable as byte
+0000  0570 - 057F use work variable as word
+0000  0580 - 058F use work variable as long
+0000  0590 - 059F use work variable as float
+0000  1tttfff ttt = bits on, fff= bits off
+0000  2tttttt tttttt = at least 1 bit on
+0000  50xx meta symbol name xx [xx+1 xx+2 ...]
+0000  51xx type symbol name xx [xx+1 xx+2 ...]
+0000  52xx sub-string xx [xx+1 xx+2 ...]
+0000  60xx SCL conversion code xx
+0000  70xx AWL conversion code xx
+0000  80xx AWL conversion code for opCode xx
+0000  83xx AWL conversion code for opCode xx + 128
+0000
+0000  argument mapping
+0000  ----------------
+0100  1x 2x 3x 4x 5x 6x 7x 8x
+0108  9x 10x 11x 12x 13x 14x 15x 16x
+0110  17x 18x 19x 20x 21x 22x 23x 24x
+0200  1w 2w 3w 4w 5w 6w 7w 8w
+0208  9w 10w 11w 12w 13w 14w 15w 16w
+0280  1b 2b 3b 4b 5b 6b 7b 8b
+0300  1l 2l 3l 4l 5l 6l 7l 8l
+0308  9l 10l 11l 12l 13l 14l 15l 16l
+0380  1h 2h 3h 4h 5h 6h 7h 8h
+0400  1f   2f  3f  4f  5f  6f  7f  8f
+0408  9f  10f 11f 12f 13f 14f 15f 16f
+0410  17f 18f 19f 20f 21f 22f 23f 24f
+0418  25f
+0480  1t 2t 3t 4t 5t 6t 7t 8t
+0488  9t 10t 11t 12t 13t 14t 15t 16t
+0490  17t 18t 19t 20t
+0000
+0000  temp variable mapping
+0000  ---------------------
+0500   gTmp1x
+0510   tmp1x
+0000
+0000  work variable mapping
+0000  ---------------------
+0520   gWrk1x  gWrk2x  gWrk3x
+0530   wrk1x   wrk2x   wrk3x
+0540   gWrk1   gWrk2   gWrk3
+0570   wrk1    wrk2    wrk3
+0590   wrk1f   wrk2f   wrk3f
+0000
+0000  meta-command mapping
+0000  --------------------
+5000  refNum  text    instr#  db#     ?AO     blkNum  blkAdr1 blkAdr2
+5008  outLine outName outPath incWarn warnNum cmt     nop     evenByte
+5010  tcc     exp     refHex  drum    jmp     endj    skp     lbl
+5018  blank1  scale   unscale sdt     cdt     ssr     ftsrin  ftsrout
+5020  dcat    mcat    imc     smc     movw    blank2  mwi     aBit
+5028  tcp3    tcp5
+5050  setLab1 setLab2 setLab3 setLab4 setLab5 setLab6 setLab7 setLab8
+5060  lab1    lab2    lab3    lab4    lab5    lab6    lab7    lab8
+0000
+0000  data type mapping
+0000  -----------------
+5100  X        Y        C        DiscreteParameter-
+5104  V        K        DCP      DCC
+5108  STW      G        WordParameter-   VME
+510C  TCP      TCC      CONSTANT DSP
+5110  DSC      WX       WY
+5113  AACK     AADB     ACF      ACFH
+5117  ACFL     AERR     AHA      AHHA
+511B  ALA      ALLA     AODA     APV
+511F  APVA     APVH     APVL     ARCA
+5123  ARSA     ASP      ASPH     ASPL
+5127  ATS      AVF      AVFA     AYDA
+512B  LACK     LADB     LCF      LCFH
+512F  LCFL     LERR     LHA      LHHA
+5133  LKC      LKD      LLA      LLLA
+5137  LM       LMN      LMNA     LMX
+513B  LODA     LPV      LPVA     LPVH
+513F  LPVL     LRCA     LRFA     LRSA
+5143  LRSF     LRSN     LS       LSP
+5147  LSPH     LSPL     LTD      LTI
+514B  LTS      LVF      LVFA     LYDA
+514F  T        P        SFEC     NOTYP
+5153  WORK     TEMP
+5160  I        PI       Q        PQ
+5182  M        DB
+5184  FC       FB       OB
+518C  AA       FC505    LOOP     RSRVD
+5190  RLL      SFPGM    SFSUB    L
+5194  STRG     FB505
+51A1  ABS(     ACOS(    ASIN(    ATAN(
+51A5  FC11(    COS(     EXP(     FC12(
+51A9  FC13(    LN(      LOG(     ROUND(
+51AD  SIN(     SQRT(    TAN(     FC12(
+51B1  NOT      FC14(    FC15(    FC16(
+51B5  MOD      AND      OR       **
+51B9  *        /        +        -
+51BD  -        (        )        [
+51C1  ]        ,        ...      :=
+51C5  SHR(     SHL(     =        <>
+51C9  <        <=       >        >=
+51CD  WORD     BIT      FLOAT    STRING
+51D1  APARM    BPARM    IN       N
+51D5  WORD_TO_INT(      0        INT_TO_WORD(  FC20(
+51D9  FC21(    INT      REAL     REAL_TO_INT(
+51DD  LAB
+0000
+0000  substring mapping
+0000  -----------------
+5200  .VP5     .TTL     .CIP      .CCP
+5204  .CJP     .CSP     .CMT      .SIP
+5208  .SWP     .SCP     .SJP      .SVP
+520C  .SKP     .SYN     .AWL      .LIS
+5210  .MAP     COMPLETE ADJUSTING RLL
+5214  FC       DBX      DBW       DBD
+5218  L#       A        :         A
+521C  O        AN       ON       TRUE
+5220  FALSE    OB       DB       FB
+5224  LOOP     PASS     RAMP     SOAK
+5228  .LOP     DBB      T#       D_
+522C  H_       M_       S_       MS
+5230  W        D        B        //
+5234  .ALM     .PGM     .SUB     INITIALIZING
+5238  .SCL     DX       DW       505dummy.505
+523C  DD       DB       SFPGM    SF505SCL
+5240  SFSUB    AA       OUT_OF_MEMORY       DRUM_FB
+5244  DRUM_DB  Z        VK_DB    V-memory
+5248  K-memory .VMM     .KMM     W#16#
+524C  DCAT_FB  DCAT_DB  MCAT_FB  MCAT_DB
+5250  IMC_FB   IMC_DB   SMC_FB   SMC_DB
+5254  B#16#    LOOP_FC  LOOP_DB2 AA_FB
+5258  SFPGMSUB LOOP_DB1 TCP_DB
+0000
+0000  SFPGM/SFSUB conversion code (numeric order)
+0000  -------------------------------------------
+6000        * (comment)........................................
+0004        // %text%
+6001        BINBCD.............................................
+0004        %2w% := FC9(%1w%); // statement:%refNum% BINBCD
+6002        BCDBIN.............................................
+0004        %2w% := FC10(%1w%); // statement:%refNum% BCDBIN
+6003        SCALE..............................................
+0004%2000004%        // SCALE: 20%% offset implemented in I/O modules
+0003%2000004%   %incWarn outPath outName% line %outLine% statement:%refNum% *** SCALE: 20%% offset implemented in I/O modules ***
+0004        // statement:%refNum% (SCALE)
+0004%2000001%        //  FC105(IN:%1w% HI_LIM:%4f% LO_LIM:%3f% BIPOLAR:%5x% OUT:%2w%)
+0004%2000002%        //  FC105(IN:%1w% HI_LIM:%4f% LO_LIM:%3f% BIPOLAR:%5x% OUT:%2f%)
+0001        scale
+6004        UNSCALE............................................
+0004%2000004%        // UNSCALE: 20%% offset implemented in I/O modules
+0003%2000004%   %incWarn outPath outName% line %outLine% statement:%refNum% *** UNSCALE: 20%% offset implemented in I/O modules ***
+0004        // statement:%refNum% (UNSCALE)
+0004%2000001%        //      FC106(IN:%1w% HI_LIM:%4f% LO_LIM:%3f% BIPOLAR:%5x% OUT:%2w%)
+0004%2000002%        //      FC106(IN:%1f% HI_LIM:%4f% LO_LIM:%3f% BIPOLAR:%5x% OUT:%2w%)
+0001        unscale
+6005        MATH...............................................
+0004        // statement:%refNum% MATH
+0004        %exp%;
+6006        IMATH..............................................
+0004        // statement:%refNum% IMATH
+0004        %exp%;
+6007        IF.................................................
+0004        IF (%exp% <> 0) THEN
+6008        ELSE...............................................
+0004        ELSE
+6009        ENDIF..............................................
+0004        END_IF;
+600A        SDT................................................
+0003   %incWarn outPath outName% line %outLine% *** SDT: check table size ***
+0004        // statement:%refNum% SDT: check table size
+0004        // FC89(SRC:%1x% DEST:%2x% Q:%5x% INDX:%3w% table size:%4w%)
+0001        sdt
+600B        CDT................................................
+0003   %incWarn outPath outName% line %outLine% *** CDT: check table size ***
+0004        // statement:%refNum% CDT: check table size
+0004        // FC103(IN_TBL:%3x% OUT_TBL:%4x% IN:%1x% OUT:%2x% table size:%5w%)
+0001        cdt
+600C        SSR................................................
+0003   %incWarn outPath outName% line %outLine% *** SSR: check status bit ***
+0004        // statement:%refNum% SSR: check status bit
+0004        // FC90(S_DATA:%2x% START:%2x% LEN:%1h% status:%3x%)
+0001        ssr
+600D        FTSR-IN............................................
+0003   %incWarn outPath outName% line %outLine% *** FTSR-IN: check table size ***
+0004        // statement:%refNum% FTSR-IN: check table size
+0004        // FC84(size:%1w%, start:%2w%, input:%3w% status:%4x%)
+0001        ftsrin
+600E        FTSR-OUT...........................................
+0003   %incWarn outPath outName% line %outLine% *** FTSR-OUT check table size ***
+0004        // statement:%refNum% FTSR-OUT check table size
+0004        // FC85(size:%1w%, start:%2w%, output:%3w% status:%4x%)
+0001        ftsrout
+600F        PRINT..............................................
+0003   %incWarn outPath outName% line %outLine% *** PRINT must be converted manually ***
+0004        MW128 := MW128;  // statement:%refNum% PRINT *** must be converted manually ***
+6010        CALL...............................................
+0004        // CALL parameters must be converted manually
+0003   %incWarn outPath outName% line %outLine% *** CALL parameters must be converted manually ***
+0004        // statement:%refNum% CALL
+0002        %1w%();
+6011        PACK...............................................
+0003   %incWarn outPath outName% line %outLine% *** PACK must be converted manually (use FB86 -- Pack Data) ***
+0004        MW128 := MW128;  // PACK statement:%refNum% must be converted manually (use FB86 -- Pack Data)
+6012        LEAD/LAG...........................................
+0003   %incWarn outPath outName% line %outLine% *** LEAD/LAG: SAMPLE_T must be validated ***
+0004        // LEAD/LAG: SAMPLE_T must be validated
+0004%1000008%        DB66.DD12 := %4f%;       // LD_TIME
+0004%1008000%        DB66.DD12 := FC21(%4f%); // LD_TIME
+0004%1000010%        DB66.DD16 := %5f%;       // LG_TIME
+0004%1010000%        DB66.DD16 := FC21(%5f%); // LG_TIME
+0004%1000020%        DB66.DD20 := %6f%;       // GAIN
+0004%1020000%        DB66.DD20 := FC21(%6f%); // GAIN
+0004        DB66.DD24 := %2f%;                // PREV_IN
+0004        FB80.DB66(IN := FC20(%1f%), SAMPLE_T := 1); // statement:%refNum%
+0004        %2f% := DB66.DD24;                // PREV_IN
+0004        %3f% := DB66.DD6;                 // OUT (copied out this way to avoid type checking)
+6013        RETURN.............................................
+0004        RETURN;
+6014        PACKLOOP...........................................
+0003   %incWarn outPath outName% line %outLine% *** PACKLOOP must be converted manually (use FB86 -- Pack Data) ***
+0004        MW128 := MW128;  // statement:%refNum% PACKLOOP must be converted manually (use FB86 -- Pack Data)
+6015        PACKAA.............................................
+0003   %incWarn outPath outName% line %outLine% statement:%refNum% *** PACKAA must be converted manually (use FB86 -- Pack Data) ***
+0004        MW128 := MW128;  // statement:%refNum% PACKAA must be converted manually (use FB86 -- Pack Data)
+6016        _SF ..................................
+0004%1040000%      FUNCTION_BLOCK FB%refNum%
+0004%1000040%      FUNCTION FC%refNum% : VOID
+0004      // TITLE: %text%
+0003   %incWarn outPath outName% line %outLine%: *** PRIORITY SFPGM runs to completion ***
+0004      // PRIORITY SFPGM runs to completion (background task not supported)
+0004%2000002%      // ABORT ON ERROR NOT SUPPORTED
+0003%2000002%   %incWarn outPath outName% line %outLine%: *** ABORT ON ERROR NOT SUPPORTED ***
+0004%2000004%      // NORMAL SFPGM converted as if PRIORITY SFPGM
+0003%2000004%   %incWarn outPath outName% line %outLine%: *** NORMAL SFPGM converted as if PRIORITY SFPGM ***
+0004%2000008%      // CYCLIC SFPGM converted as if PRIORITY SFPGM (cycle time: %1f%)
+0003%2000008%   %incWarn outPath outName% line %outLine%: *** CYCLIC SFPGM converted as if PRIORITY SFPGM ***
+0004%2000010%      // RESTRICTED SFPGM converted as if PRIORITY SFPGM
+0003%2000010%   %incWarn outPath outName% line %outLine%: *** RESTRICTED SFPGM converted as if PRIORITY SFPGM ***
+0004%2000020%      // ERROR STATUS ADDRESS NOT SUPPORTED (utilize error OB's)
+0003%2000020%   %incWarn outPath outName% line %outLine%: *** ERROR STATUS ADDRESS NOT SUPPORTED (utilize error OB's) ***
+0004%2000001%      LABEL;
+6017        _SF2  ..............................................
+0004%2000001%      END_LABEL
+0004      BEGIN
+6018        PACKRS.............................................
+0003   %incWarn outPath outName% line %outLine% statement:%refNum% *** PACKRS must be converted manually ***
+0004        MW128 := MW128;  // PACKRS  statement:%refNum%  *** must be converted manually ***
+6019        GOTO...............................................
+0004        GOTO L%1l%;
+601A        LABEL..............................................
+0004%2000001%        L%1l%:
+0004%2000002%        L%1l%;
+601B        EXIT...............................................
+0003   %incWarn outPath outName% line %outLine% statement:%refNum% *** EXIT error code (%1w%) must be converted manually ***
+0004        RETURN; // EXIT error code (%1w%) must be converted manually
+601C        end SF.............................................
+0004%1001000%      END_FUNCTION_BLOCK
+0004%1000001%      END_FUNCTION
+0004
+601D        _FC19strt
+0007      FUNCTION FC 19 : VOID
+0007      TITLE =  CALLER
+0007      NAME     : caller
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      CALL_REF :  INT;
+0007      END_VAR
+0007      VAR_TEMP
+0007      FVAL     :  REAL;
+0007      IVAL     :  INT;
+0007      XVAL     :  BOOL;
+0007      RTN      :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007        NETWORK
+0007          JU       STRT;        // jump over calls
+601E        _FC19mid1
+0007        NETWORK
+0007 STRT:    L        CALL_REF;    // switch(reference) {
+0007          JL       END1;        //   default:
+601F        _FC19mid2
+0007          JU       C%refNum%;   //   call %refNum%
+6020        _FC19end
+0007 END1:    BEU;
+0007      END_FUNCTION
+0007
+6021        _FC19call
+0004        FC19(CALL_REF := %refNum%);
+6022        _FC19scale
+0007        NETWORK
+0007%2000004%          // 20%% offset implemented in I/O modules
+0007C%refNum%:       L      %1w%; // SCALE
+0007          T      IVAL;
+0007          CALL FC105 (IN := IVAL, HI_LIM := %4f%, LO_LIM := %3f%, BIPOLAR := %5x%, OUT := FVAL, RET_VAL := RTN);
+0007          L      FVAL;
+0007%2000001%          RND;
+0007%2000001%          T      %2w%;
+0007%2000002%          T      %2f%;
+0007          BEU;
+6023        _FC19unscale
+0007        NETWORK
+0007%2000001%C%refNum%:       L      %1w%; // UNSCALE
+0007%2000002%C%refNum%:       L      %1f%; // UNSCALE
+0007%2000004%          // 20%% offset implemented in I/O modules
+0007%2000001%          ITD;
+0007%2000001%          DTR;
+0007          T      FVAL;
+0007          CALL FC106 (IN := FVAL, HI_LIM := %4f%, LO_LIM := %3f%, BIPOLAR := %5x%, OUT := IVAL, RET_VAL := RTN);
+0007          L      IVAL;
+0007          T      %2w%;
+0007          BEU;
+6024        _FC19sdt
+0007        NETWORK
+0007C%refNum%:       // *** SDT must be converted manually (because of table length) ***
+0007%2000001%          CALL  FC89 (SRC := P#%1x%, DEST := P#%2x%, E_TYPE := B#16#4, Q := %5x%, INDX := %3w%, RET_VAL := RTN); // (table size %4w%)
+0007%2000002%          CALL  FC89 (SRC := P#%1x%, DEST := P#%2x%, E_TYPE := B#16#8, Q := %5x%, INDX := %3w%, RET_VAL := RTN); // (table size %4w%)
+0007          BEU;
+6025        _FC19cdt
+0007        NETWORK
+0007C%refNum%:       // *** CDT must be  converted manually (because of table length) ***
+0007%2000001%          CALL FC103 (IN_TBL := P#%3x%, OUT_TBL := P#%4x%, IN := P#%1x%, OUT := P#%2x%, E_TYPE := B#16#4, RET_VAL := RTN); // (table size %5w%)
+0007%2000002%          CALL FC103 (IN_TBL := P#%3x%, OUT_TBL := P#%4x%, IN := P#%1x%, OUT := P#%2x%, E_TYPE := B#16#8, RET_VAL := RTN); // (table size %5w%)
+0007          BEU;
+6026        _FC19ssr
+0007        NETWORK
+0007C%refNum%:       // *** SSR must be converted manually (because of status bit) ***
+0007          CALL FC90 (RESET := FALSE, S_DATA := P#%2x%, START := P#%2x%, LEN := %1h%, E_TYPE := B#16#4, Q := XVAL); // status: %3x%
+0007          BEU;
+6027        _FC20
+0007
+0007      FUNCTION FC 20 : REAL
+0007      TITLE =  F2R
+0007      NAME     : F2R
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      VAL      :  DWORD;
+0007      END_VAR
+0007      BEGIN
+0007        NETWORK
+0007          L      VAL;
+0007          T      RET_VAL;
+0007      END_FUNCTION
+0007
+6028        _FC21
+0007      FUNCTION FC 21 : DWORD
+0007      TITLE =  R2F
+0007      NAME     : R2F
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      VAL      :  REAL;
+0007      END_VAR
+0007      BEGIN
+0007        NETWORK
+0007          L      VAL;
+0007          T      RET_VAL;
+0007      END_FUNCTION
+0007
+6029        _FC19ftsrin
+0007        NETWORK
+0007C%refNum%:       // *** FTSR-IN not fully converted
+0007          // FTSR-IN(size:%1w%, start:%2w%, input:%3w% status:%4x%)
+0007          CALL FC84 (DATA := %3w%, TABLE := P#%2x%);
+0007          BEU;
+602A        _FC19ftsrout
+0007        NETWORK
+0007C%refNum%:       // *** FTSR-OUT not fully converted
+0007          // FTSR-OUT(size:%1w%, start:%2w%, output:%3w% status:%4x%)
+0007          CALL FC85 (TABLE := P#%2x%, RET_VAL := %3w%);
+0007          BEU;
+602B        _OPnot
+0002          // *** 505 operand (%1w%) not mapped to S7 operand
+0003   %incWarn outPath outName% near line %outLine% *** 505 operand (%1w%) not mapped to S7 operand ***
+0000
+0000  Conversion code (numeric order)
+0000  --------------------------------
+7000      _OB1strt................................
+0002
+0002
+0002      ORGANIZATION_BLOCK OB 1
+0002      TITLE = 505 converter output
+0002      VERSION : 1.0
+0002      VAR_TEMP
+0002      OB1_EV_CLASS   : BYTE ;
+0002      OB1_SCAN_1     : BYTE ;
+0002      OB1_PRIORITY   : BYTE ;
+0002      OB1_OB_NUMBR   : BYTE ;
+0002      OB1_RESERVED_1 : BYTE ;
+0002      OB1_RESERVED_2 : BYTE ;
+0002      OB1_PREV_CYCLE : INT ;
+0002      OB1_MIN_CYCLE  : INT ;
+0002      OB1_MAX_CYCLE  : INT ;
+0002      OB1_DATE_TIME  : DATE_AND_TIME ;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      TITLE = TIME DELTA's
+0002      L     OB1_PREV_CYCLE;   // load scan time
+0002      T     DB188.DBW 0;      // save in global DB
+0002      L     DB188.DBW 2;      // load 100ms residual
+0002      +I;                     // scan + residual
+0002      L     100;              // 100ms == .1 sec
+0002      /I;                     //
+0002      T     DB188.DBW 4;      // save .1 seconds
+0002      SRD   16;               // get residual
+0002      T     DB188.DBW 2;      // save 100ms residual
+7001      _UC    .............................................
+0002      NETWORK
+0002      TITLE = REF %blkAdr1% - %blkAdr2%
+0002%1000001%      UC   FC %blkNum%;
+0002%1001000%      UC   FB %blkNum%;
+0002      A    BR;
+0002      JCN  END1;
+7002      _OB1end .............................................
+0002 END1:BEU;
+0002      END_ORGANIZATION_BLOCK
+0002
+0002
+7003      _FCstrt .............................................
+0002
+0002%1002000%      FUNCTION_BLOCK FB%blkNum%
+0002%1000002%      FUNCTION FC %blkNum% : VOID
+0002      TITLE = REF %blkAdr1% - %blkAdr2%
+0002      BEGIN
+0002       NETWORK
+0002       MCRA;
+7004      _FCend ..............................................
+0002%1000001%      NETWORK
+0002%1000001%        SET;
+0002%1000001%        SAVE;
+0002%1002000%      END_FUNCTION_BLOCK
+0002%1000002%      END_FUNCTION
+0002
+7005      _netWork ............................................
+0002        NETWORK
+0002        TITLE = REF %refNum%
+0001      cmt
+7006      _TMPout .............................................
+0002        =    %1x%;
+0002        BLD  103;
+7007      _boxNet .............................................
+0002%2000001%         =    %2x%;
+0002%2000002%         =    %1x%;
+0002%2000004%         S    %1x%;
+0002%2000008%       NETWORK
+0002%2000008%       TITLE = (BOX instruction sub-net) REF %refNum%
+0002%2000080%         A(;
+0002%2000010%         A    %2x%;
+0002%2000020%         A    %1x%;
+0002%2000040%         AN   %2x%;
+7008      _oBa ................................................
+0002        A(;
+7009      _oBaE ...............................................
+0002        );
+700A      _aBo ................................................
+0002        O;
+700B      _DBstrt
+0002      DATA_BLOCK DB %refNum%
+0002      TITLE = 505 Converter integer memory data block
+0002      VERSION : 0.0
+0002      STRUCT
+0002      val : ARRAY [0..3999] of INT;
+0002      END_STRUCT ;
+0002      BEGIN
+700C      _INITdat
+0002       val[%refNum%] := %1w%;
+700D      _DBend
+0002      END_DATA_BLOCK
+0002
+700E      _LDBstrt ....................
+0014
+0014      DATA_BLOCK DB %1w%
+0014      TITLE =  %text%
+0014      VERSION : 0.0
+0014      FB 1
+0014      BEGIN
+0001      cmt
+0014%2000001%      // PV:20%% offset implemented in I/O modules
+0003%2000001%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% PV:20%% offset implemented in I/O modules ***
+0014%2000010%      // RATE-OF-CHANGE alarm must be converted manually
+0003%2000010%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% RATE-OF-CHANGE must be converted manually ***
+0014%2000020%      // BROKEN TRANSMITTER alarm implemented in I/O modules
+0003%2000020%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% BROKEN TRANSMITTER implemented in I/O modules ***
+0014%2000040%      // VELOCITY ALGORITHM not supported
+0003%2000040%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% VELOCITY ALGORITHM not supported ***
+0014%2000080%      // REVERSE ACTING implemented by negating gain
+0003%2000080%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% REVERSE ACTING implemented by negating gain ***
+0014%2000100%      // ERROR SQUARED not supported
+0003%2000100%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% ERROR SQUARED not supported ***
+0014%2000200%      // AUTO MODE LOCK must be implemented in operator interface
+0003%2000200%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% AUTO MODE LOCK must be implemented in operator interface ***
+0014%2000400%      // CASCADE MODE LOCK must be implemented in operator interface
+0003%2000400%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% CASCADE MODE LOCK must be implemented in operator interface ***
+0014%2000800%      // SETPOINT LOCK must be implemented in operator interface
+0003%2000800%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% SETPOINT LOCK must be implemented in operator interface ***
+0014%2001000%      // output:20%% offset implemented in I/O modules
+0003%2001000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% output:20%% offset implemented in I/O modules ***
+0014      // anti-reset-windup should be verified
+0003   %incWarn outPath outName% line %outLine%: *** LOOP %1w% anti-reset-windup should be verified ***
+0014%2004000%      // bipolar inherent in algorithm
+0003%2004000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% bipolar inherent in algorithm ***
+0014%2008000%      // derivative gain limiting should be verified
+0003%2008000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% derivative gain limiting should be verified ***
+0014%2010000%      // V flags must be converted manually
+0003%2010000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% V flags must be converted manually ***
+0014%2020000%      // RAMP/SOAK must be converted manually
+0003%2020000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% RAMP/SOAK must be converted manually ***
+0014%2040000%      // CASCADE connection must be completed manually
+0003%2040000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% CASCADE connection must be completed manually ***
+0014%2080000%      // LOOP SFPGM connection must be completed manually
+0003%2080000%   %incWarn outPath outName% line %outLine%: *** LOOP %1w% SFPGM connection must be completed manually ***
+700F      _IDXTYP
+0003   %incWarn outPath outName% near line %outLine%: *** Array accesses must be converted manually ***
+0004   // Array accesses must be converted manually
+7010      _Lvars ....................................
+0014      COM_RST := FALSE;
+0014      CAS_ON := FALSE;
+0014      CYCLE := %2t%;
+0014      SP_INT := 0.000000e+00;
+0014      SP_EXT := 0.000000e+00;
+0014      PV_IN := 0.000000e+00;
+0014      PV_PER := W#16#0;
+0014      DISV := 0.000000e+00;
+0014      CAS := 0.000000e+00;
+0014      MAN := 0.000000e+00;
+0014      DB_NBR := DB 1;
+0014      SPFC_NBR := FC 0;
+0014      PVFC_NBR := FC 0;
+0014      LMNFCNBR := FC 0;
+0014      LMN := 0.000000e+00;
+0014      LMN_PER := W#16#0;
+0014      PV := 0.000000e+00;
+0014      QCAS := FALSE;
+0014      SP_HLM := 1.000000e+02;
+0014      SP_LLM := 0.000000e+00;
+0014      PVH_ALM := %6f%;
+0014      PVH_WRN := %4f%;
+0014      PVL_WRN := %3f%;
+0014      PVL_ALM := %5f%;
+0014      LMN_HLM := 1.000000e+02;
+0014      LMN_LLM := 0.000000e+00;
+0014      GAIN := %9f%;
+0014      TI := %10t%;
+0014      TD := %11t%;
+0014      TM_LAG := T#2S;
+0014      SPGEN_ON := FALSE;
+0014      SPUP := FALSE;
+0014      SPDN := FALSE;
+0014      RMPSK_ON := FALSE;
+0014      SPEXT_ON := FALSE;
+0014      MAN_ON := TRUE;
+0014      MANGN_ON := FALSE;
+0014      MANUP := FALSE;
+0014      MANDN := FALSE;
+0014      DFRMP_ON := FALSE;
+0014      CYC_ON := FALSE;
+0014      RMP_HOLD := FALSE;
+0014      CONT_ON := FALSE;
+0014      TUPDT_ON := FALSE;
+0014      SPFC_ON := FALSE;
+0014      SPROC_ON := FALSE;
+0014      PVPER_ON := FALSE;
+0014      LAG1STON := FALSE;
+0014      SQRT_ON := %1x%;
+0014      PVFC_ON := FALSE;
+0014      DEADB_ON := %8x%;
+0014      P_SEL := TRUE;
+0014      PFDB_SEL := FALSE;
+0014      I_SEL := TRUE;
+0014      INT_HOLD := FALSE;
+0014      I_ITL_ON := FALSE;
+0014      D_SEL := FALSE;
+0014      DFDB_SEL := FALSE;
+0014      DISV_SEL := FALSE;
+0014      LMNFC_ON := FALSE;
+0014      LMNRC_ON := FALSE;
+0014      TM_SNBR := 0;
+0014      TM_CONT := T#0MS;
+0014      FAC := 1.000000e+00;
+0014      SP_FAC := 1.000000e+00;
+0014      SP_OFF := 0.000000e+00;
+0014      SPFC_OUT := 0.000000e+00;
+0014      SPURLM_P := 1.000000e+01;
+0014      SPDRLM_P := 1.000000e+01;
+0014      SPURLM_N := 1.000000e+01;
+0014      SPDRLM_N := 1.000000e+01;
+0014      PV_FAC := 1.000000e+00;
+0014      PV_OFF := 0.000000e+00;
+0014      PV_TMLAG := T#5S;
+0014      SQRT_FAC := 1.000000e+00;
+0014      SQRT_OFF := 0.000000e+00;
+0014      PVFC_OUT := 0.000000e+00;
+0014      PVURLM_P := 1.000000e+01;
+0014      PVDRLM_P := 1.000000e+01;
+0014      PVURLM_N := 1.000000e+01;
+0014      PVDRLM_N := 1.000000e+01;
+0014      PV_HYS := 1.000000e+00;
+0014      DEADB_W := %7f%;
+0014%1000008%      ERP_ALM := 1.000000e+02;
+0014%1008000%      ERP_ALM := %13f%;
+0014%1000008%      ERP_WRN := 9.000000e+01;
+0014%1008000%      ERP_WRN := %12f%;
+0014%1000008%      ERN_WRN := -9.000000e+01;
+0014%1008000%      ERN_WRN := -%12f%;
+0014%1000008%      ERN_ALM := -1.000000e+02;
+0014%1008000%      ERN_ALM := -%13f%;
+0014      ER_HYS := 1.000000e+00;
+0014      I_ITLVAL := 0.000000e+00;
+0014      LMNFCOUT := 0.000000e+00;
+0014      LMN_URLM := 1.000000e+01;
+0014      LMN_DRLM := 1.000000e+01;
+0014      LMN_FAC := 1.000000e+00;
+0014      LMN_OFF := 0.000000e+00;
+0014      SP := 0.000000e+00;
+0014      QPVH_ALM := FALSE;
+0014      QPVH_WRN := FALSE;
+0014      QPVL_WRN := FALSE;
+0014      QPVL_ALM := FALSE;
+0014      QR_S_ACT := FALSE;
+0014      QSP_HLM := FALSE;
+0014      QSP_LLM := FALSE;
+0014      QPVURLMP := FALSE;
+0014      QPVDRLMP := FALSE;
+0014      QPVURLMN := FALSE;
+0014      QPVDRLMN := FALSE;
+0014      QERP_ALM := FALSE;
+0014      QERP_WRN := FALSE;
+0014      QERN_WRN := FALSE;
+0014      QERN_ALM := FALSE;
+0014      QLMN_HLM := FALSE;
+0014      QLMN_LLM := FALSE;
+0014      NBR_ATMS := 0;
+0014      RS_TM := T#0MS;
+0014      T_TM := T#0MS;
+0014      RT_TM := T#0MS;
+0014      ER := 0.000000e+00;
+0014      LMN_P := 0.000000e+00;
+0014      LMN_I := 0.000000e+00;
+0014      LMN_D := 0.000000e+00;
+0014      SPFC_IN := 0.000000e+00;
+0014      PVFC_IN := 0.000000e+00;
+0014      LMNFC_IN := 0.000000e+00;
+0014      SP_OP_ON := FALSE;
+0014      PV_OP_ON := FALSE;
+0014      LMNOP_ON := FALSE;
+0014      SP_OP := 0.000000e+00;
+0014      PV_OP := 0.000000e+00;
+0014      LMN_OP := 0.000000e+00;
+0014      MP1 := 0.000000e+00;
+0014      MP2 := 0.000000e+00;
+0014      MP3 := 0.000000e+00;
+0014      MP4 := 0.000000e+00;
+0014      MP5 := 0.000000e+00;
+0014      MP6 := 0.000000e+00;
+0014      MP7 := 0.000000e+00;
+0014      MP8 := 0.000000e+00;
+0014      MP9 := 0.000000e+00;
+0014      MP10 := 0.000000e+00;
+0014      sOutEnd := 0.000000e+00;
+0014      sOutOld := 0.000000e+00;
+0014      siNbratms := 0;
+0014      stRstm := T#0MS;
+0014      stTtm := T#0MS;
+0014      stRttm := T#0MS;
+0014      stUpSp := T#0MS;
+0014      stDownSp := T#0MS;
+0014      sPvRest := 0.000000e+00;
+0014      sPvRueck := 0.000000e+00;
+0014      sInvAlt := 0.000000e+00;
+0014      sIanteilAlt := 0.000000e+00;
+0014      sRestInt := 0.000000e+00;
+0014      sRestDif := 0.000000e+00;
+0014      sRueck := 0.000000e+00;
+0014      stUpMan := T#0MS;
+0014      stDownMan := T#0MS;
+0014      sbStart := TRUE;
+0014      sbQrsact := FALSE;
+0014      sbArwHLmOn := FALSE;
+0014      sbArwLLmOn := FALSE;
+0014      sbILimOn := TRUE;
+7011      _LDBend .......................................................
+0014      END_DATA_BLOCK
+0014
+7012      _OB35 .........................................
+0002
+0002
+0002      ORGANIZATION_BLOCK OB 35
+0002      TITLE = Cyclic Interrupt 1
+0002      VERSION : 1.0
+0002      VAR_TEMP
+0002      OB35_EV_CLASS     : BYTE ;
+0002      OB35_STRT_INF     : BYTE ;
+0002      OB35_PRIORITY     : BYTE ;
+0002      OB35_OB_NUMBR     : BYTE ;
+0002      OB35_RESERVED_1   : BYTE ;
+0002      OB35_RESERVED_2   : BYTE ;
+0002      OB35_PHASE_OFFSET : WORD;
+0002      OB35_RESERVED_3   : INT ;
+0002      OB35_EXC_FREQ     : INT ;
+0002      OB35_DATE_TIME    : DATE_AND_TIME ;
+0002      END_VAR
+0002      BEGIN
+0002%2000001%        CALL FC2(COM_RST := FALSE, CYCLE := T#100MS);  // LOOPS
+0002%2000002%        CALL FB67, DB67(CYCLE := 100.0);               // ANALOG ALARMS
+0002      END_ORGANIZATION_BLOCK
+0002
+7013      _OB100 .........................
+0002
+0002      ORGANIZATION_BLOCK OB 100
+0002      TITLE = Complete Restart
+0002      VERSION : 1.0
+0002      VAR_TEMP
+0002      OB100_EV_CLASS   : BYTE ;
+0002      OB100_STRTUP     : BYTE ;
+0002      OB100_OB_NUMBR   : BYTE ;
+0002      OB100_RESERVED_1 : BYTE ;
+0002      OB100_RESERVED_2 : BYTE ;
+0002      OB100_STOP       : WORD;
+0002      OB100_STRT_INFO  : DWORD;
+0002      OB100_DATE_TIME  : DATE_AND_TIME ;
+0002      END_VAR
+0002      BEGIN
+0002      CALL FC 2 ( COM_RST := TRUE, CYCLE := T#100MS);
+0002      END_ORGANIZATION_BLOCK
+0002
+7014      _LACT ..................................
+0011
+0011      FUNCTION FC 2: VOID
+0011      TITLE = PID LOOP ACTIVATOR
+0011      VERSION : 1.0
+0011      VAR_INPUT
+0011        COM_RST : BOOL ;
+0011          CYCLE : TIME ;
+0011      END_VAR
+0011      BEGIN
+0011      NETWORK
+0011      TITLE = CALL LOOP SCEDULER
+0011        CALL FC 1(TM_BASE := CYCLE, COM_RST := COM_RST, DB_NBR := DB 65);
+7015      _LNET ....................................
+0011      NETWORK
+0011      TITLE = ACTIVATE LOOP %1w%
+0011        // %text%
+0011%2000001 setLab1%        A    %2x%;
+0011%2000002 lab1 setLab1%:   A    %2x%;
+0011        JCN   %lab1%;
+0011        CALL FB 1 , DB %1w% (COM_RST := %3x%, CYCLE := %4l%,
+0011                                PV_PER := %5w%, LMN_PER := %6w%);
+0011        CLR;
+0011        =    %2x%;
+0011%2000004 lab1%:   BE;
+7016      _LACTend ...................................
+0011      END_FUNCTION
+0011
+7017      _notUsed1
+7018      _LDBs ...........................
+0012      DATA_BLOCK DB 65
+0012      TITLE = loop control
+0012      VERSION : 1.0
+0012      STRUCT
+0012        GLP_NBR : INT;     // greatest loop number
+0012        ALP_NBR : INT;     // actual loop number
+0012        LOOP_DAT : ARRAY  [ 1 .. %1w% ] OF STRUCT
+0012          MAN_CYC : TIME;    // loop data: manual sample time
+0012          MAN_DIS : BOOL;    // loop data: manual loop disable
+0012          MAN_CRST : BOOL;   // loop data: manual complete restart
+0012          ENABLE : BOOL;     // loop data: enable loop
+0012          COM_RST : BOOL;    // loop data: complete restart
+0012          ILP_COU : INT;     // loop data: internal loop counter
+0012          CYCLE : TIME;      // loop data: sample time
+0012        END_STRUCT ;
+0012      END_STRUCT ;
+0012      BEGIN
+7019      _LDB1 .................
+0012        GLP_NBR := %1w%;
+0012        ALP_NBR := 0;
+701A      _LDB2 .................
+0012          LOOP_DAT[%1w%].MAN_CYC := T#1S;
+0012          LOOP_DAT[%1w%].MAN_DIS := FALSE;
+0012          LOOP_DAT[%1w%].MAN_CRST := FALSE;
+0012          LOOP_DAT[%1w%].ENABLE := FALSE;
+0012          LOOP_DAT[%1w%].COM_RST := FALSE;
+0012          LOOP_DAT[%1w%].ILP_COU := 0;
+0012          LOOP_DAT[%1w%].CYCLE := %2t%;
+701B      _LDBe ........................
+0012      END_DATA_BLOCK
+0012
+701C      _LISe ................................................
+0003 *** %warnNum% Warnings ***
+701D      _runTimeSup ............................................
+0002
+0002      DATA_BLOCK DB 188
+0002      TITLE = 505 Converter run-time-support data block
+0002      VERSION : 0.0
+0002      STRUCT
+0002      tVal  : INT;  // ms time value
+0002      rVal  : INT;  // .1 second residual
+0002      dVal  : INT;  // .1 second time
+0002      idummy : INT;  // input dummy variable
+0002      odummy : INT;  // output dummy variable
+0002      END_STRUCT ;
+0002      BEGIN
+0002      tVal := 0;
+0002      rVal := 0;
+0002      dVal := 0;
+0002      END_DATA_BLOCK
+0002
+701E      _FC3 ...................................................
+0002
+0002      FUNCTION FC 3 : VOID
+0002      TITLE = TIMER (505)
+0002      AUTHOR   : SEA
+0002      FAMILY   : CONVERT
+0002      NAME     : TMR
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      PF       :  BOOL;
+0002      RESET    :  BOOL;
+0002      DELTA    :  INT;
+0002      PRESET   :  INT;
+0002      END_VAR
+0002      VAR_IN_OUT
+0002      CURRENT  :  INT;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      A        RESET;
+0002      JC       X010;
+0002      L        PRESET;
+0002      T        CURRENT;
+0002      CLR;
+0002      SAVE;
+0002      BEU;
+0002      NETWORK
+0002X010: A        PF;
+0002      JCN      X030;
+0002      L        CURRENT;
+0002      L        DELTA;
+0002      -D;
+0002      A        >0;
+0002      JC       X020;
+0002      L        0;
+0002X020: T        CURRENT;
+0002X030: L        0;
+0002      L        CURRENT;
+0002      ==I;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+701F      _FC4 ...................................................
+0002
+0002      FUNCTION FC 4 : VOID
+0002      TITLE = COUNTER (505)
+0002      AUTHOR   : SEA
+0002      FAMILY   : CONVERT
+0002      NAME     : CTR
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      PF       :  BOOL;
+0002      RESET    :  BOOL;
+0002      PRESET   :  INT;
+0002      END_VAR
+0002      VAR_IN_OUT
+0002      TCBIT    :  BOOL;
+0002      CURRENT  :  INT;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      A        RESET;
+0002      JC       X010;
+0002      L        0;
+0002      T        CURRENT;
+0002      CLR;
+0002      SAVE;
+0002      BEU;
+0002      NETWORK
+0002X010: A        PF;
+0002      FP       TCBIT;
+0002      JCN      X030;
+0002      L        CURRENT;
+0002      L        1;
+0002      +D;
+0002      L        PRESET;
+0002      <=D;
+0002      POP;
+0002      JC       X020;
+0002      L        PRESET;
+0002X020: T        CURRENT;
+0002X030: L        PRESET;
+0002      L        CURRENT;
+0002      <=D;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+7020      _FC5 ...................................................
+0002
+0002      FUNCTION FC 5 : VOID
+0002      TITLE = UP/DOWN COUNTER (505)
+0002      AUTHOR   : SEA
+0002      FAMILY   : CONVERT
+0002      NAME     : UDC
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      UP       :  BOOL;
+0002      DWN      :  BOOL;
+0002      RESET    :  BOOL;
+0002      PRESET   :  INT;
+0002      END_VAR
+0002      VAR_IN_OUT
+0002      UBIT     :  BOOL;
+0002      DBIT     :  BOOL;
+0002      ZBIT     :  BOOL;
+0002      CURRENT  :  INT;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      A        RESET;
+0002      JC       X010;
+0002      L        0;
+0002      T        CURRENT;
+0002      SET;
+0002      SAVE;
+0002      =        ZBIT;
+0002      BEU;
+0002      NETWORK
+0002X010: A        UP;
+0002      FP       UBIT;
+0002      JCN      X030;
+0002      L        CURRENT;
+0002      L        1;
+0002      +I;
+0002      L        PRESET;
+0002      <=I;
+0002      POP;
+0002      JC       X020;
+0002      L        PRESET;
+0002X020: T        CURRENT;
+0002X030: A        DWN;
+0002      FP       DBIT;
+0002      JCN      X050;
+0002      L        CURRENT;
+0002      L        1;
+0002      -I;
+0002      A        >=0;
+0002      JC       X040;
+0002      L        0;
+0002X040: T        CURRENT;
+0002X050: L        0;
+0002      L        CURRENT;
+0002      ==I;
+0002      =        ZBIT;
+0002      L        PRESET;
+0002      ==I;
+0002      O        ZBIT;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+7021      _FC6 ...................................................
+0002
+0002      FUNCTION FC 6 : VOID
+0002      TITLE =  *** Instruction not supported
+0002      NAME     : DUMMY0
+0002      VERSION  : 1.0
+0002      BEGIN
+0002      NETWORK
+0002      SET;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+7022      _FC7 ...................................................
+0002
+0002      FUNCTION FC 7 : VOID
+0002      TITLE =  *** Instruction not supported
+0002      NAME     : DUMMY2
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      PF       :  BOOL;
+0002      PDS1     :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      SET;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+7023      _FC8 ...................................................
+0002
+0002      FUNCTION FC 8 : VOID
+0002      TITLE =  *** Instruction not supported
+0002      NAME     : DUMMY3
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      PF       :  BOOL;
+0002      PDS1     :  BOOL;
+0002      PDS2     :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002      SET;
+0002      SAVE;
+0002      END_FUNCTION
+0002
+7024      _FC9 ...................................................
+0007
+0007      FUNCTION FC 9 : WORD
+0007      TITLE =  BCDBIN
+0007      NAME     : BCDBIN
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      BCD      :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        BCD;
+0007        DTB;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+7025      _FC10 ..................................................
+0007
+0007      FUNCTION FC 10 : WORD
+0007      TITLE =  BINBCD
+0007      NAME     : BINBCD
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      BIN      :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        BIN;
+0007        BTD;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+7026      _FC11 ..................................................
+0007
+0007      FUNCTION FC 11 : REAL
+0007      TITLE =  CEIL
+0007      NAME     : CEIL
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      VAL      :  REAL;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        VAL;
+0007        RND+;
+0007        DTR;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+7027      _FC12 ..................................................
+0007
+0007      FUNCTION FC 12 : REAL
+0007      TITLE =  FLOOR_TRUNC
+0007      NAME     : FT
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      VAL      :  REAL;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        VAL;
+0007        TRUNC;
+0007        DTR;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+7028      _FC13 ..................................................
+0007
+0007      FUNCTION FC 13 : REAL
+0007      TITLE =  FRAC
+0007      NAME     : FRAC
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      VAL      :  REAL;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        VAL;
+0007        L        VAL;
+0007        RND-;
+0007        DTR;
+0007        -R;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+7029      _FC14 ..................................................
+0007
+0007      FUNCTION FC 14 : WORD
+0007      TITLE =  WAND
+0007      NAME     : WAND
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      APARM    :  WORD;
+0007      BPARM    :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        APARM;
+0007        L        BPARM;
+0007        AW;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+702A      _FC15 ..................................................
+0007
+0007      FUNCTION FC 15 : WORD
+0007      TITLE =  WOR
+0007      NAME     : WOR
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      APARM    :  WORD;
+0007      BPARM    :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        APARM;
+0007        L        BPARM;
+0007        OW;
+0007        T       RET_VAL;
+0007      END_FUNCTION
+0007
+702B      _FC16 ..................................................
+0007
+0007      FUNCTION FC 16 : WORD
+0007      TITLE =  WXOR
+0007      NAME     : WXOR
+0007      VERSION  : 1.0
+0007      VAR_INPUT
+0007      APARM    :  WORD;
+0007      BPARM    :  WORD;
+0007      END_VAR
+0007      BEGIN
+0007      NETWORK
+0007        L        APARM;
+0007        L        BPARM;
+0007        XOW;
+0007        T       RET_VAL;
+0007        SET;
+0007        SAVE;
+0007      END_FUNCTION
+0007
+702C      _FB66 ..................................................
+0013
+0013      FUNCTION_BLOCK FB 66
+0013      TITLE = 505 ANALOG ALARM
+0013      AUTHOR:SEA
+0013      NAME:AA
+0013      VERSION:1.0
+0013      VAR_INPUT
+0013      CYCLE    : REAL;       // Cyclic Time
+0013      SFPGM    : BLOCK_FC;   // SFPGM number
+0013      PV       : INT;        // Process Variable
+0013      RSP      : INT;        // Remote Set Point
+0013      ENABLE   : BOOL;       // V-Flags
+0013      DISABLE  : BOOL;       // .
+0013      END_VAR
+0013      VAR_OUTPUT
+0013      HHIGH    : BOOL;       // V-Flags
+0013      HIGH     : BOOL;       // .
+0013      LOW      : BOOL;       // .
+0013      LLOW     : BOOL;       // .
+0013      YELLOW   : BOOL;       // .
+0013      ORANGE   : BOOL;       // .
+0013      ROC      : BOOL;       // .
+0013      BT       : BOOL;       // .
+0013      OVER     : BOOL;       // .
+0013      IS_ENABLED :BOOL;      // .
+0013      XFLAG    : BOOL;       // Execution Flag
+0013      END_VAR
+0013      VAR
+0013      NEW_BT   : BOOL;       // new broken transmitter alarm
+0013      NOT_FIRST: BOOL;       // not first time through flag
+0013      DO_PV    : BOOL;       // have input PV
+0013      CLAMP_SP : BOOL;       // clamp SP flag
+0013      SQRROOT  : BOOL;       // C-Flags
+0013      M_HL     : BOOL;       // .
+0013      M_HHLL   : BOOL;       // .
+0013      M_YO     : BOOL;       // .
+0013      M_ROC    : BOOL;       // .
+0013      M_BROKEN : BOOL;       // .
+0013      M_RSP    : BOOL;       // .
+0013      TIMESUM  : REAL;       // time since last performed algorithm
+0013      IN_SPAN  : REAL;       // input span (25600.0, 32000.0, 64000.0)
+0013      IN_OFF   : REAL;       // input offset (6400.0, 0.0, -32000.0)
+0013      ABS_ERR  : REAL;       // absolute value of error
+0013      NEW_APV  : REAL;       // new APV
+0013      OLD_APV  : REAL;       // last APV
+0013      PV_SPAN  : REAL;       // PV SPAN (APVH - APVL)
+0013      AADB     : REAL;       // ALARM DEADBAND
+0013      AERR     : REAL;       // ERROR
+0013      AHA      : REAL;       // HIGH ALARM VALUE
+0013      AHHA     : REAL;       // HIGH HIGH ALARM VALUE
+0013      ALA      : REAL;       // LOW ALARM VALUE
+0013      ALLA     : REAL;       // LOW LOW ALARM VALUE
+0013      AODA     : REAL;       // ORANGE DEVIATION VALUE
+0013      APV      : REAL;       // PV
+0013      APVH     : REAL;       // HIGHEST PV VALUE
+0013      APVL     : REAL;       // LOWEST PV VALUE
+0013      ARCA     : REAL;       // RATE OF CHANGE ALARM VALUE
+0013      ASP      : REAL;       // SP
+0013      ASPH     : REAL;       // SP HIGH LIMIT
+0013      ASPL     : REAL;       // SP LOW LIMIT
+0013      ATS      : REAL;       // SAMPLE TIME
+0013      AYDA     : REAL;       // YELLOW DEVIATION VALUE
+0013      END_VAR
+0013      BEGIN
+0013        NETWORK
+0013          // default execution flag
+0013          CLR;                  //  XFLAG = FALSE
+0013          =        XFLAG;       //
+0013        NETWORK
+0013          // is_enabled
+0013          A(;                   //    ENABLE       DISABLE  IS_ENABLED
+0013          O        ENABLE;      //  ---] [-------+---]/[-------( )
+0013          O        IS_ENABLED;  //   IS_ENABLED  |
+0013          );                    //  ---] [-------+
+0013          AN       DISABLE;     //
+0013          =        IS_ENABLED;  //
+0013        NETWORK
+0013          // enable/disable
+0013          A        IS_ENABLED;  //   if(IS_ENABLED = FALSE)
+0013          JC       I010;        //   {
+0013          L        0.0;         //     clear word variables
+0013          T        TIMESUM;     //     .
+0013          T        AERR;        //     .
+0013          CLR;                  //     clear discrete variables
+0013          =        NOT_FIRST;   //     .
+0013          =        OVER;        //     .
+0013          =        HHIGH;       //     .
+0013          =        HIGH;        //     .
+0013          =        LOW;         //     .
+0013          =        LLOW;        //     .
+0013          =        YELLOW;      //     .
+0013          =        ORANGE;      //     .
+0013          =        ROC;         //     .
+0013          SET;                  //     BR := TRUE
+0013          SAVE;                 //     .
+0013          =        BT;          //     return
+0013          BEU                   //   }
+0013        NETWORK
+0013 I010:    // sample time
+0013          L        CYCLE;       //   TIMESUM = TIMESUM + DELTA(time)
+0013          L        TIMESUM;     //   .
+0013          +R;                   //   .
+0013          T        TIMESUM;     //   .
+0013          L        ATS;         //   if(TIMESUM < ATS)
+0013          <R;                   //   { return
+0013          BEC;                  //   }
+0013          -R;                   //   TIMESUM = TIMESUM - ATS
+0013          T        TIMESUM;     //   .
+0013          L        ATS;         //   if(TIMESUM < ATS)
+0013          >=R;                  //   {
+0013          JC       I020;        //     .
+0013          CLR;                  //     .
+0013          =        OVER;        //     OVER = FALSE
+0013          JU       I030;        //   }
+0013 I020:    L        0.0;         //   else {
+0013          T        TIMESUM;     //     TIMESUM = 0.0
+0013          SET;                  //     OVER = TRUE
+0013          =        OVER;        //   }
+0013        NETWORK
+0013 I030:    // normalize PV (have PV address)
+0013          AN       DO_PV;       // if(have_PV_address)
+0013          JC       I040;        // {
+0013          L        PV;          //   X = (PV - offset) / span
+0013          ITD;                  //   .
+0013          DTR;                  //   .
+0013          L        IN_OFF;      //   .
+0013          -R;                   //   .
+0013          L        IN_SPAN;     //   .
+0013          /R;                   //   .
+0013          JU       I050;        // }
+0013        NETWORK
+0013 I040:    // normalize PV (no PV address)
+0013          L        APV;         //   else {
+0013          L        APVL;        //   X = (APV - offset) / span
+0013          -R;                   //   .
+0013          L        PV_SPAN;     //   .
+0013          /R;                   //   }
+0013        NETWORK
+0013 I050:    // clamp PV and monitor broken transmitter
+0013          T        NEW_APV;     // save new APV
+0013          SET;                  // default new BT to true
+0013          =        NEW_BT;      // .
+0013          L        0.0;         // load low value (0.0)
+0013          <R;                   // if(NEW_APV < low)
+0013          JC       I060;        // { clamp }
+0013          L        NEW_APV;     // else {
+0013          L        1.0;         //   load high value (1.0)
+0013          >R;                   //   if(NEW_APV > high)
+0013          JC       I060;        //   { clamp }
+0013          L        NEW_APV;     //   else
+0013          CLR;                  //   { no clamp ; NEW_BT = false }
+0013          =        NEW_BT;      // }
+0013        NETWORK
+0013 I060:    // set BT alarm
+0013          A        M_BROKEN;    //  monitor   NEW_BT   BT
+0013          A        NEW_BT;      // --] [-------] [----( )
+0013          =        BT;          //
+0013        NETWORK
+0013          // square root of PV
+0013          AN       SQRROOT;     // if(squareRoot(PV))
+0013          JC       I070;        // { X = squareRoot(normalized PV)
+0013          SQRT;                 // }
+0013        NETWORK
+0013 I070:    // scale PV
+0013          L        PV_SPAN;     //   APV = (NEW_APV * span) + offset
+0013          *R;                   //   .
+0013          L        APVL;        //   .
+0013          +R;                   //   .
+0013          T        APV;         //   .
+0013        NETWORK
+0013          // rate-of-change
+0013          A        NOT_FIRST;   // if(first OR NOT(monitor ROC))
+0013          A        M_ROC;       // {
+0013          JC       I080;        //   .
+0013 I07F:    CLR;                  //   ROC = FALSE
+0013          =        ROC;         //
+0013          JU       I090;        // }
+0013 I080:    L        OLD_APV;     // else if(delta(PV) < ARCA)
+0013          -R;                   // {
+0013          ABS;                  //   .
+0013          L        ARCA;        //   .
+0013          <R;                   //   ROC = FALSE
+0013          JC       I07F;        // }
+0013          SET;                  // else { ROC = TRUE }
+0013          =        ROC;         // .
+0013        NETWORK
+0013 I090:    // save APV for next time
+0013          L        APV;         // OLD_APV = APV
+0013          T        OLD_APV;     // .
+0013        NETWORK
+0013          // high-high low-low
+0013          A        M_HHLL;      // if(not monitor_HHLL)
+0013          JC       I100;        // {
+0013          CLR;                  //
+0013          =        HHIGH;       //   HHIGH = FALSE
+0013          =        LLOW;        //   LLOW = FALSE
+0013          JU       I110;        // }
+0013        NETWORK
+0013 I100:    // high-high set      // else {
+0013          L        AHHA;        //   if(APV >= AHHA)
+0013          <R;                   //     .
+0013          JC       I120;        //     .
+0013          SET;                  //     HHIGH = TRUE
+0013          =        HHIGH;       //   }
+0013        NETWORK
+0013 I120:    // high-high clr      //
+0013          L        AADB;        //   if((AHHA - AADB) > APV)
+0013          -R;                   //     .
+0013          L        APV;         //     .
+0013          <=R;                  //     .
+0013          JC       I130;        //     .
+0013          CLR;                  //     HHIGH = FALSE
+0013          =        HHIGH;       //   }
+0013        NETWORK
+0013 I130:    // low-low set
+0013          L        ALLA;        //   if(APV > ALLA)
+0013          <=R;                  //   {
+0013          JC       I140;        //     .
+0013          SET;                  //     LLOW = TRUE
+0013          =        LLOW;        //   }
+0013 I140:    // low-low clr
+0013          L        AADB;        //   if((ALLA + AADB) < APV)
+0013          +R;                   //   {
+0013          L        APV;         //     .
+0013          >=R;                  //     .
+0013          JC       I110;        //     .
+0013          CLR;                  //     LLOW = FALSE
+0013          =        LLOW;        //   }
+0013        NETWORK
+0013 I110:    // high low              }
+0013          A        M_HL;        // if(not monitor_HL)
+0013          JC       I150;        // {
+0013          CLR;                  //
+0013          =        HIGH;        //   HIGH = FALSE
+0013          =        LOW;         //   LOW = FALSE
+0013          JU       I160;        // }
+0013        NETWORK
+0013 I150:    // high set           // else {
+0013          L        AHA;         //   if(APV >= AHA)
+0013          <R;                   //     .
+0013          JC       I170;        //     .
+0013          SET;                  //     HIGH = TRUE
+0013          =        HIGH;        //   }
+0013        NETWORK
+0013 I170:    // high-high clr      //
+0013          L        AADB;        //   if((AHA - AADB) > APV)
+0013          -R;                   //     .
+0013          L        APV;         //     .
+0013          <=R;                  //     .
+0013          JC       I180;        //     .
+0013          CLR;                  //     HIGH = FALSE
+0013          =        HIGH;        //   }
+0013        NETWORK
+0013 I180:    // low set
+0013          L        ALA;         //   if(APV > ALA)
+0013          <=R;                  //   {
+0013          JC       I190;        //     .
+0013          SET;                  //     LOW = TRUE
+0013          =        LOW;         //   }
+0013 I190:    // low clr
+0013          L        AADB;        //   if((ALA + AADB) < APV)
+0013          +R;                   //   {
+0013          L        APV;         //     .
+0013          >=R;                  //     .
+0013          JC       I160;        //     .
+0013          CLR;                  //     LOW = FALSE
+0013          =        LOW;         //   }
+0013        NETWORK
+0013 I160:    // remote-set-point
+0013          AN       M_RSP;       // if(monitor_RSP)
+0013          JC       I200;        // {
+0013          L        RSP;         //   X = toReal(RSP) / 32000
+0013          ITD;                  //   .
+0013          DTR;                  //   .
+0013          L        32000.0;     //   .
+0013          /R;                   //   .
+0013          L        PV_SPAN;     //   ASP = (X * span) + offset
+0013          *R;                   //   .
+0013          L        APVL;        //   .
+0013          +R;                   //   .
+0013          T        ASP;         // }
+0013        NETWORK
+0013 I200:    // clamp setpoint
+0013          AN       CLAMP_SP;    // if(clamp setpoint)
+0013          JC       I210;        // {
+0013          L        ASPH;        //   if((ASP > ASPH) || (ASP < ASPL))
+0013          >R;                   //   {
+0013          JC       I220;        //     ASP = appropriate clamp value
+0013          L        ASP;         //     .
+0013          L        ASPL;        //     .
+0013          >=R;                  //     .
+0013          JC       I210;        //     .
+0013        NETWORK
+0013 I220:    // clamp setpoint            .
+0013          T        ASP;         //   }
+0013        NETWORK
+0013 I210:    // CALL SFPGM
+0013          UC       SFPGM;
+0013        NETWORK
+0013          // calculate error       }
+0013          L        ASP;         // error = sp - pv
+0013          L        APV;         // .
+0013          -R;                   // .
+0013          T        AERR;        // .
+0013        NETWORK
+0013          A        NOT_FIRST;   // if(first OR NOT(monitor yellow/orange))
+0013          A        M_YO;        // {
+0013          JC       I230;        //   .
+0013          CLR;                  //   .
+0013          =        YELLOW;      //   YELLOW = FALSE
+0013          =        ORANGE;      //   ORANGE = FALSE
+0013          JU       I240;        // }
+0013        NETWORK
+0013          // yellow deviation   // else {
+0013 I230:    ABS;                  //   ABS_ERR = ABS(AERR)
+0013          T        ABS_ERR;     //   .
+0013          L        AYDA;        //   if(ABS_ERR > AYDA)
+0013          <=R;                  //   {
+0013          JC       I250;        //     .
+0013          SET;                  //     YELLOW = TRUE
+0013          =        YELLOW;      //   }
+0013 I250:    // yellow clr
+0013          L        AADB;        //   if((AYDA - AADB) > ABS_ERR)
+0013          -R;                   //   {
+0013          L        ABS_ERR;     //     .
+0013          <=R;                  //     .
+0013          JC       I260;        //     .
+0013          CLR;                  //     YELLOW = FALSE
+0013          =        YELLOW;      //   }
+0013        NETWORK
+0013          // orange deviation   //
+0013 I260:    L        AODA;        //   if(ABS_ERR > AODA)
+0013          <=R;                  //   {
+0013          JC       I270;        //     .
+0013          SET;                  //     ORANGE = TRUE
+0013          =        ORANGE;      //   }
+0013 I270:    // yellow clr
+0013          L        AADB;        //   if((AODA - AADB) > ABS_ERR)
+0013          -R;                   //   {
+0013          L        ABS_ERR;     //     .
+0013          <=R;                  //     .
+0013          JC       I240;        //     .
+0013          CLR;                  //     ORANGE = FALSE
+0013          =        ORANGE;      //   }
+0013 I240:    // exit               // }
+0013          SET;                  // BR := TRUE
+0013          SAVE;                 // .
+0013          =        NOT_FIRST;   // NOT_FIRST = TRUE
+0013          =        XFLAG;       // XFLAG = TRUE
+0013      END_FUNCTION_BLOCK
+0013
+702D      _notUsed2
+702E      _FB67 ..................................................
+0013
+0013      FUNCTION_BLOCK FB 67
+0013      TITLE = 505 ANALOG ALARM CALLER
+0013      AUTHOR:SEA
+0013      NAME:AA
+0013      VERSION:1.0
+0013      VAR_INPUT
+0013      CYCLE    : REAL;       // Cyclic time
+0013      END_VAR
+0013      VAR
+0013        INDEX : INT;         // Current AA number
+0013        TIME1 : REAL;        // Current time
+0013        TIME2 : REAL;        // Next time
+702F      _FB67DEC ...............................................
+0013        AA%refNum%     : FB66;
+7030      _FB67CODE ..............................................
+0013      END_VAR
+0013      VAR_TEMP
+0013        FLAG  : BOOL;        // Execution flag
+0013      END_VAR
+0013      BEGIN
+0013        NETWORK
+0013          // update times
+0013          L        TIME1;       // TIME1 += CYCLE
+0013          L        CYCLE;       // .
+0013          +R;                   // .
+0013          T        TIME1;       // .
+0013          L        TIME2;       // TIME2 += CYCLE
+0013          L        CYCLE;       // .
+0013          +R;                   // .
+0013          T        TIME2;       // .
+0013        NETWORK
+0013          // switch to current AA
+0013          L        INDEX;       // switch(index) {
+0013 LP1:     JL       END1;        //   default:
+7031      _FB67CASE ..............................................
+0013          JU       I%refNum%;   //   case AA %refNum%:
+7032      _FB67END1 ..............................................
+0013 END1:    // end of pass           }
+0013          L        TIME2;       // TIME1 = TIME2
+0013          T        TIME1;       // .
+0013          L        0;           // .
+0013          T        TIME2;       // TIME2 = 0
+0013          T        INDEX;       // INDEX = 0
+0013          BEU;                  // return
+7033      _FB67CALL ..............................................
+0013        NETWORK
+0013 I%refNum%:   // AA %refNum%
+0013          CALL AA%refNum%( CYCLE := TIME1,
+0013                    SFPGM := %1w%,
+7034      _FB67PV ..................................
+0013                    PV := %1w%,
+7035      _FB67RSP .................................
+0013                    RSP := %1w%,
+7036      _FB67ENB .................................
+0013                    ENABLE := %1x%,
+7037      _FB67DIS .................................
+0013                    DISABLE := %1x%,
+7038      _FB67HHIGH ...............................
+0013                    HHIGH := %1x%,
+7039      _FB67HIGH ................................
+0013                    HIGH := %1x%,
+703A      _FB67LOW .................................
+0013                    LOW := %1x%,
+703B      _FB67LLOW ................................
+0013                    LLOW := %1x%,
+703C      _FB67YEL .................................
+0013                    YELLOW := %1x%,
+703D      _FB67ORNG ................................
+0013                    ORANGE := %1x%,
+703E      _FB67ROC .................................
+0013                    ROC := %1x%,
+703F      _FB67BT ..................................
+0013                    BT := %1x%,
+7040      _FB67OVER ................................
+0013                    OVER := %1x%,
+7041      _FB67IS ..................................
+0013                    IS_ENABLED := %1x%,
+7042      _FB67END2 ................................
+0013                    XFLAG := FLAG);
+0013          JU       NXT1;
+7043      FB67END3 ...............................................
+0013        NETWORK
+0013 NXT1:    L        INDEX;       // index = index + 1
+0013          L        1;           // .
+0013          +I;                   // .
+0013          T        INDEX;       // .
+0013          A        FLAG;        // if(flag) { return }
+0013          BEC;                  // .
+0013          JU       LP1;         // else     { continue }
+0013      END_FUNCTION_BLOCK
+0013
+7044      _DB67 ..................................................
+0002      DATA_BLOCK DB 67
+0002      TITLE = 505 Converter Analog Alarm Data Block
+0002      VERSION : 1.0
+0002        FB67;
+0002      BEGIN
+0002        INDEX := 0;
+0002        TIME1 := -100.0;
+0002        TIME2 := -100.0;
+7045      _DB67DEC ...............................................
+0001      cmt
+0000%2000001%      // AA SFPGM must be converted manually
+0000%2000001%   %incWarn outPath outName% line %outLine%: *** AA %refNum% SFPGM must be converted manually ***
+0002        AA%refNum%.NOT_FIRST := FALSE;
+0002        AA%refNum%.DO_PV     := %1x%;
+0002        AA%refNum%.CLAMP_SP  := %2x%;
+0002        AA%refNum%.SQRROOT   := %3x%;
+0002        AA%refNum%.M_HL      := %4x%;
+0002        AA%refNum%.M_HHLL    := %5x%;
+0002        AA%refNum%.M_YO      := %6x%;
+0002        AA%refNum%.M_ROC     := %7x%;
+0002        AA%refNum%.M_BROKEN  := %8x%;
+0002        AA%refNum%.M_RSP     := %9x%;
+0002        AA%refNum%.IN_SPAN   := %10f%;
+0002        AA%refNum%.IN_OFF    := %11f%;
+0002        AA%refNum%.PV_SPAN   := %12f%;
+0002        AA%refNum%.AADB      := %13f%;
+0002        AA%refNum%.AHA       := %14f%;
+0002        AA%refNum%.AHHA      := %15f%;
+0002        AA%refNum%.ALA       := %16f%;
+0002        AA%refNum%.ALLA      := %17f%;
+0002        AA%refNum%.AODA      := %18f%;
+0002        AA%refNum%.APVH      := %19f%;
+0002        AA%refNum%.APVL      := %20f%;
+0002        AA%refNum%.ARCA      := %21f%;
+0002        AA%refNum%.ASPH      := %22f%;
+0002        AA%refNum%.ASPL      := %23f%;
+0002        AA%refNum%.ATS       := %24f%;
+0002        AA%refNum%.AYDA      := %25f%;
+7046      _DB67END ..........................................
+0002      END_DATA_BLOCK
+0002
+7047      _DRUMSTRT
+0005
+0005      FUNCTION_BLOCK FB %refNum%
+0005      TITLE = 505 DRUM CALLER
+0005      AUTHOR:SEA
+0005      NAME:DRUM%refNum%
+0005      VERSION:1.0
+0005      VAR_INPUT
+0005        INDEX    : INT;        //       ______   PF
+0005        DRUM_EN : BOOL;        // -] [-| DRUM |
+0005        JOG : BOOL;            // -] [-|  ##  |
+0005        RESET : BOOL;          // -] [-|______|--()
+0005      END_VAR
+0005      VAR
+0005        TMP : BOOL;
+7048      _DRUMDEFS
+0005        DRUM%refNum% : FB85;
+7049      _DRUMSW
+0005      END_VAR
+0005      BEGIN
+0005        NETWORK
+0005          AN       RESET;      // invert reset
+0005          =        RESET;      // -]/[--( )
+0005        NETWORK
+0005          L        INDEX;      // SWITCH(index)
+0005          JL       END1;       // {
+704A      _DRUMCASE
+0005          JU       I%refNum%;
+704B      _DRUMNOCALL
+0005        NETWORK
+0005 I%refNum%:    JU       END1;
+704C      _DRUMEXIT
+0005 END1:    CLR;                 // }
+0005          SAVE;                // BR = FALSE;
+0005          BEU;                 // .
+704D      _DRUMCALL
+0005          CALL  DRUM%refNum%(
+0005            RESET := #RESET,
+0005            JOG := #JOG,
+0005            DRUM_EN := #DRUM_EN,
+704E      _DRUM2
+0005            LST_STEP := B#16#%refHex%,
+704F      _DRUM3
+0005            EVENT%refNum% := %1x%,
+7050      _DRUM4
+0005            OUT%refNum% := %1x%,
+7051      _DRUM5
+0005            OUT_WORD := %1w%,
+7052      _DRUMEND1
+0005            Q := TMP
+0005          );
+0005          A    TMP;            // BR = Q
+0005          SAVE;                // .
+0005          BEU;                 // RETURN
+7053      _DRUMEND2
+0005      END_FUNCTION_BLOCK
+0005
+7054      _DRUMDB
+0006      DATA_BLOCK DB %refNum%
+0006      TITLE = 505 Converter Drum Data Block
+0006      VERSION : 1.0
+0006        FB%refNum%;
+0006      BEGIN
+7055      _DBDRUM1
+0006        DRUM%refNum%.DSP := %1b%;
+0006        DRUM%refNum%.DSC := B#16#1;
+7056      _DBDRUM2
+0006        DRUM%refNum%.DTBP := %1h%;
+7057      _DBDRUM3
+0006        DRUM%refNum%.S_PRESET[%1w%] := %2h%;
+7058      _DBDRUM4
+0006        DRUM%refNum%.OUT_VAL[%1w%, %2w%] := %3x%;
+7059      _DBDRUM5
+0006        DRUM%refNum%.S_MASK[%1w%, %2w%] := TRUE;
+705A      _DBDRUMEND
+0006      END_DATA_BLOCK
+0006
+705B      _DRUM0
+0005        A    %3x%;
+0005        =    DRUM%refNum%.S_MASK[%1w%, %2w%];
+0005        NETWORK
+705C      _DRUM1
+0005 I%refNum%:    // index : %refNum%
+705D      _JMPERR
+0003   %incWarn outPath outName% near line %outLine%: *** JMP/JMPE %refNum% not in same FC
+705E      _SKPERR
+0003   %incWarn outPath outName% near line %outLine%: *** SKP/LBL %refNum% not in same FC
+705F      _DCATNOCALL
+0009        NETWORK
+0009 I%refNum%:    JU       END1;
+7060      _OUTN1
+0002        =    %1x%;
+0002        A    %1x%;
+0002        BLD  102;
+7061      _OUTN2
+0002        A    %1x%;
+0002        NOT;
+7062      _OUTN3
+0002        NOT;
+7063      _FC17
+0002
+0002      FUNCTION FC 17 : VOID
+0002      TITLE =  WROT
+0002      NAME     : WROT
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002      CNT      :  WORD;
+0002      END_VAR
+0002      VAR_IN_OUT
+0002      VAL      :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002      NETWORK
+0002        L        VAL;
+0002        SLD      16;
+0002        L        VAL;
+0002        OD;
+0002        L        CNT;
+0002        SLW      2;
+0002        TAK;
+0002        SRD;
+0002        T        VAL;
+0002        L        0;
+0002        <>I;
+0002        SAVE;
+0002        CLR;
+0002      END_FUNCTION
+0002
+7064      _FC18
+0002      FUNCTION FC 18 : VOID
+0002      TITLE =  MWIR505
+0002      NAME     : MWIR505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        SRC  :  POINTER;
+0002        DES  :  POINTER;
+0002        LEN  :  INT;
+0002        TOWORD  :  INT;
+0002      END_VAR
+0002      VAR_TEMP
+0002        SPTR :  DWORD;
+0002        DPTR :  DWORD;
+0002        SBLK :  WORD;
+0002        DBLK :  WORD;
+0002        CNT  :  WORD;
+0002        I2W  :  BOOL;
+0002     VALBIT  :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L      P#SRC;
+0002          LAR1;
+0002          L      W[AR1, P#0.0];  // source DB
+0002          T      SBLK;
+0002          L      D[AR1, P#2.0];  // source offset
+0002          T      SPTR;
+0002        NETWORK
+0002          L      P#DES;
+0002          LAR1;
+0002          L      W[AR1, P#0.0];  // destination DB
+0002          T      DBLK;
+0002          L      D[AR1, P#2.0];  // destination offset
+0002          T      DPTR;
+0002        NETWORK
+0002          L      #TOWORD;
+0002          L      0;
+0002          <>I;
+0002          =      I2W;            // I2W = (destination_is_a_word == TRUE)
+0002        NETWORK
+0002          A      I2W;            // if(I2W) {
+0002          JCN    I010;
+0002          L      DPTR;           //   ar1 = destination
+0002          LAR1;
+0002          L      8;              //   adjust next pointer to low destination byte
+0002          +D;                    //   .
+0002          T      DPTR;           //   .
+0002          OPN    DB[DBLK];       //   open destination block
+0002          L      0;              //   zero destination
+0002          T      W[AR1, P#0.0];  //
+0002          JU     I020;           // }
+0002        NETWORK
+0002    I010: L      SPTR;           // else {
+0002          L      8;              //   point to low source byte
+0002          +D;                    //   .
+0002          T      SPTR;           // }
+0002        NETWORK
+0002    I020: L      LEN;            // cnt = len
+0002    LP10: T      CNT;            // do {
+0002          L      SPTR;           //   ar1 = source
+0002          LAR1;
+0002          L      1;              //  source++
+0002          +D;
+0002          T      SPTR;
+0002          A      I2W;            // if(!I2W) {
+0002          JC     I030;           // {
+0002          AW     W#16#7;         //   if(even address) {
+0002          L      0;              //     .
+0002          ==I;                   //     .
+0002          JCN    I030;           //     .
+0002          L      SPTR;           //     .
+0002          L      16;             //     point to high source byte
+0002          -D;                    //   }
+0002          T      SPTR;           // }
+0002    I030: OPN    DB[SBLK];       // open source block
+0002          A      [AR1, P#0.0];   // get source
+0002          =      VALBIT;
+0002          L      DPTR;           // ar1 = destination
+0002          LAR1;
+0002          L      1;              // destination++
+0002          +D;
+0002          T      DPTR;
+0002          A      I2W;            // if(I2W) {
+0002          JCN    I040;           // {
+0002          AW     W#16#7;         //   if(even address) {
+0002          L      0;              //     .
+0002          ==I;                   //     .
+0002          JCN    I040;           //     .
+0002          L      DPTR;           //     .
+0002          L      16;             //     point to high destination byte
+0002          -D;                    //   }
+0002          T      DPTR;           // }
+0002    I040: OPN    DB[DBLK];       // open destination block
+0002          A      VALBIT;
+0002          =      [AR1, P#0.0];   // set destination
+0002          L      CNT;
+0002          LOOP   LP10;           // } while(--cnt > 0)
+0002        NETWORK
+0002          SET;                   // BR = 1
+0002          SAVE;
+0002      END_FUNCTION
+0002
+7065      _TCPstrt ...............................................
+0015
+0015      DATA_BLOCK DB 186
+0015      TITLE = 505 TCP block
+0015      VERSION : 0.0
+0015      STRUCT
+0015      tcp   : ARRAY [0..3999] OF INT;
+0015      END_STRUCT ;
+0015      BEGIN
+7066      _TCPentry ..............................................
+0015       tcp[%refNum%] := %1w%;
+7067      _TCPend ................................................
+0015      END_DATA_BLOCK
+0015
+7068      _TCC_BLK ...............................................
+0002
+0002      DATA_BLOCK DB 189
+0002      TITLE = 505 TCC block
+0002      VERSION : 0.0
+0002      STRUCT
+0002      tcc   : ARRAY [0..3999] OF INT;
+0002      END_STRUCT ;
+0002      BEGIN
+0002      END_DATA_BLOCK
+0002
+7069      _DCATEND
+0009      END_FUNCTION_BLOCK
+0009
+706A      _DBDCATEND
+000A      END_DATA_BLOCK
+000A
+706B      _MCATNOCALL
+000B        NETWORK
+000B I%refNum%:    JU       END1;
+706C      _MCATEND
+000B      END_FUNCTION_BLOCK
+000B
+706D      _DBMCATEND
+000C      END_DATA_BLOCK
+000C
+706E      _IMCNOCALL
+000D        NETWORK
+000D I%refNum%:    JU       END1;
+706F      _IMCEND
+000D      END_FUNCTION_BLOCK
+000D
+7070      _DBIMCEND
+000E      END_DATA_BLOCK
+000E
+7071      _SMCNOCALL
+000F        NETWORK
+000F I%refNum%:    JU       END1;
+7072      _SMCEND
+000F      END_FUNCTION_BLOCK
+000F
+7073      _DBSMCEND
+0010      END_DATA_BLOCK
+0010
+7074      _DCATSTRT
+0009
+0009      FUNCTION_BLOCK FB %refNum%
+0009      TITLE = 505 DCAT CALLER
+0009      AUTHOR:SEA
+0009      NAME:DCAT
+0009      VERSION:1.0
+0009      VAR_INPUT
+0009        INDEX    : INT;
+0009        CMD      : BOOL;
+0009      END_VAR
+0009      VAR_OUTPUT
+0009        OA       : BOOL;
+0009        CA       : BOOL;
+0009      END_VAR
+0009      VAR_IN_OUT
+0009        O_FB     : BOOL;
+0009        C_FB     : BOOL;
+0009      END_VAR
+0009      VAR
+0009        TMP : BOOL;
+7075      _DCATDEFS
+0009        DCAT%refNum% : FB81;
+7076      _DCATSW
+0009      END_VAR
+0009      BEGIN
+0009        NETWORK
+0009          L        INDEX;      // SWITCH(index)
+0009          JL       END1;       // {
+7077      _DCATCASE
+0009          JU       I%refNum%;
+7078      _DCATEXIT
+0009 END1:    CLR;                 // }
+0009          SAVE;                // BR = FALSE;
+0009          BEU;                 // .
+7079      _DCATCALL
+0009 I%refNum%:      CALL  DCAT%refNum%(
+0009            CMD := #CMD,
+0009            O_FB := #O_FB,
+0009            C_FB := #C_FB,
+0009            OA := #OA,
+0009            CA := #CA,
+0009            Q := TMP
+0009          );
+0009          A    TMP;            // BR = Q
+0009          SAVE;                // .
+0009          BEU;                 // RETURN
+707A      _DCATDB
+000A      DATA_BLOCK DB %refNum%
+000A      TITLE = 505 Converter Dcat Data Block
+000A      VERSION : 1.0
+000A        FB%refNum%;
+000A      BEGIN
+707B      _MCATSTRT
+000B
+000B      FUNCTION_BLOCK FB %refNum%
+000B      TITLE = 505 MCAT CALLER
+000B      AUTHOR:SEA
+000B      NAME:MCAT%refNum%
+000B      VERSION:1.0
+000B      VAR_INPUT
+000B        O_CMD    : BOOL;
+000B        C_CMD    : BOOL;
+000B        S_CMD    : BOOL;
+000B        INDEX    : INT;
+000B      END_VAR
+000B      VAR_IN_OUT
+000B        O_FB     : BOOL;
+000B        C_FB     : BOOL;
+000B        OO       : BOOL;
+000B        CO       : BOOL;
+000B        OA       : BOOL;
+000B        CA       : BOOL;
+000B      END_VAR
+000B      VAR
+000B        TMP : BOOL;
+707C      _MCATDEFS
+000B        MCAT%refNum% : FB82;
+707D      _MCATSW
+000B      END_VAR
+000B      BEGIN
+000B        NETWORK
+000B          L        INDEX;      // SWITCH(index)
+000B          JL       END1;       // {
+707E      _MCATCASE
+000B          JU       I%refNum%;
+707F      _MCATEXIT
+000B END1:    CLR;                 // }
+000B          SAVE;                // BR = FALSE;
+000B          BEU;                 // .
+7080      _MCATCALL
+000B I%refNum%:      CALL  MCAT%refNum%(
+000B            O_CMD := #O_CMD,
+000B            C_CMD := #C_CMD,
+000B            S_CMD := #S_CMD,
+000B            O_FB := %5x%,
+000B            C_FB := %6x%,
+000B            OA := %7x%,
+000B            CA := %8x%,
+000B            OO := %9x%,
+000B            CO := %10x%,
+000B            Q := TMP
+000B          );
+000B          A    TMP;            // BR = Q
+000B          SAVE;                // .
+000B          BEU;                 // RETURN
+7081      _MCATDB
+000C      DATA_BLOCK DB %refNum%
+000C      TITLE = 505 Converter Mcat Data Block
+000C      VERSION : 1.0
+000C        FB%refNum%;
+000C      BEGIN
+7082      _IMCSTRT
+000D
+000D      FUNCTION_BLOCK FB %refNum%
+000D      TITLE = 505 IMC CALLER
+000D      AUTHOR:SEA
+000D      NAME:IMC%refNum%
+000D      VERSION:1.0
+000D      VAR_INPUT
+000D        START    : BOOL;
+000D        ENABLE   : BOOL;
+000D        INDEX    : INT;
+000D      END_VAR
+000D      VAR
+000D        TOUT : BOOL;
+000D        TERR : WORD;
+000D      CMPSTP : BYTE;
+7083      _IMCDEFS
+000D        IMC%refNum% : FB83;
+7084      _IMCSW
+000D      END_VAR
+000D      BEGIN
+000D        NETWORK
+000D          L        INDEX;      // SWITCH(index)
+000D          JL       END1;       // {
+7085      _IMCCASE
+000D          JU       I%refNum%;
+7086      _IMCEXIT
+000D END1:    CLR;                 // }
+000D          SAVE;                // BR = FALSE;
+000D          BEU;                 // .
+7087      _IMCCALL
+000D I%refNum%:      A       ENABLE;
+000D        SAVE;
+000D        NOT;
+000D        BEC;
+000D        A        START;
+000D        JC       %setLab8 lab8%;
+000D        L        1;
+000D        T        %3b%;
+000D%lab8%: L        %3b%;      // decrement CMP_STEP
+000D        L        1;         // .
+000D        -I;                 // .
+000D        T        CMPSTP;    // .
+000D        CALL  IMC%refNum%(
+000D            CMP_STEP := CMPSTP,
+000D            IN_BIT0  := %4x%,
+000D            IN_BIT1  := %5x%,
+000D            IN_BIT2  := %6x%,
+000D            IN_BIT3  := %7x%,
+000D            IN_BIT4  := %8x%,
+000D            IN_BIT5  := %9x%,
+000D            IN_BIT6  := %10x%,
+000D            IN_BIT7  := %11x%,
+000D            IN_BIT8  := %12x%,
+000D            IN_BIT9  := %13x%,
+000D            IN_BIT10 := %14x%,
+000D            IN_BIT11 := %15x%,
+000D            IN_BIT12 := %16x%,
+000D            IN_BIT13 := %17x%,
+000D            IN_BIT14 := %18x%,
+000D            IN_BIT15 := FALSE,
+000D            OUT := TOUT,
+000D            ERR_CODE := TERR
+000D          );
+000D          A    TOUT;           // BR = OUT
+000D          SAVE;                // .
+000D          BEU;                 // RETURN
+7088      _IMCDB
+000E      DATA_BLOCK DB %refNum%
+000E      TITLE = 505 Converter IMC Data Block
+000E      VERSION : 1.0
+000E        FB%refNum%;
+000E      BEGIN
+7089      _SMCSTRT
+000F
+000F      FUNCTION_BLOCK FB %refNum%
+000F      TITLE = 505 SMC CALLER
+000F      AUTHOR:SEA
+000F      NAME:SMC%refNum%
+000F      VERSION:1.0
+000F      VAR_INPUT
+000F        INDEX    : INT;
+000F      END_VAR
+000F      VAR_OUTPUT
+000F        OUT_STEP : BYTE;
+000F      END_VAR
+000F      VAR
+000F        TOUT : BOOL;
+000F        TERR : WORD;
+708A      _SMCDEFS
+000F        SMC%refNum% : FB84;
+708B      _SMCSW
+000F      END_VAR
+000F      BEGIN
+000F        NETWORK
+000F          L        INDEX;      // SWITCH(index)
+000F          JL       END1;       // {
+708C      _SMCCASE
+000F          JU       I%refNum%;
+708D      _SMCEXIT
+000F END1:    CLR;                 // }
+000F          SAVE;                // BR = FALSE;
+000F          BEU;                 // .
+708E      _SMCCALL
+000F I%refNum%:   CALL  SMC%refNum%(
+000F            IN_BIT0  := %3x%,
+000F            IN_BIT1  := %4x%,
+000F            IN_BIT2  := %5x%,
+000F            IN_BIT3  := %6x%,
+000F            IN_BIT4  := %7x%,
+000F            IN_BIT5  := %8x%,
+000F            IN_BIT6  := %9x%,
+000F            IN_BIT7  := %10x%,
+000F            IN_BIT8  := %11x%,
+000F            IN_BIT9  := %12x%,
+000F            IN_BIT10 := %13x%,
+000F            IN_BIT11 := %14x%,
+000F            IN_BIT12 := %15x%,
+000F            IN_BIT13 := %16x%,
+000F            IN_BIT14 := %17x%,
+000F            IN_BIT15 := FALSE,
+000F            OUT := TOUT,
+000F            OUT_STEP := OUT_STEP,
+000F            ERR_CODE := TERR
+000F          );
+000F          L    OUT_STEP;       // increment OUT_STEP
+000F          L    1;              // .
+000F          +I;                  // .
+000F          T    OUT_STEP;       // .
+000F          A    TOUT;           // BR = OUT
+000F          SAVE;                // .
+000F          BEU;                 // RETURN
+708F      _SMCDB
+0010      DATA_BLOCK DB %refNum%
+0010      TITLE = 505 Converter SMC Data Block
+0010      VERSION : 1.0
+0010        FB%refNum%;
+0010      BEGIN
+7090      _DCATPRESET
+000A        DCAT%refNum%.PT := %1l%;
+7091      _MCATPRESET
+000C        MCAT%refNum%.PT := %4l%;
+7092      _IMCMASK
+000E        IMC%refNum%.CMP_VAL[%1w%, %2w%] := %3x%;
+7093      _SMCLAST
+0010        SMC%refNum%.LAST := %2b%;
+7094      _SMCMASK
+0010        SMC%refNum%.CMP_VAL[%1w%, %2w%] := %3x%;
+7095      DB 187..................................................
+0002
+0002      DATA_BLOCK DB 187
+0002      TITLE = OVERFLOW CR
+0002      VERSION : 0.0
+0002      STRUCT
+0002      crBits : ARRAY [0..3999] of WORD;
+0002      END_STRUCT ;
+0002      BEGIN
+0002      END_DATA_BLOCK
+0002
+7096      _MOVW
+0002        CALL FC 22 (
+0002          SRC := P#%1x%,
+0002          DES := P#%2x%,
+0002          LEN := %3h%
+0002        );
+7097      _FILL
+0002        CALL FC 23 (
+0002          SRC := %1w%,
+0002          DES := P#%2x%,
+0002          LEN := %3h%
+0002        );
+7098      _MWI
+0002        CALL FC 24 (
+0002          S_DB   := %1h%,
+0002          S_OFF  := %2w%,
+0002          D_DB   := %3h%,
+0002          D_OFF  := %4w%,
+0002          LEN    := %5w%
+0002        );
+7099      _FC22
+0002      FUNCTION FC 22 : VOID
+0002      TITLE =  MOVW
+0002      NAME     : MOVW
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        SRC  :  POINTER;
+0002        DES  :  POINTER;
+0002        LEN  :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L      P#SRC;
+0002          LAR1;
+0002          L      W[AR1, P#0.0];  // source DB
+0002          T      MW128;
+0002          L      D[AR1, P#2.0];  // source offset
+0002          T      MD130;
+0002        NETWORK
+0002          L      P#DES;
+0002          LAR1;
+0002          L      W[AR1, P#0.0];  // destination DB
+0002          T      MW134;
+0002          L      D[AR1, P#2.0];  // destination offset
+0002          T      MD136;
+0002        NETWORK
+0002          L      #LEN;           // number of words
+0002          T      MW140;
+0002        NETWORK
+0002          CALL FC 81 (
+0002            S_DATA := P#M128.0,
+0002            LEN    := P#M140.0,
+0002            D_DATA := P#M134.0,
+0002            E_TYPE := B#16#4
+0002          );
+0002      END_FUNCTION
+0002
+709A      _FC23
+0002      FUNCTION FC 23 : VOID
+0002      TITLE =  FILL
+0002      NAME     : FILL
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        SRC  :  WORD;
+0002        DES  :  POINTER;
+0002        LEN  :  WORD;
+0002      END_VAR
+0002      VAR_TEMP
+0002        BLK  :  WORD;
+0002        CNT  :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L      P#DES;
+0002          LAR1;
+0002          L      0;
+0002          L      W[AR1, P#0.0];  // destination DB
+0002          ==I;
+0002          JC     IF10;           // if(DB <> 0)
+0002          T      BLK;
+0002          OPN    DB[BLK];        // ...open destination block
+0002    IF10: L      D[AR1, P#2.0];  // destination offset
+0002        NETWORK
+0002          L      LEN;            // cnt = len
+0002    LP10: T      CNT;            // do {
+0002          L      SRC;            // ...*des++ = constant
+0002          T      W[AR1, P#0.0];
+0002          +AR1   P#2.0;
+0002          L      CNT;
+0002          LOOP   LP10;           // } while(--cnt > 0)
+0002        NETWORK
+0002          SET;                   // BR = 1
+0002          SAVE;
+0002      END_FUNCTION
+0002
+709B      _FC24
+0002      FUNCTION FC 24 : VOID
+0002      TITLE =  MWI
+0002      NAME     : MWI
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        S_DB  :  WORD;
+0002        S_OFF :  WORD;
+0002        D_DB  :  WORD;
+0002        D_OFF :  WORD;
+0002        LEN   :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L      S_DB;    // source DB
+0002          T      MW128;
+0002          L      S_OFF;   // source offset
+0002          SLD    1;       // adjust for word (may be incorrect)
+0002          T      MD130;
+0002        NETWORK
+0002          L      D_DB;    // destination DB
+0002          T      MW134;
+0002          L      D_OFF;   // destination offset
+0002          SLD    1;       // adjust for word (may be incorrect)
+0002          T      MD136;
+0002        NETWORK
+0002          L      0;        // length DB
+0002          T      MW140;
+0002          L      P#146.0; // length offset
+0002          T      MD142;
+0002        NETWORK
+0002          L      LEN;     // number of words
+0002          T      MW146;
+0002        NETWORK
+0002          CALL FC 81 (
+0002            S_DATA := P#M128.0,
+0002            LEN    := P#M140.0,
+0002            D_DATA := P#M134.0,
+0002            E_TYPE := B#16#4
+0002          );
+0002      END_FUNCTION
+0002
+709C      _TEXTNET
+0002        NETWORK
+0002        TITLE = TEXT BOX (REF %refNum%)
+709D      _FC25
+0002      FUNCTION FC 25 : VOID
+0002      TITLE =  CMP505
+0002      NAME     : CMP505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        A_VAL :  WORD;
+0002        B_VAL :  WORD;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002       LT_VAL :  BOOL;
+0002       GT_VAL :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L        A_VAL;
+0002          L        B_VAL;
+0002          <I;
+0002          =        LT_VAL;
+0002          >I;
+0002          =        GT_VAL;
+0002          ==I;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+709E      _FC26
+0002      FUNCTION FC 26 : VOID
+0002      TITLE =  BITS505
+0002      NAME     : BITS505
+0002      VERSION  : 1.0
+0002      VAR_IN_OUT
+0002        A_BIT :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          SET;
+0002          S    A_BIT;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+709F      _FC27
+0002      FUNCTION FC 27 : VOID
+0002      TITLE =  BITC505
+0002      NAME     : BITC505
+0002      VERSION  : 1.0
+0002      VAR_IN_OUT
+0002        A_BIT :  BOOL;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          SET;
+0002          R    A_BIT;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+70A0      _IDXTYP2
+0003   %incWarn outPath outName% near line %outLine%: *** Array accesses must be converted manually
+0004   // Array accesses must be converted manually (%exp%)
+70A1      _boxA
+0002        A(;
+70A2      _boxAE
+0002        );
+70A3      _FC28
+0002      FUNCTION FC 28 : VOID
+0002      TITLE =  CDB505
+0002      NAME     : CDB505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        DEC_VAL :  WORD;
+0002        DIGITS  :  INT;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002        BIN_VAL :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L        DIGITS;
+0002          JL       ZZZ4;
+0002          JU       ZZZ4;
+0002          JU       ZZZ1;
+0002          JU       ZZZ2;
+0002          JU       ZZZ3;
+0002 ZZZ4:    L        DEC_VAL;
+0002 ZZZ5:    BTD;
+0002          T        BIN_VAL;
+0002        NETWORK
+0002          SET;
+0002          SAVE;
+0002          BEU;
+0002        NETWORK
+0002 ZZZ1:    L        DEC_VAL;
+0002          AW       W#16#000F;
+0002          JU       ZZZ5;
+0002        NETWORK
+0002 ZZZ2:    L        DEC_VAL;
+0002          AW       W#16#00FF;
+0002          JU       ZZZ5;
+0002        NETWORK
+0002 ZZZ3:    L        DEC_VAL;
+0002          AW       W#16#0FFF;
+0002          JU       ZZZ5;
+0002      END_FUNCTION
+0002
+70A4      _FC29
+0002      FUNCTION FC 29 : VOID
+0002      TITLE =  CBD505
+0002      NAME     : CBD505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        BIN_VAL :  WORD;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002        DEC_VAL :  DWORD;
+0002      END_VAR
+0002      BEGIN
+0002        NETWORK
+0002          L        BIN_VAL;
+0002          DTB;
+0002          T        DEC_VAL;
+0002        NETWORK
+0002          SET;
+0002          SAVE;
+0002          BEU;
+0002      END_FUNCTION
+0002
+70A5      _FC30
+0002      FUNCTION FC 30 : VOID
+0002      TITLE =  DIV505
+0002      NAME     : DIV505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002        AA_VAL :  DWORD;
+0002         B_VAL :  WORD;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002        CC_VAL :  DWORD;
+0002      END_VAR
+0002      BEGIN
+0002          L        AA_VAL;
+0002          L        B_VAL;
+0002          ITD;
+0002          /D;
+0002          SLD      16;
+0002          T        CC_VAL;
+0002        NETWORK
+0002          L        AA_VAL;
+0002          L        B_VAL;
+0002          ITD;
+0002          MOD;
+0002          L        CC_VAL;
+0002          OD;
+0002          T        CC_VAL;
+0002        NETWORK
+0002          SET;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+70A6      _FC31
+0002      FUNCTION FC 31 : VOID
+0002      TITLE =  MUL505
+0002      NAME     : MUL505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002         A_VAL :  WORD;
+0002         B_VAL :  WORD;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002        CC_VAL :  DWORD;
+0002      END_VAR
+0002      BEGIN
+0002          L        A_VAL;
+0002          ITD;
+0002          L        B_VAL;
+0002          ITD;
+0002          *D;
+0002          T        CC_VAL;
+0002        NETWORK
+0002          SET;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+70A7      _FC32
+0002      FUNCTION FC 32 : VOID
+0002      TITLE =  SQRT505
+0002      NAME     : SQRT505
+0002      VERSION  : 1.0
+0002      VAR_INPUT
+0002         AA_VAL :  DWORD;
+0002      END_VAR
+0002      VAR_OUTPUT
+0002         B_VAL :  WORD;
+0002      END_VAR
+0002      BEGIN
+0002          L        AA_VAL;
+0002          DTR;
+0002          SQRT;
+0002          RND;
+0002          T        B_VAL;
+0002        NETWORK
+0002          SET;
+0002          SAVE;
+0002      END_FUNCTION
+0002
+70A8      _FC33
+0002      FUNCTION FC 33 : VOID
+0002      TITLE =  ABSV505
+0002      NAME     : ABSV505
+0002      VERSION  : 1.0
+0002      VAR_IN_OUT
+0002         A_VAL :  WORD;
+0002      END_VAR
+0002      BEGIN
+0001        setLab1
+0002        L        A_VAL;
+0002        NEGI;
+0002        JM       %lab1%;
+0002        JO       %lab1%;
+0002        T        A_VAL;
+0002%lab1%:   AN       OV;
+0002        SAVE;
+0002      END_FUNCTION
+0002
+70A9      _EndText
+0002          NOP 0; // Text Box
+70AA      _LeadLagDB
+0007
+0007      DATA_BLOCK DB 66
+0007      TITLE = 505 Converter LeadLag Data Block
+0007      VERSION : 1.0
+0007        FB80;
+0007      BEGIN
+0007      END_DATA_BLOCK
+0007
+70AB      _FC34
+0013      FUNCTION FC 34 : VOID
+0013      TITLE =  NOCALL
+0013      NAME     : NOCALL
+0013      VERSION  : 1.0
+0013      BEGIN
+0013      NETWORK
+0013      SET;
+0013      SAVE;
+0013      END_FUNCTION
+0013
+0000
+0000  505 opCodes (alphabetical order)
+0000  --------------------------------
+832A        ABSV     Absolute Value......................................
+0001        setLab1
+0002        JNB      %lab1%; // ABSV %instr#%
+0002        CALL FC33 (A_VAL := %1w%);
+0002%lab1%:    A        BR;
+8050        ADD      Add Word............................................
+0002        JNB      %setLab1 lab1%; // ADD %instr#%
+0002        L    %1w%;
+0002        L    %2w%;
+0002        +I;
+0002        T        %3w%;
+0002        AN       OV;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8008        AND C    AND IR to Power Flow................................
+0002        A    %1x%;
+8068        AND C+   AND IR to Power Flow................................
+0002        A    %1x%;
+8009        AND X    AND IR to Power Flow................................
+0002        A    %1x%;
+8069        AND X+   AND IR to Power Flow................................
+0002        A    %1x%;
+8038        AND X++  AND IR to Power Flow................................
+0002        A    %1x%;
+8058        AND X+++ AND IR to Power Flow................................
+0002        A    %1x%;
+8039        AND Y    AND IR to Power Flow................................
+0002        A    %1x%;
+8049        AND Y+   AND IR to Power Flow................................
+0002        A    %1x%;
+8029        AND Y++  AND IR to Power Flow................................
+0002        A    %1x%;
+8048        AND Y+++ AND IR to Power Flow................................
+0002        A    %1x%;
+831B        ANDB     AND Bit to Power Flow...............................
+0003%2000002%   %incWarn outPath outName% line %outLine% Ref %refNum% *** immediate operands are mapped to S7 operands in converter I/O configuration ***
+0002%2000002%        // immediate operands are mapped to S7 operands in converter I/O configuration
+0002%1000001%        A    %1x%;
+0002%1001000%        AN   %1x%;
+832E        ANDIC    AND Integer Compare Result to Power Flow............
+0002        A(;
+0002        L    %1w%;
+0002        L    %2w%;
+0002%1000FFF%        <I;
+0002%1001FFE%        ==I;
+0002%1002FFD%        >I;
+0002%1004FFB%        >=I;
+0002%1005FFA%        <>I;
+0002%1006FF9%        <=I;
+0002        );
+800A        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+806A        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+800B        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+806B        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+803A        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+805A        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+803B        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+804B        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+802B        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+804A        ANDN     AND Complemented IR to Power Flow...................
+0002        AN   %1x%;
+8010        ANDS     And Store...........................................
+8072        BITC     Bit Clear...........................................
+0002        JNB      %setLab1 lab1%; // BITC %instr#%
+0001        aBit
+0002        CALL FC27 (A_BIT := %1x%);
+0002%lab1%:   A    BR;
+8070        BITP     Bit Pick............................................
+0001        aBit
+0002        A        %1x%; // BITP %instr#%
+8071        BITS     Bit Set.............................................
+0002        JNB      %setLab1 lab1%; // BITS %instr#%
+0001        aBit
+0002        CALL FC26 (A_BIT := %1x%);
+0002%lab1%:   A    BR;
+807D        CBD      Convert Binary to Decimal (BCD).....................
+0002        JNB      %setLab1 lab1%; // CBD %instr#%
+0002        CALL FC29 (BIN_VAL := %1w%, DEC_VAL := %2l%);
+0002%lab1%:   A    BR;
+807C        CDB      Convert Decimal (BCD) to Binary.....................
+0002        JNB      %setLab1 lab1%; // CDB %instr#%
+0002        CALL FC28 (DEC_VAL := %1w%, DIGITS := %3w%, BIN_VAL := %2w%);
+0002%lab1%:   A    BR;
+8056        CMP      Compare Word........................................
+0002        JNB      %setLab1 lab1%; // CMP %instr#%
+0002%100000C%        CALL FC25 (A_VAL := %1w%, B_VAL := %2w%, LT_VAL := M128.0, GT_VAL := M128.0);
+0002%1004008%        CALL FC25 (A_VAL := %1w%, B_VAL := %2w%, LT_VAL := %3x%, GT_VAL := M128.0);
+0002%1008004%        CALL FC25 (A_VAL := %1w%, B_VAL := %2w%, LT_VAL := M128.0, GT_VAL := %4x%);
+0002%100C000%        CALL FC25 (A_VAL := %1w%, B_VAL := %2w%, LT_VAL := %3x%, GT_VAL := %4x%);
+0002%lab1%:   A    BR;
+8028        CTR      Up Counter..........................................
+0002        CALL FC 4 (PF := %1x%, RESET := %2x%, PRESET := %tcp3%,
+0002                   TCBIT := %gWrk1x wrk1x%, CURRENT := %tcc%); // CTR %instr#%
+0002        A    BR;
+802A        CTRP     Up Counter (protected)..............................
+0002        CALL FC 4 (PF := %1x%, RESET := %2x%, PRESET := %tcp3%,
+0002                   TCBIT := %gWrk1x wrk1x%, CURRENT := %tcc%); // CTR %instr#% (protected)
+0002        A    BR;
+8017        DCAT     Discrete Control and Alarm Timer....................
+0002        =    %gTmp1x tmp1x%;
+0002        BLD  103; // DCAT %instr#%
+0001        dcat
+0002        CALL FB %instr#%, DB %instr#% (
+0002          INDEX := %refNum%,
+0002          CMD := %tmp1x%,
+0002          O_FB := %2x%,
+0002          C_FB := %3x%,
+0002          OA := %4x%,
+0002          CA := %5x%
+0002        );
+0002        A    BR;
+8032        DCATP    Discrete Control and Alarm Timer (protected)........
+0002        =    %gTmp1x tmp1x%;
+0002        BLD  103; // DCAT %instr#%
+0001        dcat
+0002        CALL FB %instr#%, DB %instr#% (
+0002          INDEX := %refNum%,
+0002          CMD := %tmp1x%,
+0002          O_FB := %2x%,
+0002          C_FB := %3x%,
+0002          OA := %4x%,
+0002          CA := %5x%
+0002        );
+0002        A    BR;
+8311        DCMP     Date Compare........................................
+0002        // Ref %refNum% *** Date Compare must be converted manually (use SFC 0 and SFC 1) ***
+0002        JNB      %setLab1 lab1%; // DCMP %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Date Compare must be converted manually (use SFC0 and SFC 1) ***
+8053        DIV      Divide..............................................
+0002        JNB      %setLab1 lab1%; // DIV %instr#%
+0002        CALL FC30 (AA_VAL := %1l%, B_VAL := %2w%, CC_VAL := %3l%);
+0002%lab1%:   A    BR;
+8030        DRUM     Drum Timer..........................................
+0002        // DRUM %instr#%
+0001        drum
+0002        CALL FB %instr#%, DB %instr#% ( INDEX := %refNum%, DRUM_EN := %2x%, RESET := %1x%);
+0002        A    BR;
+8314        DSET     Date Set............................................
+0002        // Ref %refNum% *** Date Set must be converted manually (use SFC 0 and SFC 1) ***
+0002        JNB      %setLab1 lab1%; // DSET %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Date Set must be converted manually (use SFC 0 and SFC 1) ***
+8031        EDRUM    Event Drum Timer....................................
+0002        // EDRUM %instr#%
+0001        drum
+0002        CALL FB %instr#%, DB %instr#% ( INDEX := %refNum%, DRUM_EN := %1x%, JOG := %2x%, RESET := %3x%);
+0002        A    BR;
+807F        END      Unconditional End Of Scan...........................
+0002        NETWORK
+0002        TITLE = REF %refNum%
+0002        // Ref %refNum% *** END-OF-SCAN ***
+0002          CLR;
+0002          SAVE;
+0002          BEU;
+807E        ENDC     Conditional End Of Scan.............................
+0002        // Ref %refNum% *** CONDITIONAL END-OF-SCAN ***
+0002          NOT;
+0002          SAVE;
+0002          NOT;
+0002          BEC;
+8016        ENDJ     End Of Jump.........................................
+0002        NETWORK
+0002        TITLE = REF %refNum%
+0002%endj%:   NOP 0; // JMPE%instr#%
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** JMPE treated as LBL
+8318        ENDJC    Conditional End Of Jump.............................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** conditional JMPE must be converted manually ***
+0002        =    M128.0;  // JMPE %instr#%  (conditional JMPE must be converted manually)
+801E        ENDM     End Of Master Control Relay.........................
+0002        NETWORK
+0002        TITLE = REF %refNum%
+0002          )MCR;  // %instr#%
+8319        ENDMC    Conditional End Of MCR..............................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** conditional MCRE must be converted manually ***
+0002        =    M128.0;  // conditional MCRE %instr#% must be converted manually
+8323        FRS      Forced Role Swap....................................
+0002        // Ref %refNum% *** Forced Role Swap not supported ***
+0002        JNB      %setLab1 lab1%; // FRS %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Forced Role Swap not supported ***
+8301        GTS      Go To Subroutine....................................
+0002        CC       FC %instr#%;
+805F        IMC      Indexed Matrix Compare..............................
+0002        // IMC %instr#%
+0001        imc
+0002          CALL FB %instr#%, DB %instr#% (START:= %1x%, ENABLE := %2x%, INDEX := %refNum%);
+0002        A    BR;
+831E        INV      Invert Power Flow...................................
+0002        NOT;
+832B        IORW     Immediate I/O Read or Write.........................
+0002        JNB      %setLab1 lab1%; // IORW %instr#%
+0002        L    %evenByte 1b%;
+0002        T    %evenByte 2b%;
+0002        SET;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8332        IST      Initiate Self Timing................................
+0002        // Ref %refNum% *** Initiate Self Timing not supported ***
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Initiate Self Timing not supported ***
+8012        JMP      Set Jump Flag.......................................
+0002        JCN      %jmp%; // JMP%instr#%
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** JMP treated as SKP
+801F        LBL      Label...............................................
+0002        NETWORK
+0002        TITLE = REF %refNum%
+0002%lbl %:   NOP 0; // LBL%instr#%
+8327        LDA      Load Address........................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** LDA must be converted manually ***
+0002        // *** LDA must be converted manually ***
+0002%2000001%        //  direct SOURCE:%1w%
+0002%2000002%        //  indirect SOURCE:%1w%
+0002%2000004%        //  constant SOURCE:%1w%
+0002%2000008%        //  SOURCE index:%2w%
+0002%2000010%        //  direct DESTINATION:%3w%
+0002%2000020%        //  indirect DESTINATION:%3w%
+0002%2000040%        //  DESTINATION index:%4w%
+0002        JNB      %setLab1 lab1%; // LDA %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+8073        LDC      Load Data Constant..................................
+0002        JNB      %setLab1 lab1%; // LDC %instr#%
+0002        L    %2w%;
+0002        T    %1w%;
+0002        SET;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8324        LOCKx    Acquire a LOCK (exclusive)..........................
+0002        // Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+0002        JNB      %setLab1 lab1%; // LOCK %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+8325        LOCKs    Acquire a LOCK (shared).............................
+0002        // Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+0002        JNB      %setLab1 lab1%; // LOCK %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+8320        MCAT     Motor Control Alarm Timer...........................
+0002        // MCAT %instr#%
+0001        mcat
+0002        CALL FB %instr#%, DB %instr#% (
+0002          INDEX := %refNum%,
+0002          O_CMD := %1x%,
+0002          C_CMD := %2x%,
+0002          S_CMD := %3x%,
+0002          O_FB := %5x%,
+0002          C_FB := %6x%,
+0002          OA   := %7x%,
+0002          CA   := %8x%,
+0002          OO   := %9x%,
+0002          CO   := %10x%
+0002        );
+0002        A    BR;
+8321        MCATP    Motor Control Alarm Timer (protected)...............
+0002        // MCAT %instr#%
+0001        mcat
+0002        CALL FB %instr#%, DB %instr#% (
+0002          INDEX := %refNum%,
+0002          O_CMD := %3x%,
+0002          C_CMD := %2x%,
+0002          S_CMD := %1x%,
+0002          O_FB := %5x%,
+0002          C_FB := %6x%,
+0002          OA   := %7x%,
+0002          CA   := %8x%,
+0002          OO   := %9x%,
+0002          CO   := %10x%
+0002        );
+0002        A    BR;
+801C        MCR      Set Master Control Relay Flag.......................
+0002        MCR(;    // %instr#%
+8305        MDRUMD   Maskable Event DRUM With Discrete Outputs...........
+0002        // MDRUMD %instr#%
+0001        drum
+0002        CALL FB %instr#%, DB %instr#% ( INDEX := %refNum%, DRUM_EN := %3x%, JOG := %2x%, RESET := %1x%);
+0002        A    BR;
+8317        MDRUMW   Maskable Event DRUM With Word Output................
+0002        // MDRUMW %instr#%
+0001        drum
+0002        CALL FB %instr#%, DB %instr#% ( INDEX := %refNum%, DRUM_EN := %3x%, JOG := %2x%, RESET := %1x%);
+0002        A    BR;
+8013        MIRFT    Move To Discrete IR From Table......................
+0002        JNB      %setLab1 lab1%; // MIRFT %instr#%
+0001        movw
+0002%lab1%:   A    BR;
+8033        MIRTT    Move From Discrete IR To Table......................
+0002        JNB      %setLab1 lab1%; // MIRTT %instr#%
+0001        movw
+0002%lab1%:   A    BR;
+8057        MIRW     Move Discrete IR To Word............................
+0002        JNB      %setLab1 lab1%; // MIRW %instr#%
+0002        CALL FC 18(SRC := P#%3x%, DES := P#%1x%, LEN := %2w%, TOWORD := 1);
+0002%lab1%:   A    BR;
+8001        MOVE     Move Elements.......................................
+0002        // MOVE must be converted manually (use FC81 Indirect Block Move)
+0002%2000001%        //  direct SOURCE:%1w%
+0002%2000002%        //  indirect SOURCE:%1w%
+0002%2000004%        //  constant SOURCE:%1w%
+0002%2000008%        //  SOURCE index:%2w%
+0002%2000010%        //  direct DESTINATION:%3w%
+0002%2000020%        //  indirect DESTINATION:%3w%
+0002%2000040%        //  DESTINATION index:%4w%
+0002        //  COUNT:%5w%
+0002        JNB      %setLab1 lab1%; // MOVE %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** MOVE must be converted manually (use FC81 Indirect Block Move) ***
+8075        MOVW     Move Word Memory....................................
+0002        JNB      %setLab1 lab1%; // MOVW %instr#%
+0001        movw
+0002%lab1%:   A    BR;
+8052        MULT     Multiply Word.......................................
+0002        JNB      %setLab1 lab1%; // MULT %instr#%
+0002        CALL FC31 (A_VAL := %1w%, B_VAL := %2w%, CC_VAL := %3l%);
+0002%lab1%:   A    BR;
+8043        MWFT     Move Word From Table................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** MWFT must be converted manually (because of table length) ***
+0001        gTmp1x gWrk1
+0002        // MWFT %instr#%
+0002        //  TABLE LENGTH (%5w%) must be implemented
+0002        //  CALL FC89 (SRC := P#%6x%, DEST := P#%4x%, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %3w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8322        MWI      Move Word With Indirect Addressing..................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** MWI pointers should be verified ***
+0002        JNB      %setLab1 lab1%; // MWI %instr#%
+0001        mwi
+0002%lab1%:   A    BR;
+8055        MWIR     Move Word To Discrete Image Register................
+0002        JNB      %setLab1 lab1%; // MWIR %instr#%
+0002        CALL FC 18(SRC := P#%1x%, DES := P#%3x%, LEN := %2w%, TOWORD := 0);
+0002%lab1%:   A    BR;
+8041        MWTT     Move Word To Table..................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** MWTT must be converted manually (because of table length)
+0001        gTmp1x gWrk1
+0002        // MWTT %instr#%
+0002        // *** MWTT must be converted manually
+0002        //  TABLE LENGTH (%5w%) must be implemented
+0002        //  CALL FC91 (SRC := P#%3x%, TABLE := P#%6x%, CMD := B#16#E, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %4w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8000        NOP      No Operation........................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** NOP ignored
+800C        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+806C        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+800D        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+806D        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+803C        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+805C        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+803D        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+804D        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+8021        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+8040        OR       OR IR To Power Flow.................................
+0002        O    %1x%;
+831C        ORB      OR Bit to Power Flow................................
+0003%2000002%   %incWarn outPath outName% line %outLine% Ref %refNum% *** immediate operands are mapped to S7 operands in converter I/O configuration ***
+0002%2000002%        // immediate operands are mapped to S7 operands in converter I/O configuration
+0002%1000001%        O    %1x%;
+0002%1001000%        ON   %1x%;
+832F        ORIC     OR Integer Compare Result to Power Flow.............
+0002        O(;
+0002        L        %1w%;
+0002        L        %2w%;
+0002%1000FFF%        <I;
+0002%1001FFE%        ==I;
+0002%1002FFD%        >I;
+0002%1004FFB%        >=I;
+0002%1005FFA%        <>I;
+0002%1006FF9%        <=I;
+0002        );
+800E        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+806E        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+800F        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+806F        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+803E        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+805E        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+803F        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+804F        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+8023        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+8042        ORN      OR Complemented IR To Power Flow....................
+0002        ON   %1x%;
+8014        ORS      Or Store............................................
+0001        nop
+8077        OS       One Shot............................................
+0002        FP       %gWrk1x wrk1x%;
+8018        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+8060        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+8019        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+8079        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+802D        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+804C        OUT      Output Power Flow To IR Bit.........................
+0002        =    %1x%;
+831D        OUTB     Copy Power Flow to Bit..............................
+0003%2000002%   %incWarn outPath outName% line %outLine% Ref %refNum% *** immediate operands are mapped to S7 operands in converter I/O configuration ***
+0002%2000002%        // immediate operands are mapped to S7 operands in converter I/O configuration
+0002        =    %1x%;
+831F        OUTL     Latch Bit if Power Flow Active......................
+0003%2000002%   %incWarn outPath outName% line %outLine% Ref %refNum% *** immediate operands are mapped to S7 operands in converter I/O configuration ***
+0002%2000002%        // immediate operands are mapped to S7 operands in converter I/O configuration
+0002%1000001%        R    %1x%;
+0002%1001000%        S    %1x%;
+801A        OUTN     Output Complemented Power Flow To IR Bit............
+0002        =    %1x%;
+8062        OUTN     Output Complemented Power Flow To IR BIT............
+0002        =    %1x%;
+801B        OUTN     Output Complemented Power Flow To IR BIT............
+0002        =    %1x%;
+807B        OUTN     Output Complemented Power Flow To IR BIT............
+0002        =    %1x%;
+802F        OUTN     Output Complemented Power Flow To IR BIT............
+0002        =    %1x%;
+804E        OUTN     Output Complemented Power Flow To IR BIT............
+0002        =    %1x%;
+8328        PGTS     Parameterized Go To Subroutine......................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** PGTS must be converted manually ***
+0002        //  *** PGTS must be converted manually
+0002        CC       FC %instr#%;
+8329        PGTSZ    Parameterized Go To Subroutine (Zero)...............
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** PGTSZ must be converted manually ***
+0002        //  *** PGTSZ must be converted manually
+0002        CC       FC %instr#%;
+8303        RTN      Unconditional Return From Subroutine................
+0002        NETWORK
+0002        TITLE = End of sub-routine REF %refNum%
+0002        BEU;  // RTN
+8304        RTNC     Conditional Return From Subroutine..................
+0002        BEC;  // RTNC
+8302        SBR      Subroutine..........................................
+0002
+8015        SFPGM    Special Function Program............................
+0002        // SFPGM
+0002        JNB      %setLab1 lab1%; // SFPGM %instr#%
+0002%1001000%        UC   %1w%;
+0002%1000001%        CALL %1w%;
+0002%lab1%:   A    BR;
+8330        SFSUB    Special Function Subroutine.........................
+0002        JNB      %setLab1 lab1%; // SFSUB %instr#%
+0002        CALL FC 6;  // RLL SFSUB CALL must be converted manually
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** RLL SFSUB CALL must be converted manually ***
+8331        SFSUB    Special Function Subroutine (continue on error).....
+0002        JNB      %setLab1 lab1%; // SFSUB %instr#% (continue on error)
+0002        CALL FC 6;  // RLL SFSUB CALL must be converted manually
+0002%lab1%:   A    BR;
+0002        CALL FC 6;  // RLL SFSUB CALL must be converted manually
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** RLL SFSUB CALL must be converted manually ***
+805B        SHRB     Bit Shift Register..................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** SHRB must be converted manually
+0002        // SHRB %instr#%
+0002        // *** SHRB must be converted manually
+0002        //  CLOCK (%1x%) must be one-shotted
+0002        //  CALL FC92 (DATA := %2x%, RESET := %3x%, S_BIT := %5x%, N := %4w%);
+0002        CALL FC 8 ( PF := %1x%, PDS1 := %2x%, PDS2 := %3x%);
+0002        A    BR;
+8059        SHRW     Word Shift Register.................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** SHRW must be converted manually
+0001        gTmp1x
+0002        // SHRW %instr#%
+0002        // *** SHRW must be converted manually
+0002        //  CLOCK (%1x%) must be one-shotted
+0002        //  ENABLE (%2x%) must be used
+0002        //  CALL FC90 (RESET := %3x%, START := P#%5x%, S_DATA := P#%4x%, LENGTH := %6w%, E_TYPE := B#16#4, Q := %tmp1x%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        CALL FC 8 ( PF := %1x%, PDS1 := %2x%, PDS2 := %3x%);
+0002        A    BR;
+801D        SKP      Skip Forward To Label...............................
+0002        JC      %skp%; // SKP%instr#%
+805D        SMC      Scan Matrix Compare.................................
+0002        JNB      %setLab1 lab1%; // SMC %instr#%
+0001        smc
+0002          CALL FB %instr#%, DB %instr#% (INDEX := %refNum%, OUT_STEP := %1b%);
+0002%lab1%:   A    BR;
+8054        SQRT     Square Root.........................................
+0002        JNB      %setLab1 lab1%; // SQRT %instr#%
+0002        CALL FC32 (AA_VAL := %1l%, B_VAL := %2w%);
+0002%lab1%:    A        BR;
+8011        SSI      Scan Synchronization Inhibit........................
+0002        // Ref %refNum% *** Scan Synchronization Inhibit not supported ***
+0002        JNB      %setLab1 lab1%; // SSI %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Scan Synchronization Inhibit not supported ***
+830F        STFE     Search Table for Equal..............................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** STFE must be converted manually ***
+0001        gWrk1
+0002        // STFE %instr#%
+0002        // *** STFE must be converted manually ***
+0002        //  RESET (%1x%) must be implemented
+0002        //  ENABLE (%2x%) must be implemented
+0002        //  INDEX (%5w%) must be implemented
+0002        //  TABLE SIZE (%6w%) must be implemented
+0002        //  CALL FC86 (SRC := P#%4x%, PATRN := P#%3x%, CMD := B#16#1, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002        //  L    %wrk1%;
+0002        //  L    0;
+0002        //  ==I;
+0002        //  SAVE;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8310        STFN     Search Table For Not Equal..........................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** STFN must be converted manually ***
+0001        gWrk1
+0002        // STFN %instr#%
+0002        // *** STFN must be converted manually ***
+0002        //  RESET (%1x%) must be implemented
+0002        //  ENABLE (%2x%) must be implemented
+0002        //  OUTPUT WORD (%5w%) must be implemented
+0002        //  INDEX (%6w%) must be implemented
+0002        //  TABLE SIZE (%6w%) must be implemented
+0002        //  CALL FC86 (SRC := P#%4x%, PATRN := P#%3x%, CMD := B#16#2, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002        //  L    %wrk1%;
+0002        //  L    0;
+0002        //  ==I;
+0002        //  SAVE;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8004        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8064        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8005        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8065        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8034        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8074        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8035        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8045        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8025        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+8044        STR      Store IR To Power Flow..............................
+0002        %?AO%    %1x%;
+831A        STRB     Store Bit to Power Flow.............................
+0003%2000002%   %incWarn outPath outName% line %outLine% Ref %refNum% *** immediate operands are mapped to S7 operands in converter I/O configuration ***
+0002%2000002%        // immediate operands are mapped in converter I/O configuration
+0002%1000001%        %?AO%    %1x%;
+0002%1001000%        %?AO%N   %1x%;
+832D        STRIC    Store Integer Compare to Power Flow.................
+0002        %?AO%(;
+0002        L        %1w%;
+0002        L        %2w%;
+0002%1000FFF%        <I;
+0002%1001FFE%        ==I;
+0002%1002FFD%        >I;
+0002%1004FFB%        >=I;
+0002%1005FFA%        <>I;
+0002%1006FF9%        <=I;
+0002        );
+8006        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N  %1x%;
+8066        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8007        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8067        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8036        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8076        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8037        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8047        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8027        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8046        STRN     Store Complemented IR to Power Flow.................
+0002        %?AO%N   %1x%;
+8051        SUB      Subtract Word.......................................
+0002        JNB      %setLab1 lab1%; // SUB %instr#%
+0002        L    %1w%;
+0002        L    %2w%;
+0002        -I;
+0002        T        %3w%;
+0002        AN       OV;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8306        TAND     Table to Table AND..................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TAND must be converted manually (because of table length) ***
+0001        gWrk1
+0002        // *** TAND must be converted manually ***
+0002        //  TABLE LENGTH (%4w%) must be implemented
+0002        JNB      %setLab1 lab1%; // TAND %instr#%
+0002        CALL FC104 (TBL1 := P#%1x%, TBL2 := P#%2x%, DEST_TBL := P#%3x%, CMD := B#16#7, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002%lab1%:   A    BR;
+832C        TASK     RLL Task Delimiter..................................
+0002        // TASK must be converted manually (use cyclic or interrupt OB)
+0002        JNB      %setLab1 lab1%; // TASK %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TASK must be converted manually *use cyclic or interrupt OB)
+8312        TCMP     Time Compare........................................
+0002        // TCMP must be converted manually (use SFC 0 and SFC 1)
+0002        JNB      %setLab1 lab1%; // TCMP %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TCMP must be converted manually (use SFC 0 and SFC 1) ***
+8309        TCPL     Table Complement....................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TCPL must be converted manually ***
+0001        gWrk1
+0002        // *** TCPL must be converted manually
+0002        //  RESULT TABLE (%2w%) must be implemented
+0002        //  TABLE LENGTH (%3w%) must be implemented
+0002        JNB      %setLab1 lab1%; // TCPL %instr#%
+0002        CALL FC88 (SRC := P#%1x%, CMD := B#16#3, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002%lab1%:   A    BR;
+8300        TEXT     Embeded TEXT........................................
+0002        //  %text%
+802C        TMRF     Timer (fast)........................................
+0002        CALL FC 3 (PF := %1x%, RESET := %2x%, DELTA := DB188.DBW 0,
+0002                   PRESET := %tcp3%, CURRENT := %tcc%); // TMRF %instr#%
+0002        A    BR;
+802E        TMRFP    Timer (fast, protected).............................
+0002        CALL FC 3 (PF := %1x%, RESET := %2x%, DELTA := DB188.DBW 0,
+0002                   PRESET := %tcp3%, CURRENT := %tcc%); // TMRF %instr#% (protected)
+0002        A    BR;
+8020        TMR      Timer...............................................
+0002        CALL FC 3 (PF := %1x%, RESET := %2x%, DELTA := DB188.DBW 4,
+0002                   PRESET := %tcp3%, CURRENT := %tcc%); // TMR %instr#%
+0002        A    BR;
+8022        TMRP     Timer (protected)...................................
+0002        CALL FC 3 (PF := %1x%, RESET := %2x%, DELTA := DB188.DBW 4,
+0002                   PRESET := %tcp3%, CURRENT := %tcc%); // TMR %instr#% (protected)
+0002        A    BR;
+8307        TOR      Table To Table OR...................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TOR must be converted manually (because of table length)
+0001        gWrk1
+0002        // *** TOR must be converted manually
+0002        //  TABLE LENGTH (%4w%) must be implemented
+0002        JNB      %setLab1 lab1%; // TOR %instr#%
+0002        CALL FC104 (TBL1 := P#%1x%, TBL2 := P#%2x%, DEST_TBL := P#%3x%, CMD := B#16#8, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002%lab1%:   A    BR;
+8313        TSET     Time Set............................................
+0002        // TSET must be converted manually (use SFC 0 and SFC 1)
+0002        JNB      %setLab1 lab1%; // TSET %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TSET must be converted manually (use SFC 0 and SFC 1)
+8333        TST      Terminate Self Timing...............................
+0002        // Ref %refNum% *** Terminate Self Timing not supported ***
+0002        JNB      %setLab1 lab1%; // TST %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Terminate Self Timing not supported ***
+830B        TTOW     Table to Word.......................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TTOW must be converted manually (because of table length) ***
+0001        gTmp1x gWrk1
+0002        // TTOW %instr#%
+0002        // *** TTOW must be converted manually
+0002        //  TABLE LENGTH (%6w%) must be implemented
+0002        //  CALL FC89 (SRC := P#%4x%, DEST := P#%3x%, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %5w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8308        TXOR     Table to Table Exclusive Or.........................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** TXOR must be converted manually (because of table length) ***
+0001        gWrk1
+0002        // *** TXOR must be converted manually
+0002        //  TABLE LENGTH (%4w%) must be implemented
+0002        JNB      %setLab1 lab1%; // TXOR %instr#%
+0002        CALL FC104 (TBL1 := P#%1x%, TBL2 := P#%2x%, DEST_TBL := P#%3x%, CMD := B#16#9, E_TYPE := B#16#4, RET_VAL := %wrk1%);
+0002%lab1%:   A    BR;
+8024        UDC      Up/Down Counter.....................................
+0002        // UDC %instr#%
+0002        CALL FC 5 (UP := %1x%, DWN := %2x%, RESET := %3x%,
+0002                   PRESET := %tcp5%, UBIT := %gWrk1x wrk1x%,
+0002                   DBIT := %gWrk2x wrk2x%, ZBIT := %4x%,
+0002                   CURRENT := %tcc%);
+0002        A    BR;
+8026        UDC      Up/Down Counter (protected).........................
+0002        // UDC %instr#% (protected)
+0002        CALL FC 5 (UP := %1x%, DWN := %2x%, RESET := %3x%,
+0002                   PRESET := %tcp5%, UBIT := %gWrk1x wrk1x%,
+0002                   DBIT := %gWrk2x wrk2x%, ZBIT := %4x%,
+0002                   CURRENT := %tcc%);
+0002        A    BR;
+8326        UNLK     Release a LOCK......................................
+0002        // Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** LOCK/UNLOCK must be converted manually ***
+807A        WAND     Word AND............................................
+0002        JNB      %setLab1 lab1%; // WAND %instr#%
+0002        L    %1w%;
+0002        L    %2w%;
+0002        AW;
+0002        T        %3w%;
+0002        SET;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8078        WOR      Word OR.............................................
+0002        JNB      %setLab1 lab1%; // WOR %instr#%
+0002        L    %1w%;
+0002        L    %2w%;
+0002        OW;
+0002        T        %3w%;
+0002        SET;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:    A    BR;
+8063        WROT     Word Rotate Right...................................
+0002        JNB      %setLab1 lab1%; // WROT %instr#%
+0002        CALL FC 17(CNT := W#16#%2w%, VAL := %1w%);
+0002%lab1%:    A    BR;
+830A        WTOT     Word to Table.......................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** WTOT must be converted manually (because of table length) ***
+0001        gTmp1x gWrk1
+0002        // WTOT %instr#%
+0002        // *** WTOT must be converted manually
+0002        //  TABLE LENGTH (%6w%) must be implemented
+0002        //  CALL FC91 (SRC := P#%3x%, DEST := P#%4x%, CMD := B#16#E, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %5w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+830C        WTTA     Word to Table AND...................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** WTTA must be converted manually (because of table length) ***
+0001        gTmp1x gWrk1
+0002        // WTTA %instr#%
+0002        // *** WTTA must be converted manually
+0002        //  TABLE LENGTH (%7w%) must be implemented
+0002        //  RESULT TABLE (%5w%) must be implemented
+0002        //  CALL FC91 (SRC := P#%3x%, DEST := P#%4x%, CMD := B#16#7, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %6w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+830D        WTTO     Word to Table OR....................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** WTTO must be converted manually ***
+0001        gTmp1x gWrk1
+0002        // WTTO %instr#%
+0002        // *** WTTO must be converted manually
+0002        //  TABLE LENGTH (%7w%) must be implemented
+0002        //  RESULT TABLE (%5w%) must be implemented
+0002        //  CALL FC91 (SRC := P#%3x%, DEST := P#%4x%, CMD := B#16#8, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %6w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+830E        WTTXO    Word to Table Exclusive OR..........................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** WTTXO must be converted manually ***
+0001        gTmp1x gWrk1
+0002        // WTTXO %instr#%
+0002        // *** WTTXO must be converted manually
+0002        //  TABLE LENGTH (%7w%) must be implemented
+0002        //  RESULT TABLE (%5w%) must be implemented
+0002        //  CALL FC91 (SRC := P#%3x%, DEST := P#%4x%, CMD := B#16#9, E_TYPE := B#16#4, Q := %tmp1x%, INDX := %6w%, RET_VAL := %wrk1%);
+0002        //  AN     %tmp1x%;
+0002        //  SAVE;
+0002        //  A    BR;
+0002        CALL FC 7 ( PF := %1x%, PDS1 := %2x%);
+0002        A    BR;
+8061        WXOR     Word Exclusive OR...................................
+0002        JNB      %setLab1 lab1%; // WXOR %instr#%
+0002        L    %1w%;
+0002        L    %2w%;
+0002        XOW;
+0002        T        %3w%;
+0002        SET;
+0002        SAVE;
+0002        CLR;
+0002%lab1%:   A    BR;
+8315        XSUB     Externally Developed Subroutine.....................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** Externally Developed Subroutine not supported ***
+0002        // Ref %refNum% *** Externally Developed Subroutine not supported ***
+0002        JNB      %setLab1 lab1%; // XSUB %instr#%
+0002        CALL FC 6;
+0002%lab1%:   A    BR;
+8002   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8002 op code ignored
+8003   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8003 op code ignored
+8316   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8316 op code ignored
+8334   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8334 op code ignored
+8335   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8335 op code ignored
+8336   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8336 op code ignored
+8337   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8337 op code ignored
+8338   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8338 op code ignored
+8339   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8339 op code ignored
+833A   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833A op code ignored
+833B   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833B op code ignored
+833C   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833C op code ignored
+833D   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833D op code ignored
+833E   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833E op code ignored
+833F   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 833F op code ignored
+8340   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8340 op code ignored
+8341   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8341 op code ignored
+8342   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8342 op code ignored
+8343   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8343 op code ignored
+8344   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8344 op code ignored
+8345   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8345 op code ignored
+8346   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8346 op code ignored
+8347   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8347 op code ignored
+8348   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8348 op code ignored
+8349   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8349 op code ignored
+834A   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834A op code ignored
+834B   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834B op code ignored
+834C   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834C op code ignored
+834D   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834D op code ignored
+834E   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834E op code ignored
+834F   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 834F op code ignored
+8350   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8350 op code ignored
+8351   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8351 op code ignored
+8352   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8352 op code ignored
+8353   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8353 op code ignored
+8354   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8354 op code ignored
+8355   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8355 op code ignored
+8356   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8356 op code ignored
+8357   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8357 op code ignored
+8358   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8358 op code ignored
+8359   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8359 op code ignored
+835A   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835A op code ignored
+835B   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835B op code ignored
+835C   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835C op code ignored
+835D   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835D op code ignored
+835E   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835E op code ignored
+835F   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 835F op code ignored
+8360   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8360 op code ignored
+8361   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8361 op code ignored
+8362   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8362 op code ignored
+8363   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8363 op code ignored
+8364   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8364 op code ignored
+8365   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8365 op code ignored
+8366   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8366 op code ignored
+8367   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8367 op code ignored
+8368   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8368 op code ignored
+8369   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8369 op code ignored
+836A   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836A op code ignored
+836B   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836B op code ignored
+836C   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836C op code ignored
+836D   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836D op code ignored
+836E   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836E op code ignored
+836F   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 836F op code ignored
+8370   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8370 op code ignored
+8371   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8371 op code ignored
+8372   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8372 op code ignored
+8373   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8373 op code ignored
+8374   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8374 op code ignored
+8375   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8375 op code ignored
+8376   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8376 op code ignored
+8377   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8377 op code ignored
+8378   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8378 op code ignored
+8379   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 8379 op code ignored
+837A   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 837A op code ignored
+837B   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 837B op code ignored
+837C   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 837C op code ignored
+837D   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 837D op code ignored
+837E   ..................................................................
+0003   %incWarn outPath outName% line %outLine% Ref %refNum% *** 837E op code ignored
+837F   ..................................................................
+0000
+0008
+

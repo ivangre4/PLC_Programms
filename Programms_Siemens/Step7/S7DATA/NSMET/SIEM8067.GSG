@@ -1,0 +1,183 @@
+;===========================================================
+; DDB File for  Push Button Panel PP 7
+; SYNC/FREEZE and Auto_Baud not supported, 1,5Mbit/s
+; MLFB  : 6AV3 688-3AA03-0AX0
+; Copyright (C) Siemens AG 1997  All Rights Reserved. Confidential
+;
+; Date  : 08.12.99
+; File  : SIEM8067.GSG
+;===========================================================
+#Profibus_DP
+;  User-Parameter-Definition
+PrmText=1
+Text(0)="Taster"
+Text(1)="Schalter"
+EndPrmText
+PrmText=2
+Text(0)="Grün blinkend"
+Text(1)="Gelb"
+Text(2)="Rot blinkend"
+Text(3)="Gelb blinkend"
+EndPrmText
+;
+ExtUserPrmData=7 "Impulsverlängerung n * 20 ms"
+Unsigned8 0 0-50
+EndExtUserPrmData
+ExtUserPrmData=8 "Taste für Lampentest"
+Unsigned8 1 0-8
+EndExtUserPrmData
+ExtUserPrmData=9 "Funktion Taste 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=10 "Funktion Taste 2"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=11 "Funktion Taste 3"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=12 "Funktion Taste 4"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=13 "Funktion Taste 5"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=14 "Funktion Taste 6"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=15 "Funktion Taste 7"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=16 "Funktion Taste 8"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=17 "Funktion digitaler Eingang 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=18 "Funktion digitaler Eingang 2"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=19 "Funktion digitaler Eingang 3"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=20 "Funktion digitaler Eingang 4"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=21 "Modus LED 1"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=22 "Modus LED 2"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=23 "Modus LED 3"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=24 "Modus LED 4"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=25 "Modus LED 5"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=26 "Modus LED 6"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=27 "Modus LED 7"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=28 "Modus LED 8"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+;
+; Unit-Definition-List:
+GSD_Revision=1
+Vendor_Name="SIEMENS AG"
+Model_Name="PP 7"
+Revision="V1.1"
+Ident_Number=0x8067
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V1.0"
+Software_Release="V1.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Implementation_Type="SPC2"
+Bitmap_Device="BEBOPP7N"
+Bitmap_SF="BEBOPP7S"
+;
+; Slave-Specification:
+OrderNumber="6AV3 688-3AA03-0AX0"
+Periphery="SIMATIC PP"
+OffsetFirstMPDBlock=0
+ETERDelay=0
+MaxResponseDelay=0
+Auto_Baud_supp=0
+Sync_Mode_supp=0
+Freeze_Mode_supp=0
+Min_Slave_Intervall=10
+Max_Diag_Data_Len=10
+Modul_Offset=0
+Slave_Family=3@SIMATIC
+Max_Module=1
+Max_Input_Len=2
+Max_Output_Len=2
+Max_Data_Len=4
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=13
+User_Prm_Data = 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Const(0)= 0x00,0x01,0x02,0x01,0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(7)=7
+Ext_User_Prm_Data_Ref(8)=8
+Ext_User_Prm_Data_Ref(9)=9
+Ext_User_Prm_Data_Ref(9)=10
+Ext_User_Prm_Data_Ref(9)=11
+Ext_User_Prm_Data_Ref(9)=12
+Ext_User_Prm_Data_Ref(9)=13
+Ext_User_Prm_Data_Ref(9)=14
+Ext_User_Prm_Data_Ref(9)=15
+Ext_User_Prm_Data_Ref(9)=16
+Ext_User_Prm_Data_Ref(10)=17
+Ext_User_Prm_Data_Ref(10)=18
+Ext_User_Prm_Data_Ref(10)=19
+Ext_User_Prm_Data_Ref(10)=20
+Ext_User_Prm_Data_Ref(11)=21
+Ext_User_Prm_Data_Ref(11)=22
+Ext_User_Prm_Data_Ref(11)=23
+Ext_User_Prm_Data_Ref(11)=24
+Ext_User_Prm_Data_Ref(12)=25
+Ext_User_Prm_Data_Ref(12)=26
+Ext_User_Prm_Data_Ref(12)=27
+Ext_User_Prm_Data_Ref(12)=28
+
+; Module-Definitions:
+;
+Module = "PP 7" 0x31
+EndModule

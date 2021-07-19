@@ -1,0 +1,21 @@
+Comment=Modules d'entrées/sorties analogiques 2 AI I 2/4 wire HF, 2 AI U HF, 2 AO I HF, 2 AO U HF
+
+[2366887]
+KatEntryName=2AI I 2/4WIRE HF
+InfoText=Module d'entrées analogiques AI 2xI, transducteur de mesure 2/4 fils (+/-20mA /15 bits+S, 4..20mA /15 bits), High Feature, supporte le synchronisme d'horloge
+SHORTNAME=2AI I 2/4WIRE HF
+
+[2366888]
+KatEntryName=2AI U HF
+InfoText=Module d'entrées analogiques AI 2xU (1..5V /15 bits, +/-5V /15 bits+S, +/-10V /15 bits+S), High Feature, supporte le synchronisme d'horloge
+SHORTNAME=2AI U HF
+
+[2366889]
+KatEntryName=2AO I HF
+InfoText=Module de sorties analogiques AO 2xI (+/-20mA /15 bits+S, 4..20mA /15 bits), High Feature, supporte le synchronisme d'horloge
+SHORTNAME=2AO I HF
+
+[2366890]
+KatEntryName=2AO U HF
+InfoText=Module de sorties analogiques AO 2xU  (1..5V /15 bits, +/-10V /15 bits+S), High Feature, supporte le synchronisme d'horloge
+SHORTNAME=2AO U HF

@@ -1,0 +1,74 @@
+@DB_TYP SDB3131_CONVERT    V1.0  DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+#
+#------------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den IO Transfer SDB ( Typ 3131 )
+#
+# Historie:
+# 2.07.06 DB: Ersterstellung
+# 
+#------------------------------------------------------------------------
+#
+
+ALL
+{
+ 	ALL_DATA$LNG	DM||||	# für lokale Zwecke
+	ALL_DATA
+	{
+		#----------------------------------------------------------------
+		# SDB Identifikationsblock
+		#----------------------------------------------------------------
+	
+		PBL_SDB_KENNUNG$NAM		_M||||
+		PBL_SDB_KENNUNG
+		{
+			PBL_SDB_KENNUNG$LNG	BM||||
+			PBL_SDB_KENNUNG_ID	BC|12|||
+			BAUGRUPPENTYP		SM||||
+			SDB_INHALT		SC|0x8800|||
+			UEBERTRAGUNGSATTR	BM|0|||
+			SDB_KENNUNG_RESV	BM|0|||		
+			TSAP_ID_TYP		BM|2|||		# K-Bus/Partyline
+			DEVICE_ID		BM|0|||		# K-Bus, ohne Bedeutung
+			TSAP_ID1		BM|0|||		# PG-Verbindung			
+			TSAP_ID2		BM|0|||		# Rack/Steckplatz bei AS400, ohne Bedeutung
+			NEXT_STADDR		BM|0|||		# ohne Bedeutung
+			REM_STADDR		BM|0|||		# Steckplatz
+		}
+		
+		#------------------------------------------------------------
+		# Organisations- Parameterblock
+		#------------------------------------------------------------
+
+		PBL_TRANSFER_DIRECTORY$NAM	_M||||		# PC Baugruppenparametrierung
+		PBL_TRANSFER_DIRECTORY
+		{
+			# Parameterblock Header
+			PBL_TRANSFER_DIRECTORY_ID		BC|1|||
+			PBL_TRANSFER_DIRECTORY_VERSION		BC|0|||
+			PBL_TRANSFER_DIRECTORY$LNG		WC|6||| 
+			# Daten
+			PBL_TRANSFER_DIRECTORY_DATA		HM||||	# Anzahl der Transferblöcke 
+		}
+
+		#------------------------------------------------------------
+		# Transfermodul Parameterblock
+		#------------------------------------------------------------
+
+		PBL_TRANSFERMODULE_BLOCK$NAM		_A||||
+		PBL_TRANSFERMODULE_BLOCK
+		{
+			# Parameterblock Header
+			PBL_TRANSFERMODULE_BLOCK_ID		BC|2|||
+			PBL_TRANSFERMODULE_BLOCK_RESV		BC|0|||
+			PBL_TRANSFERMODULE_BLOCK$LNG		WM||||
+			# Daten
+			PBL_TRANSFERMODULE_BLOCK_DATA		HM||||
+		}
+	
+	}
+}
+

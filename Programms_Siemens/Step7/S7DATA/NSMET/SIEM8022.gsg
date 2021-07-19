@@ -1,0 +1,134 @@
+; (c) 1994   Siemens AG ASI 1
+;
+; Profibus-DP     Geraetestammdatei
+;
+; Autor:             Rainer Friess
+; Erstellungsdatum:  09.11.1994
+; Aenderungen:       06.06.1997   Heinz Kerpen:  Leerplatz 0x00 bei PPO 3 und 4 und Kommentare
+; Aenderungen:       14.10.1998   Heinz Kerpen:  Semikolon ( ; ) vor MaxTsdr_9.6 entfernt
+;                                                Semikolon ( ; ) vor MaxTsdr_19.2 entfernt
+; Rev. V1.2:         29.01.1999   Heinz Kerpen:  Bitmap_Device = "asi8022n" ( Name erweitert )
+;                                                Slave_Family = 1@SIMOVERT eingetragen
+;                                                OrderNumber="6SE7090-0XX84-0AK0" ; Max_Module = 1
+; Rev. V1.3:         05.03.2002   W. Dannhäuser: Sprachabh. GSx (Umsetzung durch AS:
+;                                                Info_Text, Max_Diag_Data_Len, GSD_Revision, Module)
+;                                                Model_Name geändert, Trennzeichen bei Module,
+;                                                Max_Diag_Data_Len=6                                        
+;
+;
+; Allgemeine Angaben:
+;
+#PROFIBUS_DP
+;
+; Herstellername
+Info_Text = "PROFIBUS-DP-Anschaltung CB1 in SIMOVERT MASTERDRIVES"
+Max_Diag_Data_Len= 6
+GSD_Revision = 4
+Vendor_Name = "Siemens AG ASI1"
+;
+; Herstellerbezeichnung des DP-Geraetes
+Model_Name = "MASTERDRIVES CB1"
+;
+; Ausgabestand des DP-Geraetes
+Revision="V 1.0"
+;
+; Protokollkennung des DP-Geraetes
+;    0: Profibus-DP
+;    16-255 Herstellerspezifisch 
+Protocol_Ident = 0
+;
+;  DP-Geraetetyp
+;    0: DP-Slave
+;    1: DP-Master Klasse 1
+Station_Type = 0
+;
+;  kein FMS/DP-Mischgeraet
+FMS_supp = 0
+;
+;  Hardware Ausgabestand des DP-Geraetes
+Hardware_Release = "1"
+;
+;  Software Ausgabestand des DP-Geraetes
+Software_Release = "1"
+;
+;  9,6 kBaud wird unterstuetzt
+9.6_supp = 1
+;
+;  19.2 kBaud wird unterstuetzt
+19.2_supp = 1
+;
+;  93.75 kBaud wird unterstuetzt
+93.75_supp = 1
+;
+;  187.5 kBaud wird unterstuetzt
+187.5_supp = 1
+;
+;  500 kBaud wird unterstuetzt
+500_supp = 1
+;
+;  1,5 MBaud wird unterstuetzt
+1.5M_supp = 1
+;
+MaxTsdr_9.6   = 60
+MaxTsdr_19.2  = 60
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500   = 100
+MaxTsdr_1.5M  = 150
+;
+;  Ident-Nummer 
+Ident_Number = 0x8022
+; Zuordnung zu einer Slave-Familie
+Slave_Family        = 1@SIMOVERT
+; Darstellung als Bitmap
+Bitmap_Device       = "asi8022n"
+; Bestellnummer
+OrderNumber="6SE7090-0XX84-0AK0"
+;
+;  Der Freeze-Mode wird nicht unterstuetzt
+Freeze_Mode_supp = 0
+;
+;  Der Sync-Mode wird unterstuetzt
+Sync_Mode_supp = 1
+;
+;  Die Automatische Baudratenerkennung wird unterstuetzt
+Auto_Baud_supp = 1
+;
+;  Die Slave-Adresse kann nicht vom Master gesetzt werden
+Set_Slave_Add_supp = 0
+;
+;  Minimaler Abstand zwischen 2 DDLM_Data_Exchange-Aufrufen
+Min_Slave_Intervall = 20 
+;
+Modular_Station =1
+Max_Module = 1
+Max_Input_len = 28
+Max_Output_len = 28
+Max_Data_len = 56
+Module = "PPO 1:   4 PKW / 2 PZD        " 0xF3, 0xF1
+1
+EndModule
+Module = "PPO 2:   4 PKW / 4 + 2 PZD    " 0xF3, 0xF3, 0xF1
+2
+EndModule
+Module = "PPO 3:   0 PKW / 2 PZD        " 0x00, 0xF1
+3
+EndModule
+Module = "PPO 4:   0 PKW / 6 PZD        " 0x00, 0xF5
+4
+EndModule
+Module = "PPO 5:   4 PKW / 4 + 4 + 2 PZD" 0xF3, 0xF3, 0xF3, 0xF1
+5
+EndModule
+Module = "___________options____________" 0x00
+6
+EndModule
+Module = "PPO 2:   4 PKW /  6 PZD       " 0xF3, 0xF5
+7
+EndModule
+Module = "PPO 5:   4 PKW / 10 PZD       " 0xF3, 0xF9
+8
+EndModule
+
+
+

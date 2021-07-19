@@ -1,0 +1,6 @@
+S7HPROFX V0.1
+
+// Das universalmodul aus dem Redundanten PA-Koppler entfernen
+
+[PROFIBUS-DP\DP/PA-Link\FDC157-0::6ES7 157-0AC83-0XA0\Universalmodul]
+@DELETE

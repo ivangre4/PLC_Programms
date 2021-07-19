@@ -1,0 +1,164 @@
+[_S7H_IO_NORM_MODULE_AT]
+;Transfermodul --> Proxymodul
+relation=1315897,_S7H_IO_NORM_MODULE_AT[1315898]
+; Modul --> Modulunit
+relation=1315901,_S7H_MODULE_TRANFER_UNIT_CT[1315902];deep
+
+[_S7H_ET200IS_MODULE_AT]
+;Transfermodul --> Proxymodul
+relation=1315897,_S7H_IO_NORM_MODULE_AT[1315898]
+; Modul --> Modulunit
+relation=1315901,_S7H_MODULE_TRANFER_UNIT_CT[1315902];deep
+
+[_S7H_ET200S_MODULE_AT]
+;Transfermodul --> Proxymodul
+relation=1315897,_S7H_IO_NORM_MODULE_AT[1315898]
+; Modul --> Modulunit
+relation=1315901,_S7H_MODULE_TRANFER_UNIT_CT[1315902];deep
+
+[_S7H_HSP_ET200ISP_MODULE_AT]
+;Transfermodul --> Proxymodul
+relation=1315897,_S7H_IO_NORM_MODULE_AT[1315898]
+; Modul --> Modulunit
+relation=1315901,_S7H_MODULE_TRANFER_UNIT_CT[1315902];deep
+
+[_S7H_HSP_ET200PRO_MODULE_AT]
+;Transfermodul --> Proxymodul
+relation=1315897,_S7H_IO_NORM_MODULE_AT[1315898]
+; Modul --> Modulunit
+relation=1315901,_S7H_MODULE_TRANFER_UNIT_CT[1315902];deep
+
+
+[_S7H_MODULE_TRANFER_UNIT_CT]
+server=S7HDEVNX.DLL
+prefix=OM
+ObjType=1316861
+basetype=_S7H_IO_NORM_MODULE_AT
+; Transfermodulunit --> Proxymodulunit
+relation=1315899,_S7H_MODULE_TRANFER_UNIT_CT{1}[1315900]
+
+
+[_S7H_IO_CONTROLLER_SWITCH_CP_CT]
+; FW-Routingzeit 8ms
+IO_ROUTER_TRANSFERTIME=8
+
+; Device-Parametrierdatensätze packen
+CAPABLE_MULTIPLEWRITE=1
+
+; AP00238738
+SUBNETMASK_UNRESTRICTED=1
+
+; ----------------------------------------------------------
+; DK-1616 RT DA PN IO V2.1 PN 1.0
+; ----------------------------------------------------------
+[_S7H_PC_CP_1616_RT_DA_CT]
+server=S7W1012x.DLL
+prefix=OM
+ObjType=2367432
+basetype=_S7H_PC_CP_1616_RT_DK_V63_CT
+MLFB_PREFIX=PN_1_0
+CatalogParent=2367393
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V2.1
+
+; AP00379593 CP kann 512 Byte konsistent Übertragen, keine FM400-Beschränkung
+CPU_CONSIST_RANGE=512
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3118|3119|3129|3131|3002|2003|2004|2005
+SDB3129_CARRIER=1
+SDB3131_CARRIER=1
+SDB3_CARRIER=1
+SDB2006_CARRIER=1
+SDB2008_CARRIER=1
+
+SDB3131=SDB3131_CONVERT
+
+PN_MAX_DEVICES=256
+PN_MAX_STATION_NO=256
+PN_MAX_FRAMES_PER_CYCLE=256
+
+; FW-Routingzeit 8ms
+IO_ROUTER_TRANSFERTIME=8
+
+; Device-Parametrierdatensätze packen
+CAPABLE_MULTIPLEWRITE=1
+
+; AP00238738
+SUBNETMASK_UNRESTRICTED=1
+
+CAN_DO_TRANSFER_SDB=1
+
+MLFB=6GK1 161-6AA00
+
+HSP_ID=1012
+HSP_NAME=CP 1616/04 V2.1
+
+; -----------------------------------------------------------
+; DK-1616 RT DA PN IO V2.1 PN 2.0
+; -----------------------------------------------------------
+[_S7H_PC_CP_1616_RT_DA_DK_V63_FW11_CT]
+server=S7W1012x.DLL
+prefix=OM
+ObjType=2367442
+basetype=_S7H_PC_CP_1616_RT_DK_V63_FW11_CT
+
+CatalogParent=2367393
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V2.1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3118|3119|3129|3131|3002|2003|2004|2005
+SDB3129_CARRIER=1
+SDB3131_CARRIER=1
+
+SDB3131=SDB3131_CONVERT
+
+CAN_DO_TRANSFER_SDB=1
+
+MLFB=6GK1 161-6AA00
+HSP_ID=1012
+HSP_NAME=CP 1616/04 V2.1
+
+; ----------------------------------------------------------
+; DK-1604 RT DA PN IO V2.1 PN 1.0
+; ----------------------------------------------------------
+[_S7H_PC_CP_1604_RT_DA_CT]
+server=S7W1012x.DLL
+prefix=OM
+ObjType=2367440
+basetype=_S7H_PC_CP_1616_RT_DA_CT
+
+CatalogParent=2367410
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V2.1
+
+MLFB=6GK1 160-4AA00
+HSP_ID=1012
+HSP_NAME=CP 1616/04 V2.1
+
+; -----------------------------------------------------------
+; DK-1604 RT DA PN IO V2.1 PN 2.0
+; -----------------------------------------------------------
+[_S7H_PC_CP_1604_RT_DA_DK_V63_FW11_CT]
+server=S7W1012x.DLL
+prefix=OM
+ObjType=2367443
+basetype=_S7H_PC_CP_1616_RT_DA_DK_V63_FW11_CT
+
+CatalogParent=2367410
+IsCatEntry=1
+nKatChilds=0
+
+FW_VERSION=V2.1
+
+MLFB=6GK1 160-4AA00
+
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_NAME=CP 1616/04 V2.1
+HSP_ID=1012

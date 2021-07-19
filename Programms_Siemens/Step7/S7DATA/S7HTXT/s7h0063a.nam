@@ -1,0 +1,56 @@
+;; ============ HSP 0063 =====================================================
+;; ============ ET200pro =====================================================
+
+
+;------------------------------ Slave ET200pro 6ES7 154-1AA00-0AB0
+
+[2363603]
+KatEntryName=IM 154-1 DP
+InfoText=Interfacemodul IM 154-1 DP für ET 200pro
+SHORTNAME=IM 154-1 DP
+Comment=Modulare Peripheriegeräte in Schutzklasse IP 65 als DP-Slaves
+
+;------------------------------ Slave ET200pro 6ES7 154-2AA00-0AB0
+[2363605]
+KatEntryName=IM 154-2 DP HF
+InfoText=Interfacemodul IM 154-2 DP High Feature für ET 200pro
+SHORTNAME=IM 154-2 DP HF
+
+
+;------------------------------ Katalog-Root für ET200pro-Familie
+[2363599]
+KatEntryName=ET 200pro
+InfoText=Modulares Peripheriegerät in Schutzklasse IP 65 als DP-Slave
+SHORTNAME=ET 200pro
+
+;------------------------------ Katalog-Objekt für ET200pro DI-Baugruppen
+[2363608]
+KatEntryName = DI
+InfoText = Digitaleingabemodule für ET 200pro
+SHORTNAME=DI
+
+;------------------------------ Katalog-Objekt für ET200pro AI-Baugruppen
+[2363609]
+KatEntryName = AI
+InfoText = Analogeingabemodule für ET 200pro
+SHORTNAME=AI
+
+
+;------------------------------ Katalog-Objekt für ET200pro DO-Baugruppen
+[2363610]
+KatEntryName = DO
+InfoText = Digitalausgabemodule für ET 200pro
+SHORTNAME=DO
+
+
+;------------------------------ Katalog-Objekt für ET200pro AO-Baugruppen
+[2363611]
+KatEntryName = AO
+InfoText = Analogausgabemodule für ET 200pro
+SHORTNAME=AO
+
+;------------------------------ Katalog-Objekt für ET200pro PM-Baugruppen
+[2363612]
+KatEntryName = PM
+InfoText = Powermodule für ET 200pro
+SHORTNAME=PM

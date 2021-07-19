@@ -1,0 +1,188 @@
+@CONVERTER ERRLIST1 V0.1                				# aktuelle Listenkennung
+@LANGUAGE  ENGLISH                     					# Sprache
+#--------------------------------------------------------------------------------
+	SYSERRORTEXT:	"System error"                      # Standardtextelemente
+	ERRORTEXT:	"Error"                             # Standardtextelemente
+	WARNINGTEXT:	"Warning"                           # Standardtextelemente
+	RLINENRTEXT:	"Rule file line"  
+	ALINENRTEXT:	"ASCII file line" 
+	ELINENRTEXT:	"Error file line"  
+	LPOSITIONTEXT:	"Line pos."
+	OWNERTEXT:		"Owner"   
+	TOOLTEXT:		"Tool"    
+	TPOSITIONTEXT:	"DB pos."
+#--------------------------------------------------------------------------------
+														# err # ascii  # rul
+#--------------------------------------------------------------------------------
+00001  "Wrong character"                            	#  x	  x      x
+00002  "Syntax error" 				                	#  x      x      x
+00003  "Error number too long (file *.err)"         	#  x
+00004  "Syntax error (group)"  							#		  x      x
+#--------------------------------------------------------------------------------
+00005  "Setting parameter value, wrong name/no access"  #                x
+00006  "Setting parameter value, wrong or no value"    	#                x
+00007  "Setting parameter value, unknown cause" 		#                x
+00008  "ASCII file header missing or defective"  		#		  x
+00009  "Rule file does not exist"  						#		  x
+00010  "Group not completed correctly" 		#		  x
+00011  "Rule file cannot be processed (converter version)"#         x
+
+00012  "Creating parameter, wrong name/no access"       #                x
+00013  "Creating parameter, wrong value"  			    #                x
+00014  "Creating parameter, unknown cause"    		    #                x
+00015  "Creating parameter, name exists twice"   #                x
+00016  "Error in rule file"   							#		  x
+
+00017  "Problems loading error message language file"  	#		  x
+
+00018  "Group -> wrong name/no access"       			#                x
+00019  "Group -> cannot create, cause unknown"          #                x
+00020  "Name, string, comment longer than 255"          #  x      x      x
+
+00021  "Setting parameter value, memory shortage"       #        x
+00022  "Creating group, memory shortage"
+00023  "Creating group, cause of error unknown" 
+00024  "Creating group, name exists twice"
+
+00050  "Cannot open rule file"                  		#
+00051  "Cannot load rule file"                		#
+00052  "Error in ASCII file"   							#
+00053  "Error in binary file"  							#
+00054  "Cannot open ASCII/binary file"               	#
+00055  "Cannot open error language file"               	#
+00056  "Cannot open trace/error file"                	#
+#--------------------------------------------------------------------------------
+00100  "Binary file type error (DOS, TIS)"			#				 x
+00101  "Group start ignored"    						#				 x
+00102  "Error completing group, elements missing"    	#				 x
+00103  "Default value not possible"					#				 x
+00104  "Default value necessary"					#				 x
+00105  "Name extension wrong"    						#				 x
+00106  "Error in start of selectable variable value"			#				 x
+00107  "Attributes wrong, not selectable variable value"	#				 x
+00108  "Default value too short"			#				 x
+00109  "Default value too long"				#				 x
+
+00110  "Default of selectable variable value wrong"		#		         x
+00111  "Error completing selectable variable value"		#				 x
+00112  "Duplication in selectable variable value"			#				 x
+00113  "Part of selectable variable value wrong"			#				 x
+00114  "Part of selectable variable value ignored"			#				 x
+00115  "Attributes wrong, not selectable variable value 2"	#				 x
+
+00116  "Parameter type not possible"					#				 x
+00117  "Parameter occurs too often"       				#				 x
+00118  "Minimum value wrong, group"        				#				 x
+00119  "Maximum value wrong, group"    					#				 x
+00120  "Group occurs too often"         				#				 x
+00121  "Parameter type/occurrences not possible"			#				 x
+00122  "Value of selectable variable too high"				#				 x
+00123  "Bit -> hex not possible (modulo 8)" 			#				 x
+00124  "Attribute type not permitted"						#				 x
+00125  "Value too high"								#				 x
+00126  "Group name in header different from start"		#				 x
+00127  "Parameter type for group/parameter wrong"	#                x
+
+00130  "Minimum value > maximum value"						#				 x
+00131  "Default > maximum value or < minimum value"  	#				 x
+00132  "Default not correct (not increment)"       		#				 x
+00133  "Maximum value not correct (not increment)" 		#				 x
+00134  "Min. value = max. value  -> increment = 0"      #				 x
+00135  "Min. length > max. length"  					#				 x
+00136  "Max. length > fixed length" 					#				 x
+00137  "Length error (byte limit)"						#				 x
+00138  "Group or parameter not found"        			#		  		 x
+00139  "Several defaults in selection"                  #                x
+00140  "Length not in specified range"                  #
+00141  "Number not in specified range"                  #
+00142  "Numbering not in specified range"               #
+00143  "Mixed strings not allowed"      				#         x      x
+00144  "Extended format not possible"                   #         x      x
+00145  "Group with error 146" 
+00146  "Min. number not within limits"  
+00147  "Group with error 148" 
+00148  "Max. number not within limits"  
+00149  "No element or selection exists"      
+00150  "More than one element of a selection exists" 
+00151  "Not numeric type for ranges"       
+00152  "Range definition ignored"   
+00153  "Range definition incorrect"  
+00154  "Range termination error, e.g. default value"
+00155  "Length/occurrences do not match"        
+#---------------------------------------------------------------------------------
+00200  "Memory shortage"
+
+#--------------------------------------------------------------------------------
+01000  "Implementation error"  							#         x
+#--------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------
+# VFD - Fehler
+#--------------------------------------------------------------------------------
+11011  "Unique VFD number required"           
+11014  "A VFD has been generated "
+11015  "Unique VFD name required"            
+11016  "Not VFD name - symbol required" 
+11017   "No blank allowed before or after VFD name"        
+11032  "At least one VFD is necessary"
+
+#--------------------------------------------------------------------------------
+# CR-Header - Fehler
+#--------------------------------------------------------------------------------
+
+11105     "The CR header has been generated"
+
+#--------------------------------------------------------------------------------
+# CRL
+#--------------------------------------------------------------------------------
+11111     "Unique CREF required"            
+11113     "Specified VFD does not exist"
+11117     "No blank allowed before or after CR name"
+11119     "No entry in the CRL"  
+11120     "Unique CR name required"
+11121     "CR name missing"
+11122     "Unique local LSAP is required"
+11124     "Unique pair of remote address and LSAP necessary"
+11125     "Wrong remote address due to connection attributes"
+11126     "wrong remote LSAP due to connection attributes"
+11127     "LSAP is used by FDL"
+11128     "LSAP is used by DP"
+11129     "LSAP already being used"
+11131     "The LSAP is already being used as poll_list_SAP"
+11135     "Only A or B parameter permitted"
+11140     "Combination of type and connection attributes illegal"
+11141     "Memory shortage on the CP - too many VFDs"
+11142     "Memory shortage on the CP - to many CRs"
+11201     "The LSAP is already being used as default SAP"
+11203     "LSAP is used by FMS"
+11204     "The poll_list_SAP uses this value"
+#
+
+# -------------------------------------------------------------------------
+# Fehlercode, wenn ein bestimmtes Objekt nicht angelegt werden konnte
+# -------------------------------------------------------------------------
+11060    "System error - low memory" # "OD header object cannot be created"
+11061    "System error - low memory" # "CRL header object cannot be created"
+11062    "System error - low memory" # "VFD number object cannot be created"
+11063   "ST_OD_length object cannot be created"
+#11064   "FirstIndex_S_OD object cannot be created"
+#11065   "S_OD_Length object cannot be created"
+#11066   "nr_of_OS object cannot be created"
+#11067   "Standard type object cannot be created"
+#11068   "Data type object cannot be created"
+#11069   "Element_index object cannot be created"
+11070    "Sytem error - low memory" # ""VFD object cannot be created"
+#
+#11080   "No valid data type index in DTSD object"
+#11081   "No valid data type index in simple variable object"
+#11082   "No valid data type index in array object"
+#11083   "No valid data type index in record object"
+#11084  "Variable list parameter must point to simple variable"
+#11085   "No reference to variable object"
+#
+#11110  "Too many DTI objects in DTS object "
+#11111  "Too many length objects in DTS object"
+#11112  "Too many element index objects in variable list object"
+#
+#--------------------------------- ENDE -----------------------------------------
+

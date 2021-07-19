@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200S ClassDefinition ClassET200SAIclassdef.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2002-03-08T08:35:18Z" Tool="STEP7 Version V5.2" User="BT3192"/>
+		<prim:LastModified Timestamp="2002-04-12T10:03:00Z" Tool="Textpad" User="BT3192"/>
+	</prim:FileInfo>
+	<base:Project ID="{9010F212-A7F4-4dcd-886B-35A3807C2F72}" Name="Class Definition for ET200S">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="Module">
+				<base:SettingsFeature>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Dataset0" DSNr="0" DSLen="14">
+							<!-- Alarmeinstellungen und Bereichseinstellungen der Gruppen 2 -->
+							<hwk:Par Name="AI_Type" PNr="13">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art/Bereich f. Kanal 0"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD4</hwk:datatype>
+								<hwk:defStep7>9</hwk:defStep7>
+								<hwk:defPcs7>9</hwk:defPcs7>
+								<hwk:byteAddr>4</hwk:byteAddr>
+								<hwk:bitAddr>0</hwk:bitAddr>
+								<hwk:distance>4</hwk:distance>
+							</hwk:Par>
+							<!--
+							<hwk:Par Name="AI_Type" PNr="14">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art/Bereich f. Kanal 1"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD4</hwk:datatype>
+								<hwk:defStep7>9</hwk:defStep7>
+								<hwk:defPcs7>9</hwk:defPcs7>
+								<hwk:byteAddr>4</hwk:byteAddr>
+								<hwk:bitAddr>4</hwk:bitAddr>
+								<hwk:distance>4</hwk:distance>
+							</hwk:Par>
+							-->
+						</hwk:Dataset>
+					</hwk:DatasetList>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

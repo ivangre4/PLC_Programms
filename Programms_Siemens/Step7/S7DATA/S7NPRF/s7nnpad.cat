@@ -1,0 +1,53 @@
+S7HPROFX V0.1
+
+[Subredes\Subredes]
+// Platzhaltereintrag für die Subnetze - Eintrag ist zu uebersetzen!
+@DELETE
+
+[Equipos\StationAT]
+// Platzhaltereintrag für die StationenAT (HWKOMP_AT) - Eintrag ist zu uebersetzen!
+@DELETE
+
+[Equipos\Equipos]
+// Platzhaltereintrag für die Stationen - Eintrag ist zu uebersetzen!
+@DELETE
+
+[Estación PC SIMATIC]
+// Eintrag für die PC Station in der ROOT - Eintrag ist zu uebersetzen!
+@DELETE
+
+[SIMATIC 300]
+// Eintrag für die 300er in der ROOT - Eintrag ist zu uebersetzen!
+@DELETE
+
+[SIMATIC 400]
+// Eintrag für die 400er in der ROOT - Eintrag ist zu uebersetzen!
+@DELETE
+
+[Estación HMI SIMATIC]
+// Eintrag für die PC Station in der ROOT - Eintrag ist zu uebersetzen!
+@DELETE
+
+[_ROOT]
+// _S7H_HWMODULE_AT - Eintrag ist nicht zu uebersetzen!
+@DELETE="1314982"
+
+[_ROOT]
+// _S7H_RACK400_AT - Eintrag ist nicht zu uebersetzen!
+@DELETE="0x001410b1"
+
+[_ROOT]
+// _S7H_RACK300_AT - Eintrag ist nicht zu uebersetzen!
+@DELETE="0x001410a4"
+
+[_ROOT]
+// SIMATIC PC Based Control 300/400 - Eintrag ist nicht zu uebersetzen!
+@DELETE="0x001412cd"
+
+[_ROOT]
+// PROFIBUS-DP\ET200L\Terminalbloecke - Eintrag ist nicht zu uebersetzen!
+@DELETE="1315191"
+
+[_ROOT]
+//[SIMATIC PC Station\HMI] - Eintrag ist nicht zu uebersetzen!
+@DELETE="0x0014605d"

@@ -1,0 +1,270 @@
+;==========================================================
+; GSD-File  for ET 200U-DP/FMS Modular-Station   SIEMENS AG 
+; MLFB  : 6ES5 318-8MC1.
+; Sync_Mode_supp, Freeze_Mode_supp, Auto_Baud_supp, 1.5MBaud 
+;
+; Stand   : 12.01.99 V5.2  SX   entspr. TD V5.1
+;        27.02.02  V 6.0
+; File    : SIEM8009.GSG
+;===========================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+PrmText=1
+Text(0)="Ausgaenge loeschen"
+Text(1)="Ausgaenge nicht loeschen"
+EndPrmText
+PrmText=2
+Text(0)="Diagnose nicht auswerten"
+Text(1)="Diagnose auswerten"
+EndPrmText
+PrmText=3
+Text(0)="kein Combislave"
+Text(1)="Combislave"
+EndPrmText
+PrmText=4
+Text(0)="Kein Slow_Mode"
+Text(1)="Slow_Mode"
+EndPrmText
+; <Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=1 "Output_Clear"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Diagnostics_Generate"
+Bit(1) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=3 "Combislave"
+Bit(2) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=4 "Slow_Mode"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "IM 318-C, Busanschaltung für PROFIBUS-DP/FMS"
+Vendor_Name="SIEMENS"
+Model_Name="ET 200U    DP/FMS"
+Revision="V 6.0"
+Ident_Number=0x8009
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Bitmap_Device="ET200_UN"
+Bitmap_SF="ET200_US"
+; Slave-Specification:
+OrderNumber="6ES5 318-8MC1."
+EvenSlotNumberRequired=1
+;OffsetFirstMPDBlock=0
+Freeze_Mode_supp=1
+Sync_Mode_supp=1
+Auto_Baud_supp=1
+Min_Slave_Intervall=20
+Max_Diag_Data_Len=13
+Modul_Offset=0
+Slave_Family=3@ET200U
+Modular_Station=1
+Max_Module=32
+Max_Input_Len=32
+Max_Output_Len=32
+Max_Data_Len=64
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=1
+User_Prm_Data=0x00
+Max_User_Prm_Data_Len=1
+Ext_User_Prm_Data_Const(0)=0x00
+Ext_User_Prm_Data_Ref(0)=1
+Ext_User_Prm_Data_Ref(0)=2
+Ext_User_Prm_Data_Ref(0)=3
+Ext_User_Prm_Data_Ref(0)=4
+; Unit-Diagnostics:
+Unit_Diag_Bit(0000)="Slow_Mode aktiv"
+Unit_Diag_!Bit(0000)="Slow_Mode inaktiv"
+Unit_Diag_Bit(0001)="Konfigurationsfehler"
+Unit_Diag_Bit(0003)="Modulfehler"
+Unit_Diag_Bit(0004)="Lastspannung fehlt"
+Unit_Diag_Bit(0005)="Kurzschluss nach L+"
+; <Module-Definition-List>
+Module= "Leerplatz" 0x00
+1
+EndModule
+Module= "6ES5 262-8M...      :4AX" 0xF3
+2
+EndModule
+Module= "6ES5 263-8MA11  :4AX" 0xF3
+3
+EndModule
+Module= "6ES5 264-8MA11  :4AX" 0xF3
+4
+EndModule
+Module= "6ES5 265-8M...      :4AX" 0xF3
+5
+EndModule
+Module= "6ES5 266-8M...      :4AX" 0xF3
+6
+EndModule
+Module= "6ES5 267-8M...      :2AX" 0xF1
+7
+EndModule
+Module= "6ES5 230-8M...      :000" 0x00
+8
+EndModule
+Module= "6ES5 380-8M...      :8DX" 0x30
+9
+EndModule
+Module= "6ES5 385-8MA..    :8DX" 0x30
+10
+EndModule
+Module= "6ES5 385-8MB..    :2AX" 0xF1
+11
+EndModule
+Module= "6ES5 420-8MA..    :8DE" 0x10
+12
+EndModule
+Module= "6ES5 421-8MA..    :8DE" 0x10
+13
+EndModule
+Module= "6ES5 422-8MA..    :16DE" 0x11
+14
+EndModule
+Module= "6ES5 422-8MA..    :1AE" 0x50
+15
+EndModule
+Module= "6ES5 430-8M...      :8DE" 0x10
+16
+EndModule
+Module= "6ES5 431-8M...      :8DE" 0x10
+17
+EndModule
+Module= "6ES5 433-8M...      :8DE" 0x10
+18
+EndModule
+Module= "6ES5 437-8EA..     :8DE" 0x10
+19
+EndModule
+Module= "6ES5 440-8M...      :8DA" 0x20
+20
+EndModule
+Module= "6ES5 441-8M...      :8DA" 0x20
+21
+EndModule
+Module= "6ES5 450-8MB..    :8DA" 0x20
+22
+EndModule
+Module= "6ES5 450-8MD..    :8DA" 0x20
+23
+EndModule
+Module= "6ES5 451-8M...      :8DA" 0x20
+24
+EndModule
+Module= "6ES5 452-8M...      :8DA" 0x20
+25
+EndModule
+Module= "6ES5 453-8M...      :8DA" 0x20
+26
+EndModule
+Module= "6ES5 457-8EA..     :8DA" 0x20
+27
+EndModule
+Module= "6ES5 461-8MA..    :8DE" 0x10
+28
+EndModule
+Module= "6ES5 464-8MA..    :1AE" 0x50
+29
+EndModule
+Module= "6ES5 464-8MA..    :2AE" 0x51
+30
+EndModule
+Module= "6ES5 464-8MA..    :4AE" 0x53
+31
+EndModule
+Module= "6ES5 464-8MB..    :1AE" 0x50
+32
+EndModule
+Module= "6ES5 464-8MB..    :2AE" 0x51
+33
+EndModule
+Module= "6ES5 464-8MB..    :4AE" 0x53
+34
+EndModule
+Module= "6ES5 464-8MC..    :1AE" 0x50
+35
+EndModule
+Module= "6ES5 464-8MC..    :2AE" 0x51
+36
+EndModule
+Module= "6ES5 464-8MC..    :4AE" 0x53
+37
+EndModule
+Module= "6ES5 464-8MD..    :1AE" 0x50
+38
+EndModule
+Module= "6ES5 464-8MD..    :2AE" 0x51
+39
+EndModule
+Module= "6ES5 464-8MD..    :4AE" 0x53
+40
+EndModule
+Module= "6ES5 464-8ME..    :1AE" 0x50
+41
+EndModule
+Module= "6ES5 464-8ME..    :2AE" 0x51
+42
+EndModule
+Module= "6ES5 464-8ME..    :4AE" 0x53
+43
+EndModule
+Module= "6ES5 464-8MF..    :1AE" 0x50
+44
+EndModule
+Module= "6ES5 464-8MF..    :2AE" 0x51
+45
+EndModule
+Module= "6ES5 466-8MC..    :2AE" 0x51
+46
+EndModule
+Module= "6ES5 467-8EE..     :1AE" 0x50
+47
+EndModule
+Module= "6ES5 467-8EE..     :2AE" 0x51
+48
+EndModule
+Module= "6ES5 470-8M...      :2AA" 0x61
+49
+EndModule
+Module= "6ES5 477-8EC..     :2AX" 0xF1
+50
+EndModule
+Module= "6ES5 482-8MA..    :16DX" 0x31
+51
+EndModule
+Module= "6ES5 521-8M...      :4AX" 0xF3
+52
+EndModule
+Module= "6ES5 788-8MA..    :8DE" 0x10
+53
+EndModule
+Module= "6ES5 788-8MA..    :8DA" 0x20
+54
+EndModule
+Module= "6ES5 ...-.....           :8DE" 0x10
+55
+EndModule
+Module= "6ES5 ...-.....           :4AX" 0xF3
+56
+EndModule

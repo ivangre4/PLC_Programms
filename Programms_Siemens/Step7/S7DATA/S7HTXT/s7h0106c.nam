@@ -1,0 +1,42 @@
+[2363889]
+KatEntryName=V2.3
+InfoText=Mémoire de travail 256 Ko; 0,1ms/Kinst; port PROFINET; communication S7 (FB/FC chargeables); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; protocole de transport TCP/IP; port MPI/DP combiné (MPI ou maître DP ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules; cycle de bus DP équidistant; routage; firmware V2.3, mise en oeuvre dans applications de sécurité possible
+SHORTNAME=CPU 315F-2 PN/DP
+Comment=6ES7 315-2FH13-0AB0, 6ES7 317-2FK13-0AB0
+
+[2363891]
+SHORTNAME=MPI/DP
+
+[2363892]
+InfoText=PROFINET IO-Controller de la CPU 315F-2 PN/DP
+SHORTNAME=PN-IO
+
+[2363890]
+KatEntryName=6ES7 315-2FH13-0AB0
+SHORTNAME=CPU 315F-2 PN/DP
+InfoText=
+
+[2363893]
+KatEntryName=V2.3
+InfoText=Mémoire de travail 1024 Ko; 0,05ms/Kinst; port PROFINET; communication S7 (FB/FC chargeables); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; protocole de transport TCP/IP; port MPI/DP combiné (MPI ou maître DP ou esclave); configuration à plusieurs rangées jusqu'à 32 modules; cycle de bus DP équidistant; routage; firmware V2.3, mise en oeuvre dans applications de sécurité possible
+SHORTNAME=CPU 317F-2 PN/DP
+
+[2363895]
+SHORTNAME=MPI/DP
+
+[2363896]
+InfoText=PROFINET IO-Controller de la CPU 317F-2 PN/DP
+SHORTNAME=PN-IO
+
+[2363894]
+KatEntryName=6ES7 317-2FK13-0AB0
+SHORTNAME=CPU 317F-2 PN/DP
+InfoText=
+
+[2363778]
+KatEntryName=CPU 315F-2 PN/DP
+InfoText=Modules d'unité centrale de type CPU 315F-2 PN/DP
+
+[2363782]
+KatEntryName=CPU 317F-2 PN/DP
+InfoText=Modules d'unité centrale de type CPU 317F-2 PN/DP

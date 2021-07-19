@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Dieter (Siemens AG) -->
+<xsd:schema targetNamespace="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.siemens.com/Industry/2002/07/Automation/Primitives" schemaLocation="PrimitivesV1.xsd"/>
+	<!-- GROUPS -->
+	<xsd:group name="DefaultCurrentG">
+		<xsd:annotation>
+			<xsd:documentation>Any Default and Current values</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Default">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+						<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Current">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+						<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- COMPLEX TYPES -->
+	<xsd:complexType name="GenericObjectT" block="#all">
+		<xsd:annotation>
+			<xsd:documentation>Generic Object</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericFeatureT" block="#all">
+		<xsd:annotation>
+			<xsd:documentation>Generic Version of a DIA-X feature</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="prim:Parameter" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element ref="prim:Reference" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="prim:References" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element ref="prim:Object" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="prim:Objects" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="prim:ReferencePartOf" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:choice>
+					<xsd:element ref="prim:Connector" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="prim:Connection" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="prim:Feature" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericFeatureReferenceT" block="#all">
+		<xsd:annotation>
+			<xsd:documentation>Generic Version of a DIA-X feature reference</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureReferenceT">
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericParameterT" block="#all" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Generic version of a DIA-X Parameter
+
+If you have only a single value, use the first content model.
+If you have a default and a current value, use the second content model with the Default and Current elements.
+
+The actual value is supposed to be the content of the element.
+In case of simple Types, this is Text content.
+For Complex Types, the constituting elements of the complex type will be the sub-elements of the parameter.
+                 </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent mixed="true">
+			<xsd:extension base="prim:ParameterT">
+				<xsd:choice>
+					<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:group ref="DefaultCurrentG"/>
+				</xsd:choice>
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericReferenceT" block="#all" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Generic version of Reference
+
+If you have only a single value, use the first content model.
+If you have a default and a current value, use the second content model with the Default and Current elements.
+
+The actual value is supposed to be the content of the element.
+In case of simple Types, this is Text content.
+For Complex Types, the constituting elements of the complex type will be the sub-elements of the reference.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent mixed="true">
+			<xsd:extension base="prim:ReferenceT">
+				<xsd:choice>
+					<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:group ref="DefaultCurrentG"/>
+				</xsd:choice>
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericConnectorT" block="#all" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Generic version of ConnectorT
+
+If you have only a single value, use the first content model.
+If you have a default and a current value, use the second content model with the Default and Current elements.
+
+The actual value is supposed to be the content of the element.
+In case of simple Types, this is Text content.
+For Complex Types,  the constituting elements of the complex type will be the sub-elements of the connector.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent mixed="true">
+			<xsd:extension base="prim:ConnectorT">
+				<xsd:choice>
+					<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:group ref="DefaultCurrentG"/>
+				</xsd:choice>
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GenericConnectionT" block="#all">
+		<xsd:annotation>
+			<xsd:documentation>Generic version of Connections</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="prim:ConnectionT">
+				<xsd:attribute name="Tag" type="xsd:QName" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ELEMENT DECLARATIONS -->
+	<xsd:element name="GenericObject" type="GenericObjectT" substitutionGroup="prim:Object"/>
+	<xsd:element name="GenericFeature" type="GenericFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="GenericFeatureReference" type="GenericFeatureReferenceT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="GenericParameter" type="GenericParameterT" substitutionGroup="prim:Parameter"/>
+	<xsd:element name="GenericReference" type="GenericReferenceT" substitutionGroup="prim:Reference"/>
+	<xsd:element name="GenericConnector" type="GenericConnectorT" substitutionGroup="prim:Connector"/>
+	<xsd:element name="GenericConnection" type="GenericConnectionT" substitutionGroup="prim:Connection"/>
+</xsd:schema>

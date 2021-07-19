@@ -1,0 +1,709 @@
+{\rtf1\ansi\ansicpg1252\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}{\f1\froman\fcharset2 Symbol;}{\f2\fswiss\fprq2 Arial;}{\f3\froman Times New Roman;}{\f4\froman\fprq2\fcharset2 Symbol;}}
+{\colortbl\red0\green0\blue0;}
+\deflang1033\horzdoc{\*\fchars }{\*\lchars }\pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs32\b Standards Compliance according to IEC 61131-3
+\par \pard\qc\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs32 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs24\b\ul 1.\tab Introduction:\plain\f2\fs20 
+\par 
+\par The \plain\f2\fs20\b IEC 61131\plain\f2\fs20  standard is applicable for the programmable logic controllers (PLC).
+\par In accordance with the rules of the European Union, this international standard has been accepted in Germany as DIN EN 6 1131, in France as NF EN 6 1131, and in England as BS EN 6 1131.
+\par The most important parts of the standard are quoted below. Quotes are in italics.
+\par 
+\par \plain\f2\fs20\b Part 3 of this standard defines the application area in Section 1.1:
+\par \plain\f2\fs20\i " This Part of IEC 1131 applies to the printed and displayed representation, using characters of the ISO 646 character set, of the programming languages to be used for Programmable Controllers as defined in Part 1 of IEC 1131.  Graphic and semigraphic representation of the language elements which are defined in this Part is allowed, but is not defined in this Part.
+\par The functions of program entry, testing, monitoring, operating system, etc., are specified in Part 1 of IEC 1131."
+\par 
+\par \plain\f2\fs20\b Section 1.4 explains the overview and general requirements.
+\par \plain\f2\fs20\i " This Part of IEC 1131 specifies the syntax and semantics of a unified suite of programming languages for programmable controllers (PCs).  These consist of two textual languages, IL (Instruction List) and ST (Structured Text), and two graphical languages, LD (Ladder Diagram) and FBD (Function Block Diagram). 
+\par Sequential Function Chart (SFC) elements are defined for structuring the internal organization of programmable controller programs and function blocks.  Also, configuration elements are defined which support the installation of programmable controller programs into programmable controller systems.
+\par The programming language elements defined in this part may be used in an interactive programming environment.  The specification of such environments is beyond the scope of this Part; however, such an environment shall be capable of producing textual or graphic program documentation in the formats specified in this part." 
+\par 
+\par \plain\f2\fs20\b Section 1.5 of the standards fulfillment specifies:\plain\f2\fs20\b\i 
+\par \plain\f2\fs20\i " A programmable controller system, as defined in IEC 1131-1, which claims to comply, wholly or partially, with the requirements of  this Part of  IEC 1131 shall do so only as described below.
+\par A compliance statement shall be included in the documentation accompanying the system, or shall be produced by the system itself.  The form of the compliance statement shall be:
+\par "This system complies with the requirements of IEC 1131-3, for the following language features:",
+\par followed by a set of compliance tables in the following format:" (see tables).
+\par 
+\par \plain\f2\fs24\b 2.\tab Standards Compliance in STEP 7
+\par \plain\f2\fs20\b 
+\par The \plain\f2\fs20\b\ul SIMATIC STEP 7\plain\f2\fs20\b  system complies with the requirements of IEC 1131-3 for the following programming languages
+\par 
+\par \plain\lang1031\f4\fs20\b \'b7\tab \plain\f2\fs20\b Statement List\tab AWL/STL\tab (corresponds to the IEC 1131-3 language "STL/IL")
+\par \plain\lang1031\f4\fs20\b \'b7\tab \plain\f2\fs20\b Ladder Logic\tab \tab KOP/LAD\tab (corresponds to the IEC 1131-3 language "LAD/LD")
+\par \plain\lang1031\f4\fs20\b \'b7\tab \plain\f2\fs20\b Function Block Diagram FUP/FBD\tab (corresponds to the IEC 1131-3 language "FUP/FBD")
+\par \plain\lang1031\f4\fs20\b \'b7\tab \plain\f2\fs20\b Structured Control Language SCL \tab (corresponds to the IEC 1131-3 language "ST")
+\par \plain\lang1031\f4\fs20\b \'b7\tab \plain\f2\fs20\b S7-GRAPH \tab \tab \tab \tab \tab (corresponds to the IEC 1131-3 language "AS/SFC") 
+\par 
+\par in the characteristics described in the following Chapter 4 and in the appendices\plain\f2\fs24\b .
+\par 
+\par \plain\f2\fs20\b\ul SIMATIC STEP 7 Lite\plain\f2\fs20\b  only offers the programming languages STL/LAD/FBD. In accordance with this, the following statements concerning the IEC languages ST / SFC do not apply to STEP 7 Lite.
+\par \plain\f2\fs24\b 
+\par 3.\tab Substitutes and Additional Language Elements
+\par \plain\f2\fs20 
+\par In addition, the standard stipulates that
+\par 
+\par \pard\li284\fi-284\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 a) \tab A standardized PLC system may not include any substitute or additional language element to attain a standardized characteristic.
+\par b)\tab All implementation-dependent parameters must be specified according to \plain\f2\fs20\i\ul Annex D\plain\f2\fs20 .
+\par c)\tab User errors from \plain\f2\fs20\i\ul Annex E\plain\f2\fs20  must be reported; (for a partial program check, reference must be made to incompleteness).
+\par d)\tab User errors during converting and/or during start-up must be reported, and appropriate measures must be specified or introduced.
+\par e)\tab All characteristics not permissible or not present in the standard must be described as "expansions."
+\par f) \tab These expansions must be treated in the same way as is specified for errors (as a test that can be used as an option).
+\par g)\tab All implementation-independent characteristics from \plain\f2\fs20\i Appendix D \plain\f2\fs20 must be handled as is specified for errors\plain\f2\fs20\i  \plain\f2\fs20 (as a test that can be used as an option\plain\f2\fs20\i ).\plain\f2\fs20 
+\par h)\tab No standardized names with meanings that vary can be used for manufacturer-defined characteristics.
+\par i)\tab The formal syntax of the text languages is described according to \plain\f2\fs20\i\ul Annex A\plain\f2\fs20 .
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 
+\par 
+\par \plain\f2\fs20\b The STEP 7 programming software fulfills the requirements of the standard in points b), c), d), e), h), i). In respect to a), there exist language elements for compatibility reasons with STEP 5, which might be taken for additional elements. The f) and g) requirements are not used for STEP 7.
+\par 
+\par \plain\f2\fs20   
+\par 
+\par 
+\par \plain\f2\fs28\b 4.\tab \tab Elements Realized According to the Standard
+\par 
+\par \plain\f2\fs20 The standard defines all standardized language elements in tables, the rows of which reference the realized feature by number. The language elements which are realized in STEP 7 according to the standard are specified below.
+\par 
+\par (A good knowledge of the norm mentioned is a prerequisite for understanding the following tables. 
+\par \plain\f2\fs18 The German version of \plain\f2\fs18\b DIN IEC 61131-3 : 1994-08\plain\f2\fs18  can be obtained from 
+\par \tab \plain\lang1031\f2\fs18 Beuth Verlag GmbH, 10772 Berlin, Germany,  Fax (..30) 2601-1231.
+\par \plain\f2\fs18 The International Standard  \plain\f2\fs18\b IEC 1131-3 : First edition 1993-03\plain\f2\fs18   (English/French) can be obtained from 
+\par \tab Central Office of IEC, 3 rue de Varembe, Geneve, Switzerland.\plain\f2\fs20 )\plain\f2\fs18 
+\par \plain\f2\fs20 
+\par 
+\par \plain\f2\fs24\b 4.1  Common Elements
+\par \plain\f2\fs20 
+\par 
+\par \plain\f2\fs20\b Table\tab \tab No.\tab Language Elements
+\par _____________________________________________________________________________
+\par \plain\f2\fs20 \tab 
+\par 1\tab \tab \tab \plain\f2\fs20\b Character set features\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Required character set\tab 
+\par \tab \tab \tab 2\tab \tab Lower case characters\tab 
+\par \tab \tab \tab 3a\tab \tab Number sign\tab 
+\par \tab \tab \tab 3b\tab \tab Pound sign\tab 
+\par \tab \tab \tab 4a\tab \tab Dollar sign\tab 
+\par \tab \tab \tab 4b\tab \tab Currency sign\tab 
+\par \tab \tab \tab 5a\tab \tab Vertical bar\tab 
+\par \tab \tab \tab 5b\tab \tab Exclamation mark\tab 
+\par \tab \tab \tab 6a\tab \tab Left and right brackets\tab 
+\par \tab \tab \tab 6b\tab \tab Left and right parenthesis\tab 
+\par \tab \tab 
+\par \tab \tab \tab Note: Windows character set, which includes these characters.
+\par \tab \tab \tab Identifiers are case-sensitive.
+\par \tab 
+\par 2\tab \tab \plain\f2\fs20\b Identifier features\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Upper case and numbers\tab 
+\par \tab \tab \tab 2\tab \tab Upper and lower case, numbers, embedded underlines\tab 
+\par \tab \tab \tab 3\tab \tab Upper and lower case, numbers
+\par \tab 
+\par 3\tab \tab \plain\f2\fs20\b Comment features\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Comment
+\par \tab 
+\par \tab \tab \tab Note: STL only line comments starting with // and ending with new line.\tab 
+\par 
+\par 4\tab \tab \plain\f2\fs20\b Numeric literals\tab 
+\par \tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Integer literals\tab 
+\par \tab \tab \tab 2\tab \tab Real literals\tab 
+\par \tab \tab \tab 3\tab \tab Real literals with exponents\tab 
+\par \tab \tab \tab 4\tab \tab Base 2 literals\tab 
+\par \tab \tab \tab 5\tab \tab Base 8 literals\tab (SCL only)
+\par \tab \tab \tab 6\tab \tab Base 16 literals *)\tab 
+\par \tab \tab \tab 7\tab \tab Boolean digits 0/1\tab (SCL only)
+\par \tab \tab \tab 8\tab \tab Boolean FALSE and TRUE\tab 
+\par 
+\par \tab \tab \tab Note *): bit length required: W#16#ADAC, DW#16#ADAC_4711
+\par \tab 
+\par 5\tab \tab \tab 1\tab \plain\f2\fs20\b Character string literals\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab Note: No print hex characters.
+\par \tab 
+\par 6\tab \tab \tab \plain\f2\fs20\b Two-character combinations in character strings\tab \plain\f2\fs20 
+\par \tab \tab \tab 2\tab \tab $$\tab 
+\par \tab \tab \tab 3\tab \tab $'\tab 
+\par \tab \tab \tab 4\tab \tab $L or $\tab 
+\par \tab \tab \tab 5\tab \tab $N
+\par \tab \tab \tab 6\tab \tab $P or $p\tab 
+\par \tab \tab \tab 7\tab \tab $R or $r\tab 
+\par \tab \tab \tab 8\tab \tab $T or $t
+\par \tab 
+\par 7\tab \tab \tab \plain\f2\fs20\b Duration literal features\tab \plain\f2\fs20 
+\par \tab \tab \tab 1a\tab \tab without underlines: short prefix\tab 
+\par \tab \tab \tab 1b\tab \tab long prefix\tab 
+\par \tab \tab \tab 2a\tab \tab with underlines: short prefix\tab 
+\par \tab \tab \tab 2b\tab \tab long prefix
+\par \tab 
+\par \tab \tab \tab Note: keywords are not case-sensitive.
+\par 
+\par 8\tab \tab \tab \plain\f2\fs20\b Date and time of day literals\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Date literals (long prefix)\tab 
+\par \tab \tab \tab 2\tab \tab Date literals (short prefix)\tab 
+\par \tab \tab \tab 3\tab \tab Time of day literals (long prefix)\tab 
+\par \tab \tab \tab 4\tab \tab Time of day literals (short prefix)\tab 
+\par \tab \tab \tab 5\tab \tab Date and time literals (long prefix)\tab 
+\par \tab \tab \tab 6\tab \tab Date and time literals (short prefix)\tab 
+\par 
+\par \tab \tab \tab Note: keywords are not case-sensitive.
+\par 
+\par 10\tab \tab \tab \plain\f2\fs20\b Keywords\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab BOOL\tab 
+\par \tab \tab \tab 3\tab \tab INT\tab 
+\par \tab \tab \tab 4\tab \tab DINT\tab 
+\par \tab \tab \tab 10\tab \tab REAL\tab 
+\par \tab \tab \tab 12\tab \tab TIME\tab 
+\par \tab \tab \tab 13\tab \tab DATE\tab 
+\par \tab \tab \tab 14\tab \tab TIME_OF_DAY or TOD\tab 
+\par \tab \tab \tab 15\tab \tab DATE_AND_TIME or DT\tab 
+\par \tab \tab \tab 16\tab \tab STRING *)\tab 
+\par \tab \tab \tab 17\tab \tab BYTE\tab 
+\par \tab \tab \tab 18\tab \tab WORD\tab 
+\par \tab \tab \tab 19\tab \tab DWORD
+\par \tab 
+\par \tab \tab \tab *): STRING n with length n; otherwise 254 bytes.\tab 
+\par 
+\par 12\tab \tab \tab \plain\f2\fs20\b Data type declaration\tab \plain\f2\fs20 
+\par \tab \tab \tab 4\tab \tab Array data types\tab 
+\par \tab \tab \tab 5\tab \tab Structured data types   *)
+\par 
+\par \tab \tab \tab *): data types have to be declared individually.
+\par 
+\par 14\tab \tab \tab \plain\f2\fs20\b Data type initial value declaration features\tab \plain\f2\fs20 
+\par \tab \tab \tab 4\tab \tab Initialization of array data type elements
+\par \tab \tab \tab 5\tab \tab Initialization of structured data type elements
+\par 
+\par 15\tab \tab \tab \plain\f2\fs20\b Memory Location and size prefix features for directly represented variables\plain\f2\fs20 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 1\tab \tab I or E\tab \tab depending in the language setting\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab 2\tab \tab Q or A\tab depending in the language setting \tab 
+\par \tab \tab \tab \plain\lang1040\f2\fs20 3\tab \tab M\tab 
+\par \tab \tab \tab 4\tab \tab X *)\tab 
+\par \tab \tab \tab 5\tab \tab none\tab 
+\par \tab \tab \tab \plain\f2\fs20 6\tab \tab B\tab 
+\par \tab \tab \tab 7\tab \tab W\tab 
+\par \tab \tab \tab 8\tab \tab D
+\par \tab 
+\par \tab \tab \tab *): for DB and DI only.\tab 
+\par 
+\par 16\tab \tab \tab \plain\f2\fs20\b Keywords for variable declarations\tab \plain\f2\fs20 
+\par \tab \tab \tab VAR, VAR_INPUT, VAR_OUTPUT, VAR_IN_OUT according to IEC
+\par 
+\par 17\tab \tab \tab \plain\f2\fs20\b Assignment of types to variables\tab \plain\f2\fs20 
+\par \tab \tab \tab 5\tab \tab Automatic memory allocation of symbolic variables  *) see note in table 10
+\par \tab \tab \tab 6\tab \tab Array declaration\tab 
+\par \tab \tab \tab 8\tab \tab Declaration of structured variables
+\par \tab 
+\par 18\tab \tab \tab \plain\f2\fs20\b Assignment of initial values for variables\tab \plain\f2\fs20 
+\par \tab \tab \tab 5\tab \tab Initialization of symbolic variables  *) see note in table 10
+\par \tab \tab \tab 6\tab \tab Array initialization
+\par \tab 
+\par 20\tab \tab \tab \plain\f2\fs20\b Use of EN input and ENO output\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Use of "EN" and "ENO " with FBD\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 2\tab Use "EN" and "ENO" with LAD
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 
+\par 21\tab \tab \tab \plain\f2\fs20\b Typed and overloaded functions\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 1\tab \tab Overloaded functions   (SCL only)
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab 2\tab \tab Typed functions\tab 
+\par 
+\par \tab \tab \tab Note: Only 2 parameters with FDB/LAD; EN + ENO additional.\tab 
+\par 
+\par 22\tab \tab \tab \plain\f2\fs20\b Type conversion function features\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab *_TO_**\tab 
+\par \tab \tab \tab 2\tab \tab TRUNC\tab 
+\par \tab \tab \tab 3\tab \tab BCD_TO_**   (not for SCL)
+\par \tab \tab \tab 4\tab \tab *_TO_BCD    (not for SCL)
+\par 
+\par 
+\par 
+\par 23\tab \tab \tab \plain\f2\fs20\b Standard functions of one numeric variable\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab ABS\tab 
+\par \tab \tab \tab 2\tab \tab SQRT\tab 
+\par \tab \tab \tab 3\tab \tab LN *)
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 4\tab \tab LOG\tab \tab (SCL only)\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab 5\tab \tab EXP\tab 
+\par \tab \tab \tab 6\tab \tab SIN *)\tab 
+\par \tab \tab \tab 7\tab \tab COS *)\tab 
+\par \tab \tab \tab 8\tab \tab TAN *)\tab 
+\par \tab \tab \tab 9\tab \tab ASIN *)\tab 
+\par \tab \tab \tab 10\tab \tab ACOS *)\tab 
+\par \tab \tab \tab 11\tab \tab ATAN *)\tab 
+\par 
+\par \tab \tab \tab *):  The implementation of these functions is CPU specific. 
+\par \tab \tab \tab Note: The I/O type of the functions is REAL.\tab 
+\par 
+\par 24\tab \tab \tab \plain\f2\fs20\b Standard arithmetic functions\tab \plain\f2\fs20 
+\par \tab \tab \tab 12\tab \tab ADD +\tab 
+\par \tab \tab \tab 13\tab \tab MUL *\tab 
+\par \tab \tab \tab 14\tab \tab SUB -\tab 
+\par \tab \tab \tab 15\tab \tab DIV /\tab 
+\par \tab \tab \tab 16\tab \tab MOD\tab 
+\par \tab \tab \tab 18\tab \tab MOVE :=\tab 
+\par 
+\par \tab \tab \tab Note: All functions with FBD/LAD are typed (e.g. integer).
+\par 
+\par \tab 
+\par 
+\par 25\tab \tab \tab \plain\f2\fs20\b Standard bit shift functions\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab SHL\tab 
+\par \tab \tab \tab 2\tab \tab SHR\tab 
+\par \tab \tab \tab 3\tab \tab ROR\tab 
+\par \tab \tab \tab 4\tab \tab ROL\tab 
+\par 
+\par \tab \tab \tab Note: All functions are typed (e.g. word).
+\par \tab 
+\par 26\tab \tab \tab \plain\f2\fs20\b Standard bitwise Boolean functions\tab \plain\f2\fs20 
+\par \tab \tab \tab 5\tab \tab AND\tab 
+\par \tab \tab \tab 6\tab \tab OR\tab 
+\par \tab \tab \tab 7\tab \tab XOR *)\tab 
+\par \tab \tab \tab 8\tab \tab NOT\tab 
+\par 
+\par \tab \tab \tab *): not for LAD\tab 
+\par 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 27\tab \tab \tab \plain\f2\fs20\b \tab Standard selection functions\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab \plain\lang1036\f2\fs20 1\tab \tab SEL\tab 
+\par \tab \tab \tab \tab 2a\tab \tab MAX\tab 
+\par \tab \tab \tab \tab 2b\tab \tab MIN\tab 
+\par \tab \tab \tab \tab \plain\f2\fs20 3\tab \tab LIMIT\tab 
+\par 
+\par 28\tab \tab \tab \plain\f2\fs20\b \tab Standard compare functions\tab \plain\f2\fs20 
+\par \tab \tab \tab \tab 5\tab \tab GT\tab \tab >\tab 
+\par \tab \tab \tab \tab 6\tab \tab GE\tab >=\tab 
+\par \tab \tab \tab \tab 7\tab \tab EQ\tab =\tab 
+\par \tab \tab \tab \tab \plain\lang1036\f2\fs20 8\tab \tab LE\tab \tab <=\tab 
+\par \tab \tab \tab \tab 9\tab \tab LT\tab \tab <\tab 
+\par \tab \tab \tab \tab 10\tab \tab NE\tab \tab <>\tab 
+\par \tab 
+\par \tab \tab \tab \tab \plain\f2\fs20 Note: All functions are typed with FBD/LAD (e.g. Word).
+\par 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 29\tab \tab \tab \plain\f2\fs20\b STRING data type functions\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab LEN\tab 
+\par \tab \tab \tab 2\tab \tab LEFT\tab 
+\par \tab \tab \tab 3\tab \tab RIGHT\tab 
+\par \tab \tab \tab 4\tab \tab MID\tab 
+\par \tab \tab \tab 5\tab \tab CONCAT\tab 
+\par \tab \tab \tab 6\tab \tab INSERT\tab 
+\par \tab \tab \tab 7\tab \tab DELETE\tab 
+\par \tab \tab \tab 8\tab \tab REPLACE\tab 
+\par \tab \tab \tab 9\tab \tab FIND\tab 
+\par 
+\par \tab \tab \tab Note: the implementation of these functions is CPU-specific.
+\par 
+\par 30\tab \tab \tab \plain\f2\fs20\b TIME data type functions\tab \plain\f2\fs20 
+\par \tab \tab \tab \plain\lang1031\f2\fs20 3\tab \tab ADD_DT_T\tab 
+\par \tab \tab \tab \plain\f2\fs20 8\tab \tab SUB_DT_T\tab 
+\par \tab \tab \tab 9\tab \tab SUB_DT_DT\tab 
+\par \tab \tab \tab 12\tab \tab CONTACT_D_TOD\tab 
+\par 
+\par \tab \tab \tab Note: the implementation of these functions is CPU-specific.\tab 
+\par 
+\par 33\tab \tab \tab \plain\f2\fs20\b Function block declaration features\tab \plain\f2\fs20 
+\par \tab \tab \tab 4a\tab \tab Input/output declaration (textual)\tab 
+\par \tab \tab \tab 4b\tab \tab Input/output declaration (graphical)\tab 
+\par 
+\par 34\tab \tab \tab \plain\f2\fs20\b Standard bistable function blocks\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab SR\tab 
+\par \tab \tab \tab 2\tab \tab RS\tab 
+\par 
+\par \tab \tab \tab Note: SR_FF is reset dominant; RS_FF is set dominant.\tab 
+\par 
+\par 
+\par 
+\par \plain\f2\fs20\b\ul 
+\par \plain\f2\fs24\b 4.2\tab S7-GRAPH Elements (Sequential Function Chart, SFC)
+\par 
+\par \plain\f2\fs20\b Table \tab No.\tab Language Elements\tab 
+\par \plain\f2\fs20 40\tab \plain\f2\fs20\b \tab \tab Step\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Graphical form:   step, initial step\tab 
+\par \tab \tab \tab 2\tab \tab Textual form: *    step, initial step\tab 
+\par \tab \tab \tab 3a\tab \tab Step flag - general form\tab 
+\par \tab \tab \tab 3b\tab \tab Step flag - direct connection\tab 
+\par \tab \tab \tab 4\tab \tab Step elapsed time\tab 
+\par \tab \tab \tab Note *): textual form: *.GR7
+\par 
+\par 41\tab \plain\f2\fs20\b \tab \tab Transitions and transition conditions\tab 
+\par \plain\f2\fs20 \tab \tab \tab 2\tab \tab Condition in FBD\tab 
+\par \tab \tab \tab 5\tab \tab Condition in textual form\tab 
+\par \tab \tab \tab 7d\tab \tab Name\tab 
+\par \tab 
+\par 42\tab \plain\f2\fs20\b \tab \tab Declaration of actions\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Any Boolean variable
+\par \tab \tab 
+\par 43\tab \plain\f2\fs20\b \tab \tab Step/action association\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Action block\tab 
+\par \tab \tab \tab 2\tab \tab Concatenated actions\tab 
+\par \tab \tab \tab 3\tab \tab Textual step body\tab 
+\par 
+\par 44\tab \plain\f2\fs20\b \tab \tab Action block features\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab \plain\lang1036\f2\fs20 1\tab \tab "a": qualifier\tab 
+\par \tab \tab \tab 2\tab \tab "b": action name\tab 
+\par 
+\par 45\tab \tab \plain\lang1036\f2\fs20\b \tab Action qualifiers\plain\lang1036\f2\fs20 \tab \plain\lang1036\f2\fs20\b 
+\par \plain\lang1036\f2\fs20 \tab \tab \tab \plain\f2\fs20 2\tab \tab N\tab 
+\par \tab \tab \tab 3\tab \tab R\tab 
+\par \tab \tab \tab 4\tab \tab S\tab 
+\par \tab \tab \tab 5\tab \tab L\tab 
+\par \tab \tab \tab 6\tab \tab D\tab 
+\par \tab \tab \tab Note: for detailed information see S7-Graph. S7-Graph has additional qualifiers for 
+\par \tab \tab \tab actions with conditions.\tab 
+\par 
+\par 46\tab \plain\f2\fs20\b \tab \tab Sequence evolution\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Single sequence\tab 
+\par \tab \tab \tab 2a\tab \tab Divergence of sequence selection
+\par \plain\f2\fs20\b \tab \tab \tab \plain\f2\fs20 3\tab \tab Convergence of sequence selection\tab 
+\par \tab \tab \tab \plain\lang1036\f2\fs20 4\tab \tab Simultaneous sequences - divergence/convergence\tab 
+\par \tab \tab \tab \plain\f2\fs20 5a\tab \tab Sequence skip\tab 
+\par \tab \tab \tab 6a\tab \tab Sequence loop\tab 
+\par \tab \tab \tab 7\tab \tab Directional arrows\tab 
+\par \plain\f2\fs20\b 
+\par \plain\f2\fs24\b 4.3\tab Configuration Elements
+\par \plain\f2\fs20\b\ul 
+\par \plain\f2\fs20 50\tab \tab \tab 1-5\tab \plain\f2\fs20\b Task features\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab In STEP 7, tasks are provided by organization blocks (OBs).
+\par 
+\par \plain\f2\fs20\ul 
+\par \plain\lang1036\f2\fs24\b 4.4\tab Instruction List Language (IL)
+\par \plain\lang1036\f2\fs20 
+\par \plain\f2\fs20 Remark for no. 52:
+\par STL in STEP 7 differs essentially from the standard regarding the command syntax (see no. 52). This difference is necessary to meet the requirements concerning compatibility with STL in STEP 5.
+\par In addition, STL in both STEP 5 and STEP 7 include far more commands than defined in the basic command set of the standard.
+\par 
+\par 
+\par 
+\par 
+\par \plain\f2\fs20\b Table \tab No.\tab Language Elements
+\par \tab 
+\par \plain\f2\fs20 52\tab \tab \tab \plain\f2\fs20\b Operators\tab \plain\f2\fs20 
+\par \tab \tab \tab 1-21\tab Note: different syntax, same functionality.
+\par \tab 
+\par 53\tab \tab \tab \plain\f2\fs20\b Function block invocation features for IL language\tab \plain\f2\fs20 
+\par \tab \tab \tab 1-3\tab CAL with input list, with load/store of inputs, use of input operators\tab 
+\par \tab \tab \tab 3\tab \tab Use of input operators *)\tab 
+\par 
+\par \tab \tab \tab Note: different syntax, same functionality.\tab 
+\par 
+\par \plain\f2\fs24\b 4.5\tab \tab Language (Structured Text(, ST)
+\par \plain\f2\fs20 
+\par \plain\f2\fs20\b Table\tab \tab No.\tab Language Elements
+\par \tab 
+\par \plain\f2\fs20 55\tab \tab \plain\f2\fs20\b \tab Operators of the ST language\tab \tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Parenthesis\tab ( )\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 2\tab \tab Function evaluation
+\par \tab \tab \tab 3\tab \tab Exponent\tab **\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab 5\tab \tab Complement\tab NOT\tab 
+\par \tab \tab \tab 6\tab \tab Multiply\tab \tab \tab *\tab 
+\par \tab \tab \tab \plain\lang1040\f2\fs20 7\tab \tab Divide\tab \tab \tab /\tab 
+\par \tab \tab \tab 8\tab \tab Modulo\tab \tab \tab MOD\tab 
+\par \tab \tab \tab \plain\f2\fs20 9\tab \tab Add\tab \tab \tab +\tab 
+\par \tab \tab \tab 10\tab \tab Subtract\tab \tab \tab -\tab 
+\par \tab \tab \tab 11\tab \tab Comparison\tab <, >, <=, >=\tab 
+\par \tab \tab \tab 12\tab \tab Equality\tab \tab \tab =\tab 
+\par \tab \tab \tab 13\tab \tab Inequality\tab \tab <>\tab 
+\par \tab \tab \tab 14\tab \tab Boolean AND\tab & AND\tab 
+\par \tab \tab \tab 16\tab \tab Boolean Exclusive OR\tab XOR\tab 
+\par \tab \tab \tab 17\tab \tab Boolean OR\tab \tab OR\tab 
+\par 
+\par 56\tab \plain\f2\fs20\b \tab \tab ST language statements\tab 
+\par \plain\f2\fs20 \tab \tab \tab 1\tab \tab Assignment\tab 
+\par \tab \tab \tab 2\tab \tab Function block invocation and FB output usage\tab 
+\par \tab \tab \tab 3\tab \tab RETURN\tab 
+\par \tab \tab \tab 4\tab \tab IF\tab 
+\par \tab \tab \tab 5\tab \tab CASE \tab 
+\par \tab \tab \tab 6\tab \tab FOR \tab 
+\par \tab \tab \tab 7\tab \tab WHILE\tab 
+\par \tab \tab \tab 8\tab \tab REPEAT\tab 
+\par \tab \tab \tab 9\tab \tab EXIT\tab 
+\par \tab \tab \tab 10\tab \tab Empty statement\tab 
+\par \plain\f2\fs24\b 
+\par \plain\f2\fs20 
+\par 
+\par \plain\f2\fs24\b 4.6\tab Common Graphical Elements
+\par 
+\par \plain\f2\fs20\b Table \tab No.\tab Language Elements
+\par \plain\f2\fs20 57\tab \tab \tab \tab \tab Representation of lines and blocks\plain\f2\fs20\b \tab \plain\f2\fs20 
+\par \tab \tab \tab \tab \tab Horizontal lines:
+\par \tab \tab \tab 1\tab \tab ISO/IEC 646 "minus" character
+\par \tab \tab \tab 2\tab \tab Graphic or semigraphic
+\par \tab 
+\par \tab \tab \tab \tab \tab Vertical lines:
+\par \tab \tab \tab 3\tab \tab ISO/IEC 646 "vertical line" character
+\par \tab \tab \tab 4\tab \tab Graphic or semigraphic
+\par \tab 
+\par \tab \tab \tab \tab \tab Horizontal/vertical connection:\tab 
+\par \tab \tab \tab 5\tab \tab ISO/IEC 646 "plus" character
+\par \tab \tab \tab 6\tab \tab Graphic or semigraphic
+\par \tab 
+\par \tab \tab \tab \tab \tab Blocks with connecting lines:
+\par \tab \tab \tab 11\tab \tab ISO/IEC 646 characters
+\par \tab \tab \tab 12\tab \tab Graphic or semigraphic\tab 
+\par 
+\par 58\tab \tab \plain\f2\fs20\b Graphic execution control elements\tab 
+\par \plain\f2\fs20 
+\par \tab \tab \tab 2\tab \tab Unconditional jump FBD\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 3\tab \tab Conditional jump LAD
+\par \tab \tab \tab 4\tab \tab Conditional jump FBD\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab 5\tab \tab Conditional return FBD\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4395\tx4536\tx6096\tx6237\plain\f2\fs20 \tab \tab \tab 6\tab \tab Conditional jump LAD\tab 
+\par \tab \tab \tab 7\tab \tab Unconditional return\tab 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab 
+\par \tab \tab \tab 8\tab \tab 
+\par \tab \tab \tab Note: in FBD represented as coils.\tab 
+\par 
+\par 
+\par \plain\f2\fs24\b 4.7\tab Ladder Diagram Language (LD)
+\par 
+\par \plain\f2\fs20\b Table \tab No.\tab Language Elements
+\par \tab 
+\par \plain\f2\fs20 59\tab \tab \tab \plain\f2\fs20\b Power rail symbols\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Left power rail\tab 
+\par \tab \tab \tab 2\tab \tab Right power rail\tab 
+\par 
+\par 60\tab \tab \tab \plain\f2\fs20\b Link element symbols\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Horizontal link\tab 
+\par \tab \tab \tab 2\tab \tab Vertical link
+\par \tab 
+\par 61\tab \tab \tab \plain\f2\fs20\b Contacts\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Normally open contact\tab 
+\par \tab \tab \tab 3\tab \tab Normally closed contact\tab 
+\par \tab \tab \tab 5\tab \tab Positive transition-sensing contact\tab 
+\par \tab \tab \tab 7\tab \tab Negative transition-sensing contact\tab 
+\par 
+\par 62\tab \tab \tab \plain\f2\fs20\b Coils\tab \plain\f2\fs20 
+\par \tab \tab \tab 1\tab \tab Coil\tab 
+\par \tab \tab \tab 2\tab \tab Negated coil\tab 
+\par \tab \tab \tab 3\tab \tab SET (latch) coil\tab 
+\par \tab \tab \tab 4\tab \tab RESET (unlatch) coil\tab 
+\par 
+\par \tab \tab \tab \tab \tab \tab 
+\par 
+\par \plain\f2\fs24\b ANNEX A - Syntax
+\par \plain\f2\fs20 
+\par See manual for STL and SCL.
+\par \plain\f2\fs20\b 
+\par \plain\f2\fs24\b 
+\par ANNEX D - Implementation-dependent Parameters
+\par \plain\f2\fs20 
+\par Below, you will find the parameters for the language elements defined in the standard and the limits realized in STEP 7.
+\par 
+\par \plain\f2\fs20\b IEC\tab \tab \plain\f2\fs20 \tab \tab I\tab \plain\f2\fs20\b Parameters\plain\f2\fs20 \tab I\tab \plain\f2\fs20\b STEP 7
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20\b Reference\plain\f2\fs20 \tab \tab I\tab \tab \tab \tab I
+\par - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - -  \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 1  General\tab \tab I\tab Error handling procedures\tab I\tab see Annex E
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - -  \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2  Common \tab \tab I\tab National characters used\tab I yes
+\par elements\tab \tab \tab I\tab # or "pounds Sterling" sign\tab I
+\par \tab \tab \tab \tab \tab I\tab $ or "currency" sign\tab I
+\par \tab \tab \tab \tab \tab I\tab | or !\tab \tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - -- \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum length of identifiers\tab I\tab 24
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - -  - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum comment length\tab I\tab Network comment max. 64 KB
+\par \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Line comment max. 255 characters
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4544\tx4678\tx6106\tx6248\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab Address comment max. 40 characters
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - -  - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Range of values of duration\tab I\tab - 24D_20H_31m_23.648s to     
+\par \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab 24D_20H_31m_23.647s
+\par 
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - -- - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2.3 Data types \tab I\tab Range of values for variables of \tab I\tab - 24D_20H_31m_23.648s
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab TIME type\tab I\tab  24D_20H_31m_23.647s
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Precision of representation of \tab I\tab milliseconds
+\par \tab \tab \tab \tab \tab I\tab seconds in \tab I
+\par \tab \tab \tab \tab \tab I\tab TIME_OF_DAY and\tab I 
+\par \tab \tab \tab \tab \tab I\tab DATE_AND_TIME types\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - -- - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of array \tab I\tab 6
+\par \tab \tab \tab \tab \tab I\tab subscripts\tab I\tab max. 65536 Elements
+\par \tab \tab \tab \tab \tab I\tab Maximum array size\tab I\tab dependent on memory limitations,
+\par \tab \tab \tab \tab \tab I\tab Maximum number of structure \tab I\tab used data type.
+\par \tab \tab \tab \tab \tab I\tab elements\tab \tab I\tab 
+\par \tab \tab \tab \tab \tab I\tab Maximum structure size\tab I\tab max. 64 KB of data possible
+\par \tab \tab \tab \tab \tab I\tab Maximum number of variables \tab I\tab approx. 4000 (estimated)
+\par \tab \tab \tab \tab \tab I\tab per declaration\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - -  - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of \tab I\tab not available
+\par \tab \tab \tab \tab \tab I\tab enumerated values\tab I
+\par - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - -- - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\par \tab \tab \tab \tab \tab I\tab Default maximum length of \tab I
+\par \tab \tab \tab \tab \tab I\tab STRING variables\tab I\tab 254
+\par \tab \tab \tab \tab \tab I\tab Maximum allowed length of \tab I
+\par \tab \tab \tab \tab \tab I\tab STRING variables\tab I\tab 254
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - - - -  \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2.4 Variables\tab I\tab Maximum number of hierarchical\tab I
+\par \tab \tab \tab \tab \tab I\tab levels\tab \tab \tab I\tab 2
+\par \tab \tab \tab \tab \tab I\tab Logical or physical mapping\tab I\tab physical mapping
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - -- - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of subscripts\tab I\tab 6
+\par \tab \tab \tab \tab \tab I\tab Maximum range of subscript \tab I
+\par \tab \tab \tab \tab \tab I\tab values\tab \tab \tab I\tab 65 536 entries
+\par \tab \tab \tab \tab \tab I\tab Maximum number of levels \tab I
+\par \tab \tab \tab \tab \tab I\tab of structures\tab I\tab 8
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - -- - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri77\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Initialization of system inputs\tab I\tab system : 0
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1985\tx2268\tx2410\tx4544\tx4678\tx6106\tx6248\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab user: definable initial values
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - -  \tab I - - - - - - - - - - - - - - - - - - - - -  - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of variables \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab per declaration\tab I\tab approx. 4000 (estimated)
+\par - - - - - - - - - -- \tab I - - - - - - - - - - - - - - - - -  - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2.5 Program \tab I\tab Information to determine \tab I\tab not available
+\par organization\tab  \tab I\tab execution times of program \tab I
+\par units\tab \tab \tab \tab I\tab organization units\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - -- - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Method of function \tab I\tab symbols
+\par \tab \tab \tab \tab \tab I\tab representation (names or \tab I
+\par \tab \tab \tab \tab \tab I\tab symbols)\tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -  - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of function \tab I\tab dependant on PLC
+\par \tab \tab \tab \tab \tab I\tab specifications\tab I\tab 128 to 65536
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -  - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of inputs of \tab I\tab not available\tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab extensible functions\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - -- - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Effects of type conversions on \tab I\tab not available
+\par \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab accuracy\tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - -- - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 \tab \tab \tab \tab \tab \plain\f2\fs20 I\tab Accuracy of functions of one \tab I\tab IEEE Floating point
+\par \tab \tab \tab \tab \tab I\tab variable\tab \tab \tab I
+\par \tab \tab \tab \tab \tab I\tab Implementation of arithmetic\tab I
+\par \tab \tab \tab \tab \tab I\tab functions\tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - -  - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of function \tab I\tab dependent on 
+\par \tab \tab \tab \tab \tab I\tab block specifications and\tab I\tab PLC 128 to 65536
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab instantiations\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - -- - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab PVmin, PVmax of counters\tab I\tab -32568 to 32567
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - -  - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Number/length limitations on \tab I
+\par \tab \tab \tab \tab \tab I\tab SEND inputs and RCV outputs\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -- - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri84\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Program size limitations\tab I\tab dependant on the PLC memory, 
+\par \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab from approx. 1000 instructions
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab per block
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -  - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2.6 Sequential \tab I\tab Timing and portability effects of \tab I
+\par function chart\tab I\tab execution control elements\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - -- - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Precision of step elapsed time\tab I\tab 1 ms
+\par \tab \tab \tab \tab \tab I\tab Maximum number of steps \tab I\tab 250
+\par \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab per SFC\tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -  - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of transitions \tab I\tab 250
+\par \tab \tab \tab \tab \tab I\tab per SFC and per step\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - -- - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri84\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Action control mechanism\tab I\tab all qualifiers except for 
+\par \tab \tab \tab \tab \tab I\tab \tab \tab \tab I\tab "stored delayed"
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - -  - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of actions per \tab I\tab 100
+\par \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab step\tab \tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 - - - - - - - - - - -\tab I - - - -- - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 \tab \tab \tab \tab \tab \plain\f2\fs20 I\tab Graphic indication of step state\tab I\tab colors selectable
+\par \tab \tab \tab \tab \tab I\tab Transition clearing time\tab I\tab <10 \'b5s
+\par \tab \tab \tab \tab \tab I\tab Maximum width of diverge/\tab I\tab 8 parallel / alternative branches
+\par \tab \tab \tab \tab \tab I\tab converge constructs\tab I\tab in 8 chains (64)
+\par \pard\ri84\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - -  - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri142\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 2.7\tab \tab \tab \tab \tab I\tab Contents of RESOURCE\tab I\tab integrated functions /
+\par Configuration \tab I\tab libraries\tab \tab \tab I\tab FB and FC
+\par elements\tab \tab \tab I\tab \tab \tab \tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - -- - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of tasks Task \tab I\tab not available
+\par \tab \tab \tab \tab \tab I\tab interval resolution \tab I
+\par \tab \tab \tab \tab \tab I\tab Pre-emptive or non-pre-emptive \tab I\tab 
+\par \tab \tab \tab \tab \tab I\tab scheduling\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - -- - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 3.3 Structured \tab I\tab Maximum length of expressions\tab I\tab no restriction
+\par Text\tab \tab \tab \tab I\tab Partial evaluation of Boolean \tab I
+\par \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab expressions\tab I\tab no
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 - - - - - - - - - - -\tab I - - - - -  - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri84\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 \tab \tab \tab \tab \tab \plain\f2\fs20 I\tab Maximum length of statements\tab I\tab no restriction
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - - - - - - - - - - - - - -- - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Maximum number of CASE \tab I\tab no restriction
+\par \tab \tab \tab \tab \tab I\tab selections\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - - -- - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Value of control variable upon \tab I\tab end value +1
+\par \tab \tab \tab \tab \tab I\tab termination of FOR loop\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - - - -  - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 4  Graphic\tab \tab I\tab Graphic/semigraphic \tab I\tab graphic
+\par Languages\tab \tab I\tab representation of restrictions on\tab I
+\par \tab \tab \tab \tab \tab I network topology\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 - - - - - - - - - - -\tab I - - - - -- - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\ri187\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\f2\fs20 \tab \tab \tab \tab \tab I\tab Evaluation order of \tab I\tab not available
+\par \tab \tab \tab \tab \tab I\tab feedback loops\tab I
+\par \pard\ri141\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 - - - - - - - - - - -\tab I - - - -- - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\par \pard\tx284\tx567\tx851\tx1134\tx1418\tx1560\tx2268\tx2410\tx4536\tx4678\tx6237\tx6379\plain\lang1040\f2\fs20 
+\par \plain\lang1040\f2\fs24\b ANNEX E - Error Conditions
+\par \plain\lang1040\f2\fs20 
+\par \plain\f2\fs20 Below, you will find the error conditions named in the standard and their occurrence in STEP 7. 
+\par 
+\par \plain\f2\fs20\b Error conditions\plain\f2\fs20 \tab \tab \tab \tab I\tab \plain\f2\fs20\b IL (AWL) and\plain\f2\fs20  \tab I\tab \plain\f2\fs20\b ST (SCL)\plain\f2\fs20 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab \plain\f2\fs20\b LAD (KOP)\plain\f2\fs20 \tab I\tab \plain\f2\fs20\b only additions
+\par \plain\f2\fs20 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Value of a variable exceeds the specified \tab I\tab at run time\tab I\tab at run time
+\par subrange\tab \tab \tab \tab \tab \tab \tab I\tab time\tab I\tab (compilation option)
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Length of initialization list does not match number\tab I\tab at compilation\tab I\tab at compilation
+\par of array entries\tab \tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Improper use of directly represented or external \tab I\tab at compilation\tab I\tab at compilation
+\par variables in functions\tab \tab \tab I\tab time\tab I\tab time
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Type conversion errors\tab \tab \tab I\tab at compilation \tab I\tab at compilation
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab time\tab I\tab time
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Numerical result exceeds range for data type\tab I\tab at run time\tab I\tab request ok flag
+\par Division by zero\tab \tab \tab \tab \tab I\tab request a system\tab I\tab \tab 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab flag\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \plain\f2\fs20 Mixed input data types to a selection function\tab I\tab at compilation\tab I\tab at compilation
+\par Selector (K) out of range for MUX function\tab I\tab time\tab I\tab time
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Invalid character position specified\tab I\tab at run time\tab I\tab at run time
+\par Result exceeds maximum string length\tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Result exceeds range for data type\tab I\tab request of a \tab I\tab request ok flag
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab system flag\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Zero or more than one initial steps in SFC \tab I\tab zero > Compiler\tab I
+\par network \tab \tab \tab \tab \tab \tab \tab I\tab message, up to\tab I
+\par User program attempts to modify step state\tab I 8 init steps\tab I
+\par or time\tab \tab \tab \tab \tab \tab \tab I\tab possible, no error\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab message when\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab modifying step \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab state or time\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Simultaneously true, non-prioritized transitions in \tab I\tab no non-prioritized\tab I
+\par a selection divergence\tab \tab \tab I\tab transitions \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab possible\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \plain\f2\fs20 Side effects in evaluation of transition condition \tab I\tab no, compiler \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab message\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \plain\f2\fs20 Action control contention error\tab I\tab missing SD, \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab therefore no \tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \plain\lang1040\f2\fs20 I\tab message\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \plain\f2\fs20 "Unsafe" or "unreachable" SFC\tab I\tab no message\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Data type conflict in VAR_ACCESS\tab I\tab not available\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Tasks require too many processor resources\tab I\tab not available\tab I
+\par Execution deadline not met Other task scheduling \tab I\tab \tab I
+\par conflicts\tab \tab \tab \tab \tab \tab \tab I\tab \tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Numerical result exceeds range for data type\tab I\tab request of a \tab I\tab request ok flag
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab system flag\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Division by zero\tab \tab \tab \tab \tab I\tab request of a\tab I\tab request ok flag
+\par Invalid data type for operation\tab I\tab system flag\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Return from function without value assigned\tab I\tab at compilation \tab I\tab at compilation
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab time\tab I\tab time
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Iteration fails to terminate\tab \tab \tab I\tab at run time\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par Same identifier used as connector label and \tab I\tab not possible,\tab I
+\par \plain\lang1040\f2\fs20 element name\tab \tab \tab \tab \tab I compiler error\tab I
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab I\tab message\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par \plain\f2\fs20 Un-initialized feedback variable\tab I\tab not available\tab I
+\par - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \tab I- - - - - - - - - - - -\tab I- - - - - - - - - - - - - - - - - - - - - -
+\par 
+\par }
+ 

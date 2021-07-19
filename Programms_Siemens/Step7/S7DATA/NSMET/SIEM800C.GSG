@@ -1,0 +1,679 @@
+;==========================================================
+; GSD-File  for AG 95U-DP               SIEMENS AG 
+; MLFB  : 6ES5 095-8MD01
+;
+; Stand   : 12.01.99 V1.3  SX   entspr. TD V1.2 
+;        27.02.02  V 2.0
+; File    : SIEM800C.GSG
+;===========================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+; <Ext-User-Prm-Data-Def-List>
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "S5-95U/DP mit Anschluﬂ als DP-Slave"
+Vendor_Name="SIEMENS"
+Model_Name="S5-95U         DP"
+Revision="V 2.0"
+Ident_Number=0x800C
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Bitmap_Device="AG95DP_N"
+Bitmap_SF="AG95DP_S"
+; Slave-Specification:
+OrderNumber="6ES5 095-8MD01"
+;OffsetFirstMPDBlock=0
+Auto_Baud_supp=1
+Min_Slave_Intervall=30
+Max_Diag_Data_Len=16
+Modul_Offset=0
+Slave_Family=10@SIMATIC
+Modular_Station=1
+Max_Module=32
+Max_Input_Len=32
+Max_Output_Len=32
+Max_Data_Len=64
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=25
+User_Prm_Data = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Max_User_Prm_Data_Len=25
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+; Unit-Diagnostics:
+Unit_Diag_Bit(0017)="STEUB - Bausteinstack-Ueberlauf"
+Unit_Diag_Bit(0018)="STS - STOP durch PG / Programm"
+Unit_Diag_Bit(0019)="NNN - Befehl nicht interpret."
+Unit_Diag_Bit(0020)="TRAF - Transferfehler"
+Unit_Diag_Bit(0021)="SUF - Substitutionsfehler"
+Unit_Diag_Bit(0022)="KEIN AS - Anwendersp. zu klein"
+Unit_Diag_Bit(0023)="STOPS - Schalter in STOP"
+Unit_Diag_Bit(0024)="ASPFA - unzul. Speichermodul"
+Unit_Diag_Bit(0026)="PEU - Peripherie unklar"
+Unit_Diag_Bit(0027)="SYS FEH - Fehler im DB1"
+Unit_Diag_Bit(0028)="ZYK - Zykluszeitueberschreitung"
+Unit_Diag_Bit(0029)="NINEU - Neustart nicht moeglich"
+Unit_Diag_Bit(0030)="SYN FEH - Synchronisierfehler"
+; <Module-Definition-List>
+Module = "1 Byte DE/Konsistenz 1 Byte" 0x10
+1
+EndModule
+Module = "2 Byte DE/Konsistenz 1 Byte" 0x11
+2
+EndModule
+Module = "3 Byte DE/Konsistenz 1 Byte" 0x12
+3
+EndModule
+Module = "4 Byte DE/Konsistenz 1 Byte" 0x13
+4
+EndModule
+Module = "5 Byte DE/Konsistenz 1 Byte" 0x14
+5
+EndModule
+Module = "6 Byte DE/Konsistenz 1 Byte" 0x15
+6
+EndModule
+Module = "7 Byte DE/Konsistenz 1 Byte" 0x16
+7
+EndModule
+Module = "8 Byte DE/Konsistenz 1 Byte" 0x17
+8
+EndModule
+Module = "9 Byte DE/Konsistenz 1 Byte" 0x18
+9
+EndModule
+Module = "10 Byte DE/Konsistenz 1 Byte" 0x19
+10
+EndModule
+Module = "11 Byte DE/Konsistenz 1 Byte" 0x1A
+11
+EndModule
+Module = "12 Byte DE/Konsistenz 1 Byte" 0x1B
+12
+EndModule
+Module = "13 Byte DE/Konsistenz 1 Byte" 0x1C
+13
+EndModule
+Module = "14 Byte DE/Konsistenz 1 Byte" 0x1D
+14
+EndModule
+Module = "15 Byte DE/Konsistenz 1 Byte" 0x1E
+15
+EndModule
+Module = "16 Byte DE/Konsistenz 1 Byte" 0x1F
+16
+EndModule
+;
+; Module byte-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1 Byte DA/Konsistenz 1 Byte" 0x20
+17
+EndModule
+Module = "2 Byte DA/Konsistenz 1 Byte" 0x21
+18
+EndModule
+Module = "3 Byte DA/Konsistenz 1 Byte" 0x22
+19
+EndModule
+Module = "4 Byte DA/Konsistenz 1 Byte" 0x23
+20
+EndModule
+Module = "5 Byte DA/Konsistenz 1 Byte" 0x24
+21
+EndModule
+Module = "6 Byte DA/Konsistenz 1 Byte" 0x25
+22
+EndModule
+Module = "7 Byte DA/Konsistenz 1 Byte" 0x26
+23
+EndModule
+Module = "8 Byte DA/Konsistenz 1 Byte" 0x27
+24
+EndModule
+Module = "9 Byte DA/Konsistenz 1 Byte" 0x28
+25
+EndModule
+Module = "10 Byte DA/Konsistenz 1 Byte" 0x29
+26
+EndModule
+Module = "11 Byte DA/Konsistenz 1 Byte" 0x2A
+27
+EndModule
+Module = "12 Byte DA/Konsistenz 1 Byte" 0x2B
+28
+EndModule
+Module = "13 Byte DA/Konsistenz 1 Byte" 0x2C
+29
+EndModule
+Module = "14 Byte DA/Konsistenz 1 Byte" 0x2D
+30
+EndModule
+Module = "15 Byte DA/Konsistenz 1 Byte" 0x2E
+31
+EndModule
+Module = "16 Byte DA/Konsistenz 1 Byte" 0x2F
+32
+EndModule
+;
+; Module byte-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1 Byte DE/DA/Konsist. 1 Byte" 0x30
+33
+EndModule
+Module = "2 Byte DE/DA/Konsist. 1 Byte" 0x31
+34
+EndModule
+Module = "3 Byte DE/DA/Konsist. 1 Byte" 0x32
+35
+EndModule
+Module = "4 Byte DE/DA/Konsist. 1 Byte" 0x33
+36
+EndModule
+Module = "5 Byte DE/DA/Konsist. 1 Byte" 0x34
+37
+EndModule
+Module = "6 Byte DE/DA/Konsist. 1 Byte" 0x35
+38
+EndModule
+Module = "7 Byte DE/DA/Konsist. 1 Byte" 0x36
+39
+EndModule
+Module = "8 Byte DE/DA/Konsist. 1 Byte" 0x37
+40
+EndModule
+Module = "9 Byte DE/DA/Konsist. 1 Byte" 0x38
+41
+EndModule
+Module = "10 Byte DE/DA/Konsist. 1 Byte" 0x39
+42
+EndModule
+Module = "11 Byte DE/DA/Konsist. 1 Byte" 0x3A
+43
+EndModule
+Module = "12 Byte DE/DA/Konsist. 1 Byte" 0x3B
+44
+EndModule
+Module = "13 Byte DE/DA/Konsist. 1 Byte" 0x3C
+45
+EndModule
+Module = "14 Byte DE/DA/Konsist. 1 Byte" 0x3D
+46
+EndModule
+Module = "15 Byte DE/DA/Konsist. 1 Byte" 0x3E
+47
+EndModule
+Module = "16 Byte DE/DA/Konsist. 1 Byte" 0x3F
+48
+EndModule
+;
+; Module wort-organisiert mit Sendedaten des S5-95U
+;
+Module = "1 Wort AE/Konsistenz 1 Wort" 0x50
+49
+EndModule
+Module = "2 Wort AE/Konsistenz 1 Wort" 0x51
+50
+EndModule
+Module = "3 Wort AE/Konsistenz 1 Wort" 0x52
+51
+EndModule
+Module = "4 Wort AE/Konsistenz 1 Wort" 0x53
+52
+EndModule
+Module = "5 Wort AE/Konsistenz 1 Wort" 0x54
+53
+EndModule
+Module = "6 Wort AE/Konsistenz 1 Wort" 0x55
+54
+EndModule
+Module = "7 Wort AE/Konsistenz 1 Wort" 0x56
+55
+EndModule
+Module = "8 Wort AE/Konsistenz 1 Wort" 0x57
+56
+EndModule
+Module = "9 Wort AE/Konsistenz 1 Wort" 0x58
+57
+EndModule
+Module = "10 Wort AE/Konsistenz 1 Wort" 0x59
+58
+EndModule
+Module = "11 Wort AE/Konsistenz 1 Wort" 0x5A
+59
+EndModule
+Module = "12 Wort AE/Konsistenz 1 Wort" 0x5B
+60
+EndModule
+Module = "13 Wort AE/Konsistenz 1 Wort" 0x5C
+61
+EndModule
+Module = "14 Wort AE/Konsistenz 1 Wort" 0x5D
+62
+EndModule
+Module = "15 Wort AE/Konsistenz 1 Wort" 0x5E
+63
+EndModule
+Module = "16 Wort AE/Konsistenz 1 Wort" 0x5F
+64
+EndModule
+;
+; Module wort-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1 Wort AA/Konsistenz 1 Wort" 0x60
+65
+EndModule
+Module = "2 Wort AA/Konsistenz 1 Wort" 0x61
+66
+EndModule
+Module = "3 Wort AA/Konsistenz 1 Wort" 0x62
+67
+EndModule
+Module = "4 Wort AA/Konsistenz 1 Wort" 0x63
+68
+EndModule
+Module = "5 Wort AA/Konsistenz 1 Wort" 0x64
+69
+EndModule
+Module = "6 Wort AA/Konsistenz 1 Wort" 0x65
+70
+EndModule
+Module = "7 Wort AA/Konsistenz 1 Wort" 0x66
+71
+EndModule
+Module = "8 Wort AA/Konsistenz 1 Wort" 0x67
+72
+EndModule
+Module = "9 Wort AA/Konsistenz 1 Wort" 0x68
+73
+EndModule
+Module = "10 Wort AA/Konsistenz 1 Wort" 0x69
+74
+EndModule
+Module = "11 Wort AA/Konsistenz 1 Wort" 0x6A
+75
+EndModule
+Module = "12 Wort AA/Konsistenz 1 Wort" 0x6B
+76
+EndModule
+Module = "13 Wort AA/Konsistenz 1 Wort" 0x6C
+77
+EndModule
+Module = "14 Wort AA/Konsistenz 1 Wort" 0x6D
+78
+EndModule
+Module = "15 Wort AA/Konsistenz 1 Wort" 0x6E
+79
+EndModule
+Module = "16 Wort AA/Konsistenz 1 Wort" 0x6F
+80
+EndModule
+;
+; Module wort-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1 Wort AE/AA/Konsist. 1 Wort" 0x70
+81
+EndModule
+Module = "2 Wort AE/AA/Konsist. 1 Wort" 0x71
+82
+EndModule
+Module = "3 Wort AE/AA/Konsist. 1 Wort" 0x72
+83
+EndModule
+Module = "4 Wort AE/AA/Konsist. 1 Wort" 0x73
+84
+EndModule
+Module = "5 Wort AE/AA/Konsist. 1 Wort" 0x74
+85
+EndModule
+Module = "6 Wort AE/AA/Konsist. 1 Wort" 0x75
+86
+EndModule
+Module = "7 Wort AE/AA/Konsist. 1 Wort" 0x76
+87
+EndModule
+Module = "8 Wort AE/AA/Konsist. 1 Wort" 0x77
+88
+EndModule
+Module = "9 Wort AE/AA/Konsist. 1 Wort" 0x78
+89
+EndModule
+Module = "10 Wort AE/AA/Konsis. 1 Wort" 0x79
+90
+EndModule
+Module = "11 Wort AE/AA/Konsis. 1 Wort" 0x7A
+91
+EndModule
+Module = "12 Wort AE/AA/Konsis. 1 Wort" 0x7B
+92
+EndModule
+Module = "13 Wort AE/AA/Konsis. 1 Wort" 0x7C
+93
+EndModule
+Module = "14 Wort AE/AA/Konsis. 1 Wort" 0x7D
+94
+EndModule
+Module = "15 Wort AE/AA/Konsis. 1 Wort" 0x7E
+95
+EndModule
+Module = "16 Wort AE/AA/Konsis. 1 Wort" 0x7F
+96
+EndModule
+;
+; Module byte-organisiert mit Sendedaten des S5-95U
+;
+Module = "1 Byte DE/Konsistenz gesamt" 0x90
+97
+EndModule
+Module = "2 Byte DE/Konsistenz gesamt" 0x91
+98
+EndModule
+Module = "3 Byte DE/Konsistenz gesamt" 0x92
+99
+EndModule
+Module = "4 Byte DE/Konsistenz gesamt" 0x93
+100
+EndModule
+Module = "5 Byte DE/Konsistenz gesamt" 0x94
+101
+EndModule
+Module = "6 Byte DE/Konsistenz gesamt" 0x95
+102
+EndModule
+Module = "7 Byte DE/Konsistenz gesamt" 0x96
+103
+EndModule
+Module = "8 Byte DE/Konsistenz gesamt" 0x97
+104
+EndModule
+Module = "9 Byte DE/Konsistenz gesamt" 0x98
+105
+EndModule
+Module = "10 Byte DE/Konsistenz gesamt" 0x99
+106
+EndModule
+Module = "11 Byte DE/Konsistenz gesamt" 0x9A
+107
+EndModule
+Module = "12 Byte DE/Konsistenz gesamt" 0x9B
+108
+EndModule
+Module = "13 Byte DE/Konsistenz gesamt" 0x9C
+109
+EndModule
+Module = "14 Byte DE/Konsistenz gesamt" 0x9D
+110
+EndModule
+Module = "15 Byte DE/Konsistenz gesamt" 0x9E
+111
+EndModule
+Module = "16 Byte DE/Konsistenz gesamt" 0x9F
+112
+EndModule
+;
+; Module byte-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1 Byte DA/Konsistenz gesamt" 0xA0
+113
+EndModule
+Module = "2 Byte DA/Konsistenz gesamt" 0xA1
+114
+EndModule
+Module = "3 Byte DA/Konsistenz gesamt" 0xA2
+115
+EndModule
+Module = "4 Byte DA/Konsistenz gesamt" 0xA3
+116
+EndModule
+Module = "5 Byte DA/Konsistenz gesamt" 0xA4
+117
+EndModule
+Module = "6 Byte DA/Konsistenz gesamt" 0xA5
+118
+EndModule
+Module = "7 Byte DA/Konsistenz gesamt" 0xA6
+119
+EndModule
+Module = "8 Byte DA/Konsistenz gesamt" 0xA7
+120
+EndModule
+Module = "9 Byte DA/Konsistenz gesamt" 0xA8
+121
+EndModule
+Module = "10 Byte DA/Konsistenz gesamt" 0xA9
+122
+EndModule
+Module = "11 Byte DA/Konsistenz gesamt" 0xAA
+123
+EndModule
+Module = "12 Byte DA/Konsistenz gesamt" 0xAB
+124
+EndModule
+Module = "13 Byte DA/Konsistenz gesamt" 0xAC
+125
+EndModule
+Module = "14 Byte DA/Konsistenz gesamt" 0xAD
+126
+EndModule
+Module = "15 Byte DA/Konsistenz gesamt" 0xAE
+127
+EndModule
+Module = "16 Byte DA/Konsistenz gesamt" 0xAF
+128
+EndModule
+;
+; Module byte-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1 Byte DE/DA/Konsist. gesamt" 0xB0
+129
+EndModule
+Module = "2 Byte DE/DA/Konsist. gesamt" 0xB1
+130
+EndModule
+Module = "3 Byte DE/DA/Konsist. gesamt" 0xB2
+131
+EndModule
+Module = "4 Byte DE/DA/Konsist. gesamt" 0xB3
+132
+EndModule
+Module = "5 Byte DE/DA/Konsist. gesamt" 0xB4
+133
+EndModule
+Module = "6 Byte DE/DA/Konsist. gesamt" 0xB5
+134
+EndModule
+Module = "7 Byte DE/DA/Konsist. gesamt" 0xB6
+135
+EndModule
+Module = "8 Byte DE/DA/Konsist. gesamt" 0xB7
+136
+EndModule
+Module = "9 Byte DE/DA/Konsist. gesamt" 0xB8
+137
+EndModule
+Module = "10 Byte DE/DA/Konsist. gesamt" 0xB9
+138
+EndModule
+Module = "11 Byte DE/DA/Konsist. gesamt" 0xBA
+139
+EndModule
+Module = "12 Byte DE/DA/Konsist. gesamt" 0xBB
+140
+EndModule
+Module = "13 Byte DE/DA/Konsist. gesamt" 0xBC
+141
+EndModule
+Module = "14 Byte DE/DA/Konsist. gesamt" 0xBD
+142
+EndModule
+Module = "15 Byte DE/DA/Konsist. gesamt" 0xBE
+143
+EndModule
+Module = "16 Byte DE/DA/Konsist. gesamt" 0xBF
+144
+EndModule
+;
+; Module wort-organisiert mit Sendedaten des S5-95U
+;
+Module = "1 Wort AE/Konsistenz gesamt" 0xD0
+145
+EndModule
+Module = "2 Wort AE/Konsistenz gesamt" 0xD1
+146
+EndModule
+Module = "3 Wort AE/Konsistenz gesamt" 0xD2
+147
+EndModule
+Module = "4 Wort AE/Konsistenz gesamt" 0xD3
+148
+EndModule
+Module = "5 Wort AE/Konsistenz gesamt" 0xD4
+149
+EndModule
+Module = "6 Wort AE/Konsistenz gesamt" 0xD5
+150
+EndModule
+Module = "7 Wort AE/Konsistenz gesamt" 0xD6
+151
+EndModule
+Module = "8 Wort AE/Konsistenz gesamt" 0xD7
+152
+EndModule
+Module = "9 Wort AE/Konsistenz gesamt" 0xD8
+153
+EndModule
+Module = "10 Wort AE/Konsistenz gesamt" 0xD9
+154
+EndModule
+Module = "11 Wort AE/Konsistenz gesamt" 0xDA
+155
+EndModule
+Module = "12 Wort AE/Konsistenz gesamt" 0xDB
+156
+EndModule
+Module = "13 Wort AE/Konsistenz gesamt" 0xDC
+157
+EndModule
+Module = "14 Wort AE/Konsistenz gesamt" 0xDD
+158
+EndModule
+Module = "15 Wort AE/Konsistenz gesamt" 0xDE
+159
+EndModule
+Module = "16 Wort AE/Konsistenz gesamt" 0xDF
+160
+EndModule
+;
+; Module wort-organisiert mit Empfangsdaten des S5-95U
+;
+Module = "1 Wort AA/Konsistenz gesamt" 0xE0
+161
+EndModule
+Module = "2 Wort AA/Konsistenz gesamt" 0xE1
+162
+EndModule
+Module = "3 Wort AA/Konsistenz gesamt" 0xE2
+163
+EndModule
+Module = "4 Wort AA/Konsistenz gesamt" 0xE3
+164
+EndModule
+Module = "5 Wort AA/Konsistenz gesamt" 0xE4
+165
+EndModule
+Module = "6 Wort AA/Konsistenz gesamt" 0xE5
+166
+EndModule
+Module = "7 Wort AA/Konsistenz gesamt" 0xE6
+167
+EndModule
+Module = "8 Wort AA/Konsistenz gesamt" 0xE7
+168
+EndModule
+Module = "9 Wort AA/Konsistenz gesamt" 0xE8
+169
+EndModule
+Module = "10 Wort AA/Konsistenz gesamt" 0xE9
+170
+EndModule
+Module = "11 Wort AA/Konsistenz gesamt" 0xEA
+171
+EndModule
+Module = "12 Wort AA/Konsistenz gesamt" 0xEB
+172
+EndModule
+Module = "13 Wort AA/Konsistenz gesamt" 0xEC
+173
+EndModule
+Module = "14 Wort AA/Konsistenz gesamt" 0xED
+174
+EndModule
+Module = "15 Wort AA/Konsistenz gesamt" 0xEE
+175
+EndModule
+Module = "16 Wort AA/Konsistenz gesamt" 0xEF
+176
+EndModule
+;
+; Module wort-organisiert mit Sende- und Empfangsdaten des S5-95U
+;
+Module = "1 Wort AE/AA/Konsist. gesamt" 0xF0
+177
+EndModule
+Module = "2 Wort AE/AA/Konsist. gesamt" 0xF1
+178
+EndModule
+Module = "3 Wort AE/AA/Konsist. gesamt" 0xF2
+179
+EndModule
+Module = "4 Wort AE/AA/Konsist. gesamt" 0xF3
+180
+EndModule
+Module = "5 Wort AE/AA/Konsist. gesamt" 0xF4
+181
+EndModule
+Module = "6 Wort AE/AA/Konsist. gesamt" 0xF5
+182
+EndModule
+Module = "7 Wort AE/AA/Konsist. gesamt" 0xF6
+183
+EndModule
+Module = "8 Wort AE/AA/Konsist. gesamt" 0xF7
+184
+EndModule
+Module = "9 Wort AE/AA/Konsist. gesamt" 0xF8
+185
+EndModule
+Module = "10 Wort AE/AA/Konsist. gesamt" 0xF9
+186
+EndModule
+Module = "11 Wort AE/AA/Konsist. gesamt" 0xFA
+187
+EndModule
+Module = "12 Wort AE/AA/Konsist. gesamt" 0xFB
+188
+EndModule
+Module = "13 Wort AE/AA/Konsist. gesamt" 0xFC
+189
+EndModule
+Module = "14 Wort AE/AA/Konsist. gesamt" 0xFD
+190
+EndModule
+Module = "15 Wort AE/AA/Konsist. gesamt" 0xFE
+191
+EndModule
+Module = "16 Wort AE/AA/Konsist. gesamt" 0xFF
+192
+EndModule

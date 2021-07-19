@@ -1,0 +1,219 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1316285]		
+KatEntryName=CPU 312C
+InfoText=Unités centrales du type CPU 312C
+[1316286]		
+KatEntryName=CPU 313C
+InfoText=Unités centrales du type CPU 313C
+[1316287]		
+KatEntryName=CPU 313C-2 DP
+InfoText=Unités centrales du type CPU 313C-2 DP
+[1316229]		
+KatEntryName=CPU 314C-2 DP
+InfoText=Unités centrales du type CPU 314C-2 DP
+[1316288]		
+KatEntryName=CPU 313C-2 PtP
+InfoText=Unités centrales du type CPU 313C-2 PtP
+[1316230]		
+KatEntryName=CPU 314C-2 PtP
+InfoText=Unités centrales du type CPU 314C-2 PtP
+[1316289]		
+KatEntryName = 6ES7 312-5BD00-0AB0
+InfoText = Mémoire de travail 16Ko; 0,2ms/kinst; DI10/DO6 intégrées; 2 sorties d'impulsion (2,5kHz); comptage et mesure 2 voies avec codeurs incrémentaux 24V (10kHz); port MPI; configuration à une rangée jusqu'à 8 modules; firmware V1.0
+SHORTNAME=CPU 312C
+[1316290]		
+KatEntryName = 6ES7 313-5BE00-0AB0
+InfoText = Mémoire de travail 32Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure 3 voies avec codeurs incrémentaux 24V (30kHz); port MPI; configuration multi-rangées jusqu'à 31 modules; firmware V1.0
+SHORTNAME=CPU 313C
+[1316291]		
+KatEntryName = 6ES7 313-6CE00-0AB0
+InfoText = Mémoire de travail 32Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure 3 voies avec codeurs incrémentaux 24V (30kHz); ports MPI+ DP (maître ou esclave DP); configuration multi-rangées jusqu'à 31 modules; communication directe (émetteur ou récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=CPU 313C-2 DP
+[1316231]		
+KatEntryName = 6ES7 314-6CF00-0AB0
+InfoText = Mémoire de travail 48Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); comptage et mesure 4 voies avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ DP  (maître ou esclave DP ); configuration multi-rangées jusqu'à 31 modules; communication directe (émetteur ou récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=CPU 314C-2 DP
+[1316292]		
+KatEntryName = 6ES7 313-6BE00-0AB0
+InfoText = Mémoire de travail 32Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure 3 voies avec codeurs incrémentaux 24V (30kHz); ports MPI+ PtP  (RS422/485 (ASCII, 3964(R))); configuration multi-rangées jusqu'à 31 modules; firmware V1.0
+SHORTNAME=CPU 313C-2 PtP
+[1316232]		
+KatEntryName = 6ES7 314-6BF00-0AB0
+InfoText = Mémoire de travail 48Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); comptage et mesure 4 voies avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ PtP  (RS422/485 (ASCII, 3964(R), RK512)); configuration multi-rangées jusqu'à 31 modules; firmware V1.0
+SHORTNAME=CPU 314C-2 PtP
+[1316295]		
+SHORTNAME=AI5/AO2
+InfoText=Entrées/sorties analogiques  AI5+AO2
+[1316236]		
+SHORTNAME=AI5/AO2
+InfoText=Entrées/sorties analogiques  AI5+AO2
+[1316237]		
+SHORTNAME=AI5/AO2
+InfoText=Entrées/sorties analogiques  AI5+AO2
+[1316293]		
+SHORTNAME=DI10/DO6
+InfoText=Entrées/sorties TOR DI10 + DO6
+[1316294]		
+SHORTNAME=DI24/DO16
+InfoText=Entrées/sorties TOR DI24 + DO16
+[1316296]		
+SHORTNAME=DI16/DO16
+InfoText=Entrées/sorties TOR DI16 + DO16
+[1316297]		
+SHORTNAME=DI16/DO16
+InfoText=Entrées/sorties TOR DI16 + DO16
+[1316238]		
+SHORTNAME=DI24/DO16
+InfoText=Entrées/sorties TOR DI24 + DO16
+[1316239]		
+SHORTNAME=DI24/DO16
+InfoText=Entrées/sorties TOR DI24 + DO16
+[1316298]		
+SHORTNAME=DP
+InfoText=
+[1316241]		
+SHORTNAME=DP
+InfoText=
+[1322013]		
+SHORTNAME=PtP
+InfoText=Communication PtP avec interface RS422/485 ( ASCII, 3964(R) )
+[1322014]		
+SHORTNAME=PtP
+InfoText=Communication PtP avec interface RS422/485 ( ASCII, 3964(R), RK512 )
+[1322016]		
+SHORTNAME=Comptage
+InfoText=2 voies; comptage et fréquencemètre avec 10kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322017]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322018]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322019]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322020]		
+SHORTNAME=Comptage
+InfoText=4 voies; comptage et fréquencemètre avec 60kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322021]		
+SHORTNAME=Comptage
+InfoText=4 voies; comptage et fréquencemètre avec 60kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation
+[1322023]		
+SHORTNAME=Positionnement
+InfoText=
+[1322024]		
+SHORTNAME=Positionnement
+InfoText=
+[1322025]		
+SHORTNAME=Positionnement
+InfoText=1 voie; positionnement avec sortie analogique ou sorties TOR
+[1322026]		
+SHORTNAME=Positionnement
+InfoText=1 voie; positionnement avec sortie analogique ou sorties TOR
+;
+;
+;
+[1316583]
+KatEntryName = C7-635 TB
+InfoText = Système intégré compact SIMATIC C7 de type C7-635 TB avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-635 TB
+[1316584]
+KatEntryName=6ES7 635-2EB00-0AE3
+InfoText=Système intégré compact; TP 170 B + CPU avec mémoire de travail 48 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); comptage et mesure 4 voies avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; port MPI+ DP (maître ou esclave DP); échange de données direct (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=C7 635 TB
+[1316585]
+KatEntryName=C7-CPU 635TB
+InfoText=CPU avec mémoire de travail 48 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); comptage et mesure 4 voies avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; port MPI+ DP (maître ou esclave DP); échange de données direct (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=C7 CPU 635 TB
+;
+;
+;
+[1316620]
+KatEntryName = C7-635 OP
+InfoText = Système intégré compact SIMATIC C7 du type C7-635 OP avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-635 OP
+[1316621]
+KatEntryName=6ES7 635-2EC00-0AE3
+InfoText=Système intégré compact; OP 170 + CPU avec mémoire de travail 64 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI + DP (maître DP ou esclave DP); communication parallèle (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=C7 635 OP
+[1316622]
+KatEntryName=C7-CPU 635OP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ DP (maître ou esclave DP); communication parallèle (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.0
+SHORTNAME=C7 CPU 635 OP
+[1316623]
+KatEntryName = C7-613
+InfoText = Système intégré compact SIMATIC C7 de type C7-613
+SHORTNAME=C7-613
+[1316624]
+KatEntryName=6ES7 613-1CA00-0AE3
+InfoText=Système intégré compact; afficheur 4 lignes + CPU avec mémoire de travail 32 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 3 sorties d'impulsion (2,5kHz); 3 voies pour comptage et mesure avec codeurs incrémentaux 24V (30kHz); port MPI; configuration à une rangée jusqu'à 4 modules; firmware V1.0
+SHORTNAME=C7 613
+[1316625]
+KatEntryName=C7-CPU 613
+InfoText=CPU avec mémoire de travail 32 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 3 sorties d'impulsion (2,5kHz); 3 voies pour comptage et mesure avec codeurs incrémentaux 24V (30kHz); port MPI; configuration à une rangée jusqu'à 4 modules; firmware V1.0
+SHORTNAME=C7 CPU 613
+;
+;
+;
+[1322029]
+KatEntryName=C7-613 Panel
+InfoText=Module HMI intégré pour l'affichage et la commande des applications du C7 613
+SHORTNAME=C7-613 Panel
+;
+;
+;
+[1316596]
+KatEntryName = 6ES7 312-5BD01-0AB0
+InfoText = Mémoire de travail 16 Ko; 0,2ms/kinst; DI10/DO6 intégrées; 2 sorties d'impulsion (2,5kHz); comptage et mesure sur 2 voies avec codeurs incrémentaux 24V (10kHz); port MPI; configuration à une rangée jusqu'à 8 modules; firmware V2.0; également vendu comme module SIPLUS sous le numéro de référence 6AG1 312-5BD01-2AB0
+SHORTNAME=CPU 312C
+[1316598]
+KatEntryName = 6ES7 313-5BE01-0AB0
+InfoText = Mémoire de travail 32 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 3 sorties impulstion (2,5kHz); comptage et mesure sur 3 voies avec codeurs incrémentaux 24V (30kHz); port MPI; configuration multi-rangées jusqu'à 31 modules; firmware V2.0;également vendu comme module SIPLUS sous le numéro de référence 6AG1 313-5BE01-2AB0
+SHORTNAME=CPU 313C
+[1316600]
+KatEntryName = 6ES7 313-6CE01-0AB0
+InfoText = Mémoire de travail 32 Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure sur 3 voies avec codeurs incrémentaux 24V (30kHz); ports MPI+ DP (maître DP ou esclave DP); configuration multi-rangées jusqu'à 31 modules; échange direct de données possible (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V2.0;également vendu comme module SIPLUS sous le numéro de référence 6AG1 313-6CE01-2AB0
+SHORTNAME=CPU 313C-2 DP
+[1316602]
+KatEntryName = 6ES7 313-6BE01-0AB0
+InfoText = Mémoire de travail 32 Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); 3 voies pour comptage et mesure avec codeurs incrémentaux 24V (30kHz); ports MPI+ PtP (RS422/485 (ASCII, 3964(R))); configuration multi-rangées jusqu'à 31 modules; Firmware V2.0
+SHORTNAME=CPU 313C-2 PtP
+[1316604]
+KatEntryName = 6ES7 314-6CF01-0AB0
+InfoText = Mémoire de travail 48 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ DP (Maître ou esclave DP); configuration multi-rangées jusqu'à 31 modules; communication parallèle (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); Firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+[1316606]
+KatEntryName = 6ES7 314-6BF01-0AB0
+InfoText = Mémoire de travail 48 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configuration multi-rangées jusqu'à 31 modules; Firmware V2.0SHORTNAME=CPU 314C-2 PtP
+SHORTNAME=CPU 314C-2 PtP
+[1316607]		
+SHORTNAME=DP
+InfoText=
+[1316608]		
+SHORTNAME=DP
+InfoText=
+[1322030]		
+SHORTNAME=Comptage
+InfoText=2 voies; comptage et fréquencemètre avec 10kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322031]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322032]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322033]		
+SHORTNAME=Comptage
+InfoText=3 voies; comptage et fréquencemètre avec 30kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322034]		
+SHORTNAME=Comptage
+InfoText=4 voies; comptage et fréquencemètre avec 60kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322035]		
+SHORTNAME=Comptage
+InfoText=4 voies; comptage et fréquencemètre avec 60kHz, modulation de largeur d'impulsion avec 2,5 kHz fréquence de commutation, fréquence de comptage
+[1322036]		
+SHORTNAME=Positionnement
+InfoText=1 voie; positionnement avec sortie analogique ou sorties TOR, fréquence de comptage
+[1322037]		
+SHORTNAME=Positionnement
+InfoText=1 voie; positionnement avec sortie analogique ou sorties TOR, fréquence de comptage

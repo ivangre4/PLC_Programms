@@ -1,0 +1,155 @@
+; ------------------ RFID Baugruppe RF170C (6GT2 002-0HD00) für ET 200pro
+
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+;- Kat entry for ET 200pro RFID folder ---------------------------------------
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+[_S7H_KAT_ET200PRO_RFID_AT]
+abstract=true
+ObjType=18880001
+basetype=_S7H_HSP_ET200PRO_KAT_ROOT_AT
+
+;Alle ET200pro Baugruppen unter denen dieser Katalog erscheinen soll
+;2363603    (_S7H_HSP_6ES7_154_1AA00_CT)                IM 154-1 DP             	6ES7 154-1AA00-0AB0 (HSP0063)
+;2363605    (_S7H_HSP_6ES7_154_2AA00_CT)                IM 154-2 DP HF          	6ES7 154-2AA00-0AB0 (HSP0063)
+;2363990    (_S7H_HSP_6ES7_154_8AB00_0AB0_FW25_RACK_CT) IM 154-8 PN-CPU         	6ES7 154-8AB00-0AB0 (HSP0116)
+
+;2367010    (_S7H_HSP_154_4AB10_CU_V50_DEVICE_CT)       IM 154-4 PN HF Cu V5.0  	6ES7 154-4AB10-0AB0 (HSP2026)
+
+;2364384     (_S7H_HSP_154_4AB10_CU_V60_DEVICE_CT)      IM 154-4 PN HF Cu V6.0  	6ES7 154-4AB10-0AB0 (HSP0163)
+
+;2367011    (_S7H_HSP_154_4AB10_FO_V50_DEVICE_CT)       IM 154-4 PN HF FO V5.0  	6ES7 154-4AB10-0AB0 (HSP2027)
+
+;2364392    (_S7H_HSP_154_4AB10_CU_V60_DEVICE_CT)       IM 154-6 PN HF IWLAN V1.0  	6ES7 154-6AB00-0AB0 (HSP0165)
+;2364067    ?
+;2367371    (_S7H_HSP_6ES7_154_1AA01_CT) 		IM 154-1 DP			6ES7 154-1AA01-0AB0 (HSP2061)
+;2366391    (_S7H_HSP_6ES7_154_2AA01_CT)                IM 154-2 DP HF          	6ES7 154-2AA01-0AB0 (HSP2061)
+;2367380    (_S7H_HSP_154_6AB50_WLAN_V60_DEVICE_CT)	IM154-6 PN HF IWLAN V10 (USA)	6ES7 154-6AB50-0AB0 (HSP2065)
+
+;2364820    (_S7H_HSP_6ES7_154_8AB01_0AB0_FW32_RACK_CT  IM154-8 CPU                     6ES7 154-8AB01-0AB0 / V3.2)
+;2364826    (_S7H_HSP_6ES7_154_8FB01_0AB0_FW32_RACK_CT  IM154-8 CPU                     6ES7 154-8FB01-0AB0 / V3.2)
+
+CatalogParent=2363603, 2363605, 2363990, 2367010, 2367011, 2364067, 2364384, 2367371, 2367380, 2366391, 2364392, 2364820, 2364826
+
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+
+;darf hier nicht gesetzt werden, sonst beendet sich HwConfig
+;HW_DB_V3=
+
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+;- CONFIGURATION OF:   RFID communication module RF170C for ET 200pro --------
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+[_S7H_CLASS_ET200PRO_MODULE_RF170C_CT] 
+ObjType=18880000
+server=S7HKCOMX.DLL
+SHORTNAME=RF170C
+CLSID={96B4A33B-BB9E-48AB-ACD7-A53F6FC5941E}
+prefix=OM
+basetype=_S7H_HSP_ET200PRO_MODULE_AT
+HSP_NAME=RF170C
+HSP_ID=2064
+HWCNFX_VER=5.5.0.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+ET200PRO_MODULE_KENNUNG=0x71
+ET200PRO_MODULE_PRM_KENNUNG=0xA0
+PN_MODULE_IDENTNUMBER=0x00FA
+
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_CRITICAL_FWEXCHANGE=1
+FW_DOWNLOAD_ASK4POST_RESET=1
+FW_DOWNLOAD_POST_RESET_DEFAULT=0
+
+;-----------------------------------------------------------------------------
+;CASING_FORMAT: Bauform des Gehäuses. Wird für Steckplatzregelüberprüfung benötigt.
+;Eine BG kann nur gesteckt werden, wenn CASING_FORMAT vom Parent mit dem der BG
+;übereinstimmt. Ist das Attribut nicht verfügbar, wird die Regel nicht überprüft.
+;...
+;12: ET200pro
+;...
+;-----------------------------------------------------------------------------
+CASING_FORMAT=12
+IsCatEntry=1
+
+; Baugruppe erscheint unter folgenden Katalog
+;18880001   (_S7H_KAT_ET200PRO_RFID_AT) Folder RFID 
+CatalogParent=18880001
+
+MLFB=6GT2002-0HD00 
+S7_TYPE_CODE=0x08C1
+DATA_CHECK_ARWB=1
+IUA_SUPPORT=1
+;PLUG_CLASS=0x00000010
+; PLUG_CLASS + Erweiterung Steckplatzregel (Rule_00400010...)
+PLUG_CLASS=0x00400010
+
+; Max. 1m länge
+PHYSICAL_LENGTH=90
+MAX_PLUG_POSITION=1000
+
+;-----------------------------------------------------------------------------
+; Die Baugruppe hat einen Parameterdialog
+;-----------------------------------------------------------------------------
+IS_PARAMETRIZEABLE=1
+IO_TYPE=4
+IN_ADDRESS_RANGE=4
+OUT_ADDRESS_RANGE=4
+SIGNAL_TYPE=2
+CAPABLE_DIAG=1
+CAPABLE_ALARM=1
+MODULE_TYPE=0x0020
+ICON_TYPE=0
+
+;SDB100 immer generieren
+CREATE_DATASET_ALLWAYS=1
+
+;-----------------------------------------------------------------------------
+; Der Standard-Adressdialog wird eingehängt.
+;-----------------------------------------------------------------------------
+USER_DIALOG_1=STANDARD
+
+;-----------------------------------------------------------------------------
+; Erweiterung Steckplatzregeln für ET200pro (max. 9 x RF170C)
+;-----------------------------------------------------------------------------
+; Erweiterung Steckplatzregel für ET200pro IM 154-8 PN-CPU
+[_S7H_6ES7_ET200PRO_STATION_CT]
+Rule_00400010=INCL(4,20),MAXC(9)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-1 DP
+[_S7H_HSP_6ES7_154_1AA00_CT]
+Rule_00400010=INCL(4,20),MAXC(9)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-1 DP
+[_S7H_HSP_6ES7_154_1AA01_CT]
+Rule_00400010=INCL(4,20),MAXC(9)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-2 DP HF
+[_S7H_HSP_6ES7_154_2AA00_CT]
+Rule_00400010=INCL(4,20),MAXC(9)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-2 DP HF
+[_S7H_HSP_6ES7_154_2AA01_CT]
+Rule_00400010=INCL(4,20),MAXC(9)
+
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-4 PN HF
+; Baugruppe darf mit diesem Kopf nicht gesteckt werden
+[_S7H_HSP_IO_ET200PRO_154_4AB00_CT]
+Rule_00400010=MAXC(0)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-4 PN HF Cu V5.0
+[_S7H_HSP_154_4AB10_CU_V50_DEVICE_CT]
+Rule_00400010=INCL(2,18),MAXC(9)
+
+; Erweiterung Steckplatzregel für ET200pro IM 154-4 PN HF Cu V6.0
+[_S7H_HSP_154_4AB10_CU_V60_DEVICE_CT]
+Rule_00400010=INCL(2,18),MAXC(9)
+
+
+; Erweiterung Steckplatzregel für ET200pro  IM 154-4 PN HF FO V5.0
+[_S7H_HSP_154_4AB10_FO_V50_DEVICE_CT]
+Rule_00400010=INCL(2,18),MAXC(9)

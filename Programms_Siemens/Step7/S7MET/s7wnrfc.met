@@ -1,0 +1,17 @@
+[_AUT_CONNECTION_AT]
+subtype=_S7V_CONN_TCP_RFC1006_CT
+
+
+[_S7V_CONN_TCP_RFC1006_CT]
+server=s7wnrfcx.dll
+ObjType=0x00145408
+prefix=LANVERB
+zweiseitig=1
+spezifiziert=0
+LoadViaCPUPossible=1
+Fetch_Write=1
+Fast=1
+OPC=1
+
+[_S7H_CPU_AT]
+SDB3107_CARRIER=1

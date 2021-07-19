@@ -1,0 +1,157 @@
+;----------------------------------------------------------------------------------------------------
+;-- SIEMENS AG   Profil for OPC SNMP Server SIMATIC NET
+;-- MIB-II_V10.txt
+;-- Version: 1.0
+;-- Date: 06.09.2002
+;-- Comment:
+;----------------------------------------------------------------------------------------------------
+;DO NOT CHANGE lines between BEGIN and END
+;BEGIN
+;MODULE=RFC-1212=C:\Programme\SIEMENS\SIMATIC.NCM\S7data\Snmp\Mib\RFC-1212.mib
+;MODULE=RFC1155-SMI=C:\Programme\SIEMENS\SIMATIC.NCM\S7data\Snmp\Mib\RFC1155-SMI.mib
+;MODULE=RFC1213-MIB=C:\Programme\SIEMENS\SIMATIC.NCM\S7data\Snmp\Mib\RFC1213-MIB.mib
+;END
+
+
+[EGP]
+SNMPItem=egpOutMsgs|R|.1.3.6.1.2.1.8.3.0|41|The total number of locally generated EGP messages.
+SNMPItem=egpOutErrors|R|.1.3.6.1.2.1.8.4.0|41|The number of locally generated EGP messages not sent due to resource limitations within an EGP entity.
+SNMPItem=egpInMsgs|R|.1.3.6.1.2.1.8.1.0|41|The number of EGP messages received without error.
+SNMPItem=egpInErrors|R|.1.3.6.1.2.1.8.2.0|41|The number of EGP messages received that proved to be in error.
+SNMPItem=egpAs|R|.1.3.6.1.2.1.8.6.0|02|The autonomous system number of this EGP entity.
+
+[ICMP]
+SNMPItem=icmpOutTimestamps|R|.1.3.6.1.2.1.5.23.0|41|The number of ICMP Timestamp (request) messages sent.
+SNMPItem=icmpOutTimestampReps|R|.1.3.6.1.2.1.5.24.0|41|The number of ICMP Timestamp Reply messages sent.
+SNMPItem=icmpOutTimeExcds|R|.1.3.6.1.2.1.5.17.0|41|The number of ICMP Time Exceeded messages sent.
+SNMPItem=icmpOutSrcQuenchs|R|.1.3.6.1.2.1.5.19.0|41|The number of ICMP Source Quench messages sent.
+SNMPItem=icmpOutRedirects|R|.1.3.6.1.2.1.5.20.0|41|The number of ICMP Redirect messages sent. For a host, this object will always be zero, since hosts do not send redirects.
+SNMPItem=icmpOutParmProbs|R|.1.3.6.1.2.1.5.18.0|41|The number of ICMP Parameter Problem messages sent.
+SNMPItem=icmpOutMsgs|R|.1.3.6.1.2.1.5.14.0|41|The total number of ICMP messages which this entity attempted to send. Note that this counter includes all those counted by icmpOutErrors.
+SNMPItem=icmpOutErrors|R|.1.3.6.1.2.1.5.15.0|41|The number of ICMP messages which this entity did not send due to problems discovered within ICMP such as a lack of buffers. This value should not include errors discovered outside the ICMP layer such as the inability of IP to route the resultant datagram. In some implementations there may be no types of error which contribute to this counter's value.
+SNMPItem=icmpOutEchos|R|.1.3.6.1.2.1.5.21.0|41|The number of ICMP Echo (request) messages sent.
+SNMPItem=icmpOutEchoReps|R|.1.3.6.1.2.1.5.22.0|41|The number of ICMP Echo Reply messages sent.
+SNMPItem=icmpOutDestUnreachs|R|.1.3.6.1.2.1.5.16.0|41|The number of ICMP Destination Unreachable messages sent.
+SNMPItem=icmpOutAddrMasks|R|.1.3.6.1.2.1.5.25.0|41|The number of ICMP Address Mask Request messages sent.
+SNMPItem=icmpOutAddrMaskReps|R|.1.3.6.1.2.1.5.26.0|41|The number of ICMP Address Mask Reply messages sent.
+SNMPItem=icmpInTimestamps|R|.1.3.6.1.2.1.5.10.0|41|The number of ICMP Timestamp (request) messages received.
+SNMPItem=icmpInTimestampReps|R|.1.3.6.1.2.1.5.11.0|41|The number of ICMP Timestamp Reply messages received.
+SNMPItem=icmpInTimeExcds|R|.1.3.6.1.2.1.5.4.0|41|The number of ICMP Time Exceeded messages received.
+SNMPItem=icmpInSrcQuenchs|R|.1.3.6.1.2.1.5.6.0|41|The number of ICMP Source Quench messages received.
+SNMPItem=icmpInRedirects|R|.1.3.6.1.2.1.5.7.0|41|The number of ICMP Redirect messages received.
+SNMPItem=icmpInParmProbs|R|.1.3.6.1.2.1.5.5.0|41|The number of ICMP Parameter Problem messages received.
+SNMPItem=icmpInMsgs|R|.1.3.6.1.2.1.5.1.0|41|The total number of ICMP messages which the entity received. Note that this counter includes all those counted by icmpInErrors.
+SNMPItem=icmpInErrors|R|.1.3.6.1.2.1.5.2.0|41|The number of ICMP messages which the entity received but determined as having ICMP-specific errors (bad ICMP checksums, bad length, etc.).
+SNMPItem=icmpInEchos|R|.1.3.6.1.2.1.5.8.0|41|The number of ICMP Echo (request) messages received.
+SNMPItem=icmpInEchoReps|R|.1.3.6.1.2.1.5.9.0|41|The number of ICMP Echo Reply messages received.
+SNMPItem=icmpInDestUnreachs|R|.1.3.6.1.2.1.5.3.0|41|The number of ICMP Destination Unreachable messages received.
+SNMPItem=icmpInAddrMasks|R|.1.3.6.1.2.1.5.12.0|41|The number of ICMP Address Mask Request messages received.
+SNMPItem=icmpInAddrMaskReps|R|.1.3.6.1.2.1.5.13.0|41|The number of ICMP Address Mask Reply messages received.
+
+[IP]
+SNMPItem=ipRoutingDiscards|R|.1.3.6.1.2.1.4.23.0|41|The number of routing entries which were chosen to be discarded even though they are valid. One possible reason for discarding such an entry could be to free-up buffer space for other routing entries.
+SNMPItem=ipReasmTimeout|R|.1.3.6.1.2.1.4.13.0|02|The maximum number of seconds which received fragments are held while they are awaiting reassembly at this entity.
+SNMPItem=ipReasmReqds|R|.1.3.6.1.2.1.4.14.0|41|The number of IP fragments received which needed to be reassembled at this entity.
+SNMPItem=ipReasmOKs|R|.1.3.6.1.2.1.4.15.0|41|The number of IP datagrams successfully re- assembled.
+SNMPItem=ipReasmFails|R|.1.3.6.1.2.1.4.16.0|41|The number of failures detected by the IP re- assembly algorithm (for whatever reason: timed out, errors, etc). Note that this is not necessarily a count of discarded IP fragments since some algorithms (notably the algorithm in RFC 815) can lose track of the number of fragments by combining them as they are received.
+SNMPItem=ipOutRequests|R|.1.3.6.1.2.1.4.10.0|41|The total number of IP datagrams which local IP user-protocols (including ICMP) supplied to IP in requests for transmission. Note that this counter does not include any datagrams counted in ipForwDatagrams.
+SNMPItem=ipOutNoRoutes|R|.1.3.6.1.2.1.4.12.0|41|The number of IP datagrams discarded because no route could be found to transmit them to their destination. Note that this counter includes any packets counted in ipForwDatagrams which meet this `no-route' criterion. Note that this includes any datagarms which a host cannot route because all of its default gateways are down.
+SNMPItem=ipOutDiscards|R|.1.3.6.1.2.1.4.11.0|41|The number of output IP datagrams for which no problem was encountered to prevent their transmission to their destination, but which were discarded (e.g., for lack of buffer space). Note that this counter would include datagrams counted in ipForwDatagrams if any such packets met this (discretionary) discard criterion.
+SNMPItem=ipInUnknownProtos|R|.1.3.6.1.2.1.4.7.0|41|The number of locally-addressed datagrams received successfully but discarded because of an unknown or unsupported protocol.
+SNMPItem=ipInReceives|R|.1.3.6.1.2.1.4.3.0|41|The total number of input datagrams received from interfaces, including those received in error.
+SNMPItem=ipInHdrErrors|R|.1.3.6.1.2.1.4.4.0|41|The number of input datagrams discarded due to errors in their IP headers, including bad checksums, version number mismatch, other format errors, time-to-live exceeded, errors discovered in processing their IP options, etc.
+SNMPItem=ipInDiscards|R|.1.3.6.1.2.1.4.8.0|41|The number of input IP datagrams for which no problems were encountered to prevent their continued processing, but which were discarded (e.g., for lack of buffer space). Note that this counter does not include any datagrams discarded while awaiting re-assembly.
+SNMPItem=ipInDelivers|R|.1.3.6.1.2.1.4.9.0|41|The total number of input datagrams successfully delivered to IP user-protocols (including ICMP).
+SNMPItem=ipInAddrErrors|R|.1.3.6.1.2.1.4.5.0|41|The number of input datagrams discarded because the IP address in their IP header's destination field was not a valid address to be received at this entity. This count includes invalid addresses (e.g., 0.0.0.0) and addresses of unsupported Classes (e.g., Class E). For entities which are not IP Gateways and therefore do not forward datagrams, this counter includes datagrams discarded because the destination address was not a local address.
+SNMPItem=ipFragOKs|R|.1.3.6.1.2.1.4.17.0|41|The number of IP datagrams that have been successfully fragmented at this entity.
+SNMPItem=ipFragFails|R|.1.3.6.1.2.1.4.18.0|41|The number of IP datagrams that have been discarded because they needed to be fragmented at this entity but could not be, e.g., because their Don't Fragment flag was set.
+SNMPItem=ipFragCreates|R|.1.3.6.1.2.1.4.19.0|41|The number of IP datagram fragments that have been generated as a result of fragmentation at this entity.
+SNMPItem=ipForwarding|RW|.1.3.6.1.2.1.4.1.0|02|The indication of whether this entity is acting as an IP gateway in respect to the forwarding of datagrams received by, but not addressed to, this entity. IP gateways forward datagrams. IP hosts do not (except those source-routed via the host). Note that for some managed nodes, this object may take on only a subset of the values possible. Accordingly, it is appropriate for an agent to return a `badValue' response if a management station attempts to change this object to an inappropriate value.
+SNMPItem=ipForwDatagrams|R|.1.3.6.1.2.1.4.6.0|41|The number of input datagrams for which this entity was not their final IP destination, as a result of which an attempt was made to find a route to forward them to that final destination. In entities which do not act as IP Gateways, this counter will include only those packets which were Source-Routed via this entity, and the Source- Route option processing was successful.
+SNMPItem=ipDefaultTTL|RW|.1.3.6.1.2.1.4.2.0|02|The default value inserted into the Time-To-Live field of the IP header of datagrams originated at this entity, whenever a TTL value is not supplied by the transport layer protocol.
+
+[Interfaces]
+SNMPItem=ifType.1|R|.1.3.6.1.2.1.2.2.1.3.1|02|The type of interface, distinguished according to the physical/link protocol(s) immediately `below' the network layer in the protocol stack.
+SNMPItem=ifSpeed.1|R|.1.3.6.1.2.1.2.2.1.5.1|42|An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.
+SNMPItem=ifSpecific.1|R|.1.3.6.1.2.1.2.2.1.22.1|06|A reference to MIB definitions specific to the particular media being used to realize the interface. For example, if the interface is realized by an ethernet, then the value of this object refers to a document defining objects specific to ethernet. If this information is not present, its value should be set to the OBJECT IDENTIFIER { 0 0 }, which is a syntatically valid object identifier, and any conformant implementation of ASN.1 and BER must be able to generate and recognize this value.
+SNMPItem=ifPhysAddress.1|R|.1.3.6.1.2.1.2.2.1.6.1|04|The interface's address at the protocol layer immediately `below' the network layer in the protocol stack. For interfaces which do not have such an address (e.g., a serial line), this object should contain an octet string of zero length.
+SNMPItem=ifOutUcastPkts.1|R|.1.3.6.1.2.1.2.2.1.17.1|41|The total number of packets that higher-level protocols requested be transmitted to a subnetwork-unicast address, including those that were discarded or not sent.
+SNMPItem=ifOutQLen.1|R|.1.3.6.1.2.1.2.2.1.21.1|42|The length of the output packet queue (in packets).
+SNMPItem=ifOutOctets.1|R|.1.3.6.1.2.1.2.2.1.16.1|41|The total number of octets transmitted out of the interface, including framing characters.
+SNMPItem=ifOutNUcastPkts.1|R|.1.3.6.1.2.1.2.2.1.18.1|41|The total number of packets that higher-level protocols requested be transmitted to a non- unicast (i.e., a subnetwork-broadcast or subnetwork-multicast) address, including those that were discarded or not sent.
+SNMPItem=ifOutErrors.1|R|.1.3.6.1.2.1.2.2.1.20.1|41|The number of outbound packets that could not be transmitted because of errors.
+SNMPItem=ifOutDiscards.1|R|.1.3.6.1.2.1.2.2.1.19.1|41|The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being transmitted. One possible reason for discarding such a packet could be to free up buffer space.
+SNMPItem=ifOperStatus.1|R|.1.3.6.1.2.1.2.2.1.8.1|02|The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.
+SNMPItem=ifNumber|R|.1.3.6.1.2.1.2.1.0|02|The number of network interfaces (regardless of their current state) present on this system.
+SNMPItem=ifMtu.1|R|.1.3.6.1.2.1.2.2.1.4.1|02|The size of the largest datagram which can be sent/received on the interface, specified in octets. For interfaces that are used for transmitting network datagrams, this is the size of the largest network datagram that can be sent on the interface.
+SNMPItem=ifLastChange.1|R|.1.3.6.1.2.1.2.2.1.9.1|43|The value of sysUpTime at the time the interface entered its current operational state. If the current state was entered prior to the last re- initialization of the local network management subsystem, then this object contains a zero value.
+SNMPItem=ifIndex.1|R|.1.3.6.1.2.1.2.2.1.1.1|02|A unique value for each interface. Its value ranges between 1 and the value of ifNumber. The value for each interface must remain constant at least from one re-initialization of the entity's network management system to the next re- initialization.
+SNMPItem=ifInUnknownProtos.1|R|.1.3.6.1.2.1.2.2.1.15.1|41|The number of packets received via the interface which were discarded because of an unknown or unsupported protocol.
+SNMPItem=ifInUcastPkts.1|R|.1.3.6.1.2.1.2.2.1.11.1|41|The number of subnetwork-unicast packets delivered to a higher-layer protocol.
+SNMPItem=ifInOctets.1|R|.1.3.6.1.2.1.2.2.1.10.1|41|The total number of octets received on the interface, including framing characters.
+SNMPItem=ifInNUcastPkts.1|R|.1.3.6.1.2.1.2.2.1.12.1|41|The number of non-unicast (i.e., subnetwork- broadcast or subnetwork-multicast) packets delivered to a higher-layer protocol.
+SNMPItem=ifInErrors.1|R|.1.3.6.1.2.1.2.2.1.14.1|41|The number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.
+SNMPItem=ifInDiscards.1|R|.1.3.6.1.2.1.2.2.1.13.1|41|The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space.
+SNMPItem=ifDescr.1|R|.1.3.6.1.2.1.2.2.1.2.1|04|A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the hardware interface.
+SNMPItem=ifAdminStatus.1|RW|.1.3.6.1.2.1.2.2.1.7.1|02|The desired state of the interface. The testing(3) state indicates that no operational packets can be passed.
+
+[SNMP]
+SNMPItem=snmpOutTraps|R|.1.3.6.1.2.1.11.29.0|41|The total number of SNMP Trap PDUs which have been generated by the SNMP protocol entity.
+SNMPItem=snmpOutTooBigs|R|.1.3.6.1.2.1.11.20.0|41|The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field is `tooBig.'
+SNMPItem=snmpOutSetRequests|R|.1.3.6.1.2.1.11.27.0|41|The total number of SNMP Set-Request PDUs which have been generated by the SNMP protocol entity.
+SNMPItem=snmpOutPkts|R|.1.3.6.1.2.1.11.2.0|41|The total number of SNMP Messages which were passed from the SNMP protocol entity to the transport service.
+SNMPItem=snmpOutNoSuchNames|R|.1.3.6.1.2.1.11.21.0|41|The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status is `noSuchName'.
+SNMPItem=snmpOutGetResponses|R|.1.3.6.1.2.1.11.28.0|41|The total number of SNMP Get-Response PDUs which have been generated by the SNMP protocol entity.
+SNMPItem=snmpOutGetRequests|R|.1.3.6.1.2.1.11.25.0|41|The total number of SNMP Get-Request PDUs which have been generated by the SNMP protocol entity.
+SNMPItem=snmpOutGetNexts|R|.1.3.6.1.2.1.11.26.0|41|The total number of SNMP Get-Next PDUs which have been generated by the SNMP protocol entity.
+SNMPItem=snmpOutGenErrs|R|.1.3.6.1.2.1.11.24.0|41|The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field is `genErr'.
+SNMPItem=snmpOutBadValues|R|.1.3.6.1.2.1.11.22.0|41|The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field is `badValue'.
+SNMPItem=snmpInTraps|R|.1.3.6.1.2.1.11.19.0|41|The total number of SNMP Trap PDUs which have been accepted and processed by the SNMP protocol entity.
+SNMPItem=snmpInTotalSetVars|R|.1.3.6.1.2.1.11.14.0|41|The total number of MIB objects which have been altered successfully by the SNMP protocol entity as the result of receiving valid SNMP Set-Request PDUs.
+SNMPItem=snmpInTotalReqVars|R|.1.3.6.1.2.1.11.13.0|41|The total number of MIB objects which have been retrieved successfully by the SNMP protocol entity as the result of receiving valid SNMP Get-Request and Get-Next PDUs.
+SNMPItem=snmpInTooBigs|R|.1.3.6.1.2.1.11.8.0|41|The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field is `tooBig'.
+SNMPItem=snmpInSetRequests|R|.1.3.6.1.2.1.11.17.0|41|The total number of SNMP Set-Request PDUs which have been accepted and processed by the SNMP protocol entity.
+SNMPItem=snmpInReadOnlys|R|.1.3.6.1.2.1.11.11.0|41|The total number valid SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field is `readOnly'. It should be noted that it is a protocol error to generate an SNMP PDU which contains the value `readOnly' in the error-status field, as such this object is provided as a means of detecting incorrect implementations of the SNMP.
+SNMPItem=snmpInPkts|R|.1.3.6.1.2.1.11.1.0|41|The total number of Messages delivered to the SNMP entity from the transport service.
+SNMPItem=snmpInNoSuchNames|R|.1.3.6.1.2.1.11.9.0|41|The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field is `noSuchName'.
+SNMPItem=snmpInGetResponses|R|.1.3.6.1.2.1.11.18.0|41|The total number of SNMP Get-Response PDUs which have been accepted and processed by the SNMP protocol entity.
+SNMPItem=snmpInGetRequests|R|.1.3.6.1.2.1.11.15.0|41|The total number of SNMP Get-Request PDUs which have been accepted and processed by the SNMP protocol entity.
+SNMPItem=snmpInGetNexts|R|.1.3.6.1.2.1.11.16.0|41|The total number of SNMP Get-Next PDUs which have been accepted and processed by the SNMP protocol entity.
+SNMPItem=snmpInGenErrs|R|.1.3.6.1.2.1.11.12.0|41|The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field is `genErr'.
+SNMPItem=snmpInBadVersions|R|.1.3.6.1.2.1.11.3.0|41|The total number of SNMP Messages which were delivered to the SNMP protocol entity and were for an unsupported SNMP version.
+SNMPItem=snmpInBadValues|R|.1.3.6.1.2.1.11.10.0|41|The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field is `badValue'.
+SNMPItem=snmpInBadCommunityUses|R|.1.3.6.1.2.1.11.5.0|41|The total number of SNMP Messages delivered to the SNMP protocol entity which represented an SNMP operation which was not allowed by the SNMP community named in the Message.
+SNMPItem=snmpInBadCommunityNames|R|.1.3.6.1.2.1.11.4.0|41|The total number of SNMP Messages delivered to the SNMP protocol entity which used a SNMP community name not known to said entity.
+SNMPItem=snmpInASNParseErrs|R|.1.3.6.1.2.1.11.6.0|41|The total number of ASN.1 or BER errors encountered by the SNMP protocol entity when decoding received SNMP Messages.
+SNMPItem=snmpEnableAuthenTraps|RW|.1.3.6.1.2.1.11.30.0|02|Indicates whether the SNMP agent process is permitted to generate authentication-failure traps. The value of this object overrides any configuration information/ as such, it provides a means whereby all authentication-failure traps may be disabled. Note that it is strongly recommended that this object be stored in non-volatile memory so that it remains constant between re-initializations of the network management system.
+
+[System]
+SNMPItem=sysUpTime|R|.1.3.6.1.2.1.1.3.0|43|The time (in hundredths of a second) since the network management portion of the system was last re-initialized.
+SNMPItem=sysServices|R|.1.3.6.1.2.1.1.7.0|02|A value which indicates the set of services that this entity primarily offers. The value is a sum. This sum initially takes the value zero, Then, for each layer, L, in the range 1 through 7, that this node performs transactions for, 2 raised to (L - 1) is added to the sum. For example, a node which performs primarily routing functions would have a value of 4 (2^(3-1)). In contrast, a node which is a host offering application services would have a value of 72 (2^(4-1) + 2^(7-1)). Note that in the context of the Internet suite of protocols, values should be calculated accordingly: layer functionality 1 physical (e.g., repeaters) 2 datalink/subnetwork (e.g., bridges) 3 internet (e.g., IP gateways) 4 end-to-end (e.g., IP hosts) 7 applications (e.g., mail relays) For systems including OSI protocols, layers 5 and 6 may also be counted.
+SNMPItem=sysObjectID|R|.1.3.6.1.2.1.1.2.0|06|The vendor's authoritative identification of the network management subsystem contained in the entity. This value is allocated within the SMI enterprises subtree (1.3.6.1.4.1) and provides an easy and unambiguous means for determining `what kind of box' is being managed. For example, if vendor `Flintstones, Inc.' was assigned the subtree 1.3.6.1.4.1.4242, it could assign the identifier 1.3.6.1.4.1.4242.1.1 to its `Fred Router'.
+SNMPItem=sysName|RW|.1.3.6.1.2.1.1.5.0|04|An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name.
+SNMPItem=sysLocation|RW|.1.3.6.1.2.1.1.6.0|04|The physical location of this node (e.g., `telephone closet, 3rd floor').
+SNMPItem=sysDescr|R|.1.3.6.1.2.1.1.1.0|04|A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.
+SNMPItem=sysContact|RW|.1.3.6.1.2.1.1.4.0|04|The textual identification of the contact person for this managed node, together with information on how to contact this person.
+
+[TCP]
+SNMPItem=tcpRtoMin|R|.1.3.6.1.2.1.6.2.0|02|The minimum value permitted by a TCP implementation for the retransmission timeout, measured in milliseconds. More refined semantics for objects of this type depend upon the algorithm used to determine the retransmission timeout. In particular, when the timeout algorithm is rsre(3), an object of this type has the semantics of the LBOUND quantity described in RFC 793.
+SNMPItem=tcpRtoMax|R|.1.3.6.1.2.1.6.3.0|02|The maximum value permitted by a TCP implementation for the retransmission timeout, measured in milliseconds. More refined semantics for objects of this type depend upon the algorithm used to determine the retransmission timeout. In particular, when the timeout algorithm is rsre(3), an object of this type has the semantics of the UBOUND quantity described in RFC 793.
+SNMPItem=tcpRtoAlgorithm|R|.1.3.6.1.2.1.6.1.0|02|The algorithm used to determine the timeout value used for retransmitting unacknowledged octets.
+SNMPItem=tcpRetransSegs|R|.1.3.6.1.2.1.6.12.0|41|The total number of segments retransmitted - that is, the number of TCP segments transmitted containing one or more previously transmitted octets.
+SNMPItem=tcpPassiveOpens|R|.1.3.6.1.2.1.6.6.0|41|The number of times TCP connections have made a direct transition to the SYN-RCVD state from the LISTEN state.
+SNMPItem=tcpOutSegs|R|.1.3.6.1.2.1.6.11.0|41|The total number of segments sent, including those on current connections but excluding those containing only retransmitted octets.
+SNMPItem=tcpOutRsts|R|.1.3.6.1.2.1.6.15.0|41|The number of TCP segments sent containing the RST flag.
+SNMPItem=tcpMaxConn|R|.1.3.6.1.2.1.6.4.0|02|The limit on the total number of TCP connections the entity can support. In entities where the maximum number of connections is dynamic, this object should contain the value -1.
+SNMPItem=tcpInSegs|R|.1.3.6.1.2.1.6.10.0|41|The total number of segments received, including those received in error. This count includes segments received on currently established connections.
+SNMPItem=tcpInErrs|R|.1.3.6.1.2.1.6.14.0|41|The total number of segments received in error (e.g., bad TCP checksums).
+SNMPItem=tcpEstabResets|R|.1.3.6.1.2.1.6.8.0|41|The number of times TCP connections have made a direct transition to the CLOSED state from either the ESTABLISHED state or the CLOSE-WAIT state.
+SNMPItem=tcpCurrEstab|R|.1.3.6.1.2.1.6.9.0|42|The number of TCP connections for which the current state is either ESTABLISHED or CLOSE- WAIT.
+SNMPItem=tcpAttemptFails|R|.1.3.6.1.2.1.6.7.0|41|The number of times TCP connections have made a direct transition to the CLOSED state from either the SYN-SENT state or the SYN-RCVD state, plus the number of times TCP connections have made a direct transition to the LISTEN state from the SYN-RCVD state.
+SNMPItem=tcpActiveOpens|R|.1.3.6.1.2.1.6.5.0|41|The number of times TCP connections have made a direct transition to the SYN-SENT state from the CLOSED state.
+
+[UDP]
+SNMPItem=udpOutDatagrams|R|.1.3.6.1.2.1.7.4.0|41|The total number of UDP datagrams sent from this entity.
+SNMPItem=udpNoPorts|R|.1.3.6.1.2.1.7.2.0|41|The total number of received UDP datagrams for which there was no application at the destination port.
+SNMPItem=udpInErrors|R|.1.3.6.1.2.1.7.3.0|41|The number of received UDP datagrams that could not be delivered for reasons other than the lack of an application at the destination port.
+SNMPItem=udpInDatagrams|R|.1.3.6.1.2.1.7.1.0|41|The total number of UDP datagrams delivered to UDP users.

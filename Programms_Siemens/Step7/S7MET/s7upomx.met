@@ -1,0 +1,175 @@
+;--------------------------------------------------------------------
+[_AUT_S7SW_AT]
+Subtype=_S7UP_OPDIAG_CT
+Subtype=_S7UP_OEINHEIT_CT
+Subtype=_S7UP_OFDEF_CT
+Subtype=_S7UP_OFDEFAKTION_CT
+Subtype=_S7UP_OBEWEGUNG_CT
+Subtype=_S7UP_OZUSTAND_CT
+Subtype=_S7UP_OTRANSITION_CT
+Subtype=_S7UP_OSCHRITT_CT
+Subtype=_S7UP_OAUSDRUCK_CT
+
+[_AUT_PACK_TABLE_AT]
+Abstract=true
+ObjType=0x00000031
+;Ein KlassenTyp reicht um packen auszulösen. 
+Subtype= _S7UP_OPDIAG_CT
+
+[_S7O_PROGF_OFFLINE_CT]
+;Relationen nach unten
+relation=0x00161000,_S7UP_OPDIAG_CT{1}[0x00161001];deep
+relation=0x00161002,_S7UP_OTEMPLCNT_CT{1}[0x00161003];deep
+relation=0x00161100,_S7UP_OFDEF_CT[0x00161101];deep
+;relation=0x00161004,_S7UP_OVEINHEIT_CT{1}[0x00161005];deep
+
+[_S7O_BLOCK_FB_CT]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OEINHEIT_CT{1}[0x00161101];deep
+
+[_S7O_BLOCK_FC_CT]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OEINHEIT_CT{1}[0x00161101];deep
+
+[_S7O_BLOCK_DB_CT]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OEINHEIT_CT{1}[0x00161101];deep
+
+[_S7O_BLOCK_OB_CT]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OEINHEIT_CT{1}[0x00161101];deep
+
+;--- S7 Meldungsliste Anfang
+[_S7WM_ALARM_HEADER_CT]
+;Relationen nach oben
+relation=0x00000059,_S7UP_OFDEF_CT{1}[0x00000058]
+;relation=0x00000059,_S7UP_OEINHEIT_CT[0x00000058]
+
+;--- Text-Server Anfang
+[_S7UT_TEXTLIST_CT]
+;Relationen nach oben
+relation=0x00161001,_S7UP_OPDIAG_CT[0x00161000]
+
+;--- PDIAG Anfang
+[_S7UP_OPDIAG_CT]
+server=s7upomax.dll
+ObjType=0x00161001
+prefix=QOM
+;Relationen nach oben
+relation=0x00161001,_S7O_PROGF_OFFLINE_CT{1}[0x00161000]
+;Relationen nach unten
+relation=0x00161000,_S7UT_TEXTLIST_CT{1}[0x00161001];deep
+
+;[_S7UP_OVEINHEIT_CT]
+;server=s7upomax.dll
+;ObjType=0x00161003
+;prefix=QOM
+;Relationen nach oben
+;relation=0x00161005,_S7O_PROGF_OFFLINE_CT{1}[0x00161004]
+;Relationen nach unten
+;relation=0x00161100,_S7UP_OFDEF_CT[0x00161101];deep
+
+[_S7UP_OTEMPLCNT_CT]
+server=s7upomax.dll
+ObjType=0x00161002
+prefix=QOM								
+;Relationen nach oben
+relation=0x00161003,_S7O_PROGF_OFFLINE_CT{1}[0x00161002]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OFDEF_CT[0x00161101];deep
+
+[_S7UP_OEINHEIT_CT]
+server=s7upomax.dll
+ObjType=0x00161101
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7O_BLOCK_FB_CT[0x00161100]
+relation=0x00161101,_S7O_BLOCK_FC_CT[0x00161100]
+relation=0x00161101,_S7O_BLOCK_OB_CT[0x00161100]
+relation=0x00161101,_S7O_BLOCK_DB_CT[0x00161100]
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+;Relationen nach unten
+;relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+relation=0x00161100,_S7UP_OFDEF_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OTRANSITION_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OSCHRITT_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OAUSDRUCK_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OBEWEGUNG_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OZUSTAND_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OEINHEIT_CT[0x00161101];deep
+
+[_S7UP_OFDEF_CT]
+server=s7upomax.dll
+ObjType=0x00161102
+prefix=QOM
+;Relationen nach oben
+;relation=0x00161101,_S7UP_OVEINHEIT_CT[0x00161100]
+relation=0x00161101,_S7O_PROGF_OFFLINE_CT[0x00161100]
+relation=0x00161101,_S7UP_OTEMPLCNT_CT[0x00161100]
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+relation=0x00161101,_S7UP_OBEWEGUNG_CT[0x00161100]
+relation=0x00161101,_S7UP_OZUSTAND_CT[0x00161100]
+relation=0x00161101,_S7UP_OSCHRITT_CT[0x00161100]
+;Relationen nach unten
+relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+
+[_S7UP_OBEWEGUNG_CT]
+server=s7upomax.dll
+ObjType=0x00161103
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OFDEF_CT[0x00161101];deep
+
+
+[_S7UP_OZUSTAND_CT]
+server=s7upomax.dll
+ObjType=0x00161104
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OFDEFAKTION_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OAUSDRUCK_CT[0x00161101];deep
+
+[_S7UP_OTRANSITION_CT]
+server=s7upomax.dll
+ObjType=0x00161105
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OAUSDRUCK_CT[0x00161101];deep
+
+[_S7UP_OSCHRITT_CT]
+server=s7upomax.dll
+ObjType=0x00161106
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+;Relationen nach unten
+relation=0x00161100,_S7UP_OFDEFAKTION_CT[0x00161101];deep
+relation=0x00161100,_S7UP_OAUSDRUCK_CT[0x00161101];deep
+
+[_S7UP_OAUSDRUCK_CT]
+server=s7upomax.dll
+ObjType=0x00161107
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OEINHEIT_CT[0x00161100]
+relation=0x00161101,_S7UP_OTRANSITION_CT[0x00161100]
+relation=0x00161101,_S7UP_OZUSTAND_CT[0x00161100]
+relation=0x00161101,_S7UP_OSCHRITT_CT[0x00161100]
+;Relationen nach unten
+
+[_S7UP_OFDEFAKTION_CT]
+server=s7upomax.dll
+ObjType=0x00161108
+prefix=QOM
+;Relationen nach oben
+relation=0x00161101,_S7UP_OZUSTAND_CT[0x00161100]
+relation=0x00161101,_S7UP_OSCHRITT_CT[0x00161100]
+;Relationen nach unten
+
+

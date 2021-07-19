@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Hardware Interrupt 6"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB46_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB46_STRT_INF : BYTE ;	//16#41/42/43/44 (Interrupt 1/2/3/4)
+  OB46_PRIORITY : BYTE ;	//22 (Priority of 1 is lowest)
+  OB46_OB_NUMBR : BYTE ;	//46 (Organization block 46, OB46)
+  OB46_RESERVED_1 : BYTE ;	//Reserved for system
+  OB46_RESERVED_2 : BYTE ;	//Reserved for system
+  OB46_MDL_ADDR : WORD ;	//Base address of module initiating interrupt
+  OB46_POINT_ADDR : DWORD ;	//Address of interrupt point on module
+  OB46_DATE_TIME : DATE_AND_TIME ;	//Date and time OB46 started  
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

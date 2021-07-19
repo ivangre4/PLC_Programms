@@ -1,0 +1,21 @@
+:Base S7WBPCAk.HLP
+1 概述=Welcome
+1 "常规"标签=HIDD_ALLG_BASE
+1 "标准"PC应用程序
+2 "FMS标签"=HIDD_FMS
+1 "OPC服务器"PC应用程序
+2 "DP"标签=HIDD_DP
+2 "第2级DP主站"标签=HIDD_OPC_DPC2
+2 "FDL"标签=HIDD_FDL
+2 "FMS标签"=HIDD_FMS
+2 "ISO/TCP"标签=HIDD_SENDRECV
+2 "S7"标签=HIDD_S7
+2 编辑对象字典=HIDD_OVZ
+2 为特定的OPC条目分配访问权限=HIDD_ITEM
+2 "编辑VFD"对话框=HIDD_VFD
+2 揝NMP标签"=ID_Register_SNMP
+2 "PROFInet"标签=HIDD_OPC_PROFINET
+2 "PROFINET IO"标签=HID_OPC_PNIO
+2 SNMP：编辑设备组态=ID_Anlagenkonfiguration_bearbeiten
+2 SNMP：添加节点=ID_Teilnehmerdaten_bearbeiten
+

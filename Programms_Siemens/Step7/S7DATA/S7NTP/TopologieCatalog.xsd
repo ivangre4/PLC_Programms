@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="TopologieCommon.xsd"/>
+	<xs:element name="Catalog">
+		<xs:annotation>
+			<xs:documentation>Beinhaltet eine Liste von passiven Geräten die nicht in einem Step7-HwConfig/NetPro-Projekt parametriert sind</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.02</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.03: Attribute ProductFamily added</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.04: Reference auf WiringTypes hinzugefuegt</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="WiringTypes"/>
+				<xs:element name="DeviceTypes">
+					<xs:annotation>
+						<xs:documentation>Liste von Gerätetypen</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="DeviceType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Version des Komponentenkatalogs. Wird im TopologieFile/../DeviceType referenziert.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,166 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2035
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- Interfacemodul IM151-1AA05 Standard für ET200S
+[_S7H_HSP_2035_6ES7_151_1AA05_CT]
+AutoCreatedChild1=2367055,2,FIXED
+CountAutoCreatedChilds=1
+basetype=_S7H_ET200S_151_1AA00_CT
+
+
+
+server=s7h2035x.dll
+
+CatalogParent=1315851,1316849
+HSP_ID=2035
+HSP_NAME=ET200S IM 151-1AA05
+HWCNFX_FOR_HWU=5.4.0.0
+HWCNFX_VER=5.4.5.0|0
+IsCatEntry=1
+MLFB=6ES7 151-1AA05-0AB0
+nKatChilds=11
+KatChild1=1315854
+KatChild2=1315855
+KatChild3=1316065
+KatChild4=1315852
+KatChild5=1315853
+KatChild6=1315857
+KatChild7=1316560
+KatChild8=1315858
+KatChild9=1315856
+; Frequenzumrichter(HSP44)
+KatChild10=2363548
+; Sondermodule
+KatChild11=2366896    
+prefix=OM
+ObjType=2367054  
+paramDescr=s7h2035x.dsc
+PROGID_SLAVEWRAPPER=S7hwSlaveWrapper.ET200SIM151_1AA05.1
+
+SHORTNAME=IM151-1 Standard
+DP_VERSION_SUPPORT=7
+FIRST_VISIBLE_CHILD_NO=4
+IAM_THIS_SLAVE=1
+IAMA_ISLAVE=0
+IAMA_S7SLAVE=1
+IAMA_DPV0SLAVE_PER_DEFAULT=1
+
+
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_ASK4POST_RESET=1
+FW_DOWNLOAD_POST_RESET_DEFAULT=0
+SUPPORT_MODULES_WITH_SKF=1
+MAX_INPUT_DATA_LEN=244
+MAX_OUTPUT_DATA_LEN=244
+C1_RESPONSE_TIMEOUT=100
+
+PRMCMD_SUPP = 1
+CFG_CORR = 1
+
+IUA_SUPPORT = 1
+;I&MSupport
+IUM_SUPPORT=1
+
+
+;Tausch mit Vorgänger (_S7H_HSP_6ES7_151_1AA04_CT)
+;HSP0075
+;AP00673854: Tausch ausschalten bis Lösung für Absturz-Problem gefunden
+;EXCHANGEABLE_OBJTYPES=2363669
+
+SLOT1_DPV1=1
+PULL_PLUG_DPV1_ALWAYS=1
+
+; für das Device-Tool PCT (zum Konfigurieren von IO-Link-Modulen)
+SERVICEID=1000
+;Steckbarkeit des der IO-Link-MasterModule
+Rule_00020200=INCL(5,66)
+
+; ----------------------------- ET200S IM 151-1AA05 Kopfbaugruppe  
+[_S7H_HSP_2035_ETER_6ES7_151_1AA05_CT]
+ObjType=2367055
+prefix=OM
+server=s7h2035x.dll
+;basetype=_S7H_ET200S_ETER_151_1BA00_CT
+basetype=_S7H_ET200S_ETER_151_1AA00_CT
+basetype=_AUT_GENCOMM_AT
+HAS_NO_LINK_TO_STATION=1
+IsCatEntry=0
+
+MLFB=6ES7 151-1AA05-0AB0
+PNO_IDENT_NO=0x806A
+SHORTNAME=IM151-1 Standard
+IO_DATA_SIZE=32 
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_ASK4POST_RESET=1
+FW_DOWNLOAD_POST_RESET_DEFAULT=0
+C1_C2_READ_WRITE_SUPP=0x11
+MAX_DIAG_DATA_LEN=128
+MAX_DIAG_RESP_LEN=128
+
+; Der Type-Code stammt aus AP00241813.
+;S7_TYPE_CODE=0x3340
+IUA_SUPPORT= 1
+
+
+
+HSP_ID=2035
+HSP_NAME=ET200S IM 151-1AA05
+HWCNFX_FOR_HWU=5.4.0.0
+HWCNFX_VER=5.5.0.0|0
+
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2057
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- Interfacemodul IM151-1 FO für ET200S
+[_S7H_HSP_2057_6ES7_151_1AB05_CT]
+ObjType=2367363
+prefix=OM
+server=s7h2035x.dll
+basetype=_S7H_HSP_2035_6ES7_151_1AA05_CT
+AutoCreatedChild1=2367364,2,FIXED
+CountAutoCreatedChilds=1
+
+;Steckbarkeit des der IO-Link-MasterModule; Rule u. ServicID wird vom 2035 geerbt
+nKatChilds=12
+KatChild12=1316891
+
+IUA_SUPPORT=1
+IUM_SUPPORT=1
+
+IsCatEntry=1
+MLFB=6ES7 151-1AB05-0AB0
+SHORTNAME=IM151-1 FO Standard
+
+;HW_DB_V3=s7h2057X
+
+HSP_ID=2035
+HSP_NAME=ET 200S IM151-1
+HWCNFX_FOR_HWU=5.4.0.0
+HWCNFX_VER=5.5.0.0|0
+
+
+;---------- 
+[_S7H_HSP_ET200S_ETER_151_1AB05_CT]
+ObjType=2367364
+prefix=OM
+server=s7h2035x.dll
+basetype=_S7H_HSP_2035_ETER_6ES7_151_1AA05_CT
+;basetype=2367055
+IsCatEntry=0
+MLFB=6ES7 151-1AB05-0AB0
+SHORTNAME=IM151-1 FO Standard
+PNO_IDENT_NO=0x806B
+TRANSMISSION_DELAY_L2=0.01,0.01,0.03,0.06,0.12,0.33,0.98,1.95,3.90,7.80 
+SUPPORTED_BAUDRATES_L2=0,1,2,3,4,6,9,11
+
+HSP_ID=2035
+HSP_NAME=ET 200S IM151-1
+HWCNFX_FOR_HWU=5.4.0.0
+HWCNFX_VER=5.5.0.0|0
+

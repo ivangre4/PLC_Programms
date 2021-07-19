@@ -1,0 +1,365 @@
+@DB_TYP FMS-Typ V1.0 DOS
+@CONVERTER      V1.0
+@LANGUAGE ENGLISH
+#  V 1.06  11.10.96																										
+
+General$NAM _M||||
+General
+{
+   Version               WM||||				   # NEU
+   OrderString           AM|""|0|31|31
+   VendorName            AM|""|0|31|31
+   ModelNameG            AM|""|0|31|31		   # NEU
+   ModelNameE            AM|""|0|31|31		   # NEU
+   ModelNameS            AM|""|0|31|31		   # NEU
+   ModelNameI            AM|""|0|31|31		   # NEU
+   ModelNameF            AM|""|0|31|31		   # NEU
+   Revision              AM|""|0|31|31
+   ProfileNumber         WM|0|0|255|1
+   LogicalStatus         BM|0|0|255|1
+   PhysicalStatus        BM|0|0|255|1
+   ControllerType        AM|""|0|31|31
+   HardwareRelease       AM|""|0|31|31
+   SoftwareRelease       AM|""|0|31|31
+   VendorFmsStack        AM|""|0|31|31
+   Comment               AM|""|0|79|79
+   FamilyG               AM|""|0|31|31		   # NEU
+   FamilyE               AM|""|0|31|31		   # NEU
+   FamilyS               AM|""|0|31|31		   # NEU
+   FamilyI               AM|""|0|31|31		   # NEU
+   FamilyF               AM|""|0|31|31		   # NEU
+   OrderNumber           AM|""|0|31|31		   
+   CompatibleTo          WM|0|||
+   SiemensStation        EM|FALSE|1|FALSE(0)|TRUE(1)
+   SiemensVendorID       OM||||
+   BitmapFile            AM|""|0|12|12
+}  
+
+BusSpecificCharacteristics$NAM _M||||
+BusSpecificCharacteristics
+{
+   ActiveStation        EM|FALSE|1|FALSE(0)|TRUE(1)
+   PassiveStation       EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate9.6          EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate19.2         EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate93.75        EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate187.5        EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate500          EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate1500         EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate3000         EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate6000         EM|FALSE|1|FALSE(0)|TRUE(1)
+   Baudrate12000        EM|FALSE|1|FALSE(0)|TRUE(1)
+}
+
+ImplementationAndSystem$NAM _M||||
+ImplementationAndSystem
+{ 
+   PollListSap              BM||||
+   TimeOutAssociate         OM||||
+   SymLenFmsKbl             BM||||
+   VfdPointerSupported      EM|FALSE|1|FALSE(0)|TRUE(1)
+   FMSFeaturesSupported     HM||6|6|6
+   FMA7FeaturesSupported    HM||6|6|6
+   MaxSap                   BM||||
+   MaxNoSap                 BM||||
+   MaxCr                    WM||||
+   MaxNoCrl                 WM||||
+   MaxParServices           WM||||
+   MaxPduLen                BM||||
+   MaxOvIndex               WM||||
+   MaxNoOv                  WM||||
+   MaxNoVfd                 BM||||
+   MaxNoCycleCon            WM||||
+   MaxNoActiveCon           WM||||   
+   MinVarIndex              WM||||
+   MaxVarIndex              WM||||
+   MaxCntOutServicesCalling WM||||
+   MaxCntOutServicesCalled  WM||||
+   MaxMultiplier		    WM||||		  # NEU
+   DefMultiplier		    WM||||		  # NEU
+   DefLsap      		    BM||||		  # NEU
+   ServiceFeaturesAnded		EM|FALSE|1|FALSE(0)|TRUE(1)	   # NEU
+}
+
+AdditionalCharacteristics$NAM _M||||
+AdditionalCharacteristics
+{
+   MaxNameLen             WM||||
+   AccessProtectSupport   EM|FALSE|1|TRUE(1)|FALSE(0)
+   MaxLenExtension        WM||||
+   MaxLenExecArgument     WM||||
+}
+
+ConnectionProfile$NAM            _S||||
+ConnectionProfile
+{
+   General$NAM          _M||||
+   General
+   {
+	  Userdefined       	  EM|FALSE|1|FALSE(0)|TRUE(1)	  # NEU
+      ConnProfileBetriebsart  EM|MASTER|8|MASTER(1)|SLAVE(0)  #NEU
+      ConnProfileNameG        AM|""|0|31|31					  #NEU
+      ConnProfileNameE        AM|""|0|31|31					  #NEU
+      ConnProfileNameS        AM|""|0|31|31					  #NEU
+      ConnProfileNameI        AM|""|0|31|31					  #NEU
+      ConnProfileNameF        AM|""|0|31|31					  #NEU
+	  ConnOrderString		  AM|""|0|31|31					  #NEU
+      LocalLSAP               BM|20|0|255|1
+      RemoteLSAP              BM|20|0|255|1
+      RemoteAddress           BM|2|0|255|1
+   }
+
+   ConnectionAttributes$NAM _M||||
+   ConnectionAttributes
+   {
+      ConnectionType_MMAZ           EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_MSAZ           EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_MSAZ_SI        EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_MSZY           EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_MSZY_SI        EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_MULT           EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_BRCT           EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionType_Default        EM|MMAZ|8|MMAZ(0)|MSAZ(1)|MSAZ_SI(5)|MSZY(3) 
+                                             |MSZY_SI(7)|MULT(10)|BRCT(8)
+      ConnectionAttribute_D         EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionAttribute_I         EM|FALSE|1|TRUE(1)|FALSE(0)
+      ConnectionAttribute_O         EM|FALSE|1|TRUE(1)|FALSE(0)
+      # ConnectionAttribute_Default   EM|D|8|D(0)|I(1)|O(2)		  #NEU
+      ControlIntervalMin            OM||||
+      ControlIntervalMax            OM||||
+      ControlInterval_Default       OM||||
+      LLIAttribute_FMS              EM|FALSE|1|TRUE(1)|FALSE(0)
+      LLIAttribute_FMA7             EM|FALSE|1|TRUE(1)|FALSE(0)
+      LLIAttribute_Default          EM|FMS|1|FMS(0)|FMA7(1)
+      #MultiplierMin                 BM||||						  #NEU
+      #MultiplierMax                 BM||||						  #NEU
+      #Multiplier_Default            BM||||						  #NEU
+   }
+
+   NumberOfParallelServices$NAM _M||||
+   NumberOfParallelServices
+   {
+      MinMaxSCC         BM|0|0|255|1		 #NEU
+      MinMaxRCC         BM|0|0|255|1		 #NEU
+      MinMaxSAC         BM|0|0|255|1		 #NEU
+      MinMaxRAC         BM|0|0|255|1		 #NEU
+      DefMaxSCC         BM|1|0|255|1		 #NEU
+      DefMaxRCC         BM|1|0|255|1		 #NEU
+      DefMaxSAC         BM|1|0|255|1		 #NEU
+      DefMaxRAC         BM|1|0|255|1		 #NEU
+      MaxMaxSCC         BM|255|0|255|1		 #NEU
+      MaxMaxRCC         BM|255|0|255|1		 #NEU
+      MaxMaxSAC         BM|255|0|255|1		 #NEU
+      MaxMaxRAC         BM|255|0|255|1		 #NEU
+   }
+
+   SizeOfPracticalData$NAM _M||||
+   SizeOfPracticalData
+   {
+      MinMaxPduSendingHighPrio     BM|0|0|255|1	   #NEU
+      MinMaxPduSendingLowPrio      BM|0|0|255|1	   #NEU
+      MinMaxPduReceivingHighPrio   BM|0|0|255|1	   #NEU
+      MinMaxPduReceivingLowPrio    BM|0|0|255|1	   #NEU
+      MaxMaxPduSendingHighPrio     BM|255|0|255|1	#NEU
+      MaxMaxPduSendingLowPrio      BM|255|0|255|1	#NEU
+      MaxMaxPduReceivingHighPrio   BM|255|0|255|1	#NEU
+      MaxMaxPduReceivingLowPrio    BM|255|0|255|1	#NEU
+      DefMaxPduSendingHighPrio     BM|241|0|255|1	#NEU
+      DefMaxPduSendingLowPrio      BM|241|0|255|1	#NEU
+      DefMaxPduReceivingHighPrio   BM|241|0|255|1	#NEU
+      DefMaxPduReceivingLowPrio    BM|241|0|255|1	#NEU
+   }
+
+	# Responder  FEATURES
+   SupportedServices_O$NAM _M||||
+   SupportedServices_O
+   {
+      GetLongOD                     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      UnsolictedStatus              EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PutOD                         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DomainDownload                EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DomainUpload                  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      RequestDomainDownLoad         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      RequestDomainUpLoad           EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      CreateProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DeleteProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      StartProgramInvocation        EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      StopProgramInvocation         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ResumeProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ResetProgramInvocation        EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      KillProgramInvocation         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      Read                          EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      Write                         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ReadWithType                  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      WriteWithType                 EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PhysRead                      EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PhysWrite                     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      InformationReport             EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      InformationReportWithType     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DefineVariableList            EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DeleteVariableList            EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      EventNotification             EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      EventNotificationWithType     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AcknowledgeEventNotification  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AlterEventConditionMonitoring EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AddressableWithName           EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+   }
+
+		# Requester Features
+  SupportedServices_R$NAM _M||||
+   SupportedServices_R
+   {
+      GetLongOD                     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      UnsolictedStatus              EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PutOD                         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DomainDownload                EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DomainUpload                  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      RequestDomainDownLoad         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      RequestDomainUpLoad           EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      CreateProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DeleteProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      StartProgramInvocation        EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      StopProgramInvocation         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ResumeProgramInvocation       EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ResetProgramInvocation        EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      KillProgramInvocation         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      Read                          EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      Write                         EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      ReadWithType                  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      WriteWithType                 EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PhysRead                      EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      PhysWrite                     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      InformationReport             EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      InformationReportWithType     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DefineVariableList            EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      DeleteVariableList            EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      EventNotification             EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      EventNotificationWithType     EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AcknowledgeEventNotification  EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AlterEventConditionMonitoring EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+      AddressableWithName           EM|FIXED_FALSE|8|TRUE(1)|FALSE(0)|FIXED_TRUE(2)|FIXED_FALSE(3)	   #NEU
+   }
+}
+
+
+# containes user specified structured types
+FmsTypeDescr$NAM            _A||||
+FmsTypeDescr
+{
+
+   # amount of types
+   Type$CNT                 WM|0x0001|0x0000|0x03d1|1
+
+   # list of type descriptions
+   Type$NAM                 _A||||
+   Type                                
+   {
+      # Index of type  description
+      Index                 WM|0x000f|0x000f|0x7fff|1
+
+      # ObjectCode = Structure
+      Object_Code           BC|0x06|||
+
+      # amount of structure elements
+      Array_of_Elements$CNT BM||0x01|0x4c|1
+
+      # list of structure elements
+      Array_of_Elements$NAM _S||||
+      Array_of_Elements
+      {
+         # referenced Data Type Index
+         # Boolean            : 1
+         # Integer8           : 2
+         # Integer16          : 3
+         # Integer32          : 4
+         # Unsigned8          : 5
+         # Unsigned16         : 6
+         # Unsigned32         : 7
+         # Float              : 8
+         # Visible String     : 9
+         # Octet String       : 10
+         # Date               : 11
+         # Time of Day        : 12
+         # Time Difference    : 13
+         # Bit String         : 14
+         # user Typen         : >= 15
+         Data_Type_Index    WM||0x0001|0x7fff|1
+
+         # datatype length in byte
+         # Boolean            : 1
+         # Integer8           : 1
+         # Integer16          : 2
+         # Integer32          : 4
+         # Unsigned8          : 1
+         # Unsigned16         : 2
+         # Unsigned32         : 4
+         # Float              : 4
+         # Visible String     : length of string
+         # Octet String       : length of string
+         # Date               : 7
+         # Time of Day        : 4 oder 6
+         # Time Difference    : 4 oder 6
+         # Bit String         : length of string
+         # user types         : length of structure in Byte
+         Length             BM||||
+
+      } # end of Array_of_Elements
+   } # end of Type
+} # end of Type_Descr 
+
+
+# variable description
+FmsVar$NAM                  _O||||
+FmsVar
+{
+   # amount of variable Descriptions
+   Var$CNT                  WM||0x0001|0x0443|1 # 0x0001
+
+   # list of variable descriptions
+   Var$NAM                  _A||||
+   Var                                        
+   {
+      # index of variable
+      Index                 WM||||
+
+      # name of variable
+      Variable_Name         AM|""|0|32|0
+
+      # objectcode of variable
+      Object_Code           EM||8|SimpleType(7)|Array(8)|Record(9)
+
+      # datatyp  index
+      # Boolean            : 1
+      # Integer8           : 2
+      # Integer16          : 3
+      # Integer32          : 4
+      # Unsigned8          : 5
+      # Unsigned16         : 6
+      # Unsigned32         : 7
+      # Float              : 8
+      # Visible String     : 9
+      # Octet String       : 10
+      # Date               : 11
+      # Time of Day        : 12
+      # Time Difference    : 13
+      # Bit String         : 14
+      # user Typen         : >= 15
+      Data_Type_Index       WM|||| 
+
+      # number of array elements ( Array >= 1)
+      Number_of_Elements    BM|0|||
+
+      # Length of the Variable in Byte 
+	  VarLength             BM||0x01|0xef|1
+					
+      # FMS password
+      Password              BM||||
+
+      # FMS access groups
+      Access_Groups         BM||||
+
+      # FMS access rights
+      Access_Rights         WM||||
+
+   } # end of Var
+} # end of FmsVar

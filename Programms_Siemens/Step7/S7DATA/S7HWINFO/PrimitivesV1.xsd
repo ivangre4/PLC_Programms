@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by ATS 14 (Siemens AG A&D ATS 14) -->
+<xsd:schema targetNamespace="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+	<!-- SIMPLE TYPES -->
+	<xsd:simpleType name="VersionT">
+		<xsd:annotation>
+			<xsd:documentation>Type holding an instance or schema Version</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="IdT">
+		<xsd:annotation>
+			<xsd:documentation>Base Type for DIA-X Object Ids</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="RefIdT">
+		<xsd:annotation>
+			<xsd:documentation>Base Type for DIA-X Object and Feature References</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ARGBColorT">
+		<xsd:annotation>
+			<xsd:documentation>Holds RGB colors with optional Alpha channel in Hex (AARRGGBB)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:hexBinary">
+			<xsd:minLength value="3"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- COMPLEX TYPES -->
+	<!-- Main Types -->
+	<xsd:complexType name="DocumentT">
+		<xsd:annotation>
+			<xsd:documentation>Type for all top level elements of DIA-X Documents, e.g. Export files</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FileInfo" type="FileHeaderT" minOccurs="0"/>
+			<xsd:element ref="Object" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ExportId" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Parent" type="xsd:anyURI"/>
+		<xsd:attribute name="Root" type="xsd:anyURI"/>
+		<xsd:attribute name="DefaultLanguage" type="xsd:language"/>
+	</xsd:complexType>
+	<xsd:complexType name="FileHeaderT">
+		<xsd:sequence>
+			<xsd:element name="Created" type="CreationChangeInfoT" minOccurs="0"/>
+			<xsd:element name="LastModified" type="CreationChangeInfoT" minOccurs="0"/>
+			<xsd:element ref="ds:Signature" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="Version" type="VersionT" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ObjectInfoT">
+		<xsd:annotation>
+			<xsd:documentation>Versioning and Timestamps</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Created" type="CreationChangeInfoT" minOccurs="0"/>
+			<xsd:element name="LastModified" type="CreationChangeInfoT" minOccurs="0"/>
+			<xsd:element ref="ds:Signature" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ObjectT">
+		<xsd:annotation>
+			<xsd:documentation>Base type for all DIA-X objects</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AppId" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ObjectInfo" minOccurs="0"/>
+			<xsd:element name="ExtraFeatures" type="ExtraFeaturesT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="ID" type="IdT" use="required"/>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Version" type="VersionT" use="optional"/>
+		<xsd:attribute name="OType" type="xsd:string" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>OType is an application/domain defined type, NOT an xsd datatype.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="Deleted" type="xsd:boolean" use="optional" default="false"/>
+	</xsd:complexType>
+	<xsd:complexType name="ObjectSurrogateT">
+		<xsd:annotation>
+			<xsd:documentation>Surrogate for a DIA-X object (used for exporting features to other files)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ObjectT">
+				<xsd:sequence>
+					<xsd:element ref="Feature" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="Source" type="RefIdT" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FeatureT">
+		<xsd:annotation>
+			<xsd:documentation>Base type for all DIA-X features</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="FeatureReferenceT">
+		<xsd:complexContent>
+			<xsd:extension base="FeatureT">
+				<xsd:attribute name="Target" type="RefIdT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ParameterT" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Base type for all DIA-X parameters that are used within features of objects</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="MustUnderstand" type="xsd:boolean" use="optional" default="false"/>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Type" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ReferenceT">
+		<xsd:annotation>
+			<xsd:documentation>Base type for all DIA-X references to objects. Name specifies a general name for the Reference</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="RefName" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ID" type="IdT" use="optional"/>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Target" type="RefIdT" use="required"/>
+		<xsd:attribute name="RefType" type="ReferenceTypeEnumT" use="optional" default="Ref"/>
+	</xsd:complexType>
+	<xsd:complexType name="ReferencePartOfT">
+		<xsd:complexContent>
+			<xsd:restriction base="ReferenceT">
+				<xsd:attribute name="ID" type="IdT" use="required"/>
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+				<xsd:attribute name="RefType" type="ReferenceTypeEnumT" use="optional" fixed="PartOf"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectorT">
+		<xsd:sequence/>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectionT">
+		<xsd:sequence/>
+		<xsd:attribute name="Name" type="xsd:string" use="optional"/>
+		<xsd:attribute name="From" type="xsd:string" use="required"/>
+		<xsd:attribute name="To" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<!--Specialized Parameters-->
+	<xsd:complexType name="StringParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TextParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:sequence>
+					<xsd:element name="Value" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BoolParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="xsd:boolean" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IntegerParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="xsd:integer" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="HexParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:sequence>
+					<xsd:element name="Value" type="xsd:hexBinary"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DecimalParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="xsd:decimal" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TimestampParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="xsd:dateTime" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ARGBColorParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:attribute name="Value" type="ARGBColorT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PointParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="ParameterT">
+				<xsd:sequence>
+					<xsd:element name="Value" type="PointT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Auxiliary Types -->
+	<xsd:complexType name="PointT">
+		<xsd:annotation>
+			<xsd:documentation>2 dimensional point type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="x" type="xsd:decimal"/>
+			<xsd:element name="y" type="xsd:decimal"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CreationChangeInfoT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Tool" type="xsd:string" use="optional"/>
+				<xsd:attribute name="User" type="xsd:string" use="optional"/>
+				<xsd:attribute name="Timestamp" type="xsd:dateTime" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ApplicationSpecificIdT">
+		<xsd:annotation>
+			<xsd:documentation>Type for application specific Ids</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="AppName" type="xsd:string" use="required"/>
+		<xsd:attribute name="Value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ExtraFeaturesT">
+		<xsd:sequence>
+			<xsd:element ref="Feature" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ReferenceTypeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="PartOf"/>
+			<xsd:enumeration value="Ref"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="CollectionT" abstract="false">
+		<xsd:sequence/>
+		<xsd:attribute name="ElementType" type="xsd:QName" use="optional"/>
+		<xsd:attribute name="Name" type="xsd:QName" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ReferenceListT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element ref="Reference"/>
+					<xsd:element ref="References"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ObjectListT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element ref="Object"/>
+					<xsd:element ref="Objects"/>
+					<xsd:element ref="ReferencePartOf"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ELEMENT DECLARATIONS -->
+	<xsd:element name="Document" type="DocumentT">
+		<xsd:unique name="DIA-X-ID">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@ID"/>
+		</xsd:unique>
+	</xsd:element>
+	<xsd:element name="Object" type="ObjectT"/>
+	<xsd:element name="ObjectSurrogate" type="ObjectSurrogateT" substitutionGroup="Object"/>
+	<xsd:element name="Reference" type="ReferenceT"/>
+	<xsd:element name="ReferencePartOf" type="ReferencePartOfT"/>
+	<xsd:element name="Parameter" type="ParameterT"/>
+	<xsd:element name="StringParameter" type="StringParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="TextParameter" type="StringParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="IntegerParameter" type="IntegerParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="DecimalParameter" type="DecimalParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="BoolParameter" type="BoolParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="HexParameter" type="HexParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="TimestampParameter" type="TimestampParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="ARGBColorParameter" type="ARGBColorParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="PointParameter" type="PointParameterT" substitutionGroup="Parameter"/>
+	<xsd:element name="Feature" type="FeatureT"/>
+	<xsd:element name="FeatureReference" type="FeatureReferenceT"/>
+	<xsd:element name="Connector" type="ConnectorT"/>
+	<xsd:element name="Connection" type="ConnectionT"/>
+	<xsd:element name="Collection" type="CollectionT" abstract="true"/>
+	<xsd:element name="ObjectList" type="ObjectListT" substitutionGroup="Collection"/>
+	<xsd:element name="Objects" type="ObjectListT"/>
+	<xsd:element name="ReferenceList" type="ReferenceListT" substitutionGroup="Collection"/>
+	<xsd:element name="References" type="ReferenceListT"/>
+	<xsd:element name="AppId" type="ApplicationSpecificIdT"/>
+	<xsd:element name="ObjectInfo" type="ObjectInfoT"/>
+</xsd:schema>

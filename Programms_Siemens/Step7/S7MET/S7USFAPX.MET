@@ -1,0 +1,11 @@
+[_S7O_BLOCK_FB_CT]
+server=s7ombstx.dll
+ObjType=0x00116101
+prefix=S7B
+relation=0x00164100,_S7UT_LEXICON_TEXTLIST_CT[0x00164101];deep
+
+[_S7UT_LEXICON_TEXTLIST_CT]
+server=S7UTomtX.dll
+prefix=OM
+ObjType=0x00164006
+relation=0x00164101,_S7O_BLOCK_FB_CT{1}[0x00164100]

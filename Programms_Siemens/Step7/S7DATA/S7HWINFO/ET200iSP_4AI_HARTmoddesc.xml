@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200iSP Module Description ET200iSP_4AI_HARTmoddesc.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2004-07-06T17:12:00Z" Tool="STEP7 Version V5.3SP1" User="RJ3304"/>
+		<prim:LastModified Timestamp="2004-07-06T17:12:00Z" Tool="Textpad" User="RJ3304"/>
+	</prim:FileInfo>
+	<base:Project ID="{6F5D66F2-DBE1-4072-BC0C-22714CBFA6C7}" Name="ModuleDesc for ET200iSP AI 4 channels">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="Module">
+				<base:SettingsFeature>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Dataset1" DSNr="1" DSLen="34">
+							<!-- Bereichseinstellungen -->
+							<hwk:Par Name="AI_Type" PNr="5">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>7</hwk:defStep7>
+								<hwk:defPcs7>7</hwk:defPcs7>
+								<hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="AI_Range" PNr="6">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Bereich"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>12</hwk:defStep7>
+								<hwk:defPcs7>12</hwk:defPcs7>
+								<hwk:instances>4</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+					</hwk:DatasetList>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

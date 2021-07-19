@@ -1,0 +1,56 @@
+:Base s7wndxhj.hlp
+:Title Help on NCM Diagnostics
+1 NCM S7 Diagnostics
+2 Overview=uebersicht
+2 Structure of the Diagnostics Window=HIDD_TREE_DIALOG
+2 Starting Diagnostics: Establishing a Connection to the CP=Keine_Online_Verbindung_zum_CP
+2 Menu Commands=HIDR_MAINFRAME
+2 Settings for Diagnostics=HIDD_OPTIONSL2
+2 General Diagnostic Functions
+3 Module Information=HIDD_STATEFIRST
+3 Connection Types Used=HIDD_CONNECTIONS
+3 Diagnostic Buffer=HIDD_DIAGBUFFERS
+3 Operating Mode of the Module=HIDD_STATEL2
+3 "C-PLUG"Diagnostic Object=HIDD_CPLUG
+2 PROFIBUS Diagnostics
+3 PROFIBUS Nodes=HIDD_L2STATIONEN
+3 PROFIBUS Bus Parameters=HIDD_L2BUSPARAMS
+3 PROFIBUS Statistics=HIDD_L2STATISTIC
+3 DP Master Diagnostics=HIDD_DPMASTER
+3 DP Slave Diagnostics=HIDD_DPSLAVE
+3 Device-Related Diagnostics for the DP Slave=HIDD_DPDEVICE
+3 Submodule Diagnostics for the DP Slave=HIDD_DPMODUL
+3 Reserved DP Slave=HIDD_CIR_Slave_Res
+3 Reserved DP Submodule=HIDD_CiR_Modul_Res
+3 FDL Connections - Overview=HIDD_FDL_VLISTE
+3 FDL Connection - Detailed Information=HIDD_FDL_CONN
+3 FMS Connections - Overview=HIDD_FMS_VLISTE
+3 FMS Connection - Detailed Information=HIDD_FMS_CONN
+3 FMS: Jobs=HIDD_FMSAUFTRAGSZUSTAND
+3 FMS: Reporting Variables=HIDD_FMSMELDEVAR
+3 FMS: Partner Variables=HIDD_FMSREMOTE
+2 Ethernet Diagnostics
+3 Industrial Ethernet - General Information=IDD_IEBUS
+3 Statistics on Industrial Ethernet=IDD_IESTAT
+3 Time-of-Day Diagnostics=IDD_zeit
+3 ISO Transport Connections - Overview=HIDD_ISO_VLISTE
+3 ISO Transport Connection - Detailed Information=HIDD_ISO_CONN
+3 TCP Connections - Overview=HIDD_TCP_VLISTE
+3 TCP Connection - Detailed Information=HIDD_NATTCP_CONN
+3 UDP Connections - Overview=HIDD_UDP_VLISTE
+3 UDP Connection - Detailed Information=HIDD_UDP_CONN
+3 ISO-on-TCP Connections - Overview=HIDD_ONTCP_VLISTE
+3 ISO-on-TCP Connection - Detailed Information=HIDD_TCP_CONN
+3 E-Mail Connection=HIDD_EMAIL
+3 IP Access Protection=HID_IP_DIAGACCESS
+3 Statistics of the S/R Connections=HIDD_SR_Verb_statistik
+2 PROFINET Diagnostics
+3 TCP Connections for PROFInet=IDD_TPN
+3 TCP Connection for PROFInet - Detailed Information=IDD_TPN_CON
+3 Diagnostics on PROFInet Components=IDD_CBA_PNET
+3 PROFInet Device=IDD_CBA_LD
+3 PROFInet Component=IDD_CBA_COMPONENT
+2 S7 Connections
+3 S7 Connections - Overview=IDD_pbk_tab
+3 S7 Connections - Detailed Information=IDD_pbk
+3 Statistics of S7 Connections=HIDD_S7_VERB_Statistik

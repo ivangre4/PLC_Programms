@@ -1,0 +1,1055 @@
+    ;--------------------------------------------------------------------
+    ;gesamt14 = [_AUT_DELETE_AT]		        12.10.95 KA
+    ;gesamt14 = Korrektur CFC                     	12.10.95 NE
+    ;gesamt15 = Relation 0x54 0x55 Robitzkat      	17.10.95 KA/NE
+    ;gesamt15 = Kommetare doppelte RELID entfernt 	17.10.95 NE
+    ;gesamt15 = WINCC Objtyp u. Relation neu      	17.10.95 KA/NE
+    ;gesamt15 = Meldungsliste Objtyp u. Rel neu   	17.10.95 KA/NE
+    ;gesamt15 = Progf_Memcard                     	17.10.95 NE
+    ;gesamt15 = Alles mit PtP-Node/SUbnet auskom. 	18.10.95 NE
+    ;gesamt15 = Ergaenzung Ohio                   	18.10.95 KA
+    ;gesamt16 = _AUT_RESOURCE_OFFLINE_AT neu       	19.10.95 KA
+    ;gesamt16 = autocreate entfernt               	19.10.95 TH 
+    ;gesamt16 = [_S7V_STATION_FOREIGN_CT]         	23.10.95 NE
+    ;gesamt17 = Zustandsgraph, _AUT_EDIT_BLOCK_AT	07.11.95 AK
+    ;gesamt17 = _AUT_LIBRARY_AT verbessert,		    07.11.95 AK
+    ;gesamt17 = _AUT_S7SW_AT, _AUT_CONTAINER_AT	    07.11.95 AK
+    ;gesamt17 = _S7O_BLOCK_SDBH_CT 			        07.11.95 AK
+    ;gesamt18 = Foreign_Station mit eigener Meta	13.11.95 AK
+    ;gesamt18 = C-Programme mit neuem Link		    13.11.95 AK
+    ;gesamt18 = entfernen _S7V_CONN_XX              14.11.95 NE
+    ;gesamt19 = Verschiedene Relationen fuer Netze  17.11.95 AK
+    ;gesamt19 = Test-OM entfernt					17.11.95 AK
+    ;gesamt19 = Löschbare Objekte überarbeitet		17.11.95 AK
+    ;gesamt19 = C für M7 entfernt.					17.11.95 AK
+    ;gesamt20 = Neue Relationen ECPLAN, Source_Cont	21.11.95 AK
+    ;gesamt20 = Autocreate							21.11.95 AK
+    ;gesamt21 = Löschbare Objekte erweitert			24.11.95 AK
+    ;gesamt22 = Autocreate für H1, L2 Subnetz raus	27.11.95 AK
+    ;gesamt23 = Block-OM Korrektur lt. Andreas S.	14.12.95 AK
+    ;gesamt23 = Symli als löschbar markieren        14.12.95 AK
+    ;gesamt23 = CFC hat ein eigenes .met            14.12.95 AK
+    ;gesamt24 = autocreate Anwenderprog bei M7      18.12.95 AK
+    ;gesamt24 = autocreate Anwenderprog-online      18.12.95 AK
+    ;gesamt25 = MABs werden nicht benötigt          18.12.95 AK
+    ;gesamt26 = Leichter Einstieg                   19.12.95 AK
+    ;gesamt27 = Kardinalität M7-Progfile-Resource	20.12.95 AK
+    ;gesamt28 = SCL und Graph7 sind draußen			28.12.95 AK
+    ;gesamt29 = SFC's löschbar                      02.01.96 AK
+    ;gesamt29 = Lifelist+PLC sind keine Resourcen   02.01.96 AK
+    ;gesamt30 = M7-Resourcen verknüpfen             03.01.96 AK
+    ;gesamt31 = Fehler in S7_SW_AT beseitigt        08.01.96 AK
+    ;gesamt31 = Zustandsgraph aus Metafile entfernt 08.01.96 AK
+    ;gesamt32 = Projekt mit Delete nicht löschbar   09.01.96 AK
+    ;gesamt32 = Link zwischen Lib und M7/Online-Res 09.01.96 AK
+    ;gesamt33 = Änderungen für HW-Konfig            15.01.96 AK
+    ;gesamt34 = Online-Res. nicht lösch/erzeugbar   17.01.96 AK
+    ;gesamt35 = Abstrakte Typen für Bausteine       31.01.96 AK
+    ;gesamt36 = _AUT_PACK_TABLE_AT                  02.02.96 AK
+    ;gesamt37 = Kardinalität für Rel-ID 39          06.02.96 AK
+    ;gesamt38 = AP online nicht löschbar            09.02.96 AK
+    ;gesamt39 = _AUT_COPY_AT und _AUT_MOVE_AT		16.02.96 GW
+    ;gesamt40 = Relation Node-Connection eingefügt  23.02.96 AK
+    ;
+    ;gesamt50 = UBAUSTEINLIST und UBAUSTEINITEM eingefuegt 19.06.96 LS
+    
+    ;gesamt60 = neuer SDB OM			07.08.96 LS
+    ;gesamt70 = _AUT_CAPABLE_RESOFF_AT eingeführt	10.08.98 GW
+ 	;gesamt80 = gesamt.met aufgeteilt in gesamt.met (auch für OEM) und gesamts7.met (Rest BASIS)
+	;gesamt81 = ; bedeutet: steht in gesamts7.met 
+	;gesamt90 = _AUT_STATION_PCED_AT eingeführt	   21.9.00 ( Abstrkter Typ im Einfügen-Menü für Stationen der PC-EDITION
+	;gesamt91 = _AUT_NOCREATE_AT eingeführt			11.4.02 (Einfügen Menü im SIMATCI Manager)
+	;gesamt92 = _AUT_DRIVE_AT eingeführt		17.5.04 (Abstrakter Typ für die Sortierung im SIMATIC Manager für alle Arten von Drives)
+   ;--------------------------------------------------------------------
+    
+    [_AUT_ENVIRONMENT_AT]
+    Abstract=true
+    ObjType=0x00000002
+    Subtype=_AUT_PROJECT_AT
+    Subtype=_S7A_PLANT_CT
+    Subtype=_S7A_LIBRARY_CT
+    Subtype=_S7O_PROGF_MEMCARD_CT
+    Subtype=_S7O_PROGF_FILEEPROM_CT
+    Subtype=_S7R_RESPLC_CT
+    
+    ;---Projekt-OMAnfang
+    [_AUT_PROJECT_AT]
+    Abstract=true
+    ObjType=0x00000003
+    Subtype=_S7A_PROJECT_CT
+    
+    [_AUT_SW_AT]
+    Abstract=true
+    ObjType=0x00000008
+    Subtype=_S7O_PROGF_ONLINE_CT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7O_PROGF_DIREKT_PLC_CT
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7A_SRC_AWL_CT
+    Subtype=_S7A_SRC_NET_CT
+    
+    [_AUT_SW_OFFLINE_AT]
+    Abstract=true
+    ObjType=0x00000040
+    Subtype=_AUT_SWCONTAINER_OFFLINE_AT
+    Subtype=_AUT_BLOCK_AT
+    Subtype=_AUT_SOURCE_AT
+    Subtype=_AUT_PLAN_AT
+    
+    [_AUT_DELETE_AT]
+    Abstract=true
+    ObjType=0x00000024
+    Subtype=_AUT_RESOURCE_OFFLINE_AT
+    Subtype=_AUT_SYMLI_AT
+    Subtype=_AUT_BLOCK_AT
+ ;  Subtype=_AUT_SUBNET_AT
+ ;  Subtype=_S7H_STATION_AT
+ ;  Subtype=_S7V_STATION_FOREIGN_CT
+ ;  Subtype=_S7V_STATION_PG_CT
+ ;  Subtype=_S7V_STATION_S5_CT
+    Subtype=_AUT_CAPABLE_S7RESOFF_AT
+    Subtype=_AUT_CAPABLE_M7RESOFF_AT
+    Subtype=_AUT_CAPABLE_GENRESOFF_AT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7A_SRC_AWL_CT
+    Subtype=_S7O_PROGF_MEMCARD_CT
+    Subtype=_S7O_PROGF_FILEEPROM_CT
+    Subtype=_S7A_SRC_NET_CT
+    
+    [_AUT_MOVE_AT]
+    Abstract=true
+    ObjType=0x00000033
+    Subtype=_AUT_RESOURCE_OFFLINE_AT
+    Subtype=_AUT_SYMLI_AT
+    Subtype=_AUT_BLOCK_AT
+ ;  Subtype=_AUT_SUBNET_AT
+ ;  Subtype=_S7H_STATION_AT
+ ;  Subtype=_S7V_STATION_FOREIGN_CT
+ ;  Subtype=_S7V_STATION_PG_CT
+ ;  Subtype=_S7V_STATION_S5_CT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7A_SRC_AWL_CT
+    Subtype=_S7A_SRC_NET_CT
+    
+    [_AUT_COPY_AT]
+    Abstract=true
+    ObjType=0x00000032
+    Subtype=_AUT_RESOURCE_OFFLINE_AT
+    Subtype=_AUT_SYMLI_AT
+    Subtype=_AUT_BLOCK_AT
+ ;  Subtype=_AUT_SUBNET_AT
+ ;  Subtype=_S7H_STATION_AT
+ ;  Subtype=_S7V_STATION_FOREIGN_CT
+ ;  Subtype=_S7V_STATION_PG_CT
+ ;  Subtype=_S7V_STATION_S5_CT
+    Subtype=_S7O_PROGF_ONLINE_CT
+    Subtype=_S7O_PROGF_DIREKT_PLC_CT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7A_SRC_AWL_CT
+    Subtype=_S7O_PROGF_MEMCARD_CT
+    Subtype=_S7O_PROGF_FILEEPROM_CT
+    Subtype=_S7A_SRC_NET_CT
+
+    [_AUT_NOCREATE_AT]
+    Abstract=true
+    ObjType=0x00000053
+    
+    [_AUT_CAPABLE_NET_RESTRICTED_VISIBLE_AT]
+    Abstract=true
+    ObjType=0x00000057
+
+    
+    [_AUT_PACK_TABLE_AT]
+    Abstract=true
+    ObjType=0x00000031
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7Y_SYMBOL_LIST_CT
+    ;Ein KlassenTyp reicht um packen auszulösen. Subtype=_S7X_UCALLTREELIST_CT
+    Subtype= _S7X_UXREFLIST_CT
+    Subtype= _S7A_SRC_AWL_CT
+    Subtype=_S7A_SRC_NET_CT
+    Subtype=_S7A_PLANT_CT
+    
+    [_AUT_GLOBAL_COPY_HANDLER_AT]
+    Abstract=true
+    ObjType=0x0000003E
+ ;  Subtype=_S7V_CONN_LIST_CT
+ ;  
+ ;  [_AUT_WANT_PRESAVE_AT]
+ ;  Abstract=true
+ ;  ObjType=0x00000043
+ 
+    [_AUT_CAPABLE_OBJECTTOOLTIPS_AT]
+    Abstract= true
+    ObjType=0x0000004E
+    Subtype=_S7A_PLANT_CT
+    Subtype=_S7A_PROJECT_CT
+    Subtype=_S7A_LIBRARY_CT
+    Subtype=_S7A_ER_PLANT_REF_CT
+    Subtype=_S7A_ER_ENV_REF_CT
+    
+    [_AUT_CAPABLE_EXT_REF_ENV_AT]
+    Abstract=true
+    ObjType=0x00000050
+    Subtype=_S7A_PROJECT_CT
+    Subtype=_S7A_LIBRARY_CT
+    relation=0x000000c4,_S7A_ER_ENV_REF_CT[0x000000c5];deep
+    relation=0x000000c6,_S7A_ER_PLANT_REF_CT{1}[0x000000c7];deep
+    relation=0x000000c8,_S7A_ER_PROXY_CT[0x000000c9];deep
+    relation=0x000000ca,_S7A_ER_STUB_CT[0x000000cb];deep
+    
+    [_AUT_CAPABLE_EXT_REF_SOURCE_AT]
+    Abstract=true
+    ObjType=0x00000051
+    relation=0x000000cc,_S7A_ER_PROXY_CT[0x000000cd]
+ ;  Subtype=[_AUT_CONNECTION_AT]
+    
+    [_AUT_CAPABLE_EXT_REF_TARGET_AT]
+    Abstract=true
+    ObjType=0x00000052
+    relation=0x000000cf,_S7A_ER_STUB_CT{1}[0x000000ce]
+ ;  Subtype=[_AUT_CONNECTION_AT]
+ ;  Subtype=[_AUT_HWKOMP_AT]
+    
+    [_AUT_CAPABLE_CANMOVE]
+    Abstract=true
+    ObjType=0x00000048
+
+    [_AUT_CAPABLE_CANCOPY]
+    Abstract=true
+    ObjType=0x00000047
+    
+    [_AUT_DRIVE_AT]
+    Abstract=true
+    ObjType=0x0000005B
+    
+    [_AUT_CAN_VALIDATE_EXT_REF_AT]
+    Abstract=true
+    ObjType=0x0000005C
+
+    [_AUT_CAPABLE_CHANGELOG_AT]
+    Abstract=true
+    ObjType=0x0000005E
+
+    
+    [_S7A_PROJECT_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112001
+    relation=0x00000002,_AUT_HWKOMP_AT[0x00000003];deep
+    relation=0x00000004,_AUT_RESOURCE_AT[0x00000005];deep
+   
+    [_S7A_LIBRARY_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112002
+    relation=0x00000004,_AUT_RESOURCE_AT[0x00000005];deep
+    
+    [_S7A_PLANT_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112010
+    relation=0x000000c4,_S7A_ER_ENV_REF_CT[0x000000c5];deep
+    
+    [_S7A_ER_PROXY_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112011
+    relation=0x000000c9,_AUT_CAPABLE_EXT_REF_ENV_AT{1}[0x000000c8]
+    relation=0x000000cd,_AUT_CAPABLE_EXT_REF_SOURCE_AT[0x000000cc]
+    
+    [_S7A_ER_STUB_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112012
+    relation=0x000000cb,_AUT_CAPABLE_EXT_REF_ENV_AT{1}[0x000000ca]
+    relation=0x000000ce,_AUT_CAPABLE_EXT_REF_TARGET_AT{1}[0x000000cf]
+    
+    [_S7A_ER_ENV_REF_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112013
+    relation=0x000000c5,_S7A_PLANT_CT{1}[0x000000c4]
+    relation=0x000000c5,_AUT_CAPABLE_EXT_REF_ENV_AT{1}[0x000000c4]
+    
+    [_S7A_ER_PLANT_REF_CT]
+    server=s7apromx.dll
+    prefix=POM
+    ObjType=0x00112014
+    relation=0x000000c7,_AUT_CAPABLE_EXT_REF_ENV_AT{1}[0x000000c6]
+    
+    [_AUT_EDIT_BLOCK_AT]
+    Abstract=true
+    ObjType=0x00000027
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    
+    [_S7_LIFE_BLOCK_AT]
+    Abstract=true
+    ObjType=0x00000029
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+    Subtype=_S7O_BLOCK_SFC_CT
+    Subtype=_S7O_BLOCK_SFB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_MEMC_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002A
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_PRO_OFF_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002B
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    Subtype=_S7O_BLOCK_SFC_CT
+    Subtype=_S7O_BLOCK_SFB_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    
+    [_S7_PRO_ONL_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002C
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_SFC_CT
+    Subtype=_S7O_BLOCK_SFB_CT
+    
+    [_S7_LIB_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002D
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    Subtype=_S7O_BLOCK_SFC_CT
+    Subtype=_S7O_BLOCK_SFB_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    
+    [_M7_PRO_OFF_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002E
+    Subtype=_S7O_BLOCK_DB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    
+    
+    [_M7_PRO_ONL_BLOCK_AT]
+    Abstract=true
+    ObjType=0x0000002F
+    Subtype=_S7O_BLOCK_DB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_M7_LIB_BLOCK_AT]
+    Abstract=true
+    ObjType=0x00000030
+    Subtype=_S7O_BLOCK_DB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    
+    
+    [_AUT_S7SW_AT]
+    Abstract=true
+    ObjType=0x0000001D
+    Subtype=_S7O_PROGF_ONLINE_CT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7A_SRC_AWL_CT
+    Subtype=_S7A_SRC_NET_CT
+    
+    [_AUT_CONTAINER_AT]
+    Abstract=true
+    ObjType=0x00000026
+    Subtype=_S7O_PROGF_ONLINE_CT
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7O_PROGF_MEMCARD_CT
+    Subtype=_S7O_PROGF_FILEEPROM_CT
+    Subtype=_S7O_PROGF_DIREKT_PLC_CT
+    Subtype=_S7A_SRCCNT_CT
+    
+    [_AUT_SWCONTAINER_OFFLINE_AT]
+    Abstract=true
+    ObjType=0x0000003F
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7A_SRCCNT_CT
+ ;  Subtype=_S7J_ECPLAN_CONT_CT
+    
+    [_AUT_SOURCE_AT]
+    Abstract=true
+    ObjType=0x00000041
+    Subtype=_S7A_SRC_AWL_CT
+ ;  Subtype=_S7A_SRC_SCL_CT
+ ;  Subtype=_S7A_SRC_GR7_CT
+ ;  Subtype=_S7A_MAK_SCL_CT
+ ;  Subtype=_S7A_SRC_GG_CT
+ ;  Subtype=_S7A_SRC_ZG_CT
+    Subtype=_S7A_SRC_NET_CT
+    
+    [_AUT_WANT_PRESAVE_AT]
+    Abstract=true
+    ObjType=0x00000043
+    Subtype=_S7A_PLANT_CT
+    Subtype=_S7A_ER_PLANT_REF_CT
+    Subtype=_S7A_ER_ENV_REF_CT
+    Subtype=_S7A_ER_PROXY_CT
+    Subtype=_S7A_ER_STUB_CT
+   
+    [_AUT_PLAN_AT]
+    Abstract=true
+    ObjType=0x00000044
+
+    [_AUT_BLOCKCONT_AT]
+    Abstract=true
+    ObjType=0x00000045
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    Subtype=_S7O_PROGF_ONLINE_CT
+    Subtype=_S7O_PROGF_DIREKT_PLC_CT
+    Subtype=_S7O_PROGF_MEMCARD_CT
+    Subtype=_S7O_PROGF_FILEEPROM_CT
+
+	[_AUT_FILESYSTEM_ENVIRONMENT_AT]
+	Abstract=true
+	ObjType=0x0000004A
+	Subtype=_S7A_PROJECT_CT
+	Subtype=_S7A_LIBRARY_CT
+	Subtype=_S7A_PLANT_CT
+
+    [_AUT_WANT_NOTIFY_ON_1ST_OPEN_ENV_AT]
+    Abstract=true
+    ObjType=0x0000004B
+
+    [_AUT_WANT_VERBLOGFILE_AT]
+    Abstract=true
+    ObjType=0x0000004C
+    Subtype=_S7A_SRCCNT_CT
+    Subtype=_S7Y_SYMBOL_LIST_CT
+	
+	[_AUT_CAN_UPDATE_OPTIONTYPES_AT]
+	Abstract=true
+	ObjType=0x0000004D
+
+	[_AUT_EXCLUDE_FROM_OPTIONTYPES_CHECK_AT]
+	Abstract=true
+	ObjType=0x0000004F
+
+    [_AUT_WANT_PRERELOADOBJECTSET_AT]
+    Abstract=true
+    ObjType=0x00000056
+    Subtype=_S7A_PLANT_CT
+   
+    [_AUT_RESOURCE_NOT4SDLIB_AT]
+    Abstract=true
+    ObjType=0x0000005A
+   
+    
+    ;---Projekt-OMEnde
+    
+    ;---HWkompAnfang
+    [_AUT_HWKOMP_AT]
+    Abstract=true
+    ObjType=0x00000009
+
+	[_AUT_STATION_PCED_AT]
+	Abstract=true
+	ObjType=0x00000049
+    
+ ;  relation=0x00000039,_AUT_CONNECTION_AT[0x00000038]
+ ;  
+ ;  Subtype=_S7H_STATION_AT
+    
+    ;Einfügen Menü (Operator Station)
+    [_AUT_OS_AT]
+    Abstract=true
+    ObjType=0x0000003D
+    
+    ;Resource-fähige Baugruppen
+    [_AUT_CAPABLE_RESOFF_AT]
+    Abstract=true
+    ObjType=0x00000042
+    Subtype=_AUT_CAPABLE_S7RESOFF_AT
+    Subtype=_AUT_CAPABLE_M7RESOFF_AT
+    Subtype=_AUT_CAPABLE_GENRESOFF_AT
+    
+    ;---Ressource-OMAnfang
+    [_AUT_RESOURCE_AT]
+    Abstract=true
+    ObjType=0x00000011
+    Subtype=_S7R_S7RESOFF_CT
+    Subtype=_S7R_M7RESOFF_CT
+    Subtype=_S7R_S7RESONL_CT
+    
+    [_AUT_RESOURCE_OFFLINE_AT]
+    Abstract=true
+    ObjType=0x00000025
+    Subtype=_S7R_S7RESOFF_CT
+    Subtype=_S7R_M7RESOFF_CT
+    Subtype=_S7R_GENRESOFF_CT
+    Subtype=_S7R_MULTIRESOFF_AT
+    
+    [_AUT_RESOURCE_ONLINE_AT]
+    Abstract=true
+    ObjType=0x0000003A
+    Subtype=_S7R_S7RESONL_CT
+    Subtype=_S7R_RESLIFE_AT
+
+
+    [_S7R_RESLIFE_AT]
+    server=s7hrsomx.dll
+    Abstract=true
+    prefix=OM
+    ObjType=0x0014410B
+    Subtype=_S7R_RESLIFE_CT
+    Subtype=_S7R_RESPNDEV_CT
+    Subtype=_S7R_RESPNMULDEV_CT
+    Subtype=_S7R_RESPNSUBDEV_CT
+    
+    [_S7R_S7RESOFF_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144101
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+	SUPPORT_ADDRSELECT=1
+    relation=0x00000005,_S7A_PROJECT_CT{1}[0x00000004]
+    relation=0x00000018,_S7Y_SYMBOL_LIST_CT{1}[0x00000019];deep,autocreate
+    relation=0x0000001E,_S7O_PROGF_OFFLINE_CT{1}[0x0000001F];deep,autocreate
+    relation=0x00000011,_AUT_CAPABLE_S7RESOFF_AT{1}[0x00000010]
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x00000062,_S7A_SRCCNT_CT{1}[0x00000063];deep,autocreate
+    relation=0x00000066,_S7R_S7RESONL_CT{1}[0x00000067]
+ ;  relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7R_M7RESOFF_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144102
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+    relation=0x00000005,_S7A_PROJECT_CT{1}[0x00000004]
+    relation=0x00000018,_S7Y_SYMBOL_LIST_CT{1}[0x00000019];deep,autocreate
+    relation=0x0000001E,_S7O_PROGF_OFFLINE_CT{1}[0x0000001F];deep,autocreate
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x00000011,_AUT_CAPABLE_M7RESOFF_AT{1}[0x00000010]
+    relation=0x00000066,_S7R_S7RESONL_CT{1}[0x00000067]
+ ;  relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7R_S7RESONL_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144103
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+	SUPPORT_ADDRSELECT=1
+    relation=0x00000024,_S7O_PROGF_ONLINE_CT{1}[0x00000025];deep,autocreate
+    relation=0x00000015,_AUT_CAPABLE_S7RESONL_AT{1}[0x00000014]
+    relation=0x00000067,_S7R_S7RESOFF_CT{1}[0x00000066]
+    relation=0x00000067,_S7R_M7RESOFF_CT{1}[0x00000066]
+    
+    [_S7R_RESLIFE_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144106
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+    relation=0x00000053,_S7R_RESPLC_CT{1}[0x00000052]
+    relation=0x00144001,_S7R_RESPNMULDEV_CT{1}[0x00144000]
+    relation=0x00000024,_S7O_PROGF_DIREKT_PLC_CT{1}[0x00000025];deep
+    
+    [_S7R_RESPLC_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144105
+    prefix=OM
+    relation=0x00000052,_S7R_RESLIFE_CT[0x00000053];deep
+    relation=0x00000052,_S7R_RESPNDEV_CT[0x00000053];deep
+    relation=0x00000052,_S7R_RESPNMULDEV_CT[0x00000053];deep
+    
+    [_S7R_GENRESOFF_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144107
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+	SUPPORT_ADDRSELECT=1
+    relation=0x00000018,_S7Y_SYMBOL_LIST_CT{1}[0x00000019];deep
+    relation=0x0000001E,_S7O_PROGF_OFFLINE_CT{1}[0x0000001F];deep
+    relation=0x00000011,_AUT_CAPABLE_GENRESOFF_AT{1}[0x00000010]
+    relation=0x00000062,_S7A_SRCCNT_CT{1}[0x00000063];deep
+    relation=0x00000066,_S7R_S7RESONL_CT{1}[0x00000067]
+    
+    [_S7R_MULTIRESOFF_AT]
+    server=s7hrsomx.dll
+    ObjType=0x0014410C
+    prefix=OM
+    Abstract=true
+	SUPPORT_ADDRSEARCH=1
+	SUPPORT_ADDRSELECT=1
+    relation=0x00000018,_S7Y_SYMBOL_LIST_CT{1}[0x00000019];deep
+    relation=0x0000001E,_S7O_PROGF_OFFLINE_CT{1}[0x0000001F];deep
+    relation=0x00000011,_AUT_CAPABLE_MULTIRESOFF_AT{1}[0x00000010]
+    relation=0x00000062,_S7A_SRCCNT_CT{1}[0x00000063];deep
+    relation=0x00000066,_S7R_S7RESONL_CT{1}[0x00000067]
+
+    [_S7R_RESPNDEV_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144108
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+    relation=0x00000053,_S7R_RESPLC_CT{1}[0x00000052]
+
+    [_S7R_RESPNMULDEV_CT]
+    server=s7hrsomx.dll
+    ObjType=0x00144109
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+    relation=0x00000053,_S7R_RESPLC_CT{1}[0x00000052]
+    relation=0x00144000,_S7R_RESLIFE_CT{1}[0x00144001];deep
+    relation=0x00144000,_S7R_RESPNSUBDEV_CT[0x00144001];deep
+    relation=0x00000024,_S7O_PROGF_DIREKT_PLC_CT{1}[0x00000025];deep
+
+    [_S7R_RESPNSUBDEV_CT]
+    server=s7hrsomx.dll
+    ObjType=0x0014410A
+    prefix=OM
+	SUPPORT_ADDRSEARCH=1
+    relation=0x00144001,_S7R_RESPNMULDEV_CT{1}[0x00144000]
+
+    [_AUT_CAPABLE_S7RESONL_AT]
+    Abstract=true
+    ObjType=0x00000020
+    relation=0x00000014,_S7R_S7RESONL_CT{1}[0x00000015];deep
+    Subtype=_AUT_CAPABLE_S7RESOFF_AT
+    Subtype=_AUT_CAPABLE_M7RESOFF_AT
+    Subtype=_AUT_CAPABLE_GENRESOFF_AT
+    Subtype=_AUT_CAPABLE_MULTIRESOFF_AT
+    
+    [_AUT_CAPABLE_S7RESOFF_AT]
+    Abstract=true
+    ObjType=0x00000021
+    relation=0x00000010,_S7R_S7RESOFF_CT{1}[0x00000011];deep
+    
+    [_AUT_CAPABLE_M7RESOFF_AT]
+    Abstract=true
+    ObjType=0x00000022
+    relation=0x00000010,_S7R_M7RESOFF_CT{1}[0x00000011];deep
+    
+    [_AUT_CAPABLE_GENRESOFF_AT]
+    Abstract=true
+    ObjType=0x00000034
+    relation=0x00000010,_S7R_GENRESOFF_CT{1}[0x00000011];deep
+    
+    [_AUT_CAPABLE_MULTIRESOFF_AT]
+    Abstract=true
+    ObjType=0x0000005D
+    relation=0x00000010,_S7R_MULTIRESOFF_AT{1}[0x00000011];deep
+
+    ;-- KBUS FM's und aehnliche; keine Symboltabelle, kein Source Container
+    ;	       AP erlaubt nur Datenbausteine und SDB Henkel
+    [_AUT_FM_BOARD_AT]
+    Abstract=true
+    ObjType=0x00000035
+    basetype=_AUT_CAPABLE_GENRESOFF_AT
+    
+    ;-- CP Baugruppen u. aehnliche; keine Daten u. Bausteine
+    ;-- keine Symboltabelle, kein Source Container, AP erlaubt nur SDB Henkel
+    [_AUT_CP_BOARD_AT]
+    Abstract=true
+    ObjType=0x00000036
+    basetype=_AUT_CAPABLE_GENRESOFF_AT
+    
+    ;-- allgem. kommunikationsfaehige Baugruppe;
+    ;-- keine Symboltabelle, kein Source Container, kein AP
+    [_AUT_GENCOMM_AT]
+    Abstract=true
+    ObjType=0x00000037
+    basetype=_AUT_CAPABLE_GENRESOFF_AT
+    ;---Ressource-OMEnde
+    
+    ;---Symbol-OMAnfang
+    [_AUT_SYMLI_AT]
+    Abstract=true
+    ObjType=0x00000013
+    Subtype=_S7Y_SYMBOL_LIST_CT
+    
+    [_S7Y_SYMBOL_LIST_CT]
+    server=s7yomapx.dll
+    ObjType=0x00113001
+    prefix=SYMOM
+    relation=0x00000019,_S7R_S7RESOFF_CT{1}[0x00000018]
+    relation=0x00000019,_S7R_M7RESOFF_CT{1}[0x00000018]
+    relation=0x0000001A,_S7Y_SYMBOL_CT[0x0000001B];deep
+    
+    [_AUT_SYMBOL_AT]
+    Abstract=true
+    ObjType=0x00000014
+    Subtype=_S7Y_SYMBOL_CT
+    
+    [_S7Y_SYMBOL_CT]
+    server=s7yomapx.dll
+    ObjType=0x00113002
+    prefix=SYMOM
+    relation=0x0000001B,_S7Y_SYMBOL_LIST_CT[0x0000001A]
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    ;---Symbol-OMEnde
+    
+    ;---ProgrammfileAnfang
+    [_S7O_PROGF_ONLINE_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116002
+    prefix=S7B
+    relation=0x00000025,_S7R_S7RESONL_CT{1}[0x00000024] 
+    relation=0x0000001C,_S7O_BLOCK_FB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_DB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_OB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SDB_CT[0x0000001D];deep
+ ;  relation=0x0000001C,_S7O_BLOCK_SDBH_CT{1}[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFB_CT[0x0000001D];deep
+    
+    [_S7O_PROGF_OFFLINE_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116001
+    prefix=S7B
+    relation=0x0000001F,_S7R_S7RESOFF_CT{1}[0x0000001E]
+    relation=0x0000001F,_S7R_M7RESOFF_CT{1}[0x0000001E]
+    relation=0x0000001C,_S7O_BLOCK_FB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_DB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_OB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SDB_CT[0x0000001D];deep
+ ;  relation=0x0000001C,_S7O_BLOCK_SDBH_CT{1}[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_UDT_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_VAT_CT[0x0000001D];deep
+    relation=0x00000044,_S7X_UXREFLIST_CT{1}[0x00000045];deep
+    relation=0x00000046,_S7X_UCALLTREELIST_CT{1}[0x00000047];deep
+    relation=0x0000007A,_S7X_UBAUSTEINLIST_CT{1}[0x0000007B];deep
+    
+    [_S7O_PROGF_DIREKT_PLC_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116003
+    prefix=S7B
+    relation=0x00000025,_S7R_RESLIFE_CT{1}[0x00000024]
+    relation=0x00000025,_S7R_RESPNMULDEV_CT{1}[0x00000024]
+    relation=0x0000001C,_S7O_BLOCK_FB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_DB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_OB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SDB_CT[0x0000001D];deep
+ ;  relation=0x0000001C,_S7O_BLOCK_SDBH_CT{1}[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFB_CT[0x0000001D];deep
+    
+    [_S7O_PROGF_MEMCARD_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116004
+    prefix=S7B
+    relation=0x0000001C,_S7O_BLOCK_FB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_DB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_OB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SDB_CT[0x0000001D];deep
+ ;  relation=0x0000001C,_S7O_BLOCK_SDBH_CT{1}[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFB_CT[0x0000001D];deep
+    
+    [_S7O_PROGF_FILEEPROM_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116007
+    prefix=S7B
+    relation=0x0000001C,_S7O_BLOCK_FB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_DB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_OB_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SDB_CT[0x0000001D];deep
+    ;relation=0x0000001C,_S7O_BLOCK_SDBH_CT{1}[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFC_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_SFB_CT[0x0000001D];deep
+
+    [_AUT_BLOCK_AT]
+    Abstract=true
+    ObjType=0x00000012
+    Subtype=_S7O_BLOCK_FB_CT
+    Subtype=_S7O_BLOCK_FC_CT
+    Subtype=_S7O_BLOCK_DB_CT
+    Subtype=_S7O_BLOCK_OB_CT
+    Subtype=_S7O_BLOCK_SDB_CT
+ ;  Subtype=_S7O_BLOCK_SDBH_CT
+    Subtype=_S7O_BLOCK_UDT_CT
+    Subtype=_S7O_BLOCK_SFC_CT
+    Subtype=_S7O_BLOCK_SFB_CT
+    Subtype=_S7O_BLOCK_VAT_CT
+    relation=	0x000000A6,_S7A_SRC_AWL_CT
+    
+    [_S7O_BLOCK_FB_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116101
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    [_S7O_BLOCK_FC_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116102
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+    
+    [_S7O_BLOCK_DB_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116103
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    [_S7O_BLOCK_OB_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116104
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+    
+    [_S7O_BLOCK_SDB_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116105
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+    
+    [_S7O_BLOCK_UDT_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116106
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    
+    [_S7O_BLOCK_SFC_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116107
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+    
+    [_S7O_BLOCK_SFB_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116108
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_ONLINE_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_DIREKT_PLC_CT[0x0000001C]
+    relation=0x0000001D,_S7O_PROGF_MEMCARD_CT[0x0000001C]
+ ;  relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    [_S7O_BLOCK_VAT_CT]
+    server=s7ombstx.dll
+    ObjType=0x00116109
+    prefix=S7B
+    relation=0x0000001D,_S7O_PROGF_OFFLINE_CT[0x0000001C]
+    
+    ;---ProgrammfileEnde
+    
+    ;---CfuerM7Anfang
+    [_AUT_M7SW_AT]
+    Abstract=true
+    ObjType=0x0000001C
+    Subtype=_S7O_PROGF_OFFLINE_CT
+    
+ ;  ;---CfuerM7Ende
+    
+    ;---XUTILAnfang
+    [_S7X_UXREFLIST_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122001
+    relation=0x00000045,_S7O_PROGF_OFFLINE_CT[0x00000044]
+    relation=0x00000048,_S7X_UXREFITEM_CT[0x00000049]
+    relation=0x0000004A,_S7X_USEDOPITEM_CT[0x0000004B]
+    
+    [_S7X_UXREFITEM_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122002
+    
+    [_S7X_USEDOPITEM_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122003
+    
+    [_S7X_UCALLTREELIST_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122004
+    relation=0x00000047,_S7O_PROGF_OFFLINE_CT[0x00000046]
+    relation=0x0000004C,_S7X_UCALLTREEITEM_CT[0x0000004D]
+    
+    [_S7X_UCALLTREEITEM_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122005
+    
+    [_S7X_UBAUSTEINLIST_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122006
+    relation=0x0000007B,_S7O_PROGF_OFFLINE_CT[0x0000007A]
+    relation=0x0000007C,_S7X_UBAUSTEINITEM_CT[0x0000007D]
+    
+    [_S7X_UBAUSTEINITEM_CT]
+    server=s7xutomx.dll
+    prefix=XUTOM_
+    ObjType=0x00122007
+    ;---XUTILEnde
+    
+   ;---DokproAnfang
+   [_S7LPLIE_LAYOUT_CT]
+   server=S7PPLOMX.dll
+   prefix=PRN_
+   ObjType=0x00119010
+   ;---DokproEnde
+   
+ ;  ;---VerbproAnfang
+ ;  [_AUT_CONN_LIST_AT]
+ ;  abstract=true
+ ;  server=s7nlvblx.dll
+ ;  objtype=0x0000001A
+ ;  subtype=_S7V_CONN_LIST_CT
+ ;  prefix=VLIST
+ ;  relation=0x00000035,_S7H_HWMODULE_AT{1}[0x00000034]
+ ;  relation=0x00000036,_AUT_CONNECTION_AT[0x00000037];deep
+ ;  
+ ;  [_S7V_CONN_LIST_CT]
+ ;  server=s7nlvblx.dll
+ ;  objtype=0x00145301
+ ;  prefix=VLIST
+ ;  
+ ;  [_AUT_CONNECTION_AT]
+ ;  abstract=true
+ ;  server=s7nhhomx.dll
+ ;  objtype=0x0000000C
+ ;  subtype=_S7V_CONN_HOMO_CT
+ ;  relation=0x00000037,_AUT_CONN_LIST_AT{1}[0x00000036]
+ ;  relation=0x00000038,_AUT_HWKOMP_AT{1}[0x00000039]
+ ;  relation=0x0000003A,_S7H_HWMODULE_AT{1}[0x0000003B]
+ ;  relation=0x0000003E,_AUT_CONNECTION_AT
+ ;  relation=0x00000054,_S7H_HWMODULE_AT{1}[0x00000055]
+ ;  relation=0x0000003C,_AUT_CONNECTION_AT[0x0000003D]
+ ;  relation=0x0000006C,_AUT_NODE_AT[0x0000006D]
+ ;  relation=0x000000bc,_AUT_NODE_AT[0x000000bd]
+ ;  
+ ;  
+ ;  [_S7V_CONN_HOMO_CT]
+ ;  objtype=0x00145401
+ ;  server=s7nhhomx.dll
+ ;  prefix=HOMO
+ ;  zweiseitig=3
+ ;  spezifiziert=0
+ ;  MUST_REINIT_CONNWAY=1
+ ;  
+    
+    ;---S7 Software Sourcen Anfang
+    [_S7A_SRCCNT_CT]
+    server=s7asromx.dll
+    ObjType=0x00112004
+    prefix=OM
+    relation=0x00000063,_S7R_S7RESOFF_CT{1}[0x00000062]
+    relation=0x00000050,_S7A_SRC_AWL_CT[0x00000051];deep
+    relation=0x00000050,_S7A_SRC_NET_CT[0x00000051];deep
+    
+    
+    [_S7A_SRC_AWL_CT]
+    server=s7asromx.dll
+    prefix=OM
+    ObjType=0x00112005
+    
+    
+    [_S7A_SRC_NET_CT]
+    server=s7asromx.dll
+    prefix=OM
+    ObjType=0x0011200B
+    
+    ;---S7 Software Sourcen Ende
+    
+ ;  ;--- S7 Meldungsliste Anfang
+ ;  [_S7WM_ALARM_HEADER_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121001
+ ;  relation=0x00000059,_S7R_S7RESOFF_CT{1}[0x00000058]
+ ;  relation=0x00000059,_S7R_M7RESOFF_CT{1}[0x00000058]
+ ;  relation=0x00000059,_S7O_BLOCK_FB_CT{1}[0x00000058]
+ ;  relation=0x00000059,_S7O_BLOCK_DB_CT{1}[0x00000058]
+ ;  relation=0x00000059,_S7O_BLOCK_SFB_CT{1}[0x00000058]
+ ;  relation=0x00000059,_S7Y_SYMBOL_CT{1}[0x00000058]
+ ;  relation=0x0000006A,_S7WM_ALARM_OBJ_CT[0x0000006B];deep
+ ;  relation=0x000000A8,_S7UT_TEXTLIST_CT{1}[0x000000A9];deep
+ ;  
+ ;  [_S7WM_ALARM_OBJ_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121002
+ ;  relation=0x0000006B,_S7WM_ALARM_HEADER_CT{1}[0x0000006A]
+ ;  relation=0x000000AA,_S7WM_ALARM_SUB_CT[0x000000AB];deep
+ ;  
+ ;  [_S7WM_ALARM_SUB_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121003
+ ;  relation=0x000000AB,_S7WM_ALARM_OBJ_CT{1}[0x000000AA]
+ ;  relation=0x000000AC,_S7WM_ALARM_VIEW_WINCC_CT[0x000000AD];deep
+ ;  relation=0x000000AC,_S7WM_ALARM_VIEW_PROTOOL_CT[0x000000AD];deep
+ ;  
+ ;  [_S7WM_ALARM_VIEW_WINCC_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121004
+ ;  relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+ ;  
+ ;  [_S7WM_ALARM_VIEW_PROTOOL_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121005
+ ;  relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+ ;  
+ ;  [_S7WM_ALARM_NUMBERS_CT]
+ ;  server=s7wmomxx.dll
+ ;  prefix=OM
+ ;  ObjType=0x01121006
+ ;  
+ ;  [_S7UT_TEXTLIST_CT]
+ ;  ObjType=0x00164001
+ ;  relation=0x000000A9,_S7WM_ALARM_HEADER_CT{1}[0x000000A8]
+ ;  
+ ;  ;---S7 Meldungsliste Ende

@@ -1,0 +1,31 @@
+; IKX-Bausteinköpfe
+[_S7A_SRC_DEF_CT]
+server=s7asromx.dll
+prefix=OM
+ObjType=0x0011200C
+basetype=_AUT_SOURCE_AT
+basetype=_AUT_SW_AT
+basetype=_AUT_S7SW_AT
+basetype=_AUT_MOVE_AT
+basetype=_AUT_COPY_AT
+basetype=_AUT_DELETE_AT
+
+; Relation zu Source Container
+[_S7A_SRCCNT_CT]
+relation=0x00000050,_S7A_SRC_DEF_CT[0x00000051];deep
+
+; IKX Quellen
+[_S7A_SRC_KF_CT]
+server=s7asromx.dll
+prefix=OM
+ObjType=0x0011200D
+basetype=_AUT_SOURCE_AT
+basetype=_AUT_SW_AT
+basetype=_AUT_S7SW_AT
+basetype=_AUT_MOVE_AT
+basetype=_AUT_COPY_AT
+basetype=_AUT_DELETE_AT
+
+; Relation zu Source Container
+[_S7A_SRCCNT_CT]
+relation=0x00000050,_S7A_SRC_KF_CT[0x00000051];deep

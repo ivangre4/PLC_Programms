@@ -1,0 +1,219 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1316285]		
+KatEntryName=CPU 312C
+InfoText=Unità centrali, del tipo CPU 312C
+[1316286]		
+KatEntryName=CPU 313C
+InfoText=Unità centrali, del tipo CPU 313C
+[1316287]		
+KatEntryName=CPU 313C-2 DP
+InfoText=Unità centrali, del tipo CPU 313C-2 DP
+[1316229]		
+KatEntryName=CPU 314C-2 DP
+InfoText=Unità centrali, del tipo CPU 314C-2 DP
+[1316288]		
+KatEntryName=CPU 313C-2 PtP
+InfoText=Unità centrali, del tipo CPU 313C-2 PtP
+[1316230]		
+KatEntryName=CPU 314C-2 PtP
+InfoText=Unità centrali, del tipo CPU 314C-2 PtP
+[1316289]		
+KatEntryName = 6ES7 312-5BD00-0AB0
+InfoText = Memoria di lavoro 16KB; 0,2ms/1000 istr.; DI10/DO6 integrati; 2 uscite di impulsi (2,5kHz); 2 canali per conteggio e misura con encoder incrementali a 24V (10kHz); connettore MPI; con configurazione ad una fila fino a 8 unità; firmware V1.0
+SHORTNAME=CPU 312C
+[1316290]		
+KatEntryName = 6ES7 313-5BE00-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); 3 canali per conteggio e misura con encoder incrementali a 24V (30kHz); connettore MPI; con configurazione a più file fino a 31 unità; firmware V1.0
+SHORTNAME=CPU 313C
+[1316291]		
+KatEntryName = 6ES7 313-6CE00-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz);  3 canali per conteggio e misura con encoder incrementali a 24V (30kHz); connettore MPI+DP (master DP o slave DP); con configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=CPU 313C-2 DP
+[1316231]		
+KatEntryName = 6ES7 314-6CF00-0AB0
+InfoText = Memoria di lavoro 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); 4 canali per conteggio e misura con encoder incrementali a 24V (60kHz); funzione di posizionamento integrata; connettore MPI+DP (master DP o slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=CPU 314C-2 DP
+[1316292]		
+KatEntryName = 6ES7 313-6BE00-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); 3 canali per conteggio e misura con encoder incrementali a 24V (30kHz); connettore MPI+ PtP (RS422/485 (ASCII, 3964(R))); configurazione a più file fino a 31 unità; firmware V1.0
+SHORTNAME=CPU 313C-2 PtP
+[1316232]		
+KatEntryName = 6ES7 314-6BF00-0AB0
+InfoText = Memoria di lavoro 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); 4 canali per conteggio e misura con encoder incrementali a 24V (60kHz); funzione di posizionamento integrata; connettore MPI+PtP (RS422/485 (ASCII, 3964(R), RK512)); configurazione a più file fino a 31 unità; firmware V1.0
+SHORTNAME=CPU 314C-2 PtP
+[1316295]		
+SHORTNAME=AI5/AO2
+InfoText=Ingressi/uscite analogici AI5+AO2
+[1316236]		
+SHORTNAME=AI5/AO2
+InfoText=Ingressi/uscite analogici AI5+AO2
+[1316237]		
+SHORTNAME=AI5/AO2
+InfoText=Ingressi/uscite analogici AI5+AO2
+[1316293]		
+SHORTNAME=DI10/DO6
+InfoText=Ingressi/uscite digitali DI10+DO6
+[1316294]		
+SHORTNAME=DI24/DO16
+InfoText=Ingressi/uscite digitali DI24+DO16
+[1316296]		
+SHORTNAME=DI16/DO16
+InfoText=Ingressi/uscite digitali DI16+DO16
+[1316297]		
+SHORTNAME=DI16/DO16
+InfoText=Ingressi/uscite digitali DI16+DO16
+[1316238]		
+SHORTNAME=DI24/DO16
+InfoText=Ingressi/uscite digitali DI24+DO16
+[1316239]		
+SHORTNAME=DI24/DO16
+InfoText=Ingressi/uscite digitali DI24+DO16
+[1316298]		
+SHORTNAME=DP
+InfoText=
+[1316241]		
+SHORTNAME=DP
+InfoText=
+[1322013]		
+SHORTNAME=PtP
+InfoText=Comunicazione punto a punto con interfaccia RS422/485 ( ASCII, 3964(R) )
+[1322014]		
+SHORTNAME=PtP
+InfoText=Comunicazione punto a punto con interfaccia RS422/485 ( ASCII, 3964(R), RK512 )
+[1322016]		
+SHORTNAME=Conteggio
+InfoText=2 canali; conteggio e misura di frequenza a 10kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz
+[1322017]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz 
+[1322018]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz
+[1322019]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz
+[1322020]		
+SHORTNAME=Conteggio
+InfoText=4 canali; conteggio e misura di frequenza a 60kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz
+[1322021]		
+SHORTNAME=Conteggio
+InfoText=4 canali; conteggio e misura di frequenza a 60kHz, modulazione ampiezza impulsi con frequenza di attivazione a 2,5 kHz
+[1322023]		
+SHORTNAME=Posizionamento
+InfoText=
+[1322024]		
+SHORTNAME=Posizionamento
+InfoText=
+[1322025]		
+SHORTNAME=Posizionamento
+InfoText=1 canale; posizionamento con uscita analogica o uscite digitali
+[1322026]		
+SHORTNAME=Posizionamento
+InfoText=1 canale; posizionamento con uscita analogica o uscite digitali
+;
+;
+;
+[1316583]
+KatEntryName = C7-635 TB
+InfoText = Sistema integrato compatto SIMATIC C7, del tipo C7-635 TB con interfaccia PROFIBUS DP per configurazione decentrata
+SHORTNAME=C7-635 TB
+[1316584]
+KatEntryName=6ES7 635-2EB00-0AE3
+InfoText=Sistema integrato compatto; TP 170 B + CPU con memoria di lavoro di 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali a 24V (60kHz); funzione di posizionamento integrata; connettore MPI+DP (master DP o slave DP); mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=C7 635 TB
+[1316585]
+KatEntryName=C7-CPU 635TB
+InfoText=CPU con memoria di lavoro 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; a 4 uscite di impulsi (2,5kHz); a 4 canali con conteggio e misura con encoder incrementali a 24V (60kHz); funzione di posizionamento integrata; connettore MPI+DP (master DP o slave DP); mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=C7 CPU 635 TB
+;
+;
+;
+[1316620]
+KatEntryName = C7-635 OP
+InfoText = Sistema integrato compatto SIMATIC C7, del tipo C7-635 OP con interfaccia PROFIBUS DP per configurazioni decentrate
+SHORTNAME=C7-635 OP
+[1316621]
+KatEntryName=6ES7 635-2EC00-0AE3
+InfoText=Sistema integrato compatto; OP 170 + CPU con memoria di lavoro di 64KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+DP (master DP o slave DP); mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=C7 635 OP
+[1316622]
+KatEntryName=C7-CPU 635OP
+InfoText=CPU con memoria di lavoro di 64KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+DP (master DP o slave DP); mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V1.0
+SHORTNAME=C7 CPU 635 OP
+[1316623]
+KatEntryName = C7-613
+InfoText = Sistema compatto SIMATIC C7 del tipo C7-613
+SHORTNAME=C7-613
+[1316624]
+KatEntryName=6ES7 613-1CA00-0AE3
+InfoText=Sistema integrato compatto; TD a 4 righe + CPU con memoria di lavoro di 32KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI; configurazione ad una fila fino a 4 unità; firmware V1.0
+SHORTNAME=C7 613
+[1316625]
+KatEntryName=C7-CPU 613
+InfoText=CPU con memoria di lavoro di 32KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI; configurazione ad una fila fino a 4 unità; firmware V1.0
+SHORTNAME=C7 CPU 613
+;
+;
+;
+[1322029]
+KatEntryName=C7-613 Panel
+InfoText=Unità HMI integrata per il servizio e la supervisione di applicazioni C7 613
+SHORTNAME=C7-613 Panel
+;
+;
+;
+[1316596]
+KatEntryName = 6ES7 312-5BD01-0AB0
+InfoText = Memoria di lavoro 16KB; 0,2ms/1000 istr.; DI10/DO6 integrati; 2 uscite di impulsi (2,5kHz); a 2 canali per conteggio e misura con encoder incrementali 24V (10kHz); connettore MPI; configurazione ad una fila fino a 8 unità; firmware V2.0; disponibile anche come unità SIPLUS con numero di ordinazione 6AG1 312-5BD01-2AB0 
+SHORTNAME=CPU 312C
+[1316598]
+KatEntryName = 6ES7 313-5BE01-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI; configurazione a più file fino a 31 unità; firmware V2.0; disponibile anche come unità SIPLUS con numero di ordinazione 6AG1 313-5BE01-2AB0
+SHORTNAME=CPU 313C
+[1316600]
+KatEntryName = 6ES7 313-6CE01-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI+DP (master DP o Slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7(FB/FC caricabili); firmware V2.0; disponibile anche come unità SIPLUS con numero di ordinazione 6AG1 313-6CE01-2AB0
+SHORTNAME=CPU 313C-2 DP
+[1316602]
+KatEntryName = 6ES7 313-6BE01-0AB0
+InfoText = Memoria di lavoro 32KB; 0,1ms/1000 istr.; DI16/DO16 integrati; 3 uscite di impulsi (2,5kHz); a 3 canali per conteggio e misura con encoder incrementali 24V (30kHz); connettore MPI+ PtP (RS422/485 (ASCII, 3964(R))); configurazione a più file fino a 31 unità; firmware V2.0
+SHORTNAME=CPU 313C-2 PtP
+[1316604]
+KatEntryName = 6ES7 314-6CF01-0AB0
+InfoText = Memoria di lavoro 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ DP (master DP o slave DP); configurazione a più file fino a 31 unità; mittente e ricevente nella comunicazione diretta; equidistanza; routing; comunicazione S7 (FB/FC caricabili); firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+[1316606]
+KatEntryName = 6ES7 314-6BF01-0AB0
+InfoText = Memoria di lavoro 48KB; 0,1ms/1000 istr.; DI24/DO16; AI5/AO2 integrati; 4 uscite di impulsi (2,5kHz); a 4 canali per conteggio e misura con encoder incrementali 24V (60kHz); funzione di posizionamento integrata; connettore MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configurazione a più file fino a 31 unità; firmware V2.0
+SHORTNAME=CPU 314C-2 PtP
+[1316607]		
+SHORTNAME=DP
+InfoText=
+[1316608]		
+SHORTNAME=DP
+InfoText=
+[1322030]		
+SHORTNAME=Conteggio
+InfoText=2 canali; conteggio e misura di frequenza a 10kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322031]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322032]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322033]		
+SHORTNAME=Conteggio
+InfoText=3 canali; conteggio e misura di frequenza a 30kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322034]		
+SHORTNAME=Conteggio
+InfoText=4 canali; conteggio e misura di frequenza a 60kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322035]		
+SHORTNAME=Conteggio
+InfoText=4 canali; conteggio e misura di frequenza a 60kHz, modulazione ampiezza impulsi con frequenza di attivazione e conteggio a 2,5 kHz
+[1322036]		
+SHORTNAME=Posizionamento
+InfoText=1 canale; Posizionamento con uscita analogica o uscite digitali, frequenza di conteggio
+[1322037]		
+SHORTNAME=Posizionamento
+InfoText=1 canale; Posizionamento con uscita analogica o uscite digitali, frequenza di conteggio

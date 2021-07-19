@@ -1,0 +1,34 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2039
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Módulos contador 5V V2.0 para ET 200S; modo de contaje, modo de medición, lectura de recorrido, Fast Mode
+
+;---------- 1 COUNT 5V C,   6ES7 138-4DE02-0AB0 C
+[2367033]
+KatEntryName=1 COUNT 5V Modo de contaje V2.0
+InfoText=Módulo contador, 5V para contaje único, sin fin y periódico, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 5V C V2.0
+
+
+;---------- 1 COUNT 5V M,   6ES7 138-4DE02-0AB0 M
+[2367050]
+KatEntryName=1 COUNT 5V Modo de medición V2.0
+InfoText=Módulo contador, 5V para medición de velocidad, frecuencia y periodo, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 5V M V2.0
+
+
+;---------- 1 COUNT 5V W,   6ES7 138-4DE02-0AB0 W
+[2367051]
+KatEntryName=1 COUNT 5V Lectura de recorrido V2.0
+InfoText=Módulo contador, 5V para lectura de recorrido, soporta el modo isócrono, V2.0
+SHORTNAME=1 COUNT 5V W V2.0
+
+
+;---------- 1 COUNT 5V F,   6ES7 138-4DE02-0AB0 F
+[2367052]
+KatEntryName=1 COUNT 5V Fast Mode V2.0
+InfoText=Módulo contador, 5V para contaje rápido, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 5V F V2.0
+

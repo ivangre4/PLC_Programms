@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Hardware Interrupt 7"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB47_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB47_STRT_INF : BYTE ;	//16#41/42/43/44 (Interrupt 1/2/3/4)
+  OB47_PRIORITY : BYTE ;	//23 (Priority of 1 is lowest)
+  OB47_OB_NUMBR : BYTE ;	//47 (Organization block 47, OB47)
+  OB47_RESERVED_1 : BYTE ;	//Reserved for system
+  OB47_RESERVED_2 : BYTE ;	//Reserved for system
+  OB47_MDL_ADDR : WORD ;	//Base address of module initiating interrupt
+  OB47_POINT_ADDR : DWORD ;	//Address of interrupt point on module
+  OB47_DATE_TIME : DATE_AND_TIME ;	//Date and time OB47 started  
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

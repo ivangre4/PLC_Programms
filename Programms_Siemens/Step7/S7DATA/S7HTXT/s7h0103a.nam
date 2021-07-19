@@ -1,0 +1,60 @@
+[2363865]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 32KB; 0,2ms/kAW; DI10/DO6 integriert; 2 Impulsausgänge (2,5kHz); 2-kanalig zählen und messen mit Inkrementalgebern 24V (10kHz); MPI-Anschluß; einzeiliger Aufbau bis 8 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 312C
+Comment=6ES7 312-5BE03-0AB0, 6ES7 313-5BF03-0AB0, 6ES7 313-6BF03-0AB0, 6ES7 313-6CF03-0AB0, 6ES7 314-6BG03-0AB0, 6ES7 314-6CG03-0AB0
+
+[2363867]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 64KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI-Anschluß; mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 313C
+
+[2363869]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 64KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R))); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 313C-2 PtP
+
+[2363871]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 64KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V2.0
+SHORTNAME=CPU 313C-2 DP
+
+[2363873]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 96KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R), RK512)); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 314C-2 PtP
+
+[2363875]
+KatEntryName = V2.0
+InfoText = Arbeitsspeicher 96KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+
+[2363866]
+KatEntryName = 6ES7 312-5BE03-0AB0
+InfoText = 
+SHORTNAME=CPU 312C
+
+[2363868]
+KatEntryName = 6ES7 313-5BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C
+
+[2363870]
+KatEntryName = 6ES7 313-6BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 PtP
+
+[2363872]
+KatEntryName = 6ES7 313-6CF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 DP
+
+[2363874]
+KatEntryName = 6ES7 314-6BG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 PtP
+
+[2363876]
+KatEntryName = 6ES7 314-6CG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 DP

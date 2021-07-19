@@ -1,0 +1,237 @@
+; ==================================================================================================
+; ET200pro
+;  |_ Motorstarter
+;		|_ Direktsanftstarter
+;			|_ <4Starter>
+;		|_ Direktstarter
+;			|_ <8Starter>
+;		|_ Reversiersanftstarter
+;			|_ <4Starter>
+;		|_ Reversierstarter
+;			|_ <8Starter>
+;		|_ Sondermodule
+;			|_ <3Module>
+; ==================================================================================================
+
+; ==================================================================================================
+; --------------------------- Katalogfolder Motorstarter
+[2363722]
+KatEntryName=Avviatore motore
+InfoText=Avviatore motore per ET 200pro
+SHORTNAME=Avviatore motore
+Comment=Moduli partenza motore per ET 200pro 
+
+; --------------------------- Katalogfolder Direktstarter
+[2363723]
+KatEntryName=Avviatore diretto
+InfoText=Avviatore motore con un senso di rotazione per ET 200pro
+SHORTNAME=Avviatore diretto
+; --------------------------- Katalogfolder Reversierstarter
+[2363724]
+KatEntryName=Avviatore reversibile
+InfoText=Avviatore motore con due sensi di rotazione per ET 200pro
+SHORTNAME=Avviatore reversibile
+; --------------------------- Katalogfolder Sondermodule
+[2363734]
+KatEntryName=Moduli speciali
+InfoText=Moduli speciali per ET 200pro
+SHORTNAME=Moduli speciali
+; --------------------------- Katalogfolder Direktsanftstarter
+[2363725]
+KatEntryName=Avviatore graduale diretto
+InfoText=Partenza motore per avviamento e arresto graduale con due sensi di rotazione per ET 200pro
+SHORTNAME=Avviatore graduale diretto
+; --------------------------- Katalogfolder Reversiersanftstarter
+[2363726]
+KatEntryName=Avviatore graduale reversibile
+InfoText=Partenza motore per avviamento e arresto graduale con due sensi di rotazione per ET 200pro
+SHORTNAME=Avviatore graduale reversibile
+; ==================================================================================================
+
+; --------------------------- 3RK1-304-5KS40-2AA0
+[2363698]
+KatEntryName=DSe HF 4DI 0,15-2A
+InfoText=Avviatore motore ET200pro DSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA0
+[2363699]
+KatEntryName=RSe HF 4DI 0,15-2A
+InfoText=Avviatore motore ET200pro RSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA0
+[2363700]
+KatEntryName=DSe ST 0,15-2A
+InfoText=Avviatore motore ET200pro DSe ST; attivazione meccanica; protez. elettr. da sovrac. 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA0
+[2363701]
+KatEntryName=RSe ST 0,15-2A
+InfoText=Avviatore motore ET200pro RSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-2AA3
+[2363702]
+KatEntryName=DSe HF 4DI/1BO 0,15-2A
+InfoText=Avviatore motore ET200pro DSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-3AA3
+[2363703]
+KatEntryName=RSe HF 4DI/1BO 0,15-2A
+InfoText=Avviatore motore ET200pro RSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-4AA3
+[2363704]
+KatEntryName=DSe ST 1BO 0,15-2A
+InfoText=Avviatore motore ET200pro DSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS40-5AA3
+[2363705]
+KatEntryName=RSe ST 1BO 0,15-2A
+InfoText=Avviatore motore ET200pro RSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA0
+[2363706]
+KatEntryName=DSe HF 4DI 1,5-12A
+InfoText=Avviatore motore ET200pro DSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA0
+[2363707]
+KatEntryName=RSe HF 4DI 1,5-12A
+InfoText=Avviatore motore ET200pro RSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA0
+[2363708]
+KatEntryName=DSe ST 1,5-12A
+InfoText=Avviatore motore ET200pro DSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA0
+[2363709]
+KatEntryName=RSe ST 1,5-12A
+InfoText=Avviatore motore ET200pro RSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-2AA3
+[2363710]
+KatEntryName=DSe HF 4DI/1BO 1,5-12A
+InfoText=Avviatore motore ET200pro DSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-3AA3
+[2363711]
+KatEntryName=RSe HF 4DI/1BO 1,5-12A
+InfoText=Avviatore motore ET200pro RSe HF; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe HF 4DI/1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-4AA3
+[2363712]
+KatEntryName=DSe ST 1BO 1,5-12A
+InfoText=Avviatore motore ET200pro DSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A, contatto di comando freno AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=DSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS40-5AA3
+[2363713]
+KatEntryName=RSe ST 1BO 1,5-12A
+InfoText=Avviatore motore ET200pro RSe ST; attivazione meccanica; protez. elettr. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; contatto di comando freno AC 400V; Han Q4/2 - Han Q8/0
+SHORTNAME=RSe ST 1BO 1,5-12A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA0
+[2363735]
+KatEntryName=sDSSte HF 4DI 0,15-2A
+InfoText=Avviatore motore ET200pro sDSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac. ; 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-2AA3
+[2363736]
+KatEntryName=sDSSte HF 4DI/1B 0,15-2A
+InfoText=Avviatore motore ET200pro sDSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA0
+[2363737]
+KatEntryName=sRSSte HF 4DI 0,15-2A
+InfoText=Avviatore motore ET200pro sRSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 0,15-2A
+
+
+; --------------------------- 3RK1-304-5KS70-3AA3
+[2363738]
+KatEntryName=sRSSte HF 4DI/1B 0,15-2A
+InfoText=Avviatore motore ET200pro sRSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/0,9kW; 0,15A...2,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 0,15-2A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA0
+[2363739]
+KatEntryName=sDSSte HF 4DI 1,5-12A
+InfoText=Avviatore motore ET200pro sDSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-2AA3
+[2363740]
+KatEntryName=sDSSte HF 4DI/1B 1,5-12A
+InfoText=Avviatore motore ET200pro sDSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sDSSte HF 4DI/1B 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA0
+[2363741]
+KatEntryName=sRSSte HF 4DI 1,5-12A
+InfoText=Avviatore motore ET200pro sRSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; senza contatto di comando freno; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI 1,5-12A
+
+
+; --------------------------- 3RK1-304-5LS70-3AA3
+[2363742]
+KatEntryName=sRSSte HF 4DI/1B 1,5-12A
+InfoText=Avviatore motore ET200pro sRSSte HF; attivazione elettronica; protez. elettr./ term. da sovrac.; 3 AC 400V/5,5kW; 1,50A...12,00A; contatto di comando freno AC 400V; 4DI DC24V; Han Q4/2 - Han Q8/0
+SHORTNAME=sRSSte HF 4DI/1B 1,5-12A
+
+
+
+; ==================================================================================================
+; --------------------------- Sondermodule
+[2363731]
+KatEntryName=RSM 25A
+InfoText=Avviatore motore Modulo speciale ET200pro RSM; separazione mecc.; 3 AC 400V; 25A; Han Q4/2; modulo interruttore di manutenzione; idoneità al sezionamento per il circuito elettrico principale
+SHORTNAME=RSM 25A
+
+
+[2363732]
+KatEntryName=F-RSM 16A
+InfoText=Avviatore motore Modulo speciale ET200pro F-RSM; separazione mecc.; 3 AC 400V; 16A; Han Q4/2;  modulo interruttore di manutenzione Safety Local
+SHORTNAME=F-RSM 16A
+
+
+[2363733]
+KatEntryName=ASM 400V 25A
+InfoText=Avviatore motore Modulo speciale ET200pro ASM; separazione mecc.; 3 AC 400V; 25A; Han Q4/2; modulo di disattivazione 400V; doppia interfaccia dell'alimentatore del circuito elettrico principale 
+SHORTNAME=ASM 400V 25A

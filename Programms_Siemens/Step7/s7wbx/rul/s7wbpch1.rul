@@ -1,0 +1,329 @@
+@DB_TYP SDB3100_H1PC_CONVERT    V0.01  DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+ALL
+{
+ 	ALL_DATA$LNG	DM||||	# für lokale Zwecke
+	ALL_DATA
+	{
+		PBL_SDB_KENNUNG$NAM		_M||||
+		PBL_SDB_KENNUNG
+		{
+			PBL_SDB_KENNUNG$LNG	BM||||
+			PBL_SDB_KENNUNG_ID	BC|1|||
+			BAUGRUPPENTYP		SM||||
+			SDB_INHALT			SC|0|||
+			UEBERTRAGUNGSATTR	BM|0|||
+			SDB_KENNUNG_RESV	BM|0|||		
+			TSAP_ID_TYP			BM|0|||		# K-Bus/Partyline
+			DEVICE_ID			BM|0|||		# K-Bus, ohne Bedeutung
+			TSAP_ID1			BM|0|||		# PG-Verbindung			
+			TSAP_ID2			BM|0|||		# Rack/Steckplatz bei AS400, ohne Bedeutung
+			NEXT_STADDR			BM|0|||		# ohne Bedeutung
+			REM_STADDR			BM|0|||		# Steckplatz
+		}
+
+		PBL_PC_BGR_PARAM$NAM	_A||||		# PC Baugruppenparametrierung
+		PBL_PC_BGR_PARAM
+		{
+			# Pblk Header
+			PBL_PC_BGR_PARAM_ID			BC|10|||
+			PBL_PC_BGR_PARAM_VERSION	BC|0|||
+			PBL_PC_BGR_PARAM$LNG		WM||||
+
+			# Daten
+			ProtokollId					BM|0|||		# Protokoll Identifier 
+													# 0 = Profibus
+													# 1 = Iso
+													# 2 = Tcp/Ip
+			BgrParametrierung$LNG		BM||||		# Länge des Baugruppen Parametrierungsstring
+			BgrParametrierung			AO||0|255|0	# Baugruppenparametrierungsstring
+		}
+
+		PBL_H1_BUSPARA$NAM		_H||||
+		PBL_H1_BUSPARA
+		{
+			PBL_H1_BUSPARA_ID					BC|3|||
+			PBL_H1_BUSPARA_RESV					BC|0|||
+			PBL_H1_BUSPARA$LNG					WM||||
+
+
+			LocalMacAddress_ID					WC|0x1001|||
+			LocalMacAddress_Val$LNG				WM||||	
+			LocalMacAddress_Val					HM||6|6|6
+	
+#			TPDUSize_ID							WC|0x4030|||
+#			TPDUSize_Val$LNG					WM||||	
+#			TPDUSize_Val						WM|8|7|10|
+
+#			ConnectRetransmitTime_ID			WC|0x4031|||
+#			ConnectRetransmitTime_Val$LNG		WM||||	
+#			ConnectRetransmitTime_Val			DM|100|||
+
+#			ConnectRetransmitMaxCount_ID		WC|0x4032|||
+#			ConnectRetransmitMaxCount_Val$LNG	WM||||	
+#			ConnectRetransmitMaxCount_Val		WM|16|||
+
+#			DataRetransmitTime_ID				WC|0x4002|||
+#			DataRetransmitTime_Val$LNG			WM||||	
+#			DataRetransmitTime_Val				DM|20|||
+
+#			DataRetransmitMaxCount_ID			WC|0x4003|||
+#			DataRetransmitMaxCount_Val$LNG		WM||||	
+#			DataRetransmitMaxCount_Val			WM|8|||
+
+#			WindowTime_ID						WC|0x4013|||
+#			WindowTime_Val$LNG					WM||||	
+#			WindowTime_Val						DM|200|||
+
+#			InactivityTime_ID					WC|0x4001|||
+#			InactivityTime_Val$LNG				WM||||	
+#			InactivityTime_Val					DM|2400|||
+
+#			NegotiationsOptions_ID				WC|0x4033|||
+#			NegotiationsOptions_Val$LNG			WM||||	
+#			NegotiationsOptions_Val				WM|0x8242|||
+
+#			WindowSize_ID						WC|0x4034|||
+#			WindowSize_Val$LNG					WM||||	
+#			WindowSize_Val						WM|1|0|15|
+		}
+
+		PBL_TCP_BUSPARA$NAM		_H||||
+		PBL_TCP_BUSPARA
+		{
+			PBL_TCP_BUSPARA_ID				BC|5|||
+			PBL_TCP_BUSPARA_RESV			BC|0|||
+			PBL_TCP_BUSPARA$LNG				WM||||
+			# must be optional for modules with not changeable MAC-Addr
+			LOC_MAC_ADDR$NAM		_O||||
+			LOC_MAC_ADDR
+			{
+				LocalMacAddress_ID				WC|0x1001|||
+				LocalMacAddress_Val$LNG			WM||||
+				LocalMacAddress_Val				HM||6|6|6
+			}
+			LocalIPAddress_ID				WC|0x3001|||
+			LocalIPAddress_Val$LNG			WM||||
+			LocalIPAddress_Val				HM||4|4|4
+			LocalSubNetMask_ID				WC|0x3002|||
+			LocalSubNetMask_Val$LNG			WM||||
+			LocalSubNetMask_Val				HM||4|4|4
+			LocalDefaultRouter_ID			WC|0x3003|||
+			LocalDefaultRouter_Val$LNG		WM||||
+			LocalDefaultRouter_Val			HM||4|4|4
+
+
+			PBL_H_PROFIL_SDB$NAM		_O||||
+			PBL_H_PROFIL_SDB
+			{
+				# Baugruppe erhält bei projektierten H-Verbindungen einen TIMING_SDB mit Profilen für die Verbindungen,
+				# derzeit nur für Verb. über TCP/IP
+				HProfilSDB_ID					WC|0x3005|||
+				HProfilSDB_Val$LNG			WM||||	
+				HProfilSDB_Val				WM|1|||	# default = 1 -> Timing SDB wird von BG interpretiert
+			}
+			
+			PBL_RES_PARTITIONING$NAM		_O||||
+			PBL_RES_PARTITIONING
+			{
+				PBL_RES_PARTITIONING_ID		WC|0x1042|||
+				PBL_RES_PARTITIONING$LNG	WM||||
+
+				PARTITIONING_DATA			HM||||				
+			}
+		}
+
+		UHRZEIT_PBLK$NAM		_O||||			# Konfigurieren von Optischen, bzw. elektrischen Anschluß für DP-Master
+		UHRZEIT_PBLK
+		{
+			PBL_ID								BC|0x11|||
+			PBL_ID_VERSION						BC|0|||
+			UHRZEIT_PBLK$LNG					WM||||
+
+			MODE								WM|0|0|2|1
+		}
+		
+		
+		
+		KEEP_ALIVE_PBLK$NAM		_O||||			# Konfigurieren von Optischen, bzw. elektrischen Anschluß für DP-Master
+		KEEP_ALIVE_PBLK
+		{
+			PBL_ID								BC|0x12|||
+			PBL_ID_VERSION						BC|0|||
+			KEEP_ALIVE_PBLK$LNG					WM||||
+
+			KEEP_ALIVE_TIMEOUT					DM|7200|||
+		}
+		
+		CN_RQ_TIMEOUT_PBLK$NAM		_O||||			# Konfigurieren von Optischen, bzw. elektrischen Anschluß für DP-Master
+		CN_RQ_TIMEOUT_PBLK
+		{
+			PBL_ID								BC|0x13|||
+			PBL_ID_VERSION						BC|0|||
+			CN_RQ_TIMEOUT_PBLK$LNG				WM||||
+
+			CN_RQ_TIMEOUT						DM|10|||
+		}
+
+		PBL_WIN_IP_ADDR$NAM		_O||||			# 2.IP-Adresse für CP1613 (Windows-Stack)
+		PBL_WIN_IP_ADDR
+		{
+			PBL_ID								BC|0x14|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_WIN_IP_ADDR$LNG					WM||||
+
+			WIN_IP_ADDR$LNG						WM|4|||
+			WIN_IP_ADDR							OM||||  # Swapped Double Word
+		}
+		
+		PBL_BGR_NAME$NAM			_O||||			# Name und Object-ID der Baugruppe
+		PBL_BGR_NAME
+		{
+			PBL_ID								BC|0x15|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_BGR_NAME$LNG					WM||||
+			
+			OBJ_ID								DM||||
+			BGR_NAME$LNG						BM||||
+			BGR_NAME							AO||0|255|0
+		}
+		
+		#optional block, needed for DCP response times, needed for 5.3.2 later
+		PBL_DCP_PARAM$NAM			_O||||
+		PBL_DCP_PARAM
+		{
+			PBL_DCP_PARAM_ID		BC|0xF2|||	# Parameterblock für PNIO-Mode, ID = 0x14
+			PBL_DCP_PARAM_RESV		BC|0|||
+			PBL_DCP_PARAM$LNG		WM||||		# Länge des ganzen Parameterblocks
+			PBL_MULTICAST_RESP_Val		WM|0x0A|||	# Range: Wert in Vielfachen von 1 s, Default 10
+			PBL_UNICAST_RESP_Val		WM|0x0A|||	# Range: Wert in Vielfachen von 100 ms, Default 10
+			PBL_UNICAST_RESP_RETRY_Val	WM|0x03|||	# Range: Default 3
+			PBL_MULTICAST_LIMIT_VAL		WM|0x0A|||	# Range: Zeiteinheit ist 1 sec, Default 10
+		}
+		
+		#optional block, needed for PNIO Mode
+		PBL_PNIO_MODE$NAM			_O||||
+		PBL_PNIO_MODE
+		{
+			PBL_PNIO_MODE_ID		BC|0xF1|||	# Parameterblock für PNIO-Mode, ID = 0xF1
+			PBL_PNIO_MODE_RESV		BC|0|||
+			PBL_PNIO_MODE$LNG		WM||||		# Länge des ganzen Parameterblocks
+			PBL_PNIO_MODE_Val		BM|0|||		# Range: 0= kein PNIO, 1 = PNIO - Controller, 2 = PNIO - Device
+			PBL_PNIO_MODE_VAL_RESV		BC|0|||		# SDB muß geradzahlige Länge haben
+			PBL_PNIO_UPDATE_TIME		DM|8|||     	# IO-Aktualisierungszeit
+		}
+		
+		PBL_PNIO_CONTROLLER_OPC$NAM		_O||||
+		PBL_PNIO_CONTROLLER_OPC
+		{
+			PBL_ID				BC|0x5E|||
+			PBL_ID_VERSION			BC|0|||
+			PBL_PNIO_CONTROLLER_OPC$LNG	WM||||
+			
+			AUTO_ONLINE			WM|0x01||| # Betriebsart bei Anlauf	
+								   #	0 = PROFINET IO-Controller muss von der Applikation in den ONLINE-Zustand überführt werden.
+								   #	1 = Der OPC-Server macht beim Anlauf den Zustandwechsel nach ONLINE automatisch.
+
+			VMDID_APP			DM||||
+		}
+		
+		
+		#optional block, needed for CD7Identify functions (first set of ip-parameters)
+		PBL_STATION_NAME$NAM	_O||||
+		PBL_STATION_NAME
+		{
+			PBL_STATION_NAME_ID			BC|0x0E|||
+			PBL_STATION_NAME_RESV			BC|0|||
+			PBL_STATION_NAME$LNG			WM||||
+			STATION_NAME				AM||1|24|25	# Name der Station
+			STATION_NAME_RESV			BM|0|||	# SDB muß geradzahlige Länge haben
+		}
+
+		#optional block, needed for DeviceName (TOGI)
+		PBL_DEVICE_NAME$NAM	_O||||
+		PBL_DEVICE_NAME
+		{
+			PBL_DEVICE_NAME_ID			BC|0x0C|||
+			PBL_DEVICE_NAME_RESV		BC|0|||
+			PBL_DEVICE_NAME$LNG			WM||||
+
+			DEV_NAME_STRUCT$NAM		_O||||
+			DEV_NAME_STRUCT
+			{
+				DEV_NAME_STRUCT_ID			WC|0xA201|||
+				NETTO_NAME$LNG				WM||||
+
+				NETTO_NAME
+				{				
+					DEV_NAME$LNG			WM||||
+					DEV_NAME				AM||0|255|
+					DEV_NAME_RES			BO||||
+				}
+			}
+		}
+
+		PBL_PRIVATE$NAM _O||||
+		PBL_PRIVATE
+		{
+			PBL_ID_PRIVATE			BC|0xFE|||
+			PBL_ID_PRIVATE_RESV		BC|0|||
+			PBL_PRIVATE$LNG			WM||||
+
+			PBL_PRIV1		# Netzeigenschaften
+			{		
+				PBL_PRIV1_ID		WC|1|||
+				PBL_PRIV1$LNG		WM||||
+					
+				NETID				HM||6|6|6	# AUT_NET_UNIQUE_ID_LB
+				NETNAME				AM||1|24|25	# AUT_NAME
+
+				IP_ACTIV			BM|0|0|1|
+				IP_ROUTER_ACTIV		BM|0|0|1|
+				IP_NET_ID			HM|0h00000000|4|4|4
+				IP_SUBNET_MASK		HM|0h00000000|4|4|4
+				IP_DFT_ROUTER		HM|0h00000000|4|4|4
+				Reserved			BC|0|||	# SDB muß geradzahlige Länge haben
+			}
+
+			RESV_PRV_BLK0$NAM	_A||||
+			RESV_PRV_BLK0
+			{
+				RESV_PRV_ID0		WM||||
+				RESV_PRV_BLK0$LNG	WM||||
+				RESV_PRV_DATA0		BA||||
+			}
+			RESV_PRV_BLK1$NAM	_A||||
+			RESV_PRV_BLK1
+			{
+				RESV_PRV_DATA1		BM||||
+			}
+		}
+
+		PBL_SENDRECV_MODE$NAM	_O||||
+		PBL_SENDRECV_MODE
+		{
+			PBL_SENDRECV_MODE_ID		BC|7|||
+			PBL_SENDRECV_MODE_RESV1		BC|0|||
+			PBL_SENDRECV_MODE$LNG		WM||||
+			SENDRECV_MODE_Val			BM|0|0|1|
+			PBL_SENDRECV_MODE_RESV2		BC|0|||
+		}
+
+		RESV_ALL_BLK0$NAM	_A||||
+		RESV_ALL_BLK0
+		{
+			RESV_ALL_ID0		BM||||
+			RESV_ALL_RESV0		BM||||
+			RESV_ALL_BLK0$LNG	WM||||
+			RESV_ALL_DATA0		BA||||
+		}
+		RESV_ALL_BLK1$NAM	_A||||
+		RESV_ALL_BLK1
+		{
+			RESV_ALL_DATA1		BM||||
+		}
+	}
+}
+

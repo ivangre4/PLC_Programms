@@ -1,0 +1,47 @@
+;----------------------------------------------------------------
+; Metafile für cp$$!
+;----------------------------------------------------------------
+
+
+; --------------------------- CP441-1 PtP ---neu
+[_S7H_HSP_6ES7_441_1AA04_0AE0_CT]
+server=S7h0083X.DLL
+prefix=OM
+ObjType=2363921
+basetype=_S7H_6ES7_441_1AA03_0AE0_CT
+CatalogParent=1315022
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 441-1AA04-0AE0
+SUPP_BY_STEP7_VER=30
+NOT_IN_MULTICOMP_MODE=0
+basetype=_AUT_GENCOMM_AT
+ONLINE_FUNCTIONS=0x00000007
+HAS_NO_LINK_TO_STATION=1
+
+HSP_ID=0083
+HSP_NAME=CP 441
+HWCNFX_FOR_HWU=5.3.0.0
+HWCNFX_VER=5.4.0.0|0
+
+; ---------------------------- CP441-2 PtP ---neu
+[_S7H_HSP_6ES7_441_2AA04_0AE0_CT]
+server=S7h0083X.DLL
+prefix=OM
+ObjType=2363922
+basetype=_S7H_6ES7_441_2AA03_0AE0_CT
+CatalogParent=1315022
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 441-2AA04-0AE0
+SUPP_BY_STEP7_VER=30
+NOT_IN_MULTICOMP_MODE=0
+basetype=_AUT_GENCOMM_AT
+ONLINE_FUNCTIONS=0x00000007
+HAS_NO_LINK_TO_STATION=1
+
+HSP_ID=0083
+HSP_NAME=CP 441
+HWCNFX_FOR_HWU=5.3.0.0
+HWCNFX_VER=5.4.0.0|0
+

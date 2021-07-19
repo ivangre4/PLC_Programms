@@ -1,0 +1,14 @@
+[NCU570]
+[PARAMETERS]
+001;000;000.4;001;000;0002;  ;000;Generate_Interrupt
+002;000;000.6;001;000;0002;  ;000;Local_Bus_Segment
+
+[Generate_Interrupt]
+000=NO
+001=YES
+
+[Local_Bus_Segment]
+000=NO
+001=YES
+
+[CONSISTENCY_CRITERIA=2|2|4]

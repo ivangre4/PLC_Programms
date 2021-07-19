@@ -1,0 +1,54 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2020
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S Modules d'entrées/sorties 2AI HS, 2AO HS, 4DO
+
+;---------- 2AI I 2WIRE HS,   6ES7 134-4GB52-0AB0
+[2366944]
+KatEntryName=2AI I 2WIRE HS
+InfoText=Module d'entrées analogiques AI 2xI, transducteur de mesure 2 fils (0..20mA, 4..20mA / 15 bits), High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI I 2WIRE HS
+
+
+;---------- 2AO U HS,   6ES7 135-4FB52-0AB0
+[2366945]
+KatEntryName=2AO U HS
+InfoText=Module de sorties analogiques AO 2xU (1..5V / 15 bits, +/-5V, +/-10V / 15 bits+S), High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AO U HS
+
+
+;---------- 4DO DC24V/2A ST,   6ES7 132-4BD32-0AA0
+[2366960]
+KatEntryName=4DO DC24V/2A ST
+InfoText=Module de sorties TOR DO 4xDC24V/2A, standard, supporte le synchronisme d'horloge
+SHORTNAME=4DO DC24V/2A ST
+
+
+;---------- 4DO DC24V/0,5A ST,   6ES7 132-4BD02-0AA0
+[2367037]
+KatEntryName=4DO DC24V/0,5A ST
+InfoText=Module de sorties TOR DO 4xDC24V/0.5A, standard, supporte le synchronisme d'horloge
+SHORTNAME=4DO DC24V/0,5A ST
+
+
+;---------- 2AI U HS,   6ES7 134-4FB52-0AB0
+[2367034]
+KatEntryName=2AI U HS
+InfoText=Module d'entrées analogiques AI 2xU (+/-2,5V / 14 bits+S, 1..5V / 14 bits, +/-5V, +/-10V / 15 bits+S), High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI U HS
+
+
+;---------- 2AI I 4WIRE HS,   6ES7 134-4GB62-0AB0
+[2367035]
+KatEntryName=2AI I 4WIRE HS
+InfoText=Module d'entrées analogiques AI 2xI, TM 4F (+/-20mA / 15 bits+S, 0..20mA, 4..20mA / 15 bits), High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI I 4WIRE HS
+
+
+;---------- 2AO I HS,   6ES7 135-4GB52-0AB0
+[2367036]
+KatEntryName=2AO I HS
+InfoText=Module de sorties analogiques AO 2xI (+/-20mA / 15 bits+S, 4..20mA / 15 bits), High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AO I HS

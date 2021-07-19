@@ -1,0 +1,493 @@
+;==========================================================
+; GSD-File  for ET 200iSP                        SIEMENS AG
+; MLFB    : 6ES7 152-1AA00-0AB0
+;
+; Version : V1.0.1, 11.12.04 HA
+; File    : SI028110.GSD
+;===========================================================
+#Profibus_DP
+GSD_Revision        = 4
+;--------------------------------------
+; <Unit-Definition-List>
+;--------------------------------------
+Vendor_Name         = "SIEMENS"
+Model_Name          = "ET 200iSP (IM152-1) DPV1"
+Info_Text="Bus interface for S7-ET200iSP modules, module replacement during operation"
+Revision            = "V1.0.1"
+Ident_Number        = 0x8110
+Protocol_Ident      = 0
+Station_Type        = 0
+FMS_supp            = 0
+Hardware_Release    = "A1.0"
+Software_Release    = "Z1.0"
+9.6_supp            = 1
+19.2_supp           = 1
+45.45_supp          = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 0
+6M_supp             = 0
+12M_supp            = 0
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_45.45       = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+Redundancy          = 0                         ; no redundant transmission
+Repeater_Ctrl_Sig   = 2                         ; Signal CNTR-P connected
+24V_Pins            = 0                         ; Signal M24V and P24V not connected
+Implementation_Type = "DPC31"
+Bitmap_Device       = "SI8110_N"
+;Bitmap_Diag         =
+Bitmap_SF           = "SI8110_S"
+Freeze_Mode_supp    = 1
+Sync_Mode_supp      = 1
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+Min_Slave_Intervall = 1
+Modular_Station     = 1
+Max_Module          = 35
+Max_Input_Len       = 244
+Max_Output_Len      = 244
+Max_Data_Len        = 488
+Modul_Offset        = 1
+Fail_Safe           = 1
+Slave_Family        = 3@ET200iSP
+Max_Diag_Data_Len   = 96
+;--------------------------------------
+; <Slave-Specification>
+;--------------------------------------
+OrderNumber="6ES7 152-1AA00-0AB0"
+Diag_Update_Delay=0
+Fail_safe_required=0
+DPV1_Slave=1
+C1_Read_Write_supp=1
+C1_Max_Data_Len=240
+C1_Response_Timeout=100
+C1_Read_Write_required=0
+C2_Read_Write_supp=1
+C2_Max_Data_Len=240
+C2_Response_Timeout=100
+C2_Read_Write_required=0
+C2_Max_Count_Channels=6
+Max_Initiate_PDU_Length=52
+Diagnostic_Alarm_supp=1
+Process_Alarm_supp=1
+Pull_Plug_Alarm_supp=1
+Status_Alarm_supp=0
+Update_Alarm_supp=1
+Manufacturer_Specific_Alarm_supp=0
+Extra_Alarm_SAP_supp=1
+Alarm_Sequence_Mode_Count=32
+Alarm_Type_Mode_supp=1
+Diagnostic_Alarm_required=0
+Process_Alarm_required=0
+Pull_Plug_Alarm_required=0
+Status_Alarm_required=0
+Update_Alarm_required=0
+Manufacturer_Specific_Alarm_required=0
+WD_Base_1ms_supp=1
+Check_Cfg_Mode=1
+Publisher_supp=1
+;Revision 4 keywords
+Prm_Block_Structure_supp=1
+;--------------------------------------
+; <Prm-Text-Def-List>
+;--------------------------------------
+PrmText=1
+Text(0)="Enable"
+Text(1)="Disable"
+EndPrmText
+;PrmText=2
+;Text(0)="S7 format"
+;Text(1)="RIO format"
+;EndPrmText
+PrmText=3
+Text(0)="No redundant PS"
+Text(1)="Redundant PS"
+Text(3)="Redundant PS required"
+EndPrmText
+PrmText=4
+Text(0)="Disable"
+Text(1)="Enable"
+EndPrmText
+;--------------------------------------
+; <Ext-User-Prm-Data-Def-List>
+;--------------------------------------
+ExtUserPrmData=1 "Identifier-related diagnostics"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Module status"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "Channel-related diagnostics"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;ExtUserPrmData=4 "Data format"
+;Bit(3) 0 0-1
+;Prm_Text_Ref=2
+;EndExtUserPrmData
+ExtUserPrmData=5 "Self-diagnostics"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=6 "Redundant power supply diag."
+BitArea(6-7) 0 000-003
+Prm_Text_Ref=3
+EndExtUserPrmData
+;--------------------------------------
+; <User-Prm-Data>
+;--------------------------------------
+Max_User_Prm_Data_Len = 37
+; DPV1-Status
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08
+; User_Prm_Structure: Device Related Prm Data 12 bytes
+Ext_User_Prm_Data_Const(3)=0x0C,0x81,0x00,0x00,0x60,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+;"Time-of-day synchronization Prm block"
+Ext_User_Prm_Data_Const(15)=0x0E,0x08,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+;<Ext-User-Prm-Data-Def-List>
+;"Deselection of the diagnostics blocks"
+;"Identifier-related diagnostics, bit 0"
+Ext_User_Prm_Data_Ref(8)=1
+;"Module status, bit 1"
+Ext_User_Prm_Data_Ref(8)=2
+;"Channel-related diagnostics, bit 6"
+Ext_User_Prm_Data_Ref(8)=3
+;Datenformat
+;Ext_User_Prm_Data_Ref(10)=4
+;ETER-Eigendiagnose
+Ext_User_Prm_Data_Ref(10)=5
+;Stromversorgung
+Ext_User_Prm_Data_Ref(10)=6
+;--------------------------------------
+; Diagnosetexte fuer Modulstatus
+;--------------------------------------
+UnitDiagType = 130
+X_Unit_Diag_Area = 24-25
+X_Value(1) = "Slot 1: Module error"
+X_Value(2) = "Slot 1: Wrong module"
+X_Value(3) = "Slot 1: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 26-27
+X_Value(1) = "Slot 2: Module error"
+X_Value(2) = "Slot 2: Wrong module"
+X_Value(3) = "Slot 2: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 28-29
+X_Value(1) = "Slot 3: Module error"
+X_Value(2) = "Slot 3: Wrong module"
+X_Value(3) = "Slot 3: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 30-31
+X_Value(1) = "Slot 4: Module error"
+X_Value(2) = "Slot 4: Wrong module"
+X_Value(3) = "Slot 4: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 32-33
+X_Value(1) = "Slot 5: Module error"
+X_Value(2) = "Slot 5: Wrong module"
+X_Value(3) = "Slot 5: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 34-35
+X_Value(1) = "Slot 6: Module error"
+X_Value(2) = "Slot 6: Wrong module"
+X_Value(3) = "Slot 6: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 36-37
+X_Value(1) = "Slot 7: Module error"
+X_Value(2) = "Slot 7: Wrong module"
+X_Value(3) = "Slot 7: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 38-39
+X_Value(1) = "Slot 8: Module error"
+X_Value(2) = "Slot 8: Wrong module"
+X_Value(3) = "Slot 8: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 40-41
+X_Value(1) = "Slot 9: Module error"
+X_Value(2) = "Slot 9: Wrong module"
+X_Value(3) = "Slot 9: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 42-43
+X_Value(1) = "Slot 10: Module error"
+X_Value(2) = "Slot 10: Wrong module"
+X_Value(3) = "Slot 10: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 44-45
+X_Value(1) = "Slot 11: Module error"
+X_Value(2) = "Slot 11: Wrong module"
+X_Value(3) = "Slot 11: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 46-47
+X_Value(1) = "Slot 12: Module error"
+X_Value(2) = "Slot 12: Wrong module"
+X_Value(3) = "Slot 12: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 48-49
+X_Value(1) = "Slot 13: Module error"
+X_Value(2) = "Slot 13: Wrong module"
+X_Value(3) = "Slot 13: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 50-51
+X_Value(1) = "Slot 14: Module error"
+X_Value(2) = "Slot 14: Wrong module"
+X_Value(3) = "Slot 14: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 52-53
+X_Value(1) = "Slot 15: Module error"
+X_Value(2) = "Slot 15: Wrong module"
+X_Value(3) = "Slot 15: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 54-55
+X_Value(1) = "Slot 16: Module error"
+X_Value(2) = "Slot 16: Wrong module"
+X_Value(3) = "Slot 16: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 56-57
+X_Value(1) = "Slot 17: Module error"
+X_Value(2) = "Slot 17: Wrong module"
+X_Value(3) = "Slot 17: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 58-59
+X_Value(1) = "Slot 18: Module error"
+X_Value(2) = "Slot 18: Wrong module"
+X_Value(3) = "Slot 18: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 60-61
+X_Value(1) = "Slot 19: Module error"
+X_Value(2) = "Slot 19: Wrong module"
+X_Value(3) = "Slot 19: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 62-63
+X_Value(1) = "Slot 20: Module error"
+X_Value(2) = "Slot 20: Wrong module"
+X_Value(3) = "Slot 20: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 64-65
+X_Value(1) = "Slot 21: Module error"
+X_Value(2) = "Slot 21: Wrong module"
+X_Value(3) = "Slot 21: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 66-67
+X_Value(1) = "Slot 22: Module error"
+X_Value(2) = "Slot 22: Wrong module"
+X_Value(3) = "Slot 22: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 68-69
+X_Value(1) = "Slot 23: Module error"
+X_Value(2) = "Slot 23: Wrong module"
+X_Value(3) = "Slot 23: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 70-71
+X_Value(1) = "Slot 24: Module error"
+X_Value(2) = "Slot 24: Wrong module"
+X_Value(3) = "Slot 24: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 72-73
+X_Value(1) = "Slot 25: Module error"
+X_Value(2) = "Slot 25: Wrong module"
+X_Value(3) = "Slot 25: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 74-75
+X_Value(1) = "Slot 26: Module error"
+X_Value(2) = "Slot 26: Wrong module"
+X_Value(3) = "Slot 26: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 76-77
+X_Value(1) = "Slot 27: Module error"
+X_Value(2) = "Slot 27: Wrong module"
+X_Value(3) = "Slot 27: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 78-79
+X_Value(1) = "Slot 28: Module error"
+X_Value(2) = "Slot 28: Wrong module"
+X_Value(3) = "Slot 28: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 80-81
+X_Value(1) = "Slot 29: Module error"
+X_Value(2) = "Slot 29: Wrong module"
+X_Value(3) = "Slot 29: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 82-83
+X_Value(1) = "Slot 30: Module error"
+X_Value(2) = "Slot 30: Wrong module"
+X_Value(3) = "Slot 30: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 84-85
+X_Value(1) = "Slot 31: Module error"
+X_Value(2) = "Slot 31: Wrong module"
+X_Value(3) = "Slot 31: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 86-87
+X_Value(1) = "Slot 32: Module error"
+X_Value(2) = "Slot 32: Wrong module"
+X_Value(3) = "Slot 32: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 88-89
+X_Value(1) = "Slot 33: Module error"
+X_Value(2) = "Slot 33: Wrong module"
+X_Value(3) = "Slot 33: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 90-91
+X_Value(1) = "Slot 34: Module error"
+X_Value(2) = "Slot 34: Wrong module"
+X_Value(3) = "Slot 34: No module"
+X_Unit_Diag_Area_End
+X_Unit_Diag_Area = 92-93
+X_Value(1) = "Slot 35: Module error"
+X_Value(2) = "Slot 35: Wrong module"
+X_Value(3) = "Slot 35: No module"
+X_Unit_Diag_Area_End
+EndUnitDiagType
+;--------------------------------------
+; Diagnosetexte fuer Kanaldiagnose
+;--------------------------------------
+Channel_Diag(16) = "Parameter assignment error"
+Channel_Diag(17) = "Error process-voltage or red. PS"
+Channel_Diag(19) = "HART communication error"
+Channel_Diag(21) = "Reference channel error"
+Channel_Diag(22) = "PRAL lost / HART status"
+Channel_Diag(23) = "HART maintenance request"
+Channel_Diag(24) = "Actuator shutoff"
+Channel_Diag(26) = "External error /HART malFunction"
+Channel_Diag(27) = "Unknown error/HART Cfg changed"
+Channel_Diag(29) = "HART PV outside the limits"
+Channel_Diag(30) = "HART NV outside the limits"
+;--------------------------------------
+; Modulkennungen
+;--------------------------------------
+FixPresetModules=1
+Module = "Config for Slot1" 0x04, 0x00, 0x00, 0xAD, 0xC4
+1
+PRESET=1
+EndModule
+Module = "Config for Slot2" 0x04, 0x00, 0x00, 0x0B, 0xC0
+2
+PRESET=1
+EndModule
+Module = "Config for Slot3" 0x04, 0x00, 0x00, 0x8F, 0xC0
+3
+PRESET=1
+EndModule
+Module = "6ES7 131-7RF00-0AB0 8DI NAMUR   " 0x43, 0x82, 0x00, 0x79, 0xCA
+4
+Info_Text="Digital input module NAMUR 8 x DI"
+EndModule
+Module = "6ES7 131-7RF00-0AB0 6DI 2Trace  " 0x43, 0x86, 0x00, 0x79, 0xCA
+5
+Info_Text="Digital input module NAMUR 6 x DI, 2 Trace"
+EndModule
+Module = "6ES7 131-7RF00-0AB0 Ctrl. 2Count" 0xC2, 0x84, 0x86, 0x79, 0xCA
+6
+Info_Text="Digital input module NAMUR Control, 2Count"
+EndModule
+Module = "6ES7 131-7RF00-0AB0 6DI 2Count  " 0xC2, 0x84, 0x86, 0x79, 0xCA
+7
+Info_Text="Digital input module NAMUR 6 x DI, 2 Count"
+EndModule
+Module = "6ES7 132-7RD00-0AB0 4DO 23V/20mA" 0x83, 0x81, 0x00, 0x79, 0xD1
+8
+Info_Text="Digital output module 4 x DO DC 23.1V/20mA"
+EndModule
+Module = "6ES7 132-7RD10-0AB0 4DO 17V/27mA" 0x83, 0x81, 0x00, 0x79, 0xD2
+9
+Info_Text="Digital output module 4 x DO DC 17.4V/27mA"
+EndModule
+Module = "6ES7 132-7RD20-0AB0 4DO 17V/40mA" 0x83, 0x81, 0x00, 0x79, 0xD3
+10
+Info_Text="Digital output module 4 x DO DC 17.4V/40mA"
+EndModule
+Module = "6ES7 134-7TD00-0AB0 4AI I 2wire " 0x43, 0x43, 0x00, 0x79, 0xEB
+11
+Info_Text="Analog input module 4 x AI I 2DMU HART, Default range"
+EndModule
+Module = "6ES7 134-7TD00-0AB0 4AI I 2w+1  " 0x43, 0x8C, 0x00, 0x79, 0xEB
+12
+Info_Text="Analog input module 4 x AI I 2DMU HART, 1 Secondary value"
+EndModule
+Module = "6ES7 134-7TD00-0AB0 4AI I 2w+2  " 0x43, 0x91, 0x00, 0x79, 0xEB
+13
+Info_Text="Analog input module 4 x AI I 2DMU HART, 2 Secondary values"
+EndModule
+Module = "6ES7 134-7TD00-0AB0 4AI I 2w+3  " 0x43, 0x96, 0x00, 0x79, 0xEB
+14
+Info_Text="Analog input module 4 x AI I 2DMU HART, 3 Secondary values"
+EndModule
+Module = "6ES7 134-7TD00-0AB0 4AI I 2w+4  " 0x43, 0x9B, 0x00, 0x79, 0xEB
+15
+Info_Text="Analog input module 4 x AI I 2DMU HART, 4 Secondary values"
+EndModule
+Module = "6ES7 134-7TD50-0AB0 4AI I 4wire " 0x43, 0x43, 0x00, 0x79, 0xEC
+16
+Info_Text="Analog input module 4 x AI I 4DMU HART, Default range"
+EndModule
+Module = "6ES7 134-7TD50-0AB0 4AI I 4w+1  " 0x43, 0x8C, 0x00, 0x79, 0xEC
+17
+Info_Text="Analog input module 4 x AI I 4DMU HART, 1 Secondary value"
+EndModule
+Module = "6ES7 134-7TD50-0AB0 4AI I 4w+2  " 0x43, 0x91, 0x00, 0x79, 0xEC
+18
+Info_Text="Analog input module 4 x AI I 4DMU HART, 2 Secondary values"
+EndModule
+Module = "6ES7 134-7TD50-0AB0 4AI I 4w+3  " 0x43, 0x96, 0x00, 0x79, 0xEC
+19
+Info_Text="Analog input module 4 x AI I 4DMU HART, 3 Secondary values"
+EndModule
+Module = "6ES7 134-7TD50-0AB0 4AI I 4w+4  " 0x43, 0x9B, 0x00, 0x79, 0xEC
+20
+Info_Text="Analog input module 4 x AI I 4DMU HART, 4 Secondary values"
+EndModule
+Module = "6ES7 134-7SD00-0AB0 4AI TC      " 0x43, 0x43, 0x00, 0x79, 0xEE
+21
+Info_Text="Analog input module 4 x AI Temp TC"
+EndModule
+Module = "6ES7 134-7SD50-0AB0 4AI RTD     " 0x43, 0x43, 0x00, 0x79, 0xEF
+22
+Info_Text="Analog input module, 4 x AI Temp RTD"
+EndModule
+Module = "6ES7 135-7TD00-0AB0 4AO I HART  " 0x83, 0x43, 0x00, 0x79, 0xF2
+23
+Info_Text="Analog output module 4 x AO I HART, Default range"
+EndModule
+Module = "6ES7 135-7TD00-0AB0 4AO I +1    " 0xC2, 0x87, 0x84, 0x79, 0xF2
+24
+Info_Text="Analog input module 4 x AO I HART, 1 Secondary value"
+EndModule
+Module = "6ES7 135-7TD00-0AB0 4AO I +2    " 0xC2, 0x87, 0x89, 0x79, 0xF2
+25
+Info_Text="Analog input module 4 x AO I HART, 2 Secondary values"
+EndModule
+Module = "6ES7 135-7TD00-0AB0 4AO I +3    " 0xC2, 0x87, 0x8E, 0x79, 0xF2
+26
+Info_Text="Analog input module 4 x AO I HART, 3 Secondary values"
+EndModule
+Module = "6ES7 135-7TD00-0AB0 4AO I +4    " 0xC2, 0x87, 0x93, 0x79, 0xF2
+27
+Info_Text="Analog input module 4 x AO I HART, 4 Secondary values"
+EndModule
+Module = "6ES7 138-7AA00-0AA0 Reserve Mod." 0x04, 0x00, 0x00, 0x8F, 0xC0
+28
+Info_Text="Standby module"
+EndModule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

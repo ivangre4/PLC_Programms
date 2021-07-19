@@ -1,0 +1,277 @@
+@DB_TYP FMS-Typ V1.0
+@LANGUAGE ENGLISH
+#@@VERSION V1.02.6
+## [V1.00.3] ConnectionProfil: BroadcastRequester/MulticastRequester -> MaxMaxRAC = 255
+## [V1.00.4] Neues Bitmap
+## [V1.01.1] Sprachanpassungen
+## [V1.01.2] Baudrate > 1,5 MBaud fuer FMS sperren
+## [V1.02.1] Baudrate > 1,5 MBaud fuer FMS freigeben
+General
+{	
+   	Version         				= 1
+	OrderString						= "GeneralRequester"
+ 	VendorName            			= "Unknown"
+   	ModelNameG             			= "Senden (BRCT/MULT)"
+   	ModelNameE             			= "Send (BRCT/MULT)"
+   	ModelNameS             			= "Transmisión (BRCT/MULT)"
+   	ModelNameI             			= "Trasmettere (BRCT/MULT)"
+   	ModelNameF             			= "Emission (BRCT/MULT)"
+   	Revision             			= " "
+   	ProfileNumber         			= 0
+   	LogicalStatus        			= 0
+   	PhysicalStatus       			= 0
+   	ControllerType        			= " "
+   	HardwareRelease       			= "A_._"
+   	SoftwareRelease       			= "V_._"
+   	VendorFmsStack        			= " "
+   	Comment               			= " " 
+   	FamilyG                			= "Unbestimmt" 
+   	FamilyE                			= "Undefined" 
+   	FamilyI                			= "Indeterminato" 
+   	FamilyS                			= "Indefinido" 
+   	FamilyF                			= "Indéfini" 
+   	OrderNumber           			= ""
+   	CompatibleTo          			= 3 
+   	SiemensStation        			= FALSE 
+   	SiemensVendorID       			= 0 
+   	BitmapFile            			= "GENSEND.BMP" 
+}  
+
+BusSpecificCharacteristics	
+{
+	ActiveStation					= TRUE	
+	PassiveStation					= FALSE
+	Baudrate9.6   					= TRUE
+	Baudrate19.2					= TRUE
+	Baudrate93.75					= TRUE
+	Baudrate187.5					= TRUE
+	Baudrate500    					= TRUE
+	Baudrate1500					= TRUE
+	Baudrate3000					= TRUE
+	Baudrate6000					= TRUE
+	Baudrate12000					= TRUE
+}
+
+ImplementationAndSystem   
+{ 
+	PollListSap   					= 0
+	TimeOutAssociate				= 0
+	SymLenFmsKbl 					= 0
+	VfdPointerSupported				= FALSE
+	FMSFeaturesSupported   			= 0h00.00.00.00.00.00
+	FMA7FeaturesSupported   		= 0h00.00.00.00.00.00
+	MaxSap	            			= 62
+	MaxNoSap    					= 62
+	MaxNoOv    						= 0
+	MaxNoVfd    					= 0
+	MaxCr	    					= 0
+	MaxNoCrl						= 0
+	MaxNoCycleCon					= 0
+	MaxNoActiveCon					= 0
+	MaxPduLen						= 241
+	MaxOvIndex						= 0
+	MinVarIndex						= 0
+	MaxVarIndex						= 0
+	MaxParServices					= 255
+	MaxCntOutServicesCalling		= 255
+	MaxCntOutServicesCalled			= 255
+   	MaxMultiplier		    		= 1
+   	DefMultiplier		    		= 1
+   	DefLsap      		    		= 0
+   	ServiceFeaturesAnded			= FALSE
+}
+
+AdditionalCharacteristics  
+{
+   	MaxNameLen             			= 0
+   	AccessProtectSupport   			= TRUE
+   	MaxLenExtension       			= 0
+   	MaxLenExecArgument     			= 0
+}
+
+ConnectionProfile # No. 1
+{
+ 	General
+    {
+   	#ConnProfileType 			= 0
+        ConnProfileBetriebsart 		= MASTER
+        ConnOrderString 			= "BroadcastRequester"
+        ConnProfileNameG 			= "BroadcastSender"
+        ConnProfileNameE 			= "BroadcastRequester"
+        ConnProfileNameI 			= "TrasmettitoreBroadcast"
+        ConnProfileNameF 			= "EmetteurBroadcast"
+        ConnProfileNameS 			= "TransmisorBroadcast"
+        LocalLSAP       			= 63                                   
+        RemoteLSAP      			= 0                                   
+        RemoteAddress   			= 127                                  
+	   	Userdefined          		= FALSE
+      }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = TRUE
+	   	ConnectionType_Default      = BRCT
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = FALSE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 0
+		ControlInterval_Default     = 0
+        LLIAttribute_FMS           	= TRUE
+        LLIAttribute_FMA7	      	= TRUE
+        LLIAttribute_Default       	= FMS
+        #MultiplierMin              = 0
+        #MultiplierMax              = 0
+        #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                   = 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   =0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 0	   	
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 255
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 0
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 0
+	   	MaxMaxPduReceivingHighPrio  = 241
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+	   	UnsolictedStatus            = FALSE
+		InformationReport           = TRUE
+   		InformationReportWithType   = FALSE
+		EventNotification           = FALSE
+		EventNotificationWithType   = FALSE
+	}
+}
+
+ConnectionProfile # No. 2
+{
+ 	General
+    {
+   	#ConnProfileType 			= 0
+        ConnProfileBetriebsart 		= MASTER
+        ConnOrderString 			= "MulticastRequester"
+        ConnProfileNameG 			= "MulticastSender"
+        ConnProfileNameE 			= "MulticastRequester"
+        ConnProfileNameI 			= "TrasmettitoreMulticast"
+        ConnProfileNameF 			= "EmetteurMulticast"
+        ConnProfileNameS 			= "TransmisorMulticast"
+        LocalLSAP       			= 0                                   
+        RemoteLSAP      			= 0                                   
+        RemoteAddress   			= 127                                  
+	   	Userdefined          		= FALSE
+      }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = TRUE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MULT
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = FALSE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 0
+		ControlInterval_Default     = 0
+        LLIAttribute_FMS           	= TRUE
+        LLIAttribute_FMA7	      	= TRUE
+        LLIAttribute_Default       	= FMS
+        #MultiplierMin              = 0
+        #MultiplierMax              = 0
+        #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                   = 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 0	   	
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 255
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 0
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 0
+	   	MaxMaxPduReceivingHighPrio  = 241
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+	   	UnsolictedStatus            = FALSE
+		InformationReport           = TRUE
+   		InformationReportWithType   = FALSE
+		EventNotification           = FALSE
+		EventNotificationWithType   = FALSE
+	}
+}
+

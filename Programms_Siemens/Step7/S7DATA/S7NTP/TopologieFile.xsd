@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="TopologieCommon.xsd"/>
+	<xs:element name="TopologieFile">
+		<xs:annotation>
+			<xs:documentation>XML Object, dass das Objektmodell eines Topologie-Projekts repraesentiert</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.03: Initiale Fassung</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.04: Device/@DeviceId, Device/@DiagHeader, Project/@ProjPath hinzugefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.05: WiringType/@Class numerisch, Step7Diagnose komplett optional, AvailableSubnetsStep7 komplett optional, mehrfache Interface-Tags unterhalb von Device, @ConnectionRefId optional, @ObjId xs:in, @InterfaceRefId zu @InterfaceTypeRefId, @ObjID bei Device/Interface</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.06: WiringTypes wird nur noch referenziert, Device mit maxOccurs="unbounded", Sequenzeintraege fuer Hauptelement enfernt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.07: neues Attribute OnlineObject fuer Online/Offline Vergleich beim Device hinzugefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.08: neues Attribute SelectionIDs, das die ids enthaelt der zuletzt selektierten objekte</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.09: Subnetzelemente aktiviert, da diese jetzt gespeichert werden muessen</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.10: MLFB-Attribute beim Device-Element hinzugefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.11: Webable-Attribut beim DeviceType-Element als optional hinzugefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.12: neues Attribute SortedColumn, gibt an, nach welcher Spalte die Liste der nicht zuordenbaren Elemente sortiert werden soll</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.13: MLFB-Attribut geloescht, da nicht benoetigt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.14: WallpaperList, um die benutzten Hintergrundbilder zu spiechern</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.15: GraphLayout fuer Connections eingefuehrt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.16: Elemente und Attribute unter UserSettings in optional geaendert</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.16: Attribute FOType am Port neu eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.17: Attribute Hide am Device neu eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.18: Attribute WndPosSize, RemoteFilter, TableFilter und ShowStationName bei WindowSettings neu eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.19: MLFB-Attribute wieder am Device-Element hinzugefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.20: SupportRTClass3-Attribute am Device-Element hinzugefuegt. Kommentar fuer Format der IP-Addresse.</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.21: Elemente DeviceType und Device sind jetzt optional unter den Parent-Elementen.</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.22: Attribut Unit eingefuegt zur Uebergabe der Leitungslaengeneinheit</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Step7Diagnose" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Speichert die Liste der moeglichen Funktionscalls zu der Diagnose-DLL</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="DllCall" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="WiringTypes"/>
+				<xs:element name="Project" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Speichert Details ueber das "uebergeordnete" Step7-HwConfig/NetPro-Projekt</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="UserSettings" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Speichert Benutzereinstellungen, die moeglicherweise beim Restaurieren des Viewers wiederhergestellt werden</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="GraphLayout" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Speichert die letzte Koordinatenposition und den Zoomfaktor, den der Benutzer im Netzgraphen ausgewaehlt hat</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="InitialPosLeft" type="xs:int">
+													<xs:annotation>
+														<xs:documentation>Bildschirm-Koordinate, welche fuer die Restaurierung der zuletzt dargestellten Benutzeransicht in der graphischen Topologie notwendig ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="InitialPosRight" type="xs:int">
+													<xs:annotation>
+														<xs:documentation>Bildschirm-Koordinate, welche fuer die Restaurierung der zuletzt dargestellten Benutzeransicht in der graphischen Topologie notwendig ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="InitialPosTop" type="xs:int">
+													<xs:annotation>
+														<xs:documentation>Bildschirm-Koordinate, welche fuer die Restaurierung der zuletzt dargestellten Benutzeransicht in der graphischen Topologie notwendig ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="InitialPosBottom" type="xs:int">
+													<xs:annotation>
+														<xs:documentation>Bildschirm-Koordinate, welche fuer die Restaurierung der zuletzt dargestellten Benutzeransicht in der graphischen Topologie notwendig ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="SliderPos" type="xs:int">
+													<xs:annotation>
+														<xs:documentation>Wert des Vergroesserungsfaktor-Schiebereglers, welcher fuer die Restaurierung der zuletzt dargestellten Benutzeransicht in der graphischen Topologie notwendig ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="WindowSettings" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Speichert die 'Fensterzustaende' die beim erneuten Laden des Projekts restauriert werden.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="SelectionIDs" type="xs:string" use="optional">
+													<xs:annotation>
+														<xs:documentation>Enthaelt die ID oder die IDs der zuletzt selektierten Objekte getrennt durch </xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ShowDeltaList" type="xs:boolean" use="optional">
+													<xs:annotation>
+														<xs:documentation>Gibt an ob Delta-Liste ein- oder ausgeblendet sein soll beim Restaurieren des Projekts (True = eingeblendet)</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ShowCatalogList" type="xs:boolean" use="optional">
+													<xs:annotation>
+														<xs:documentation>Gibt an, ob Komponentenkatalog ein- oder ausgeblendet sein soll beim Restaurieren des Projekts (True = eingeblendet)</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="InOnlineMode" type="xs:boolean" use="optional">
+													<xs:annotation>
+														<xs:documentation>Gibt an ob Offline/Online-Modus beim Restaurieren des Projekts aktiviert sein soll ((True = OnlineModus)</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="SortedColumn" type="xs:string" use="optional">
+													<xs:annotation>
+														<xs:documentation>Gibt die Spalte der Liste der nicht zuordenbaren Teilnehmer an, nach der die Liste sortiert ist</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="ShowStationName" type="xs:boolean" use="optional">
+													<xs:annotation>
+														<xs:documentation>Gibt an ob in der Tabellarischen Ansicht der Stationsname beim RemotePort mit angezegit werden soll.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="TableFilter" type="xs:int" use="optional">
+													<xs:annotation>
+														<xs:documentation>Filter fuer die Haupttabelle in der tabellarischen Ansicht.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="RemoteFilter" type="xs:int" use="optional">
+													<xs:annotation>
+														<xs:documentation>Filter fuer den Auswahlbereich in der tabellarischen Ansicht.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="WndPosSize" type="xs:string" use="optional">
+													<xs:annotation>
+														<xs:documentation>Position und Groesse des Dialoges als String. Moeglicher Wert kann max sein fuer maximierte Ansicht.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="Unit" type="xs:string" use="optional">
+												  <xs:annotation>
+														<xs:documentation>Eingestellte Masseinheit fuer die Leitungslaengenanzeige. m fuer Meter und ft fuer feet</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="WallpaperList" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Speichert den Pfad und Dateinamen, Größe und Position der verwendeten Hintergrundbilder</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="Wallpaper" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="ID" type="xs:int" use="required"/>
+															<xs:attribute name="FileName" type="xs:string" use="required"/>
+															<xs:attribute name="WidthRatio" type="xs:int" use="required"/>
+															<xs:attribute name="HeightRatio" type="xs:int" use="required"/>
+															<xs:attribute name="XPos" type="xs:int" use="required"/>
+															<xs:attribute name="YPos" type="xs:int" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AvailableSubnetsStep7">
+								<xs:annotation>
+									<xs:documentation>Beschreibt die in Step7 projektierten Subnetze</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="Subnet">
+											<xs:complexType>
+												<xs:attribute name="ID" type="xs:int" use="required">
+													<xs:annotation>
+														<xs:documentation>Topologie-Editor interner Identifier. Wird von Device referenziert</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="Name" type="xs:string" use="optional">
+													<xs:annotation>
+														<xs:documentation>Name des Subnetzes</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AvailableDeviceTypesStep7" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Speichert die Liste der verwendeten Geraetetypen</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="DeviceType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="UsedDevicesStep7" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Speichert die Geraete, die mittels Topologieermittlung in einem HwConfig/NetPro-Projekt gefunden wurden</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="Device"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AvailableDeviceTypesPassive" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Speichert die Liste der Geraetetypen, die im Projekt verwendet werden und aus dem Komponentenkatalog stammen</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="DeviceType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="UsedDevicesPassive" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Listet die Geraete auf die im Topologie-Projekt verwendet werden und aus einem Komponentenkatalog stammt</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="Device"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ConnectionList" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Liste der Verschaltungen</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="Connection">
+											<xs:annotation>
+												<xs:documentation>Speichert die Informationen zu einer Verschaltung zweiter Interfaceports.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attribute name="ID" type="xs:int" use="required">
+							<xs:annotation>
+								<xs:documentation>Fortlaufende Projekt-ID innerhalb des TopologieFiles. Wird nicht referenziert</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="ProjPath" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Speichert den Pfad in dem das TopologieXML-file gespeichert wird</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Name" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Name fuer das Projekt. Wird nicht referenziert</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="EnvID" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Environment-Identifier. Referenziert eine bestehende Step7-Projektierung</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="EnvType" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Environment-Type. Referenziert den Typ einer bestehenden Step7-Projektierung</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="NextFreeID" type="xs:long" use="required">
+				<xs:annotation>
+					<xs:documentation>Speichert die nächste freie ID für weiter Elemente im Document.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Version" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Speichert die Version des Datenformats 'TopologieFile.xsd'</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Device">
+		<xs:annotation>
+			<xs:documentation>Speichert instanzspezifische Informationen, z.B. Geraetename, IP/Mac-Adresse sowie einen Verweis auf den Geraetetyp</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="GraphLayout" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Speichert die Koordinaten des dargestellten Geraetes im im Netzgraphen (und den Status ob expandiert dargestellt)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="XPos" type="xs:int" use="required">
+							<xs:annotation>
+								<xs:documentation>X-Koordinate der linken oberen Ecke des Devices innerhalb der graphischen Ansicht</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="YPos" type="xs:int" use="required">
+							<xs:annotation>
+								<xs:documentation>Y-Koordinate der linken oberen Ecke des Devices innerhalb der graphischen Ansicht</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="IsExpanded" type="xs:boolean" use="optional" default="1">
+							<xs:annotation>
+								<xs:documentation>Speichert ob das Device waehrend der Projektspeicherung in expandierter Darstellung war oder nicht</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Selection" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Gibt an, dass das Graphikobjekt selektiert wurde (notwendig zur vollstaendigen Restauration der graphischen Ansicht). Eine Kodierung des Selektionsobjekts (Station/Baugruppe/Portnummer) ist noch festzulegen</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="Interface" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Fortlaufende ID innerhalb des Topologie-Projekts. Wird nur zur Referenzierung von Beziehungen zwischen Stationen/Baugruppen verwendet</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Name der Station/Baugruppe</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="DeviceTypeRefId" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Verweise auf die ID des DeviceTyps. Damit wird festgelegt dass die im Tag beschriebene Instanz eines bestimmten Geraetetyps ist</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="OnlineObject" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Refernece zu einen online gefundenen und zugeordneten Object</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ObjID" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Objekt-ID der Station/Baugruppe (Step7-spezifisch)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="DeviceID" type="xs:long" use="optional">
+				<xs:annotation>
+					<xs:documentation>DeviceID: Vergleichskriterium mit denen die im Topologie-Projekt befindlichen Step7-Objekte und die Geraete, bei der Lifelist-Broadcast-Abfrage gefunden werden, abgeglichen werden</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SubnetRefId" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Gibt an in welchem Subnetz das Device liegt (Referenz zu einem Eintrag in AvailableSubnetsStep7).</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="IP" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>IP-Adresse der Station/Baugruppe im Hexformat (z.B. "C0442101"). Ein Schreibweise in Dezimalformat (192.168.33.1) ist nicht erlaubt.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="MAC" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>MAC-Adresse der Station/Baugruppe</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="StationRefId" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Falls eine Baugruppe innerhalb einer Station verwendet wird, muss die ID des Devices angegeben in dem die Baugruppe steckt</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="StationPos" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Position der Baugruppe innerhalb einer Station</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="DiagHeader" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Diagnose-Header: Attribut, dass CPUs kennzeichet (CPU falls Attribut vorhanden und auf '1' gesetzt). Bei einer Diagnose muessen zuerst alle CPU-Devices abgefragt werden bevor irgendein PNIO-Devices abgefragt werden kann.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Hide" type="xs:boolean" use="optional">
+				<xs:annotation>
+					<xs:documentation>Attribut, dass das Device kennzeichnet als unsichtbar. Betrifft das Thema Ctrl/Device gleichzeitig</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="MLFB" type="xs:string" use="optional"/>
+			<xs:attribute name="SupportRTClass3" type="xs:boolean" use="optional">
+				<xs:annotation>
+					<xs:documentation>Gibt an welche RT Klasse das Device unterstuetzt.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Interface">
+		<xs:annotation>
+			<xs:documentation>Beschreibt ein einzelnes Interface in einem Geraet</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="Port">
+					<xs:annotation>
+						<xs:documentation>Beschreibt einen Port eines Geraete-Interfaces</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="ID" type="xs:long" use="required">
+							<xs:annotation>
+								<xs:documentation>Topologie-Editor interner Identifier fuer einen Port. Fortlaufende Nummer innerhalb eines DeviceTyps kann mittels PortRefId vom Device-Tag aus referenziert werden. Das verweisen ist nur notwendig, wenn die Anzahl der Ports im DeviceTyp nicht mit der Anzahl der Ports im Device uebereinstimmen (z.B. Modulare Devices mit variabler Portanzahl). Ansonsten wird die Annahme gemacht, dass die Reihenfolge der Ports im DeviceTyp die gleiche ist wie im Device</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Name" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Name des Ports</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="ObjID" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Step7-spezifische Objekt-ID des Ports. Leer falls passive Komponente</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="ObjType" type="xs:string" use="optional"/>
+						<xs:attribute name="ConnectionRefId" type="xs:int" use="optional" default="0">
+							<xs:annotation>
+								<xs:documentation>Referenzierte Connection-ID. Verschaltungen sind durch zwei Ports mit der gleichen Connection-ID erkennbar.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="WiringTypeRefId" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Referenziert eine WiringType-ID die das Medium des Ports kodiert</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="PortTypeRefId" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Erlaubt es Ports innerhalb eines DeviceTyps zu referenzieren/adressieren. Normalerweise nur noetig fuer modulare Devices (variable Portanzahl)</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="IsLockedPort" type="xs:boolean" use="optional" default="0">
+							<xs:annotation>
+								<xs:documentation>Gibt an ob der Port gesperrt ist oder nicht</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="SupportedDiagnoseProtocol" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Gibt das Protocol an falls das Geraet diagnosefaehig ist (Erlaubte Werte: leer=kein Protocol, 'DCP'=DCP faehig, 'CD7'=unterstuetzt CD7)</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="IsRingCapable" type="xs:boolean" use="optional" default="1">
+							<xs:annotation>
+								<xs:documentation>Gibt an ob dieser Port ringfaehig ist. Ein Ring ist nur erlaubt, wenn alle beteiligen Ports ringfaehig sind.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="SlotNr" type="xs:long" use="optional">
+							<xs:annotation>
+								<xs:documentation>Slotnummer des Ports</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="FOType" type="xs:long" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Fortlaufende Nummer innerhalb des Topologie-Projects. Wird momentan nicht referenziert</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="InterfaceTypeRefId" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Ermoeglicht die Referenzierung eines Interfaces eines DeviceTypes</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Name" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Falls im Komponentenkatalog verwendet: vordefinierter Interfacename</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ObjID" type="xs:int" use="optional"/>
+			<xs:attribute name="SlotNr" type="xs:long" use="optional">
+				<xs:annotation>
+					<xs:documentation>Slotnummer des Modules</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Connection">
+		<xs:annotation>
+			<xs:documentation>Speichert eine einzelne Verbindung zwischen zwei Interfaceports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all minOccurs="0">
+				<xs:element name="Comment" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Kommentierung einer Verschaltung. Kann den Leitungsnamen enthalten</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="GraphLayout" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Speichert die Positionen der manuellen Linienführung</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="UpperOffset" type="xs:int" use="optional"/>
+						<xs:attribute name="LowerOffset" type="xs:int" use="optional"/>
+						<xs:attribute name="VerticalOffset" type="xs:int" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+			<xs:attribute name="ID" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Connection-ID. Wird von je zwei Ports referenziert</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="PortToPortDelay" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Laufzeit von Port zu Port. Angabe in ganzen Nanosekunden</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="PortToPortLength" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Laenge der Verschaltung (errechbar aus Delay). Angabe in ganzen Millimetern</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

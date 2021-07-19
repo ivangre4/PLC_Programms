@@ -1,0 +1,722 @@
+@DB_TYP FMS-Typ V1.0
+@LANGUAGE ENGLISH
+#@@VERSION V1.02.6
+## [V1.01.1] Sprachanpassungen
+## [V1.02.5] Sprachanpassungen
+## [V1.02.5] ConnectionProfil: Profile #3,4,5  -> SupportedServices_R->EventNotification = FIXED_TRUE
+General     
+{	
+   	Version         				= 1
+	OrderString						= "ET200U"
+ 	VendorName            			= "SIEMENS AG"
+   	ModelNameG             			= "ET 200U DP/FMS"
+   	ModelNameE             			= "ET 200U DP/FMS"
+   	ModelNameS             			= "ET 200U DP/FMS"
+   	ModelNameI             			= "ET 200U DP/FMS"
+   	ModelNameF             			= "ET 200U DP/FMS"
+   	Revision             			= " "
+   	ProfileNumber         			= 0
+   	LogicalStatus        			= 0
+   	PhysicalStatus       			= 0
+   	ControllerType        			= "NEC V25"
+   	HardwareRelease       			= "A_._"
+   	SoftwareRelease       			= "V_._"
+   	VendorFmsStack        			= "SIEMENS AG"
+   	Comment               			= " " 
+   	FamilyG                			= "ET 200" 
+   	FamilyE                			= "ET 200" 
+   	FamilyI                			= "ET 200" 
+   	FamilyS                			= "ET 200" 
+   	FamilyF                			= "ET 200" 
+   	OrderNumber           			= "6ES5 318-8MC11"
+   	CompatibleTo          			= 3 
+   	SiemensStation        			= TRUE 
+   	SiemensVendorID       			= 6 
+   	BitmapFile            			= "ET200U.BMP" 
+}  
+
+BusSpecificCharacteristics	
+{
+	ActiveStation					= FALSE	
+	PassiveStation					= TRUE
+	Baudrate9.6   					= TRUE
+	Baudrate19.2					= TRUE
+	Baudrate93.75					= TRUE
+	Baudrate187.5					= TRUE
+	Baudrate500    					= TRUE
+	Baudrate1500					= TRUE
+	Baudrate3000					= FALSE
+	Baudrate6000					= FALSE
+	Baudrate12000					= FALSE
+}
+
+ImplementationAndSystem   
+{ 
+	PollListSap   					= 0
+	TimeOutAssociate				= 0
+	SymLenFmsKbl 					= 0
+	VfdPointerSupported				= FALSE
+	FMSFeaturesSupported   			= 0h00.00.00.00.00.00
+	FMA7FeaturesSupported   		= 0h00.00.00.00.00.00
+	MaxSap	            			= 26
+	MaxNoSap    					= 0
+	MaxNoOv    						= 0
+	MaxNoVfd    					= 0
+	MaxCr	    					= 0
+	MaxNoCrl						= 0
+	MaxNoCycleCon					= 0
+	MaxNoActiveCon					= 0
+	MaxPduLen						= 241
+	MaxOvIndex						= 0
+	MinVarIndex						= 0
+	MaxVarIndex						= 0
+	MaxParServices					= 1
+	MaxCntOutServicesCalling		= 1
+	MaxCntOutServicesCalled			= 1
+   	MaxMultiplier		    		= 1
+   	DefMultiplier		    		= 1
+   	DefLsap      		    		= 0
+   	ServiceFeaturesAnded			= FALSE
+}
+
+AdditionalCharacteristics  
+{
+   	MaxNameLen             			= 0
+   	AccessProtectSupport   			= TRUE
+   	MaxLenExtension       			= 0
+   	MaxLenExecArgument     			= 0
+}
+
+ConnectionProfile # No. 1
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR2"
+        ConnProfileNameG 			= "ET200U_KR2 (LSAP20)"
+    	ConnProfileNameE 			= "ET200U_CR2 (LSAP20)"
+        ConnProfileNameI 			= "ET200U_CR2 (LSAP20)"
+        ConnProfileNameF 			= "ET200U_CR2 (LSAP20)"
+        ConnProfileNameS 			= "ET200U_CR2 (LSAP20)"
+        LocalLSAP       			= 20                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = TRUE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSZY
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 0
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+		Read                        = TRUE
+	}
+
+}
+
+ConnectionProfile # No. 2
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR3"
+        ConnProfileNameG 			= "ET200U_KR3 (LSAP21)"
+    	ConnProfileNameE 			= "ET200U_CR3 (LSAP21)"
+        ConnProfileNameI 			= "ET200U_CR3 (LSAP21)"
+        ConnProfileNameF 			= "ET200U_CR3 (LSAP21)"
+        ConnProfileNameS 			= "ET200U_CR3 (LSAP21)"
+        LocalLSAP       			= 21                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = TRUE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSZY
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 0
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+		Write                       = TRUE
+	}
+
+}
+
+ConnectionProfile # No. 3
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR4"
+        ConnProfileNameG 			= "ET200U_KR4 (LSAP22)"
+    	ConnProfileNameE 			= "ET200U_CR4 (LSAP22)"
+        ConnProfileNameI 			= "ET200U_CR4 (LSAP22)"
+        ConnProfileNameF 			= "ET200U_CR4 (LSAP22)"
+        ConnProfileNameS 			= "ET200U_CR4 (LSAP22)"
+        LocalLSAP       			= 22                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = TRUE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSZY_SI
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 1
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 1
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 0
+	}
+ 
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 241
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 241
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 241
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		EventNotification			= FIXED_TRUE
+	}
+
+	SupportedServices_O
+	{
+		Read                        = TRUE
+	}
+
+}
+
+ConnectionProfile # No. 4
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR5"
+        ConnProfileNameG 			= "ET200U_KR5 (LSAP23)"
+    	ConnProfileNameE 			= "ET200U_CR5 (LSAP23)"
+        ConnProfileNameI 			= "ET200U_CR5 (LSAP23)"
+        ConnProfileNameF 			= "ET200U_CR5 (LSAP23)"
+        ConnProfileNameS 			= "ET200U_CR5 (LSAP23)"
+        LocalLSAP       			= 23                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = TRUE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSZY_SI
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 1
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 0
+	   	DefMaxSAC                   = 1
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 0
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 0
+	}
+ 
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 241
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 241
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 241
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		EventNotification			= FIXED_TRUE
+	}
+
+	SupportedServices_O
+	{
+		Write                       = TRUE
+	}
+
+}
+
+ConnectionProfile # No. 5
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR6"
+        ConnProfileNameG 			= "ET200U_KR6 (LSAP24)"
+    	ConnProfileNameE 			= "ET200U_CR6 (LSAP24)"
+        ConnProfileNameI 			= "ET200U_CR6 (LSAP24)"
+        ConnProfileNameF 			= "ET200U_CR6 (LSAP24)"
+        ConnProfileNameS 			= "ET200U_CR6 (LSAP24)"
+        LocalLSAP       			= 24                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = FALSE
+	   	ConnectionType_MSAZ_SI      = TRUE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSAZ_SI
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 1
+	   	MinMaxSAC                   = 1
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 1
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 1
+	   	MaxMaxRAC                   = 0
+	}
+ 
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 241
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 241
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 241
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+		EventNotification			= FIXED_TRUE
+	}
+
+	SupportedServices_O
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+	   	GetLongOD                   = TRUE
+		AcknowledgeEventNotification = TRUE
+		AlterEventConditionMonitoring= TRUE
+	}
+}
+
+ConnectionProfile # No. 6
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR7"
+        ConnProfileNameG 			= "ET200U_KR7 (LSAP25)"
+    	ConnProfileNameE 			= "ET200U_CR7 (LSAP25)"
+        ConnProfileNameI 			= "ET200U_CR7 (LSAP25)"
+        ConnProfileNameF 			= "ET200U_CR7 (LSAP25)"
+        ConnProfileNameS 			= "ET200U_CR7 (LSAP25)"
+        LocalLSAP       			= 25                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = TRUE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSAZ
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 1
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 0
+	}
+ 
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+	   	GetLongOD                   = TRUE
+	}
+}
+
+ConnectionProfile # No. 7
+{
+   	General
+   	{
+    	ConnProfileBetriebsart		= SLAVE
+        ConnOrderString 			= "ET200U_KR8"
+        ConnProfileNameG 			= "ET200U_KR8 (LSAP26)"
+    	ConnProfileNameE 			= "ET200U_CR8 (LSAP26)"
+        ConnProfileNameI 			= "ET200U_CR8 (LSAP26)"
+        ConnProfileNameF 			= "ET200U_CR8 (LSAP26)"
+        ConnProfileNameS 			= "ET200U_CR8 (LSAP26)"
+        LocalLSAP       			= 26                                   
+        RemoteLSAP      			= 255                                   
+        RemoteAddress   			= 255                                   
+	   	Userdefined          		= FALSE
+   	}
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = TRUE
+	   	ConnectionType_MSAZ_SI      = FALSE
+	  	ConnectionType_MSZY         = FALSE
+	   	ConnectionType_MSZY_SI      = FALSE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSAZ
+   		ConnectionAttribute_D       = FALSE
+   	   	ConnectionAttribute_I       = FALSE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= O
+   		ControlIntervalMin          = 3000
+	   	ControlIntervalMax          = 3000
+		ControlInterval_Default     = 3000
+	    LLIAttribute_FMS            = TRUE
+        LLIAttribute_FMA7	       	= FALSE
+	    LLIAttribute_Default        = FMS
+	    #MultiplierMin              = 0
+        #MultiplierMax              = 0
+	    #Multiplier_Default         = 0
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                  	= 0
+	   	MinMaxRCC                   = 1
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 0
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 0
+	   	MaxMaxRCC                   = 1
+	   	MaxMaxSAC                   = 0
+	   	MaxMaxRAC                   = 0
+	}
+ 
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 241
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 241
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 0
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 0
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	}
+
+	SupportedServices_O
+	{
+		Read                        = TRUE
+		Write                       = TRUE
+	   	GetLongOD                   = TRUE
+		AcknowledgeEventNotification = TRUE
+		AlterEventConditionMonitoring= TRUE
+	}
+}
+

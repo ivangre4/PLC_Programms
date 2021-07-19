@@ -1,0 +1,21 @@
+:Base S7wnfmhd.hlp
+1 Configurar enlaces FMS / Programar elinterface FMS
+2 Configurar las propiedades de enlaces FMS=qAAfaina
+2 Definir el interlocutor del enlace FMS=HIDD_FMS_ALLGEM
+2 Definir el tipo de comunicación y las direcciones=HIDD_FMS_ADDRESS
+2 Definir el tipo de comunicación=Definir_el_tipo_de_comunicación
+2 Verificar y adaptar parámetros de direcciones=Verificar_y_adaptar_parámetros_de_direcciones
+2 Definir otras propiedades de transferencia=HIDD_FMS_DETAILS
+2 Armonizar los servicios de los interlocutores FMS=HIDD_FMS_SERVICE
+2 Configurar al CP PROFIBUS como cliente FMS=UWf262dos_
+2 Filtrar variables de comunicación=HIDD_FMS_OPTIM
+2 Configurar variables de notificación por el lado de recepción (FMS-Client)=HIDD_FMS_VARIABLE_MELDEN
+2 Ficha "Propiedades - Variable"=HIDD_FMS_VARIABLE_MELDEN_EIGENSCHAFTEN
+2 Seleccionar destino de datos=Seleccionar_destino_de_datos
+2 Comprobar la asignación de variables de notificación a variables de comunicación=HIDD_PRUEFEN
+2 Demostrar derechos de acceso para variables del servidor=HIDD_FMS_PASSWORD
+2 Selección de vías en caso de reparto de cargas=HIDD_WEGEWAHL
+2 Cambiar de interlocutor=IDD_CHANGE_REMOTE
+2 Comprobar enlaces FMS=HIDD_FMS_UEBER
+2 Informaciones sobre estado=Statusinformationen
+2 Ficha "Propiedades del OPC"=HIDD_OPC

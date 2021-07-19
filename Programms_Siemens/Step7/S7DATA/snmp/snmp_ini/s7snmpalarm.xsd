@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Dietmar Kern (Siemens AG) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="SNMP_Alarms">
+		<xs:annotation>
+			<xs:documentation>SNMP alarm mapping configuration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DeviceType" type="TypeDeviceType" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The list of SNMP alarm device types.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="AlarmText" type="TypeAlarmText" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The multilingual alarm message texts.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="DefaultDeviceType" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Name of the default device type.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="TypeTextMax64">
+		<xs:annotation>
+			<xs:documentation>Text which is up to MSG_MAX_TEXTLEN (64) characters long.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeTextMax127">
+		<xs:annotation>
+			<xs:documentation>Text which is up to MAX_DM_VAR_NAME - 1 (127) characters long.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="127"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeTextMax254">
+		<xs:annotation>
+			<xs:documentation>Text which is up to MSG_MAX_TB_CONTENT - 1 (254) characters long.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="254"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeTextMax255">
+		<xs:annotation>
+			<xs:documentation>Text which is up to MSG_MAX_TB_CONTENT (255) characters long.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeLanguage">
+		<xs:annotation>
+			<xs:documentation>Enumeration of windows main language identifiers.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:enumeration value="4"/>                                  ;Not used in PCS7  
+			<xs:enumeration value="7"/>                               	;German
+			<xs:enumeration value="9"/>  								;English
+			<xs:enumeration value="10"/>								;Spanish
+			<xs:enumeration value="12"/>								;French
+			<xs:enumeration value="16"/>								;Italian
+			<xs:enumeration value="17"/>								;Not used in PCS7  
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TypeBitVar">
+		<xs:annotation>
+			<xs:documentation>A variable with a significant bit. The bit with the specified bitnumber will trigger events on change.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="Name" type="TypeTextMax127">
+						<xs:annotation>
+							<xs:documentation>The variable name.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Bit" use="optional" default="0">
+					<xs:annotation>
+						<xs:documentation>The significant bit.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+							<xs:annotation>
+								<xs:documentation>WORD.</xs:documentation>
+							</xs:annotation>
+							<xs:minInclusive value="0"/>
+							<xs:maxExclusive value="65536"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeAction">
+		<xs:annotation>
+			<xs:documentation>Configuration data of actions for this message.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="Name" type="TypeTextMax255" default="OpenPicture" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The function name of this action.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Param" type="TypeTextMax255" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The parameters for the function call.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Type" use="optional" default="0">
+					<xs:annotation>
+						<xs:documentation>Type of action.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+							<xs:annotation>
+								<xs:documentation>DWORD.</xs:documentation>
+							</xs:annotation>
+							<xs:minInclusive value="0"/>
+							<xs:maxExclusive value="4294967296"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeAlarmMessage">
+		<xs:annotation>
+			<xs:documentation>An alarm message configuration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="InfoText" type="TypeTextMax254" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A help text.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MsgVar" type="TypeBitVar">
+						<xs:annotation>
+							<xs:documentation>Triggers alarms.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="QuitVar" type="TypeBitVar" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Quit variable.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StateVar" type="TypeBitVar" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>State variable.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ProcessValue" type="TypeTextMax127" minOccurs="0" maxOccurs="10">
+						<xs:annotation>
+							<xs:documentation>Process values. Needed if the alarm text is formatted to show the values of tags at runtime.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="GroupName" type="TypeTextMax64" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Name of alarm group.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NormDll" type="TypeTextMax64" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Filename of norm dll.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Action" type="TypeAction" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The action for an SNMP message (normally: loop in alarm).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextOrigin" type="TypeTextRef">
+						<xs:annotation>
+							<xs:documentation>Alarm source: the SNMP device name.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextArea" type="TypeTextRef" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Alarm area: diagnosis.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextEvent" type="TypeTextRef" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Alarm event text.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextCharge" type="TypeTextRef" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Charge text.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextOperation" type="TypeTextRef" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Operation text.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TextFree" type="TypeTextRef" minOccurs="0" maxOccurs="5">
+						<xs:annotation>
+							<xs:documentation>Arbitrary additional texts.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Priority" use="optional" default="0">
+					<xs:annotation>
+						<xs:documentation>Alarm priority. 0 is lowest, 16 ist highest priority.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="16"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Class" use="optional" default="NO_ALARM_CLASS">
+					<xs:annotation>
+						<xs:documentation>Alarm message class.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NO_ALARM_CLASS"/>
+							<xs:enumeration value="ALARM"/>
+							<xs:enumeration value="WARNING"/>
+							<xs:enumeration value="TOLERANCE"/>
+							<xs:enumeration value="PCS1_PLC"/>
+							<xs:enumeration value="PCS2_OS"/>
+							<xs:enumeration value="PCS3_MAINTANCE"/>
+							<xs:enumeration value="PROCESSMESSAGE"/>
+							<xs:enumeration value="PROCESSMESSAGE2"/>
+							<xs:enumeration value="OPARATORINPUTREQUEST"/>
+							<xs:enumeration value="OPARATIONMESSAGE"/>
+							<xs:enumeration value="STATUS"/>
+							<xs:enumeration value="DEFAULT1"/>
+							<xs:enumeration value="DEFAULT2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Type" use="optional" default="NO_ALARM_TYPE">
+					<xs:annotation>
+						<xs:documentation>Alarm message type.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NO_ALARM_TYPE"/>
+							<xs:enumeration value="ALARMHIGH"/>
+							<xs:enumeration value="ALARMLOW"/>
+							<xs:enumeration value="WARNINGHIGH"/>
+							<xs:enumeration value="WARNINGLOW"/>
+							<xs:enumeration value="TOLERANCEHIGH"/>
+							<xs:enumeration value="TOLERANCELOW"/>
+							<xs:enumeration value="PCS_TROUBLE"/>
+							<xs:enumeration value="PCS_ERROR"/>
+							<xs:enumeration value="PCS_MAINTANCE"/>
+							<xs:enumeration value="PROCESSMESSAGE"/>
+							<xs:enumeration value="OPARATORINPUTREQUEST"/>
+							<xs:enumeration value="OPARATIONMESSAGE"/>
+							<xs:enumeration value="STATUS_AS"/>
+							<xs:enumeration value="STATUS_OS"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="StatusHorn" type="xs:boolean" use="optional" default="true">
+					<xs:annotation>
+						<xs:documentation>If true then message activates horn.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusArchive" type="xs:boolean" use="optional" default="true">
+					<xs:annotation>
+						<xs:documentation>If true then message will be stored in an archive.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusProtocol" type="xs:boolean" use="optional" default="true">
+					<xs:annotation>
+						<xs:documentation>If true then message will be included in a report.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusAPFunc" type="xs:boolean" use="optional" default="false">
+					<xs:annotation>
+						<xs:documentation>If true then message will control a global AP function.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusVarFlank" type="xs:boolean" use="optional" default="false">
+					<xs:annotation>
+						<xs:documentation>If true then message will be created on a negative edge of the alarm tag.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusSQuit" type="xs:boolean" use="optional" default="false">
+					<xs:annotation>
+						<xs:documentation>If true then message will require individual acknowledgement.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StatusLocked" type="xs:boolean" use="optional" default="false">
+					<xs:annotation>
+						<xs:documentation>If true then message be locked during startup.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeTextRef">
+		<xs:annotation>
+			<xs:documentation>A reference to an alarm text.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:attribute name="TextRef" type="xs:positiveInteger">
+					<xs:annotation>
+						<xs:documentation>The id of the alarm text.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeAlarmText" mixed="true">
+		<xs:annotation>
+			<xs:documentation>A multilingual alarm text. Contains zero or more localized alarm texts.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="true">
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="LocalizedText" type="TypeLocalizedText" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The list of localized texts.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Id" type="xs:ID" use="required">
+					<xs:annotation>
+						<xs:documentation>The id of the message text (unique).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeLocalizedText" mixed="true">
+		<xs:annotation>
+			<xs:documentation>A localized alarm text.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="true">
+			<xs:restriction base="xs:anyType">
+				<xs:attribute name="LanguageId" type="TypeLanguage" use="required">
+					<xs:annotation>
+						<xs:documentation>The language id as a windows main language identifier.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TypeDeviceType">
+		<xs:annotation>
+			<xs:documentation>A device type configuration. Contains zero or more alarm message configuration as well as the multilingual alarm texts for this device type.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AlarmMessage" type="TypeAlarmMessage" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The alarm message templates for this device type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>The device name (unique).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

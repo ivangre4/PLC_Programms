@@ -1,0 +1,484 @@
+;====================================================
+;
+;GSD-Datei fuer Produkte der SIPART-DR Gruppe
+;SIEMENS AG, A&D PA 13
+;
+;Stand: 27.10.98 FR + 02.03.99 SX
+;        27.02.02  V 3.0
+;
+;====================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+; <Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=1 "PNU 10 (PZD01)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=2 "PNU 11 (PZD02)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=3 "PNU 12 (PZD03)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=4 "PNU 13 (PZD04)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=5 "PNU 14 (PZD05)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=6 "PNU 15 (PZD06)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=7 "PNU 16 (PZD07)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=8 "PNU 17 (PZD08)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=9 "PNU 18 (PZD09)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=10 "PNU 19 (PZD10)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=11 "PNU 20 (PZD11)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=12 "PNU 21 (PZD12)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=13 "PNU 22 (PZD13)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=14 "PNU 23 (PZD14)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=15 "PNU 24 (PZD15)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=16 "PNU 25 (PZD16)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=17 "PNU 26 (PZD17)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=18 "PNU 27 (PZD18)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=19 "PNU 28 (PZD19)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=20 "PNU 29 (PZD20)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=21 "PNU 30 (PZD21)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=22 "PNU 31 (PZD22)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=23 "PNU 32 (PZD23)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=24 "PNU 33 (PZD24)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=25 "PNU 34 (PZD25)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=26 "PNU 35 (PZD26)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=27 "PNU 36 (PZD27)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=28 "PNU 37 (PZD28)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=29 "PNU 38 (PZD29)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=30 "PNU 39 (PZD30)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=31 "PNU 40 (PZD31)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+ExtUserPrmData=32 "PNU 41 (PZD32)"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "Regolatore di processo SIPART"
+Vendor_Name="SIEMENS AG"
+Model_Name="SIPART DR**"
+Revision="V 3.0"
+Ident_Number=0x00A7
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="Version 1"
+Software_Release="Version 10"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Repeater_Ctrl_Sig = 2
+Bitmap_Device="SIPART_N"
+Bitmap_SF="SIPART_S"
+; Slave-Specification:
+OrderNumber="6DR2***-....."
+Auto_Baud_supp=1
+Min_Slave_Intervall=80
+Max_Diag_Data_Len=6
+Modul_Offset=0
+Slave_Family=5@CONTROLLER
+Max_Module=4
+Max_Input_Len=72
+Max_Output_Len=8
+Max_Data_Len=80
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=64
+User_Prm_Data = 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(0)=1
+Ext_User_Prm_Data_Ref(2)=2
+Ext_User_Prm_Data_Ref(4)=3
+Ext_User_Prm_Data_Ref(6)=4
+Ext_User_Prm_Data_Ref(8)=5
+Ext_User_Prm_Data_Ref(10)=6
+Ext_User_Prm_Data_Ref(12)=7
+Ext_User_Prm_Data_Ref(14)=8
+Ext_User_Prm_Data_Ref(16)=9
+Ext_User_Prm_Data_Ref(18)=10
+Ext_User_Prm_Data_Ref(20)=11
+Ext_User_Prm_Data_Ref(22)=12
+Ext_User_Prm_Data_Ref(24)=13
+Ext_User_Prm_Data_Ref(26)=14
+Ext_User_Prm_Data_Ref(28)=15
+Ext_User_Prm_Data_Ref(30)=16
+Ext_User_Prm_Data_Ref(32)=17
+Ext_User_Prm_Data_Ref(34)=18
+Ext_User_Prm_Data_Ref(36)=19
+Ext_User_Prm_Data_Ref(38)=20
+Ext_User_Prm_Data_Ref(40)=21
+Ext_User_Prm_Data_Ref(42)=22
+Ext_User_Prm_Data_Ref(44)=23
+Ext_User_Prm_Data_Ref(46)=24
+Ext_User_Prm_Data_Ref(48)=25
+Ext_User_Prm_Data_Ref(50)=26
+Ext_User_Prm_Data_Ref(52)=27
+Ext_User_Prm_Data_Ref(54)=28
+Ext_User_Prm_Data_Ref(56)=29
+Ext_User_Prm_Data_Ref(58)=30
+Ext_User_Prm_Data_Ref(60)=31
+Ext_User_Prm_Data_Ref(62)=32
+; <Module-Definition-List>
+Module="          / 01 PZD" 0x00,0x50,0x00
+1
+EndModule
+Module="          / 02 PZDs" 0x00,0x51,0x00
+2
+EndModule
+Module="          / 03 PZDs" 0x00,0x52,0x00
+3
+EndModule
+Module="          / 04 PZDs" 0x00,0x53,0x00
+4
+EndModule
+Module="          / 05 PZDs" 0x00,0x54,0x00
+5
+EndModule
+Module="          / 06 PZDs" 0x00,0x55,0x00
+6
+EndModule
+Module="          / 07 PZDs" 0x00,0x56,0x00
+7
+EndModule
+Module="          / 08 PZDs" 0x00,0x57,0x00
+8
+EndModule
+Module="          / 09 PZDs" 0x00,0x58,0x00
+9
+EndModule
+Module="          / 10 PZDs" 0x00,0x59,0x00
+10
+EndModule
+Module="          / 11 PZDs" 0x00,0x5A,0x00
+11
+EndModule
+Module="          / 12 PZDs" 0x00,0x5B,0x00
+12
+EndModule
+Module="          / 13 PZDs" 0x00,0x5C,0x00
+13
+EndModule
+Module="          / 14 PZDs" 0x00,0x5D,0x00
+14
+EndModule
+Module="          / 15 PZDs" 0x00,0x5E,0x00
+15
+EndModule
+Module="          / 16 PZDs" 0x00,0x5F,0x00
+16
+EndModule
+Module="          / 17 PZDs" 0x00,0x5F,0x50
+17
+EndModule
+Module="          / 18 PZDs" 0x00,0x5F,0x51
+18
+EndModule
+Module="          / 19 PZDs" 0x00,0x5F,0x52
+19
+EndModule
+Module="          / 20 PZDs" 0x00,0x5F,0x53
+20
+EndModule
+Module="          / 21 PZDs" 0x00,0x5F,0x54
+21
+EndModule
+Module="          / 22 PZDs" 0x00,0x5F,0x55
+22
+EndModule
+Module="          / 23 PZDs" 0x00,0x5F,0x56
+23
+EndModule
+Module="          / 24 PZDs" 0x00,0x5F,0x57
+24
+EndModule
+Module="          / 25 PZDs" 0x00,0x5F,0x58
+25
+EndModule
+Module="          / 26 PZDs" 0x00,0x5F,0x59
+26
+EndModule
+Module="          / 27 PZDs" 0x00,0x5F,0x5A
+27
+EndModule
+Module="          / 28 PZDs" 0x00,0x5F,0x5B
+28
+EndModule
+Module="          / 29 PZDs" 0x00,0x5F,0x5C
+29
+EndModule
+Module="          / 30 PZDs" 0x00,0x5F,0x5D
+30
+EndModule
+Module="          / 31 PZDs" 0x00,0x5F,0x5E
+31
+EndModule
+Module="          / 32 PZDs" 0x00,0x5F,0x5F
+32
+EndModule
+Module=" AKZ      / 00 PZDs" 0xF3,0x00,0x00
+33
+EndModule
+Module=" AKZ      / 01 PZDs" 0xF3,0x50,0x00
+34
+EndModule
+Module=" AKZ      / 02 PZDs" 0xF3,0x51,0x00
+35
+EndModule
+Module=" AKZ      / 03 PZDs" 0xF3,0x52,0x00
+36
+EndModule
+Module=" AKZ      / 04 PZDs" 0xF3,0x53,0x00
+37
+EndModule
+Module=" AKZ      / 05 PZDs" 0xF3,0x54,0x00
+38
+EndModule
+Module=" AKZ      / 06 PZDs" 0xF3,0x55,0x00
+39
+EndModule
+Module=" AKZ      / 07 PZDs" 0xF3,0x56,0x00
+40
+EndModule
+Module=" AKZ      / 08 PZDs" 0xF3,0x57,0x00
+41
+EndModule
+Module=" AKZ      / 09 PZDs" 0xF3,0x58,0x00
+42
+EndModule
+Module=" AKZ      / 10 PZDs" 0xF3,0x59,0x00
+43
+EndModule
+Module=" AKZ      / 11 PZDs" 0xF3,0x5A,0x00
+44
+EndModule
+Module=" AKZ      / 12 PZDs" 0xF3,0x5B,0x00
+45
+EndModule
+Module=" AKZ      / 13 PZDs" 0xF3,0x5C,0x00
+46
+EndModule
+Module=" AKZ      / 14 PZDs" 0xF3,0x5D,0x00
+47
+EndModule
+Module=" AKZ      / 15 PZDs" 0xF3,0x5E,0x00
+48
+EndModule
+Module=" AKZ      / 16 PZDs" 0xF3,0x5F,0x00
+49
+EndModule
+Module=" AKZ      / 17 PZDs" 0xF3,0x5F,0x50
+50
+EndModule
+Module=" AKZ      / 18 PZDs" 0xF3,0x5F,0x51
+51
+EndModule
+Module=" AKZ      / 19 PZDs" 0xF3,0x5F,0x52
+52
+EndModule
+Module=" AKZ      / 20 PZDs" 0xF3,0x5F,0x53
+53
+EndModule
+Module=" AKZ      / 21 PZDs" 0xF3,0x5F,0x54
+54
+EndModule
+Module=" AKZ      / 22 PZDs" 0xF3,0x5F,0x55
+55
+EndModule
+Module=" AKZ      / 23 PZDs" 0xF3,0x5F,0x56
+56
+EndModule
+Module=" AKZ      / 24 PZDs" 0xF3,0x5F,0x57
+57
+EndModule
+Module=" AKZ      / 25 PZDs" 0xF3,0x5F,0x58
+58
+EndModule
+Module=" AKZ      / 26 PZDs" 0xF3,0x5F,0x59
+59
+EndModule
+Module=" AKZ      / 27 PZDs" 0xF3,0x5F,0x5A
+60
+EndModule
+Module=" AKZ      / 28 PZDs" 0xF3,0x5F,0x5B
+61
+EndModule
+Module=" AKZ      / 29 PZDs" 0xF3,0x5F,0x5C
+62
+EndModule
+Module=" AKZ      / 30 PZDs" 0xF3,0x5F,0x5D
+63
+EndModule
+Module=" AKZ      / 31 PZDs" 0xF3,0x5F,0x5E
+64
+EndModule
+Module=" AKZ      / 32 PZDs" 0xF3,0x5F,0x5F
+65
+EndModule
+Module=" AKZ (S5) / 00 PZDs" 0xF3,0x00,0x00,0x00
+66
+EndModule
+Module=" AKZ (S5) / 01 PZDs" 0xF3,0x50,0x00,0x00
+67
+EndModule
+Module=" AKZ (S5) / 02 PZDs" 0xF3,0x51,0x00,0x00
+68
+EndModule
+Module=" AKZ (S5) / 03 PZDs" 0xF3,0x52,0x00,0x00
+69
+EndModule
+Module=" AKZ (S5) / 04 PZDs" 0xF3,0x53,0x00,0x00
+70
+EndModule
+Module=" AKZ (S5) / 05 PZDs" 0xF3,0x54,0x00,0x00
+71
+EndModule
+Module=" AKZ (S5) / 06 PZDs" 0xF3,0x55,0x00,0x00
+72
+EndModule
+Module=" AKZ (S5) / 07 PZDs" 0xF3,0x56,0x00,0x00
+73
+EndModule
+Module=" AKZ (S5) / 08 PZDs" 0xF3,0x57,0x00,0x00
+74
+EndModule
+Module=" AKZ (S5) / 09 PZDs" 0xF3,0x58,0x00,0x00
+75
+EndModule
+Module=" AKZ (S5) / 10 PZDs" 0xF3,0x59,0x00,0x00
+76
+EndModule
+Module=" AKZ (S5) / 11 PZDs" 0xF3,0x5A,0x00,0x00
+77
+EndModule
+Module=" AKZ (S5) / 12 PZDs" 0xF3,0x5B,0x00,0x00
+78
+EndModule
+Module=" AKZ (S5) / 13 PZDs" 0xF3,0x5C,0x00,0x00
+79
+EndModule
+Module=" AKZ (S5) / 14 PZDs" 0xF3,0x5D,0x00,0x00
+80
+EndModule
+Module=" AKZ (S5) / 15 PZDs" 0xF3,0x5E,0x00,0x00
+81
+EndModule
+Module=" AKZ (S5) / 16 PZDs" 0xF3,0x5F,0x00,0x00
+82
+EndModule
+Module=" AKZ (S5) / 17 PZDs" 0xF3,0x5F,0x50,0x00
+83
+EndModule
+Module=" AKZ (S5) / 18 PZDs" 0xF3,0x5F,0x51,0x00
+84
+EndModule
+Module=" AKZ (S5) / 19 PZDs" 0xF3,0x5F,0x52,0x00
+85
+EndModule
+Module=" AKZ (S5) / 20 PZDs" 0xF3,0x5F,0x53,0x00
+86
+EndModule
+Module=" AKZ (S5) / 21 PZDs" 0xF3,0x5F,0x54,0x00
+87
+EndModule
+Module=" AKZ (S5) / 22 PZDs" 0xF3,0x5F,0x55,0x00
+88
+EndModule
+Module=" AKZ (S5) / 23 PZDs" 0xF3,0x5F,0x56,0x00
+89
+EndModule
+Module=" AKZ (S5) / 24 PZDs" 0xF3,0x5F,0x57,0x00
+90
+EndModule
+Module=" AKZ (S5) / 25 PZDs" 0xF3,0x5F,0x58,0x00
+91
+EndModule
+Module=" AKZ (S5) / 26 PZDs" 0xF3,0x5F,0x59,0x00
+92
+EndModule
+Module=" AKZ (S5) / 27 PZDs" 0xF3,0x5F,0x5A,0x00
+93
+EndModule
+Module=" AKZ (S5) / 28 PZDs" 0xF3,0x5F,0x5B,0x00
+94
+EndModule
+Module=" AKZ (S5) / 29 PZDs" 0xF3,0x5F,0x5C,0x00
+95
+EndModule
+Module=" AKZ (S5) / 30 PZDs" 0xF3,0x5F,0x5D,0x00
+96
+EndModule
+Module=" AKZ (S5) / 31 PZDs" 0xF3,0x5F,0x5E,0x00
+97
+EndModule
+Module=" AKZ (S5) / 32 PZDs" 0xF3,0x5F,0x5F,0x00
+98
+EndModule

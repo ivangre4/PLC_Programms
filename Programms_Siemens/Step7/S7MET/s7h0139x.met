@@ -1,0 +1,447 @@
+; ========================================================================================
+; PROFINET IO
+;	|_ I/O
+; 	    |_ ET200S
+;	        |_ IM151-3BA50 HIGH SPEED
+; ========================================================================================
+
+; ========================================================================================
+; ---------------------- Objekt IM151-3BA50-0AB0 PN HIGH SPEED Device
+[_S7H_HSP_FAST_IO_ET200S_DEVICE_151_3BA50_CT]
+basetype=_S7H_HSP_151_3BA20_V40_DEVICE_CT
+CatalogParent=2363841
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+HWCNFX_FOR_HWU=5.4.2.0
+HWCNFX_VER=5.4.2.0|0
+AutoCreatedHead=2364120,1,FIXED
+IS_PARAMETRIZEABLE=1
+IsCatEntry=1
+MLFB=6ES7 151-3BA50-0AB0
+ObjType=2364119
+prefix=OM
+server=s7h0139x.dll
+PROGID=S7h0139x.Coupler.1
+PN_VENDOR_ID=0x002A
+PN_DEVICE_ID=0x0301
+IRT_ISOCHRONE_MODE_SUPPORTED=1
+SHORTNAME=IM151-3 PN HS
+paramDescr=
+FIRST_VISIBLE_CHILD_NO=1
+; 1 Kopfbaugruppe + 32 Steckplätze für IO-Bgr
+MAX_NUM_OF_CHILDS=33
+IUA_SUPPORT=1
+IUM_SUPPORT=1
+; FW-Download in HWK freischalten
+FW_DOWNLOAD_CAPABLE=1
+; "FW nach Laden aktivieren" freischalten
+FW_DOWNLOAD_ASK4POST_RESET=1
+; "FW nach Laden aktivieren" anwählen
+FW_DOWNLOAD_POST_RESET_DEFAULT=1
+; FW-Version
+FW_VERSION=V1.0
+; FAST-IO-Eigenschaft für Lauther
+FAST_IO_CAPABLE=1
+
+; neue Katalogeinträge
+nKatChilds=1
+KatChild1=2364143
+
+IRT_SCHEMA_2=1
+PN_IRTTOP_DEVICE_WITH_PROFIBUS_MODULES=1
+
+; T_DC_BASE * 31.25; kleinstes Sendetakt-Raster 125 µs
+IRT_T_DC_BASE=4
+; T_DC_MIN * T_DC_BASE * 31.25; minimum 125 µs
+IRT_T_DC_MIN=1
+; T_DC_MAX * T_DC_BASE * 31.25; maximal 2 ms
+IRT_T_DC_MAX=16
+; T_IO_BASE * 1 ns = 1000 * 1 ns = 1 µs; Ti/To-Raster
+IRT_T_IO_BASE=1000
+IRT_T_IO_INPUT_MIN=0
+IRT_T_IO_OUTPUT_MIN=0
+
+GSDML_VENDOR_NAME=SIEMENS
+GSDML_DEVICE_NAME=ET200S
+
+; ========================================================================================
+; ---------------------- Objekt Kopfbaugruppe für IM151-3 PN HS
+[_S7H_HSP_FAST_IO_ET200S_ETER_151_3BA50_CT]
+basetype=_S7H_HSP_IO_ET200S_ETER_151_3BA20_V40_CT
+server=s7h0139x.dll
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+HWCNFX_FOR_HWU=5.4.2.0
+HWCNFX_VER=5.4.2.0|0
+MLFB=6ES7 151-3BA50-0AB0
+IS_PARAMETRIZEABLE=1
+ObjType=2364120
+
+; 256 Byte inkl. aller Nutzdatenbegleiter; Frame-Größe !!!
+PN_MAX_DATA_LEN=512
+PN_MAX_INPUT_LEN=256
+PN_MAX_OUTPUT_LEN=256
+
+; 180 Byte reine E/A ohne Nutzdatenbegleitern !!!
+PN_MAX_USED_DATA_LEN=360
+PN_MAX_USED_INPUT_LEN=180
+PN_MAX_USED_OUTPUT_LEN=180
+
+PN_MODULE_IDENTNUMBER=900
+PN_OBJECTUUID_LOCAL_INDEX=1
+prefix=OM
+CountAutoCreatedChilds=1
+AutoCreatedChild1=2364141, 1, FIXED
+IRT_SUBSLOT=1
+IRT_ISOCHRONE_MODE_SUPPORTED=0
+IRT_ISOCHRONE_MODE_REQUIRED=0
+PN_API=0
+PN_SUPP_REDUCTIONS=1,2,4,8,16,32,64,128,256,512
+PN_SUPP_SENDCLOCKS=32
+PN_IS_IOXS_REQUIRED=1
+PN_SUBMODULE_IDENTNUMBER=0
+VENDOR_NAME=Siemens AG
+DEVICE_TYPE=SINAMICS
+; minimale Aktualisierungszeit (250µs)
+PN_MIN_DEVICE_INT=8
+CAPABLE_RESOFF=19005645
+RESOFF=19005642
+PN_HW_RELEASE=V1.0
+PN_SW_RELEASE=V1.0
+SHORTNAME=IM151-3 PN HS
+; FW-Download in HWK freischalten
+FW_DOWNLOAD_CAPABLE=1
+; "FW nach Laden aktivieren" freischalten
+FW_DOWNLOAD_ASK4POST_RESET=1
+; "FW nach Laden aktivieren" anwählen
+FW_DOWNLOAD_POST_RESET_DEFAULT=1
+IRT_ISOCHRONE_MODE_SUPPORTED=1
+
+PN_MODULE_IOPS=1
+PN_MODULE_IOCS=1
+
+; ----------------------------- Interface für Kopf
+[_S7H_HSP_FAST_IO_ET200S_INTERFACE_151_3BA50_CT]
+basetype=_S7H_HSP_151_3BA20_V40_PNIO_SUBMODULE_AT
+basetype=_S7H_IRT_SYNCH_MASTER_AT
+ObjType=2364141
+ADDRESS_RANGE_CODE=
+CountAutoCreatedPorts=2
+AutoCreatedPort0=2364142
+AutoCreatedPort1=2364142
+BUS_MASTER=0
+CAPABLE_ALARM=1
+CAPABLE_DIAG=1
+CAPABLE_OBK=0
+CAPABLE_PBK=0
+CAPABLE_PTP=0
+CatalogParent=
+COUNT_INPUT_CHANNELS_ANALOG=0
+COUNT_INPUT_CHANNELS_DIGITAL=0
+COUNT_OUTPUT_CHANNELS_ANALOG=0
+COUNT_OUTPUT_CHANNELS_DIGITAL=0
+CPU_ZUORDNUNG=1
+DATA_CHECK_ARWB=0
+FIRST_VISIBLE_CHILD_NO=0
+GD_UF0_CAPABLE=0
+GLOBAL_DATA_CAPABLE=0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+HWCNFX_FOR_HWU=5.4.2.0
+HWCNFX_VER=5.4.2.0|0
+ICON_TYPE=0
+IN_ADDRESS_RANGE=0
+IO_TYPE=1
+IRT_CYCLE_GROUP_MAX=1
+IRT_ISOCHRONE_MODE_SUPPORTED=1
+IRT_MAX_LOCAL_JITTER=50
+IRT_MAX_NO_IR_FRAME_DATA=400
+IRT_NRT_MIN=50
+IRT_NRT_TIME_MIN=125000
+IRT_PLL_WINDOW=1000
+IRT_PTCP_TIMEOUT_FACTOR=5
+IRT_REDUCTION_RATIO_DEFAULT=2
+IRT_REDUCTION_RATIO_MAX=16
+IRT_REDUNDANCY_SUPPORTED=1
+IRT_SENDCLOCK_FACTOR_DEFAULT=32
+IRT_SUBSLOT=32768
+IRT_SUPP_REDUCTION_RATIOS=1|2|4|8|16
+IRT_SUPP_SENDCLOCKS=8|12|16|20|24|28|32|36|40|44|48|52|56|60|64
+; IRTtop
+IRT_SUPPORTED_RT_CLASS=3
+; nur IRTtop
+IRT_SUPPORTED_RT_CLASSES=4
+IRT_SWITCH_BRIDGING_DELAY=2720
+IRT_SYNC_ABILITY=3
+IRT_USE_SPECIAL_SDB_GENERATION=0
+IS_DP_MASTER=0
+IS_PARAMETRIZEABLE=0
+KBUS=0
+LOCAL_SEGMENT_CAPABLE=0
+MAX_CONN_CNT=0
+MAX_COUNT_RACKS=4
+MAX_NUM_OF_CHILDS=0
+MODULE_TYPE=
+nKatChilds=0
+NO_OF_INPUT_CR=1
+NO_OF_MCAST_CONS_CR=0
+NO_OF_MCAST_PROV_CR=1
+NO_OF_OUTPUT_CR=1
+NUM_OF_CHILDS_FIXED=0
+ONLINE_FUNCTIONS=0x3FFF
+OUT_ADDRESS_RANGE=0
+PHYSICAL_WIDTH=1
+PLUG_CLASS=
+PN_IMPLEMENTATION_TYPE=ERTEC200
+PN_SUBMODULE_IDENTNUMBER=1
+POSITION_BUS_CONNECTION=1
+prefix=OM
+REGISTER_ADR_IMPORT_VERB=
+SDB_CARRIER=0
+SDB_CARRIER_LIST=0|100
+SDB_CAUSED_LIST=
+server=s7h0139x.dll
+SIGNAL_TYPE=0
+SLAVE_MODULE_GROUP=0x00000001
+SLOT_LABEL=X1
+SHORTNAME=IM151-3 PN HS
+SYSTEM_TYPE=
+WIDTH=1
+; S7H_PROVIDER_2_CONSUMER_RT und S7H_CONSUMER_2_PROVIDER_RT
+relation=1315895,_S7H_IO_SUBMODULE_AT[1315896]
+relation=1315895,_S7H_IO_NORM_MODULE_AT[1315896]
+
+SUPPORT_SYNC_BOUNDARY=1
+
+; =================================================================================
+; ----------------------------- Port
+[_S7H_HSP_FAST_IO_ET200S_PORT_SUBMODUL_151_3BA50_CT]
+basetype=_S7H_HSP_151_3BA20_V40_PNIO_SUBMODULE_AT
+basetype=_S7H_PORT_AT
+ObjType=2364142
+prefix=OM
+server=s7h0139x.dll
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+;SLOT_LABEL=X1 P1
+;IRT_SUBSLOT=32769
+IRT_PORT_RX_DELAY=350
+IRT_PORT_TX_DELAY=158
+IRT_MAU_TYPES=
+SUPPRESS_DEFAULT_MAUTYPE=1
+SHORTNAME=Port 1
+PN_SUBMODULE_IDENTNUMBER=1
+LINK_STATE_DIAG_CAPABLE=1
+; Option "Port sperren"
+PORT_SUPPORT_DEACTIVATE=1
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Powermodule
+[_S7H_HSP_FAST_IO_PM_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_PM_AT
+abstract=true
+ObjType=2364143
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter PM
+nKatChilds=2
+KatChild1=2363864
+KatChild2=2363423
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für DI
+[_S7H_HSP_FAST_IO_DI_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_DI_AT
+abstract=true
+ObjType=2364144
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter DI
+nKatChilds=1
+KatChild1=2363790
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für DO
+[_S7H_HSP_FAST_IO_DO_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_DO_AT
+abstract=true
+ObjType=2364145
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter DO
+nKatChilds=1
+KatChild1=2366960
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für AI
+[_S7H_HSP_FAST_IO_AI_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_AI_AT
+abstract=true
+ObjType=2364146
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter AI
+nKatChilds=1
+KatChild1=2366944
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für AO
+[_S7H_HSP_FAST_IO_AO_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_AO_AT
+abstract=true
+ObjType=2364147
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter AO
+nKatChilds=1
+KatChild1=2366945
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für CP
+[_S7H_HSP_FAST_IO_CP_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_SI_AT
+abstract=true
+ObjType=2364148
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM
+[_S7H_HSP_FAST_IO_FM_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_FM_AT
+abstract=true
+ObjType=2364151
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+; Baugruppen unter FM
+nKatChilds=2
+KatChild1=2366958
+KatChild2=2366959
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Frequenzumrichter
+[_S7H_HSP_FAST_IO_FU_KAT_AT]
+basetype=_S7H_HSP_6ES7_ET200S_KAT_FU_AT
+abstract=true
+ObjType=2364152
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Sondermodule
+[_S7H_HSP_FAST_IO_SM_KAT_AT]
+basetype=_S7H_HSP_KAT_ET200S_SM_AT
+abstract=true
+ObjType=2364149
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter
+[_S7H_HSP_FAST_IO_MS_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_AT
+abstract=true
+ObjType=2364150
+CatalogParent=2364119
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter >> Direktstarter
+[_S7H_HSP_FAST_IO_MS_DS_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_DS_AT
+abstract=true
+ObjType=2364153
+CatalogParent=2364150
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter >> Direktsanftstarter
+[_S7H_HSP_FAST_IO_MS_DSS_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_DSS_AT
+abstract=true
+ObjType=2364154
+CatalogParent=2364150
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter >> Reversierstarter
+[_S7H_HSP_FAST_IO_MS_RS_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_RS_AT
+abstract=true
+ObjType=2364155
+CatalogParent=2364150
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter >> Erweiterungsmodule
+[_S7H_HSP_FAST_IO_MS_EM_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_EM_AT
+abstract=true
+ObjType=2364156
+CatalogParent=2364150
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Motorstarter >> Powermodule
+[_S7H_HSP_FAST_IO_MS_PM_KAT_AT]
+basetype=_S7H_6ES7_ET200S_KAT_VA_PM_AT
+abstract=true
+ObjType=2364157
+CatalogParent=2364150
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0139
+HSP_NAME=ET 200S IM151-3 PN HS
+IsCatEntry=0

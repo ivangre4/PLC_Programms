@@ -1,0 +1,20 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2022
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S 1 SSI, 1 SSI Fast
+
+;---------- 1 SSI,   6ES7 138-4DB03-0AB0
+[2366958]
+KatEntryName=1 SSI 
+InfoText=SSI-Modul für direkten Anschluß von Absolutwertgebern mit Latch- und Vergleichswertfunktionen, unterstützt Taktsynchronität 
+SHORTNAME=1 SSI 
+
+
+;---------- 1 SSI Fast-Mode,   6ES7 138-4DB03-0AB0 Fast
+[2366959]
+KatEntryName=1 SSI Fast-Mode
+InfoText=SSI-Modul für direkten Anschluß von Absolutwertgebern mit zeitoptimierter Geberwertübertragung, unterstützt Taktsynchronität
+SHORTNAME=1 SSI Fast-Mode
+

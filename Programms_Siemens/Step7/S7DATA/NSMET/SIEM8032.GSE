@@ -1,0 +1,71 @@
+;======================================================
+; GSD Gateway to Powerswitch 3WN6
+; MLFB : 3RK1000-0JC80-0BA*
+;
+; Stand : 10.05.99 V1.4 SX   entspr. TD V1.1 v. 11.12.97
+;        27.02.02  V 2.0
+; File  : SIEM8032.GSE
+;======================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+; <Ext-User-Prm-Data-Def-List>
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "PROFIBUS-DP interface module for circuit breaker 3WN6"
+Vendor_Name="SIEMENS AG"
+Model_Name="Gateway 3WN6"
+Revision="V 2.0"
+Ident_Number=0x8032
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release = "V1.0"
+Software_Release = "V1.0"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_45.45=250
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+Implementation_Type="SPC3"
+Bitmap_Device="3WN8031N"
+Bitmap_SF="3WN8031S"
+; Slave-Specification:
+OrderNumber="3RK1000-0JC80-0BA*"
+Freeze_Mode_supp=1
+Sync_Mode_supp=1
+Auto_Baud_supp=1
+Min_Slave_Intervall=1
+Max_Diag_Data_Len=8
+Modul_Offset=0
+Slave_Family=2
+Modular_Station=1
+Max_Module=1
+Max_Input_Len=12
+Max_Output_Len=12
+Max_Data_Len=24
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=0
+; Unit-Diagnostics:
+Unit_Diag_Bit(0000)="presence contact"
+Unit_Diag_Bit(0001)="3WN6 interface error"
+; <Module-Definition-List>
+Module="KNS - Profile consistent" 0xD5,0xE5
+1
+EndModule
+Module="KNS - Profile not consistent" 0x55,0x65
+2
+EndModule

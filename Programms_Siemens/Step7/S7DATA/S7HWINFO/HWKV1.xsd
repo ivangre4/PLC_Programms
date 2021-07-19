@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Thomas Banik (Siemens AG) -->
+<!-- HWK-Schema: HWKV1.xsd -->
+<xsd:schema targetNamespace="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.siemens.com/Industry/2002/07/Automation/Primitives" schemaLocation="PrimitivesV1.xsd"/>
+	<xsd:import namespace="http://www.siemens.com/Industry/2002/07/Automation/Base" schemaLocation="ADBaseV1.xsd"/>
+	<!-- SIMPLE TYPES -->
+	<xsd:simpleType name="ModeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="vis"/>
+			<xsd:enumeration value="nvis"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- values for Types of AUT-Attributes:  -->
+	<xsd:simpleType name="AttrTypeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="LONG"/>
+			<xsd:enumeration value="SHORT"/>
+			<xsd:enumeration value="STRING"/>
+			<xsd:enumeration value="FORMATSTRING"/>
+			<xsd:enumeration value="BYTE"/>
+			<xsd:enumeration value="DWORD"/>
+			<xsd:enumeration value="LONGBINARY"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RangeTypeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="dynamic"/>
+			<xsd:enumeration value="permanent"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- possible values for ExportExpression -->
+	<!-- as examples 
+	<xsd:simpleType name="ExpExprEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="prim:Export/hwk:Module/hwk:AttrList/hwk:Attr[@Name="MLFB"]/@Value"/>
+			<xsd:enumeration value="prim:Export/hwk:Module/hwk:DatasetList/hwk:Dataset[@DSNr="2"]/hwk:Par[@PNr="7"]"/>
+			<xsd:enumeration value="prim:Export/hwk:ParameterBlock/hwk:DatasetList/*/*"/>	
+			<xsd:enumeration value="prim:Export/hwk:ParameterBlock/hwk:DatasetList/hwk:Dataset[@DSNr="1" or @DSNr="3" or @DSNr="11"]/hwk:Par[@PNr="1" or @PNr="2" or @PNr="6"]/@PNr"/>
+		<hwk:ExpExpr>/prim:Document/base:Project/base:StructuralFeature/base:Device/base:SettingsFeature/hwk:DatasetListhwk:Dataset[@DSNr="1"]/hwk:Par[@Name="AI_Type"or@Name="AI_Range"
+		</xsd:restriction>
+	</xsd:simpleType>
+	// -->
+	<!-- possible values for DatatypeEnumT -->
+	<xsd:simpleType name="DatatypeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="FIELD1"/>
+			<xsd:enumeration value="FIELD2"/>
+			<xsd:enumeration value="FIELD3"/>
+			<xsd:enumeration value="FIELD4"/>
+			<xsd:enumeration value="FIELD5"/>
+			<xsd:enumeration value="FIELD6"/>
+			<xsd:enumeration value="FIELD7"/>
+			<xsd:enumeration value="FIELD8"/>
+			<xsd:enumeration value="BYTE"/>
+			<xsd:enumeration value="BYTEARRAY"/>
+			<xsd:enumeration value="WORD"/>
+			<xsd:enumeration value="LONG"/>
+			<xsd:enumeration value="DATE"/>
+			<xsd:enumeration value="TIME"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- COMPLEX TYPES -->
+	<xsd:complexType name="rangeListT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Instance" type="xsd:integer" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="MLFBT">
+		<xsd:complexContent>
+			<xsd:extension base="base:MLFBParameterT">
+				<xsd:attribute name="Version" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DatatypeT">
+		<xsd:simpleContent>
+			<xsd:extension base="DatatypeEnumT">
+				<xsd:attribute name="Len" type="xsd:integer" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ValueT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Instance" type="xsd:integer" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ExportModuleT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="ExpExpr" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AttrNameIDT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:attribute name="ID" type="xsd:string" use="required"/>
+				<xsd:attribute name="Value" type="xsd:integer" use="required"/>
+				<xsd:attribute name="Type" type="AttrTypeEnumT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ParT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="mode" type="ModeEnumT" minOccurs="0"/>
+					<xsd:element ref="base:DisplayNameFeature" minOccurs="0"/>
+					<xsd:element name="datatype" type="DatatypeT" minOccurs="0"/>
+					<xsd:element name="rangeVis" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="rangeCode" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="rangeList" type="rangeListT" minOccurs="0"/>
+					<xsd:choice>
+						<xsd:element name="defStep7" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="defStep7List" type="xsd:string" minOccurs="0"/>
+					</xsd:choice>
+					<xsd:choice>
+						<xsd:element name="defPcs7" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="defPcs7List" type="xsd:string" minOccurs="0"/>
+					</xsd:choice>
+					<xsd:element name="byteAddr" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="bitAddr" type="xsd:integer" minOccurs="0"/>
+					<xsd:choice>
+						<xsd:element name="instances" type="xsd:integer" minOccurs="0"/>
+						<xsd:element name="instancelist" type="xsd:string" minOccurs="0"/>
+						<!-- 0,1,5...7,9 -->
+					</xsd:choice>
+					<xsd:element name="maxInstances" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="value" type="ValueT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="distance" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="size" type="xsd:integer" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="PNr" type="xsd:integer" use="required"/>
+				<xsd:attribute name="RangeType" type="RangeTypeEnumT" use="optional" default="permanent"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConstantT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:int">
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConstantListFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Constant" type="ConstantT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DatasetT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:choice>
+					<xsd:element name="Par" type="ParT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ParReference" type="prim:ReferenceT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:choice>
+				<xsd:attribute name="DSNr" type="xsd:integer" use="required"/>
+				<xsd:attribute name="DSLen" type="xsd:integer" use="required"/>
+				<xsd:attribute name="DSType" type="xsd:integer" use="optional"/>				
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DatasetListFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Dataset" type="DatasetT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="binaryDataset" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- Beschreibung eines  Module-Attributes -->
+	<xsd:complexType name="AttrT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Name" type="xsd:string"/>
+				<xsd:attribute name="Value" type="xsd:string"/>
+				<xsd:attribute name="Datatype" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ObjTypeFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="MLFB"/>
+					<xsd:element ref="base:DisplayNameFeature" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="Value" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ModuleDescFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Attr" type="AttrT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ModuleDescListFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="ModuleDesc" type="ModuleDescFeatureT" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TransformTableT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="AI_Range" type="AI_RangeFeatureT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="AO_Range" type="AI_RangeFeatureT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AI_RangeFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="mod_val" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="exp_art" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="exp_range" type="xsd:string" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="Nr" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- COLLECTIONS, FILTERS and SORTCRITERIA for Im-Export-Navigation-Component -->
+	<xsd:complexType name="ColItemT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="FilterItemT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="SortItemT">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="CollectionsFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="ColItem" type="ColItemT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FilterFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="DefaultFilter" type="FilterItemT" minOccurs="0"/>
+					<xsd:element name="FilterItem" type="FilterItemT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SortCriteriaFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="DefaultSort" type="SortItemT" minOccurs="0"/>
+					<xsd:element name="FilterItem" type="SortItemT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ELEMENTS -->
+	<!-- DIA-X Objects -->
+	<xsd:element name="CollectionsFeature" type="CollectionsFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="FilterFeature" type="FilterFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="SortCriteriaFeature" type="SortCriteriaFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="AI_Range" type="AI_RangeFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="AO_Range" type="AI_RangeFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="TransformTable" type="TransformTableT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="value" type="ValueT"/>
+	<xsd:element name="AttrNameId" type="AttrNameIDT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="ExportModule" type="ExportModuleT" substitutionGroup="prim:Object"/>
+	<xsd:element name="DatasetList" type="DatasetListFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="ConstantList" type="ConstantListFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="Dataset" type="DatasetT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="ModuleDescList" type="ModuleDescListFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:element name="Par" type="ParT"/>
+	<xsd:element name="Name" type="prim:StringParameterT"/>
+	<xsd:element name="MLFB" type="MLFBT" substitutionGroup="base:MLFB"/>
+	<xsd:element name="Logpath" type="prim:StringParameterT"/>
+	<xsd:element name="Slot" type="xsd:integer"/>
+	<xsd:element name="SubmodulesCount" type="xsd:integer"/>
+</xsd:schema>

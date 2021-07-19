@@ -1,0 +1,22 @@
+[2364027]
+KatEntryName=V2.5
+InfoText=Memoria di lavoro 256KB; 0,1ms/1000 istr.; collegamento PROFINET; comunicazione S7 (FB/FC caricabili); PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 1 porta; PROFINET CBA; PROFINET CBA-Proxy; protocollo di trasporto; TCP/IP; connettore MPI/DP combinato (MPI o master DP oppure slave DP); configurazione a più file fino a 32 unità; ciclo di bus DP equidistante; routing; firmware V2.5, utilizzabile con applicazioni di sicurezza; supporta PROFIsafe V2
+SHORTNAME=CPU 315F-2 PN/DP
+Comment=6ES7 315-2FH13-0AB0 V2.5, 6ES7 317-2FK13-0AB0 V2.5
+
+[2364028]
+SHORTNAME=MPI/DP
+
+[2364029]
+SHORTNAME=PN-IO
+
+[2364031]
+KatEntryName=V2.5
+InfoText=Memoria di lavoro 1024KB; 0,05ms/1000 istr.; connettore PROFINET; comunicazione S7 (FB/FC caricabili); PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 1 porta; PROFINET CBA; PROFINET CBA-Proxy; protocollo di trasmissione TCP/IP; connettore MPI/DP combinato (MPI o master DP o slave DP); configurazione a più file fino a 32 unità; ciclo di bus DP equidistante; routing; firmware V2.5, utilizzabile con applicazioni di sicurezza; supporta PROFIsafe V2
+SHORTNAME=CPU 317F-2 PN/DP
+
+[2364032]
+SHORTNAME=MPI/DP
+
+[2364033]
+SHORTNAME=PN-IO

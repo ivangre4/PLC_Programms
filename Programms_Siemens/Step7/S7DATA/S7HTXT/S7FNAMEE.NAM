@@ -1,0 +1,227 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1322010]
+KatEntryName=CP 440
+InfoText = Processore di comunicazione punto a punto con interfaccia RS422/485 ( ASCII, 3964R )
+SHORTNAME=CP 440
+[1314897]
+KatEntryName=CP 441-1
+InfoText=Processore di comunicazione punto a punto per un modulo IF963 (3964R)
+SHORTNAME=CP 441-1
+[1315507]
+KatEntryName=CP 441-1
+InfoText=Processore di comunicazione punto a punto per un modulo IF963 (3964R, ASCII, stampante)
+[1315531]
+KatEntryName=CP 441-1
+InfoText=Processore di comunicazione punto a punto per un modulo IF963 (3964R, ASCII, stampante); con proprietà di multicomputing
+[1322008]
+KatEntryName=CP 441-1
+InfoText=Processore di comunicazione punto a punto per un modulo IF963 (3964R, ASCII, stampante); con proprietà di multicomputing
+SHORTNAME=CP 441-1
+[1314898]
+KatEntryName=CP 441-2
+InfoText=Processore di comunicazione per due moduli IF963 (RK512, 3964R)
+SHORTNAME=CP 441-2
+[1315508]
+KatEntryName=CP 441-2
+InfoText=Processore di comunicazione per due moduli IF963 (RK512, 3964R, ASCII, stampante)
+[1315532]
+KatEntryName=CP 441-2
+InfoText=Processore di comunicazione per due moduli IF963 (RK512, 3964R, ASCII, stampante, driver speciale); con proprietà di multicomputing
+[1322009]
+KatEntryName=CP 441-2
+InfoText=Processore di comunicazione per due moduli IF963 (RK512, 3964R, ASCII, stampante, driver speciale); con proprietà di multicomputing
+SHORTNAME=CP 441-2
+[1314899]
+KatEntryName=FM 450-1 COUNTER MODULE
+InfoText=Unità contatore, a 2 canali
+SHORTNAME=FM450-1 COUNTER
+[1314900]
+KatEntryName=FM 451 FIXED SPEED POS.
+InfoText=Unità di posizionamento per azionamenti a marcia veloce/lenta, a 3 assi
+SHORTNAME=FM 451 FIX. SPEED
+[1314901]
+KatEntryName=FM 452 CAM MODULE
+InfoText=Unità di programmazione a camme elettroniche, con 128 camme
+SHORTNAME=FM 452 CAM
+[1314903]
+KatEntryName=FM 453
+InfoText=Unità di posizionamento per servoazionamenti e motori passo-passo, a 3 assi
+SHORTNAME=FM 453
+[1315098]
+KatEntryName=FM 455 S PID Control
+InfoText=Unità di regolazione a 16 canali (passo e impulso) 16AI+16DI+32DO
+SHORTNAME=FM 455 S PID Control
+[1315097]
+KatEntryName=FM 455 C PID Control
+InfoText=Unità di regolazione a 16 canali (senza fine) 16AI+16DI+16AO
+SHORTNAME=FM 455 C PID Control
+[1314930]
+KatEntryName=IF 961-CT1
+InfoText=Modulo di interfaccia M7, contatore fino a 500 kHz/5V o 200 kHz/24V
+SHORTNAME=IF961-CT1
+[1315000]
+KatEntryName=CP 340 RS232C 
+InfoText=Processore di comunicazione con connessione: RS232C (ASCII, 3964R)
+SHORTNAME=CP 340-RS232C
+[1315506]
+KatEntryName=CP 340 RS232C 
+InfoText=Processore di comunicazione con connessione: RS232C (ASCII, 3964R, stampante); disponibile anche come unità SIPLUS con numero di ordinazione 6AG1 340-1AH01-2AE0
+[1315001]
+KatEntryName=CP 340 20mA TTY 
+InfoText=Processore di comunicazione con connessione: 20mA TTY (ASCII, 3964R, stampante)
+SHORTNAME=CP 340-20mA TTY
+[1315002]
+KatEntryName=CP 340 RS422/485 
+InfoText=Processore di comunicazione con connessione: RS422/485 (ASCII, 3964R, stampante); disponibile anche come unità SIPLUS con numero di ordinazione 6AG1 340-1CH00-2AE0
+SHORTNAME=CP 340-RS422/485
+[1322002]
+KatEntryName = CP 341 RS232C
+InfoText = Processore di comunicazione con connessione: RS232C (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-RS232C
+[1322003]
+KatEntryName = CP 341 20mA TTY 
+InfoText = Processore di comunicazione con connessione: 20mA TTY (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-20mA TTY
+[1322004]
+KatEntryName = CP 341 RS422/485
+InfoText = Processore di comunicazione con connessione: RS422/485 (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-RS422/485
+[1322005]
+KatEntryName = CP 341 RS232C
+InfoText = Processore di comunicazione con connessione: RS232C (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-RS232C
+[1322006]
+KatEntryName = CP 341 20mA TTY
+InfoText = Processore di comunicazione con connessione: 20mA TTY (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-20mA TTY
+[1322007]
+KatEntryName = CP 341 RS422/485
+InfoText = Processore di comunicazione con connessione: RS422/485 (RK512, ASCII, 3964(R), driver caricabile) 
+SHORTNAME=CP 341-RS422/485
+[1315004]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Unità contatore, a 1 canale
+SHORTNAME=FM350 COUNTER
+[1315164]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Unità contatore, a 1 canale, anche per configurazione con moduli bus attivi
+[1322011]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Unità contatore, a 1 canale, anche per configurazione con moduli bus attivi
+[1322038]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Unità contatore, a 1 canale, anche per configurazione con moduli bus attivi, supporta la funzione di sincronismo di clock
+[1322001]
+KatEntryName = FM 350-2 COUNTER MODULE
+InfoText = Unità contatore, 8 canali
+SHORTNAME=FM350-2 COUNTER
+[1315005]
+KatEntryName=FM 351 FIXED SPEED POS.
+InfoText=Unità di posizionamento, per azionamenti a marcia veloce/lenta
+SHORTNAME=FM 351 FIX. SPEED
+[1315165]
+KatEntryName=FM 351 FIXED SPEED POS.
+InfoText=Unità di posizionamento, per azionamenti a marcia veloce/lenta, anche per configurazione con moduli bus attivi
+[1315006]
+KatEntryName=FM 352 CAM MODULE
+InfoText=Unità di programmazione a camme elettroniche, a 1 canale
+SHORTNAME=FM 352 CAM
+[1315166]
+KatEntryName=FM 352 CAM MODULE
+InfoText=Unità di programmazione a camme elettroniche, a 1 canale, anche per configurazione con moduli bus attivi
+[1315007]
+KatEntryName=FM 353 F.STEPPER MOTOR
+InfoText=Unità di posizionamento per motori passo-passo, a 1 canale, 4DI+4DO
+SHORTNAME=FM 353 STEPPER
+[1315510]
+KatEntryName=FM 353 F.STEPPER MOTOR
+InfoText=Unità di posizionamento per motori passo-passo, a 1 canale, 4DI+4DO, anche per configurazione con moduli bus attivi
+[1315008]
+KatEntryName=FM 354 F.SERVO MOTOR
+InfoText=Unità di posizionamento per servomotori, a 1 canale, 4DI+4DO
+SHORTNAME=FM 354 SERVO
+[1315511]
+KatEntryName=FM 354 F.SERVO MOTOR
+InfoText=Unità di posizionamento per servomotori, a 1 canale, 4DI+4DO, anche per configurazione con moduli bus attivi
+[1315096]
+KatEntryName=6ES7 355-1VH00-0AE0
+InfoText=Unità di regolazione a 4 canali (passo e impulso) 4AI+8DI+8DO, senza SeS in funzionamento di backup
+SHORTNAME=FM 355 S PID Control
+[1315095]
+KatEntryName=6ES7 355-0VH00-0AE0
+InfoText=Unità di regolazione a 4 canali (senza fine) 4AI+8DI+4AO, senza SeS in funzionamento di backup
+SHORTNAME=FM 355 C PID Control
+[1315517]
+KatEntryName=6ES7 355-1VH10-0AE0
+InfoText=Unità di regolazione a 4 canali (passo e impulso) 4AI+8DI+8DO
+SHORTNAME=FM 355 S PID Control
+[1315516]
+KatEntryName=6ES7 355-0VH10-0AE0
+InfoText=Unità di regolazione a 4 canali (senza fine) 4AI+8DI+4AO
+SHORTNAME=FM 355 C PID Control
+[1322027]
+KatEntryName=6ES7 355-2CH00-0AE0
+InfoText=Unità di regolazione e temperatura a 4 canali (senza fine) 4AI+8DI+4AO
+SHORTNAME=FM 355-2 C Temp. Control
+[1322028]
+KatEntryName=6ES7 355-2SH00-0AE0
+InfoText=Unità di regolazione e temperatura a 4 canali (passo e impulso) 4AI+8DI+8DO
+SHORTNAME=FM 355-2 S Temp. Control
+[1315009]
+KatEntryName=NCU 570 FM-NC
+InfoText=SINUMERIK  NC a 4 assi
+SHORTNAME=NCU 570
+[1315010]
+KatEntryName=NCU 570 FM-NC
+InfoText=SINUMERIK  NC a 4 assi
+SHORTNAME=NCU 570
+[1315019]
+KatEntryName=FM-300
+InfoText=Unità funzionali dell'S7-300 e M7-300
+SHORTNAME=S7 FM-300
+[1315020]
+KatEntryName=FM-400
+InfoText=Unità funzionali dell'S7-400 e M7-400
+SHORTNAME=S7 FM-400
+[1315021]
+KatEntryName=CP-300
+InfoText=Processori di comunicazione dell'S7-300
+SHORTNAME=CP-300
+[1315022]
+KatEntryName=CP-400
+InfoText=Processori di comunicazione dell'S7-400
+SHORTNAME=CP-400
+[1315085]
+SHORTNAME=S7 FM-CNT
+KatEntryName =
+InfoText =
+[1315086]
+SHORTNAME=S7 FM-POS
+KatEntryName =
+InfoText =
+[1315087]
+SHORTNAME=S7 FM-REG
+KatEntryName =
+InfoText =
+[1315088]
+SHORTNAME=S7 FM-NCU
+KatEntryName =
+InfoText =
+[1315089]
+SHORTNAME=S7 FM-CNT
+KatEntryName =
+InfoText =
+[1315090]
+SHORTNAME=S7 FM-POS
+KatEntryName =
+InfoText =
+[1315091]
+SHORTNAME=S7 FM-REG
+KatEntryName =
+InfoText =
+[1315092]
+KatEntryName =
+InfoText =
+
+; -- DO NOT ALTER THIS LINE -----

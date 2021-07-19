@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2071
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET200S 4 DI UC, 4 DI NAMUR, 2 RO NO/NC
+
+;---------- ,   6ES7 131-4CD02-0AB0
+[2366405]
+KatEntryName = 4 DI UC24..48V
+InfoText = Módulo de entradas digitales DI 4xUC 24-48V, High Feature; diagnóstico, soporta modo isócrono
+SHORTNAME=4 DI UC24..48V
+
+
+;---------- ,   6ES7 131-4RD02-0AB0
+[2366406]
+KatEntryName=4 DI NAMUR
+InfoText=Módulo de entrada digital DI 4xNAMUR, con alarma de diagnóstico
+SHORTNAME=4 DI NAMUR
+
+
+;---------- ,   6ES7 132-4HB12-0AB0
+[2366407]
+KatEntryName = 2RO NO/NC DC24..48V/5A AC24..230V/5A
+InfoText = Módulo de salidas digitales 2xrelés NO/NC DC24..48V/5A AC 24..230V/5A
+SHORTNAME=2RO NO/NC 24..230V/5A
+

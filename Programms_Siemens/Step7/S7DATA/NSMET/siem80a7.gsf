@@ -1,0 +1,979 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; GSF (französisch) fuer Diagnose-Repeater
+; Stand: 8.06.2001
+; Version 0.3
+; 
+; Die Diagnose der Segmente liegt parallel vor
+; Laengenverkuerzung der Diagnose ueber das Prm-Telegramm
+; ===============
+; Version 0.2
+; minTSDR Werte korrigiert
+; kleine Korrekturen
+; 
+; ===============
+; Version 0.3
+; Verzeichnis: Netzkomponenten eingefuehrt
+; Bei den Parametriertexten ON/OFF entfernt
+;
+; from:
+; Albert Tretter 
+; SIEMENS AG
+; A&D AS E 321
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#Profibus_DP
+; <Unit-Definition-List>
+GSD_Revision=3
+Vendor_Name="SIEMENS AG"
+Model_Name="Diagnostic Repeater"
+Revision="1.0"
+Ident_Number=0x80a7
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="hardware release 1.0"
+Software_Release="software release 1.0"
+Info_Text="Repeteur diagnostic pour cables PROFIBUS-DP (RS485), IP20, jusqu'à 12 Mbauds"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+45.45_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=15
+MaxTsdr_19.2=15
+MaxTsdr_93.75=15
+MaxTsdr_187.5=15
+MaxTsdr_500=15
+MaxTsdr_45.45=15
+MaxTsdr_1.5M=25
+MaxTsdr_3M=50
+MaxTsdr_6M=100
+MaxTsdr_12M=200
+Implementation_Type="DPC31"			
+Bitmap_Device="Si80A7_N"
+Bitmap_SF="Si80A7_S"
+;
+;
+; Slave-Specification:
+;
+;
+OrderNumber="6ES7 972-0AB00-0XA0"
+Set_Slave_Add_supp=0
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+Auto_Baud_supp=1
+Fail_Safe=1	
+Min_Slave_Intervall=1 
+Max_Diag_Data_Len=84
+Modular_Station=0
+Modul_Offset=0
+Slave_Family=0@Composants reseau
+SI_ControlProgId="DiagRepeaterCtl.DiagRepeaterCtl"
+;
+;
+;
+; DPV1 Keys
+;
+DPV1_Slave=1
+WD_Base_1ms_supp=1
+Publisher_supp=0; dies macht beim DR keinen Sinn
+;
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; UnitDiag-Area fuer Leitungsfehlerstatus
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+;
+; Segment
+Unit_Diag_Bit(28)="====== Segment DP3 ======"
+Unit_Diag_Bit(29)="====== Segment DP2 ======"
+Unit_Diag_Bit(30)="====== Segment DP1 ======"
+Unit_Diag_Bit(31)="====== Interface PG ======"
+;
+; Segment ON/OFF
+Unit_Diag_Bit(33)="Segment desactive"
+;
+;
+; Topologieermittlung ON/OFF
+Unit_Diag_Bit(34)="Recherche topolog. desactivee"
+;
+;
+; Reflexionsfehlerrate Bit 7 = 0
+;
+Unit_Diag_Area=40-47
+Value(0)  ="Coeff. pertes reflexion : 0%"
+Value(1)  ="Coeff. pertes reflexion : 1%"
+Value(2)  ="Coeff. pertes reflexion : 2%"
+Value(3)  ="Coeff. pertes reflexion : 3%"
+Value(4)  ="Coeff. pertes reflexion : 4%"
+Value(5)  ="Coeff. pertes reflexion : 5%"
+Value(6)  ="Coeff. pertes reflexion : 6%"
+Value(7)  ="Coeff. pertes reflexion : 7%"
+Value(8)  ="Coeff. pertes reflexion : 8%"
+Value(9)  ="Coeff. pertes reflexion : 9%"
+Value(10) ="Coeff. pertes reflexion : 10%"
+Value(11) ="Coeff. pertes reflexion : 11%"
+Value(12) ="Coeff. pertes reflexion : 12%"
+Value(13) ="Coeff. pertes reflexion : 13%"
+Value(14) ="Coeff. pertes reflexion : 14%"
+Value(15) ="Coeff. pertes reflexion : 15%"
+Value(16) ="Coeff. pertes reflexion : 16%"
+Value(17) ="Coeff. pertes reflexion : 17%"
+Value(18) ="Coeff. pertes reflexion : 18%"
+Value(19) ="Coeff. pertes reflexion : 19%"
+Value(20) ="Coeff. pertes reflexion : 20%"
+Value(21) ="Coeff. pertes reflexion : 21%"
+Value(22) ="Coeff. pertes reflexion : 22%"
+Value(23) ="Coeff. pertes reflexion : 23%"
+Value(24) ="Coeff. pertes reflexion : 24%"
+Value(25) ="Coeff. pertes reflexion : 25%"
+Value(26) ="Coeff. pertes reflexion : 26%"
+Value(27) ="Coeff. pertes reflexion : 27%"
+Value(28) ="Coeff. pertes reflexion : 28%"
+Value(29) ="Coeff. pertes reflexion : 29%"
+Value(30) ="Coeff. pertes reflexion : 30%"
+Value(31) ="Coeff. pertes reflexion : 31%"
+Value(32) ="Coeff. pertes reflexion : 32%"
+Value(33) ="Coeff. pertes reflexion : 33%"
+Value(34) ="Coeff. pertes reflexion : 34%"
+Value(35) ="Coeff. pertes reflexion : 35%"
+Value(36) ="Coeff. pertes reflexion : 36%"
+Value(37) ="Coeff. pertes reflexion : 37%"
+Value(38) ="Coeff. pertes reflexion : 38%"
+Value(39) ="Coeff. pertes reflexion : 39%"
+Value(40) ="Coeff. pertes reflexion : 40%"
+Value(41) ="Coeff. pertes reflexion : 41%"
+Value(42) ="Coeff. pertes reflexion : 42%"
+Value(43) ="Coeff. pertes reflexion : 43%"
+Value(44) ="Coeff. pertes reflexion : 44%"
+Value(45) ="Coeff. pertes reflexion : 45%"
+Value(46) ="Coeff. pertes reflexion : 46%"
+Value(47) ="Coeff. pertes reflexion : 47%"
+Value(48) ="Coeff. pertes reflexion : 48%"
+Value(49) ="Coeff. pertes reflexion : 49%"
+Value(50) ="Coeff. pertes reflexion : 50%"
+Value(51) ="Coeff. pertes reflexion : 51%"
+Value(52) ="Coeff. pertes reflexion : 52%"
+Value(53) ="Coeff. pertes reflexion : 53%"
+Value(54) ="Coeff. pertes reflexion : 54%"
+Value(55) ="Coeff. pertes reflexion : 55%"
+Value(56) ="Coeff. pertes reflexion : 56%"
+Value(57) ="Coeff. pertes reflexion : 57%"
+Value(58) ="Coeff. pertes reflexion : 58%"
+Value(59) ="Coeff. pertes reflexion : 59%"
+Value(60) ="Coeff. pertes reflexion : 60%"
+Value(61) ="Coeff. pertes reflexion : 61%"
+Value(62) ="Coeff. pertes reflexion : 62%"
+Value(63) ="Coeff. pertes reflexion : 63%"
+Value(64) ="Coeff. pertes reflexion : 64%"
+Value(65) ="Coeff. pertes reflexion : 65%"
+Value(66) ="Coeff. pertes reflexion : 66%"
+Value(67) ="Coeff. pertes reflexion : 67%"
+Value(68) ="Coeff. pertes reflexion : 68%"
+Value(69) ="Coeff. pertes reflexion : 69%"
+Value(70) ="Coeff. pertes reflexion : 70%"
+Value(71) ="Coeff. pertes reflexion : 71%"
+Value(72) ="Coeff. pertes reflexion : 72%"
+Value(73) ="Coeff. pertes reflexion : 73%"
+Value(74) ="Coeff. pertes reflexion : 74%"
+Value(75) ="Coeff. pertes reflexion : 75%"
+Value(76) ="Coeff. pertes reflexion : 76%"
+Value(77) ="Coeff. pertes reflexion : 77%"
+Value(78) ="Coeff. pertes reflexion : 78%"
+Value(79) ="Coeff. pertes reflexion : 79%"
+Value(80) ="Coeff. pertes reflexion : 80%"
+Value(81) ="Coeff. pertes reflexion : 81%"
+Value(82) ="Coeff. pertes reflexion : 82%"
+Value(83) ="Coeff. pertes reflexion : 83%"
+Value(84) ="Coeff. pertes reflexion : 84%"
+Value(85) ="Coeff. pertes reflexion : 85%"
+Value(86) ="Coeff. pertes reflexion : 86%"
+Value(87) ="Coeff. pertes reflexion : 87%"
+Value(88) ="Coeff. pertes reflexion : 88%"
+Value(89) ="Coeff. pertes reflexion : 89%"
+Value(90) ="Coeff. pertes reflexion : 90%"
+Value(91) ="Coeff. pertes reflexion : 91%"
+Value(92) ="Coeff. pertes reflexion : 92%"
+Value(93) ="Coeff. pertes reflexion : 93%"
+Value(94) ="Coeff. pertes reflexion : 94%"
+Value(95) ="Coeff. pertes reflexion : 95%"
+Value(96) ="Coeff. pertes reflexion : 96%"
+Value(97) ="Coeff. pertes reflexion : 97%"
+Value(98) ="Coeff. pertes reflexion : 98%"
+Value(99) ="Coeff. pertes reflexion : 99%"
+Value(100) ="Coeff. pertes reflexion : 100%"
+;
+;
+;Telegrammfehlerrate Bit 7 = 1
+;
+;
+Value(128)="Coeff. pertes telegramme : 0%"
+Value(129)="Coeff. pertes telegramme : 1%"
+Value(130)="Coeff. pertes telegramme : 2%"
+Value(131)="Coeff. pertes telegramme : 3%"
+Value(132)="Coeff. pertes telegramme : 4%"
+Value(133)="Coeff. pertes telegramme : 5%"
+Value(134)="Coeff. pertes telegramme : 6%"
+Value(135)="Coeff. pertes telegramme : 7%"
+Value(136)="Coeff. pertes telegramme : 8%"
+Value(137)="Coeff. pertes telegramme : 9%"
+Value(138)="Coeff. pertes telegramme : 10%"
+Value(139)="Coeff. pertes telegramme : 11%"
+Value(140)="Coeff. pertes telegramme : 12%"
+Value(141)="Coeff. pertes telegramme : 13%"
+Value(142)="Coeff. pertes telegramme : 14%"
+Value(143)="Coeff. pertes telegramme : 15%"
+Value(144)="Coeff. pertes telegramme : 16%"
+Value(145)="Coeff. pertes telegramme : 17%"
+Value(146)="Coeff. pertes telegramme : 18%"
+Value(147)="Coeff. pertes telegramme : 19%"
+Value(148)="Coeff. pertes telegramme : 20%"
+Value(149)="Coeff. pertes telegramme : 21%"
+Value(150)="Coeff. pertes telegramme : 22%"
+Value(151)="Coeff. pertes telegramme : 23%"
+Value(152)="Coeff. pertes telegramme : 24%"
+Value(153)="Coeff. pertes telegramme : 25%"
+Value(154)="Coeff. pertes telegramme : 26%"
+Value(155)="Coeff. pertes telegramme : 27%"
+Value(156)="Coeff. pertes telegramme : 28%"
+Value(157)="Coeff. pertes telegramme : 29%"
+Value(158)="Coeff. pertes telegramme : 30%"
+Value(159)="Coeff. pertes telegramme : 31%"
+Value(160)="Coeff. pertes telegramme : 32%"
+Value(161)="Coeff. pertes telegramme : 33%"
+Value(162)="Coeff. pertes telegramme : 34%"
+Value(163)="Coeff. pertes telegramme : 35%"
+Value(164)="Coeff. pertes telegramme : 36%"
+Value(165)="Coeff. pertes telegramme : 37%"
+Value(166)="Coeff. pertes telegramme : 38%"
+Value(167)="Coeff. pertes telegramme : 39%"
+Value(168)="Coeff. pertes telegramme : 40%"
+Value(169)="Coeff. pertes telegramme : 41%"
+Value(170)="Coeff. pertes telegramme : 42%"
+Value(171)="Coeff. pertes telegramme : 43%"
+Value(172)="Coeff. pertes telegramme : 44%"
+Value(173)="Coeff. pertes telegramme : 45%"
+Value(174)="Coeff. pertes telegramme : 46%"
+Value(175)="Coeff. pertes telegramme : 47%"
+Value(176)="Coeff. pertes telegramme : 48%"
+Value(177)="Coeff. pertes telegramme : 49%"
+Value(178)="Coeff. pertes telegramme : 50%"
+Value(179)="Coeff. pertes telegramme : 51%"
+Value(180)="Coeff. pertes telegramme : 52%"
+Value(181)="Coeff. pertes telegramme : 53%"
+Value(182)="Coeff. pertes telegramme : 54%"
+Value(183)="Coeff. pertes telegramme : 55%"
+Value(184)="Coeff. pertes telegramme : 56%"
+Value(185)="Coeff. pertes telegramme : 57%"
+Value(186)="Coeff. pertes telegramme : 58%"
+Value(187)="Coeff. pertes telegramme : 59%"
+Value(188)="Coeff. pertes telegramme : 60%"
+Value(189)="Coeff. pertes telegramme : 61%"
+Value(190)="Coeff. pertes telegramme : 62%"
+Value(191)="Coeff. pertes telegramme : 63%"
+Value(192)="Coeff. pertes telegramme : 64%"
+Value(193)="Coeff. pertes telegramme : 65%"
+Value(194)="Coeff. pertes telegramme : 66%"
+Value(195)="Coeff. pertes telegramme : 67%"
+Value(196)="Coeff. pertes telegramme : 68%"
+Value(197)="Coeff. pertes telegramme : 69%"
+Value(198)="Coeff. pertes telegramme : 70%"
+Value(199)="Coeff. pertes telegramme : 71%"
+Value(200)="Coeff. pertes telegramme : 72%"
+Value(201)="Coeff. pertes telegramme : 73%"
+Value(202)="Coeff. pertes telegramme : 74%"
+Value(203)="Coeff. pertes telegramme : 75%"
+Value(204)="Coeff. pertes telegramme : 76%"
+Value(205)="Coeff. pertes telegramme : 77%"
+Value(206)="Coeff. pertes telegramme : 78%"
+Value(207)="Coeff. pertes telegramme : 79%"
+Value(208)="Coeff. pertes telegramme : 80%"
+Value(209)="Coeff. pertes telegramme : 81%"
+Value(210)="Coeff. pertes telegramme : 82%"
+Value(211)="Coeff. pertes telegramme : 83%"
+Value(212)="Coeff. pertes telegramme : 84%"
+Value(213)="Coeff. pertes telegramme : 85%"
+Value(214)="Coeff. pertes telegramme : 86%"
+Value(215)="Coeff. pertes telegramme : 87%"
+Value(216)="Coeff. pertes telegramme : 88%"
+Value(217)="Coeff. pertes telegramme : 89%"
+Value(218)="Coeff. pertes telegramme : 90%"
+Value(219)="Coeff. pertes telegramme : 91%"
+Value(220)="Coeff. pertes telegramme : 92%"
+Value(221)="Coeff. pertes telegramme : 93%"
+Value(222)="Coeff. pertes telegramme : 94%"
+Value(223)="Coeff. pertes telegramme : 95%"
+Value(224)="Coeff. pertes telegramme : 96%"
+Value(225)="Coeff. pertes telegramme : 97%"
+Value(226)="Coeff. pertes telegramme : 98%"
+Value(227)="Coeff. pertes telegramme : 99%"
+Value(228)="Coeff. pertes telegr. : 100%"
+Unit_Diag_Area_End
+;
+; Station x
+Unit_Diag_Area=48-55
+Value(0)  ="Station x : 0!"
+Value(1)  ="Station x : 1!"
+Value(2)  ="Station x : 2!"
+Value(3)  ="Station x : 3!"
+Value(4)  ="Station x : 4!"
+Value(5)  ="Station x : 5!"
+Value(6)  ="Station x : 6!"
+Value(7)  ="Station x : 7!"
+Value(8)  ="Station x : 8!"
+Value(9)  ="Station x : 9!"
+Value(10) ="Station x : 10!"
+Value(11) ="Station x : 11!"
+Value(12) ="Station x : 12!"
+Value(13) ="Station x : 13!"
+Value(14) ="Station x : 14!"
+Value(15) ="Station x : 15!"
+Value(16) ="Station x : 16!"
+Value(17) ="Station x : 17!"
+Value(18) ="Station x : 18!"
+Value(19) ="Station x : 19!"
+Value(20) ="Station x : 20!"
+Value(21) ="Station x : 21!"
+Value(22) ="Station x : 22!"
+Value(23) ="Station x : 23!"
+Value(24) ="Station x : 24!"
+Value(25) ="Station x : 25!"
+Value(26) ="Station x : 26!"
+Value(27) ="Station x : 27!"
+Value(28) ="Station x : 28!"
+Value(29) ="Station x : 29!"
+Value(30) ="Station x : 30!"
+Value(31) ="Station x : 31!"
+Value(32) ="Station x : 32!"
+Value(33) ="Station x : 33!"
+Value(34) ="Station x : 34!"
+Value(35) ="Station x : 35!"
+Value(36) ="Station x : 36!"
+Value(37) ="Station x : 37!"
+Value(38) ="Station x : 38!"
+Value(39) ="Station x : 39!"
+Value(40) ="Station x : 40!"
+Value(41) ="Station x : 41!"
+Value(42) ="Station x : 42!"
+Value(43) ="Station x : 43!"
+Value(44) ="Station x : 44!"
+Value(45) ="Station x : 45!"
+Value(46) ="Station x : 46!"
+Value(47) ="Station x : 47!"
+Value(48) ="Station x : 48!"
+Value(49) ="Station x : 49!"
+Value(50) ="Station x : 50!"
+Value(51) ="Station x : 51!"
+Value(52) ="Station x : 52!"
+Value(53) ="Station x : 53!"
+Value(54) ="Station x : 54!"
+Value(55) ="Station x : 55!"
+Value(56) ="Station x : 56!"
+Value(57) ="Station x : 57!"
+Value(58) ="Station x : 58!"
+Value(59) ="Station x : 59!"
+Value(60) ="Station x : 60!"
+Value(61) ="Station x : 61!"
+Value(62) ="Station x : 62!"
+Value(63) ="Station x : 63!"
+Value(64) ="Station x : 64!"
+Value(65) ="Station x : 65!"
+Value(66) ="Station x : 66!"
+Value(67) ="Station x : 67!"
+Value(68) ="Station x : 68!"
+Value(69) ="Station x : 69!"
+Value(70) ="Station x : 70!"
+Value(71) ="Station x : 71!"
+Value(72) ="Station x : 72!"
+Value(73) ="Station x : 73!"
+Value(74) ="Station x : 74!"
+Value(75) ="Station x : 75!"
+Value(76) ="Station x : 76!"
+Value(77) ="Station x : 77!"
+Value(78) ="Station x : 78!"
+Value(79) ="Station x : 79!"
+Value(80) ="Station x : 80!"
+Value(81) ="Station x : 81!"
+Value(82) ="Station x : 82!"
+Value(83) ="Station x : 83!"
+Value(84) ="Station x : 84!"
+Value(85) ="Station x : 85!"
+Value(86) ="Station x : 86!"
+Value(87) ="Station x : 87!"
+Value(88) ="Station x : 88!"
+Value(89) ="Station x : 89!"
+Value(90) ="Station x : 90!"
+Value(91) ="Station x : 91!"
+Value(92) ="Station x : 92!"
+Value(93) ="Station x : 93!"
+Value(94) ="Station x : 94!"
+Value(95) ="Station x : 95!"
+Value(96) ="Station x : 96!"
+Value(97) ="Station x : 97!"
+Value(98) ="Station x : 98!"
+Value(99) ="Station x : 99!"
+Value(100)="Station x : 100!"
+Value(101)="Station x : 101!"
+Value(102)="Station x : 102!"
+Value(103)="Station x : 103!"
+Value(104)="Station x : 104!"
+Value(105)="Station x : 105!"
+Value(106)="Station x : 106!"
+Value(107)="Station x : 107!"
+Value(108)="Station x : 108!"
+Value(109)="Station x : 109!"
+Value(110)="Station x : 110!"
+Value(111)="Station x : 111!"
+Value(112)="Station x : 112!"
+Value(113)="Station x : 113!"
+Value(114)="Station x : 114!"
+Value(115)="Station x : 115!"
+Value(116)="Station x : 116!"
+Value(117)="Station x : 117!"
+Value(118)="Station x : 118!"
+Value(119)="Station x : 119!"
+Value(120)="Station x : 120!"
+Value(121)="Station x : 121!"
+Value(122)="Station x : 122!"
+Value(123)="Station x : 123!"
+Value(124)="Station x : 124!"
+Value(125)="Station x : 125!"
+Value(126)="Station x : 126!"
+;
+;
+Value(128)="Station x : 0"
+Value(129)="Station x : 1"
+Value(130)="Station x : 2"
+Value(131)="Station x : 3"
+Value(132)="Station x : 4"
+Value(133)="Station x : 5"
+Value(134)="Station x : 6"
+Value(135)="Station x : 7"
+Value(136)="Station x : 8"
+Value(137)="Station x : 9"
+Value(138)="Station x : 10"
+Value(139)="Station x : 11"
+Value(140)="Station x : 12"
+Value(141)="Station x : 13"
+Value(142)="Station x : 14"
+Value(143)="Station x : 15"
+Value(144)="Station x : 16"
+Value(145)="Station x : 17"
+Value(146)="Station x : 18"
+Value(147)="Station x : 19"
+Value(148)="Station x : 20"
+Value(149)="Station x : 21"
+Value(150)="Station x : 22"
+Value(151)="Station x : 23"
+Value(152)="Station x : 24"
+Value(153)="Station x : 25"
+Value(154)="Station x : 26"
+Value(155)="Station x : 27"
+Value(156)="Station x : 28"
+Value(157)="Station x : 29"
+Value(158)="Station x : 30"
+Value(159)="Station x : 31"
+Value(160)="Station x : 32"
+Value(161)="Station x : 33"
+Value(162)="Station x : 34"
+Value(163)="Station x : 35"
+Value(164)="Station x : 36"
+Value(165)="Station x : 37"
+Value(166)="Station x : 38"
+Value(167)="Station x : 39"
+Value(168)="Station x : 40"
+Value(169)="Station x : 41"
+Value(170)="Station x : 42"
+Value(171)="Station x : 43"
+Value(172)="Station x : 44"
+Value(173)="Station x : 45"
+Value(174)="Station x : 46"
+Value(175)="Station x : 47"
+Value(176)="Station x : 48"
+Value(177)="Station x : 49"
+Value(178)="Station x : 50"
+Value(179)="Station x : 51"
+Value(180)="Station x : 52"
+Value(181)="Station x : 53"
+Value(182)="Station x : 54"
+Value(183)="Station x : 55"
+Value(184)="Station x : 56"
+Value(185)="Station x : 57"
+Value(186)="Station x : 58"
+Value(187)="Station x : 59"
+Value(188)="Station x : 60"
+Value(189)="Station x : 61"
+Value(190)="Station x : 62"
+Value(191)="Station x : 63"
+Value(192)="Station x : 64"
+Value(193)="Station x : 65"
+Value(194)="Station x : 66"
+Value(195)="Station x : 67"
+Value(196)="Station x : 68"
+Value(197)="Station x : 69"
+Value(198)="Station x : 70"
+Value(199)="Station x : 71"
+Value(200)="Station x : 72"
+Value(201)="Station x : 73"
+Value(202)="Station x : 74"
+Value(203)="Station x : 75"
+Value(204)="Station x : 76"
+Value(205)="Station x : 77"
+Value(206)="Station x : 78"
+Value(207)="Station x : 79"
+Value(208)="Station x : 80"
+Value(209)="Station x : 81"
+Value(210)="Station x : 82"
+Value(211)="Station x : 83"
+Value(212)="Station x : 84"
+Value(213)="Station x : 85"
+Value(214)="Station x : 86"
+Value(215)="Station x : 87"
+Value(216)="Station x : 88"
+Value(217)="Station x : 89"
+Value(218)="Station x : 90"
+Value(219)="Station x : 91"
+Value(220)="Station x : 92"
+Value(221)="Station x : 93"
+Value(222)="Station x : 94"
+Value(223)="Station x : 95"
+Value(224)="Station x : 96"
+Value(225)="Station x : 97"
+Value(226)="Station x : 98"
+Value(227)="Station x : 99"
+Value(228)="Station x : 100"
+Value(229)="Station x : 101"
+Value(230)="Station x : 102"
+Value(231)="Station x : 103"
+Value(232)="Station x : 104"
+Value(233)="Station x : 105"
+Value(234)="Station x : 106"
+Value(235)="Station x : 107"
+Value(236)="Station x : 108"
+Value(237)="Station x : 109"
+Value(238)="Station x : 110"
+Value(239)="Station x : 111"
+Value(240)="Station x : 112"
+Value(241)="Station x : 113"
+Value(242)="Station x : 114"
+Value(243)="Station x : 115"
+Value(244)="Station x : 116"
+Value(245)="Station x : 117"
+Value(246)="Station x : 118"
+Value(247)="Station x : 119"
+Value(248)="Station x : 120"
+Value(249)="Station x : 121"
+Value(250)="Station x : 122"
+Value(251)="Station x : 123"
+Value(252)="Station x : 124"
+Value(253)="Station x : 125"
+Value(254)="Station x : 126"
+Unit_Diag_Area_End
+;
+; Station y
+Unit_Diag_Area=56-63
+Value(0)  ="Station y : 0!"
+Value(1)  ="Station y : 1!"
+Value(2)  ="Station y : 2!"
+Value(3)  ="Station y : 3!"
+Value(4)  ="Station y : 4!"
+Value(5)  ="Station y : 5!"
+Value(6)  ="Station y : 6!"
+Value(7)  ="Station y : 7!"
+Value(8)  ="Station y : 8!"
+Value(9)  ="Station y : 9!"
+Value(10) ="Station y : 10!"
+Value(11) ="Station y : 11!"
+Value(12) ="Station y : 12!"
+Value(13) ="Station y : 13!"
+Value(14) ="Station y : 14!"
+Value(15) ="Station y : 15!"
+Value(16) ="Station y : 16!"
+Value(17) ="Station y : 17!"
+Value(18) ="Station y : 18!"
+Value(19) ="Station y : 19!"
+Value(20) ="Station y : 20!"
+Value(21) ="Station y : 21!"
+Value(22) ="Station y : 22!"
+Value(23) ="Station y : 23!"
+Value(24) ="Station y : 24!"
+Value(25) ="Station y : 25!"
+Value(26) ="Station y : 26!"
+Value(27) ="Station y : 27!"
+Value(28) ="Station y : 28!"
+Value(29) ="Station y : 29!"
+Value(30) ="Station y : 30!"
+Value(31) ="Station y : 31!"
+Value(32) ="Station y : 32!"
+Value(33) ="Station y : 33!"
+Value(34) ="Station y : 34!"
+Value(35) ="Station y : 35!"
+Value(36) ="Station y : 36!"
+Value(37) ="Station y : 37!"
+Value(38) ="Station y : 38!"
+Value(39) ="Station y : 39!"
+Value(40) ="Station y : 40!"
+Value(41) ="Station y : 41!"
+Value(42) ="Station y : 42!"
+Value(43) ="Station y : 43!"
+Value(44) ="Station y: 44!"
+Value(45) ="Station y : 45!"
+Value(46) ="Station y : 46!"
+Value(47) ="Station y: 47!"
+Value(48) ="Station y : 48!"
+Value(49) ="Station y : 49!"
+Value(50) ="Station y : 50!"
+Value(51) ="Station y : 51!"
+Value(52) ="Station y : 52!"
+Value(53) ="Station y : 53!"
+Value(54) ="Station y : 54!"
+Value(55) ="Station y : 55!"
+Value(56) ="Station y : 56!"
+Value(57) ="Station y : 57!"
+Value(58) ="Station y : 58!"
+Value(59) ="Station y : 59!"
+Value(60) ="Station y : 60!"
+Value(61) ="Station y : 61!"
+Value(62) ="Station y : 62!"
+Value(63) ="Station y : 63!"
+Value(64) ="Station y : 64!"
+Value(65) ="Station y : 65!"
+Value(66) ="Station y : 66!"
+Value(67) ="Station y : 67!"
+Value(68) ="Station y : 68!"
+Value(69) ="Station y : 69!"
+Value(70) ="Station y : 70!"
+Value(71) ="Station y : 71!"
+Value(72) ="Station y : 72!"
+Value(73) ="Station y : 73!"
+Value(74) ="Station y : 74!"
+Value(75) ="Station y : 75!"
+Value(76) ="Station y : 76!"
+Value(77) ="Station y : 77!"
+Value(78) ="Station y : 78!"
+Value(79) ="Station y : 79!"
+Value(80) ="Station y : 80!"
+Value(81) ="Station y : 81!"
+Value(82) ="Station y : 82!"
+Value(83) ="Station y : 83!"
+Value(84) ="Station y : 84!"
+Value(85) ="Station y : 85!"
+Value(86) ="Station y : 86!"
+Value(87) ="Station y : 87!"
+Value(88) ="Station y : 88!"
+Value(89) ="Station y : 89!"
+Value(90) ="Station y : 90!"
+Value(91) ="Station y : 91!"
+Value(92) ="Station y : 92!"
+Value(93) ="Station y : 93!"
+Value(94) ="Station y : 94!"
+Value(95) ="Station y : 95!"
+Value(96) ="Station y : 96!"
+Value(97) ="Station y : 97!"
+Value(98) ="Station y : 98!"
+Value(99) ="Station y : 99!"
+Value(100)="Station y : 100!"
+Value(101)="Station y : 101!"
+Value(102)="Station y : 102!"
+Value(103)="Station y : 103!"
+Value(104)="Station y : 104!"
+Value(105)="Station y : 105!"
+Value(106)="Station y : 106!"
+Value(107)="Station y : 107!"
+Value(108)="Station y : 108!"
+Value(109)="Station y : 109!"
+Value(110)="Station y : 110!"
+Value(111)="Station y : 111!"
+Value(112)="Station y : 112!"
+Value(113)="Station y : 113!"
+Value(114)="Station y : 114!"
+Value(115)="Station y : 115!"
+Value(116)="Station y : 116!"
+Value(117)="Station y : 117!"
+Value(118)="Station y : 118!"
+Value(119)="Station y : 119!"
+Value(120)="Station y : 120!"
+Value(121)="Station y : 121!"
+Value(122)="Station y : 122!"
+Value(123)="Station y : 123!"
+Value(124)="Station y : 124!"
+Value(125)="Station y : 125!"
+Value(126)="Station y : 126!"
+Value(127)="Lieu erreur ap. dern. Station"
+Value(128)="Station y : 0"
+Value(129)="Station y : 1"
+Value(130)="Station y : 2"
+Value(131)="Station y : 3"
+Value(132)="Station y : 4"
+Value(133)="Station y : 5"
+Value(134)="Station y : 6"
+Value(135)="Station y : 7"
+Value(136)="Station y : 8"
+Value(137)="Station y : 9"
+Value(138)="Station y : 10"
+Value(139)="Station y : 11"
+Value(140)="Station y : 12"
+Value(141)="Station y : 13"
+Value(142)="Station y : 14"
+Value(143)="Station y : 15"
+Value(144)="Station y : 16"
+Value(145)="Station y : 17"
+Value(146)="Station y : 18"
+Value(147)="Station y : 19"
+Value(148)="Station y : 20"
+Value(149)="Station y : 21"
+Value(150)="Station y : 22"
+Value(151)="Station y : 23"
+Value(152)="Station y : 24"
+Value(153)="Station y : 25"
+Value(154)="Station y : 26"
+Value(155)="Station y : 27"
+Value(156)="Station y : 28"
+Value(157)="Station y : 29"
+Value(158)="Station y : 30"
+Value(159)="Station y : 31"
+Value(160)="Station y : 32"
+Value(161)="Station y : 33"
+Value(162)="Station y : 34"
+Value(163)="Station y : 35"
+Value(164)="Station y : 36"
+Value(165)="Station y : 37"
+Value(166)="Station y : 38"
+Value(167)="Station y : 39"
+Value(168)="Station y : 40"
+Value(169)="Station y : 41"
+Value(170)="Station y : 42"
+Value(171)="Station y  : 43"
+Value(172)="Station y : 44"
+Value(173)="Station y : 45"
+Value(174)="Station y : 46"
+Value(175)="Station y : 47"
+Value(176)="Station y : 48"
+Value(177)="Station y : 49"
+Value(178)="Station y : 50"
+Value(179)="Station y : 51"
+Value(180)="Station y : 52"
+Value(181)="Station y : 53"
+Value(182)="Station y : 54"
+Value(183)="Station y : 55"
+Value(184)="Station y : 56"
+Value(185)="Station y : 57"
+Value(186)="Station y : 58"
+Value(187)="Station y : 59"
+Value(188)="Station y : 60"
+Value(189)="Station y : 61"
+Value(190)="Station y : 62"
+Value(191)="Station y : 63"
+Value(192)="Station y : 64"
+Value(193)="Station y : 65"
+Value(194)="Station y : 66"
+Value(195)="Station y : 67"
+Value(196)="Station y : 68"
+Value(197)="Station y : 69"
+Value(198)="Station y : 70"
+Value(199)="Station y : 71"
+Value(200)="Station y : 72"
+Value(201)="Station y : 73"
+Value(202)="Station y : 74"
+Value(203)="Station y : 75"
+Value(204)="Station y : 76"
+Value(205)="Station y : 77"
+Value(206)="Station y : 78"
+Value(207)="Station y : 79"
+Value(208)="Station y : 80"
+Value(209)="Station y : 81"
+Value(210)="Station y : 82"
+Value(211)="Station y : 83"
+Value(212)="Station y : 84"
+Value(213)="Station y : 85"
+Value(214)="Station y : 86"
+Value(215)="Station y : 87"
+Value(216)="Station y : 88"
+Value(217)="Station y : 89"
+Value(218)="Station y : 90"
+Value(219)="Station y : 91"
+Value(220)="Station y : 92"
+Value(221)="Station y : 93"
+Value(222)="Station y : 94"
+Value(223)="Station y : 95"
+Value(224)="Station y : 96"
+Value(225)="Station y : 97"
+Value(226)="Station y : 98"
+Value(227)="Station y : 99"
+Value(228)="Station y : 100"
+Value(229)="Station y : 101"
+Value(230)="Station y : 102"
+Value(231)="Station y : 103"
+Value(232)="Station y : 104"
+Value(233)="Station y : 105"
+Value(234)="Station y : 106"
+Value(235)="Station y : 107"
+Value(236)="Station y : 108"
+Value(237)="Station y : 109"
+Value(238)="Station y : 110"
+Value(239)="Station y : 111"
+Value(240)="Station y : 112"
+Value(241)="Station y : 113"
+Value(242)="Station y : 114"
+Value(243)="Station y : 115"
+Value(244)="Station y : 116"
+Value(245)="Station y : 117"
+Value(246)="Station y : 118"
+Value(247)="Station y : 119"
+Value(248)="Station y : 120"
+Value(249)="Station y : 121"
+Value(250)="Station y : 122"
+Value(251)="Station y : 123"
+Value(252)="Station y : 124"
+Value(253)="Station y : 125"
+Value(254)="Station y : 126"
+Unit_Diag_Area_End
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fehlerursache
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Bit A.0
+Unit_Diag_Bit(112)="Lieu, cause d'erreur indefinie"
+;
+; Bit A.1
+Unit_Diag_Bit(113)="Erreur inconnue (erreur A.1)"
+;
+; Bit A.2
+Unit_Diag_Bit(114)="Erreur inconnue (erreur A.2)"
+;
+; Bit A.3
+Unit_Diag_Bit(115)="Autre DR cable avec DP2"
+;
+; Bit A.4
+Unit_Diag_Bit(116)="Autre DR cable avec DP3"
+;
+; Bit A.5
+Unit_Diag_Bit(117)="Erreur inconnue (erreur A.5)"
+;
+; Bit A.6
+Unit_Diag_Bit(118)="Cause d'erreur ambigue"
+;
+; Bit A.7
+Unit_Diag_Bit(119)="Coeff. pertes telegr. critique"
+;
+; Bit B.0
+Unit_Diag_Bit(120)="Rupture de ligne signaux A"
+;
+; Bit B.1
+Unit_Diag_Bit(121)="Court-circuit B vers blindage"
+;
+; Bit B.2
+Unit_Diag_Bit(122)="Erreur inconnue (erreur B.2)"
+;
+; Bit B.3
+Unit_Diag_Bit(123)="Court-circuit A vers blindage"
+;
+; Bit B.4
+Unit_Diag_Bit(124)="Rupture de ligne signaux B"
+;
+; Bit B.5
+Unit_Diag_Bit(125)="Erreur inconnue (erreur B.5)"
+;
+; Bit B.6
+Unit_Diag_Bit(126)="Rupture lignes signaux A/B"
+;
+; Bit B.7
+Unit_Diag_Bit(127)="Court-circ. A/B; resist. en trop"
+;
+; Bit C.0
+Unit_Diag_Bit(128)="Segm. desactiv. : zero cont."
+;
+; Bit C.1
+Unit_Diag_Bit(129)="Segm. desactiv. : instable"
+;
+; Bit C.2
+Unit_Diag_Bit(130)="Erreur inconnue (erreur C.2)"
+;
+; Bit C.3
+Unit_Diag_Bit(131)="Erreur inconnue (erreur C.3)"
+;
+; Bit C.4
+Unit_Diag_Bit(132)="Plus de 32 parten. sur segment"
+;
+; Bit C.5
+Unit_Diag_Bit(133)="Partenaire trop eloigne"
+;
+; Bit C.6
+Unit_Diag_Bit(134)="Profond. cascade depassee"
+;
+; Bit C.7
+Unit_Diag_Bit(135)="Autres erreurs detectees"
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+; Prm-Text-Def-List
+PrmText=1
+Text(0)= "ON"
+Text(1)= "OFF"
+EndPrmText
+;
+PrmText=2
+Text(0x1b)= "Segment DP2"
+Text(0x2e)= "Segment DP2, DP3"
+Text(0x41)= "Segment DP2, DP3, DP1"
+Text(0x54)= "Segment DP2, DP3, DP1, PG"
+EndPrmText
+;
+;
+ExtUserPrmData=1 "Recherche topologique DP2"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=2 "Recherche topologique DP3"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=3 "Telegramme diagnostic pour"
+BitArea(0-7) 0x54 0x54,0x41,0x2e,0x1b
+Prm_Text_Ref=2
+EndExtUserPrmData
+;
+;
+; UserPrmData: Length and Preset
+;
+; DPV1_Status_1 = 0x00, DPV1_Status_2 = 0x00, DPV1_Status_3 = 0x08 => Prm_Structure = 1
+;
+Max_User_Prm_Data_Len=10
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08,0x07,0x81,0x00,0x00,0x54,0x00,0x00
+;
+;
+; Einstellung der Diagnoselaenge
+;
+Ext_User_Prm_Data_Ref(7)=3
+;
+;
+; Einstellung Topologieermittlung DP2 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=1
+;
+;
+; Einstellung Topologieermittlung DP3 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=2
+;
+; <Module-Definition-List>
+; 1 Byte A, 0 Byte E
+Module="DR-CfgData" 0x20
+1
+EndModule
+;
+;
+; Ende GSD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ 

@@ -1,0 +1,19 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2023
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Convertisseurs de fréquence ET 200S ICU24, standard et de sécurité
+
+;---------- ET 200S ICU24, Standard-Telegramm 1,   6SL3 244-0SA00-1AA1 ST
+[2366954]
+KatEntryName=ICU24; télégramme standard 1
+InfoText=Module de régulation ET 200S FC, commande via PROFIdrive, démarrage du logiciel de mise en service via Feldbus. Utilisé avec la partie puissance IPM25 ou PM2xx externe; la partie puissance n'est pas configurée dans HW Config; optionnel: Brake Control Modul (uniquement avec IPM25)
+SHORTNAME=ICU24; télégramme standard 1
+
+
+;---------- ET 200S ICU24F, Standard-Telegramm 1,   6SL3 244-0SA01-1AA1 ST
+[2366956]
+KatEntryName=ICU24F; télégramme standard 1
+InfoText=Module de régulation ET 200S FC avec fonctions de sécurité intégrées, commande via PROFIdrive, démarrage du logiciel de mise en service via Feldbus. Utilisé avec la partie puissance IPM25 ou PM2xx externe; la partie puissance n'est pas configurée dans HW Config; Option: Brake Control Modul (uniquement avec IPM25)
+SHORTNAME=ICU24F; télégramme standard 1

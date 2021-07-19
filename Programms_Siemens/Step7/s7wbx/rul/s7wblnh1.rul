@@ -1,0 +1,263 @@
+@DB_TYP SDB3100_H1LNK_CONVERT    V0.01  DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+ALL
+{
+ 	ALL_DATA$LNG	DM||||	# für lokale Zwecke
+	ALL_DATA
+	{
+		PBL_SDB_KENNUNG$NAM		_H||||
+		PBL_SDB_KENNUNG
+		{
+			PBL_SDB_KENNUNG$LNG	BM||||
+			PBL_SDB_KENNUNG_ID	BC|1|||
+			BAUGRUPPENTYP		SM||||
+			SDB_INHALT			SC|0|||
+			UEBERTRAGUNGSATTR	BM|3|||
+			SDB_KENNUNG_RESV	BM|0|||		
+			TSAP_ID_TYP			BM|0|||		# K-Bus/Partyline
+			DEVICE_ID			BM|0|||		# K-Bus/Partyline
+			TSAP_ID1			BM|0xfe|||	# PG-Verbindung			
+			TSAP_ID2			BM|0|||		# Rack/Steckplatz bei AS400, ohne Bedeutung
+			NEXT_STADDR			BM|0|||		# ohne Bedeutung
+			REM_STADDR			BM|0|||		# Steckplatz
+		}
+
+		PBL_SDB_KENNUNG_0C$NAM		_H||||
+		PBL_SDB_KENNUNG_0C
+		{
+			PBL_SDB_KENNUNG_0C$LNG	BM||||
+			PBL_SDB_KENNUNG_0C_ID	BM|0x0C|||
+			PBL_SDB_KENNUNG_DATA	HM||||
+		}
+		PBL_SDB_KENNUNG_0D$NAM		_H||||
+		PBL_SDB_KENNUNG_0D
+		{
+			PBL_SDB_KENNUNG_0D$LNG	BM||||
+			PBL_SDB_KENNUNG_0D_ID	BM|0x0D|||
+			PBL_SDB_KENNUNG_DATA	HM||||
+		}
+		
+		PBL_TCP_BUSPARA$NAM		_O||||
+		PBL_TCP_BUSPARA
+		{
+			PBL_TCP_BUSPARA_ID				BC|5|||
+			PBL_TCP_BUSPARA_RESV			BC|0|||
+			PBL_TCP_BUSPARA$LNG				WM||||
+			# must be optional for modules with not changeable MAC-Addr
+			LOC_MAC_ADDR$NAM		_O||||
+			LOC_MAC_ADDR
+			{
+				LocalMacAddress_ID				WC|0x1001|||
+				LocalMacAddress_Val$LNG			WM||||
+				LocalMacAddress_Val				HM||6|6|6
+			}
+			LocalIPAddress_ID				WC|0x3001|||
+			LocalIPAddress_Val$LNG			WM||||
+			LocalIPAddress_Val				HM||4|4|4
+			LocalSubNetMask_ID				WC|0x3002|||
+			LocalSubNetMask_Val$LNG			WM||||
+			LocalSubNetMask_Val				HM||4|4|4
+			LocalDefaultRouter_ID			WC|0x3003|||
+			LocalDefaultRouter_Val$LNG		WM||||
+			LocalDefaultRouter_Val			HM||4|4|4
+
+			#optional block, needed for IE/PB Link
+			PBL_NET_MEDIUM_DUPLEX$NAM		_O||||
+			PBL_NET_MEDIUM_DUPLEX
+			{
+				# Einstellungen für Netz: Medium und Duplex:
+				NetMediumDuplex_ID				WC|0x1040|||
+				NetMediumDuplex_Val$LNG				WM||||	
+				NetMediumDuplex_Val				DM|8|||	# default = automatische Einstellung
+			}
+
+			IP_ADDRESS_VALIDATION$NAM			_O||||
+			IP_ADDRESS_VALIDATION
+			{
+				IP_ADDRESS_VALIDATION_ID		WC|0x3006|||
+				IP_ADDRESS_VALIDATION_VAL$LNG		WM||||
+				IP_ADDRESS_VALIDATION_VAL		WM||||
+			}
+			
+			IP_DHCP$NAM			_O||||
+			IP_DHCP
+			{
+				IP_DHCP_ID				WC|0x3007|||
+				IP_DHCP_DATA$LNG			WM||||
+				IP_DHCP_DATA$NAM			_M||||
+				IP_DHCP_DATA
+				{
+					IP_DHCP_CLIENT_ID$LNG			WM||||
+					IP_DHCP_CLIENT_ID			AM||0|128|
+					ID_DHCP_RESERVED			BO||||
+				}
+			}
+			
+			# reserved for upload with new parameters
+			Par_BLK_DUMMY1$NAM	_A||||
+			Par_BLK_DUMMY1
+			{
+				Par_BLK_DUMMY1_ID	BM||||
+				Par_BLK_DUMMY1_RESV	BM||||
+				Par_BLK_DUMMY1$LNG	WM||||
+				Par_BLK_DUMMY1_DATA	BA||||
+			}
+		}
+		
+		PBL_ISO_TCP_BUSPARA$NAM		_O||||
+		PBL_ISO_TCP_BUSPARA
+		{
+			PBL_ISO_TCP_BUSPARA_ID					BC|11|||
+			PBL_ISO_TCP_BUSPARA_RESV				BC|0|||
+			PBL_ISO_TCP_BUSPARA$LNG					WM||||
+
+			# must be optional for modules with not changeable MAC-Addr
+			LOC_MAC_ADDR$NAM		_O||||
+			LOC_MAC_ADDR
+			{
+				LocalMacAddress_ID					WC|0x1001|||
+				LocalMacAddress_Val$LNG				WM||||
+				LocalMacAddress_Val					HM||6|6|6
+			}
+
+			PBL_TCP_PART$NAM		_O||||
+			PBL_TCP_PART
+			{
+				LocalIPAddress_ID				WC|0x3001|||
+				LocalIPAddress_Val$LNG			WM||||
+				LocalIPAddress_Val				HM||4|4|4
+				LocalSubNetMask_ID				WC|0x3002|||
+				LocalSubNetMask_Val$LNG			WM||||
+				LocalSubNetMask_Val				HM||4|4|4
+				LocalDefaultRouter_ID			WC|0x3003|||
+				LocalDefaultRouter_Val$LNG		WM||||
+				LocalDefaultRouter_Val			HM||4|4|4
+			}
+
+			#optional block, needed for IE/PB Link
+			PBL_NET_MEDIUM_DUPLEX$NAM		_O||||
+			PBL_NET_MEDIUM_DUPLEX
+			{
+				# Einstellungen für Netz: Medium und Duplex:
+				NetMediumDuplex_ID				WC|0x1040|||
+				NetMediumDuplex_Val$LNG				WM||||	
+				NetMediumDuplex_Val				DM|8|||	# default = automatische Einstellung
+			}
+
+			# reserved for upload with new parameters
+			Par_BLK_DUMMY2$NAM	_A||||
+			Par_BLK_DUMMY2
+			{
+				Par_BLK_DUMMY2_ID	BM||||
+				Par_BLK_DUMMY2_RESV	BM||||
+				Par_BLK_DUMMY2$LNG	WM||||
+				Par_BLK_DUMMY2_DATA	BA||||
+			}
+		}
+
+		PBL_UHRZEIT$NAM			_O||||
+		PBL_UHRZEIT
+		{
+			PBL_UHRZEIT_ID			BC|4|||
+			PBL_UHRZEIT_RESV		BC|0|||
+			PBL_UHRZEIT$LNG			WM||||
+			UHRZEIT_Val				WM|0|||
+		}
+
+		PBL_PRIVATE$NAM _O||||
+		PBL_PRIVATE
+		{
+			PBL_ID_PRIVATE			BC|0xFE|||
+			PBL_ID_PRIVATE_RESV		BC|0|||
+			PBL_PRIVATE$LNG			WM||||
+
+			PBL_PRIV1		# Netzeigenschaften
+			{		
+				PBL_PRIV1_ID		WC|1|||
+				PBL_PRIV1$LNG		WM||||
+					
+				NETID				HM||6|6|6	# AUT_NET_UNIQUE_ID_LB
+				NETNAME				AM||1|24|25	# AUT_NAME
+
+				IP_ACTIV			BM|0|0|1|
+				IP_ROUTER_ACTIV		BM|0|0|1|
+				IP_NET_ID			HM|0h00000000|4|4|4
+				IP_SUBNET_MASK		HM|0h00000000|4|4|4
+				IP_DFT_ROUTER		HM|0h00000000|4|4|4
+				Reserved			BM|0|||	# SDB muß geradzahlige Länge haben
+			}
+
+			RESV_PRV_BLK0$NAM	_A||||
+			RESV_PRV_BLK0
+			{
+				RESV_PRV_ID0		WM||||
+				RESV_PRV_BLK0$LNG	WM||||
+				RESV_PRV_DATA0		BA||||
+			}
+			RESV_PRV_BLK1$NAM	_A||||
+			RESV_PRV_BLK1
+			{
+				RESV_PRV_DATA1		BM||||
+			}
+		}
+
+		PBL_UHRZEIT_VIEWTIME$NAM		_O||||
+		PBL_UHRZEIT_VIEWTIME
+		{
+			PBL_UHRZEIT_VIEWTIME_ID		BC|10|||
+			PBL_UHRZEIT_VIEWTIME_RESV	BC|0|||
+			PBL_UHRZEIT_VIEWTIME$LNG	WM||||
+			UHRZEIT_VIEWTIME_FLAG_Val	WM|0|||
+		}
+				
+		#optional block, needed for IE/PB Link
+		PBL_DS_ROUTING$NAM	_O||||
+		PBL_DS_ROUTING
+		{
+			PBL_DS_ROUTING_ID			BC|13|||
+			PBL_DS_ROUTING_RESV			BC|0|||
+			PBL_DS_ROUTING$LNG			WM||||
+			ds_rout_val					BM|0|||
+			ds_rout_reserved			BM|0|||
+		}
+
+		#optional block, needed for IE/PB Link
+		PBL_STATION_NAME$NAM	_O||||
+		PBL_STATION_NAME
+		{
+			PBL_STATION_NAME_ID			BC|0x0E|||
+			PBL_STATION_NAME_RESV		BC|0|||
+			PBL_STATION_NAME$LNG		WM||||
+			STATION_NAME				AM||1|24|25	# Name der Station
+			STATION_NAME_RESV			BM|0|||	# SDB muß geradzahlige Länge haben
+		}
+
+		PBL_PNIO_MODE$NAM			_O||||
+		PBL_PNIO_MODE
+		{
+			PBL_PNIO_MODE_ID		BC|0xF1|||	# Parameterblock für PNIO-Mode, ID = 0xF1
+			PBL_PNIO_MODE_RESV		BC|0|||
+			PBL_PNIO_MODE$LNG		WM||||		# Länge des ganzen Parameterblocks
+			PBL_PNIO_MODE_Val		BM|2|||		# Range: 0= kein PNIO, 1 = PNIO - Controller, 2 = PNIO - Device
+			PBL_PNIO_MODE_VAL_RESV	BC|0|||		# SDB muß geradzahlige Länge haben
+			PBL_PNIO_UPDATE_TIME	DM|8|||     # IO-Aktualisierungszeit
+		}
+		
+		RESV_ALL_BLK0$NAM	_A||||
+		RESV_ALL_BLK0
+		{
+			RESV_ALL_ID0		BM||||
+			RESV_ALL_RESV0		BM||||
+			RESV_ALL_BLK0$LNG	WM||||
+			RESV_ALL_DATA0		BA||||
+		}
+		RESV_ALL_BLK1$NAM	_A||||
+		RESV_ALL_BLK1
+		{
+			RESV_ALL_DATA1		BM||||
+		}
+	}
+}
+

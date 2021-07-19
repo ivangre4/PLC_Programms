@@ -1,0 +1,4500 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1314817]
+KatEntryName=PS 307 5A
+InfoText=Alimentation externe 120/230 V c.a.:24 V c.c./5 A
+SHORTNAME=PS 307 5A
+[1314818]
+KatEntryName=PS 307 10A
+InfoText=Alimentation externe 120/230 V c.a.:24 V c.c./10 A
+SHORTNAME=PS 307 10A
+[1314819]
+KatEntryName = 6ES7 312-5AC00-0AB0
+InfoText=Mémoire de travail 6 Ko; 0,6 ms/kinst.; DI10/DO6 intégrées; port MPI; pour configuration simple jusqu'à 8 modules
+SHORTNAME=CPU 312IFM
+[1314820]
+KatEntryName = 6ES7 313-1AD00-0AB0
+InfoText=Mémoire de travail 12 Ko; 0,6 ms/kinst.; port MPI; pour configuration simple jusqu'à 8 modules
+SHORTNAME=CPU 313
+[1314821]
+KatEntryName = 6ES7 314-1AE01-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3 ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 314
+[1314923]
+KatEntryName = 6ES7 614-1AH00-0AB3
+InfoText=Mémoire de travail 192 Ko; 0,3 ms/kinst.; 512 DI/O; port MPI
+SHORTNAME=CPU 614
+[1314823]
+KatEntryName = 6ES7 315-1AF00-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,3 ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 315
+[1314824]
+KatEntryName = 6ES7 315-2AF00-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,3ms/kinst.; ports MPI+DP; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 315-2 DP
+[1314857]
+KatEntryName=IM 360 IM S
+InfoText=Coupleur pour unité de base, avec 3 unités d'extension au max.
+SHORTNAME=IM 360
+[1314858]
+KatEntryName=IM 361 IM R
+InfoText=Coupleur pour unité d'extension en liaison avec l'IM360
+SHORTNAME=IM 361
+[1314859]
+KatEntryName=IM 365 IM S-R
+InfoText=Coupleurs pour liaison à une unité d'extension, avec câble de 1m
+SHORTNAME=IM 365
+[1314825]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module de 16 entrées TOR,  24 V, par groupes de 16, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DI16xDC24V
+[1314996]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module de 16 entrées TOR, 24 V, par groupes de 16
+SHORTNAME=DI16xDC24V
+[1315565]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module de 16 entrées TOR, 24 V, par groupes de 16, pour conditions climatiques élargies
+SHORTNAME=DI16xDC24V
+[1315046]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module de 16 entrées TOR, 24 V, par groupes de 16, de type M
+[1314826]
+KatEntryName=SM 321 DI32xDC24V
+InfoText=Module de 32 entrées TOR, 24V, par groupes de 32; également vendu comme module SIPLUS sous le numéro de référence 6AG1 321-1BL00-2AA0 
+SHORTNAME=DI32xDC24V
+[1314827]
+KatEntryName=SM 321 DI16xAC120V
+InfoText=Module de 16 entrées TOR, 120 V c.a., par groupes de 8, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DI16xAC120V
+[1315047]
+KatEntryName=SM 321 DI16xAC120V
+InfoText=Module de 16 entrées TOR,120 V c.a., par groupes de 8
+[1314828]
+KatEntryName=SM 321 DI8xAC230V
+InfoText=Module de 8 entrées TOR 120 V...230 V c.a., par groupes de 2, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DI8xAC230V
+[1315048]
+KatEntryName=SM 321 DI8xAC230V
+InfoText=Module de 8 entrées TOR, 120V...230V c.a., par groupes de 2; également vendu comme module SIPLUS sous le numéro de référence 6AG1 321-1FF01-2AA0 
+[1314831]
+KatEntryName=SM 322 DO8xDC24V/2A
+InfoText=Module de 8 sorties TOR 24 V/2 A, par groupes de 4, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DO8xDC24V/2A
+[1314997]
+KatEntryName=SM 322 DO8xDC24V/2A
+InfoText=Module de 8 entrées TOR, 24V/2A, par groupes de 4; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1BF01-4AA0 
+SHORTNAME=DO8xDC24V/2A
+[1314832]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module de 16 sorties TOR 24 V/0.5 A, par groupes de 8, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DO16xDC24V/0.5A
+[1314998]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module de 16 sorties TOR, 24V/0.5A, par groupes de 8; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1BH01-2AA0 
+SHORTNAME=DO16xDC24V/0.5A
+[1315566]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module de 16 sorties TOR, 24 V/0,5 A, par groupes de 8, pour conditions climatiques élargies
+SHORTNAME=DO16xDC24V/0.5A
+[1314833]
+KatEntryName=SM 322 DO32xDC24V/0.5A
+InfoText=Module de 32 sorties TOR 24V/0.5A, par groupes de 8; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1BL00-2AA0 
+SHORTNAME=DO32xDC24V/0.5A
+[1314834]
+KatEntryName=SM 322 DO16xAC120V/0,5A
+InfoText=Module de 16 sorties TOR,  120 V c.a./0.5 A, par groupes de 4, fusibles, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DO16xAC120V/0.5A
+[1315049]
+KatEntryName=SM 322 DO16xAC120V/0,5A
+InfoText=Module de 16 sorties TOR, 120 V c.a/0.5 A, par groupes de 4, fusibles
+[1314835]
+KatEntryName=SM 322 DO8xAC230V/2A
+InfoText=Module de 8 sorties TOR, 120...230 V c.a./1A, par groupes de 4, fusibles, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DO8xAC230V/2A
+[1314836]
+KatEntryName=SM 322 DO8xAC230V/2A
+InfoText=Module de 8 sorties TOR, 120...230V AC/1A, par groupes 4, fusible; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1FF01-2AA0 
+SHORTNAME=DO8xAC230V/2A
+[1314837]
+KatEntryName=SM 322 DO8xRel. AC230V
+InfoText=Module de 8 sorties TOR  à relais 30 V c.c./2A, 230 V c.a./2A, par groupes de 2, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=DO8xRelais
+[1314999]
+KatEntryName=SM 322 DO8xRel. AC230V
+InfoText=Module de 8 sorties TOR à relais 24 V c.c./2 A, 230 V c.a./2 A, par groupes de 2
+SHORTNAME=DO8xRelais
+[1315567]
+KatEntryName=SM 322 DO8xRel. AC230V
+InfoText=Module de 8 sorties TOR à relais 24 V c.c./2 A, 230 V c.a./2 A, par groupes de 2, pour conditions climatiques élargies
+SHORTNAME=DO8xRelais
+[1314838]
+KatEntryName=SM 322 DO16xRel. AC120V
+InfoText=Module de 16 sorties TOR à relais 24 V c.c./2 A, 120 V c.a./2 A, par groupes de 16
+SHORTNAME=DO16xRelais
+[1314842]
+KatEntryName=SM 323 DI8/DO8x24V/0,5A
+InfoText=Module de 8 entrées et de 8 sorties TOR, 24 V/0.5 A
+SHORTNAME=DI8/DO8x24V/0.5A
+[1314843]
+KatEntryName=SM 323 DI16/DO16x24V/0,5A
+InfoText=Module de 16 entrées et de 16 sorties TOR, 24 V/0.5 A
+SHORTNAME=DI16/DO16x24V/0.5A
+[1314844]
+KatEntryName=SM 331 AI2x12Bit
+InfoText=Module de 2 entrées analogiques, 12...14 bits, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AI2x12Bit
+[1315568]
+KatEntryName=SM 331 AI2x12Bit
+InfoText=Module de 2 entrées analogiques, 12...14 bits, pour conditions climatiques élargies
+SHORTNAME=AI2x12Bit
+[1316110]
+KatEntryName=SM 331 AI2x12Bit
+InfoText=Module de 2 entrées analogiques, 12...14 bits, pour conditions climatiques élargies
+SHORTNAME=AI2x12Bit
+[1314845]
+KatEntryName=SM 331 AI8x12Bit
+InfoText=Module de 8 entrées analogiques, 12...14 bits, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AI8x12Bit
+[1314847]
+KatEntryName=SM 331 AI8xTC/4xRTD, Ex
+InfoText=Module de 8 entrées analogiques AI8xTC/4xRTD, 15bits, [EEx ib]
+SHORTNAME=AI8xTC/4xRTD, Ex
+[1315575]
+KatEntryName=Appareil de terrain HART
+InfoText=Appareil de terrain HART
+SHORTNAME=Appareil de terrain HART
+[1314848]
+KatEntryName=SM 332 AO2x12Bit
+InfoText=Module de 2 sorties analogiques, 12 bits, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AO2x12Bit
+[1314849]
+KatEntryName=SM 332 AO4x12Bit
+InfoText=Module de 4 sorties analogiques, 12 bits, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AO4x12Bit
+[1314851]
+KatEntryName=SM 334 AI4/AO2x8/8Bit
+InfoText=Module de 4 entrées et de 2 sorties analogiques, 8 bits, sans séparation galvanique, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AI4/AO2x8/8Bit
+[1314852]
+KatEntryName=SM 335 AI4/AO4x14/12Bit
+InfoText=Module de 4 entrées analogiques, 14 bits, et de 4 sorties analogiques, 12 bits, pas prévu pour une configuration avec modules de bus actifs
+SHORTNAME=AI4/AO4x14/12Bit
+[1315518]
+KatEntryName=SM 334 AI4/AO2
+InfoText=Module d'entrées /sorties analogiques AI4/12Bit+AO2/12Bit; également vendu comme module SIPLUS sous le numéro de référence 6AG1 334-0KE00-2AB0 
+SHORTNAME=AI4/AO2
+;[1315003]
+;KatEntryName=CP342-5
+;InfoText=CP pour PROFIBUS : Protocole DP, interface SEND-RECEIVE et fonctions S7
+[1314860]
+KatEntryName=DM 370 DUMMY
+InfoText=Module de réservation, pas prévu pour une configuration avec modules de bus actifs, 16 octets de données utiles
+SHORTNAME=DM 370
+[1315504]
+KatEntryName=DM 370 DUMMY
+InfoText=Module de réservation, pas prévu pour une configuration avec modules de bus actifs, 0 octets de données utiles
+SHORTNAME=DM 370
+[1315011]
+KatEntryName=DM 370 DUMMY
+InfoText=Module de réservation, 16 octets de données utiles
+SHORTNAME=DM 370
+[1315505]
+KatEntryName=DM 370 DUMMY
+InfoText=Module de réservation, 0 octet de données utiles
+SHORTNAME=DM 370
+[1314853]
+KatEntryName=FM 356-3
+InfoText=Module technologique personnalisable M7 80386, 512 Ko, RS232, 64 Ko SRAM
+SHORTNAME=FM 356-3
+[1314854]
+KatEntryName=FM 356-3
+InfoText=Module technologique personnalisable M7 80386, 2 Ko, RS232, 64 Ko SRAM
+SHORTNAME=FM 356-3
+[1314861]
+KatEntryName=EXM 378-2
+InfoText=Module d'extension M7 pour 2 cartouches interface
+SHORTNAME=EXM 378-2
+[1314862]
+KatEntryName=EXM 378-3
+InfoText=Module d'extension M7 pour 3 autres cartouches interface, à utiliser avec l'EXM378-2
+SHORTNAME=EXM 378-3
+[1314863]
+KatEntryName=MSM 378
+InfoText=Module mémoire de masse M7, FD 3,5"/1,44 Mo, HD
+SHORTNAME=MSM 378
+[1314928]
+KatEntryName=IF 961-DIO
+InfoText=Cartouche interface M7 à 8 entrées et 8 sorties TOR, DI8/DO8, 24 V
+SHORTNAME=IF 961-DIO
+[1314929]
+KatEntryName=IF 961-AIO
+InfoText=Cartouche interface M7 avec entrées et sorties analogiques, AI4/AO2, +/-10 V, +/-20 mA
+SHORTNAME=IF 961-AIO
+[1314932]
+KatEntryName=IF 962-VGA
+InfoText=Cartouche interface M7, moniteur VGA et clavier
+SHORTNAME=IF 962-VGA
+[1315519]
+KatEntryName=IF 962-VGA
+InfoText=Cartouche interface M7, moniteur VGA et clavier
+SHORTNAME=IF 962-VGA
+[1314934]
+KatEntryName=IF 962-COM
+InfoText=Cartouche interface M7  2 x RS232C
+SHORTNAME=IF 962-COM
+[1314935]
+KatEntryName=IF 962-LPT
+InfoText=Cartouche interface M7 Centronics
+SHORTNAME=IF 962-LPT
+[1314937]
+KatEntryName=IF 963-TTY
+InfoText=IF963 Cartouche interface RS20mA TTY, pour M7/CP441
+SHORTNAME=IF 963-TTY
+[1314936]
+KatEntryName=IF 963-RS232
+InfoText=IF963 Cartouche interface RS232C, pour CP441
+SHORTNAME=IF 963-RS232
+[1314938]
+KatEntryName=IF 963-X27
+InfoText=IF963 Cartouche interface RS422/485, pour CP441
+SHORTNAME=IF 963-X27
+[1314939]
+KatEntryName=IF 964-DP
+InfoText=Cartouche interface M7 PROFIBUS-DP, 12 Mbauds
+SHORTNAME=IF 964-DP
+[1315813]
+KatEntryName=IF 964-DP
+InfoText=Cartouche interface PROFIBUS-DP, 12 Mbauds
+SHORTNAME=IF 964-DP
+[1315055]
+KatEntryName=CP 1401
+InfoText=Cartouche interface M7 Ethernet (H1), pour DOS
+SHORTNAME=CP 1401
+[1315198]
+KatEntryName=CP 1401
+InfoText=Cartouche interface M7 Ethernet (H1), avec protocole TCP/IP
+SHORTNAME=CP 1401
+[1314924]
+KatEntryName=6ES7 623-1AE00-0AE3
+InfoText=Système intégré compact; OP5+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 623
+[1315592]
+KatEntryName=6ES7 623-1AE01-0AE3
+InfoText=Système intégré compact; OP5+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 623
+[1315526]
+KatEntryName=6ES7 623-1CE00-0AE3
+InfoText=Système intégré compact; OP5+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 623/A
+[1315600]
+KatEntryName=6ES7 623-1CE01-0AE3
+InfoText=Système intégré compact; OP5+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 623/A
+[1315527]
+KatEntryName=6ES7 626-1CG00-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/A
+[1315603]
+KatEntryName=6ES7 626-1CG01-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/A
+[1315528]
+KatEntryName=AI4/AO4 12Bit
+InfoText=Entrées/sorties analogiques  AI4+AA4 12Bit
+SHORTNAME=C7 AI4/AO4 12Bit
+[1314925]
+KatEntryName=6ES7 624-1AE00-0AE3
+InfoText=Système intégré compact; OP15+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 624
+[1315593]
+KatEntryName=6ES7 624-1AE01-0AE3
+InfoText=Système intégré compact; OP15+CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 624
+[1314926]
+KatEntryName=6ES7 626-1AG00-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626
+[1315594]
+KatEntryName=6ES7 626-1AG01-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626
+[1315602]
+KatEntryName=6ES7 626-1AG02-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626
+[1314927]
+KatEntryName=6ES7 626-2AG00-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 128Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626-DP
+[1315595]
+KatEntryName=6ES7 626-2AG01-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 128Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626-DP
+[1315604]
+KatEntryName=6ES7 626-2AG02-0AE3
+InfoText=Système intégré compact; OP25+CPU avec une mémoire de travail de 128Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626-DP
+[1315588]
+KatEntryName=6ES7 633-1AF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633
+[1315589]
+KatEntryName=6ES7 634-1AF00-0AE3
+InfoText=Système intégré compact; OP17+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 634
+[1315601]
+KatEntryName=6ES7 633-1CF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633/A
+[1315605]
+KatEntryName=6ES7 634-1CF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 634/A
+[1315596]
+KatEntryName=6ES7 633-2AF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633-DP
+[1315598]
+KatEntryName=6ES7 634-2AF00-0AE3
+InfoText=Système intégré compact; OP15C+CPU avec une mémoire de travail de 48Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 634-DP
+[1315597]
+KatEntryName=6ES7 633-2BF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec une mémoire de travail de 64Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633-DP
+[1315599]
+KatEntryName=6ES7 634-2BF00-0AE3
+InfoText=Système intégré compact; OP17+CPU avec une mémoire de travail de 64Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 634-DP
+[1314940]
+KatEntryName=C7-CPU 623
+InfoText=CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 623
+[1315610]
+KatEntryName=C7-CPU 623
+InfoText=CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+[1315618]
+KatEntryName=C7-CPU 623/A
+InfoText=CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 623/A
+[1314941]
+KatEntryName=C7-CPU 626
+InfoText=CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626
+[1315612]
+KatEntryName=C7-CPU 626
+InfoText=CPU avec une mémoire de travail de 96Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626
+[1315620]
+KatEntryName=C7-CPU 626
+InfoText=CPU avec une mémoire de travail de 96 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626
+[1315621]
+KatEntryName=C7-CPU 626/A
+InfoText=CPU avec une mémoire de travail de 96 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626/A
+[1314942]
+KatEntryName=C7-CPU+DP
+InfoText=CPU avec une mémoire de travail de 128 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626-DP
+[1315613]
+KatEntryName=C7-CPU+DP
+InfoText=CPU avec une mémoire de travail de 128 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626-DP
+[1315622]
+KatEntryName=C7-CPU+DP
+InfoText=CPU avec une mémoire de travail de 128 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626-DP
+[1315606]
+KatEntryName=C7-CPU 633
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633
+[1315607]
+KatEntryName=C7-CPU 634
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634
+[1315619]
+KatEntryName=C7-CPU 633/A
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633/A
+[1315623]
+KatEntryName=C7-CPU 634/A
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4 intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634/A
+[1315614]
+KatEntryName=C7-CPU 633DP
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633-DP
+[1315616]
+KatEntryName=C7-CPU 634DP
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  ports MPI+DP; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634-DP
+[1315615]
+KatEntryName=C7-CPU 633DP
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633-DP
+[1315617]
+KatEntryName=C7-CPU 634DP
+InfoText=CPU avec une mémoire de travail de 48 Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634-DP
+[1314944]
+KatEntryName=IM S
+InfoText=Raccordement pour 3 châssis d'extension max.
+SHORTNAME=C7 IM 360
+[1314943]
+KatEntryName=DI16/DO16x24V/0,5A
+InfoText=Entrées/sorties TOR DI16 24 V + DO16 24 V/0,5 A
+SHORTNAME=C7 DI/O16x24V/0.5A
+[1316062]
+KatEntryName=C7 Module d'entrées/sorties
+InfoText=C7 Module d'entrées/sorties DI16/DO16+4AI/4AO+4UI pour l'extension des C7-623/P à C7-626/P, C7-626/P DP, C7-633, C7-634
+SHORTNAME=C7 DI/O16x24V/0.5A
+[1314945]
+KatEntryName=AI4/AO1/DI4
+InfoText=Entrées/sorties analogiques  AI4+AO1+ entrées TOR universelles DI4
+SHORTNAME=C7 AI4/AO1/DI4
+[1315624]
+KatEntryName=AI4/AO4/DI4
+InfoText=Entrées/sorties analogiques  AI4+AO4+ entrées TOR universelles DI4
+SHORTNAME=C7 AI4/AO4/DI4
+[1316063]
+KatEntryName=C7 Module d'entrées/sorties
+InfoText=C7 Module d'entrées/sorties DI16/DO16+4AI/4AO+4UI pour l'extension des C7-623/P à C7-626/P, C7-626/P DP, C7-633, C7-634
+SHORTNAME=C7 AI4/AO4/DI4
+[1314865]
+KatEntryName=UR2
+InfoText=Châssis universel, 9 emplacements, ne peut être utilisé avec modules d'alimentation redondants
+SHORTNAME=UR2
+[1315547]
+KatEntryName=UR2
+InfoText=Châssis universel, 9 emplacements
+[1314866]
+KatEntryName=UR1
+InfoText=Châssis universel, 18 emplacements, ne peut être utilisé avec modules d'alimentation redondants
+SHORTNAME=UR1
+[1315548]
+KatEntryName=UR1
+InfoText=Châssis universel, 18 emplacements
+[1314867]
+KatEntryName=CR2
+InfoText=Châssis de base, 18 emplacements, 2 segments (10+8), ne peut être utilisé avec modules d'alimentation redondants
+SHORTNAME=CR18/2
+[1315549]
+KatEntryName=CR2
+InfoText=Châssis de base, 18 emplacements, 2 segments (10+8)
+[1314868]
+KatEntryName=ER2
+InfoText=Châssis d'extension, 9 emplacements, seulement pour modules SM (bus P), ne peut être utilisé avec modules d'alimentation redondants
+SHORTNAME=ER2
+[1315550]
+KatEntryName=ER2
+InfoText=Châssis d'extension, 9 emplacements, seulement pour modules SM (bus P)
+[1314869]
+KatEntryName=ER1
+InfoText=Châssis d'extension, 18 emplacements, seulement pour modules SM (bus P), ne peut être utilisé avec modules d'alimentation redondants
+SHORTNAME=ER1
+[1315551]
+KatEntryName=ER1
+InfoText=Châssis d'extension, 18 emplacements, seulement pour modules SM (bus P)
+[1314870]
+KatEntryName=PS 405 4A
+InfoText=Alimentation 24 V/4 A c.c.
+SHORTNAME=PS 405 4A
+[1314871]
+KatEntryName=PS 405 10A
+InfoText=Alimentation 24 V/10 A c.c.
+SHORTNAME=PS 405 10A
+[1314872]
+KatEntryName=PS 405 20A
+InfoText=Alimentation 24 V/20 A c.c.
+SHORTNAME=PS 405 20A
+[1314873]
+KatEntryName=PS 407 4A
+InfoText=Alimentation 120/230 V/4 A c.a.
+SHORTNAME=PS 407 4A
+[1314874]
+KatEntryName=PS 407 10A
+InfoText=Alimentation 120/230 V/10 A c.a.
+SHORTNAME=PS 407 10A
+[1314875]
+KatEntryName=PS 407 20A
+InfoText=Alimentation 120/230 V/20 A c.a.
+SHORTNAME=PS 407 20A
+[1315545]
+KatEntryName=PS 407 10A
+InfoText=Alimentation 120/230 V/10 A c.a. module d'alimentation standard
+[1315546]
+KatEntryName=PS 407 10A
+InfoText=Alimentation 120/230 V/10 A c.a. module d'alimentation redondant
+SHORTNAME=PS 407 10A
+[1314876]
+KatEntryName = 6ES7 412-1XF00-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI
+SHORTNAME=CPU 412-1
+[1315056]
+KatEntryName = 6ES7 413-1XG00-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI
+SHORTNAME=CPU 413-1
+[1314877]
+KatEntryName = 6ES7 413-2XG00-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; ports MPI et DP
+SHORTNAME=CPU 413-2 DP
+[1314878]
+KatEntryName = 6ES7 414-1XG00-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; port MPI
+SHORTNAME=CPU 414-1
+[1314879]
+KatEntryName = 6ES7 414-2XG00-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; ports MPI et DP
+SHORTNAME=CPU 414-2 DP
+[1314880]
+KatEntryName = 6ES7 416-1XJ00-0AB0
+InfoText=Mémoire de travail 512 Ko; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; port MPI
+SHORTNAME=CPU 416-1
+[1315500]
+KatEntryName = 6ES7 416-1XJ01-0AB0
+InfoText=Mémoire de travail 512 Ko; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; port MPI; multicomputing
+SHORTNAME=CPU 416-1
+[1315585]
+KatEntryName = 6ES7 416-1XJ02-0AB0
+InfoText=Mémoire de travail 512 Ko; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; port MPI; multicomputing
+[1315501]
+KatEntryName = 6ES7 416-2XL00-0AB0
+InfoText=Mémoire de travail 1,6 Ko; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; ports MPI et DP; multicomputing
+SHORTNAME=CPU 416-2 DP
+[1315587]
+KatEntryName = 6ES7 416-2XL01-0AB0
+InfoText=Mémoire de travail 1,6 Ko; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; ports MPI et DP; multicomputing
+[1314883]
+KatEntryName=DI16xUC 120/230V
+InfoText=Module d'entrées TOR DI16, UC 120/230V, par groupes de 4
+SHORTNAME=DI16xUC 120/230V
+[1314881]
+KatEntryName=DI32xDC 24V
+InfoText=Module d'entrées TOR DI32, DC 24V, par groupes de 32
+SHORTNAME=DI32xDC 24V
+[1316111]
+KatEntryName=DI32xDC 24V
+InfoText=Module d'entrées TOR DI32, DC 24V, par groupes de 32
+SHORTNAME=DI32xDC 24V
+[1314882]
+KatEntryName=DI32xUC 120V
+InfoText=Module d'entrées TOR DI32, UC 120V, par groupes de 8
+SHORTNAME=DI32xUC 120V
+[1314884]
+KatEntryName=DI16xUC 24/60V alarme
+InfoText=Module d'entrées TOR DI16, UC 24..60V, par groupes de 1, alarme de processus et de diagnostic
+SHORTNAME=DI16xUC 24/60V alarme
+[1314885]
+KatEntryName=DO16xDC 24V/2A
+InfoText=Module de 16 sorties TOR, 24 V/2 A, par groupes de 8
+SHORTNAME=DO16xDC 24V/2A
+[1314886]
+KatEntryName=DO32xDC 24V/0,5A
+InfoText=Module de 32 sorties TOR, 24 V/0,5 A, par groupes de 32
+SHORTNAME=DO32xDC24V/0.5A
+[1314887]
+KatEntryName=DO8xAC 120/230V/5A
+InfoText=Module de 8 sorties TOR, 120/230 V c.a./5 A, par groupes de 1
+SHORTNAME=DO8xAC120/230V/5A
+[1314888]
+KatEntryName=DO16xAC 120/230V/2A
+InfoText=Module de 16 sorties TOR, 120/230 V c.a./2 A, par groupes de 4
+SHORTNAME=DO16xAC120/230V/2A
+[1315033]
+KatEntryName=SM 423 SIM
+InfoText=Module de simulation TOR DI32/DO32
+SHORTNAME=SM 423 SIM
+[1314891]
+KatEntryName=AI8x13Bit
+InfoText=Module de 8 entrées analogiques, 13 bits, temps d'intégration 16,7/20 ms
+SHORTNAME=AI8x13Bit
+[1314892]
+KatEntryName=AI8x14Bit
+InfoText=Module de 8 entrées analogiques, 14 bits, temps d'intégration 16,7/20 ms; linéarisation (RTD/TC)
+SHORTNAME=AI8x14Bit
+[1314893]
+KatEntryName=AI8x14Bit
+InfoText=Module de 8 entrées analogiques, 14 bits, temps de conversion 10 us
+SHORTNAME=AI8x14Bit
+[1314894]
+KatEntryName=AI16x16Bit
+InfoText=Module de 16 entrées analogiques, 16 bits, temps d'intégration 16,7/20 ms; linéarisation (RTD/TC), diagnostic
+SHORTNAME=AI16x16Bit
+[1314895]
+KatEntryName=AO8x13Bit
+InfoText=Module de 8 sorties analogiques, 13 bits, temps de conversion 420 us, (1..5V, 4..20mA), 300 us (0-10V, 0-20mA)
+SHORTNAME=AO8x13Bit
+[1314896]
+KatEntryName=AI8/AO4x12Bit
+InfoText=Module de 8 entrées et 4 sorties analogiques, 12 bits
+SHORTNAME=AI8/AO4x12Bit
+[1314909]
+KatEntryName=IM 460-0
+InfoText=Coupleur d'extension (émission), 5m, sans transm. tension d'alim., avec bus K
+SHORTNAME=IM 460-0
+[1314910]
+KatEntryName=IM 460-1
+InfoText=Coupleur d'extension (émission), 1,5m , avec transm. tension d'alim. de 5 V, sans bus K
+SHORTNAME=IM 460-1
+[1314911]
+KatEntryName=IM 460-3
+InfoText=Coupleur d'extension (émission), 100 m, sans transm. tension d'alim., avec bus K
+SHORTNAME=IM 460-3
+[1314912]
+KatEntryName=IM 461-0
+InfoText=Coupleur d'extension (réception), 5 m, sans transm. tension d'alim., avec bus K
+SHORTNAME=IM 461-0
+[1314913]
+KatEntryName=IM 461-1
+InfoText=Coupleur d'extension (réception), 1,5 m, avec transm. tension d'alim. de 5 V, sans bus K
+SHORTNAME=IM 461-1
+[1314914]
+KatEntryName=IM 461-3
+InfoText=Coupleur d'extension (réception), 100 m, sans transm. tension d'alim., avec bus K
+SHORTNAME=IM 461-3
+[1314915]
+KatEntryName=IM 463-2
+InfoText=Coupleur d'extension (émission), 600 m, pour raccordement du châssis d'extension S5 à un IM314
+SHORTNAME=IM 463-2
+;[1314916]
+;KatEntryName=IM 467
+;InfoText=Coupleur maître DP
+[1314917]
+KatEntryName=S5-ADAPTER
+InfoText=Boîtier d'adaptation pour modules S5
+SHORTNAME=S5-ADAPTER
+[1314890]
+KatEntryName=IM 464-1
+InfoText=Module de base S7-400, TOR, 128 voies
+SHORTNAME=IM 464-1
+[1314906]
+KatEntryName=FM 456-4
+InfoText=Module technologique personnalisable M7 avec 486 DX4/33, 2 cartouches interface enfichables
+[1314908]
+KatEntryName=FM 456-4
+InfoText=Module technologique personnalisable M7 avec 486 DX4/100, 2 cartouches interface enfichables
+[1314918]
+KatEntryName=EXM 478
+InfoText=Module d'extension M7 pour 3 cartouches interface
+SHORTNAME=EXM 478
+[1314920]
+KatEntryName=ATM 478
+InfoText=Boîtier d'adaptation M7 AT pour 1 carte AT (ISA) au format court
+SHORTNAME=ATM478
+[1314919]
+KatEntryName=MSM 478
+InfoText=Module mémoire de masse M7 FD 3.5 /1,44 Mo, HD
+SHORTNAME=MSM 478
+[1314946]
+KatEntryName=AI-300
+InfoText=Modules d'entrées analogiques
+SHORTNAME=AI-300
+[1314947]
+KatEntryName=AI/AO-300
+InfoText=Module d'entrées et de sorties analogiques
+SHORTNAME=AIO-300
+[1314948]
+KatEntryName=AI/AO-300
+InfoText=Modules d'entrées/sorties analogiques
+SHORTNAME=AIO-300
+[1314949]
+KatEntryName=AO-300
+InfoText=Modules de sorties analogiques
+SHORTNAME=AO-300
+[1314950]
+KatEntryName=CPU-300
+InfoText=Unités centrales pour  S7-300 et M7-300
+SHORTNAME=S7 CPU-300
+[1315743]
+KatEntryName=CPU 312 IFM
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU312 IFM
+[1315744]
+KatEntryName=CPU 313
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU313
+[1315745]
+KatEntryName=CPU 314
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU314
+[1315746]
+KatEntryName=CPU 314 IFM
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU314 IFM
+[1315747]
+KatEntryName=CPU 315
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU315
+[1315748]
+KatEntryName=CPU 315-2 DP
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU315-2 DP
+[1315749]
+KatEntryName=CPU 316
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU316
+[1315750]
+KatEntryName=CPU 316-2 DP
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU316-2 DP
+[1315751]
+KatEntryName=CPU 318-2
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU318-2
+[1315752]
+KatEntryName=CPU M7
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU M7
+[1315753]
+KatEntryName=CPU 614
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU614
+[1314951]
+KatEntryName=DI-300
+InfoText=Modules d'entrées TOR
+SHORTNAME=DI-300
+[1314952]
+KatEntryName=DI/DO-300
+InfoText=Modules d'entrées et de sorties TOR
+SHORTNAME=DIO-300
+[1314953]
+KatEntryName=DO-300
+InfoText=Modules de sorties TOR
+SHORTNAME=DO-300
+[1315031]
+KatEntryName=Modules spéciaux 300
+InfoText=Modules spéciaux, comme par exemple modules de réservation
+SHORTNAME=DM-300
+[1314954]
+KatEntryName=IMR-300
+SHORTNAME=IMR-300
+InfoText =
+[1314955]
+KatEntryName=IMS-300
+SHORTNAME=IMS-300
+InfoText =
+[1314956]
+KatEntryName=IMSR-300
+SHORTNAME=IMSR-300
+InfoText =
+[1314957]
+KatEntryName=PS-300
+InfoText=Modules d'alimentation pour S7-300
+SHORTNAME=PS-300
+[1314958]
+KatEntryName=AI-400
+InfoText=Modules d'entrées analogiques
+SHORTNAME=AI-400
+[1314959]
+KatEntryName=AI/AO-400
+InfoText=Modules d'entrées et de sorties analogiques
+SHORTNAME=AIO-400
+[1314960]
+KatEntryName=AO-400
+InfoText=Modules de sorties analogiques
+SHORTNAME=AO-400
+[1314961]
+KatEntryName=CPU-400
+InfoText=Unités centrales pour S7-400 et M7-400
+SHORTNAME=S7 CPU-400
+[1315758]
+KatEntryName=CPU 412-1
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 412-1
+[1315759]
+KatEntryName=CPU 413-1
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 413-1
+[1315760]
+KatEntryName=CPU 413-2 DP
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 413-2 DP
+[1315761]
+KatEntryName=CPU 414-1
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 414-1
+[1315762]
+KatEntryName=CPU 414-2 DP
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 414-2 DP
+[1315763]
+KatEntryName=CPU 416-1
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 416-1
+[1315764]
+KatEntryName=CPU 416-2 DP
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 416-2 DP
+[1315765]
+KatEntryName=CPU 417-4
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU 417-4
+[1315766]
+KatEntryName=CPU M7
+
+; - RQ 136288
+InfoText=Unités centrales de type CPU M7
+[1314962]
+KatEntryName=DI-400
+InfoText=Modules d'entrées TOR
+SHORTNAME=DI-400
+[1314963]
+KatEntryName=DI/DO-400
+InfoText=Modules d'entrées et de sorties TOR
+SHORTNAME=DIO-400
+[1314964]
+KatEntryName=DO-400
+InfoText=Modules de sorties TOR
+SHORTNAME=DO-400
+[1315032]
+KatEntryName=PM4-400
+SHORTNAME=DM-400
+InfoText =
+[1314965]
+KatEntryName=IMR-400
+SHORTNAME=IMR-400
+InfoText =
+[1314966]
+KatEntryName=IMS-400
+SHORTNAME=IMS-400
+InfoText =
+[1315638]
+KatEntryName=PS-400
+InfoText=Modules d'alimentation pour S7-400
+[1314968]
+SHORTNAME=STATION
+KatEntryName = StationAT
+InfoText =
+[1314969]
+KatEntryName=SIMATIC 300
+
+; - ARTS 124488
+InfoText=Modules pour SIMATIC S7-300, M7-300 et C7 (configuration centralisée)
+SHORTNAME=SIMATIC 300
+[1314970]
+KatEntryName=SIMATIC 400
+InfoText=Modules pour SIMATIC S7-400 et M7-400 (configuration centralisée)
+SHORTNAME=SIMATIC 400
+[1314971]
+KatEntryName=PROFIBUS-DP
+InfoText=Esclaves PROFIBUS-DP pour SIMATIC S7, M7 et C7 (configuration décentralisée)
+ 
+[1314981]
+KatEntryName =
+InfoText =
+[1314972]
+KatEntryName =
+InfoText =
+[1314973]
+KatEntryName =
+InfoText =
+[1314980]
+KatEntryName=RACK-300
+InfoText=Profilé support pour SIMATIC S7-300
+[1314974]
+KatEntryName=Profilé support
+InfoText=Existe en plusieurs longueurs
+SHORTNAME=UR
+[1314976]
+KatEntryName =
+InfoText =
+[1314977]
+KatEntryName =
+InfoText =
+[1314978]
+KatEntryName =
+InfoText =
+[1314979]
+KatEntryName=IF-SUBMODULE
+InfoText=Cartouches interface pour SIMATIC M7
+[1314982]
+KatEntryName =
+InfoText =
+[1314983]
+KatEntryName=Maître DP
+SHORTNAME=Maître DP
+InfoText =
+[1314984]
+KatEntryName=Esclave DP
+SHORTNAME=DP-Slave
+InfoText =
+[1314985]
+KatEntryName=Esclave S7
+InfoText =
+[1314986]
+KatEntryName=ET 200M
+InfoText=Station de périphérie modulaire dotée du degré de protection IP 20 avec modules S7-300
+SHORTNAME=ET 200M
+[1315026]
+KatEntryName=IM 153
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153
+[1314987]
+KatEntryName=ETER
+SHORTNAME=ETER
+InfoText =
+[1314988]
+KatEntryName=Autres appareils de terrain
+InfoText=Appareils de terrain définis comme esclave DP dans un fichier GSD
+[1314989]
+KatEntryName=Maître PROFIBUS
+SHORTNAME=DP
+InfoText =
+[1315784]
+SHORTNAME=DP
+[1315837]
+SHORTNAME=DP
+[1315838]
+SHORTNAME=DP
+[1315839]
+SHORTNAME=DP
+[1315840]
+SHORTNAME=DP
+[1315841]
+SHORTNAME=DP
+[1315787]
+SHORTNAME=DP
+[1315842]
+SHORTNAME=DP
+[1315946]
+SHORTNAME=DP
+[1316113]
+SHORTNAME=DP
+[1315786]
+SHORTNAME=DP
+[1315843]
+SHORTNAME=DP
+[1314990]
+KatEntryName=IM 153
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153
+[1315030]
+KatEntryName=ET_ER
+InfoText =
+[1314991]
+KatEntryName=MODULE-300
+InfoText =
+[1314992]
+KatEntryName=MODULE-400
+InfoText =
+[1314993]
+KatEntryName=RACK-400
+InfoText=Châssis pour S7-400
+[1314994]
+KatEntryName =
+InfoText =
+[1314995]
+KatEntryName =
+InfoText =
+[1315013]
+KatEntryName=IF-PROCESS
+SHORTNAME=IF-PROCESS
+InfoText =
+[1315014]
+KatEntryName=IF-SYSTEM
+SHORTNAME=IF-SYSTEM
+InfoText =
+[1315015]
+KatEntryName=IF-INTERFACE
+SHORTNAME=IF-INTERFACE
+InfoText =
+[1315061]
+KatEntryName=C7
+InfoText=Système intégré compact SIMATIC C7
+[1315522]
+KatEntryName=C7-630
+InfoText=Système intégré compact SIMATIC C7-630
+[1315062]
+KatEntryName=M7-EXTENSION
+InfoText=Modules d'extension et cartouches interface pour SIMATIC M7
+[1315063]
+KatEntryName=M7-EXTENSION
+InfoText=Modules d'extension et cartouches interface pour SIMATIC M7
+[1315064]
+KatEntryName=S5 ADAPTER
+InfoText =
+[1315065]
+KatEntryName=IM-300
+InfoText=Coupleurs d'extension pour S7-300 (configuration centralisée)
+[1315066]
+KatEntryName=IM-400
+InfoText=Coupleur d'extension pour S7-400 et boîtier d'adaptation S5 (configuration centralisée et décentralisée)
+[1315067]
+KatEntryName=SM-300
+InfoText=Modules de signaux pour S7-300
+[1315068]
+KatEntryName=SM-400
+InfoText=Modules de signaux pour S7-400
+[1315050]
+KatEntryName=SM 331 AI2x12Bit
+InfoText=Module de 2 entrées analogiques, 12...14 bits
+[1316108]
+KatEntryName=SM 331 AI2x12Bit
+InfoText=Module d'entrées analogiques AI2/12...14Bit; également vendu comme module SIPLUS sous le numéro de référence 6AG1 331-7KB02-2AB0 
+[1315051]
+KatEntryName=SM 331 AI8x12Bit
+InfoText=Module de 8 entrées analogiques, 12...14 bits
+[1316109]
+KatEntryName=SM 331 AI8x12Bit
+InfoText=Module d'entrées analogiques AI8/12...14Bit; également vendu comme module SIPLUS sous le numéro de référence 6AG1 331-7KF02-2AB0 
+[1315054]
+KatEntryName=SM 334 AI4/AO2x8/8Bit
+InfoText=Module de 4 entrées et de 2 sorties analogiques, 8 bits, sans séparation galvanique
+[1315072]
+KatEntryName=C7-CPU 624
+InfoText=CPU avec une mémoire de travail de 24 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 624
+[1315611]
+KatEntryName=C7-CPU 624
+InfoText=CPU avec une mémoire de travail de 24 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+[1316046]
+InfoText=Module de base pour raccordement à l'AS-i
+SHORTNAME=CP 342-2
+[1315073]
+KatEntryName=CP 342-2 AS-i
+InfoText=Module de base pour raccordement à l'AS-i
+SHORTNAME=CP 342-2
+[1314822]
+KatEntryName = 6ES7 314-5AE00-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3 ms/kinst.; DI20/DO16; AI4/AO1 intégrées; port MPI; pour configuration à plusieurs rangées jusqu'à 31 modules
+SHORTNAME=CPU 314IFM
+[1315059]
+KatEntryName=IM 153-1
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153-1
+;[1315045]
+;KatEntryName=CP 443-5 Extended
+;InfoText=PROFIBUS CP: maître DP, interface SEND-RECEIVE et fonctions S7
+;;InfoText=Protocole DP, interface SEND-RECEIVE et fonctions S7
+[1315147]
+KatEntryName=IM 360 IM S
+InfoText=Coupleur pour unité de base, avec 3 unités d'extension au max.
+SHORTNAME=IM 360
+[1315148]
+KatEntryName=IM 361 IM R
+InfoText=Coupleur pour unité d'extension en liaison avec l'IM360
+SHORTNAME=IM 361
+[1315149]
+KatEntryName=IM 365 IM S-R
+InfoText=Coupleurs pourla connexion d'un rack d'extension, 1m ligne inclus; également vendu comme module SIPLUS sous le numéro de référence 6AG1 365-0BA01-2AA0 
+SHORTNAME=IM 365
+[1315236]
+KatEntryName=SM 335 AI4/AO4x14/12Bit
+InfoText=Module d'entrées et de sorties analogiques, AI4/14Bit+AO4/12Bit
+[1315192]
+KatEntryName=TB 16SC
+InfoText=Embase TB16SC, 16 voies, bornes à vis, modules c.a. à relais enfichables
+SHORTNAME=TB 16SC
+[1315193]
+KatEntryName=TB 16SC
+InfoText=Embase TB16SC, 16 voies, bornes à ressort, modules c.a. à relais enfichables
+SHORTNAME=TB 16SC
+[1315194]
+KatEntryName=TB 16SC
+InfoText=Embase TB16SC, 16 voies, bornes à vis, modules c.a. à relais enfichables
+SHORTNAME=TB 16SC
+[1315195]
+KatEntryName=TB 16SC
+InfoText=Embase TB16SC, 16 voies, bornes à ressort, modules c.a. à relais enfichables
+SHORTNAME=TB 16SC
+[1315174]
+KatEntryName = 6ES7 315-2AF01-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,3ms/kinst.; ports MPI+DP; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 315-2 DP
+[1315559]
+KatEntryName = 6ES7 315-2AF02-0AB0
+InfoText=Mémoire de travail 64 Ko; 0,3ms/kinst.; ports MPI+DP; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 315-2 DP
+[1315560]
+KatEntryName = 6ES7 315-2AF80-0AB0
+InfoText=pour conditions climatiques élargies
+SHORTNAME=CPU 315-2 DP
+[1315170]
+KatEntryName = 6ES7 312-5AC01-0AB0
+InfoText=Mémoire de travail 6 Ko; 0,6 ms/kinst.; DI10/DO6 intégrées; port MPI; pour configuration simple jusqu'à 8 modules
+[1315171]
+KatEntryName = 6ES7 313-1AD01-0AB0
+InfoText=Mémoire de travail 12 Ko; 0,6 ms/kinst.; port MPI; pour configuration simple jusqu'à 8 modules
+[1315555]
+KatEntryName = 6ES7 313-1AD02-0AB0
+InfoText=Mémoire de travail 12 Ko; 0,6 ms/kinst.; port MPI; pour configuration simple jusqu'à 8 modules
+[1315172]
+KatEntryName = 6ES7 314-1AE02-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3 ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+[1315556]
+KatEntryName = 6ES7 314-1AE03-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3 ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+[1315630]
+KatEntryName = 6ES7 316-1AG00-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,3 ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+SHORTNAME=CPU 316
+[1315173]
+KatEntryName = 6ES7 315-1AF01-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,3ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+[1315558]
+KatEntryName = 6ES7 315-1AF02-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,3ms/kinst.; port MPI; pour configuration à plusieurs rangées jusqu'à 32 modules
+[1315176]
+KatEntryName = 6ES7 314-5AE01-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3 ms/kinst.; DI20/DO16; AI4/AO1 intégrées; port MPI; pour configuration à plusieurs rangées jusqu'à 31 modules
+[1315557]
+KatEntryName = 6ES7 314-5AE02-0AB0
+InfoText=Mémoire de travail 32 Ko; 0,3 ms/kinst.; DI20/DO16; AI4/AO1 intégrées; port MPI; pour configuration à plusieurs rangées jusqu'à 31 modules
+[1315104]
+KatEntryName=ET 200B-4AI
+InfoText=4 entrées analogiques, +/-10 V, +/-20 mA, 0(4)-20 mA, 0.1 ms/voie
+SHORTNAME=AI4x14Bit
+[1315107]
+KatEntryName=ET 200B-4/8 AI
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=AI8x14Bit
+[1315110]
+KatEntryName=ET 200B-4 AO
+InfoText=4 sorties analogiques, +/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=AO4x12Bit
+[1315177]
+KatEntryName = 6ES7 412-1XF01-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI; multicomputing
+[1315178]
+KatEntryName = 6ES7 413-1XG01-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI; multicomputing
+[1315179]
+KatEntryName = 6ES7 413-2XG01-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; ports MPI et DP; multicomputing
+[1315180]
+KatEntryName = 6ES7 414-1XG01-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; port MPI; multicomputing
+[1315181]
+KatEntryName = 6ES7 414-2XG01-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; ports MPI et DP; multicomputing
+[1315182]
+KatEntryName = 6ES7 414-2XJ00-0AB0
+InfoText=Mémoire de travail 384 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; ports MPI et DP; multicomputing
+[1315183]
+KatEntryName = 6ES7 416-2XK00-0AB0
+InfoText=Mémoire de travail 0,8 Mo; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; ports MPI et DP; multicomputing
+SHORTNAME=CPU 416-2 DP
+[1315586]
+KatEntryName = 6ES7 416-2XK01-0AB0
+InfoText=Mémoire de travail 0,8 Mo; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; ports MPI et DP; multicomputing
+[1315537]
+KatEntryName = 6ES7 412-1XF02-0AB0
+InfoText=Mémoire de travail 48 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI; multicomputing
+[1315538]
+KatEntryName = 6ES7 413-1XG02-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; port MPI; multicomputing
+[1315539]
+KatEntryName = 6ES7 413-2XG02-0AB0
+InfoText=Mémoire de travail 72 Ko; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; ports MPI et DP; multicomputing
+[1315540]
+KatEntryName = 6ES7 414-1XG02-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; port MPI; multicomputing
+[1315541]
+KatEntryName = 6ES7 414-2XG02-0AB0
+InfoText=Mémoire de travail 128 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; ports MPI et DP; multicomputing
+[1315542]
+KatEntryName = 6ES7 414-2XJ01-0AB0
+InfoText=Mémoire de travail 384 Ko; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; ports MPI et DP; multicomputing
+[1315257]
+KatEntryName=DI16 x AC 120V
+InfoText=Module d'entrées TOR.; DI16, c.a. 120V, par groupes de 1, caractéristique d'entrée selon CEI 1131, t ype 2
+SHORTNAME=DI16xAC 120V
+[1315094]
+KatEntryName=DO16 x AC 20-120V/2A
+InfoText=Module de 16 sorties TOR, 20-120 V c.a./2 A, diagnostic
+SHORTNAME=DO16xAC 20-120V/2A
+[1315167]
+KatEntryName=DO16 x DC  20-125V/1.5A
+InfoText=Module de 16 sorties TOR, 20-125 V c.c./1.5 A, diagnostic
+SHORTNAME=DO16xDC 20-125V/1.5A
+[1315168]
+KatEntryName=AI8 x 16Bit
+InfoText=Module de 8 entrées analogiques, "TC/U" 8 voies, isolées séparément
+SHORTNAME=AI8x16Bit
+[1315169]
+KatEntryName=AI8 x 16Bit
+InfoText=Module de 8 entrées analogiques, "RTD" 16 bits, 8 voies
+SHORTNAME=AI8x16Bit
+[1315175]
+KatEntryName = 6ES7 614-1AH01-0AB3
+InfoText=Mémoire de travail 128 Ko; 0,3ms/kinst.; 512DI/O; port MPI
+[1315561]
+KatEntryName = 6ES7 614-1AH02-0AB3
+InfoText=Mémoire de travail 128 Ko; 0,3ms/kinst.; 512DI/O; port MPI
+[1315249]
+KatEntryName=6ES7 621-1AD00-0AE3
+InfoText=Système intégré compact; OP3+CPU avec une mémoire de travail de 12 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 621
+[1315590]
+KatEntryName=6ES7 621-1AD01-0AE3
+InfoText=Système intégré compact; OP3+CPU avec une mémoire de travail de 32 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 621
+[1315250]
+KatEntryName=6ES7 621-6DB00-0AE3
+InfoText=Système intégré compact; OP3+CPU avec une mémoire de travail de 12 Ko; 0,3ms/kinst.; CP-AS-i  intégrée;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 621 AS-i
+[1315591]
+KatEntryName=6ES7 621-6DB01-0AE3
+InfoText=Système intégré compact; OP3+CPU avec une mémoire de travail de 32 Ko; 0,3ms/kinst.; CP-AS-i  intégrée;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 621 AS-i
+[1315246]
+KatEntryName=C7-CPU 621
+InfoText=CPU avec une mémoire de travail de 12 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 CPU 621
+[1315608]
+KatEntryName=C7-CPU 621
+InfoText=CPU avec une mémoire de travail de 24Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 CPU 621
+[1315247]
+KatEntryName=C7-CPU 621 AS-i
+InfoText=CPU avec une mémoire de travail de 12Ko; 0,3ms/kinst.; CP-AS-i  intégrée;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 CPU 621
+[1315609]
+KatEntryName=C7-CPU 621 AS-i
+InfoText=CPU avec une mémoire de travail de 12Ko; 0,3ms/kinst.; CP-AS-i  intégrée;  port MPI; configuration à une rangée jusqu'à 4 modules
+SHORTNAME=C7 CPU 621
+[1315248]
+SHORTNAME=C7 CP 342
+KatEntryName =
+InfoText =
+[1315243]
+SHORTNAME=I-Slave AT
+KatEntryName =
+InfoText =
+[1315101]
+KatEntryName=ET 200B
+InfoText=Station de périphérie compacte dotée d’un degré de protection IP 20 utilisée comme esclave DP
+SHORTNAME=ET 200B
+[1315112]
+KatEntryName=ET 200L
+InfoText=Station de périphérie compacte dotée d’un degré de protection IP 20 utilisée comme esclave DP
+SHORTNAME=ET 200L
+[1315131]
+KatEntryName=ET 200X
+InfoText=Station de périphérie modulaire dotée d'un degré de protection IP 65 utilisée comme esclave DP
+SHORTNAME=ET 200X
+[1315308]
+KatEntryName=ET 200C
+InfoText=Station de périphérie compacte dotée d’un degré de protection IP 66/67 utilisée comme esclave DP
+SHORTNAME=ET 200C
+[1315309]
+KatEntryName=ET 200U
+InfoText=Station de périphérie modulaire dotée d'un degré de protection IP 20 avec modules S5-100U
+SHORTNAME=ET 200U
+[1315307]
+KatEntryName=SIMATIC
+InfoText=Automates SIMATIC S5, TI et S7 utilisés comme esclaves DP
+SHORTNAME=SIMATIC
+[1315314]
+KatEntryName=NC
+InfoText=Commandes numériques utilisées comme esclaves DP
+SHORTNAME=NC
+[1315317]
+KatEntryName=Appareils de coupure
+InfoText=Appareils de coupure utilisés comme esclaves DP
+SHORTNAME=Appareils de coupure
+[1315312]
+KatEntryName=IDENT
+InfoText=Systèmes d'identification utilisés comme esclaves DP
+SHORTNAME=IDENT
+[1315319]
+KatEntryName=ENCODER
+InfoText=Codeurs utilisés comme esclaves DP
+SHORTNAME=ENCODER
+[1315318]
+KatEntryName=SIMADYN
+InfoText=Système de réglage SIMADYN D
+SHORTNAME=SIMADYN
+[1315311]
+KatEntryName=Régulateur
+InfoText=Régulateur utilisé comme esclave DP
+SHORTNAME=Régulateur
+[1315313]
+KatEntryName=SIMOVERT
+InfoText=Entraînements triphasés SIMOVERT
+SHORTNAME=SIMOVERT
+[1315315]
+KatEntryName=SIMOREG
+InfoText=Entraînements à courant continu SIMOREG
+SHORTNAME=SIMOREG
+[1315144]
+KatEntryName=DP/AS-i
+InfoText=Modules permettant de coupler une interface ASi au PROFIBUS-DP
+SHORTNAME=DP/AS-i
+[1315145]
+KatEntryName=DP/AS-i Link
+InfoText=Module permettant de coupler une interface ASi au PROFIBUS-DP, -25...60 degrés Celsius
+SHORTNAME=DP/AS-i Link
+[1315135]
+KatEntryName=X-BM142 DO 4xDC24V/2A
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques possible
+SHORTNAME=4DO
+[1315132]
+KatEntryName=X-BM141 DI 8xDC24V
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques possible
+SHORTNAME=8DI
+[1315687]
+KatEntryName=X-BM141 DI 8xDC24V LWL
+InfoText=Module de base ET200X-DI 8xDC24V pour câble fibres optiques, extension avec modules d'extension analogiques impossible
+SHORTNAME=8DI, câble fibres optiques
+[1315237]
+KatEntryName=L SC-DI16/DO16xDC24V/0.5A
+InfoText=16 entrées TOR, 24 V c.c., 16 sorties TOR, 24 V c.c., 0.5 A, extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DI/16DO
+[1315128]
+KatEntryName=L SC-DO 16xDC24V/0.5A
+InfoText=16 sorties TOR, 24 c.c., 0.5 A, extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DO
+[1315125]
+KatEntryName=L SC-DI 32xDC24V
+InfoText=32 entrées TOR,  24 V c.c., extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 32DI
+[1315122]
+KatEntryName=L SC-DI 16xDC24V
+InfoText=16 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DI
+[1315119]
+KatEntryName=L SC-DO 16xDC24V/0.5A
+InfoText=16 sorties TOR, 24 V c.c., 0.5 A, extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 16DO
+[1315116]
+KatEntryName=L SC-DI 32xDC24V
+InfoText=32 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 32DI
+[1315113]
+KatEntryName=L SC-DI 16xDC24V
+InfoText=16 entrées TOR,  24 V c.c., extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 16DI
+[1315102]
+KatEntryName=B-4AI
+InfoText=4 entrées analogiques,+/-10V, +/-20 mA, 0(4)-20 mA, 0.1 ms/voie
+SHORTNAME=4AI
+[1315105]
+KatEntryName=B-4/8 AI
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=4/8AI
+[1315108]
+KatEntryName=B-4 AO
+InfoText=4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=4AO
+[1315058]
+KatEntryName=IM 153-1
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153-1
+[1315079]
+KatEntryName=IM 153-1, version 1-6
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules possible en fonctionnement, version 1-6
+SHORTNAME=IM 153-1
+[1315799]
+KatEntryName=IM 153-1, version 7
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules possible en fonctionnement, version 7, échange de données direct possible
+SHORTNAME=IM 153-1
+[1315083]
+KatEntryName=IM 153-1
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules possible en fonctionnement , échange de données direct possible (côté émetteur)
+SHORTNAME=IM 153-1
+[1315303]
+SHORTNAME=DP
+KatEntryName=Maître PROFIBUS
+InfoText =
+[1315629]
+SHORTNAME=DP
+[1315034]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315320]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315035]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315321]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315256]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315322]
+SHORTNAME=DP
+KatEntryName =
+InfoText =
+[1315080]
+KatEntryName=IM 153-1
+InfoText=Coupleur de bus pour SM S7-300, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules possible en fonctionnement
+SHORTNAME=IM 153-1
+[1315245]
+SHORTNAME=S7-300 CPU 31x
+KatEntryName =
+InfoText =
+[1315103]
+KatEntryName=ET 200B-4AI
+InfoText=4 entrées analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA, 0.1 ms/voie
+SHORTNAME=4AI
+[1315106]
+KatEntryName=ET 200B-4/8 AI
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=4/8AI
+[1315109]
+KatEntryName=ET 200B-4 AO
+InfoText=4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=4AO
+[1315114]
+KatEntryName=L SC-DI 16xDC24V
+InfoText=16 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 16DI
+[1315117]
+KatEntryName=L SC-DI 32xDC24V
+InfoText=32 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 32DI
+[1315120]
+KatEntryName=L SC-DO 16xDC24V/0.5A
+InfoText=16 sorties TOR, 24 V c.c., 0.5 A, extension avec modules SC SIMATIC TOR possible
+SHORTNAME=SC 16DO
+[1315123]
+KatEntryName=L SC-DI 16xDC24V
+InfoText=16 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DI
+[1315126]
+KatEntryName=L SC-DI 32xDC24V
+InfoText=32 entrées TOR, 24 V c.c., extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 32DI
+[1315129]
+KatEntryName=L SC-DO 16xDC24V/0.5A
+InfoText=16 sorties TOR, 24 V c.c., 0.5 A, extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DO
+[1315238]
+KatEntryName=L SC-DI 16/DO16xDC24V/0.5A
+InfoText=16 entrées/sorties TOR, 24 V c.c., 0.5 A, extension avec modules SC SIMATIC TOR et analogiques possible
+SHORTNAME=SC 16DI/16DO
+[1315133]
+KatEntryName=X-BM141 DI 8xDC24V
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques impossible
+SHORTNAME=X-BM141 DI 8xDC24V
+[1315136]
+KatEntryName=X-BM142 DO 4xDC24V/2A
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques impossible
+SHORTNAME=4DO
+[1315139]
+KatEntryName=X-BM141 DI 8xDC24V
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques impossible
+SHORTNAME=X-BM141 DI 8xDC24V
+[1315142]
+KatEntryName=X-BM142 DO 4xDC24V/2A
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques possible
+SHORTNAME=X-BM142 DO 4xDC24V/2A
+[1315146]
+KatEntryName=DP/AS-i Link
+InfoText=Module de couplage permettant de relier l'interface ASi au PROFIBUS-DP, -25...60 degrés Celsius
+SHORTNAME=DP/AS-i
+[1315252]
+SHORTNAME=DI8
+KatEntryName =
+InfoText =
+[1315253]
+SHORTNAME=DO8
+KatEntryName =
+InfoText =
+[1315158]
+KatEntryName=EM 144 AI 2xTC
+InfoText=Module d'extension à 2 entrées analogiques 2xTC (J,K,L)
+SHORTNAME=EM 144 AI 2xTC
+[1315161]
+SHORTNAME=AO 2x4..20mA (12Bit)
+KatEntryName =
+InfoText =
+[1315023]
+SHORTNAME=M7 CPU-300
+KatEntryName =
+InfoText =
+[1315024]
+SHORTNAME=M7 CPU-400
+KatEntryName =
+InfoText =
+[1315025]
+KatEntryName =
+InfoText =
+[1315076]
+SHORTNAME=Modules standard C
+KatEntryName =
+InfoText =
+[1315077]
+SHORTNAME=Modules standard
+KatEntryName =
+InfoText =
+[1315078]
+SHORTNAME=Sous-modules standard
+KatEntryName =
+InfoText =
+[1315027]
+SHORTNAME=FM M7-300
+KatEntryName =
+InfoText =
+[1315028]
+SHORTNAME=FM M7-400
+KatEntryName =
+InfoText =
+[1315242]
+KatEntryName =
+InfoText =
+[1315304]
+KatEntryName =
+InfoText =
+[1315240]
+KatEntryName =
+InfoText =
+[1315190]
+KatEntryName=SC TB
+InfoText=Embase pour ET 200L-SC
+SHORTNAME=TB
+[1315199]
+KatEntryName=SC DI
+InfoText=Modules d'entrées TOR pour ET 200L-SC
+SHORTNAME=DI-400
+[1315209]
+KatEntryName=SC DO
+InfoText=Modules de sorties TOR pour ET 200L-SC
+SHORTNAME=DO-400
+[1315219]
+KatEntryName=SC AI
+InfoText=Modules d'entrées analogiques pour ET 200L-SC
+SHORTNAME=AI-400
+[1315229]
+KatEntryName=SC AO
+InfoText=Modules de sorties analogiques pour ET 200L-SC
+SHORTNAME=AO-400
+[1315305]
+SHORTNAME=AS-i
+KatEntryName =
+InfoText =
+[1315200]
+KatEntryName=2 DI DC24V
+InfoText=Module de 2 entrées TOR, 24 V c.c.
+SHORTNAME=DI 2x DC24V
+[1315201]
+KatEntryName=1 DI AC230V
+InfoText=Module avec 1 entrée TOR, 120/230 V c.a.
+SHORTNAME=DI 1x AC120/230V
+[1315210]
+KatEntryName=2 DO DC24V/0.5A
+InfoText=Module de 2 sorties TOR 2, 24 V c.c., 0.5 A
+SHORTNAME=DO 2x DC24V 0,5A
+[1315211]
+KatEntryName=2 DO DC24V/2A
+InfoText=Module de 2 sorties TOR 2, 24 V c.c., 2 A
+SHORTNAME=DO 2x DC24V 2A
+[1315212]
+KatEntryName=1 DO AC230V/1A
+InfoText=Module avec 1 sortie TOR, 120/230 V c.a., 1 A
+SHORTNAME=DO 1x AC 120/230V 1A
+[1315213]
+KatEntryName=1 DO Rel. AC230V
+InfoText=Module avec 1 sortie TOR, 230 V c.a., à relais
+SHORTNAME=DO 1x Relais 5A
+[1315214]
+KatEntryName=1 DO Rel. AC230V
+InfoText=Module avec 1 sortie TOR, 230 V c.a., à relais
+SHORTNAME=DO 1x Relais 5A
+[1315220]
+KatEntryName=2 AI, U
+InfoText=Module de 2 entrées analogiques, 12/13 bits, +/-10 V, 1-5 V
+SHORTNAME=AI 2x U
+[1315221]
+KatEntryName=2 AI, I
+InfoText=Module de 2 entrées analogiques, 12/13 bits, 0(4)-20 mA
+SHORTNAME=AI 2x I
+[1315224]
+KatEntryName=2 AI, I
+InfoText=Module de 2 entrées analogiques, 12/13 bits, 0(4)-20 mA
+SHORTNAME=AI 2x I
+[1315223]
+KatEntryName=2 AI, TC
+InfoText=Module de 2 entrées analogiques, 14 bits, thermocouples
+SHORTNAME=AI 2x TC
+[1315222]
+KatEntryName=1 AI, RTD
+InfoText=Module avec 1 entrée analogique, 14 bits, NI 100, PT 100, PT 100K, 600 ohms
+SHORTNAME=AI 1x RTD
+[1315230]
+KatEntryName=1 AO, U
+InfoText=Module avec 1 sortie analogique, 12 bits, +/-10 V, 1-5 V
+SHORTNAME=AO 1x U
+[1315231]
+KatEntryName=1 AO, I
+InfoText=Module avec 1 sortie analogique, 12 bits, 0(4)-20 mA
+SHORTNAME=AO 1x I
+[1315563]
+KatEntryName=SC FM
+InfoText=Modules de fonction pour ET 200L-SC
+[1315564]
+KatEntryName=1 COUNT40kHz
+InfoText=Compteur 40kHz, 1 voie, 24V
+SHORTNAME=Compteur 1COUNT40kHz
+[1315301]
+KatEntryName=Esclaves AS-i
+InfoText=Esclaves pouvant être raccordés à l'interface AS
+SHORTNAME=Modules normées pour AS-Interface
+[1315300]
+KatEntryName=IM 153
+InfoText=Coupleur permettant de raccorder la périphérie ET 200M au PROFIBUS-DP via CP
+SHORTNAME=IM 153
+[1315345]
+KatEntryName=IM 153-1
+InfoText=Coupleur permettant de raccorder la périphérie ET 200M au PROFIBUS-DP via CP
+SHORTNAME=IM 153-1
+[1315258]
+KatEntryName=ENTRAINEMENTS 1
+InfoText=Entraînements utilisés comme esclaves DP
+[1315259]
+KatEntryName=ENTRAINEMENTS 2
+InfoText=Entraînements utilisés comme esclaves DP
+[1315260]
+KatEntryName=ENTRAINEMENTS 3
+InfoText=Entraînements utilisés comme esclaves DP
+[1315261]
+KatEntryName=ENTRAINEMENTS 4
+InfoText=Entraînements utilisés comme esclaves DP
+[1315348]
+KatEntryName=ENTRAINEMENTS 5
+InfoText=Entraînements utilisés`comme esclaves DP
+[1315349]
+KatEntryName=ENTRAINEMENTS 6
+InfoText=Entraînements utilisés comme esclaves DP
+[1315350]
+KatEntryName=ENTRAINEMENTS 7
+InfoText=Entraînements utilisés comme esclaves DP
+[1315351]
+KatEntryName=ENTRAINEMENTS 8
+InfoText=Entraînements utilisés comme esclaves DP
+[1315352]
+KatEntryName=ENTRAINEMENTS 9
+InfoText=Entraînements utilisés comme esclaves DP
+[1315353]
+KatEntryName=ENTRAINEMENTS 10
+InfoText=Entraînements utilisés comme esclaves DP
+[1315354]
+KatEntryName=ENTRAINEMENTS 11
+InfoText=Entraînements utilisés comme esclaves DP
+[1315355]
+KatEntryName=ENTRAINEMENTS 12
+InfoText=Entraînements utilisés comme esclaves DP
+[1315356]
+KatEntryName=ENTRAINEMENTS 13
+InfoText=Entraînements utilisés comme esclaves DP
+[1315357]
+KatEntryName=ENTRAINEMENTS 14
+InfoText=Entraînements utilisés comme esclaves DP
+[1315358]
+KatEntryName=ENTRAINEMENTS 15
+InfoText=Entraînements utilisés comme esclaves DP
+[1315359]
+KatEntryName=ENTRAINEMENTS 16
+InfoText=Entraînements utilisés comme esclaves DP
+[1315263]
+KatEntryName=B-16DI
+InfoText=16 entrées TOR, 24 V c.c.
+SHORTNAME=16DI
+[1315264]
+KatEntryName=B-8RO
+InfoText=8 sorties à relais, 24-60 V c.c.
+SHORTNAME=8RO
+[1315265]
+KatEntryName=B-8DI/8DO
+InfoText=8 entrées et 8 sorties TOR, 24 V c.c., 0,5 A
+SHORTNAME=8DI/8DO
+[1315266]
+KatEntryName=B-32DI 0.2ms
+InfoText=32 entrées TOR, 24 V c.c., 0,2 ms
+SHORTNAME=32DI.2
+[1315267]
+KatEntryName=B-16DO/2A
+InfoText=16 sorties TOR, 24 V c.c., 2 A
+SHORTNAME=16DO/2A
+[1315268]
+KatEntryName=B-32DO
+InfoText=32 sorties TOR, 24 V c.c., 0,5 A
+SHORTNAME=32DO
+[1315269]
+KatEntryName=B-24DI/8DO.2
+InfoText=24 entrées/8 sorties TOR : 24DI x 24V c.c.; 8DO x 24V c.c.
+SHORTNAME=24DI/8DO.2
+[1315270]
+KatEntryName=B-16DI-AC
+InfoText=16 entrées TOR, 120/230 V c.a.
+SHORTNAME=16DI-AC
+[1315271]
+KatEntryName=B-16RO-AC
+InfoText=16 sorties relais : 14 x 20 V c.a., 2 A ; 2 x 120 V c.a., 4 A
+SHORTNAME=16RO-AC
+[1315272]
+KatEntryName=B-8DI/8RO-AC
+InfoText=8 entrées TOR, 120/230 V c.a.; 8 sorties TOR, 120 V c.a., à relais
+SHORTNAME=8DI/8RO-AC
+[1315273]
+KatEntryName=B-24DI/8DO
+InfoText=24 entrées/8 sorties TOR : 24DI x 24V c.c.; 8DO x 24V c.c.
+SHORTNAME=24DI/8DO
+[1315274]
+KatEntryName=B-32DI
+InfoText=32 entrées TOR, 24 V c.c., 3 ms
+SHORTNAME=32DI
+[1315275]
+KatEntryName=B-16DO
+InfoText=16 sorties TOR : 12 x 24 V c.c., 0,5 A ; 4 x 24 V c.c.,2 A
+SHORTNAME=16DO
+[1315276]
+KatEntryName=B-16DO-AC
+InfoText=16 sorties TOR, 120/230 V c.a., 0,5 A
+SHORTNAME=16DO-AC
+[1315277]
+KatEntryName=B-4AI
+InfoText=4 entrées analogiques,+/-10V, +/-20 mA, 0(4)-20 mA, 0,1 ms/voie
+SHORTNAME=4AI
+[1315278]
+KatEntryName=B-4/8AI
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=4/8AI
+[1315279]
+KatEntryName=B-4AO
+InfoText=4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=4AO
+[1315341]
+KatEntryName=B-16DI/16DO
+InfoText=16 entrées/16 sorties TOR : 16DI x 24 V c.c.; 16DO x 24 V c.c., 0,5 A
+SHORTNAME=16DI/16DO
+[1315342]
+KatEntryName=B-8DI/8DO
+InfoText=8 entrées/8 sorties TOR : 8DI x 24VDC; 8DO x 24VDC, 0.5A; arrêt matériel
+SHORTNAME=8DI/8DO HWA
+[1315343]
+KatEntryName=B-4 AO
+InfoText=4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=4AO-2
+[1315344]
+KatEntryName=B-4/8 AI
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=4/8AI-2
+[1315262]
+KatEntryName=ASM 440
+InfoText=Coupleur PROFIBUS-DP pour systèmes d'identification MOBY-I et MOBY-L
+SHORTNAME=IDENT ASM 440
+[1315334]
+KatEntryName=ES30K
+InfoText=Station de saisie, raccordement à un MOBY-I/-L/-M, un lecteur de code à barres ou un scanner possible
+SHORTNAME=IDENT ES30K
+[1315283]
+KatEntryName=S7-300 CP 342-5 DP
+InfoText=Coupleur CP342-5-DP pour S7-300 utilisé comme esclave DP
+SHORTNAME=SIMATIC CP 342-5
+[1315284]
+KatEntryName=505-6870 DP RBC
+InfoText=Remote Based Controller 6870 utilisé comme esclave DP
+SHORTNAME=SIMATIC 505-6870 DP RBC
+[1315285]
+KatEntryName=IM 308-C esclave DP
+InfoText=Coupleur IM 308-C pour SIMATIC S5 utilisé comme esclave DP
+SHORTNAME=SIMATIC IM 308-C
+[1315286]
+KatEntryName=S5-95U         DP
+InfoText=S5-95U/DP utilisé comme esclave DP
+SHORTNAME=SIMATIC S5-95U
+[1315376]
+KatEntryName=S7-200 CPU 215-2DP
+InfoText=CPU215-2DP pour S7-200 utilisée comme esclave DP
+SHORTNAME=SIMATIC S7-200
+[1315394]
+KatEntryName=S7-200 CPU 215-2DP
+InfoText=CPU215-2DP pour S7-200 utilisée comme esclave DP
+SHORTNAME=SIMATIC S7-200
+[1315287]
+KatEntryName=C-AO4x12Bit
+InfoText=4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;
+SHORTNAME=4AO
+[1315288]
+KatEntryName=C-AI4x12Bit
+InfoText=4 entrées analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA, 0,1 ms/voie
+SHORTNAME=4AI
+[1315289]
+KatEntryName=C-AI4/8x12Bit
+InfoText=4/8 entrées analogiques, PT100, thermocouples
+SHORTNAME=4/8AI
+[1315290]
+KatEntryName=C-DO8xDC24V/2A
+InfoText=8 sorties TOR, 24 V c.c., 2 A
+SHORTNAME=8DO/2A
+[1315291]
+KatEntryName=C-DI16/DO16 DC24V
+InfoText=16 entrées/16 sorties TOR : 16DI x 24VDC; 16DO x 24VDC, 2A (connecteurs ou presse-étoupe)
+SHORTNAME=16DI/16DO/2A
+[1315292]
+KatEntryName=C-DI8xDC24V
+InfoText=8 entrées TOR, 24 V c.c.
+SHORTNAME=8DI
+[1315293]
+KatEntryName=C-DO8xDC24V/0,5 A
+InfoText=8 sorties TOR, 24 V c.c., 0,5 A
+SHORTNAME=8DO/0,5A
+[1315294]
+KatEntryName=U-IM 318-B
+InfoText=IM 318-B, ..8MB12 et ..8MB13 pour PROFIBUS-DP
+SHORTNAME=ET 200U DP
+[1315295]
+KatEntryName=U-IM 318-C
+InfoText=IM 318-C, coupleur de bus pour PROFIBUS-DP/FM
+SHORTNAME=ET 200U DP/FMS
+[1315296]
+KatEntryName=IM 329N (Slave)
+InfoText=Coupleur PROFIBUS-DP pour SINUMERIK 840C et 805SM utilisé comme maître ou esclave
+SHORTNAME=NC IM 329N
+[1315297]
+KatEntryName=DP/AS-i Link
+InfoText=Module servant à coupler le PROFIBUS-DP et l'interface AS
+SHORTNAME=DP/AS-i Link
+[1315298]
+KatEntryName=SIMOCODE-DP
+InfoText=Unité de commande et de protection de moteurs 3UF5, 1.25 à 820A utilisée comme esclave DP
+SHORTNAME=SIMOCODE-DP
+[1315299]
+KatEntryName=Interface DP/RS485
+InfoText=Coupleur PROFIBUS-DP pour disjoncteur 3WN6
+SHORTNAME=Gateway 3WN6
+[1315324]
+KatEntryName=L-DO 32xDC24V/0,5 A
+InfoText=32 sorties TOR, 24 V c.c., 0,5 A, extension impossible
+SHORTNAME=32DO
+[1315325]
+KatEntryName=L-DI 16xDC24V
+InfoText=16 entrées TOR, 24 V c.c., extension impossible, échange de données direct possible
+SHORTNAME=16DI
+[1315326]
+KatEntryName=L-DI 32xDC24V
+InfoText=32 entrées TOR, 24 V c.c., extension impossible, échange de données direct possible
+SHORTNAME=32DI
+[1315327]
+KatEntryName=L-DO 16xDC24V/0,5 A
+InfoText=16 sorties TOR, 24 V c.c., 0,5 A, extension impossible
+SHORTNAME=16DO
+[1315328]
+KatEntryName=L-16DI/16DO
+InfoText=Entrées/sorties TOR : 16DI x 24 V c.c.; 16DO x 24 V c.c., 0,5 A, extension impossible, échange de données direct possible
+SHORTNAME=16DI/16DO
+[1315329]
+KatEntryName=L-SC DI 16xDC24V/def.
+InfoText=16 entrées TOR, 24 V c.c., extension impossible
+SHORTNAME=SC 16DI/def.
+[1315330]
+KatEntryName=L-SC DO 16xDC24V/0,5 A/def.
+InfoText=16 sorties TOR 16, 24 V c.c., 0,5 A, extension impossible
+SHORTNAME=SC 16DO/def.
+[1315331]
+KatEntryName=L-SC DI 32xDC24V/def.
+InfoText=32 entrées TOR, 24 V c.c., extension impossible
+SHORTNAME=SC 32DI/def.
+[1315383]
+KatEntryName=L-SC DI16/DO16xDC24V/0.5A
+InfoText=16 entrées TOR, 24 V c.c., 16 sorties TOR, 24 V c.c., 0.5 A, extension impossible
+SHORTNAME=SC 16DI/16DO
+[1315391]
+KatEntryName=L-16DO-120VAC
+InfoText=Module de sorties TOR 16DI x 120VAC, non extensible
+SHORTNAME=16DO-AC
+[1315392]
+KatEntryName=L-8DI/8DO-120VAC
+InfoText=Module d'entrées/sorties TOR8DI x 120VAC; 8 DO x 120 VAC, non extensible, échange de données direct possible
+SHORTNAME=8DI/8DO-AC
+[1315393]
+KatEntryName=L-16DI-120VAC
+InfoText=Module d'entrées 16DI x 120VAC, non extensible, échange de données direct possible
+SHORTNAME=16DI-AC
+[1315333]
+KatEntryName=SIPART DR**
+InfoText=Régulateur pour processus SIPART
+SHORTNAME=REGLER SIPART DR
+[1315335]
+KatEntryName=MASTERDRIVES CB1
+InfoText=Coupleur PROFIBUS-DP CB1 dans SIMOVERT MASTERDRIVES
+SHORTNAME=MASTER DRIVES CB1
+[1315336]
+KatEntryName=MICRO-/MIDIMASTER OPMP
+InfoText=Coupleur PROFIBUS-DP OPMP dans SIMOVERT MICRO-/MIDIMASTER
+SHORTNAME=MICRO/MIDI M OPMP
+[1315337]
+KatEntryName=PM/P 6SE42/P 6SE48
+InfoText=Coupleur PROFIBUS-DP SS13381 dans SIMOVERT PM/P 6SE48 ou SS11013 dans SIMOVERT P 6SE42
+SHORTNAME=PM/6SE48  SS13381
+[1315338]
+KatEntryName=6RA24 CB24
+InfoText=Coupleur PROFIBUS-DP CB24 dans SIMOREG K 6RA24
+SHORTNAME=SIMOREG 6RA24 CB24
+[1314816]
+KatEntryName=PS 307 2A
+InfoText=Alimentation externe 120/230 V c.a. : 24 V c.c./2 A
+SHORTNAME=PS 307 2A
+[1315365]
+KatEntryName=Stations déjà configurées
+InfoText=Liste des stations, par exemple les CPU déjà configurées devant être raccordées au PROFIBUS-DP
+SHORTNAME=XY
+[1315360]
+KatEntryName=ET 200B
+InfoText=Station de périphérie compacte dotée d’un degré de protection IP 20 utilisée comme esclave DP
+SHORTNAME=XY
+[1315361]
+KatEntryName=ET 200L
+InfoText=Station de périphérie compacte dotée d’un degré de protection IP 20 utilisée comme esclave DP
+SHORTNAME=XY
+[1315362]
+KatEntryName=ET 200M
+InfoText=Station de périphérie modulaire dotée d'un degré de protection  IP 20 avec modules pour S7-300
+SHORTNAME=XY
+[1315371]
+KatEntryName=ET 200X
+InfoText=Station de périphérie modulaire dotée d'un degré de protection IP 65 utilisée comme esclave DP
+SHORTNAME=XY
+[1315372]
+KatEntryName=X 4DO
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques impossible
+SHORTNAME=4DO    DP
+[1315373]
+KatEntryName=X 8DI
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques impossible
+SHORTNAME=8DI    DP
+[1315377]
+KatEntryName=X 8DI
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques possible
+[1315378]
+KatEntryName=X 4DO
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques possible
+[1315363]
+KatEntryName=DP/AS-i
+InfoText=Modules de couplage permettant de raccorder l'interface AS au PROFIBUS-DP
+SHORTNAME=XY
+[1315374]
+KatEntryName=SIPOS
+InfoText=Gradateur réversible avec microcontrôleur pour servo-commandes électriques
+SHORTNAME=SIPOS
+[1315375]
+KatEntryName=SIPOS 3 MC/P
+InfoText=Servo-commandes électriques avec gradateur réversible intégré utilisées comme esclaves DP
+SHORTNAME=SIPOS
+[1315380]
+KatEntryName=IM 153-2
+InfoText=Coupleur de bus pour SM, FM S7-300  (sans FM356-4), remplacement de modules possible en fonctionnement
+SHORTNAME=IM 153-2
+[1315381]
+KatEntryName=IM 153-2
+InfoText=Coupleur de bus pour SM, FM S7-300  (sans FM356-4), remplacement de modules possible en fonctionnement
+SHORTNAME=IM 153-2
+[1315395]
+KatEntryName=DP/PA-Link
+InfoText=Coupleur pour PROFIBUS-PA
+SHORTNAME=DP/PA-LINK
+[1315631]
+KatEntryName=IM 157
+InfoText=IM157, Coupleur pour PROFIBUS-PA
+SHORTNAME=IM 157
+[1315402]
+KatEntryName=IPC
+InfoText=SIMATIC PC
+SHORTNAME=IPC
+; InfoText =
+[1315403]
+KatEntryName=MODULE TOUCHES DIRECTES
+InfoText=Module à touches directes pour SIMATIC PC via PROFIBUS-DP (jusqu'à 12 Mbits); jusqu'à 32 touches sélectionnables
+; InfoText=Module à touches directes pour  FIxx
+SHORTNAME=DIREKTTASTENMODUL
+[1315533]
+KatEntryName=SIMATIC PC Based Control 300/400
+InfoText=Composants et modules pour solutions d'automatisation sur base PC avec SIMATIC; configuration dans une station S7-300 ou S7-400 nécessaire
+[1315529]
+KatEntryName=WinLC V1.x
+InfoText=WinLC V1.x; Windows Logic Controller pour Windows NT; interface DP (maître DP); configuration dans une station S7-300 nécessaire
+SHORTNAME=WinLC V1.x
+[1315523]
+KatEntryName=WinAC CPU 416-2 DP ISA
+InfoText=CPU 416-2 DP sous forme de carte enfichable ISA pour PC; configuration dans une station S7-400 nécessaire
+SHORTNAME=WinAC CPU 416-2 DP ISA
+[1315530]
+KatEntryName=WinLC V1.x
+InfoText=Windows Logic Controller pour Windows NT; interface DP (maître DP)
+SHORTNAME=WinLC V1.x
+[1315524]
+KatEntryName=CPU 416-2 DP ISA
+InfoText=Mémoire de travail 0,8 Mo; 0,08 ms/kinst; 16ko DI/O; 64 connexions; ports MPI+DP;
+SHORTNAME=CPU 416-2 DP ISA
+[1315404]
+KatEntryName=GATEWAY
+SHORTNAME=GATEWAY
+InfoText =
+[1315405]
+KatEntryName=DP/RS232
+InfoText=DP/RS232
+SHORTNAME=DP/RS232
+[1315544]
+KatEntryName=Connexion Industrial Ethernet
+InfoText=Effectue la liaison entre la CPU et Industrial Ethernet
+SHORTNAME=PC-LINK (ISO)
+[1315525]
+KatEntryName=Connexion TCP/IP
+InfoText=Effectue la liaison de la CPU avec Industrial Ethernet via TCP/IP
+SHORTNAME=PC-LINK (TCP/IP)
+[1315738]
+KatEntryName=Connexion PROFIBUS
+InfoText=Permet de relier la CPU au PROFIBUS
+SHORTNAME=PC-LINK (PROFIBUS)
+[1315408]
+KatEntryName=IM 153-2
+InfoText=Coupleur de bus pour SM S7-300, FM (sans FM 356-4), remplacement de modules possible en fonctionnement
+SHORTNAME=IM 153-2
+[1315670]
+KatEntryName=IM 153-2
+InfoText=Interface de bus pour SM ,FM S7-300 (sans FM356-4), remplacement de modules possible en fonctionnement,  avec bus interne actif utilisable dans un système H redondant
+SHORTNAME=IM 153-2, redondant
+[1315409]
+KatEntryName=IM 153-2
+InfoText=Coupleur de bus pour SM S7-300, FM (sans FM 356-4), remplacement de modules possible en fonctionnement
+SHORTNAME=IM 153-2
+[1315406]
+KatEntryName=IM 153-3
+InfoText=Interface de bus redondante pour SM et FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153-3
+[1315407]
+KatEntryName=IM 153-3
+InfoText=Interface de bus redondante pour SM et FM 350 à FM 352, FM 355, CP 340 à CP 343-2
+SHORTNAME=IM 153-3
+[1315576]
+KatEntryName=2 AI, U (+/-10V)
+InfoText=Module d'entrées analogiques rapide 2AI, 12Bit, +/-10V
+SHORTNAME=AI 2x U (+/-10V)
+[1315577]
+KatEntryName=2 AI, I (0/4..20mA)
+InfoText=Module d'entrées analogiques rapide 2AI, 12Bit, 0(4)-20mA, 4 fils
+SHORTNAME=AI 2x I (0/4..20 mA)
+[1315578]
+KatEntryName=2 AI, I (4..20mA)
+InfoText=Module d'entrées analogiques rapide 2AI, 12Bit, 4-20mA, 2 fils
+SHORTNAME=AI 2x I (4..20 mA)
+[1315579]
+KatEntryName=SC TB IM-SC
+InfoText=Embase pour ET 200L-SC IM-SC
+SHORTNAME=TB 16IM-SC
+[1315580]
+KatEntryName=TB 16IM-SC
+InfoText=Embase; TB 16IM-SC, 16 voies, bornes à vis, modules AC/Rel. enfichables
+SHORTNAME=TB 16IM-SC
+[1315581]
+KatEntryName=TB 16IM-SC
+InfoText=Embase; TB 16IM-SC, 16 voies, bornes à ressort, modules AC/Rel. enfichables
+SHORTNAME=TB 16IM-SC
+[1315583]
+KatEntryName=L SC IM-SC
+InfoText=Module d'interface; IM-SC avec embase TB 16IM-SC, extension possible avec modules SC SIMATIC
+SHORTNAME=SC IM-SC
+[1315543]
+KatEntryName=6ES7 338-4BC00-0AB0
+InfoText=Module de détection de position POS-INPUT
+SHORTNAME=SM 338 POS-INPUT
+[1315552]
+KatEntryName=DI16xDC 24V alarme
+InfoText=Module d'entrées TOR.; DI16, DC 24V, par groupes de 1, alarme de processus et de diagnostic, valeurs de remplacement
+SHORTNAME=DI16xDC 24V alarme
+[1315553]
+KatEntryName=DI16xUC 120/230V
+InfoText=Module d'entrées TOR.; DI16, UC 120/230V, par groupes de 4, caractéristique d'entrée selon CEI 1131, type 2
+SHORTNAME=DI16xUC 120/230V
+[1315554]
+KatEntryName=DO32xDC 24V/0,5A
+InfoText=Module de sorties TOR; DO32, DC 24V/0,5A, par groupes de 8, diagnostic, valeurs de remplacement
+SHORTNAME=DO32xDC 24V/0,5A
+[1315690]
+KatEntryName=X-BM 147 / CPU LWL
+InfoText=Carte de base BM147 avec prétraitement programmable et avec physique câble fibres optiques
+SHORTNAME=BM 147 / CPU, LWL
+[1315627]
+KatEntryName=X-BM 147 / CPU
+InfoText=Carte de base BM147 avec prétraitement programmable utilisée comme esclave DP, alarme de process et de diagnostic validées, protocole DP avec Sync/Freeze
+SHORTNAME=BM 147 / CPU
+[1315410]
+KatEntryName=MASTERDRIVES CBP/CBP2
+InfoText=Coupleur PROFIBUS-DP CBP ou CBP2, fonctions standard, dans SIMOVERT MASTERDRIVES
+SHORTNAME=MASTERDRIVES CBP
+[1315411]
+KatEntryName=DC MASTER CBP/CBP2
+InfoText=Coupleur PROFIBUS-DP CBP ou CBP2, fonctions standard, dans SIMOREG DC MASTER
+SHORTNAME=DC MASTER CBP
+[1315412]
+KatEntryName=MICRO-/MIDI-/COMBIMASTER CB15/CB155
+InfoText=Coupleur PROFIBUS-DP CB15/CB155, fonctions standard, dans MICRO-/MIDI-/COMBIMASTER
+SHORTNAME=MICRO-/MIDI-/COMBIMASTER CB15/CB155
+[1315413]
+KatEntryName=DP/AS-i Link 20
+InfoText=Module de couplage entre DP PROFIBUS et interface ASi : degré de protection IP 20.
+SHORTNAME=DP/AS-i Link 20
+[1315414]
+KatEntryName=L-16RO-120VAC
+InfoText=Module de sorties TOR 16 x Rel. 120VAC/2A, non extensible
+SHORTNAME=16RO-AC
+[1315415]
+KatEntryName=L-8DI/8RO-120VAC
+InfoText=Module d'entrées/sorties TOR8DI; 8DO x Rel. 120VAC/2A, non extensible, échange de données direct possible
+SHORTNAME=8DI/8RO-AC
+[1315416]
+KatEntryName=SIPOS 5(2S.5..-E)
+InfoText=Servo-commandes SIPOS 5 ECOTRON et PROFITRON utilisées comme esclave DP avec module PROFIBUS à 1 voie, max. 12 Mbauds
+SHORTNAME=SIPOS
+[1315417]
+KatEntryName=SIPOS 5(2S.5..-F)
+InfoText=Servo-commandes SIPOS 5 ECOTRON et PROFITRON comme esclave DP avec module PROFIBUS à 2 voies, max. 12 Mbauds
+SHORTNAME=SIPOS
+[1315418]
+KatEntryName=SIPOS 5(2S.5..-D)
+InfoText=Servo-commandes SIPOS 5 ECOTRON et PROFITRON comme esclave DP avec module PROFIBUS à 2 voies, max. 1,5 MBauds
+SHORTNAME=SIPOS
+[1315419]
+KatEntryName=SIPOS 5(2S.5..-C)
+InfoText=Servo-commandes SIPOS 5 ECOTRON et PROFITRON comme esclave DP avec module PROFIBUS à 1 voie, max. 1,5 MBauds
+SHORTNAME=SIPOS
+[1315420]
+KatEntryName=IM 153-2
+InfoText=Coupleur pour le raccordement de la périphérie ET 200M au PROFIBUS-DP via CP
+SHORTNAME=IM 153-2
+[1315421]
+KatEntryName=X 4DO-2
+InfoText=Carte de base ET200X-DO 4xDC24V/2A, extensible avec EM analogiques
+SHORTNAME=4DO-2  DP
+[1315422]
+KatEntryName=X 8DI-2
+InfoText=Carte de base ET200X-DI 8xDC24V, extensible avec EM analogiques
+SHORTNAME=8DI-2  DP
+[1315663]
+KatEntryName=V1.0
+InfoText=Haute disponibilité, mémoire de travail 2Mo; 0,1 ms/kinst; 16Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour cartouches IF, routage, firmware V1.0
+SHORTNAME=CPU 417-4 H
+[1315665]
+KatEntryName=V1.0
+InfoText=Mémoire de travail 2 Mo; 0,1 ms/kinst; 16Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour cartouches IF; multicomputing, échange de données direct possible, équidistance, routage, firmware V1.0
+SHORTNAME=CPU 417-4
+[1315664]
+KatEntryName=V1.0
+InfoText=Mémoire de travail 256 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32, échange de données direct possible, équidistance, routage, firmware V1.0
+SHORTNAME=CPU 318-2
+[1315656]
+KatEntryName=UR2-H
+InfoText=Châssis central, 2*9 emplacements, bus séparé, pour configuration compacte d'un ou plusieurs automates
+SHORTNAME=UR2-H
+[1315815]
+KatEntryName=IM 157
+InfoText=IM157, coupleur PROFIBUS-PA avec bus interne actif et pouvant être utilisé en mode redondant avec un IM157, plage de température étendue
+[1315570]
+KatEntryName=SM 321 DI8xAC120/230V
+InfoText=Module d'entrées TOR DI 8xAC 120/230V, conditions climatiques élargies
+SHORTNAME=DI8xAC120/230V
+[1315572]
+KatEntryName=SM 322 DO8xAC120/230V/1A
+InfoText=Module de sorties TOR DO8xAC120/230V/1A, conditions climatiques élargies
+SHORTNAME=DO8xAC120/230V/1A
+[1315673]
+KatEntryName=SM 322 DO8xRel. AC230V/8A
+InfoText=Module de sorties TOR  DO 8xREL, 230V AC/8A, par groupes de 1, conditions climatiques élargies
+SHORTNAME=DO8xRelais
+[1315674]
+KatEntryName=SM 323 DI8/DO8xDC24V/0,5A
+InfoText=Module d'entrées/sorties TOR DI 8/DO 8 xDC24V/0.5A, conditions climatiques élargies
+SHORTNAME=DI8/DO8xDC24V/0.5A
+[1315675]
+KatEntryName=SM 334 AI4/AO2x12Bit
+InfoText=Module d'entrées/sorties analogiques AI4/12Bit+AO2/12Bit, conditions climatiques élargies
+[1315678]
+KatEntryName=IM 365 IM S-R
+InfoText=Coupleurs pour 1 châssis d'extension, comprenant câble de 1 m, conditions climatiques élargies
+SHORTNAME=IM 365
+[1315679]
+KatEntryName=IM 365 IM S-R
+InfoText=Coupleurs pour 1 châssis d'extension, comprenant câble de 1 m, conditions climatiques élargies
+SHORTNAME=IM 365
+[1315680]
+KatEntryName=PS 407 4A
+InfoText=Module standard d'alimentation AC 120/230V/4A
+SHORTNAME=PS 407 4A
+[1315681]
+KatEntryName=PS 407 4A
+InfoText=Alimentation AC 120/230V/4A pouvant fonctionner en redondance
+SHORTNAME=PS 407 4A
+[1315682]
+KatEntryName=SM 322 DO8xRel. AC230V/8A
+InfoText=Module de 8 sorties ToR  8REL, 230V AC/8A, par groupe de 1; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1HF10-2AA0
+SHORTNAME=DO8xRelais
+[1315644]
+KatEntryName=SM 322 DO32xAC120V/1A
+;InfoText=Module de sorties TOR 32DO 120V AC/1A, par groupes de 8
+InfoText=Module de 32 sorties TOR, 120 V c.a./1 A, par groupes de 8
+SHORTNAME=DO32xAC120V/1A
+[1315643]
+KatEntryName=SM 321 DI32xAC120V
+;InfoText=Module d'entrées TOR 32DI 120V AC, par groupes de 8
+InfoText=Module de 32 entrées TOR, 120 V c.a., par groupes de 8
+SHORTNAME=DI32xAC120V
+[1315693]
+KatEntryName=EM 148-P DI 4xDC24V/ DO 2xP
+InfoText=Module d'extension DI4/DO2xP (module pneumatique)
+SHORTNAME=EM 148-P DI 4xDO 2xP
+[1315694]
+KatEntryName=EM 148-P DO 16xP/CPV10
+InfoText=Module d'extension DO16xP (pour couplage de groupes d'électrovannes CPV10), uniquement module de terminaison
+SHORTNAME=EM 148-P DO 16xP/CPV10
+[1315695]
+KatEntryName=EM 148-P DO 16xP/CPV14
+InfoText=Module d'extension DO16xP (pour couplage de groupes d'électrovannes CPV14), uniquement module de terminaison
+SHORTNAME=EM 148-P DO 16xP/CPV14
+[1316099]
+KatEntryName=EM 148-P DO 16xP/CPV10
+InfoText=Module d'extension DO16xP (pour couplage de groupes d'électrovannes CPV10)
+SHORTNAME=EM 148-P DO 16xP/CPV10
+[1316100]
+KatEntryName=EM 148-P DO 16xP/CPV14
+InfoText=Module d'extension DO16xP (pour couplage de groupes d'électrovannes CPV14)
+SHORTNAME=EM 148-P DO 16xP/CPV14
+[1315704]
+KatEntryName=IM 153-1, version 1-5
+InfoText=Interface de bus pour SM S7-300, conditions climatiques élargies, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules en fonctionnement possible, version 1-5
+SHORTNAME=IM 153-1
+[1315800]
+KatEntryName=IM 153-1, version 6
+InfoText=Interface de bus pour SM S7-300, conditions climatiques élargies, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules en fonctionnement possible, version 6, échange de données direct possible
+SHORTNAME=IM 153-1
+[1315705]
+KatEntryName=IM 153-1
+InfoText=Interface de bus pour SM S7-300, conditions climatiques élargies, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules en fonctionnement possible
+SHORTNAME=IM 153-1
+;ARTS 45187; 
+[1315706]
+;Achtung - geändert !
+KatEntryName=FM 456-2
+InfoText=Module technologique personnalisable M7 avec Pentium 120, 2 cartouches IF enfichables, double largeur, avec M7-SYS RT < V5.0
+SHORTNAME=FM 456-2
+[1315708]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique câble fibres optiques, interface de bus pour SM et FM S7-300 
+SHORTNAME=IM 153-2 FO
+[1315709]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique câble fibres optiques, interface de bus pour SM et FM S7-300 
+SHORTNAME=IM 153-2 FO
+[1315710]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration simple jusqu'à 8 modules, firmware V1.0
+SHORTNAME=CPU 312IFM
+[1315824]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration simple jusqu'à 8 modules; conditions climatiques élargies, firmware V1.0
+SHORTNAME=CPU 312IFM
+[1315711]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 1 2Ko; 0,6ms/kinst; port MPI; configuration simple jusqu'à 8 modules, firmware V1.0
+SHORTNAME=CPU 313
+[1315712]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules, firmware V1.0
+SHORTNAME=CPU 314
+[1315825]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; conditions climatiques élargies, firmware V1.0
+SHORTNAME=CPU 314
+[1315713]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules, firmware V1.0
+SHORTNAME=CPU 314IFM
+[1315826]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; conditions climatiques élargies, firmware V1.0
+SHORTNAME=CPU 314IFM
+[1315714]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 48 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules, firmware V1.0
+SHORTNAME=CPU 315
+[1315715]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI + DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à  32 modules, échange de données direct possible, équidistance, routage, firmware V1.0
+SHORTNAME=CPU 315-2 DP
+[1315827]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 64Ko; 0,3ms/kinst; ports MPI + DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à  32 modules, conditions climatiques élargies, échange de données direct possible, équidistance, routage, firmware V1.0
+SHORTNAME=CPU 315-2 DP
+[1315716]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 128 Ko; 0,3ms/kinst; 512DI/O; port MPI, firmware V1.0
+SHORTNAME=CPU 614
+[1315717]
+KatEntryName = V1.0
+InfoText=Mémoire de travail 128 Ko; 0,3ms/kinst; ports MPI + DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à  32 modules, échange de données direct possible, équidistance, routage, firmware V1.0
+SHORTNAME=CPU 316-2 DP
+[1315718]
+KatEntryName = 6ES7 312-5AC81-0AB0
+InfoText=Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration simple jusqu'à 8 modules; conditions climatiques élargies
+SHORTNAME=CPU 312IFM
+[1315719]
+KatEntryName = 6ES7 314-1AE83-0AB0
+InfoText=Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à  32 modules; conditions climatiques élargies
+SHORTNAME=CPU 314
+[1315720]
+KatEntryName = 6ES7 314-5AE82-0AB0
+InfoText=Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI;configuration à plusieurs rangées jusqu'à  31 modules; conditions climatiques élargies
+SHORTNAME=CPU 314IFM
+[1315721]
+KatEntryName = 6ES7 315-2AF82-0AB0
+InfoText=Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI + DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à  32 modules; avec conditions climatiques élargies
+SHORTNAME=CPU 315-2 DP
+[1315722]
+KatEntryName=6ES7 623-1DE01-0AE3
+InfoText=Système intégré compact; OP5+CPU avec mémoire de travail 24 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à  24 modules
+SHORTNAME=C7 623/P
+[1315723]
+KatEntryName=6ES7 624-1DE01-0AE3
+InfoText=Système intégré compact; OP15/C+CPU avec mémoire de travail 24 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 624/P
+[1315724]
+KatEntryName=6ES7 626-1DG02-0AE3
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/P
+[1315823]
+KatEntryName=6ES7 626-1DG03-0AE3
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/P
+[1315725]
+KatEntryName=6ES7 626-2DG02-0AE3
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/P DP
+[1315726]
+KatEntryName=6ES7 633-1DF00-0AE3
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633/P
+[1315819]
+KatEntryName=6ES7 633-1DF01-0AE3
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 633/P 
+[1315727]
+KatEntryName=6ES7 626-1CG02-0AE3
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4 intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 626/A
+[1315728]
+KatEntryName=6ES7 634-1DF00-0AE3
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à  24 modules
+SHORTNAME=C7 634/P
+[1315820]
+KatEntryName=6ES7 634-1DF01-0AE3
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 48Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 634/P
+[1315730]
+KatEntryName=C7-CPU 623/P
+InfoText=CPU avec mémoire de travail 24 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 623/P
+[1315731]
+KatEntryName=C7-CPU 624/P
+InfoText=CPU avec mémoire de travail 24 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 624/P
+[1315732]
+KatEntryName=C7-CPU 626/P
+InfoText=CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626/P
+[1315822]
+KatEntryName=C7-CPU 626/P
+InfoText=CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626/P
+[1315733]
+KatEntryName=C7-CPU 626/P DP
+InfoText=CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626/P DP
+[1315734]
+KatEntryName=C7-CPU 633/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633/P
+[1315818]
+KatEntryName=C7-CPU 633/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 633/P
+[1315997]
+KatEntryName=C7-CPU 633/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules; firmware V1.0
+SHORTNAME=C7 CPU 633/P
+[1315735]
+KatEntryName=C7-CPU 626/A
+InfoText=CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4 intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 626/A
+[1315736]
+KatEntryName=C7-CPU 634/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634/P
+[1315821]
+KatEntryName=C7-CPU 634/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules
+SHORTNAME=C7 CPU 634/P
+[1315999]
+KatEntryName=C7-CPU 634/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules; firmware V1.0
+SHORTNAME=C7 CPU 634/P
+[1315739]
+SHORTNAME=MPI/DP
+InfoText =
+[1315740]
+SHORTNAME=MPI/DP
+InfoText =
+[1315741]
+SHORTNAME=DP
+InfoText =
+[1315793]
+SHORTNAME=DP
+[1315788]
+SHORTNAME=DP
+[1315742]
+SHORTNAME=DP
+InfoText =
+[1315769]
+KatEntryName=H-Sync-Modul
+InfoText=Module de synchronisation pour S7-400H
+SHORTNAME=H-Sync-Modul
+[1315770]
+KatEntryName=WinLC V2.0
+InfoText=WinLC V2.0; Windows Logic Controller pour Windows NT; interface DP (maître DP); configuration dans une station S7-400 nécessaire
+SHORTNAME=WinLC V2.0
+[1315771]
+KatEntryName=WinLC V2.0
+InfoText=Windows Logic Controller pour Windows NT; port DP (maître DP)
+SHORTNAME=WinLC V2.0
+[1315772]
+KatEntryName=PROFIBUS-Master
+SHORTNAME=DP
+InfoText =
+
+; ----------------------------- M7 SysVersion -----------------------------
+[1314864]
+;Achtung - geändert !
+KatEntryName=CPU 388-4
+InfoText=Unité centrale M7 80486DX2/50, 8 Mo, RS232, MPI, 64 Ko SRAM, avec M7-SYS RT < V5.0
+SHORTNAME=CPU 388-4
+[1315773]
+;Achtung - geändert !
+KatEntryName=CPU 388-4 V5.0
+InfoText=Unité centrale M7 80486DX2/50, 8 Mo, RS232, MPI, 64 Ko SRAM, avec M7-SYS RT V5.0, routage
+[1315502]
+;Achtung - geändert !
+KatEntryName=CPU 486-3
+InfoText=Unité centrale M7 avec Pentium 75, MPI, 2 cartouches interface enfichables, double largeur, avec M7-SYS RT < V5.0
+SHORTNAME=CPU 486-3
+[1315774]
+;Achtung - geändert !
+KatEntryName=CPU 486-3 V5.0
+InfoText=Unité centrale M7 avec Pentium 75, MPI, 2 cartouches interface enfichables, double largeur, avec M7-SYS RT V5.0, routage
+[1315503]
+;Achtung - geändert !
+KatEntryName=CPU 488-3
+InfoText=Unité centrale M7 avec Pentium 120, MPI, 2 cartouches interface enfichables, double largeur, avec M7-SYS RT < V5.0
+SHORTNAME=CPU 488-3
+[1315775]
+;Achtung - geändert !
+KatEntryName=CPU 488-3 V5.0
+InfoText=Unité centrale M7 avec Pentium 120, MPI, 2 cartouches interface enfichables, double largeur, avec M7-SYS RT V5.0, routage
+[1314921]
+;Achtung - geändert !
+KatEntryName=CPU 488-4
+InfoText=Unité centrale M7 avec 486 DX4/100, MPI, 3 cartouches interface enfichables, double largeur
+SHORTNAME=CPU 488-4
+;ARTS 45187; [S7H_6ES7_488_4GY00_0AC0_V5_0_CT]
+;ARTS 45187; ;Achtung - geändert !
+;ARTS 45187; KatEntryName=CPU488-4 V5.0
+;ARTS 45187; InfoText=Unité centrale M7 avec 486 DX4/100, MPI, 3 cartouches interface enfichables, double largeur, avec M7-SYS RT V5.0
+[1314922]
+;Achtung - geändert !
+KatEntryName=CPU 488-5
+InfoText=Unité centrale M7 avec P90, MPI, 2 cartouches interface enfichables, double largeur
+SHORTNAME=CPU 488-5
+;ARTS 45187; [S7H_6ES7_488_5FY00_0AC0_V5_0_CT]
+;ARTS 45187; ;Achtung - geändert !
+;ARTS 45187; KatEntryName=CPU488-5 V5.0
+;ARTS 45187; InfoText=Unité centrale M7 avec P90, MPI, 2 cartouches interface enfichables, double largeur, avec M7-SYS RT V5.0
+[1314855]
+;Achtung - geändert !
+KatEntryName=FM 356-4
+InfoText=Module technologique personnalisable M7 80486DX2/50 4 Mo, RS232, 64 Ko SRAM, avec M7-SYS RT < V5.0
+SHORTNAME=FM 356-4
+[1315778]
+;Achtung - geändert !
+KatEntryName=FM 356-4 V5.0
+InfoText=Module technologique personnalisable M7 80486DX2/50 4 Mo, RS232, 64 Ko SRAM, avec M7-SYS RT V5.0, routage
+[1314856]
+;Achtung - geändert !
+KatEntryName=FM 356-4
+InfoText=Module technologique personnalisable M7 80486DX2/50 8 Mo, RS232, 64 Ko SRAM, avec M7-SYS RT < V5.0
+SHORTNAME=FM 356-4
+[1315779]
+;Achtung - geändert !
+KatEntryName=FM 356-4 V5.0
+InfoText=Module technologique personnalisable M7 80486DX2/50 8 Mo, RS232, 64 Ko SRAM, avec M7-SYS RT V5.0, routage
+[1314907]
+;Achtung - geändert !
+KatEntryName=FM 456-4
+InfoText=Module technologique personnalisable M7 avec 486 DX4/75, 2 cartouches interface enfichables
+SHORTNAME=FM 456-4
+;ARTS 45187; [S7H_6ES7_456_4EY00_0AE0_V5_0_CT]
+;ARTS 45187; ;Achtung - geändert !
+;ARTS 45187; KatEntryName=FM 456-4 V5.0
+;ARTS 45187; InfoText=Module technologique personnalisable M7 avec 486 DX4/75, 2 cartouches interface enfichables, avec M7-SYS RT V5.0
+[1315782]
+KatEntryName=WinAC CPU 416-2 DP ISA
+InfoText=CPU 416-2 DP sous forme de carte enfichable ISA pour PC; configuration dans une station S7-400 nécessaire
+SHORTNAME=WinAC CPU 416-2 DP ISA
+[1315783]
+KatEntryName=CPU 416-2 DP ISA
+InfoText=Mémoire de travail 1,6 Mo; 0,08 ms/kinst; 16Ko DI/O; 64 connexions; port MPI+DP; connecteur de bus ISA
+SHORTNAME=CPU 416-2 DP ISA
+;ARTS 45187; 
+[1315776]
+;Achtung - geändert !
+KatEntryName = FM 456-2
+InfoText = Module technologique personnalisable avec Pentium 120, 2 modules IF enfichables, double largeur, avec M7-SYS RT V5.0, routage
+SHORTNAME=FM 456-2
+[1315302]
+SHORTNAME=Interface SC
+[1315582]
+SHORTNAME=IMSC+Interface SC
+[1315306]
+SHORTNAME=DP/AS-i Module de base
+[1315791]
+KatEntryName = IM 153-3
+SHORTNAME=IM 153-3
+InfoText=Interface de bus redondante pour SM S7-300 , FM 350 à FM 352, FM 355, CP 340 à CP 343-2, avec bus interne actif utilisable en système H redondant
+[1315792]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique câble fibres optiques, conditions climatiques élargies, interface de bus pour SM et FM S7-300 
+SHORTNAME=IM 153-2 FO
+
+; ----------------------------- CPU pour "Station" BM147/CPU, sans MPI
+[1315628]
+InfoText=Mémoire de travail 6 Ko; 1ms/kinst; port DP; extension possible avec max. 7 modules d'extension de la gamme ET200X
+SHORTNAME=BM 147
+
+; ----------------------------- CPU pour "Station" BM147/CPU, sans MPI
+[1315913]
+InfoText=Mémoire de travail 24 Ko; 1ms/kinst; port DP; extension possible avec max. 7 modules d'extension de la gamme ET200X
+SHORTNAME=BM 147
+;ARTS 138351
+[1315397]
+SHORTNAME=IM 157
+[1315803]
+KatEntryName=S7-200 CP 242-8 Esclave DP
+InfoText=S7-200 CP 242-8 Esclave DP / Maître AS-Interface 
+SHORTNAME=SIMATIC S7-200
+[1315804]
+KatEntryName=ASM 450
+InfoText=Coupleur PROFIBUS DP pour le système d'identification MOBY
+SHORTNAME=ASM 450
+[1315805]
+KatEntryName=Modules de fonction
+InfoText=Esclaves PROFIBUS-DP pour mesure de déplacement, comptage, positionnement, came électronique
+SHORTNAME=Modules de fonction
+[1315806]
+KatEntryName=IM178-4
+InfoText=Coupleur PROFIBUS-DP pour mesure de déplacement et commande d'entraînements analogiques (+/-10V)
+SHORTNAME=IM178-4
+[1315807]
+KatEntryName=PP 7
+InfoText=Push Button Panel
+SHORTNAME=SIMATIC PP
+[1315808]
+KatEntryName=PP 17-I
+InfoText=Push Button Panel
+SHORTNAME=SIMATIC PP
+[1315809]
+KatEntryName=PP 17-II
+InfoText=Push Button Panel
+SHORTNAME=SIMATIC PP
+[1315785]
+KatEntryName=AI16x13Bit
+InfoText=Module de 16 entrées analogiques, 13 bits
+SHORTNAME=AI16x13Bit
+[1315828]
+KatEntryName = SM 321 DI32xDC24V
+InfoText = Module de 32 entrées TOR, 24 V, par groupes de 32, conditions climatiques élargies
+SHORTNAME=DI32xDC24V
+[1315829]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 48 Ko pour le code et 48 Ko pour les données; 0,2 ms/kinst; 2Ko DI/O; 16 liaisons; 1*DP/MPI;  échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 412-1
+[1315844]
+SHORTNAME=MPI/DP
+[1315830]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 72 Ko pour le code et 72 Ko pour les données; 0,2 ms/kinst; 2 Ko DI/O; 16 liaisons; 2*DP/MPI;  échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 412-2 DP
+[1315845]
+SHORTNAME=MPI/DP
+[1315831]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 128 Ko pour le code et 128 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 liaisons; 2*DP/MPI;  échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 414-2 DP
+[1315846]
+SHORTNAME=MPI/DP
+[1315832]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 384 Ko pour le code et 384 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 liaisons; 2*DP/MPI und 1 logement pour cartouche interface IF; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 414-3 DP
+[1315847]
+SHORTNAME=MPI/DP
+[1315833]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 0,8 Mo pour le code et 0,8 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 liaisons; 2*DP/MPI;  échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 416-2 DP
+[1315848]
+SHORTNAME=MPI/DP
+[1315834]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 1,6 Mo pour le code et 1,6 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 liaisons; 2*DP/MPI et 1 logement pour cartouche interface IF;  échange de données direct possible; équidistance; routage; multicomputing; firmware V1.1
+SHORTNAME=CPU 416-3 DP
+[1315849]
+SHORTNAME=MPI/DP
+[1315835]
+KatEntryName=V1.1
+InfoText=Haute disponibilité, mémoire de travail 2 Mo pour le code et 2 Mo pour les données; (extensible à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 liaisons; 2*DP/MPI et 2 logements pour cartouches interface IF,  routage, firmware V1.1
+SHORTNAME=CPU 417-4 H
+[1315850]
+SHORTNAME=MPI/DP
+[1315836]
+KatEntryName=V1.1
+InfoText=Mémoire de travail 2 Mo pour le code et 2 Mo pour les données, (extensible à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 liaisons; 2*DP/MPI et 2 logements pour cartouches interface IF; multicomputing, échange de données direct, équidistance, routage, firmware V1.1
+SHORTNAME=CPU 417-4
+[1315767]
+KatEntryName=CPU 412-2 DP
+InfoText=Unités centrales du type CPU 412-2 DP
+[1315768]
+KatEntryName=CPU 414-3 DP
+InfoText=Unités centrales du type CPU 414-3 DP
+[1315757]
+KatEntryName=CPU 416-3 DP
+InfoText=Unités centrales du type CPU 416-3 DP
+[1315755]
+KatEntryName=CPU 400-H
+InfoText=Unités centrales du type CPU 400-H
+[1315906]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec câbles fibres optiques, coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules en fonctionnement possible. Avec bus interne actif. Pour système de sécurité H redondant.
+SHORTNAME=IM 153-2 FO, redondant
+[1315907]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec câbles fibres optiques, coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules en fonctionnement possible. Avec bus interne actif. Pour système de sécurité H redondant.
+SHORTNAME=IM 153-2 FO, redondant
+[1315908]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec câbles fibres optiques, conditions climatiques élargies, coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules en fonctionnement possible. Avec bus interne actif. Pour système de sécurité H redondant.
+SHORTNAME=IM 153-2 FO, redondant
+[1315909]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec câbles fibres optiques, conditions climatiques élargies, coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules en fonctionnement possible. Avec bus interne actif. Pour système de sécurité H redondant.
+SHORTNAME=IM 153-2 FO, redondant
+[1315911]
+KatEntryName=6ES7 626-2DG03-0AE3
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 626/P DP
+[1315910]
+KatEntryName=C7-CPU 626/P DP
+InfoText=CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées universelles; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 CPU 626/P DP
+[1315991]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module de 16 entrées TOR, 24V, par groupe de 16; également vendu comme module SIPLUS sous le numéro de référence 6AG1 321-1BH02-2AA0 
+SHORTNAME=DI16xDC24V
+[1315992]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module d'entrées TOR. DI16 24V, par groupes de 16, conditions climatiques élargies
+SHORTNAME=DI16xDC24V
+[1315943]
+KatEntryName = SM 321 DI16xDC48-125V
+InfoText = Module d'entrées TOR. DI16 48-125V DC, par groupes de 8, conditions climatiques élargies
+SHORTNAME=DI16xDC48-125V
+[1315944]
+KatEntryName = SM 322 DO8xDC48-125V/1.5A
+InfoText = Module de sorties TOR. DO8 48-125V DC/1.5A, par groupes de 4, conditions climatiques élargies
+SHORTNAME=DO8xDC48-125V/1.5A
+[1315953]
+KatEntryName=6ES7 633-2BF01-0AE3
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 633-DP
+[1315955]
+KatEntryName=6ES7 634-2BF01-0AE3
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 634-DP
+[1315954]
+KatEntryName=C7-CPU 633DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 CPU 633-DP
+[1315956]
+KatEntryName=C7-CPU 634DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage
+SHORTNAME=C7 CPU 634-DP
+[1316011]
+KatEntryName=Profibus-DP Slaves compatible
+InfoText=Configuration compatible (fichier de type) avec anciennes versions de STEP 7 d'esclaves DP 
+[1316037]
+KatEntryName=ENCODER
+InfoText=Codeurs utilisés comme esclaves DP
+SHORTNAME=ENCODER
+[1316040]
+KatEntryName=SIMADYN
+InfoText=Système de réglage SIMADYN D
+SHORTNAME=SIMADYN
+[1315323]
+KatEntryName=SIMODRIVE Sensor
+InfoText=Codeur absolu SIMODRIVE Sensor utilisé comme esclave DP
+SHORTNAME=ENCODER AWG V23466
+[1315340]
+KatEntryName=SS52 Slave
+InfoText=Coupleur PROFIBUS-DP SS52 esclave dans SIMADYN D
+SHORTNAME=SIMADYN SS52 Slave
+[1315994]
+KatEntryName=V1.1
+InfoText=Système intégré compact; OP3+CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO1 intégrées; port MPI; configuration simple jusqu'à 4 modules; firmware V1.1
+SHORTNAME=C7 621
+[1315996]
+KatEntryName=V1.1
+InfoText=Système intégré compact; OP3+CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; CP-AS-i intégré; port MPI; configuration simple jusqu'à 4 modules; firmware V1.1
+SHORTNAME=C7 621 AS-i
+[1315993]
+KatEntryName=C7-CPU 621
+InfoText=CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO1 intégrées; port MPI; configuration simple jusqu'à 4 modules; firmware V1.1
+SHORTNAME=C7 CPU 621
+[1315995]
+KatEntryName=C7-CPU 621 AS-i
+InfoText=CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; CP-AS-i  intégré;port MPI; configuration simple jusqu'à 4 modules; firmware V1.1
+SHORTNAME=C7 CPU 621
+[1315998]
+KatEntryName=V1.0
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 48Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules, firmware V1.0
+SHORTNAME=C7 633/P
+[1316000]
+KatEntryName=V1.0
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 48Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4DI universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules, firmware V1.0
+SHORTNAME=C7 634/P
+[1316013]
+KatEntryName = 6ES7 312-5AC02-0AB0
+InfoText = 
+SHORTNAME=CPU 312 IFM
+[1316014]
+KatEntryName = 6ES7 312-5AC82-0AB0
+InfoText = 
+SHORTNAME=CPU 312 IFM
+[1316015]
+KatEntryName = 6ES7 313-1AD03-0AB0
+InfoText = 
+SHORTNAME=CPU 313
+[1316016]
+KatEntryName = 6ES7 314-1AE04-0AB0
+InfoText = 
+SHORTNAME=CPU 314
+[1316017]
+KatEntryName = 6ES7 314-1AE84-0AB0
+InfoText = 
+SHORTNAME=CPU 314
+[1316018]
+KatEntryName = 6ES7 314-5AE03-0AB0
+InfoText = 
+SHORTNAME=CPU 314 IFM
+[1316019]
+KatEntryName = 6ES7 314-5AE83-0AB0
+InfoText = 
+SHORTNAME=CPU 314 IFM
+[1316020]
+KatEntryName = 6ES7 314-5AE10-0AB0
+InfoText = 
+SHORTNAME=CPU 314 IFM
+[1316021]
+KatEntryName = 6ES7 315-1AF03-0AB0
+InfoText = 
+SHORTNAME=CPU 315
+[1316022]
+KatEntryName = 6ES7 315-2AF03-0AB0
+InfoText = 
+SHORTNAME=CPU 315-2 DP
+[1316023]
+KatEntryName = 6ES7 315-2AF83-0AB0
+InfoText = 
+SHORTNAME=CPU 315-2 DP
+[1316024]
+KatEntryName = 6ES7 316-2AG00-0AB0
+InfoText = 
+SHORTNAME=CPU 316-2 DP
+[1316025]
+KatEntryName = 6ES7 318-2AJ00-0AB0
+InfoText = 
+SHORTNAME=CPU 318-2
+[1316026]
+KatEntryName = 6ES7 614-1AH03-0AB3
+InfoText = 
+SHORTNAME=CPU 614
+[1315957]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration simple jusqu'à 8 modules; firmware V1.1
+SHORTNAME=CPU 312 IFM
+[1315958]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration simple jusqu'à 8 modules; conditions climatiques élargies; firmware V1.1
+SHORTNAME=CPU 312 IFM
+[1315959]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 12 Ko; 0,6ms/kinst; port MPI; configuration simple jusqu'à 8 modules; firmware V1.1
+SHORTNAME=CPU 313
+[1315960]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; firmware V1.1
+SHORTNAME=CPU 314
+[1315961]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; conditions climatiques élargies; firmware V1.1
+SHORTNAME=CPU 314
+[1315962]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; firmware V1.1
+SHORTNAME=CPU 314 IFM
+[1315963]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; conditions climatiques élargies; firmware V1.1
+SHORTNAME=CPU 314 IFM
+[1315964]
+KatEntryName = V1.1
+InfoText = Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées;port MPI; configuration à plusieurs rangées jusqu'à 31 modules; firmware V1.1
+SHORTNAME=CPU 314 IFM
+[1315965]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 48 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; firmware V1.1
+SHORTNAME=CPU 315
+[1315966]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules, échange de données direct possible, équidistance, routage, firmware V1.1
+SHORTNAME=CPU 315-2 DP
+[1315967]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules, conditions climatiques élargies, échange de données direct possible, équidistance, routage, firmware V1.1
+SHORTNAME=CPU 315-2 DP
+[1315968]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 128 Ko; 0,3ms/kinst; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules, échange de données direct possible, équidistance, routage, firmware V1.1
+SHORTNAME=CPU 316-2 DP
+[1315969]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 256 Ko; 0,3ms/kinst; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules, échange de données direct possible, équidistance, routage, firmware V1.1
+SHORTNAME=CPU 318-2
+[1315970]
+KatEntryName=V1.1
+InfoText = Mémoire de travail 128 Ko; 0,3ms/kinst; 512DI/O; port MPI; firmware V1.1
+SHORTNAME=CPU 614
+;neue powersupplies
+[1315982]
+KatEntryName = PS 405 10A
+InfoText = Alimentation DC 24V/10A redondant
+SHORTNAME=PS 405 10A
+[1315983]
+KatEntryName = PS 405 10A
+InfoText = Alimentation DC 24V/10A
+SHORTNAME=PS 405 10A
+[1315984]
+KatEntryName = PS 405 20A
+InfoText = Alimentation DC 24V/20A
+SHORTNAME=PS 405 20A
+[1315985]
+KatEntryName = PS 407 20A
+InfoText=Alimentation AC 120/230V/20A
+SHORTNAME=PS 407 20A
+[1315987]
+InfoText = 
+SHORTNAME=IM 157
+[1315988]
+InfoText = 
+SHORTNAME=IM 157 Maître PA
+[1315989]
+KatEntryName=IM 153-1
+InfoText=Coupleur de bus pour SM S7-300, conditions climatiques élargies, FM 350 à FM 352, FM 355, CP 340 à CP 343-2, remplacement de modules en fonctionnement possible, échange de données direct possible (côté émetteur)
+SHORTNAME=IM 153-1
+[1316001]
+KatEntryName = IM 153-2
+InfoText=Coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules/reconfiguration en fonctionnement possibles. Peut être utilisé avec bus interne actif dans système redondant H.
+SHORTNAME=IM 153-2
+[1316002]
+KatEntryName = IM 153-2
+InfoText = Coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules/ reconfiguration en fonctionnement possible
+SHORTNAME=IM 153-2
+[1316003]
+KatEntryName=IM 153-2 FO
+InfoText = Coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules/ reconfiguration en fonctionnement possible. Peut être utilisé avec bus interne actif dans système redondant H.
+SHORTNAME=IM 153-2 FO, redondant
+[1316004]
+KatEntryName=IM 153-2 FO
+InfoText = IM 153-2 avec physique câble fibres optiques, coupleur de bus pour SM, FM S7-300 (sans FM356-4), remplacement de modules/ reconfiguration en fonctionnement possible. Peut être utilisé avec bus interne actif dans système redondant H.
+SHORTNAME=IM 153-2 FO, redondant
+[1316008]
+KatEntryName = EM 143 / DESINA
+InfoText = EM143, module d'extension pour DESINA
+SHORTNAME=EM 143 / DESINA
+[1316027]	
+KatEntryName = C7-621
+InfoText = Système intégré compact SIMATIC C7 du type C7-621
+SHORTNAME=C7-621
+[1316028]
+KatEntryName = C7-621 ASi
+InfoText = Système intégré compact SIMATIC C7 du type C7-621ASi avec coupleur de bus à l'interface ASi
+SHORTNAME=C7-621 ASi
+[1316029]	
+KatEntryName = C7-623
+InfoText = Système intégré compact SIMATIC C7 du type C7-623
+SHORTNAME=C7-623
+[1316030]	
+KatEntryName = C7-624
+InfoText = Système intégré compact SIMATIC C7 du type C7-624
+SHORTNAME=C7-624
+[1316031]
+KatEntryName = C7-626
+InfoText = Système intégré compact SIMATIC C7 du type C7-626
+SHORTNAME=C7-626
+[1316032]	
+KatEntryName = C7-626 DP
+InfoText = Système intégré compact SIMATIC C7 du type C7-626 DP avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-626 DP
+[1316033]	
+KatEntryName = C7-633
+InfoText = Système intégré compact SIMATIC C7 du type C7-633
+SHORTNAME=C7-633
+[1316034]	
+KatEntryName = C7-633 DP
+InfoText = Système intégré compact SIMATIC C7 du type C7-633 DP avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-633 DP
+[1316035]	
+KatEntryName = C7-634
+InfoText = Système intégré compact SIMATIC C7 du type C7-634
+SHORTNAME=C7-634
+[1316036]
+KatEntryName = C7-634 DP
+InfoText = Système intégré compact SIMATIC C7 du type C7-634 DP avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-634 DP
+[1315647]
+KatEntryName = SM 322 DO8xREL AC230V
+InfoText = Module de 8 sorties TOR à relais 24 V c.c./5A, 230 V c.a./5A, par groupes de 1
+SHORTNAME=DO8xRelais
+[1315950]
+KatEntryName =WinAC CPU 416-2 DP ISA LITE
+InfoText = CPU 416-2 DP avec fonctionalité réduite sous la forme d'une carte enfichable ISA pour PC; configuration dans une station S7-400 nécessaire
+SHORTNAME=CPU 416-2 DP ISA LITE
+[1315951]
+KatEntryName=CPU 416-2 DP ISA LITE
+InfoText=Mémoire de travail 128 Ko; 0,08 ms/kinst; 16Ko DI/O; 64 connexions; ports MPI+DP; connexion de bus ISA
+SHORTNAME=CPU 416-2 DP ISA LITE
+[1315948]
+KatEntryName = Controller
+InfoText = Automates SIMATIC sur base PC 
+SHORTNAME=Controller
+[1315949]
+KatEntryName = 6ES7 611-1PY00-0YB7
+InfoText = WinLC V3.0; Windows Logic Controller pour Windows NT; port DP (maître DP)
+SHORTNAME=WinLC
+[1316061]	
+KatEntryName = C7-Peripherie
+InfoText = SIMATIC C7, module d'entrées/sorties pour l'extension des C7-633, C7-634, C7-623/P, C7-624/P, C7-626/P, C7-626/P DP
+SHORTNAME=C7-Peripherie
+[1316077]
+KatEntryName = SM 323 DI8/DO8xDC24V/0,5A
+InfoText = Module d'entrées/sorties TOR, DI 8/DO 8xDC24V/0,5A; également vendu comme module SIPLUS sous le numéro de référence 6AG1 323-1BH01-2AA0 
+SHORTNAME=DI8/DO8xDC24V/0,5A
+[1316078]
+KatEntryName = SM 323 DI8/DO8xDC24V/0,5A
+InfoText = Module d'entrées/sorties TOR DI 8/DO 8xDC24V/0,5A, Outdoor
+SHORTNAME=DI8/DO8xDC24V/0,5A, Outdoor
+[1316083]
+KatEntryName = X-BM 141 DI 8xDC24V
+InfoText = Module de base ET 200X- DI 8xDC24V, extensible avec EM analogiques
+SHORTNAME=X-BM 141 DI 8xDC24V
+[1316080]
+KatEntryName = X-BM 142 DO 4xDC24V/2A
+InfoText = Module de base ET 200X-DO 4xDC24V/2A, extensible avec EM analogiques
+SHORTNAME=X-BM 142 DO 4xDC24V/2A
+[1316087]
+KatEntryName = EM 148-FC
+InfoText = Module d'extension EM148 inverseur de fréquence
+SHORTNAME=EM 148-FC
+[1316047]
+KatEntryName = V1.1
+InfoText = CPU 416-2 PCI carte enfichable pour PC; équidistance; routage
+SHORTNAME = CPU 416-2 PCI
+[1316048]
+InfoText=
+SHORTNAME=DP
+[1316049]
+SHORTNAME=MPI/DP
+[1316050]
+KatEntryName = V1.1
+InfoText = CPU 412-2 PCI carte enfichable pour PC; équidistance; routage
+SHORTNAME = CPU 412-2 PCI
+[1316051]
+InfoText=
+SHORTNAME=DP
+[1316052]
+SHORTNAME=MPI/DP
+[1316089]
+KatEntryName=V1.0
+InfoText=Système intégré compact ; OP25+CPU avec mémoire de travail 96 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; port MPI; configuration à plusieurs rangées jusqu'à 24 modules, firmware V1.0
+SHORTNAME=C7 626/P
+[1316088]
+KatEntryName=C7-CPU 626/P
+InfoText=CPU avec mémoire de travail 96 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  port MPI; configuration à plusieurs rangées jusqu'à 24 modules, firmware V1.0
+SHORTNAME=C7 CPU 626/P
+[1316091]
+KatEntryName=V1.0
+InfoText=Système intégré compact ; OP25+CPU avec mémoire de travail 128 Ko; 0,3ms/kinst.; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 626/P DP
+[1316090]
+KatEntryName=C7-CPU 626/P DP
+InfoText=CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 CPU 626/P DP
+[1316093]
+KatEntryName=V1.0
+InfoText=Système intégré compact ; OP7+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 633-DP
+[1316092]
+KatEntryName=C7-CPU 633DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 CPU 633-DP
+[1316095]
+KatEntryName=V1.0
+InfoText=Système intégré compact ; OP17+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst.; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 634-DP
+[1316094]
+KatEntryName=C7-CPU 634DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules, échange de données direct possible; équidistance; routage; firmware V1.0
+SHORTNAME=C7 CPU 634-DP
+[1316044]
+InfoText = 
+SHORTNAME= 
+[1316102]
+KatEntryName=PS 405 4A
+InfoText=Alimentation courant DC 24V/4A
+SHORTNAME=PS 405 4A
+;
+;
+;
+;
+;
+[1316116]
+[1316117]
+KatEntryName = Modules de comptage
+InfoText = Modules de fonction Comptage
+[1316118]
+KatEntryName = Modules de positionnement
+InfoText = Modules de fonction Positionnement
+[1316119]
+KatEntryName = Modules de régulation
+InfoText = Modules de fonction Régulation
+[1316120]
+KatEntryName = Modules technologiques M7
+InfoText = Modules technologiques personnalisables M7-300
+[1316121]
+KatEntryName = Cames électroniques
+InfoText = Modules de fonction Cames électroniques
+[1316122]
+KatEntryName = Commandes CNC
+InfoText = Modules de fonction Commandes numériques
+;
+[1316123]
+[1316124]
+KatEntryName = Modules de comptage
+InfoText = Modules de fonction Comptage
+[1316125]
+KatEntryName = Modules de positionnement
+InfoText = Modules de fonction Positionnement
+[1316126]
+KatEntryName = Modules de régulation
+InfoText = Modules de fonction Régulation
+[1316127]
+KatEntryName = Modules technologiques M7
+InfoText = Modules technologiques personnalisables M7-400
+[1316128]
+KatEntryName = Cames électroniques
+InfoText = Modules de fonction Cames électroniques
+;
+[1316129]
+[1316130]
+KatEntryName = Point-to-Point
+InfoText = Processeurs de communication pour communication point à point S7-300
+[1316131]
+KatEntryName = AS-Interface
+InfoText = Processeurs de communication pour AS-Interface connecteur de bus pour S7-300
+;
+[1316132]
+[1316133]
+KatEntryName = Point-to-Point
+InfoText = Processeurs de communication pour communication point à point S7-400
+;
+[1316134]
+[1316135]
+KatEntryName = Standard PS-400
+InfoText = Modules d'alimentation courant standard pour S7-400
+[1316136]
+KatEntryName = Redundant PS-400
+InfoText = Modules d'alimentation courant redondants pour S7-400
+;
+;
+[1316139]
+KatEntryName = V3.0
+InfoText = WinLC RTX V3.0;Software Logic Controller pour VenturCom RTX environnement temps réel; port DP (maître DP)
+SHORTNAME=WinLC RTX
+[1315952]
+SHORTNAME=DP
+[1316051]
+SHORTNAME=DP
+[1316048]
+SHORTNAME=DP
+[1316142]
+SHORTNAME=DP
+[1316054]
+SHORTNAME=DP
+[1316138]
+SHORTNAME=DP
+[1315919]
+SHORTNAME=DP
+[1315972]
+SHORTNAME=DP
+[1315973]
+SHORTNAME=DP
+[1315974]
+SHORTNAME=DP
+[1316140]
+SHORTNAME=DP
+[1316039]
+SHORTNAME=DP
+[1316144]	
+KatEntryName = C7-623/P
+InfoText = Système intégré compact SIMATIC C7 du type C7-623/P
+SHORTNAME=C7-623/P
+[1316145]	
+KatEntryName = C7-624/P
+InfoText = Système intégré compact SIMATIC C7 du type C7-624/P
+SHORTNAME=C7-624/P
+[1316146]	
+KatEntryName = C7-626/P
+InfoText = Système intégré compact SIMATIC C7 du type C7-626/P
+SHORTNAME=C7-626/P
+[1316147]	
+KatEntryName = C7-626/P DP
+InfoText = Système intégré compact SIMATIC C7 du type C7-626/P DP avec interface PROFIBUS DP pour configurations décentralisées
+SHORTNAME=C7-626/P DP
+;
+;
+;
+[1315945]
+KatEntryName=V2.0
+InfoText=Haute disponibilité, à sécurité intégrée, mémoire de travail 2 Mo pour le code et 2 Mo pour les données; (extensible à 20 Mo); 0,1 ms/kinst; 16Ko DI/O; 64 liaisons; 2*DP/MPI et 2 logements pour cartouches interface IF,  routage, firmware V2.0
+SHORTNAME=CPU 417-4 H
+[1316112]
+KatEntryName=V2.1
+InfoText=Haute disponibilité, à sécurité intégrée, mémoire de travail 2 Mo pour le code et 2 Mo pour les données; (extensible à 20 Mo); 0,1 ms/kinst; 16Ko DI/O; 64 liaisons; 2*DP/MPI et 2 logements pour cartouches interface IF,  routage, firmware V2.1
+SHORTNAME=CPU 417-4 H
+[1316141]
+KatEntryName=V2.1
+InfoText=Haute disponibilité, à sécurité intégrée, mémoire de travail 2 Mo code et 2 Mo données; (extensible jusqu'à 20 Mo); 0,1 ms/kinst.; 16Ko DI/O; 64 liaisons; 2*DP/MPI et 2 logements pour cartouches IF, routage, firmware V2.1
+SHORTNAME=CPU 417-4 H
+[1315986]
+KatEntryName = IM 157
+InfoText = IM 157, coupleur pour redondance avec PROFIBUS-PA. Reconfiguration en fonctionnement possible. Avec bus interne actif et mode redondant possible avec l'IM 157, plage de température étendue. A partir de la version 2 : Coupleur redondant extensible pour connexion d'un PROFIBUS-DP non redondant ("Y-Link").
+SHORTNAME=IM 157 redondant
+[1315162]
+KatEntryName=EM 300 DS DI4/DO4
+InfoText=Module d'extension Démarreur
+SHORTNAME=EM 300 DS DI4/DO4
+[1315163]
+KatEntryName=EM 300 RS DI4/DO4
+InfoText=Module d'extension Démarreur inverseur
+SHORTNAME=EM 300 RS DI4/DO4
+[1315796]
+KatEntryName = EM 300 eDS DI4/DO4
+InfoText = Module d'extension Démarreur direct électronique
+SHORTNAME=EM 300 eDS DI4/DO4
+[1315801]
+KatEntryName = EM 300 eRS DI4/DO4
+InfoText = Module d'extension Démarreur inverseur électronique
+SHORTNAME=EM 300 eRS DI4/DO4
+[1316097]
+KatEntryName=EM 300 DS DI4/DO4
+InfoText=Module d'extension Démarreur direct électronique
+SHORTNAME=EM 300 DS DI4/DO4
+[1316098]
+KatEntryName=EM 300 RS DI4/DO4
+InfoText=Module d'extension Démarreur inverseur électronique
+SHORTNAME=EM 300 RS DI4/DO4
+;
+;
+;
+[1316057]
+KatEntryName=ET200S / CPU
+InfoText=Module de base ET200S avec prétraitement programmable comme esclave DP
+SHORTNAME=ET200S / CPU
+[1316155]
+KatEntryName=V2.1
+InfoText=Haute disponibilité et sécurité intégrée, mémoire de travail 384 Ko code et 384 Ko données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 2 logements pour cartouches IF, routage, firmware V2.1
+SHORTNAME=CPU 414-4 H
+[1316170]
+SHORTNAME=MPI/DP
+[1316162]
+SHORTNAME=DP
+[1316171]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration à une rangée jusqu'à 8 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 312 IFM
+[1316172]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 6 Ko; 0,6ms/kinst; DI10/DO6 intégrées; port MPI; configuration à une rangée jusqu'à 8 modules; communication S7 (FB/FC chargeables); conditions climatiques élargies; firmware V1.2
+SHORTNAME=CPU 312 IFM
+[1316173]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 12 Ko; 0,6ms/kinst; port MPI; configuration à une rangéee jusqu'à 8 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 313
+[1316174]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusquà 32 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 314
+[1316175]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; communication S7 (FB/FC chargeables); conditions climatiques élargies; firmware V1.2
+SHORTNAME=CPU 314
+[1316176]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 314 IFM
+[1316178]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; communication S7 (FB/FC chargeables); conditions climatiques élargies; firmware V1.2
+SHORTNAME=CPU 314 IFM
+[1316177]
+KatEntryName = V1.2
+InfoText = Memory Card; Mémoire de travail 32 Ko; 0,3ms/kinst; DI20/DO16; AI4/AO1 intégrées; port MPI; configuration à plusieurs rangées jusqu'à 31 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 314 IFM-MC
+[1316179]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 48 Ko; 0,3ms/kinst; port MPI; configuration à plusieurs rangées jusqu'à 32 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 315
+[1316180]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave); configuration à plusieurs rangées jusquà 32 modules, communication directe (émetteur ou récepteur), équidistance, routage, communication S7 (FB/FC chargeables), firmware V1.2
+SHORTNAME=CPU 315-2 DP
+[1316185]
+SHORTNAME=DP
+[1316181]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 64 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave); configuration à plusieurs rangées jusquà 32 modules, conditions climatiques élargies, communication directe (émetteur ou récepteur), équidistance, routage, communication S7 (FB/FC chargeables), firmware V1.2
+SHORTNAME=CPU 315-2 DP
+[1316186]
+SHORTNAME=DP
+[1316183]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 128 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave); configuration multirangées jusqu'à 32 modules; échange de données direct (émetteur ou récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 316-2 DP
+[1316187]
+SHORTNAME=DP
+[1316184]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 256 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave); configuration multirangées jusqu'à 32 modules; échange de données direct (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 318-2
+[1316188]
+SHORTNAME=DP
+[1316189]
+SHORTNAME=MPI/DP
+[1316182]
+KatEntryName=V1.2
+InfoText = Mémoire de travail 128 Ko; 0,3ms/kinst; 512DI/O; port MPI; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=CPU 614
+[1316148]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 48 Ko code et 48 Ko données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 1*DP/MPI; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 412-1
+[1316163]
+SHORTNAME=MPI/DP
+[1316149]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 72 Ko code et 72 Ko données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 2*DP/MPI; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 412-2 DP
+[1316156]
+SHORTNAME=DP
+[1316164]
+SHORTNAME=MPI/DP
+[1316150]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 128 Ko code et 128 Ko données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 414-2 DP
+[1316157]
+SHORTNAME=DP
+[1316165]
+SHORTNAME=MPI/DP
+[1316151]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 384 Ko code et 384 Ko données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 1 logement pour cartouche IF; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 414-3 DP
+[1316158]
+SHORTNAME=DP
+[1316166]
+SHORTNAME=MPI/DP
+[1316152]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 0,8 Mo code et 0,8 Mo données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 416-2 DP
+[1316159]
+SHORTNAME=DP
+[1316167]
+SHORTNAME=MPI/DP
+[1316153]
+KatEntryName = V1.2
+InfoText = Mémoire de travail 1,6 Mo code et 1,6 Mo données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 1 logement pour cartouche IF; échange de données direct possible; équidistance; routage; multicomputing; firmware V1.2
+SHORTNAME=CPU 416-3 DP
+[1316160]
+SHORTNAME=DP
+[1316168]
+SHORTNAME=MPI/DP
+[1316154]
+KatEntryName=V1.2
+InfoText=Mémoire de travail 2 Mo Code et 2 Mo données, (extensible jusqu'à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour cartouches IF; multicomputing, échange de données direct (récepteur), équidistance, routage, firmware V1.2
+SHORTNAME=CPU 417-4
+[1316161]
+SHORTNAME=DP
+[1316169]
+SHORTNAME=MPI/DP
+[1316190]
+KatEntryName = 6ES7 412-1XF03-0AB0
+InfoText = 
+SHORTNAME=CPU 412-1
+[1316191]
+KatEntryName = 6ES7 412-2XG00-0AB0
+InfoText = 
+SHORTNAME=CPU 412-2 DP
+[1316192]
+KatEntryName = 6ES7 414-2XG03-0AB0
+InfoText = 
+SHORTNAME=CPU 414-2 DP
+[1316193]
+KatEntryName = 6ES7 414-3XJ00-0AB0
+InfoText = 
+SHORTNAME=CPU 414-3 DP
+[1316194]
+KatEntryName = 6ES7 416-2XK02-0AB0
+InfoText = 
+SHORTNAME=CPU 416-2 DP
+[1316195]
+KatEntryName = 6ES7 416-3XL00-0AB0
+InfoText = 
+SHORTNAME=CPU 416-3 DP
+[1316196]
+KatEntryName = 6ES7 417-4XL00-0AB0
+InfoText = 
+SHORTNAME=CPU 417-4
+[1316197]
+KatEntryName = 6ES7 417-4HL00-0AB0
+InfoText = 
+SHORTNAME=CPU 417-4H
+[1316198]
+KatEntryName = 6ES7 417-4HL01-0AB0
+InfoText = 
+SHORTNAME=CPU 417-4H
+[1316199]
+KatEntryName = 6ES7 414-4HJ00-0AB0
+InfoText = 
+SHORTNAME=CPU 414-4H
+[1316201]
+KatEntryName=CPU 414-4H
+InfoText=Unités centrales de type CPU 414-4H
+[1316202]
+KatEntryName=CPU 417-4H
+InfoText=Unités centrales de type CPU 417-4H
+[1316203]
+KatEntryName=IM 460-0
+InfoText=Coupleur émetteur, 5 m, sans transmission de tension, avec bus K
+SHORTNAME=IM 460-0
+[1316204]
+KatEntryName=IM 460-1
+InfoText=Coupleur émetteur, 1,5 m, avec transmission de tension 5 V, sans bus K
+SHORTNAME=IM 460-1
+[1316205]
+KatEntryName=IM 460-3
+InfoText=Coupleur émetteur, 100 m, sans transmission de tension, avec bus K
+SHORTNAME=IM 460-3
+[1316206]
+KatEntryName=IM 460-4
+InfoText=Coupleur émetteur, 600 m, sans transmission de tension, sans bus K
+SHORTNAME=IM 460-4
+[1316207]
+KatEntryName=IM 461-0
+InfoText=Coupleur récepteur, 5 m, sans transmission de tension, avec bus K
+SHORTNAME=IM 461-0
+[1316208]
+KatEntryName=IM 461-1
+InfoText=Coupleur récepteur, 1,5 m, avec transmission de tension 5 V, sans bus K
+SHORTNAME=IM 461-1
+[1316209]
+KatEntryName=IM 461-3
+InfoText=Coupleur récepteur, 100 m, sans transmission de tension, avec bus K
+SHORTNAME=IM 461-3
+[1316210]
+KatEntryName=IM 461-4
+InfoText=Coupleur récepteur, 600 m, sans transmission de tension, sans bus K
+SHORTNAME=IM 461-4
+[1316221]
+KatEntryName = SM 321 DI8xAC120/230V
+InfoText = Module d'entrées TOR DI 8xAC 120V/230V, type 2
+SHORTNAME=DI8xAC120/230V
+[1316222]
+KatEntryName = SM 321 DI16xAC120/230V
+InfoText = Module d'entrées TOR DI16 AC 120V/230V, par groupes de 4
+SHORTNAME=DI16xAC120/230V
+[1316224]
+KatEntryName = SM 322 DO16xAC120V/230V/1A
+InfoText = Module de sorties TOR DO16 AC 120V/230V/1A, par groupes de 8
+SHORTNAME=DO16xAC120V/230V/1A
+[1316225]
+KatEntryName = SM 322 DO16xRel. AC120V/230V
+InfoText = Module de sorties TOR 16REL 24V DC/2A, 120V/2A, 230V/2A, par groupes de 16; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-1HH01-2AA0 
+SHORTNAME=DO16xRel. AC120V/230V
+[1316226]
+KatEntryName = SM 322 DO8xRel. AC230V
+InfoText = Module de sorties TOR  8REL 24V DC/2A, 230V AC/2A, par groupes de 2
+SHORTNAME=DO8xRel. AC230V
+[1316254]
+KatEntryName = 6ES7 626-1DG04-0AE3
+InfoText = 
+SHORTNAME=C7 626/P
+[1316243]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 626/P
+[1316242]
+KatEntryName=C7-CPU 626/P
+InfoText=CPU avec mémoire de travail 96 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 626/P
+[1316255]
+KatEntryName = 6ES7 626-2DG04-0AE3
+InfoText = 
+SHORTNAME=C7 626/P DP
+[1316245]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP25+CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; ports MPI+DP (maître ou esclave DP); configuration multirangées jusquà 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 626/P DP
+[1316244]
+KatEntryName=C7-CPU 626/P DP
+InfoText=CPU avec mémoire de travail 128 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration multirangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 626/P DP
+[1316256]
+KatEntryName = 6ES7 633-1DF02-0AE3
+InfoText = 
+SHORTNAME=C7 633/P
+[1316247]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 633/P
+[1316246]
+KatEntryName=C7-CPU 633/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 633/P
+[1316257]
+KatEntryName = 6ES7 633-2BF02-0AE3
+InfoText = 
+SHORTNAME=C7 633-DP
+[1316249]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP7+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration multirangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 633-DP
+[1316248]
+KatEntryName=C7-CPU 633DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration multirangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 633-DP
+[1316258]
+KatEntryName = 6ES7 634-1DF02-0AE3
+InfoText = 
+SHORTNAME=C7 634/P
+[1316251]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré; port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 634/P
+[1316250]
+KatEntryName=C7-CPU 634/P
+InfoText=CPU avec mémoire de travail 48 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO4/4 entrées TOR universelles intégrées; IM360 intégré;  port MPI; configuration multirangées jusqu'à 24 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 634/P
+[1316259]
+KatEntryName = 6ES7 634-2BF02-0AE3
+InfoText = 
+SHORTNAME=C7 634-DP
+[1316253]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP17+CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 634-DP
+[1316252]
+KatEntryName=C7-CPU 634DP
+InfoText=CPU avec mémoire de travail 64 Ko; 0,3ms/kinst; IM360 intégré;  ports MPI+DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 24 modules; échange de données direct possible; équidistance; routage; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 634-DP
+[1316262]
+KatEntryName=ET 200X
+InfoText=Modules pour ET 200X
+[1316263]
+KatEntryName=AI
+InfoText=Module d'entrées analogiques pour ET 200X
+[1316264]
+KatEntryName=AO
+InfoText=Module de sorties analogiques pour ET 200X
+[1316265]
+KatEntryName=DI
+InfoText=Module d'entrées TOR pour ET 200X
+[1316266]
+KatEntryName=DO
+InfoText=Modules de sorties TOR pour ET 200X
+[1316267]
+KatEntryName=DESINA
+InfoText=Modules d'extension pour ET 200X DESINA
+[1316268]
+KatEntryName=PM
+InfoText=Modules de puissance pour modules électroniques du ET 200X
+[1316269]
+KatEntryName=FM
+InfoText=Modules de fonction pour ET 200X
+[1316270]
+KatEntryName=CP
+InfoText=Processeurs de communication pour ET 200X
+[1316271]
+KatEntryName=Pneumatique
+InfoText=Modules d'extension pour modifications de pneumatique pour ET200X
+[1316272]
+KatEntryName=Groupes d'électrovannes
+InfoText=Modules d'extension pour applications pneumatiques ET200X
+[1316273]
+KatEntryName=Démarreurs de moteurs
+InfoText=Modules démarreurs de moteurs pour ET 200X
+[1316274]
+KatEntryName=Démarreur direct
+InfoText=Module d'extension démarreur de moteur direct, 1 sens de rotation
+[1316275]
+KatEntryName=Démarreur direct électronique
+InfoText=Module d'extension démarreur de moteur électronique direct, 1 sens de rotation
+[1316276]
+KatEntryName=Démarreur inverseur
+InfoText=Module d'extension démarreur inverseur, 2 sens de rotation
+[1316277]
+KatEntryName=Démarreur inverseur électronique
+InfoText=Module d'extension démarreur inverseur électronique, 2 sens de rotation
+[1316304]
+KatEntryName = 6ES7 621-1AD02-0AE3
+InfoText = 
+SHORTNAME=C7 621
+[1316305]
+KatEntryName = 6ES7 621-6BD02-0AE3
+InfoText = 
+SHORTNAME=C7 621 AS-i
+[1316301]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP3+CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusquà 4 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 621
+[1316300]
+KatEntryName=C7-CPU 621
+InfoText=CPU avec mémoire de 32 Ko; 0,3ms/kinst; DI16/DO16+AI4/AO1 intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 621
+[1316303]
+KatEntryName=V1.2
+InfoText=Système intégré compact; OP3+CPU avec mémoire de travail 32 Ko; 0,3 ms/kinst; CP-AS-i  intégrées;  port MPI; configuration à une rangée jusqu'à 4 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 621 AS-i
+[1316302]
+KatEntryName=C7-CPU 621 AS-i
+InfoText=CPU avec mémoire de travail 32 Ko; 0,3ms/kinst; CP-AS-i  intégré;  port MPI; configuration à une rangée jusqu'à 4 modules; communication S7 (FB/FC chargeables); firmware V1.2
+SHORTNAME=C7 CPU 621
+;
+;
+;
+[1315244]
+KatEntryName=CPU 31x
+InfoText=CPU31x coupleur pour CPU de S7-300 utilisée comme esclave DP, alarme de processus et de diagnostic activées
+SHORTNAME=S7-300 CPU 31x
+;
+;
+;
+[1316310]
+KatEntryName=CPU 41x
+InfoText=CPU41x coupleur pour CPU de S7-400 utilisée comme esclave DP, alarme de processus et de diagnostic activées
+SHORTNAME=S7-400 CPU 41x
+[1316312]
+SHORTNAME=S7-400 CPU 41x
+[1316314]
+SHORTNAME=S7-400 CPU 41x
+[1316441]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 48 Ko pour le code et 48 Ko pour les données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 1*DP/MPI; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 412-1
+[1316442]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 72 Ko pour le code et 72 Ko pour les données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 412-2 DP
+[1316443]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 128 Ko pour le code et 128 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 414-2 DP
+[1316444]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 384 Ko pour le code et 384 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 1 logement pour cartouche IF; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 414-3 DP
+[1316445]
+KatEntryName = V3.0
+InfoText = Haute disponibilité et à sécurité intégrée, mémoire de travail 384 Ko pour le code et 384 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 2 logements pour modules de synchronisation H; routage, firmware V3.0
+SHORTNAME=CPU 414-4 H
+[1316446]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 0,8 Mo pour le code et 0,8 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 416-2 DP
+[1316447]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 1,6 Mo pour le code et 1,6 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 1 logement pour cartouches IF; échange de données direct (émetteur et récepteur); équidistance; routage; multicomputing; firmware V3.0
+SHORTNAME=CPU 416-3 DP
+[1316448]
+KatEntryName = V3.0
+InfoText = Mémoire de travail 2 Mo pour le code et 2 Mo pour les données, (extensible jusqu'à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour cartouches IF; multicomputing, échange de données direct (émetteur et récepteur), équidistance, routage, firmware V3.0
+SHORTNAME=CPU 417-4
+[1316449]
+KatEntryName = V3.0
+InfoText=Haute disponibilité et à sécurité intégrée, mémoire de travail 2 Mo pour le code et 2 Mo pour les données; (extensible jusqu'à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour modules de synchronisation H, routage, firmware V3.0
+SHORTNAME=CPU 417-4 H
+[1316492]
+SHORTNAME=DP
+[1316493]
+SHORTNAME=MPI/DP
+[1316494]
+KatEntryName = V3.0
+InfoText = CPU 416-2 PCI sous forme de carte insérable PC; équidistance; routage; firmware V3.0
+SHORTNAME = CPU 416-2 PCI
+[1316495]
+InfoText=
+SHORTNAME=DP
+[1316496]
+SHORTNAME=MPI/DP
+[1316497]
+KatEntryName = V3.0
+InfoText = CPU 412-2 PCI sous forme de carte insérable PC; équidistance; routage; firmware V3.0
+SHORTNAME = CPU 412-2 PCI
+[1316498]
+InfoText=
+SHORTNAME=DP
+[1316499]
+SHORTNAME=MPI/DP
+[1316526]
+KatEntryName=DO16xDC 24V/2A
+;InfoText=Module de sorties TOR DO16, 24V/2A, par groupes de 8
+InfoText=Module de 16 sorties TOR, 24 V/2 A, par groupes de 8
+SHORTNAME=DO16xDC 24V/2A
+[1316527]
+KatEntryName = WinLC PN
+InfoText = WinLC PN V1.0; Windows Logic Controller pour Windows 2000; port DP (maître DP); supporte PROFINET
+SHORTNAME=WinLC PN
+[1316528]
+SHORTNAME=DP
+[1316533]
+KatEntryName = SM 331 AI8x13Bit
+InfoText = Module d'entrées analogiques AI 8x13Bit
+SHORTNAME=AI8x13Bit
+[1316537]
+KatEntryName = EM 144 AI 4xU / DESINA
+InfoText = Module d'extension AI 4xU (0-10V), DESINA
+SHORTNAME=EM 144 AI 4xU / DESINA
+[1316539] 
+KatEntryName=Composants réseaux
+InfoText=Composants réseaux pour PROFIBUS-DP
+[18878728]
+KatEntryName=PROFIBUS-PA
+InfoText=PROFIBUS PA Appareils
+[1316544]
+KatEntryName=CPU 412-2 PCI
+InfoText=Unités centrales de type CPU 412-2 PCI
+[1316545]
+KatEntryName=CPU 416-2 PCI
+InfoText=Unités centrales de type CPU 416-2 PCI
+[1316546]
+KatEntryName = 6ES7 612-2QH00-0AB4
+InfoText = 
+SHORTNAME=CPU 412-2 PCI
+[1316547]
+KatEntryName = 6ES7 616-2QL00-0AB4
+InfoText = 
+SHORTNAME=CPU 416-2 PCI
+;
+;
+;
+[1316005]
+KatEntryName = X-BM143 Desina-FO
+InfoText = Module de base ET200X - DX 8xDC24V Desina-FO, échange de données direct
+SHORTNAME=X-BM143 Desina-FO
+[1316006]
+KatEntryName = X-BM143 Desina-FO
+InfoText = Module de base ET200X - DX 8xDC24V Desina-FO, échange de données direct
+SHORTNAME=X-BM143 Desina-FO
+;?? X-BM143 Desina oder X-BM143 Desina-RS485 ??
+[1316566]
+KatEntryName = X-BM143 Desina
+InfoText = Module de base ET200X - DX 8xDC24V Desina, échange de données direct
+SHORTNAME=X-BM143 Desina
+;?? X-BM143 Desina oder X-BM143 Desina-RS485 ??
+[1316567]
+KatEntryName = X-BM143 Desina
+InfoText = Module de base ET200X - DX 8xDC24V Desina, échange de données direct
+SHORTNAME=X-BM143 Desina
+[1316570]
+KatEntryName = X-BM141 Ecofast DI 8xDC24V
+InfoText = Module de base ET200X - DI 8xDC24V Ecofast, échange de données direct
+SHORTNAME=X-BM141 Eco. DI 8xDC24V
+;
+;
+;
+[1316549]
+KatEntryName = V3.1
+InfoText = WinLC RTX V3.1;Software Logic Controller pour environnement temps réel VenturCom RTX; port DP (maître DP); équidistance et synchronisme d'horloge
+SHORTNAME=WinLC RTX
+[1316578]
+KatEntryName=WinLC RTX
+InfoText=Unités centrales de type WinLC RTX
+[1316579]
+KatEntryName = 6ES7 611-1SB00-0YB7
+InfoText = 
+SHORTNAME=WinLC RTX
+[1316563]
+KatEntryName = CP 440
+InfoText = Processeurs de communication pour communication point à point du S7-400
+[1316564]
+KatEntryName = CP 441-1
+InfoText = Processeurs de communication pour 1 communication point à point du S7-400
+[1316565]
+KatEntryName = CP 441-2
+InfoText = Processeurs de communication pour 2 communication point à point du S7-400
+[1316587]
+KatEntryName = CP 340
+InfoText = Processeurs de communication pour communication point à point du S7-300
+[1316588]
+KatEntryName = CP 341
+InfoText = Processeurs de communication pour communication point à point du S7-300
+[1316573]
+KatEntryName = X-BM141 Ecofast DI 8xDC24V Diag
+InfoText = Module de base ET200X - DI 8xDC24V Ecofast, diagnostic par voie, échange de données direct
+SHORTNAME=X-BM141 Eco. 8DI Diag
+[1316577]
+KatEntryName = SM 322 DO8xRelais
+InfoText = Module de 8 sorties TOR à relais 24 V c.c./5A, 230 V c.a./5A, avec diagnostic, par groupes de 1 avec parasurtenseur
+SHORTNAME=DO8xRelais
+[1316580]
+KatEntryName=CPU 315F-2 DP
+InfoText=Unités centrales du type CPU315F-2 DP
+[1316581]
+KatEntryName=6ES7 315-6FF00-0AB0
+InfoText = Mémoire de travail 128 Ko; 0,3ms/kinst; ports PI+ DP (maître ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules, échange de donnés direct (émetteur et récepteur), équidistance, routage, communication S7 (FB/FC chargeables), firmware V1.0, mise en oeuvre possible dans des applications de sécurité
+SHORTNAME=CPU 315F-2 DP
+[1316582]
+SHORTNAME=DP
+[1316589]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique fibre optique, coupleur de bus pour SM, FM S7-300 (sauf FM356-4), remplacement de modules en fonctionnement.  Utilisable avec bus interne actif dans système H redondant.
+SHORTNAME=IM 153-2 FO, Redundant
+[1316590]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique fibre optique, coupleur de bus pour SM, FM S7-300 (sauf FM356-4), remplacement de modules en fonctionnement.  Utilisable avec bus interne actif dans système H redondant.
+SHORTNAME=IM 153-2 FO, Redundant
+[1316591]
+KatEntryName=CR3
+InfoText=Châssis central, 4 emplacements, pas pour modules d'alimentation redondants
+SHORTNAME=CR3
+;
+;
+;
+[1316594]
+SHORTNAME=MPI/DP
+[1316643]
+KatEntryName=WinLC PN
+InfoText=Unités centrales de type WinLC PN
+[1316644]
+KatEntryName = 6ES7 611-1PY10-0YB7
+InfoText = 
+SHORTNAME=WinLC PN
+[1316609]
+KatEntryName = V1.1
+InfoText = WinLC PN V1.1; Windows Logic Controller pour Windows 2000; port DP (maître DP); prise en charge PROFINET CBA; PROFINET CBA-Proxy
+SHORTNAME=WinLC PN
+[1316610]
+SHORTNAME=DP
+[1316642] 
+KatEntryName = SM 332 AO8x12Bit
+InfoText=Module de sorties analogiques AO8/12Bit
+SHORTNAME=AO8x12Bit
+[1316645]
+KatEntryName = SM 321 DI16xUC24/48V
+InfoText=Module d'entrées TOR DI16 24/48VUC, par groupe de 1
+SHORTNAME=DI16xUC24/48V
+[1316646]
+KatEntryName = SM 322 DO16xUC24/48V
+InfoText=Module de sortie TOR DO16 24/48VUC, alarmes de diagnostic, par groupe de 1
+SHORTNAME=DO16xUC24/48V
+[1316684]
+KatEntryName=ET 200eco
+InfoText=Station de périphérie compacte dotée d'un degré de protection IP 65 utilisée comme esclave DP
+SHORTNAME=ET 200eco
+[1316685]
+KatEntryName=6ES7 315-6FF01-0AB0
+InfoText = Mémoire de travail 170 Ko; 0,3ms/kinst; ports MPI+ DP (maître ou esclave DP); configuration multirangée jusqu'à 32 modules, échange de données direct possible (émetteur et récepteur), équidistance, routage, communication S7 (FB/FC chargeables), firmware V1.0, mise en oeuvre dans applications de sécurité possible; également vendu comme module SIPLUS sous le numéro de référence  6AG1 315-6FF01-2AB0
+SHORTNAME=CPU 315F-2 DP
+[1316686]
+SHORTNAME=DP
+[1316688]
+KatEntryName = X-BM 142 DO 4xDC24V/2A
+InfoText = Module de base ET 200X-DO 4xDC24V/2A, extensible avec EM analogiques
+SHORTNAME=X-BM 142 DO 4xDC24V/2A
+[1316690] 
+KatEntryName = X-BM 141 DI 8xDC24V
+InfoText = Module de base ET 200X- DI 8xDC24V, extensible avec EM analogiques
+SHORTNAME=X-BM 141 DI 8xDC24V
+;
+;
+;
+[1316707]
+KatEntryName=SM 321 DI16xDC24V
+InfoText=Module d'entrées TOR DI16 24V, par groupe de 16, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=DI16xDC24V
+[1316708]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module d'entrées TOR DO16 24V/0.5A, par groupe de 8, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=DO16xDC24V/0.5A
+[1316704]
+KatEntryName=DI16xDC 24V alarme
+InfoText=Module d'entrées TOR.; DI16, DC 24V, par groupes de 8, alarme de processus et de diagnostic, valeurs de remplacement
+SHORTNAME=DI16xDC 24V alarme
+[1316715]
+KatEntryName=SM 332 AO4x16Bit
+InfoText=Module de 4 sorties analogiques, 16 bits, supporte le synchronisme d'horloge
+SHORTNAME=AO4x16Bit
+[1316650]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 48 Ko pour le code et 48 Ko pour les données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 1*DP/MPI; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 412-1
+[1316651]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 72 Ko pour le code et 72 Ko pour les données; 0,2 ms/kinst; 2 Ko DI/O; 16 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 412-2 DP
+[1316652]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 128 Ko pour le code et 128 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 414-2 DP
+[1316653]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 384 Ko pour le code et 384 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 1 logement pour cartouche IF; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 414-3 DP
+[1316654]
+KatEntryName = V3.1
+InfoText = Haute disponibilité et à sécurité intégrée, mémoire de travail 384 Ko pour le code et 384 Ko pour les données; 0,1 ms/kinst; 8 Ko DI/O; 32 connexions; 2*DP/MPI et 2 logements pour modules de synchronisation H; routage, firmware V3.1
+SHORTNAME=CPU 414-4 H
+[1316655]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 0,8 Mo pour le code et 0,8 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 416-2 DP
+[1316656]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 1,6 Mo pour le code et 1,6 Mo pour les données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 1 logement pour cartouches IF; échange de données direct (émetteur et récepteur); équidistance et synchronisme d'horloge; routage; multicomputing; firmware V3.1
+SHORTNAME=CPU 416-3 DP
+[1316657]
+KatEntryName = V3.1
+InfoText = Mémoire de travail 2 Mo pour le code et 2 Mo pour les données, (extensible jusqu'à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour cartouches IF; multicomputing, échange de données direct (émetteur et récepteur), équidistance et synchronisme d'horloge, routage, firmware V3.1
+SHORTNAME=CPU 417-4
+[1316658]
+KatEntryName = V3.1
+InfoText=Haute disponibilité et à sécurité intégrée, mémoire de travail 2 Mo pour le code et 2 Mo pour les données; (extensible jusqu'à 20 Mo); 0,1 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI et 2 logements pour modules de synchronisation H, routage, firmware V3.1
+SHORTNAME=CPU 417-4 H
+[1316676]
+KatEntryName = IM 157
+InfoText = IM 157, coupleur pour redondance avec PROFIBUS-PA. Reconfiguration en fonctionnement possible. Avec bus interne actif et mode redondant possible avec l'IM 157, plage de température étendue. A partir de la version 2 : Coupleur redondant extensible pour connexion d'un PROFIBUS-DP non redondant ("Y-Link").
+SHORTNAME=IM 157 Redondant
+[1316677]
+InfoText = 
+SHORTNAME=IM 157
+[1316678]
+InfoText = 
+SHORTNAME=IM 157 Maître PA
+[1316679]
+KatEntryName = Objet CiR
+InfoText = Réservation pour insertion de nouveaux esclaves en Run.
+SHORTNAME = Objet CiR
+[1316680]
+KatEntryName = Module CiR
+InfoText = Réservation pour insertion de nouveaux modules en Run.
+SHORTNAME = Module CiR
+[1316681]
+KatEntryName=IM 153-2
+InfoText=Coupleur de bus pour S7-300 SM ,FM (sauf FM356-4), remplacement de modules en fonctionnement possible.  Avec bus interne actif et mode redondant possible avec système H, supporte le synchronisme d'horloge.
+SHORTNAME=IM 153-2, redondant
+[1316693]
+KatEntryName = V3.1
+InfoText = CPU 416-2 PCI carte enfichable pour PC; équidistance et synchronisme d'horloge; routage; firmware V3.1
+SHORTNAME = CPU 416-2 PCI
+[1316694]
+InfoText=
+SHORTNAME=DP
+[1316695]
+SHORTNAME=MPI/DP
+[1316696]
+KatEntryName = V3.1
+InfoText = CPU 412-2 PCI carte enfichable pour PC; équidistance et synchronisme d'horloge; routage; firmware V3.1
+SHORTNAME = CPU 412-2 PCI
+[1316697]
+InfoText=
+SHORTNAME=DP
+[1316698]
+SHORTNAME=MPI/DP
+[1316699]
+KatEntryName=WinLC
+InfoText=Unités centrales de type WinLC
+[1316700]
+KatEntryName = V4.0
+InfoText = WinLC V4.0; Windows Logic Controller pour Windows 2000/XP; Port DP (maître DP); DPV1; Routage; Communication S7; firmware V4.0
+SHORTNAME=WinLC
+[1316702]
+KatEntryName = V4.0
+InfoText = WinLC RTX V4.0; Software Logic Controller pour Windows 2000/XP avec VenturCom RTX environnement temps réel; Port DP (maître DP); DPV1; Routage; Equidistance et synchronisme d'horloge; Communication S7; firmware V4.0
+SHORTNAME=WinLC RTX
+[1316705]
+KatEntryName=V1.0
+InfoText=Module de détection de position POS-INPUT, supporte le synchronisme d'horloge
+SHORTNAME=SM 338 POS-INPUT
+[1316711]
+KatEntryName=SM 321 DI16xDC24V, alarme
+InfoText=Module d'entrées TOR DI 16xDC24V, avec alarme de processus et de diagnostic,  par groupes de 16, supporte le synchronisme d'horloge; également vendu comme module SIPLUS sous le numéro de référence 6AG1 321-7BH01-2AB0
+SHORTNAME=DI16xDC24V, alarme
+[1316713]
+KatEntryName=SM 331 AI8x14Bit
+InfoText=Module d'entrées analogique AI 8x14 Bit, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=AI8x14Bit
+[1316712]
+KatEntryName=SM 321 DI16xDC24V, alarme
+InfoText=Module d'entrées TOR DI 16xDC24V, avec alarmes de processus et de diagnostic,  par groupes de 16 voies, plage de température étendue, supporte le synchronisme d'horloge
+SHORTNAME=DI16xDC24V, alarme
+[1316701]
+KatEntryName = CP 5611
+InfoText = Port DP (maître DP) pour WinLC; Routage; firmware V4.0/V4.1
+SHORTNAME=CP 5611
+[1316703]
+KatEntryName = CP 5613
+InfoText = Port DP (maître DP) pour WinLC; Routage; firmware V4.0/V4.1
+SHORTNAME=CP 5613
+[1316692]
+KatEntryName=Class COM-CPU
+InfoText = Objet de classe d'une CPU COM : s7hk39ax.dll
+SHORTNAME=Class COM-CPU
+[2364089]
+KatEntryName = 6ES7 315-6FF01-0AB0
+InfoText = 
+SHORTNAME=CPU 315F-2 DP
+[1316753]
+KatEntryName=V2.0
+InfoText = Mémoire de travail 192 Ko; 0,3ms/kinst; ports MPI+ DP (Maître ou esclave DP); configuration multirangée jusqu'à 32 modules, échange de données direct possible (récepteur et émetteur), équidistance, Routage, Communication S7 (FB/FC chargeables), firmware V2.0, mise en oeuvre possible dans des applications de sécurité; également vendu comme module SIPLUS sous le numéro de référence 6AG1 315-6FF01-2AB0
+SHORTNAME=CPU 315F-2 DP
+[1316754]
+SHORTNAME=DP
+[1316755]
+KatEntryName=CPU 416F-2
+InfoText=Unités centrales de type CPU 416F-2
+[1316756]
+KatEntryName=6ES7 416-2FK02-0AB0
+InfoText = Mémoire de travail 0,8 Mo code et 0,8 Mo données; 0,08 ms/kinst; 16 Ko DI/O; 64 connexions; 2*DP/MPI; échange de données direct possible (récepteur et émetteur); équidistance et synchronisme d'horloge; Routage; Multicomputing; firmware V3.1; mise en oeuvre possible dans des applications de sécurité
+SHORTNAME=CPU 416F-2
+[1316761]
+SHORTNAME=MPI/DP
+;
+;
+;
+[1315697]
+KatEntryName =EM 144 AI 2xI, court, diag
+InfoText = Module d'extension à 2 entrées analogiques 2xI (+/-20 mA, 4-20 mA, transducteur de mesure 4 fils), diagnostic
+SHORTNAME=EM 144 AI 2xI
+[1315156]
+KatEntryName=EM 144 AI 2xI, court
+InfoText=Module d'extension à 2 entrées analogiques 2xI (4-20 mA, transducteur de mesure à 2 fils)
+SHORTNAME=EM 144 AI 2xI
+[1315155]
+KatEntryName=EM 144 AI 2xI, court
+InfoText=Module d'extension à 2 entrées analogiques 2xI (+/-20 mA, 4-20 mA, transducteur de mesure 4 fils)
+SHORTNAME=EM 144 AI 2xI
+[1315698]
+KatEntryName =EM 144 AI 2xI, court, diag
+InfoText = Expansion submodule AI 2 x I (4-20 mA, 2-Wire MT), Diagnostics
+SHORTNAME=EM 144 AI 2xI
+[1315157]
+KatEntryName=EM 144 AI 2xRTD, court
+InfoText=Module d'extension à 2 entrées analogiques 2xRTD (Pt100)
+SHORTNAME=EM 144 AI 2xRTD
+[1315699]
+KatEntryName =EM 144 AI 2xRTD, court, diag
+InfoText = Module d'extension à 2 entrées analogiques 2xRTD (Pt100), diagnostic
+SHORTNAME=EM 144 AI 2xRTD
+[1315154]
+KatEntryName=EM 144 AI 2xU, court
+InfoText=Module d'extension à 2 entrées analogiques 2xU (+/-10V)
+SHORTNAME=EM 144 AI 2xU
+[1315696]
+KatEntryName =EM 144 AI 2xU, court, diag
+InfoText = Module d'extension à 2 entrées analogiques 2xU (+/-10V), diagnostic
+SHORTNAME=EM 144 AI 2xU
+[1315160]
+KatEntryName=EM 145 AO 2xI, court
+InfoText=Module d'extension à 2 sorties analogiques 2xI (+/-20mA, 4-20mA)
+SHORTNAME=EM 145 AO 2xI
+[1315701]
+KatEntryName =EM 145 AO 2xI, court, diag
+InfoText = Module d'extension à 2 sorties analogiques 2xI (+/-20mA, 4-20mA), diagnostic
+SHORTNAME=EM 145 AO 2xI
+[1315159]
+KatEntryName=EM 145 AO 2xU, court
+InfoText=Module d'extension à 2 sorties analogiques 2xU (+/-10V)
+SHORTNAME=EM 145 AO 2xU
+[1315700]
+KatEntryName =EM 145 AO 2xU, court, diag
+InfoText = Module d'extension à 2 sorties analogiques 2xU (+/-10V), diagnostic
+SHORTNAME=EM 145 AO 2xU
+[1315151]
+KatEntryName=EM 141 DI 4xDC24V, court
+InfoText=Module d'extension DI 4xDC24V
+SHORTNAME=EM 141 DI 4xDC24V
+[1315150]
+KatEntryName=EM 141 DI 8xDC24V, court
+InfoText=Module d'extension DI 8xDC24V
+SHORTNAME=EM 141 DI 8xDC24V
+[1316085]
+KatEntryName =EM 141 DI 8xDC24V, long
+InfoText = Module d'extension DI 8xDC24V, version longue
+SHORTNAME=EM 141 DI 8xDC24V
+[1316575]
+KatEntryName =EM 141 DI 8xDC24V, long, diag
+InfoText = Module d'extension DI 8xDC24V avec diagnostic par voie, version longue
+SHORTNAME=EM 141 DI 8xDC24V
+[1316687]
+KatEntryName =EM 141 DI 8xDC24V, court, diag
+InfoText = Module d'extension DI 8xDC24V avec diagnostic par voie, version courte
+SHORTNAME=EM 141 DI 8xDC24V
+[1315153]
+KatEntryName=EM 142 DO 4xDC24V/0.5A, court
+InfoText=Module d'extension DO 4xDC24V/0.5A
+SHORTNAME=EM 142 DO 4xDC24V/0.5A
+[1315152]
+KatEntryName=EM 142 DO 4xDC24V/2A, court
+InfoText=Module d'extension DO 4xDC24V/2A
+SHORTNAME=EM 142 DO 4xDC24V/2A
+[1315702]
+KatEntryName =EM 142 DO 4xDC24V/2A, court, diag
+InfoText = Module d'extension DO 4xDC24V/2A, diagnostic
+SHORTNAME=EM 142 DO 4xDC24V/2A
+[1316086]
+KatEntryName = EM 142 DO 8xDC24V/1.2A, long
+InfoText = Module d'extension DO 8xDC24V/1.2A, version longue
+SHORTNAME=EM 142 DO 8xDC24V/1.2A
+[1315382]
+KatEntryName=CP 142-2 AS-i, court
+InfoText=Module de base pour raccordement à l'AS-i
+SHORTNAME=CP 142-2 AS-i
+[1315795]
+KatEntryName=PM 148 DO 4xDC24V/2A, court, diag
+InfoText=Module de puissance DO 4xDC24V/2A, diagnostic
+SHORTNAME=PM 148 DO 4xDC24V/2A
+[1314889]
+KatEntryName=DO16xUC30/230V/Rel5A
+InfoText=Module de 16 sorties TOR à relais, 230 V c.a./30 V c.c./5 A, par groupes de 2
+SHORTNAME=DO16xUC230V Rel
+[1314829]
+KatEntryName=SM 321 DI16xDC24V, alarme
+InfoText=Module d'entrées TOR DI 16xDC24V, avec alarmes de processus et de diagnostic, par groupes de 16 voies, reparamétrable en ligne
+SHORTNAME=DI16xDC24V, alarme
+[1314830]
+KatEntryName=SM 321 DI4xNAMUR, Ex
+InfoText=Module d'entrées TOR DI 4xNamur, avec alarmes de processus et de diagnostic, par groupes de 1 voie, reparamétrable en ligne, [EEx ib]
+SHORTNAME=DI4xNAMUR, Ex
+[1314839]
+KatEntryName=SM 322 DO4xDC15V/20mA, Ex
+InfoText=Module de sorties TOR DO4xDC15V/20mA, alarme de diagnostic, par groupes de 1 voie, reparamétrable en ligne, [EEx ib]
+SHORTNAME=DO4xDC15V/20mA, Ex
+[1314840]
+KatEntryName=SM 322 DO4xDC24V/10mA, Ex
+InfoText=Module de sorties TOR DO4xDC24V/10mA, alarme de diagnostic, par groupes de 1 voie, reparamétrable en ligne, [EEx ib]
+SHORTNAME=DO4xDC24V/10mA, Ex
+[1314841]
+KatEntryName=SM 322 DO8xDC24V/0,5A
+InfoText=Module de sorties TOR DO8xDC24V/0.5A, alarme de diagnostic, par groupes de 8, reparamétrable en ligne; également vendu comme module SIPLUS sous le numéro de référence 6AG1 322-8BF00-2AB0 
+SHORTNAME=DO8xDC24V/0,5A
+[1315942]
+KatEntryName = SM 331 AI8xRTD
+InfoText = Module d'entrées analogiques AI8xRTD,  16 bits (interne 24 bits selon le procédé Sigma-Delta); RTD: Pt100, Pt200, Pt500, Pt1000, Ni100, Ni120, Ni1000, Cu10; reparamétrable en ligne
+SHORTNAME=AI8xRTD
+[1314846]
+KatEntryName=SM 331 AI4x0/4..20mA, Ex
+InfoText=Module de 4 entrées analogiques AI4x0/4..20mA, 15bits, reparamétrable en ligne, [EEx ib]
+SHORTNAME=AI4x0/4..20mA, Ex
+[1315521]
+KatEntryName=SM 331 AI2x0/4..20mA HART, Ex
+InfoText=Module d'entrées analog. AI2x0/4..20mA, avec communication HART, reparamétrable en ligne, [EEx ib], seulement en liaison avec l'IM153-2
+SHORTNAME=AI2xHART, Ex
+[1315810]
+KatEntryName=SM 332 AO2x0/4..20mA HART, Ex
+InfoText=Module de 2 sorties analogiques AO2x0/4..20mA, avec communication HART, reparamétrable en ligne, [EEx ib], seulement en liaison avec l'IM153-2
+SHORTNAME=AO2xHART, Ex
+[1315569]
+KatEntryName=SM 332 AO2x12Bit
+InfoText=Module de 2 sorties analogiques, 12 bits, reparamétrable en ligne, pour conditions climatiques élargies
+SHORTNAME=AO2x12Bit
+[1314850]
+KatEntryName=SM 332 AO4x0/4..20mA, Ex
+InfoText=Module de 4 sorties analogiques AO4x0/4..20mA, 15bits, reparamétrable en ligne, [EEx ib]
+SHORTNAME=AO4x0/4..20mA, Ex
+[1315052]
+KatEntryName=SM 332 AO2x12Bit
+InfoText=Module de sorties analogiques AO2/12Bit, reparamétrable en ligne; également vendu comme module SIPLUS sous le numéro de référence 6AG1 332-5HB01-2AB0 
+[1315053]
+KatEntryName=SM 332 AO4x12Bit
+InfoText=Module de 4 sorties analogiques, 12 bits, reparamétrable en ligne
+[1315672]
+KatEntryName=SM 321 DI16xDC24V, alarme
+InfoText=Module d'entrées TOR DI 16xDC24V, avec alarmes de processus et diagnostic, reparamétrable en ligne, conditions climatiques élargies
+SHORTNAME=DI16xDC24V, alarme
+[1315646]
+KatEntryName=SM 331 AI8x16Bit
+InfoText=Module d'entrées analogiques; AI8x16Bit; 1..5V, +/- 5V, +/- 10V; 0..20mA, 4..20mA, +/- 20 mA; reparamétrable en ligne; également vendu comme module SIPLUS sous le numéro de référence 6AG1 331-7NF00-2AB0 
+SHORTNAME=AI8x16Bit
+[1315645]
+KatEntryName=SM 332 AO4x16Bit
+InfoText=Module de 4 sorties analogiques, 16 bits, reparamétrable en ligne
+SHORTNAME=AO4x16Bit
+[1316076]
+KatEntryName = SM 322 DO8xDC24V/0,5A
+InfoText = Module de sorties TOR DO 8xDC24V/0,5A, avec diagnostic, reparamétrable en ligne, conditions climatiques élargies
+SHORTNAME=DO8xDC24V/0,5A
+[1316101]
+KatEntryName = SM 331 AI8xTC
+InfoText = Module d'entrées analogiques AI8xTC, 16 bits (interne 24 bits selon le procédé Sigma-Delta); thermocouples : B, E, J, K, L, N, R, S, T, U, C; reparamétrable en ligne
+SHORTNAME=AI8xTC
+[1316223]
+KatEntryName = SM 322 DO8xAC Iso
+InfoText = Module de sorties TOR DO8, reparamétrable en ligne
+SHORTNAME=DO8xAC Iso
+[1316227]
+KatEntryName=SM 331 AI8x16Bit
+InfoText = Module d'entrées analogiques; AI8x16Bit; 1..5V, +/- 5V, +/- 10V; 0..20mA, 4..20mA, +/- 20 mA; reparamétrable en ligne
+SHORTNAME=AI8x16Bit
+[1316260]
+KatEntryName=SM 321 DI16xNAMUR
+InfoText=Module d'entrées TOR DI 16xNAMUR, avec diagnostic et visualisation d'état de valeurs, reparamétrable en ligne
+SHORTNAME=DI16xNAMUR
+[1316261]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module de sorties TOR, DO 16xDC24V/0,5A, avec diagnostic, reparamétrable en ligne
+SHORTNAME=DO16xDC24V/0,5A
+[1316735]
+KatEntryName=IM 153-2 FO
+InfoText=IM 153-2 avec physique fibre optique, Coupleur de bus pour S7-300 SM ,FM (sauf FM356-4), remplacement de modules en fonctionnement possible. Avec bus interne actif et mode redondant possible avec système H
+SHORTNAME=IM 153-2 FO, redondant
+[1316716]
+KatEntryName=
+InfoText=
+SHORTNAME=Maître PROFIBUS
+[1316717]
+KatEntryName=
+InfoText=
+SHORTNAME=Maître PROFIBUS
+[1316718]
+KatEntryName=
+InfoText=
+SHORTNAME=Maître PROFIBUS
+[1316719]
+KatEntryName=
+InfoText=
+SHORTNAME=Maître PROFIBUS
+[1316763]
+KatEntryName=
+InfoText=
+SHORTNAME=Maître PROFIBUS
+[1316764]
+KatEntryName=
+InfoText=
+SHORTNAME=DP
+;
+;
+;
+[1316043]
+KatEntryName =IM151-7 CPU
+InfoText =Mémoire de travail 24 Ko; 0,3ms/kinst.; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V1.0; extensible jusqu'à max. 63 modules de la gamme ET200S
+SHORTNAME=IM151-7 CPU
+[1316045]
+KatEntryName =IM151-7 CPU
+InfoText =Mémoire de travail 24 Ko; 0,3ms/kinst.; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V1.0; extensible jusqu'à max. 63 modules de la gamme ET200S
+SHORTNAME=IM151-7 CPU
+[1316592]
+KatEntryName =IM151-7 CPU
+InfoText =Mémoire de travail 48 Ko; 0,3ms/kinst; port DP (autonome ou esclave DP); échange de données direct (émetteur et récepteur); firmware V2.0; extension possible jusqu'à 63 modules max. de la gamme ET200S
+SHORTNAME=IM151-7 CPU
+[1316593]
+KatEntryName =IM151-7 CPU
+InfoText =Mémoire de travail 48 Ko; 0,3ms/kinst; port DP (autonome ou esclave DP); échange de données direct (émetteur et récepteur); firmware V2.0; extension possible jusqu'à 63 modules max. de la gamme ET200S
+SHORTNAME=IM151-7 CPU
+[1316104]
+KatEntryName = IM151-7 CPU FO
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst.; connexion câble fibres optiques; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V1.0; extensible jusqu'à max. 63 modules de la gamme ET200S
+SHORTNAME=IM151-7 CPU FO
+[1316105]
+KatEntryName = IM151-7 CPU FO
+InfoText = Mémoire de travail 24 Ko; 0,3ms/kinst.; connexion câble fibres optiques; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V1.0; extensible jusqu'à max. 63 modules de la gamme ET200S
+SHORTNAME=IM151-7 CPU FO
+[1316759]
+KatEntryName =IM151-7 F-CPU
+InfoText =Mémoire de travail 48 Ko; 0,3ms/kinst; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V2.0; extensible jusqu'à max. 63 modules de la gamme ET200S; mise en oeuvre possible dans des applications de sécurité
+SHORTNAME=IM151-7 F-CPU
+[1316760]
+KatEntryName =IM151-7 F-CPU
+InfoText =Mémoire de travail 48 Ko; 0,3ms/kinst; port DP (autonome ou esclave DP); échange de données direct possible (récepteur et émetteur); firmware V2.0; extensible jusqu'à max. 63 modules de la gamme ET200S; mise en oeuvre possible dans des applications de sécurité
+SHORTNAME=IM151-7 F-CPU
+[1315364]
+KatEntryName=Esclaves DP V0
+InfoText=Esclaves PROFIBUS-DP pour le CP 342-5 (6GK7 342-5DA00-0XE0), CP5411, CP5412, CP5512, CP5511 (à partir de la version SW V6.0 SP5), CP5611 (à partir de la version SW V6.0 SP5), CP5613 (à partir de la version SW V6.0 SP5), CP5613 FO (à partir de la version SW V6.0 SP5), CP5614 (à partir de la version SW V6.0 SP5), CP5614 FO (à partir de la version SW V6.0 SP5) utilisé comme maître DP
+SHORTNAME=XY
+[1315132]
+KatEntryName=X-BM141 DI 8xDC24V
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques possible
+SHORTNAME=X-BM141 DI 8xDC24V
+[1315138]
+KatEntryName=X-BM141 DI 8xDC24V, version 1-7
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques possible, versions 1-7
+SHORTNAME=X-BM141 DI 8xDC24V
+[1315797]
+KatEntryName=X-BM141 DI 8xDC24V, à partir de la version 8
+InfoText=Module de base ET200X-DI 8xDC24V, extension avec modules d'extension analogiques possible, à partir de la version 8, échange de données direct possible
+SHORTNAME=X-BM141 DI 8xDC24V
+[1316079]
+KatEntryName = X-BM 141 DI 8xDC24V
+InfoText = Module de base ET 200X- DI 8xDC24V, extensible avec EM analogiques
+SHORTNAME=X-BM 141 DI 8xDC24V
+[1316691] 
+KatEntryName = X-BM 141 DI 8xDC24V
+InfoText = Module de base ET 200X- DI 8xDC24V, extensible avec EM analogiques
+SHORTNAME=X-BM 141 DI 8xDC24V
+[1316569]
+KatEntryName = X-BM141 Ecofast DI 8xDC24V
+InfoText = Module de base ET200X - DI 8xDC24V Ecofast, échange de données direct
+SHORTNAME=X-BM141 Eco. DI 8xDC24V
+[1316572]
+KatEntryName = X-BM141 Ecofast DI 8xDC24V Diag
+InfoText = Module de base ET200X - DI 8xDC24V Ecofast, diagnostic par voie, échange de données direct
+SHORTNAME=X-BM141 Eco. DI 8xDC24V
+[1315141]
+KatEntryName=X-BM142 DO 4xDC24V/2A, version 1-7
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques possible, version 1-7
+SHORTNAME=X-BM142 DO 4xDC24V/2A
+[1315798]
+KatEntryName=X-BM142 DO 4xDC24V/2A, à partir de la version 8
+InfoText=Module de base ET200X-DO 4xDC24V/2A, extension avec modules d'extension analogiques possible, à partir de la version 8, échange de données direct possible
+SHORTNAME=X-BM142 DO 4xDC24V/2A
+[1316082]
+KatEntryName = X-BM 142 DO 4xDC24V/2A
+InfoText = Module de base ET 200X-DO 4xDC24V/2A, extensible avec EM analogiques
+SHORTNAME=X-BM 142 DO 4xDC24V/2A
+[1316689]
+KatEntryName = X-BM 142 DO 4xDC24V/2A
+InfoText = Module de base ET 200X-DO 4xDC24V/2A, extensible avec EM analogiques
+SHORTNAME=X-BM 142 DO 4xDC24V/2A
+[1315626]
+KatEntryName=X-BM 147 / CPU
+InfoText=Carte de base BM147 avec prétraitement programmable
+SHORTNAME=X-BM 147 / CPU
+[1315912]
+KatEntryName=X-BM 147 / CPU
+InfoText=Carte de base BM147 avec prétraitement programmable, échange de données direct possible
+SHORTNAME=X-BM 147 / CPU
+;
+;
+;
+[1316779]
+KatEntryName =FM 355 C PID Control
+InfoText = Modules de régulation (continue)
+[1316780]
+KatEntryName =FM 355 S PID Control
+InfoText = Modules de régulation (pas à pas et impulsion)
+[1316783]
+KatEntryName =6ES7 355-0VH10-0AE0
+InfoText =6ES7 355-0VH10-0AE0
+[1316784]
+KatEntryName =6ES7 355-1VH10-0AE0
+InfoText =6ES7 355-1VH10-0AE0
+[1316781]
+KatEntryName =FM 355-2C Temperature Control
+InfoText = Modules de régulation de température (continue)
+[1316782]
+KatEntryName =FM 355-2S Temperature Control
+InfoText = Modules de régulation de température (pas à pas et impulsion)
+[1316785]
+KatEntryName =6ES7 355-2CH00-0AE0
+InfoText =6ES7 355-2CH00-0AE0
+[1316786]
+KatEntryName =6ES7 355-2SH00-0AE0
+InfoText =6ES7 355-2SH00-0AE0
+[1316798]
+KatEntryName = SM 331 AI8x13Bit
+InfoText = Module d'entrées analogiques AI 8x13Bit
+SHORTNAME=AI8x13Bit
+[1316799]
+KatEntryName=SM 322 DO16xDC24V/0,5A
+InfoText=Module de sorties TOR, DO 16xDC24V/0,5A, avec diagnostic, reparamétrable en ligne
+SHORTNAME=DO16xDC24V/0,5A
+;
+;
+;
+[1316766]
+InfoText=Ind. Ethernet connexion de la CPU317-2 PN/DP
+SHORTNAME=Ind. Ethernet
+[1316768]
+SHORTNAME=MPI/DP
+[1316769]
+KatEntryName=CPU 317-2 PN/DP
+InfoText=Unités centrales du type CPU317-2 PN/DP
+[1316815]
+KatEntryName=6ES7 317-2EJ10-0AB0
+SHORTNAME=CPU 317-2 PN/DP
+InfoText=
+[1316773]
+KatEntryName = V3.4
+InfoText = CPU 412-2 PCI carte enfichable pour PC; équidistance et synchronisme d'horloge; routage; firmware V3.4
+SHORTNAME = CPU 412-2 PCI
+[1316774]
+InfoText=
+SHORTNAME=DP
+[1316775]
+SHORTNAME=MPI/DP
+[1316770]
+KatEntryName = V3.4
+InfoText = CPU 416-2 PCI carte enfichable pour PC; équidistance et synchronisme d'horloge; routage; firmware V3.4
+SHORTNAME = CPU 416-2 PCI
+[1316771]
+InfoText=
+SHORTNAME=DP
+[1316772]
+SHORTNAME=MPI/DP
+[1316812]
+KatEntryName = 6ES7 611-4PY00-0YB7
+InfoText = 
+SHORTNAME=WinLC
+[1316813]
+KatEntryName = 6ES7 611-4SB00-0YB7
+InfoText = 
+SHORTNAME=WinLC RTX
+[1316814]
+KatEntryName = SM 331 AI8x14Bit
+InfoText = Module d'entrées analogiques AI 8x14 Bit, High Speed, synchronisme d'horloge
+SHORTNAME=AI8x14Bit
+[1316816]
+KatEntryName = SM 327 DI8/DX8
+InfoText = Module d'entrées/sorties TOR mixte; DI8 x DC24V; DX8 chaque voie pouvant être paramétrée comme entrée ou sortie
+SHORTNAME=DI8/DX8
+[1316817]
+KatEntryName = 8x IQ-SENSE
+InfoText = Module 8 IQ-SENSE pour la connexion d'appareils IQ-SENSE
+SHORTNAME=8x IQ-SENSE
+[1316818]
+KatEntryName = IQ-SENSE
+InfoText = Modules de capteur avec interface IQ
+;
+;
+;
+[1316787]
+KatEntryName=PROFINET IO
+InfoText=Réseau PROFINET IO
+SHORTNAME=Réseau IO PROFINET
+[1316809]
+KatEntryName=
+InfoText=PROFINET IO Controller
+SHORTNAME=IO PN
+[1316819]
+KatEntryName=APPAREILS DE TERRAIN supplémentaires
+InfoText=Appareils supplémentaires définis via le fichier GSD basé sur GSDML
+[1316820]
+KatEntryName = 8x IQ-SENSE IDENT
+InfoText = Module 8 IQ-SENSE pour la connexion d'appareils IQ-SENSE
+SHORTNAME=8x IQ-SENSE IDENT
+;
+;
+;
+[1316842]
+KatEntryName = V2.0
+InfoText=Module de détection de position POS-INPUT, supporte le synchronisme d'horloge
+SHORTNAME=SM 338 POS-INPUT
+[1316843]
+KatEntryName = 6ES7 338-4BC01-0AB0
+InfoText = 
+SHORTNAME=SM 338 POS-INPUT
+[1316844]
+KatEntryName=SM 338 POS-INPUT
+InfoText=Modules de détection de position POS-INPUT
+[1316762]
+KatEntryName=ET 200R
+InfoText=Péripherie TOR avec degré de protection IP 65 pour applications de soudage et de manutention
+SHORTNAME=ET 200R
+[1316776] 
+KatEntryName = Capteurs
+InfoText = Capteurs vidéo pour SIMATIC
+[1316491]
+KatEntryName=V3.0
+InfoText = Mémoire de travail 256 Ko; 0,1ms/kinst; port combiné MPI/DP (MPI ou maître DP ou esclave DP); configuration à plusieurs rangées jusquà 32 modules; échange de données direct possible (récepteur et émetteur); équidistance; Routage; communication S7 (FB/FC chargeables); firmware V3.0
+SHORTNAME=CPU 318-2
+[1316767]
+KatEntryName=V2.2
+InfoText=Mémoire de travail 512 Ko; 0,05ms/kinst; port PROFINET ; communication S7 (FB/FC chargeables); PROFINET CBA; PROFINET CBA-Proxy; port combiné MPI/DP (MPI ou maître DP ou esclave DP); configuration à plusieurs rangées jusqu'à 32 modules; cycle de bus DP équidistant; routage; firmware V2.2
+SHORTNAME=CPU 317-2 PN/DP
+[1316850]
+KatEntryName=SINAMICS
+InfoText=Entraînements SINAMICS
+SHORTNAME=SINAMICS
+;
+;
+;
+[1316852]
+KatEntryName = I/O
+InfoText = Famille d'appareils E/S
+SHORTNAME = I/O
+[1316839]
+KatEntryName = ET 200S
+InfoText = Appareil de périphérie décentralisée à modularité granulaire avec degré de protection IP 20
+SHORTNAME = ET 200S
+[_S7H_IO_S7_ETER_AT]
+SHORTNAME=KOPFBGR
+;
+;
+;
+[1316854]
+KatEntryName = GSD
+InfoText = Autres appareils définis via un fichier GSD basé sur GSDML; possibilités de paramétrage et convivialité réduites
+SHORTNAME = GSD
+;
+;
+;
+[1316862]
+KatEntryName = ET 200M
+InfoText = Appareil de périphérie décentralisée à modularité granulaire avec degré de protection IP 20
+SHORTNAME = ET 200M
+
+; -- DO NOT ALTER THIS LINE -----

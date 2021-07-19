@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Slaves Module Definition Slavemoddesc.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2002-03-08T08:35:18Z" Tool="STEP7 Version V5.2" User="BT3192"/>
+		<prim:LastModified Timestamp="2002-04-12T10:03:00Z" Tool="Textpad" User="BT3192"/>
+	</prim:FileInfo>
+	<base:Project ID="{670ECA2B-7E96-11d6-977F-00104B42C6B5}" Name="Module Description for Slave">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="Module">
+				<base:SettingsFeature>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Dataset0" DSNr="0" DSLen="11">
+							<hwk:Par Name="DPV1_Diagnostic_Alarm" PNr="1">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Diagnosealarm (OB 82)"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>1</hwk:defPcs7>
+								<hwk:instances>1</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="DPV1_Process_Alarm" PNr="2">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Prozessalarm (OB 40 bis 47)"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>1</hwk:defPcs7>
+								<hwk:instances>1</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="DPV1_PullPlug_Alarm" PNr="3">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Ziehen/Stecken-Alarm(OB 83)"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>1</hwk:defPcs7>
+								<hwk:instances>1</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+					</hwk:DatasetList>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

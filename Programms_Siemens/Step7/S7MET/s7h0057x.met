@@ -1,0 +1,78 @@
+; -----------------------------fuer ET200iSP
+
+;----------------------------------------------------------------
+; AO-HART Module
+;----------------------------------------------------------------
+
+
+;----------------------------- 4 AO HART
+[_S7H_HSP_6ES7_135_7TD00_0AB0_CT]
+;-------------------------------
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363586
+basetype=_S7H_HSP_CLASS_ET200ISP_MODULE_AO_AT
+CatalogParent=2363569
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x79F2
+MLFB=6ES7 135-7TD00-0AB0
+IN_ADDRESS_RANGE=0
+OUT_ADDRESS_RANGE=8
+COUNT_INPUT_CHANNELS_ANALOG=0
+COUNT_OUTPUT_CHANNELS_ANALOG=4
+paramDescr=s7h0057x.dsc
+IS_PARAMETRIZEABLE=1
+CLSID={070FD2B8-AB8F-4fe0-8CDB-D4000A1A054B}
+CUSTOM_SITE_1={A18D8341-CBEC-460b-AF3E-074580BFDBCA}
+USER_DIALOG_1=STANDARD
+USER_DIALOG_2={B5F760D7-678F-4db3-BF0C-D201335A6B27},s7h0057x.dll
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+IO_TYPE=4
+CLSYNC_TYP_MODULE=1
+CLSYNC_SUPPORT=0
+SHORTNAME=4 AO HART
+HSP_NAME=ET 200iSP 4xAO I HART
+HSP_ID=0057
+USE_CHANGABLE_ADRDLG=1
+MAX_NUM_OF_CHILDS=4
+FIRST_VISIBLE_CHILD_NO=1
+MODULE_EXCHANGE_TEST=1
+CLASSDEF=ModET200iSP_4AO_HARTclassdef.xml
+MODULEDESC=ET200iSP_4AO_HARTmoddesc.xml
+PROGID_SPECACCLAYER=s7hwexpx.SAET200iSP.1
+Rule_01000081=MAXC(0)
+
+;----------------------------- HART SUBMODUL für HSP
+[_S7H_HSP_HART_AO_SUBMODUL_CT]
+;-------------------------------
+server=s7hk33ax.dll
+prefix=OM
+ObjType=2363587
+basetype=_S7H_HART_SUBMODUL_CT
+CatalogParent=2363586,2364719
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+HSP_NAME=ET 200iSP 4xAO I HART
+HSP_ID=0057
+PLUG_CLASS=0x01000082
+
+
+;--------------- Neues Modul in V3.0 -------------------
+
+;----------------------------- 4 AO HART
+[_S7H_HSP_6ES7_135_7TD00_0AB0_V3_CT]
+;-------------------------------
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2364719
+basetype=_S7H_HSP_6ES7_135_7TD00_0AB0_CT
+CatalogParent=2363569
+MLFB=6ES7 135-7TD00-0AB0 ES9
+MLFB_PREFIX=V3
+paramDescr=AO20057x.dsc
+CLSID={7CFCB512-F26F-458b-8840-6EE522F79B64}
+SHORTNAME=4 AO HART
+HWCNFX_VER=5.5.0.0|0
+HWCNFX_FOR_HWU=5.3.2.0

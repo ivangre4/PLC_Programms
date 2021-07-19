@@ -1,0 +1,16 @@
+S7HPROFX V0.1
+
+//RQ AP00100256
+// Folgende EMs dürfen nicht an CPU 147-1AA10 steckbar sein und werden aus Katalog entfernt:
+//------------------------------------------------------------------------------------------
+// Pneumatik 6ES7 148-1DA00-0XA0
+[PROFIBUS-DP\ET 200X\X-BM 147 / CPU::6ES7 147-1AA10-0XB0\Pneumatica\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+
+// 6ES7 141-1BD30-0XA0
+[PROFIBUS-DP\ET 200X\X-BM 147 / CPU::6ES7 147-1AA10-0XB0\DI\EM 141 DI 4xDC24V, scheda::6ES7 141-1BD30-0XA0]
+@DELETE
+
+// 6ES7 141-1BF30-0XA0
+[PROFIBUS-DP\ET 200X\X-BM 147 / CPU::6ES7 147-1AA10-0XB0\DI\EM 141 DI 8xDC24V, scheda::6ES7 141-1BF30-0XA0]
+@DELETE

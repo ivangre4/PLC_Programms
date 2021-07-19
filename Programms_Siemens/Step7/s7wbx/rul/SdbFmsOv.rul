@@ -1,0 +1,59 @@
+@DB_TYP FMS_OV_SDB V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#-----------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den FMS Ov SDB in der PC-Baugruppe
+#------------------------------------------------------------------------
+
+ALL
+{
+ 	ALL_DATA$LNG						DM||||	# für lokale Zwecke
+	ALL_DATA$NAM						_M||||
+	ALL_DATA
+	{
+	
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+			Baugruppentyp							SM||||
+			SDB_Inhalt								WM||||
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+			Reserved								BM|0x00|||
+			TSAP_ID_TYP								BM|0|||		
+			DEVICE_ID								BM|0|||		
+			TSAP_ID1								BM|254|||					
+			TSAP_ID2								BM|0|||		
+			NEXT_STADDR								BM|0|||	
+			REM_STADDR								BM|0|||		
+		}
+
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+
+		PBL_FMS_OV_REMOTE$NAM					_O||||
+		PBL_FMS_OV_REMOTE
+		{
+			PBL_FMS_OV_REMOTE_ID				BC|0x01|||
+			PBL_FMS_OV_REMOTE_VERSION			BC|0|||
+			PBL_FMS_OV_REMOTE$LNG				WM||||
+				
+			CONN_ID								WM||||
+			NEXT_SDB							BM|0|||
+			SEQ_NO								BM|0|||
+				
+			DATA$LNG							WM||||
+			DATA								AM|""|||
+		}
+	}
+}
+
+

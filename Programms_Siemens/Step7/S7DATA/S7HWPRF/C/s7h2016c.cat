@@ -1,0 +1,22 @@
+S7HPROFX V0.1
+
+// ===================
+// FM 352
+// ===================
+
+[SIMATIC 300\FM-300\Cames électroniques]
+ObjectName="Cames électroniques"
+ObjectType="0x00141519"
+
+[SIMATIC 300\FM-300\Cames électroniques\FM 352 CAM MODULE::6ES7 352-1AH02-0AE0]
+ObjectName="FM 352 CAM MODULE"
+ObjectType="0x00241e0c"
+
+// ====================
+// Loeschen der Elemente:
+// ====================
+
+// FM 352:
+// -----------
+[SIMATIC 300\FM-300\FM 352 CAM MODULE::6ES7 352-1AH02-0AE0]
+@DELETE

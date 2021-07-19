@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog Version="V0.87">
+	<WiringTypes>
+		<WiringType ID="1" Name="Kupfer" Class="0"/>
+		<WiringType ID="2" Name="Lichtwellenleiter" Class="18"/>
+		<WiringType ID="3" Name="Lichtwellenleiter" Class="13"/>
+    <WiringType ID="4" Name="Lichtwellenleiter" Class="46"/>
+		<WiringType ID="5" Name="Lichtwellenleiter" Class="54"/>
+		<WiringType ID="6" Name="Lichtwellenleiter" Class="24"/>
+	</WiringTypes>
+	<DeviceTypes>
+		<DeviceType ID="1" Name="SCALANCE X101-1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="Medienconverter.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="2"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="2" Name="SCALANCE X101-1FL" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="Medienconverter.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="3"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="3" Name="SCALANCE X101-1LD" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="Medienconverter.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="4"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="4" Name="SCALANCE X101-1POF" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="Medienconverter.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="5"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="5" Name="SCALANCE X108" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX108.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="1"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="1"/>
+				<PortType ID="7" Name="Port 7 (X1 P7)" WiringTypeRefId="1"/>
+				<PortType ID="8" Name="Port 8 (X1 P8)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="6" Name="SCALANCE X104-2" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX1042.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="2"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="2"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="7" Name="SCALANCE X106-1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX1061.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="1"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="1"/>
+				<PortType ID="7" Name="Port 7 (X1 P7)" WiringTypeRefId="2"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="8" Name="SCALANCE X112-2" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX1122.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="1"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="1"/>
+				<PortType ID="7" Name="Port 7 (X1 P7)" WiringTypeRefId="1"/>
+				<PortType ID="8" Name="Port 8 (X1 P8)" WiringTypeRefId="1"/>
+				<PortType ID="9" Name="Port 9 (X1 P9)" WiringTypeRefId="1"/>
+				<PortType ID="10" Name="Port 10 (X1 P10)" WiringTypeRefId="1"/>
+				<PortType ID="11" Name="Port 12 (X1 P11)" WiringTypeRefId="1"/>
+				<PortType ID="12" Name="Port 12 (X1 P12)" WiringTypeRefId="1"/>
+				<PortType ID="13" Name="Port 13 (X1 P13)" WiringTypeRefId="2"/>
+				<PortType ID="14" Name="Port 14 (X1 P14)" WiringTypeRefId="2"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="10" Name="SCALANCE X116" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX116.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="1"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="1"/>
+				<PortType ID="7" Name="Port 7 (X1 P7)" WiringTypeRefId="1"/>
+				<PortType ID="8" Name="Port 8 (X1 P8)" WiringTypeRefId="1"/>
+				<PortType ID="9" Name="Port 9 (X1 P9)" WiringTypeRefId="1"/>
+				<PortType ID="10" Name="Port 10 (X1 P10)" WiringTypeRefId="1"/>
+				<PortType ID="11" Name="Port 12 (X1 P11)" WiringTypeRefId="1"/>
+				<PortType ID="12" Name="Port 12 (X1 P12)" WiringTypeRefId="1"/>
+				<PortType ID="13" Name="Port 13 (X1 P13)" WiringTypeRefId="1"/>
+				<PortType ID="14" Name="Port 14 (X1 P14)" WiringTypeRefId="1"/>
+				<PortType ID="15" Name="Port 15 (X1 P15)" WiringTypeRefId="1"/>
+				<PortType ID="16" Name="Port 16 (X1 P16)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="11" Name="SCALANCE X124" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE X100">
+			<GraphLayout BitMapPath="SCALANCEX124.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="1"/>
+				<PortType ID="3" Name="Port 3 (X1 P3)" WiringTypeRefId="1"/>
+				<PortType ID="4" Name="Port 4 (X1 P4)" WiringTypeRefId="1"/>
+				<PortType ID="5" Name="Port 5 (X1 P5)" WiringTypeRefId="1"/>
+				<PortType ID="6" Name="Port 6 (X1 P6)" WiringTypeRefId="1"/>
+				<PortType ID="7" Name="Port 7 (X1 P7)" WiringTypeRefId="1"/>
+				<PortType ID="8" Name="Port 8 (X1 P8)" WiringTypeRefId="1"/>
+				<PortType ID="9" Name="Port 9 (X1 P9)" WiringTypeRefId="1"/>
+				<PortType ID="10" Name="Port 10 (X1 P10)" WiringTypeRefId="1"/>
+				<PortType ID="11" Name="Port 12 (X1 P11)" WiringTypeRefId="1"/>
+				<PortType ID="12" Name="Port 12 (X1 P12)" WiringTypeRefId="1"/>
+				<PortType ID="13" Name="Port 13 (X1 P13)" WiringTypeRefId="1"/>
+				<PortType ID="14" Name="Port 14 (X1 P14)" WiringTypeRefId="1"/>
+				<PortType ID="15" Name="Port 15 (X1 P15)" WiringTypeRefId="1"/>
+				<PortType ID="16" Name="Port 16 (X1 P16)" WiringTypeRefId="1"/>
+				<PortType ID="17" Name="Port 17 (X1 P17)" WiringTypeRefId="1"/>
+				<PortType ID="18" Name="Port 18 (X1 P18)" WiringTypeRefId="1"/>
+				<PortType ID="19" Name="Port 19 (X1 P19)" WiringTypeRefId="1"/>
+				<PortType ID="20" Name="Port 20 (X1 P20)" WiringTypeRefId="1"/>
+				<PortType ID="21" Name="Port 21 (X1 P21)" WiringTypeRefId="1"/>
+				<PortType ID="22" Name="Port 22 (X1 P22)" WiringTypeRefId="1"/>
+				<PortType ID="23" Name="Port 23 (X1 P23)" WiringTypeRefId="1"/>
+				<PortType ID="24" Name="Port 24 (X1 P24)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="12" Name="SCALANCE W744-1PRO" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="13" Name="SCALANCE W746-1PRO" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="14" Name="SCALANCE W747-1RR" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="15" Name="SCALANCE W788-1RR" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="16" Name="SCALANCE W788-1PRO" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="17" Name="SCALANCE W788-2RR" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="18" Name="SCALANCE W788-2PRO" Webable="1" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="SCALANCE W">
+			<GraphLayout BitMapPath="ScalanceW.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+			</InterfaceType>
+		</DeviceType>
+		<DeviceType ID="19" Name="CU - FO LD (1GBit)" CatalogId="PassCompCat.xml" CatalogVersion="V0.87" ProductFamily="medium converter">
+			<GraphLayout BitMapPath="Medienconverter.bmp"/>
+			<InterfaceType ID="1">
+				<PortType ID="1" Name="Port 1 (X1 P1)" WiringTypeRefId="1"/>
+				<PortType ID="2" Name="Port 2 (X1 P2)" WiringTypeRefId="6"/>
+			</InterfaceType>
+		</DeviceType>
+	</DeviceTypes>
+</Catalog>

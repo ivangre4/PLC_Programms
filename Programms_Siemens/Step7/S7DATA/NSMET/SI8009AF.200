@@ -1,0 +1,100 @@
+Typdat.-Ver.:V5.1, ET 200U-DP/FMS,MLFB<6ES5 318-8MC1.> Ident = 0x8009 32777
+V5.x;
+ET 200U    DP/FMS;
+SIEMENS   ;
+ET 200U   ;
+ET 200    ;
+ET200U/DP      ;
+32777;
+J;
+J;
+N;
+J;
+J;
+N;
+N;
+N;
+J;
+n;
+n;
+J;
+n;
+n;
+00020;
+0001011111;
+032;
+032;
+032;
+013;
+008;
+PV001;
+00;
+PSL004;
+PS007"Output_Clear                  "BIT0 "0"0"1"HI001";
+PS007"Diagnostics_Generate          "BIT1 "0"0"1"HI002";
+PS007"Esclave combiné               "BIT2 "0"0"1"HI003";
+PS007"Mode_Slow                     "BIT3 "0"0"1"HI004";
+HTT004;
+HI001;
+L2;
+"Effacer sorties               "00000";
+"Ne pas effacer sorties        "00001";
+HI002;
+L2;
+"Ne pas interpréter diagnostic "00000";
+"Interpréter diagnostic        "00001";
+HI003;
+L2;
+"Pas d'esclave combiné         "00000";
+"Esclave combiné               "00001";
+HI004;
+L2;
+"Pas de Mode_Slow              "00000";
+"Mode_Slow                     "00001";
+KV000;
+SY;
+DKM006;
+DBO001"0"Mode_Slow actif               "1";
+DBO001"0"Mode_Slow inactif             "0";
+DBO001"1"Erreur de configuration       "1";
+DBO001"3"Erreur de module              "1";
+DBO001"4"Absence tension de charge     "1";
+DBO001"5"Court-circuit après L+        "1";
+DKK000;
+ET_200U;
+ISNONAME;
+SO000;
+064;
+MLFB000;
+LSK000;
+000;
+SPT000;
+HTT000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

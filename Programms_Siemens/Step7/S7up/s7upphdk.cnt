@@ -1,0 +1,32 @@
+:Base S7upphdk.hlp
+:Title 关于过程诊断的帮助信息
+1 "诊断"标签
+2 诊断数据
+3 编辑过程诊断数据 =HIDU_INFO_DIAGNOSE
+3 "名称"列=Spalte_Name_
+3 "初始诊断地址"列=Spalte_Diagnoseeinstieg_
+3 "类型"列=Spalte_Art_
+3 "监视逻辑"列=Spalte_berwachungslogik_
+3 "激活"列=Spalte_aktiv_
+3 "触发器"列=Spalte_Ausl_ser_
+3 "时间"列=Spalte_Zeit_
+3 "初始值"列=Spalte_Erstwerte_
+3 "分析"列=Spalte_Analyse_
+3 "优先级"列=Spalte_Priorit_t_
+3 "消息文本"列=Spalte_Meldetext_
+3 "源"列=Spalte_Quelle_
+3 "确认"列=Spalte_Quittierung_
+3 "相关值"列=Spalte_Begleitwert_
+2 诊断弹出式菜单 
+3 诊断弹出式菜单中的菜单命令 =Men_befehle_im_Kontextmen_Diagnose
+3 新建(诊断弹出式菜单) =Neu_Kontextmen_Diagnose_
+3 剪切(诊断弹出式菜单)=Ausschneiden_Kontextmen_Diagnose_
+3 复制(诊断弹出式菜单)=Kopieren_Kontextmen_Diagnose_
+3 粘贴(诊断弹出式菜单) =Einf_gen_Kontextmen_Diagnose_
+3 删除(诊断弹出式菜单)=L_schen_Kontextmen_Diagnose_
+3 块视图(诊断弹出式菜单)=Bausteinsicht_ein_Kontextmen_Diagnose_
+3 程序段视图(诊断弹出式菜单)=Netzwerksicht_ein_Kontextmen_Diagnose_
+3 显示列(诊断弹出式菜单)=Spalten_anzeigen_Kontextmen_Diagnose_
+3 组态消息(诊断弹出式菜单)=Meldung_projektieren_Kontextmen_Diagnose_
+3 对象属性(诊断弹出式菜单)=Objekteigenschaften_Kontextmen_Diagnose_
+

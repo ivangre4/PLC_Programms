@@ -1,0 +1,189 @@
+@DB_TYP FDL_SDB V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#
+#------------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den FDL SDB
+#
+# Historie:
+# 12.11.97 GS: Ersterstellung
+# 06.07.98 GS: SDB Gesamtlänge aus dem SDB entfernt
+# 
+#
+#------------------------------------------------------------------------
+#
+
+SDB_Buffer
+{
+
+	#--------------------------------------------------------------------
+	# FDL SDB 
+	#--------------------------------------------------------------------
+
+	# die Gesamtlänge ( für den LongBinary Buffer )
+	FDL_SDB$LNG									DM||||
+
+	FDL_SDB$NAM										_M||||
+	FDL_SDB
+	{
+
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+
+			# Typ der Baugruppe
+			Baugruppentyp							SM||||
+
+			# SDB Inhalt :
+			SDB_Inhalt								WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+
+			Reserved								BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP								BM|0|||		
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID								BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1								BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2								BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR								BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR								BM|0|||		
+		}
+
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+		
+		SDB_ParameterArea$NAM						_M||||
+		SDB_ParameterArea
+		{
+		
+			#------------------------------------------------------------
+			# FDL Management Block
+			#------------------------------------------------------------
+
+			# -- Parameterblock Header
+			PblkId									BC|1|||			
+			Version									BC|0|||
+			FDL_ManagementblockLen					WC|7|||
+			# -- 
+
+			# Es sollen keine Default AGAG Verbindungen angelegt werden
+			bCreateAgAgDft							BC|0|||
+
+			# Anzahl der folgenden AGAG Verbindungen
+			FDL_ConnDescription$CNT					WM||||
+
+			# -- Ende FDL_Managementblock
+		
+			#------------------------------------------------------------
+			# FDL Verbindungsbeschreibung
+			#------------------------------------------------------------
+
+			FDL_ConnDescription$NAM					_A||||
+			FDL_ConnDescription
+			{
+				# -- Parameterblock Header
+				PblkId								BC|2|||			
+				Version								BC|0|||
+				FDL_ConnDescription$LNG				WM||||
+				# -- 
+
+				# CPU Nummer für AS 400
+				CpuNumber							BM|0|||
+  
+				# Identifier der Verbindung
+				CID									BM||||
+
+				# L2 Adresse des Remote AGs
+				RemoteAdr							BM||||
+  
+				# lokaler SAP
+				LocalSap							BM||||
+			
+				# remoter SAP
+				RemoteSap							BM||||
+			
+				# Service der Verbindung
+				Service								BM||||
+			
+				# Länge des Verbindungsnamens
+				VerbName$LNG						BM||||
+
+				# Verbindungsname ( maximal 24 lesbare Zeichen )
+				VerbName							AM||0|25|
+
+
+				PBL_OPC_FDL$NAM					_O||||
+				PBL_OPC_FDL
+				{
+					PBL_OPC_FDL_ID				BC|0x22|||
+					PBL_OPC_FDL_VERSION			BC|0|||
+					PBL_OPC_FDL$LNG				WM||||
+					
+					TIMEOUT							DM||||
+					MAX_SEND_CREDITS				WM||||
+					MAX_RETRY_NO_RESOURCES			WM||||
+					LEN_SEND						WM||||
+					MAX_COUNT_AWAIT_INDICATION		WM||||
+					SEND_PRIO						WM||||
+				}
+				
+			} # Ende FDL_ConnDescription
+
+			#------------------------------------------------------------
+			# Reserved for further UPLOADs 
+			#------------------------------------------------------------
+				RESV_ALL_BLK0$NAM	_A||||
+				RESV_ALL_BLK0
+				{
+					RESV_ALL_ID0		BM||3|0xFD|
+					RESV_ALL_RESV0		BM||||
+					RESV_ALL_BLK0$LNG	WM||||
+					RESV_ALL_DATA0		BA||||
+				}
+
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+			
+			SdbRucksack$NAM							_O||||
+			SdbRucksack
+			{
+			
+				# -- Parameterblock SDB Rucksack
+				PblkId								BC|0xFE||| 
+				Version								BC|0x00|||
+				SdbRucksack$LNG						WM||0x0000|0xffff|1
+				# -- 
+					
+				Alignment							BC|0|||
+			
+			} # Ende SDB Rucksack
+
+		} # Ende SDB_ParameterArea
+	
+	} # Ende FDL_SDB
+
+} # Ende SDB-Buffer
+

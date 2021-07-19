@@ -1,0 +1,2980 @@
+[Bauform]
+Item1 = Universal Slaves
+Item2 = Módulos usuario
+Item3 = Aparatos de mando y señalización
+Item4 = Módulos planos, módulos F90
+Item5 = Soluciones de integraciòn
+Item6 = K20 módulos compactos IP6X
+Item7 = K45 módulos compactos IP6X
+Item8 = K60 módulos compactos IP6X
+Item9 = S22.5 módulos SlimLine IP20
+Item10 = S45    módulos SlimLine IP20
+Item11 = Módulos del interfaz
+Item12 = Monitores de seguridad
+Item13 = Componentes de sistema y accesorios
+Item14 = Arrancadores de motor IP20, derivaciones
+Item15 = Arrancadores de motor IP6X, derivaciones
+Item16 = Sensores de seguridad
+Item17 = Detectores
+
+[Gruppe]
+Item1 = DI
+Item2 = DI/DO
+Item3 = DO
+Item4 = Cajas 3SB3
+Item5 = Adaptador F
+Item6 = Columnas de señalización
+Item7 = AI
+Item8 = AO
+Item9 = Contadores
+Item10 = Interfaz LOGO!
+Item11 = Monitores de seguridad estándar
+Item12 = Monitores de seguridad ampliados
+Item13 = Extension Plug
+Item14 = Acoplador
+Item15 = Módulos AS-i
+Item16 = Derivaciones
+Item17 = ECOFAST
+Item18 = Arrancadores compactos
+Item19 = Arrancadores de motor DC 24V
+Item20 = Cortinas y rejillas fotoeléctricas
+Item21 = Escáneres a láser
+Item22 = Interruptores de posición
+
+[Profil_IO_Standard]
+Item1 = - - - - - - - - : 15
+Item2 = 0  (E E E E) : 0
+Item3 = 1  (E E E A) : 1
+Item4 = 2  (E E E B) : 2
+Item5 = 3  (E E A A) : 3
+Item6 = 4  (E E B B) : 4
+Item7 = 5  (E A A A) : 5
+Item8 = 6  (B B B B) : 6
+Item9 = 7  (B B B B) : 7
+Item10 = 8  (A A A A) : 8
+Item11 = 9  (A A A E) : 9
+Item12 = A  (A A A B) : 10
+Item13 = B  (A A E E) : 11
+Item14 = C  (A A B B) : 12
+Item15 = D  (A E E E) : 13
+Item16 = E  (A B B B) : 14
+
+[Profil_ID_Standard]
+Item1 = 0 : 0
+Item2 = 1 : 1
+Item3 = 2 : 2
+Item4 = 3 : 3
+Item5 = 4 : 4
+Item6 = 5 : 5
+Item7 = 6 : 6
+Item8 = 7 : 7
+Item9 = 8 : 8
+Item10 = 9 : 9
+Item11 = B : 11
+Item12 = C : 12
+Item13 = D : 13
+Item14 = E : 14
+Item15 = F : 15
+
+[Profil_ID1_Standard]
+Item1 = 0 : 0
+Item2 = 1 : 1
+Item3 = 2 : 2
+Item4 = 3 : 3
+Item5 = 4 : 4
+Item6 = 5 : 5
+Item7 = 6 : 6
+Item8 = 7 : 7
+Item9 = 8 : 8
+Item10 = 9 : 9
+Item11 = A : 10
+Item12 = B : 11
+Item13 = C : 12
+Item14 = D : 13
+Item15 = E : 14
+Item16 = F : 15
+
+[Profil_ID2_Standard]
+Item1 = 0 : 0
+Item2 = 1 : 1
+Item3 = 2 : 2
+Item4 = 3 : 3
+Item5 = 4 : 4
+Item6 = 5 : 5
+Item7 = 6 : 6
+Item8 = 7 : 7
+Item9 = 8 : 8
+Item10 = 9 : 9
+Item11 = A : 10
+Item12 = B : 11
+Item13 = C : 12
+Item14 = D : 13
+Item15 = E : 14
+Item16 = F : 15
+
+[Profil_ID2_Standard_IO8_ID4]
+Item1 = 0 : 0
+Item2 = 4 : 4
+Item3 = 5 : 5
+Item4 = 6 : 6
+Item5 = 7 : 7
+Item6 = C : 12
+Item7 = D : 13
+Item8 = E : 14
+Item9 = F : 15
+
+[Profil_IO_ABSlave]
+Item1 = - - - - - - - - : 15
+Item2 = 0  (E E E E) : 0
+Item3 = 1  (E E E -) : 1
+Item4 = 2  (E E E E) : 2
+Item5 = 3  (E E A -) : 3
+Item6 = 4  (E E B E) : 4
+Item7 = 5  (E A A -) : 5
+Item8 = 6  (B B B E) : 6
+Item9 = 7  (B B B E) : 7
+Item10 = 8  (A A A -) : 8
+Item11 = 9  (A A A E) : 9
+Item12 = A  (A A A E) : 10
+Item13 = B  (A A E E) : 11
+Item14 = C  (A A B E) : 12
+Item15 = D  (A E E E) : 13
+Item16 = E  (A B B E) : 14
+
+[Profil_ID_ABSlave]
+Item1 = A : 10
+
+[Profil_ID1_ASlave]
+Item1 = 0  (8) : 0
+Item2 = 1  (9) : 1
+Item3 = 2  (A) : 2
+Item4 = 3  (B) : 3
+Item5 = 4  (C) : 4
+Item6 = 5  (D) : 5
+Item7 = 6  (E) : 6
+Item8 = 7  (F) : 7
+
+[Profil_ID1_BSlave]
+Item1 = 0  (8) : 8
+Item2 = 1  (9) : 9
+Item3 = 2  (A) : 10
+Item4 = 3  (B) : 11
+Item5 = 4  (C) : 12
+Item6 = 5  (D) : 13
+Item7 = 6  (E) : 14
+Item8 = 7  (F) : 15
+
+[Profil_ID2_ABSlave]
+Item1 = 0 : 0
+Item2 = 1 : 1
+Item3 = 2 : 2
+Item4 = 3 : 3
+Item5 = 4 : 4
+Item6 = 5 : 5
+Item7 = 6 : 6
+Item8 = 7 : 7
+Item9 = 8 : 8
+Item10 = 9 : 9
+Item11 = A : 10
+Item12 = B : 11
+Item13 = C : 12
+Item14 = D : 13
+Item15 = E : 14
+Item16 = F : 15
+
+[MLFB_AS-i Platzhalter]
+Kurzbezeichnung = AS-i Platzhalter
+FDBText = AS-i módulo discrecional
+Bauform = Universal Slaves
+Adresstyp = A/B-Slave
+Familie = 5
+Profil_IO = - - - - - - - -
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_AS-i Standard Slave Universal]
+Kurzbezeichnung = Esclavo estándar AS-i
+FDBText = Esclavo standard AS-i módulo universal
+Typ = U
+Name = AS-i Standard Slave Universal
+Bauform = Universal Slaves
+Adresstyp = Standard-Slave
+Par_Anzahl = 0
+
+[MLFB_AS-i A/B Slave Universal]
+Kurzbezeichnung = Esclavo AS-i A/B
+FDBText = Esclavo AS-i A/B módulo universal (modo de direccionamiento extendido)
+Typ = U
+Name = AS-i A/B Slave Universal
+Bauform = Universal Slaves
+Adresstyp = A/B-Slave
+Par_Anzahl = 0
+
+[MLFB_3RA5 110-xxxxx-0BB4]
+Kurzbezeichnung = AS-i SML,2DI/1DO,3RA5 DS
+FDBText = AS-i derivación a motor, IP20, arrancador directo, eléctromecánico, AC 400V, tamaño S00, AUX DC 24V, bornes con tornillo (enchufables), para montaje en barras colectoras
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Derivaciones
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RA5 120-xxxxx-0BB4]
+Kurzbezeichnung = AS-i SML,2DI/1DO,3RA5 DS
+FDBText = AS-i derivación a motor, IP20, arrancador directo, eléctromecánico, AC 400V, tamaño S0, AUX DC 24V, bornes con tornillo (enchufables), para montaje en barras colectoras
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Derivaciones
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RA5 210-xxxxx-0BB4]
+Kurzbezeichnung = AS-i SML,4DI/2DO,3RA5 RS
+FDBText = AS-i derivación a motor, IP20, inversor, eléctromecánico, AC 400V, tamaño S00, AUX DC 24V, bornes con tornillo (enchufables), para montaje en barras colectoras
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Derivaciones
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RA5 220-xxxxx-0BB4]
+Kurzbezeichnung = AS-i SML,4DI/2DO,3RA5 RS
+FDBText = AS-i derivación a motor, IP20, inversor, eléctromecánico, AC 400V, tamaño S0, AUX DC 24V, bornes con tornillo (enchufables), para montaje en barras colectoras
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Derivaciones
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AA00]
+Kurzbezeichnung = AS-i SM-U, 4DI
+FDBText = AS-i módulo usuario, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; 4 x casquillo M12 asignación estándar
+Bauform = Módulos usuario
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AB00]
+Kurzbezeichnung = AS-i SM-U, 4DO
+FDBText = AS-i módulo usuario, IP67, digital, 4SD relé, 4 x salida, relé, 1A, alimentación de las salidas de DC 24V...48V; 4 x casquillo M12; asignación estándar; conexión AUX DC 24V...48V mediante enchufe M12. En caso de error de comunicación permanece el estado de las salidas.
+Bauform = Módulos usuario
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AC00]
+Kurzbezeichnung = AS-i SM-U, 2DI/2DO
+FDBText = AS-i módulo usuario, IP67, digital, 2ED/2SD relé, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; 2 x salida, relé,  1A, alimentación de las salidas de DC 24V...48V; 4 x casquillo M12; asignación estándar; conexión AUX DC 24V...48V mediante enchufe M12. En caso de error de comunicación permanece el estado de las salidas.
+Bauform = Módulos usuario
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AG00]
+Kurzbezeichnung = AS-i SM-U, 4DI
+FDBText = AS-i módulo usuario, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación estándar
+Bauform = Módulos usuario
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AH00]
+Kurzbezeichnung = AS-i SM-U, 2x2DI
+FDBText = AS-i módulo usuario, IP67, digital, 2x2ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 2 x casquillo M12 asignación Y
+Bauform = Módulos usuario
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AJ00]
+Kurzbezeichnung = AS-i SM-U, 2x 1DI/1DO
+FDBText = AS-i módulo usuario, IP67, digital, 2x 1ED/1SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, 2 x salida 0,2A, alimentación de los sensores y salidas de U_ASI en total máx. 200mA; 2 x casquillo M12 asignación especial, entrada/salida combinada en un casquillo M12
+Bauform = Módulos usuario
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AL00]
+Kurzbezeichnung = AS-i SM-U, 4DO
+FDBText = AS-i módulo usuario, IP67, digital, 4SD, 4 x salida 0,7A, alimentación de las salidas de DC 24V, máx. 2A para todas las salidas; 4 x casquillo M12 asignación estándar; conexión AUX DC 24V mediante enchufe M12
+Bauform = Módulos usuario
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0AM00]
+Kurzbezeichnung = AS-i SM-U, 2DI/2DO
+FDBText = AS-i módulo usuario, IP67, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; 2 x salida 1A, alimentación de las salidas de DC 24V, máx. 2A para todas las salidas; 4 x casquillo M12 asignación estándar; conexión AUX DC 24V mediante enchufe M12
+Bauform = Módulos usuario
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0CB00]
+Kurzbezeichnung = AS-i SM-U, 4DO
+FDBText = AS-i módulo usuario, IP67, digital, 4SD, 4 x salida 0,7A, alimentación de las salidas de DC 24V, máx. 2A para todas las salidas; 4 x casquillo M12 asignación estándar
+Bauform = Módulos usuario
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 001-0CC00]
+Kurzbezeichnung = AS-i SM-U, 2DI/2DO
+FDBText = AS-i módulo usuario, IP67, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; 2 x salida 1A, alimentación de las salidas de DC 24V, máx. 2A para todas las salidas; 4 x casquillo M12 asignación estándar
+Bauform = Módulos usuario
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 002-0DA00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; bornes con tornillo (no enchufables), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 002-0DB00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con tornillo (no enchufables), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 002-0DC00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, entradas libres de potencial AS-i, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de DC 24V en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; bornes con tornillo (no enchufables), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 002-0DE00]
+Kurzbezeichnung = AS-i F90, 16DI
+FDBText = AS-i módulo F90, IP20, digital, 16ED (multiplexadas), 16 x entrada por contacto mecánico (tiempo de ciclo min. 120ms), bornes con tornillo (no enchufables), bloque de función en el sistema de automatización necesario, anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 004-0DA00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; bornes con tornillo enchufables (tipo Combicon, a pedir por separado), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 004-0DB00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con tornillo enchufables (tipo Combicon, a pedir por separado), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 004-0DC00]
+Kurzbezeichnung = AS-i F90, 4DI/4DO
+FDBText = AS-i módulo F90, IP20, digital, 4ED/4SD, entradas libres de potencial AS-i, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de DC 24V en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; bornes con tornillo enchufables (tipo Combicon, a pedir por separado), anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 004-0DE00]
+Kurzbezeichnung = AS-i F90, 16DI
+FDBText = AS-i módulo F90, IP20, digital, 16ED (multiplexadas), 16 x entrada por contacto mecánico (tiempo de ciclo min. 120ms), bornes con tornillo enchufables (tipo Combicon, a pedir por separado), bloque de función en el sistema de automatización necesario, anchura 90mm
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 005-0AA00]
+Kurzbezeichnung = AS-i SM-I, 4DI
+FDBText = AS-i módulo, IP00, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; placa de circuitos impresos sin carcasa, conexión en pin de soldadura
+Bauform = Soluciones de integraciòn
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 005-0DB00]
+Kurzbezeichnung = AS-i SM-I, 4DI/4DO
+FDBText = AS-i módulo, IP00, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 100mA; 4 x salida 1A, alimentación de las salidas de DC 24V; placa de circuitos impresos sin carcasa, conexión en pin de soldadura
+Bauform = Soluciones de integraciòn
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RG9 005-0SA00]
+Kurzbezeichnung = AS-i SM-I, 4DI/4DO
+FDBText = AS-i módulo, IP20, digital, 4ED/4SD, 4 x entrada para sensor, PNP, alimentación de los sensores de DC 24V; 4 x salida 45mA, alimentación de las salidas de DC 24V; placa de circuitos impresos con carcasa, conexión en pin de soldadura
+Bauform = Soluciones de integraciòn
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 100-1CE00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4SD, 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 100-1CG00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4SD, 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 100-1CQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 4DO
+FDBText = AS-i módulo compacto K60, IP67 digital, 4SD, 4 x salida 2A, alimentación de las salidas de DC 24V, máx. 4A para todas las salidas; 4 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 100-1CQ01-0AA3]
+Kurzbezeichnung = AS-i SM-U, 4DO M
+FDBText = AS-i módulo usuario, IP67, digital, 4SD, en conexión npn, 4 x salida 1A, alimentación de las salidas de DC 24V; 4 x casquillo M12 asignación Y-II
+Bauform = Módulos usuario
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 100-1CQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DO
+FDBText = AS-i módulo compacto K45, IP67, digital, 4SD, 4 x salida 1A, alimentación de las salidas de DC 24V, máx. 3A para todas las salidas; 4 x casquillo M12 asignación estándar
+Bauform = K45 módulos compactos IP6X
+Gruppe = DO
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-0CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-0CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-1CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-1CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-2CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-2CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-3CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1AE04-3CA0  (sim. )]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 1F-SD, 1 circuito de salida (salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-0CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-0CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-1CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-1CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad estándar V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad estándar
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-2CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-2CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo estándar, tiempo de reacción máx. 40ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-3CA0  (diag)]
+Kurzbezeichnung = ASIMON (Diag)
+FDBText = Dirección del diagnóstico: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 105-1BE04-3CA0  (sim.)]
+Kurzbezeichnung = ASIMON (Sim. Slave)
+FDBText = Dirección del esclavo simulado: ASIsafe monitor de seguridad ampliado V2.x, IP20, digital, 2F-SD, 2 circuitos de salida (2 x salida de seguridad, relé, Cat. 3/4)  (Cat.: categoría de seguridad según la norma EN 954-1), tipo especial, tiempo de reacción máx. 50ms
+Bauform = Monitores de seguridad
+Gruppe = Monitores de seguridad ampliados
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 107-1BQ40-0AA3]
+Kurzbezeichnung = AS-i K60, 2AO-C
+FDBText = AS-i módulo compacto K60, IP67, analógico, 2SA, 2 x salida corriente 4..20mA; +/-20mA; 0..20mA; resolución 12 bits; casquillos M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = AO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = 5
+ID1_Var = Y
+Par_Anzahl = 1
+Par1_Bez = Rango de salida
+Par1_Wert1 = 1111 : 4...20 mA
+Par1_Wert2 = 1101 : 0...20 mA
+Par1_Wert3 = 1110 : +/- 20 mA
+
+[MLFB_3RK1 107-2BQ40-0AA3]
+Kurzbezeichnung = AS-i K60, 2AO-V
+FDBText = AS-i módulo compacto K60, IP67, analógico, 2SA, 2 x salida tensión +/-10V; 0..10V; 1..5V; resolución 12 bits; casquillos M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = AO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = 5
+ID1_Var = Y
+Par_Anzahl = 1
+Par1_Bez = Rango de salida
+Par1_Wert1 = 1111 : +/- 10 V
+Par1_Wert2 = 1110 : 0...10 V
+Par1_Wert3 = 1100 : 1...5 V
+
+[MLFB_3RK1 200-0CD00-0AA2]
+Kurzbezeichnung = AS-i SM-I, 4DI
+FDBText = AS-i módulo, IP00, digital, 4ED, 4 x entrada para sensor (mecán., 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; placa de circuitos impresos sin carcasa, conexión mediante conector directo para placa de circ. impr., 30 polos
+Bauform = Soluciones de integraciòn
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = 0
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CE00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CE02-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CE03-0AA2]
+Kurzbezeichnung = AS-i S22.5, COUNTER
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 1ED contador, 1 x entrada contador, rango 0..15 (extensible mediante cálculo de la diferencia / bloque de función en el sistema de automatización), máx. frecuencia 770Hz (contador impulso min. 1ms, contador pausa min. 0,3ms); alimentación de los sensores de U_ASI máx. 90mA, PNP; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = Contadores
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CG00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CG02-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CG03-0AA2]
+Kurzbezeichnung = AS-i S22.5, COUNTER
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 1ED contador, 1 x entrada contador, rango 0..15 (extensible mediante cálculo de la diferencia / bloque de función en el sistema de automatización), máx. frecuencia 770Hz (contador impulso min. 1ms, contador pausa min. 0,3ms), alimentación de los sensores de U_ASI máx. 90mA, PNP; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = Contadores
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CQ01-0AA3]
+Kurzbezeichnung = AS-i SM-U, 4DI  M
+FDBText = AS-i módulo usuario, IP67, digital, 4ED, en conexión npn, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), NPN, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación Y-II
+Bauform = Módulos usuario
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CQ05-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI
+FDBText = AS-i módulo compacto K60, IP65X, ATEX, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación Y-II; ATEX (Ex) II 3D T60 C IP65X
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI
+FDBText = AS-i módulo compacto K45, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación estándar
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CT20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI
+FDBText = AS-i módulo compacto K45, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M8, con rosca
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0CU20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI
+FDBText = AS-i módulo compacto K45, IP67, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M8, enchufables
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0DQ00-0AA3  (1)]
+Kurzbezeichnung = AS-i K60, 8DI (ADDR1)
+FDBText = Esclavo 1: AS-i módulo compacto K60, IP67, digital, 8ED, 8 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 8 x casquillo M12 asignación Y-II. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 200-0DQ00-0AA3  (2)]
+Kurzbezeichnung = AS-i K60, 8DI (ADDR2)
+FDBText = Esclavo 2: AS-i módulo compacto K60, IP67, digital, 8ED, 8 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 8 x casquillo M12 asignación Y-II. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0BE00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F, 2F-DI
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1), bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0BG00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F, 2F-DI
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1), bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0BQ00-0AA3]
+Kurzbezeichnung = ASIsafe K45F, 2F-DI
+FDBText = ASIsafe módulo compacto K45F, IP67, digital, 2F-ED, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x casquillo M12
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 207-1BQ40-0AA3]
+Kurzbezeichnung = AS-i K60, 2AI-C
+FDBText = AS-i módulo compacto K60, IP67, analógico, 2EA, 2 x entrada corriente 4..20mA; +/-20mA; resolución 16 bits; casquillos M12. En versión con 4 casquillos: entrada IN2 se puede desactivar mediante puente de contacto sopre casquillo 3
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = D
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : 4...20 mA, 4-hilos
+Par1_Wert2 = xx10 : 4...20 mA, 2-hilos
+Par1_Wert3 = xx01 : +/- 20 mA, 4-hilos
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 207-1BQ44-0AA3]
+Kurzbezeichnung = AS-i K60, 4AI-C
+FDBText = AS-i módulo compacto K60, IP67, analógico, 4EA, 4 x entrada corriente 4..20mA; +/-20mA; resolución 16 bits; casquillos M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : 4...20 mA, 4-hilos
+Par1_Wert2 = xx10 : 4...20 mA, 2-hilos
+Par1_Wert3 = xx01 : +/- 20 mA, 4-hilos
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 207-2BQ40-0AA3]
+Kurzbezeichnung = AS-i K60, 2AI-V
+FDBText = AS-i módulo compacto K60, IP67, analógico, 2EA, 2 x entrada tensión +/-10V; 1..5V; resolución 16 bits; casquillos M12. En versión con 4 casquillos: entrada IN2 se puede desactivar mediante puente de contacto sopre casquillo 3
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = D
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : +/- 10 V
+Par1_Wert2 = xx10 : 1...5 V
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 207-2BQ44-0AA3]
+Kurzbezeichnung = AS-i K60, 4AI-V
+FDBText = AS-i módulo compacto K60, IP67, analógico, 4EA, 4 x entrada tensión +/-10V; 1..5V; resolución 16 bits; casquillos M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : +/- 10 V
+Par1_Wert2 = xx10 : 1...5 V
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 207-3BQ40-0AA3]
+Kurzbezeichnung = AS-i K60, 2AI-RTD
+FDBText = AS-i módulo compacto K60, IP67, analógico, 2EA, 2 x entrada termorresistencia/resistencia Pt100; Ni100; 0..600 ohm; resolución 16 bits; casquillos M12. En versión con 4 casquillos: entrada IN2 se puede desactivar mediante puente de contacto sopre casquillo 3
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = D
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : Pt 100 estándar: -200,0...+850,0 °C
+Par1_Wert2 = xx01 : Pt 100 clima: -120,00...+130,00 °C
+Par1_Wert3 = xx00 : Ni 100 estándar: -60,0...+250,0 °C
+Par1_Wert4 = xx10 : Resistencia: 0...600 ohms
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 207-3BQ44-0AA3]
+Kurzbezeichnung = AS-i K60, 4AI-RTD
+FDBText = AS-i módulo compacto K60, IP67, analógico, 4EA, 4 x entrada termorresistencia/resistencia Pt100; Ni100; 0..600 ohm; resolución 16 bits; casquillos M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 3
+Profil_ID1 = F
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : Pt 100 estándar: -200,0...+850,0 °C
+Par1_Wert2 = xx01 : Pt 100 clima: -120,00...+130,00 °C
+Par1_Wert3 = xx00 : Ni 100 estándar: -60,0...+250,0 °C
+Par1_Wert4 = xx10 : Resistencia: 0...600 ohms
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+Par3_Bez = Filtro de frecuencia
+Par3_Wert1 = 1xxx : 50Hz
+Par3_Wert2 = 0xxx : 60Hz
+
+[MLFB_3RK1 322-xxS02-0AA0]
+Kurzbezeichnung = AS-i COMPACT DS
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, eléctromecánico, AC 400V / 600V; sin contacto de freno; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-0AA1]
+Kurzbezeichnung = AS-i COMPACT DS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, eléctromecánico, AC 400V / 600V; con contacto de freno DC 24V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-0AA3]
+Kurzbezeichnung = AS-i COMPACT DS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, eléctromecánico, AC 400V / 600V; con contacto de freno AC 400V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-0AA4]
+Kurzbezeichnung = AS-i COMPACT DS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, eléctromecánico, AC 400V / 600V; con contacto de freno DC 500V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-1AA0]
+Kurzbezeichnung = AS-i COMPACT RS
+FDBText = AS-i arrancador compacto, IP65, inversor, eléctromecánico, AC 400V / 600V; sin contacto de freno; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-1AA1]
+Kurzbezeichnung = AS-i COMPACT RS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, eléctromecánico, AC 400V / 600V; con contacto de freno DC 24V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-1AA3]
+Kurzbezeichnung = AS-i COMPACT RS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, eléctromecánico, AC 400V / 600V; con contacto de freno AC 400V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS02-1AA4]
+Kurzbezeichnung = AS-i COMPACT RS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, eléctromecánico, AC 400V / 600V; con contacto de freno DC 500V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-0AA1]
+Kurzbezeichnung = AS-i COMPACT EDS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, electrónico, AC 400V / 600V; con contacto de freno DC 24V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-0AA3]
+Kurzbezeichnung = AS-i COMPACT EDS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, electrónico, AC 400V / 600V; con contacto de freno AC 400V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-0AA4]
+Kurzbezeichnung = AS-i COMPACT EDS-B
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, electrónico, AC 400V / 600V; con contacto de freno DC 500V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-0AAx]
+Kurzbezeichnung = AS-i COMPACT EDS
+FDBText = AS-i arrancador compacto, IP65, arrancador directo, electrónico, AC 400V / 600V; sin contacto de freno; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-1AA1]
+Kurzbezeichnung = AS-i COMPACT ERS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, electrónico, AC 400V / 600V; con contacto de freno DC 24V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-1AA3]
+Kurzbezeichnung = AS-i COMPACT ERS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, electrónico, AC 400V / 600V; con contacto de freno AC 400V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-1AA4]
+Kurzbezeichnung = AS-i COMPACT ERS-B
+FDBText = AS-i arrancador compacto, IP65, inversor, electrónico, AC 400V / 600V; con contacto de freno DC 500V; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 322-xxS12-1AAx]
+Kurzbezeichnung = AS-i COMPACT ERS
+FDBText = AS-i arrancador compacto, IP65, inversor, electrónico, AC 400V / 600V; sin contacto de freno; incl. 2ED
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores compactos
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-2AS54-1AA0]
+Kurzbezeichnung = AS-i ECOFAST RS
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, protección de motor por termistor, AC 400V  4kW  0,3A...9,0A; sin contacto de freno; incl. 2ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Sensor de temperatura
+Par1_Wert1 = xx1x : Thermoclick
+Par1_Wert2 = xx0x : PTC - tipo A
+Par2_Bez = Comportamiento en sobrecarga (térmico)
+Par2_Wert1 = x1xx : Disparo
+Par2_Wert2 = x0xx : Aviso
+Par3_Bez = Autoreset
+Par3_Wert1 = 1xxx : No
+Par3_Wert2 = 0xxx : Sí
+
+[MLFB_3RK1 323-2AS54-1AA3]
+Kurzbezeichnung = AS-i ECOFAST RS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, protección de motor por termistor, AC 400V  4kW  0,3A...9,0A; con contacto de freno AC 400V  0,75A; incl. 2ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 3
+Par1_Bez = Sensor de temperatura
+Par1_Wert1 = xx1x : Thermoclick
+Par1_Wert2 = xx0x : PTC - tipo A
+Par2_Bez = Comportamiento en sobrecarga (térmico)
+Par2_Wert1 = x1xx : Disparo
+Par2_Wert2 = x0xx : Aviso
+Par3_Bez = Autoreset
+Par3_Wert1 = 1xxx : No
+Par3_Wert2 = 0xxx : Sí
+
+[MLFB_3RK1 323-5BS44-3AA0]
+Kurzbezeichnung = AS-i ECOFAST RS
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, modelo térmico de motor, AC 400V  1,1kW  0,3A...3,0A; sin contacto de freno; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-5BS44-3AA3]
+Kurzbezeichnung = AS-i ECOFAST RS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, modelo térmico de motor, AC 400V  1,1kW  0,3A...3,0A; con contacto de freno AC 400V  0,75A; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-5CS44-3AA0]
+Kurzbezeichnung = AS-i ECOFAST RS
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, modelo térmico de motor, AC 400V  4kW  2,4A...9,0A; sin contacto de freno; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-5CS44-3AA3]
+Kurzbezeichnung = AS-i ECOFAST RS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, eléctromecánico, modelo térmico de motor, AC 400V  4kW  2,4A...9,0A; con contacto de freno AC 400V  0,75A; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = D
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-6BS74-3AA0]
+Kurzbezeichnung = AS-i ECOFAST ERSS
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, arrancador suave, electrónico, protección total de motor, AC 400V  1,1kW  0,3A...3,0A; sin contacto de freno; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-6BS74-3AA3]
+Kurzbezeichnung = AS-i ECOFAST ERSS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, arrancador suave, electrónico, protección total de motor, AC 400V  1,1kW  0,3A...3,0A; con contacto de freno AC 400V  0,75A; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-6DS74-3AA0]
+Kurzbezeichnung = AS-i ECOFAST ERSS
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, arrancador suave, electrónico, protección total de motor, AC 400V  5,5kW  2,4A...12,0A; sin contacto de freno; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-6DS74-3AA3]
+Kurzbezeichnung = AS-i ECOFAST ERSS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, arrancador suave, electrónico, protección total de motor, AC 400V  5,5kW  2,4A...12,0A; con contacto de freno AC 400V  0,75A; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 323-6ES84-3AA3]
+Kurzbezeichnung = AS-i ECOFAST R2SS-B
+FDBText = AS-i arrancador de motor ECOFAST, IP65/67, inversor, arrancador suave, varias velocidades, electrónico, protección total de motor, AC 400V  1,5kW  0,6A...4,0A; con contacto de freno AC 400V  0,75A; incl. 4ED, DC 24V
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = ECOFAST
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = E
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0BE00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 2DI/2DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; 2 x salida 2A, alimentación de las salidas de DC 24V; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0BG00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 2DI/2DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; 2 x salida 2A, alimentación de las salidas de DC 24V; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0CD00-0AA3]
+Kurzbezeichnung = AS-i SM-I, 4DI/4DO
+FDBText = AS-i módulo, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI en total máx. 200mA; placa de circuitos impresos con carcasa, conexión en pin de soldadura
+Bauform = Soluciones de integraciòn
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0CD01-0AA3]
+Kurzbezeichnung = AS-i SM-I, 4DI/4DO
+FDBText = AS-i módulo, IP00, digital, 4ED/4SD, 4 x entrada para sensor (mecán.), alimentación de los sensores de DC 24V; 4 x salida 45mA, alimentación de las salidas de DC 24V; placa de circuitos impresos sin carcasa, conexión en pin de soldadura
+Bauform = Soluciones de integraciòn
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0CE00-0AA3]
+Kurzbezeichnung = AS-i FLM, 4DI/4DO
+FDBText = AS-i módulo plano, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI en total máx. 200mA; bornes con tornillo, montaje en vertical
+Bauform = Módulos planos, módulos F90
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0CE10-0AA2]
+Kurzbezeichnung = AS-i IM-LOGO!
+FDBText = AS-i módulo de comunicación por LOGO!, IP20, digital, 4ED/4SD, esclavo estándar, asignación lógica en programa LOGO!
+Bauform = Módulos del interfaz
+Gruppe = Interfaz LOGO!
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-0GQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 2x 1DI/1DO
+FDBText = AS-i módulo compacto K45, IP67, digital, 2x 1ED/1SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, 2 x salida 0,2A, alimentación de los sensores y salidas de U_ASI en total máx. 200mA; 2 x casquillo M12 asignación especial, entrada/salida combinada en un casquillo M12
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1BQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 2DI/2DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 2A, alimentación de las salidas de DC 24V; 4 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1BQ01-0AA3]
+Kurzbezeichnung = AS-i SM-U, 2DI/2DO  M
+FDBText = AS-i módulo usuario, IP67, digital, 2ED/2SD, en conexión npn, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), NPN, alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 1A, alimentación de las salidas de DC 24V; 4 x casquillo M12 asignación Y-II
+Bauform = Módulos usuario
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 1
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1BQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 2DI/2DO
+FDBText = AS-i módulo compacto K45, IP67, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA, 2 x salida 2A, alimentación de las salidas de DC 24V máx. 3A para todas las salidas; 4 x casquillo M12 asignación estándar
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CD00-0AA2]
+Kurzbezeichnung = AS-i SM-I, 4DI/4DO
+FDBText = AS-i módulo, IP00, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; placa de circuitos impresos sin carcasa, conexión mediante conector directo para placa de circ. impr., 30 polos
+Bauform = Soluciones de integraciòn
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CE00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CE01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CG00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CG01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación estándar
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CR00-0AA3]
+Kurzbezeichnung = AS-i K60R, 4DI/4DO
+FDBText = AS-i módulo compacto K60R, IP68/IP69K, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación estándar, conexión ASI y AUX DC 24V mediante enchufe M12 al frente
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ01-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ02-0AA3]
+Kurzbezeichnung = AS-i K60, 2x2DI/2x2DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 2x2ED / 2x2SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; 4 x casquillo M12 asignación Y (casquillos M12 existentes solamente en la cara frontal a la izquierda)
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ03-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación estándar
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ04-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación especial (como asignación estándar, pero pin 2 sin función)
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1DQ05-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/4DO
+FDBText = AS-i módulo compacto K60, IP65X, ATEX, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación Y-II, ATEX (Ex) II 3D T75 C IP65X
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1KG01-0AA1]
+Kurzbezeichnung = AS-i SML, 2DI/1DO
+FDBText = AS-i módulo derivación a motor, IP20, digital, 2ED/1SD, 2 x entrada para sensor (contacto mecán.); alimentación de los sensores de U_ASI; 1 x salida DC 24V; para sistema de barras colectoras 40mm/60mm
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Módulos AS-i
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1MG01-0AA1]
+Kurzbezeichnung = AS-i SML, 4DI/2DO
+FDBText = AS-i módulo derivación a motor, IP20, digital, 4ED/2SD, 4 x entrada para sensor (contacto mecán.); alimentación de los sensores de U_ASI; 2 x salida DC 24V; para sistema de barras colectoras 40mm/60mm
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Módulos AS-i
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1MQ00-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/2DO
+FDBText = AS-i módulo compacto K60, IP67, digital, 4ED/2SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 2A, alimentación de las salidas de DC 24V; 6 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1MQ01-0AA4]
+Kurzbezeichnung = AS-i K60,4DI/2DO,2DS 24V
+FDBText = AS-i módulo compacto K60, IP67, arrancador DC, 4ED/2SD, arrancador directo, doble 4 x entrada para sensor (mecán., 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA, casquillos M12 asignación Y; 2 x salida 3A para conexión de 2 x DC 24V motor, con función de parada rápida, casquillos M12 asignación estándar
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores de motor DC 24V
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1MQ03-0AA4]
+Kurzbezeichnung = AS-i K60,4DI/1DO,RS 24V
+FDBText = AS-i módulo compacto K60, IP67, arrancador DC, 4ED/1SD, inversor, 4 x entrada para sensor (mecán., 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA, casquillos M12 asignación Y; 1 x salida 3A para conexión de 1 x DC 24V motor, con función de parada rápida, casquillo M12 asignación estándar
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores de motor DC 24V
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1NQ01-0AA4]
+Kurzbezeichnung = AS-i K60,4DI/1DO,DS 24V
+FDBText = AS-i módulo compacto K60, IP67, arrancador DC, 4ED/1SD, arrancador directo, sencillo 4 x entrada para sensor (mecán., 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA, casquillos M12 asignación Y; 1 x salida 3A para conexión de 1 x DC 24V motor, con función de parada rápida, casquillo M12 asignación estándar
+Bauform = Arrancadores de motor IP6X, derivaciones
+Gruppe = Arrancadores de motor DC 24V
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-0BE00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 2DI/2DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 2ED/2SD relé, 2 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; 2 x salida, relé contactos de conmutación, AC 230V 3A, DC 24V 1A; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-0BG00-0AA2]
+Kurzbezeichnung = AS-i S22.5, 2DI/2DO
+FDBText = AS-i módulo slimline S22,5, IP20, digital, 2ED/2SD relé, 2 x entrada para sensor (mecán., 2-hilos), PNP, alimentación de los sensores de U_ASI; 2 x salida, relé contactos de conmutación, AC 230V 3A, DC 24V 1A; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3CE00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD relé, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida, relé contactos de conmutación, AC 230V 3A, DC 24V 1A; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3CE01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, entradas libres de potencial AS-i, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de DC 24V en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V en total máx. 4A; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3CG00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD relé, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida, relé contactos de conmutación, AC 230V 3A, DC 24V 1A; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3CG01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO
+FDBText = AS-i módulo slimline S45, IP20, digital, 4ED/4SD, entradas libres de potencial AS-i, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de DC 24V en total máx. 200mA; 4 x salida 1A, alimentación de las salidas de DC 24V en total máx. 4A; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3KG02-0AA1]
+Kurzbezeichnung = AS-i SML, 2DI/1DO 230V
+FDBText = AS-i módulo derivación a motor, IP20, digital, 2ED/1SD relé, 2 x entrada para sensor (contacto mecán.); alimentación de los sensores de U_ASI; 1 x salida relé AC 230V 3A, DC 24V 1A; para sistema de barras colectoras 40mm/60mm
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Módulos AS-i
+Adresstyp = Standard-Slave
+Profil_IO = 3  (E E A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 402-3LG02-0AA1]
+Kurzbezeichnung = AS-i SML, 4DI/2DO 230V
+FDBText = AS-i módulo derivación a motor, IP20, digital, 4ED/2SD relé, 4 x entrada para sensor (contacto mecán.); alimentación de los sensores de U_ASI; 2 x salida relé AC 230V 3A, DC 24V 1A; para sistema de barras colectoras 40mm/60mm
+Bauform = Arrancadores de motor IP20, derivaciones
+Gruppe = Módulos AS-i
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-0BE00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F,2F-DI/2DO
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 150mA, alimentación de las salidas de U_ASI en total máx. 150mA; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-0BG00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F,2F-DI/2DO
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 150mA, alimentación de las salidas de U_ASI en total máx. 150mA; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-0BQ00-0AA3]
+Kurzbezeichnung = ASIsafe K60F, 2F-DI/2DO
+FDBText = ASIsafe módulo compacto K60F, IP67, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 150mA, alimentación de las salidas de U_ASI en total máx. 150mA; 4 x casquillo M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-1BE00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F,2F-DI/2DO
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 700mA, alimentación de las salidas de DC 24V en total máx. 1,4A; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-1BG00-0AA2]
+Kurzbezeichnung = ASIsafe S22.5F,2F-DI/2DO
+FDBText = ASIsafe módulo slimline S22,5F, IP20, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 700mA, alimentación de las salidas de DC 24V en total máx. 1,4A; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-1BQ00-0AA3]
+Kurzbezeichnung = ASIsafe K60F, 2F-DI/2DO
+FDBText = ASIsafe módulo compacto K60F, IP67, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 2,3A, alimentación de las salidas de DC 24V en total máx. 4A; 4 x casquillo M12
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 901-1MX01]
+Kurzbezeichnung = AS-i EXTPLUG-P, A/B
+FDBText = AS-i Extension Plug Plus, IP67, esclavo A/B, duplicación de la longitud de cable hasta 200m/AS-i segmento; con esclavo integrado por diagnóstico, enchufe M12
+Bauform = Componentes de sistema y accesorios
+Gruppe = Extension Plug
+Adresstyp = A/B-Slave
+Profil_IO = B  (A A E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 100-1EQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 3DO, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 3SD, 3 x salida 1A, alimentación de las salidas de DC 24V; 3 x casquillo M12 asignación estándar
+Bauform = K45 módulos compactos IP6X
+Gruppe = DO
+Adresstyp = A/B-Slave
+Profil_IO = 8  (A A A -)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CE02-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI, A/B
+FDBText = AS-i módulo slimline S22,5, IP20, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; bornes con tornillo, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CG02-0AA2]
+Kurzbezeichnung = AS-i S22.5, 4DI, A/B
+FDBText = AS-i módulo slimline S22,5, IP20, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; bornes con resorte, anchura 22,5mm
+Bauform = S22.5 módulos SlimLine IP20
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación estándar
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CQ22-0AA3]
+Kurzbezeichnung = AS-i K45, 2x2DI, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 2x2ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M12 asignación Y
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 2
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CT20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M8 con rosca
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CU20-0AA3]
+Kurzbezeichnung = AS-i K45, 4DI, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x casquillo M8 enchufables
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0DQ00-0AA3  (1)]
+Kurzbezeichnung = AS-i K60, 8DI, A/B (1)
+FDBText = Esclavo 1: AS-i módulo compacto K60, IP67, esclavo A/B, digital, 8ED, 8 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 8 x casquillo M12 asignación Y-II. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0DQ00-0AA3  (2)]
+Kurzbezeichnung = AS-i K60, 8DI, A/B (2)
+FDBText = Esclavo 2: AS-i módulo compacto K60, IP67, esclavo A/B, digital, 8ED, 8 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 8 x casquillo M12 asignación Y-II. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1BQ20-0AA3]
+Kurzbezeichnung = AS-i K45, 2DI/2DO, A/B
+FDBText = AS-i módulo compacto K45, IP67, esclavo A/B, digital, 2SD/2ED, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 2A, alimentación de las salidas de DC 24V máx. 3A para todas las salidas; 4 x casquillo M12 asignación Y-II. Bit 0, 1 = salida. Bit 2, 3 = entrada.
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = B  (A A E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1FE00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/3DO, A/B
+FDBText = AS-i módulo slimline S45, IP20, esclavo A/B, digital, 4ED/3SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 3 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1FG00-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/3DO, A/B
+FDBText = AS-i módulo slimline S45, IP20, esclavo A/B, digital, 4ED/3SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 3 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1FQ03-0AA3]
+Kurzbezeichnung = AS-i K60, 4DI/3DO, A/B
+FDBText = AS-i módulo compacto K60, IP67, esclavo A/B, digital, 4ED/3SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 3 x salida 2A, alimentación de las salidas de DC 24V; 7 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 2
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1HQ00-0AA3  (1)]
+Kurzbezeichnung = AS-i K60,8DI/2DO,A/B (1)
+FDBText = Esclavo 1: AS-i módulo compacto K60, IP67, esclavo A/B, digital, 8ED/2SD, 6 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, 6 x casquillo M12 asignación Y-II; más 2 x entrada para sensor (mecán., 2-hilos), PNP; alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 2,4A, alimentación de las salidas de DC 24V, máx. 4A para todas las salidas; 2 x casquillo M12 asignación especial, entrada/salida combinada en un casquillo M12 en casquillos 7 y 8. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1HQ00-0AA3  (2)]
+Kurzbezeichnung = AS-i K60,8DI/2DO,A/B (2)
+FDBText = Esclavo 2: AS-i módulo compacto K60, IP67, esclavo A/B, digital, 8ED/2SD, 6 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, 6 x casquillo M12 asignación Y-II; más 2 x entrada para sensor (mecán., 2-hilos), PNP; alimentación de los sensores de U_ASI en total máx. 200mA; 2 x salida 2,4A, alimentación de las salidas de DC 24V, máx. 4A para todas las salidas; 2 x casquillo M12 asignación especial, entrada/salida combinada en un casquillo M12 en casquillos 7 y 8. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0BA]
+Kurzbezeichnung = ASIsafe 3SB3, 2F-DI
+FDBText = ASIsafe módulo, IP20, digital, 2F-ED,  2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1), por montaje en cajas tipo 3SB3 de plástico sin visera de protección
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0CA]
+Kurzbezeichnung = ASIsafe 3SB3, 2F-DI
+FDBText = ASIsafe módulo, IP20, digital, 2F-ED,  2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1), por montaje en cajas tipo 3SB3 de metal sin visera de protección
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0DA]
+Kurzbezeichnung = ASIsafe 3SB3, 2F-DI
+FDBText = ASIsafe módulo, IP20, digital, 2F-ED,  2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1), por montaje en cajas tipo 3SB3 de plástico o de metal con visera de protección
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0BB]
+Kurzbezeichnung = AS-i 3SB3, 4DI/3DO, A/B
+FDBText = AS-i módulo, IP20, esclavo A/B, digital, 4ED/3SD, 4 x entrada para sensor (contacto mecán.), 3 x salida 45mA, alimentación de los sensores y salidas de U_ASI, por montaje en cajas tipo 3SB3 de plástico
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0CB]
+Kurzbezeichnung = AS-i 3SB3, 4DI/3DO, A/B
+FDBText = AS-i módulo, IP20, esclavo A/B, digital, 4ED/3SD, 4 x entrada para sensor (contacto mecán.), 3 x salida 45mA, alimentación de los sensores y salidas de U_ASI, por montaje en cajas tipo 3SB3 de metal
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0BC]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i módulo, IP20, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI, por montaje en cajas tipo 3SB3 de plástico
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 500-0CC]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i módulo, IP20, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI, por montaje en cajas tipo 3SB3 de metal
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_8WD44 28-0BD]
+Kurzbezeichnung = AS-i 8WD44, 3DO, A/B
+FDBText = AS-i módulo, IP54/IP65, esclavo A/B, digital, 3SD, 3 x salida, alimentación de los salidas de U_ASI o DC 24V (interruptor), por columna de señalización tipo 8WD44, diámetro 70 mm
+Bauform = Aparatos de mando y señalización
+Gruppe = Columnas de señalización
+Adresstyp = A/B-Slave
+Profil_IO = 8  (A A A -)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_8WD44 28-0BE]
+Kurzbezeichnung = AS-i 8WD44, 4DO
+FDBText = AS-i módulo, IP54/IP65, digital, 4SD, 4 x salida, alimentación de los salidas de U_ASI o DC 24V (interruptor), por columna de señalización tipo 8WD44, diámetro 70 mm
+Bauform = Aparatos de mando y señalización
+Gruppe = Columnas de señalización
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_8WD42 28-0BB]
+Kurzbezeichnung = AS-i 8WD42, 4DO
+FDBText = AS-i módulo, IP54, digital, 4SD, 4 x salida, alimentación de los salidas de DC 24V / AC 230V, por columna de señalización tipo 8WD42, diámetro 50 mm
+Bauform = Aparatos de mando y señalización
+Gruppe = Columnas de señalización
+Adresstyp = Standard-Slave
+Profil_IO = 8  (A A A A)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF5 402-1AA03]
+Kurzbezeichnung = ASIsafe F-ADAPTER
+FDBText = ASIsafe adaptador F montaje en placa frontal, IP20, digital, 2F-ED, 1 x entrada de seguridad Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1); bornes con tornillo; para actuadores de PARADA DE EMERGENCIA 3SB3
+Bauform = Aparatos de mando y señalización
+Gruppe = Adaptador F
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 402-1AA04]
+Kurzbezeichnung = ASIsafe F-ADAPTER
+FDBText = ASIsafe adaptador F montaje en placa frontal, IP20, digital, 2F-ED, 1 x entrada de seguridad Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1); bornes con resorte; para actuadores de PARADA DE EMERGENCIA 3SB3
+Bauform = Aparatos de mando y señalización
+Gruppe = Adaptador F
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 402-1AB03]
+Kurzbezeichnung = ASIsafe F-ADAPTER-1DO
+FDBText = ASIsafe adaptador F montaje en placa frontal, IP20, digital, 2F-ED/1SD, 1 x entrada de seguridad Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1); 1 x salida estándar 20mA, alimentación de las salidas de U_ASI; bornes con tornillo; para actuadores de PARADA DE EMERGENCIA 3SB3
+Bauform = Aparatos de mando y señalización
+Gruppe = Adaptador F
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 402-1AB04]
+Kurzbezeichnung = ASIsafe F-ADAPTER-1DO
+FDBText = ASIsafe adaptador F montaje en placa frontal, IP20, digital, 2F-ED/1SD, 1 x entrada de seguridad Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1); 1 x salida estándar 20mA, alimentación de las salidas de U_ASI; bornes con resorte; para actuadores de PARADA DE EMERGENCIA 3SB3
+Bauform = Aparatos de mando y señalización
+Gruppe = Adaptador F
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-1BQ20-0AA3]
+Kurzbezeichnung = ASIsafe K45F, 2F-DI/2DO
+FDBText = ASIsafe módulo compacto K45F, IP67, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 1A, alimentación de las salidas de DC 24V; 4 x casquillo M12
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 207-1BQ50-0AA3]
+Kurzbezeichnung = AS-i K60, 2AI-C, A/B
+FDBText = AS-i módulo compacto K60, IP67, esclavo A/B (según Especificación 3.0), analógico, 2EA, 2 x entrada corriente 4..20mA; +/-20mA; casquillos M12. El código ID1 define las propiedades del módulo. ID1 = 7: resolución 14 bits, 2 canales  //  ID1 = 6: resolución 12 bits, 2 canales  //  ID1 = 0: resolución 14 bits, 1 canal  //  ID1 = 1: resolución 12 bits, 1 canal  ////  ID1 = 4 o 5: como ID1 = 7  //  ID1 = 2 o 3: como ID1 = 0
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 9
+ID1_Var = Y
+Par_Anzahl = 2
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : 4...20 mA, 4-hilos
+Par1_Wert2 = xx10 : 4...20 mA, 2-hilos
+Par1_Wert3 = xx01 : +/- 20 mA, 4-hilos
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+
+[MLFB_3RK2 207-2BQ50-0AA3]
+Kurzbezeichnung = AS-i K60, 2AI-V, A/B
+FDBText = AS-i módulo compacto K60, IP67, esclavo A/B (según Especificación 3.0), analógico, 2EA, 2 x entrada tensión +/-10V; 1..5V; casquillos M12. El código ID1 define las propiedades del módulo. ID1 = 7: resolución 14 bits, 2 canales  //  ID1 = 6: resolución 12 bits, 2 canales  //  ID1 = 0: resolución 14 bits, 1 canal  //  ID1 = 1: resolución 12 bits, 1 canal  ////  ID1 = 4 o 5: como ID1 = 7  //  ID1 = 2 o 3: como ID1 = 0
+Bauform = K60 módulos compactos IP6X
+Gruppe = AI
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 9
+ID1_Var = Y
+Par_Anzahl = 2
+Par1_Bez = Rango de medida
+Par1_Wert1 = xx11 : +/- 10 V
+Par1_Wert2 = xx10 : 1...5 V
+Par2_Bez = Alisamiento
+Par2_Wert1 = x1xx : sin alisamiento
+Par2_Wert2 = x0xx : con alisamiento
+
+[MLFB_3RK2 400-1CE01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO, A/B
+FDBText = AS-i módulo slimline S45, IP20, esclavo A/B (según Especificación 3.0), digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con tornillo, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 7
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1CG01-0AA2]
+Kurzbezeichnung = AS-i S45, 4DI/4DO, A/B
+FDBText = AS-i módulo slimline S45, IP20, esclavo A/B (según Especificación 3.0), digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V máx. 4A para todas las salidas; bornes con resorte, anchura 45mm
+Bauform = S45    módulos SlimLine IP20
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 7
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CT30-0AA3]
+Kurzbezeichnung = AS-i K20, 4DI, A/B
+FDBText = AS-i módulo compacto K20, IP67, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA (40°C); 4 x casquillo M8, con rosca, conexión ASI mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1BT30-0AA3]
+Kurzbezeichnung = AS-i K20, 2DI/2DO, A/B
+FDBText = AS-i módulo compacto K20, IP67, esclavo A/B, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 150mA (40°C), 2 x salida 1A, alimentación de las salidas de DC 24V máx. 1A para todas las salidas (40°C); 4 x casquillo M8, con rosca, conexión ASI y AUX DC 24V mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = B  (A A E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 200-0CQ30-0AA3]
+Kurzbezeichnung = AS-i K20, 4DI, A/B
+FDBText = AS-i módulo compacto K20, IP67, esclavo A/B, digital, 4ED, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA (40°C); 2 x casquillo M12 asignación Y, conexión ASI mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = A/B-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 2
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1BQ30-0AA3]
+Kurzbezeichnung = AS-i K20, 2DI/2DO, A/B
+FDBText = AS-i módulo compacto K20, IP67, esclavo A/B, digital, 2ED/2SD, 2 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 150mA (40°C), 2 x salida 1A, alimentación de las salidas de DC 24V máx. 1A para todas las salidas (40°C); 2 x casquillo M12 asignación Y, conexión ASI y AUX DC 24V mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = B  (A A E E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 2
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1CT30-0AA3]
+Kurzbezeichnung = AS-i K20, 4DI/4DO, A/B
+FDBText = AS-i módulo compacto K20, IP67, esclavo A/B (según Especificación 3.0), digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA (40°C), 4 x salida 2A, alimentación de las salidas de DC 24V máx. 2A para todas las salidas (40°C); 8 x casquillo M8, con rosca, conexión ASI y AUX DC 24V mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 7
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0BQ30-0AA3]
+Kurzbezeichnung = ASIsafe K20F, 2F-DI
+FDBText = ASIsafe módulo compacto K20F, IP67, digital, 2F-ED, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x casquillo M12, conexión ASI mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK2 400-1DQ00-0AA3
+]
+Kurzbezeichnung = AS-i K60, 4DI/4DO, A/B
+FDBText = AS-i módulo compacto K60, IP67, esclavo A/B (según Especificación 3.0), digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA; 4 x salida 2A, alimentación de las salidas de DC 24V; 8 x casquillo M12 asignación Y-II
+Bauform = K60 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = A/B-Slave
+Profil_IO = 7  (B B B E)
+Profil_ID = A
+Profil_ID1 = 7  (F)
+Profil_ID2 = 7
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3RK1 408-8SQ00-0AA3]
+Kurzbezeichnung = AS-i/AS-i COUPLER
+FDBText = Acoplador AS-i/AS-i, módulo compacto K60, IP67, digital. Traspasa 4 bits de datos estándar de un red AS-i a una segunda red AS-i, y viceversa. El módulo ocupa una dirección AS-i en cada red.
+Bauform = Componentes de sistema y accesorios
+Gruppe = Acoplador
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = F
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF78 42-xxxx1]
+Kurzbezeichnung = ASIsafe FS400 RCV
+FDBText = ASIsafe cortina/rejilla fotoeléctrica, IP65, receptor. Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1). Para funcionar precisa un emisor.
+Bauform = Sensores de seguridad
+Gruppe = Cortinas y rejillas fotoeléctricas
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF78 44-xBxxx-xxx1]
+Kurzbezeichnung = ASIsafe FS400 RCV-B
+FDBText = ASIsafe cortina fotoeléctrica con función de cegado integrada, IP65, receptor. Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1). Para funcionar precisa un emisor.
+Bauform = Sensores de seguridad
+Gruppe = Cortinas y rejillas fotoeléctricas
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF78 44-xMxxx-xxx1]
+Kurzbezeichnung = ASIsafe FS400 RCV-M
+FDBText = ASIsafe cortina/rejilla fotoeléctrica con función de inhibición integrada, IP65, receptor. Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1). Para funcionar precisa un emisor.
+Bauform = Sensores de seguridad
+Gruppe = Cortinas y rejillas fotoeléctricas
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF78 44-xMxxx-xxT0]
+Kurzbezeichnung = ASIsafe FS400 TRX-M
+FDBText = ASIsafe rejilla fotoeléctrica con función de inhibición integrada, IP65, transceptor. Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1).
+Bauform = Sensores de seguridad
+Gruppe = Cortinas y rejillas fotoeléctricas
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF78 44-xTxxx-xxx1]
+Kurzbezeichnung = ASIsafe FS400 RCV-C
+FDBText = ASIsafe cortina fotoeléctrica con control de ciclo integrado, IP65, receptor. Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1). Para funcionar precisa un emisor.
+Bauform = Sensores de seguridad
+Gruppe = Cortinas y rejillas fotoeléctricas
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF78 34-6DD00]
+Kurzbezeichnung = ASIsafe FS600 LS4
+FDBText = ASIsafe escáner a láser, IP65. Cat. 3  (Cat.: categoría de seguridad según la norma EN 954-1). Campo de protección 4 m, campo de advertencia 15 m, 4 campos de protección y advertencia conmutables, rango de barrido 190°
+Bauform = Sensores de seguridad
+Gruppe = Escáneres a láser
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = N
+Par_Anzahl = 0
+
+[MLFB_3SF1 1xx-xxxxx-xxxx]
+Kurzbezeichnung = ASIsafe POS-SWITCH
+FDBText = ASIsafe interruptor de posición, IP65 o IP66/IP67, digital, 2F-ED, 1 x entrada de seguridad Cat. 1/2  (Cat.: categoría de seguridad según la norma EN 954-1). En versión con actuador separado 1 x entrada de seguridad hasta Cat. 3 posible. En combinación con un interruptor de posición aditivo 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad 3/4 posible.
+Bauform = Detectores
+Gruppe = Interruptores de posición
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF1 2xx-xxxxx-xxxx]
+Kurzbezeichnung = ASIsafe POS-SWITCH
+FDBText = ASIsafe interruptor de posición, IP65 o IP66/IP67, digital, 2F-ED, 1 x entrada de seguridad Cat. 1/2  (Cat.: categoría de seguridad según la norma EN 954-1). En versión con actuador separado 1 x entrada de seguridad hasta Cat. 3 posible. En combinación con un interruptor de posición aditivo 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad 3/4 posible.
+Bauform = Detectores
+Gruppe = Interruptores de posición
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF1 3xx-xxxxx-xxxx]
+Kurzbezeichnung = ASIsafe POS-SWITCH-LOCK
+FDBText = ASIsafe interruptor de posición con dispositivo de retención, actuador separado, IP66/IP67, digital, 2F-ED/1SD, 1 x entrada de seguridad hasta Cat. 3  (Cat.: categoría de seguridad según la norma EN 954-1). Enclavamiento por resorte o enclavamiento magnético. Alimentación del electroimán de U_ASI, excitación para salida bit 0. Vigilancia del actuador para F-IN1. Vigilancia del electroimán para F-IN2. En combinación con un interruptor de posición aditivo 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad 3/4 posible.
+Bauform = Detectores
+Gruppe = Interruptores de posición
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 400-1CT30-0AA3]
+Kurzbezeichnung = AS-i K20, 4DI/4DO
+FDBText = AS-i módulo compacto K20, IP67, digital, 4ED/4SD, 4 x entrada para sensor (mecán., 2-hilos, 3-hilos), PNP, alimentación de los sensores de U_ASI en total máx. 200mA  (40°C), 4 x salida 2A, alimentación de las salidas de DC 24V máx. 2A para todas las salidas (40°C); 8 x casquillo M8, con rosca, conexión ASI y AUX DC 24V mediante enchufe M12 al frente
+Bauform = K20 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = E
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-0BQ20-0AA3]
+Kurzbezeichnung = ASIsafe K45F, 2F-DI/2DO
+FDBText = ASIsafe módulo compacto K45F, IP67, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 150mA, alimentación de las salidas de U_ASI en total máx. 150mA; 4 x casquillo M12
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 405-1BQ20-0AA3]
+Kurzbezeichnung = ASIsafe K45F, 2F-DI/2DO
+FDBText = ASIsafe módulo compacto K45F, IP67, digital, 2F-ED/2SD, 2 x entrada de seguridad Cat. 1/2 o 1 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 2 x salida estándar 700mA, alimentación de las salidas de DC 24V en total máx. 1,4A; 4 x casquillo M12
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI/DO
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = 0
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0CQ00-0AA3  (1)]
+Kurzbezeichnung = ASIsafe K45F, 4F-DI  (1)
+FDBText = Esclavo 1: ASIsafe módulo compacto K45F, IP67, digital, 4F-ED, 4 x entrada de seguridad Cat. 1/2 o 2 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 4 x casquillo M12. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3RK1 205-0CQ00-0AA3  (2)]
+Kurzbezeichnung = ASIsafe K45F, 4F-DI  (2)
+FDBText = Esclavo 2: ASIsafe módulo compacto K45F, IP67, digital, 4F-ED, 4 x entrada de seguridad Cat. 1/2 o 2 x entrada de seguridad Cat. 3/4  (Cat.: categoría de seguridad según la norma EN 954-1); 4 x casquillo M12. Módulo ocupa 2 direcciónes AS-i.
+Bauform = K45 módulos compactos IP6X
+Gruppe = DI
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 811-0Ax08]
+Kurzbezeichnung = ASIsafe 3SB3, 2F-DI
+FDBText = ASIsafe caja tipo 3SB3 de plástico PARAGEM DE EMERGÊNCIA, digital, 2F-ED,  1 x entrada de seguridad hasta Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1)
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 811-2Ax08]
+Kurzbezeichnung = ASIsafe 3SB3, 2F-DI
+FDBText = ASIsafe caja tipo 3SB3 de metal PARAGEM DE EMERGÊNCIA, digital, 2F-ED,  1 x entrada de seguridad hasta Cat. 4  (Cat.: categoría de seguridad según la norma EN 954-1)
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 0  (E E E E)
+Profil_ID = B
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 812-0Dx00]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i caja tipo 3SB3 de plástico, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 813-0Dx00]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i caja tipo 3SB3 de plástico, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 812-2Dx00]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i caja tipo 3SB3 de metal, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+
+[MLFB_3SF5 813-2Dx00]
+Kurzbezeichnung = AS-i 3SB3, 4DI/4DO
+FDBText = AS-i caja tipo 3SB3 de metal, digital, 4ED/4SD, 4 x entrada para sensor (contacto mecán.), 4 x salida 45mA, alimentación de los sensores y salidas de U_ASI
+Bauform = Aparatos de mando y señalización
+Gruppe = Cajas 3SB3
+Adresstyp = Standard-Slave
+Profil_IO = 7  (B B B B)
+Profil_ID = 0
+Profil_ID1 = F
+Profil_ID2 = F
+ID1_Var = Y
+Par_Anzahl = 0
+

@@ -1,0 +1,215 @@
+@DB_TYP FMS-Typ V1.0
+@LANGUAGE ENGLISH
+#@@VERSION V1.02.6
+## [V1.00.2] ConectionProfil: UserDefined -> DefMaxSCC  = 0
+## [V1.00.2] ConectionProfil: UserDefined -> Aufnahme Unc.Dienste in Responder-Bitleiste
+## [V1.00.2] ConectionProfil: UserDefined -> Änderung CI auf Wertebereich (Default 3000)
+## [V1.00.2] ConnectionAttributes: ConnectionType_MULT/ConnectionType_BRCT  = FALSE
+## [V1.00.4] Neues Bitmap
+## [V1.01.1] Sprachanpassungen
+## [V1.01.2] Baudrate > 1,5 MBaud fuer FMS sperren
+## [V1.02.1] Baudrate > 1,5 MBaud fuer FMS freigeben
+General     
+{	
+   	Version         				= 1
+	OrderString						= "UniSlave"
+ 	VendorName            			= "Unknown"
+   	ModelNameG             			= "Allgemeiner FMS-Slave"
+   	ModelNameE             			= "General FMS Slave"
+   	ModelNameS             			= "Esclave FMS general"
+   	ModelNameI             			= "FMS-Slave generale"
+   	ModelNameF             			= "Esclavo FMS général"
+   	Revision             			= " "
+   	ProfileNumber         			= 0
+   	LogicalStatus        			= 0
+   	PhysicalStatus       			= 0
+   	ControllerType        			= " "
+   	HardwareRelease       			= "A_._"
+   	SoftwareRelease       			= "V_._"
+   	VendorFmsStack        			= " "
+   	Comment               			= " " 
+   	FamilyG                			= "Sonstige" 
+   	FamilyE                			= "Other" 
+   	FamilyI                			= "Varie" 
+   	FamilyS                			= "Otros" 
+   	FamilyF                			= "Autres" 
+   	OrderNumber           			= ""
+   	CompatibleTo          			= 3 
+   	SiemensStation        			= FALSE 
+   	SiemensVendorID       			= 0 
+   	BitmapFile            			= "UNIVSLVE.BMP" 
+}  
+
+BusSpecificCharacteristics	
+{
+	ActiveStation					= FALSE	
+	PassiveStation					= TRUE
+	Baudrate9.6   					= TRUE
+	Baudrate19.2					= TRUE
+	Baudrate93.75					= TRUE
+	Baudrate187.5					= TRUE
+	Baudrate500    					= TRUE
+	Baudrate1500					= TRUE
+	Baudrate3000					= TRUE
+	Baudrate6000					= TRUE
+	Baudrate12000					= TRUE
+}
+
+ImplementationAndSystem   
+{ 
+	PollListSap   					= 0
+	TimeOutAssociate				= 0
+	SymLenFmsKbl 					= 0
+	VfdPointerSupported				= FALSE
+	FMSFeaturesSupported   			= 0h00.00.00.00.00.00
+	FMA7FeaturesSupported   		= 0h00.00.00.00.00.00
+	MaxSap	            			= 62
+	MaxNoSap    					= 0
+	MaxNoOv    						= 0
+	MaxNoVfd    					= 0
+	MaxCr	    					= 0
+	MaxNoCrl						= 0
+	MaxNoCycleCon					= 0
+	MaxNoActiveCon					= 0
+	MaxPduLen						= 241
+	MaxOvIndex						= 0
+	MinVarIndex						= 0
+	MaxVarIndex						= 0
+	MaxParServices					= 255
+	MaxCntOutServicesCalling		= 255
+	MaxCntOutServicesCalled			= 255
+   	MaxMultiplier		    		= 0
+   	DefMultiplier		    		= 0
+   	DefLsap      		    		= 0
+   	ServiceFeaturesAnded			= FALSE
+}
+
+AdditionalCharacteristics  
+{
+   	MaxNameLen             			= 0
+   	AccessProtectSupport   			= TRUE
+   	MaxLenExtension       			= 0
+   	MaxLenExecArgument     			= 0
+}
+
+ConnectionProfile # No. 1
+{
+ 	General
+    {
+     	#ConnProfileType 			= 0
+        ConnProfileBetriebsart 		= SLAVE
+        ConnOrderString 			= "UserDefined"
+        ConnProfileNameG 			= "BenutzerDefiniert"
+        ConnProfileNameE 			= "UserDefined"
+        ConnProfileNameI 			= "DefinitoUtente"
+        ConnProfileNameF 			= "DéfiniUtilisateur"
+        ConnProfileNameS 			= "DefinidoUsuario"
+        LocalLSAP       			= 0                                   
+        RemoteLSAP      			= 0                                   
+        RemoteAddress   			= 0                                   
+	   	Userdefined          		= TRUE
+    }
+
+	ConnectionAttributes
+	{
+	   	ConnectionType_MMAZ         = FALSE
+	   	ConnectionType_MSAZ         = TRUE
+	   	ConnectionType_MSAZ_SI      = TRUE
+	  	ConnectionType_MSZY         = TRUE
+	   	ConnectionType_MSZY_SI      = TRUE
+	   	ConnectionType_MULT         = FALSE
+	   	ConnectionType_BRCT         = FALSE
+	   	ConnectionType_Default      = MSAZ
+ 	   	ConnectionAttribute_D       = TRUE
+   	   	ConnectionAttribute_I       = TRUE
+		ConnectionAttribute_O       = TRUE
+   		#ConnectionAttribute_Default= D
+   		ControlIntervalMin          = 0
+	   	ControlIntervalMax          = 4294967295
+		ControlInterval_Default     = 3000
+        LLIAttribute_FMS           	= TRUE
+        LLIAttribute_FMA7	      	= TRUE
+        LLIAttribute_Default       	= FMS
+        #MultiplierMin              = 1
+        #MultiplierMax              = 128
+        #Multiplier_Default          = 1
+	} 
+	
+	NumberOfParallelServices
+	{
+	   	MinMaxSCC                   = 0
+	   	MinMaxRCC                   = 0
+	   	MinMaxSAC                   = 0
+	   	MinMaxRAC                   = 0
+	   	
+	   	DefMaxSCC                   = 0
+	   	DefMaxRCC                   = 1
+	   	DefMaxSAC                   = 0	   	
+	   	DefMaxRAC                   = 0
+	   	
+	   	MaxMaxSCC                   = 255
+	   	MaxMaxRCC                   = 255
+	   	MaxMaxSAC                   = 255
+	   	MaxMaxRAC                   = 255
+	}
+
+	SizeOfPracticalData
+	{
+		MinMaxPduSendingHighPrio    = 0
+		MinMaxPduSendingLowPrio     = 0
+	   	MinMaxPduReceivingHighPrio  = 0
+	   	MinMaxPduReceivingLowPrio   = 0
+		
+		DefMaxPduSendingHighPrio    = 0
+		DefMaxPduSendingLowPrio     = 241
+	   	DefMaxPduReceivingHighPrio  = 0
+	   	DefMaxPduReceivingLowPrio   = 241
+		
+		MaxMaxPduSendingHighPrio    = 241
+		MaxMaxPduSendingLowPrio     = 241
+	   	MaxMaxPduReceivingHighPrio  = 241
+	   	MaxMaxPduReceivingLowPrio   = 241
+	}
+
+	SupportedServices_R
+	{
+	   	UnsolictedStatus            = FALSE
+		InformationReport           = FALSE
+   		InformationReportWithType   = FALSE
+		EventNotification           = FALSE
+		EventNotificationWithType   = FALSE
+	}
+
+	SupportedServices_O
+	{
+	   	GetLongOD                 	= FALSE
+	   	PutOD                       = FALSE
+	   	DomainDownload              = FALSE
+	   	DomainUpload	            = FALSE
+	   	RequestDomainDownLoad       = FALSE
+	   	RequestDomainUpLoad         = FALSE
+	   	CreateProgramInvocation     = FALSE
+	   	DeleteProgramInvocation     = FALSE
+	   	StartProgramInvocation      = FALSE
+	 	StopProgramInvocation       = FALSE
+	   	ResumeProgramInvocation     = FALSE
+	   	ResetProgramInvocation      = FALSE
+		KillProgramInvocation       = FALSE
+		Read                        = TRUE
+		Write                       = TRUE
+		ReadWithType                = FALSE
+	   	WriteWithType               = FALSE
+	   	PhysRead                    = FALSE
+	   	PhysWrite                   = FALSE
+	   	DefineVariableList          = FALSE
+		DeleteVariableList          = FALSE
+   		AcknowledgeEventNotification= FALSE
+		AlterEventConditionMonitoring = FALSE
+        AddressableWithName         = FALSE
+	   	UnsolictedStatus            = FALSE
+		InformationReport           = FALSE
+   		InformationReportWithType   = FALSE
+		EventNotification           = FALSE
+		EventNotificationWithType   = FALSE
+	}
+}

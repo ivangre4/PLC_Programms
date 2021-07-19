@@ -1,0 +1,12 @@
+:Base S7wnfwlj.hlp
+:Title Help on the Firmware Loader
+1 Application=HDD_S0
+1 Downloading the Firmware=Firmware_laden
+1 Dialogs / Steps
+2 1st Step=HDD_S1
+2 2nd Step=HDD_S2
+2 3rd Step (PROFIBUS Module)=HDD_S3_PB
+2 4th Step (PROFIBUS Module)=HDD_S4_PB
+2 3rd Step (Ethernet Module / MAC Address)=HDD_S3_IE
+2 3rd Step (Getting the Ethernet Module MAC Address)=HID_S3_IEIP
+2 4th Step (Ethernet Module)=HID_S4_IEIP

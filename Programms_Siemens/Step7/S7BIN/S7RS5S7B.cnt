@@ -1,0 +1,75 @@
+:Base S7rs5s7b.HLP
+1 Functions for Floating Point Math
+2 GP_ADD Floating Point Add=IDH_GP_ADD_Floating_Point_Add
+2 GP_DIV Floating Point Divide=IDH_GP_DIV_Floating_Point_Divide
+2 GP_FPGP Fixed Number to Floating Point=IDH_GP_FPGP
+2 GP_GPFP Floating Point to Fixed Number=IDH_GP_GPFP
+2 GP_MUL Floating Point Multiply=IDH_GP_MUL_Floating_Point_Multipliy
+2 GP_SUB Floating Point Subtract=IDH_GP_SUB_Floating_Point_Subtract
+2 GP_VGL Compare Floating Point Numbers=IDH_GP_VGL_Compare_two_Floating_Point_Numbers
+2 RAD_GP Floating Point Square Root=IDH_RAD_GPL_Floating_Point_Square_Root
+1 Signal Functions
+2 MLD_ED  1st-Up Signal with 2-Flash Light (Bit, Q)=IDH_ED_Double_Freq_Flashing_Light
+2 MLD_EDK 1st-Up Signal with 2-Flash Light (Bit, Q+M)=IDH_EDK_Double_Freq_Flashing_Light_Bit_Mode
+2 MLD_EDW 1st-Up Signal with 2-Flash Light (Word, Q)=IDH_EDW_Double_Freq_Flashing_Light_Word_Mode
+2 MLD_EDWK   1st-Up Signal with 2-Flash Light (Word, Q+M)=IDH_EDWK_Double_Freq_Flashing_Light
+2 MLD_EZ 1st-Up Signal with 1-Flash Light (Bit, Q)=IDH_EZ_Freq_Flashing_Light
+2 MLD_EZK 1st-Up Signal with 1-Flash Light (Bit, Q+M)=IDH_EZK_Single_Freq_Flashing_Light_Bit_Mode
+2 MLD_EZW 1st-Up Signal with 1-Flash Light (Word, Q)=IDH_EZW_Single_Freq_Flashing_Light_Word_Mode
+2 MLD_EZWK 1st-Up Signal with 1-Flash Light (Word, Q+M)=IDH_EZWK_Single_Freq_Flashing_Light
+2 MLD_SAM Group Signal=IDH_SAM_Group_Signal
+2 MLD_SAMW Group Signal (Word Mode)=IDH_SAMW_Group_Signal_Word_Mode
+2 MLD_TG Clock Generator=IDH_TG_Clock_Generator
+2 MLD_TGZ Temporary Clock Generator=IDH_TGZ_Temporary_Clock_Generator
+1 Integrated Functions
+2 COD_B4  Convert BCD to 16-Bit Binary=IDH_COD_B4
+2 COD_16  Convert 16-Bit Binary to BCD=IDH_COD_16
+2 MUL_16  16-Bit Binary Multiplication=IDH_MUL_16
+2 DIV_16  16-Bit Binary Division=IDH_DIV_16
+1 Math Functions
+2 ADD_32   32-Bit Binary Addition=IDH_ADD_32
+2 DIV_32   32-Bit Binary Division=IDH_DIV_32_32_Binary_Division
+2 MUL_32   32-Bit Binary Multiplication=IDH_MUL_32_32_Binary_Multiplication
+2 RAD_16   16-Bit Binary Square Root=IDH_RAD_16_32_Binary_Square_Root
+2 SUB_32   32-Bit Binary Subtraction=IDH_SUB_32
+1 Registers
+2 REG_FIFO  Buffer Storage (FIFO)=IDH_REG_FIFO_Buffer_Storage
+2 REG_LIFO  Stack (LIFO)=IDH_REG_LIFO_LIFO
+2 REG_SCHB  Bit Shift Register=IDH_REG_SCHB_Bit_Shift_Register
+2 REG_SCHW  Word Shift Register=IDH_REG_SCHW_Word_Shift_Register
+1 Copying from Data Areas
+2 DB_COPY1  Copy Data Block 1 (Direct Parameter Assignment)=IDH_DB_COPY1
+2 DB_COPY2  Copy Data Block 2 (Indirect Parameter Assignment)=IDH_DB_COPY2
+1 Special Functions
+2 LADEN  Load=IDH_Load
+2 RETTEN  Save=IDH_Save_Flags_into_a_Datablock
+2 COD_B8  Convert BCD to 8-Bit Binary=IDH_COD_B8
+2 COD_32  Convert 32-Bit Binary to BCD=IDH_COD_32
+1 Reading and Writing Values
+2 AE_460_1 Read In an Analog Value=IDH_AE_460_1
+2 AE_460_2 Read In an Analog Value=IDH_AE_460_2
+2 AE_463_1 Read In an Analog Value=IDH_AE_463_1
+2 AE_463_2 Read In an Analog Value=IDH_AE_463_2
+2 AE_464_1 Read In an Analog Value=IDH_AE_464_1
+2 AE_464_2 Read In an Analog Value=IDH_AE_464_2
+2 AE_466_1 Read In an Analog Value=IDH_AE_466_1
+2 AE_466_2 Read In an Analog Value=IDH_AE_466_2
+2 PER_ET1  Reading and Writing for Expanded Peripheries=IDH_PER_ET1
+2 PER_ET2 Reading and Writing for Expanded Peripheries=PER_ET2
+2 RLG_AA1  Issue an Analog Value=IDH_RLG_AA1
+2 RLG_AA2  Issue an Analog Value=IDH_RLG_AA2
+1 Math Functions
+2 A2_H_A1  ACCU 2 to the Power Accumulator 1=IDH_A2_H_A1
+2 ARCCOS  Arc Cosine (x)=IDH_ARCCOS
+2 ARCCOT  Arc Cotangent (x)=IDH_ARCCOT
+2 ARCSIN  Arc Sine (x)=IDH_ARCSIN
+2 ARCTAN  Arc Tangent (x)=IDH_ARCTAN
+2 B_LOG_X  General Logarithm log (x) to Base b=IDH_B_LOG_X
+2 COSINE  Cosine (x)=IDH_COSINUS
+2 COTANG  Cotangent (x)=IDH_COTANG
+2 E_H_N  e to the Power n=IDH_E_H_N
+2 LG_X  Decadic Logarithm log (x)=IDH_LG_X
+2 LN_X  Natural Logarithm ln (x)=IDH_LN_X
+2 SINE  Sine (x)=IDH_SINE
+2 TANGENT  Tangent (x)=IDH_TANGENT
+2 ZEHN_H_N  10 to the Power n=IDH_TEN_H_N

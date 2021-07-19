@@ -1,0 +1,271 @@
+[1335297]
+SHORTNAME=CP 300
+
+[1335399]
+KatEntryName = PROFIBUS
+SHORTNAME=PROFIBUS
+InfoText = 用于 S7-300 的 PROFIBUS 的通讯处理器
+
+[1335398]
+KatEntryName = PROFIBUS
+SHORTNAME=PROFIBUS
+InfoText = 用于 S7-400 的 PROFIBUS 的通讯处理器
+
+
+[1335319]
+KatEntryName = CP 342-5
+SHORTNAME=CP 342-5
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP
+
+
+[1315003]
+KatEntryName = 6GK7 342-5DA00-0XE0
+SHORTNAME=CP 342-5
+InfoText = PROFIBUS CP: DP 协议，"发送/接收" 接口，S7 通讯 (服务器)
+
+
+[1335329]
+KatEntryName = 6GK7 342-5DA01-0XE0
+SHORTNAME=CP 342-5
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP
+
+[1335314]
+KatEntryName = Product Version 2
+SHORTNAME=CP 342-5
+InfoText = PROFIBUS CP: DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯 (服务器)，路由，无 PG 式模块更换，产品版本 2
+
+[1335296]
+KatEntryName = Product Version 1
+SHORTNAME=CP 342-5
+InfoText = PROFIBUS CP: DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯 (服务器)，产品版本 1
+
+
+
+[1335301]
+SHORTNAME=CP 400
+
+
+[1335322]
+KatEntryName = CP 443-5 Extended
+SHORTNAME=CP 443-5 Extended
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP
+
+
+[1315045]
+KatEntryName = 6GK7 443-5DX00-0XE0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站，"发送/接收" 接口，S7 通讯
+
+[1335302]
+KatEntryName = 6GK7 443-5DX01-0XE0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯
+
+[1335335]
+KatEntryName = 6GK7 443-5DX02-0XE0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由
+
+[1335306]
+KatEntryName = V2.0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，固化程序 V2.0
+
+[1335338]
+KatEntryName = V3.0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，固化程序 V3.0
+
+
+
+[1335303]
+SHORTNAME=IM 400
+
+
+[1335326]
+KatEntryName = IM 467
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块
+
+
+[1314916]
+KatEntryName = 6ES7 467-5GJ00-0AB0
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块
+
+[1335304]
+KatEntryName = 6ES7 467-5GJ01-0AB0
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)
+
+[1335336]
+KatEntryName = 6ES7 467-5GJ02-0AB0
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由
+
+[1335307]
+KatEntryName = V2.0
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，固化程序 V2.0
+
+[1335339]
+KatEntryName = V3.0
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，数据记录路由，固化程序 V3.0
+
+
+
+[1335341]
+KatEntryName = IM 467 FO
+SHORTNAME=IM 467 FO
+InfoText = DP 主站接口模块，FO 端口
+
+[1335337]
+KatEntryName =  6ES7 467-5FJ00-0AB0
+SHORTNAME=IM 467 FO
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，FO 端口
+
+[1335318]
+KatEntryName = V2.0
+SHORTNAME=IM 467 FO
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，FO 端口，固化程序 V2.0
+
+[1335340]
+KatEntryName = V3.0
+SHORTNAME=IM 467 FO
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，数据记录，FO 端口，固化程序 V3.0
+
+[1335381]
+KatEntryName = 6GK7 342-5DF00-0XE0
+SHORTNAME=CP 342-5 FO
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP，FO 端口
+
+[1335391]
+KatEntryName = 6GK7 342-5DA02-0XE0
+SHORTNAME=CP 342-5
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP
+
+[1335383]
+KatEntryName = V4.0
+SHORTNAME=CP 342-5
+InfoText = PROFIBUS CP: DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯 (服务器)，路由，无 PG 式模块更换，12 Mbps，固化程序 V4.0
+
+[1335410]
+KatEntryName = V5.0
+SHORTNAME=CP 342-5
+InfoText = PROFIBUS CP: DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯，路由，无 PG 式模块更换，12 Mbps，固化程序 V5.0
+
+[1335382]
+KatEntryName = V4.0
+SHORTNAME=CP 342-5 FO
+InfoText = PROFIBUS CP: FO 端口，DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯 (服务器)，路由，无 PG 式模块更换，12 Mbps，固化程序 V4.0
+
+[1335413]
+KatEntryName = V5.0
+SHORTNAME=CP 342-5 FO
+InfoText = PROFIBUS CP: FO 端口，DP 协议 (包括 "同步/冻结" 操作)，"发送/接收" 接口，S7 通讯，路由，无 PG 式模块更换，12 Mbps，固化程序 V5.0
+
+[1335386]
+KatEntryName = V3.1
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，固化程序 V3.1
+
+[1335403]
+KatEntryName = V3.2
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，固化程序 V3.2
+
+[1335458]
+KatEntryName = V3.3
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，固化程序 V3.3
+
+[1335457]
+KatEntryName = 6GK7 443-5DX03-0XE0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1
+
+[1336002]
+KatEntryName = V4.0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1，固化程序 V4.0
+
+[1335456]
+KatEntryName = V5.0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1，固化程序 V5.0
+
+[1335516]
+KatEntryName = 6GK7 443-5DX04-0XE0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1
+
+[1335459]
+KatEntryName = V6.0
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1，固化程序 V6.0
+
+[1335517]
+KatEntryName = V6.1
+SHORTNAME=CP 443-5 Extended
+InfoText = PROFIBUS CP: DP 主站 (包括 "同步/冻结" 操作和冗余)，直接数据交换，恒定总线循环时间，"发送/接收" 接口，S7 通讯，时间同步，路由，数据记录路由，DPV1，固化程序 V6.1
+
+
+[1335392]
+KatEntryName = V3.1
+SHORTNAME=IM 467
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，数据记录路由，固化程序 V3.1
+
+[1335393]
+KatEntryName = V3.1
+SHORTNAME=IM 467 FO
+InfoText = DP 主站接口模块 (包括 "同步/冻结" 操作)，直接数据交换，恒定总线循环时间，路由，FO 端口，固化程序 3.1
+
+[1335394]
+KatEntryName = CP 342-5 FO
+SHORTNAME=CP 342-5 FO
+InfoText = 用于 PROFIBUS 与 DP 协议的 S7 CP，FO 端口
+
+
+[1335395]
+KatEntryName=S7-300 CP 342-5 DP
+InfoText=CP 342-5 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+
+[1335417]
+KatEntryName=6GK7 342-5DA02-0XE0
+InfoText=CP 342-5 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+[1335418]
+KatEntryName=6GK7 342-5DF00-0XE0
+InfoText=CP 342-5 FO 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+
+[1315037]
+KatEntryName=6GK7 342-5DA0x-0XE0
+InfoText=CP 342-5 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+[1335396]
+KatEntryName=V4.0
+InfoText=CP 342-5 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+[1335397]
+KatEntryName=V4.0
+InfoText=CP 342-5 FO 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5 FO
+
+
+[1335419]
+KatEntryName=V5.0
+InfoText=CP 342-5 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5
+
+[1335420]
+KatEntryName=V5.0
+InfoText=CP 342-5 FO 作为 PROFIBUS DP 从站
+SHORTNAME=SIMATIC CP 342-5 FO

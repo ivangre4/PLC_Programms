@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Restart"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB101_EV_CLASS : BYTE ;	//16#13, Event class 1, Entering event state, Event logged in diagnostic buffer
+  OB101_STRTUP : BYTE ;	//16#81/82/83/84 Method of startup
+  OB101_PRIORITY : BYTE ;	//27 (Priority of 1 is lowest)
+  OB101_OB_NUMBR : BYTE ;	//101 (Organization block 101, OB101)
+  OB101_RESERVED_1 : BYTE ;	//Reserved for system
+  OB101_RESERVED_2 : BYTE ;	//Reserved for system
+  OB101_STOP : WORD ;	//Event that caused CPU to stop (16#4xxx)
+  OB101_STRT_INFO : DWORD ;	//Information on how system started
+  OB101_DATE_TIME : DATE_AND_TIME ;	//Date and time OB101 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

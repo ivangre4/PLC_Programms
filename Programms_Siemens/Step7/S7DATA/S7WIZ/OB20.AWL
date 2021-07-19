@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Time Delay Interrupt 0"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB20_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB20_STRT_INF : BYTE ;	//16#21 (OB 20 has started)
+  OB20_PRIORITY : BYTE ;	//3 (Priority of 1 is lowest)
+  OB20_OB_NUMBR : BYTE ;	//20 (Organization block 20, OB20)
+  OB20_RESERVED_1 : BYTE ;	//Reserved for system
+  OB20_RESERVED_2 : BYTE ;	//Reserved for system
+  OB20_SIGN : WORD ;	//Identifier input (SIGN) attached to SRT_DINT
+  OB20_DTIME : TIME ;	//Delay time (DTIME) input to SRT_DINT instruction
+  OB20_DATE_TIME : DATE_AND_TIME ;	//Date and time OB20 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

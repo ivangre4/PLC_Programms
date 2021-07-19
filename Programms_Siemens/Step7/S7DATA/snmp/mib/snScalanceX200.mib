@@ -1,0 +1,1703 @@
+-- ----------------------------------------------------------------------
+-- snScalanceX200.mib
+-- Siemens  SIMATIC NET 
+-- SCALANCE X200 Familie Private MIB
+-- Copyright (c) 2004-2005 Siemens AG
+-- ----------------------------------------------------------------------
+--
+-- MIB Module :   SN-SCALANCEX200-PRIV-MIB
+--
+-- Revision   :   V1.0.2
+-- Date       :   2005/08/22 
+--
+-- ----------------------------------------------------------------------
+
+SN-SCALANCEX200-PRIV-MIB DEFINITIONS ::= BEGIN
+
+  IMPORTS
+          enterprises,IpAddress,
+          TimeTicks,Counter FROM RFC1155-SMI
+	  
+--	  ifIndex FROM RFC1213-MIB
+	  
+	  TRAP-TYPE FROM RFC-1215
+	  
+          OBJECT-TYPE FROM RFC-1212;
+
+ad                      OBJECT IDENTIFIER ::= { enterprises 4196 }
+adProductMibs           OBJECT IDENTIFIER ::= { ad 1 }
+simaticNet              OBJECT IDENTIFIER ::= { adProductMibs 1 }
+iScalanceX	        OBJECT IDENTIFIER ::= { simaticNet 5 } 
+iScalanceX200           OBJECT IDENTIFIER ::= { iScalanceX 2 } 
+
+-- -------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Products
+-- These objects are used as sysObjectID of the products.
+-- -------------------------------------------------------------
+
+snScalanceX206-1   	OBJECT IDENTIFIER ::= { iScalanceX200 1 }
+snScalanceX204-2	OBJECT IDENTIFIER ::= { iScalanceX200 2 }
+snScalanceX208   	OBJECT IDENTIFIER ::= { iScalanceX200 3 }
+snScalanceX208PRO   	OBJECT IDENTIFIER ::= { iScalanceX200 4 }
+snScalanceX204IRT   	OBJECT IDENTIFIER ::= { iScalanceX200 5 }
+snScalanceX202-2IRT   	OBJECT IDENTIFIER ::= { iScalanceX200 6 }
+
+-- ************************************************************
+-- SIMATIC NET SCALANCE X200 Private MIB
+-- ************************************************************
+
+-- ------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Object Identifier Definition
+-- ------------------------------------------------------------
+iScalanceX200Mib      OBJECT IDENTIFIER ::= { iScalanceX200 100 }
+
+
+-- -------------------------------------------------------------
+-- Groups in SN-PRIVATE-MIB
+-- -------------------------------------------------------------
+-- --------------------------------------------------------------
+-- textual conventions
+-- --------------------------------------------------------------
+
+          MacAddress ::= OCTET STRING (SIZE (6))    -- a 6 octet address
+                                                    -- in the
+                                                    -- "canonical"
+                                                    -- order
+          -- defined by IEEE 802.1a, i.e., as if it were transmitted
+          -- least significant bit first, even though 802.5 (in
+          -- contrast to other n802.x protocols) requires MAC
+          -- addresses to be transmitted most significant bit first.
+          --
+          -- 16-bit addresses, if needed, are represented by setting
+          -- their upper 4 octets to all 0's, i.e., AAFF would be
+          -- represented as 00000000AAFF.
+
+-- -------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Objects
+-- -------------------------------------------------------------
+snCommon             OBJECT IDENTIFIER ::= { iScalanceX200Mib 1 }
+snProductSpecific    OBJECT IDENTIFIER ::= { iScalanceX200Mib 2 }
+
+-- -------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Common Objects
+-- -------------------------------------------------------------
+snDownload           OBJECT IDENTIFIER ::= { snCommon 5  }
+snNvLog              OBJECT IDENTIFIER ::= { snCommon 6  }
+snTrapInfo           OBJECT IDENTIFIER ::= { snCommon 7  }
+snGen                OBJECT IDENTIFIER ::= { snCommon 8  }
+snTcpIp              OBJECT IDENTIFIER ::= { snCommon 10 }
+snCPlug              OBJECT IDENTIFIER ::= { snCommon 11 }
+snTime               OBJECT IDENTIFIER ::= { snCommon 12 }
+
+-- --------------------------------------------------------------
+-- AD-DOWNLOAD-MIB:
+-- --------------------------------------------------------------
+
+      DisplayString ::=
+          OCTET STRING
+      -- This data type is used to model textual information taken
+      -- from the NVT ASCII character set.  By convention, objects
+      -- with this syntax are declared as having
+      --
+      --      SIZE (0..255)
+
+--
+-- Download Sub-Groups
+--
+snDownloadParams   OBJECT IDENTIFIER ::= {snDownload 1}
+
+-- --------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Download Group
+-- This group contains all the download related parameters.
+-- --------------------------------------------------------------
+
+snDownloadParamsTftpServerHostName OBJECT-TYPE
+        SYNTAX  DisplayString  (SIZE(0..64))
+        ACCESS  read-write
+        STATUS  mandatory
+        DESCRIPTION
+            "IP address (x.y.z.w) otherwise name of the TFTP server host, if the 
+             name server is present."
+         DEFVAL  {""}
+        ::= { snDownloadParams 2 }
+
+
+snDownloadFirmwareFile       OBJECT-TYPE
+      SYNTAX  DisplayString (SIZE(0..32))
+      ACCESS  read-write
+      STATUS  mandatory
+      DESCRIPTION  "Full path name of firmware file to be saved to the TFTP
+           server host. Note that the file name must have the appropriate syntax
+           for the TFTP server host.
+           E.g., if the TFTP server host is a UNIX machine, the full file name
+           might be  /tftp/name.frm, or if the TFTP server host is a Windows
+           machine, the full file name might be  C:\tftp\name.frm."
+       DEFVAL  {"Not Defined Yet"}
+       ::= { snDownloadParams 3 }
+
+
+snDownloadFirmwareControl    OBJECT-TYPE
+       SYNTAX  INTEGER {
+         start-load(2),
+         start-save(3)
+      }
+       ACCESS  write-only
+       STATUS  mandatory
+        DESCRIPTION "Setting this object to start-load(2) causes the
+            system to start a downloading process to TFTP server.
+            Setting this object to start-save(3) causes the system to 
+            start uploading process from TFTP server."
+       ::= { snDownloadParams 4 }
+       
+snDownloadParamsStatus OBJECT-TYPE
+        SYNTAX  INTEGER {
+        download-in-progress(2),
+                  download-inactive(3)
+    }
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION  "The status of the TFTP client."
+        DEFVAL  {download-inactive}
+        ::= { snDownloadParams 5 }
+
+snDownloadParamsError  OBJECT-TYPE
+        SYNTAX  DisplayString
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION  "The error status of the TFTP client."
+        DEFVAL  {""}
+        ::= { snDownloadParams 7 }
+	
+
+snDownloadEventLogTableFile       OBJECT-TYPE
+      SYNTAX  DisplayString (SIZE(0..32))
+      ACCESS  read-write
+      STATUS  mandatory
+      DESCRIPTION  "Full path name of file to be saved to the TFTP
+           server host. Note that the file name must have the appropriate syntax
+           for the TFTP server host.
+           E.g., if the TFTP server host is a UNIX machine, the full file name
+           might be  /tftp/name.txt, or if the TFTP server host is a Windows
+           machine, the full file name might be  C:\tftp\name.txt.
+	   (Only in SCALANCE X-200IRT)
+	   "
+       DEFVAL  {"Not Defined Yet"}
+       ::= { snDownloadParams 9 }
+       
+snDownloadConfigFile       OBJECT-TYPE
+        SYNTAX  DisplayString (SIZE(0..32))
+        ACCESS  read-write
+        STATUS  mandatory
+        DESCRIPTION  "Full path name of config file to be downloaded from the TFTP
+            server host. Note that the file name must have the appropriate syntax
+            for the TFTP server host.
+            E.g., if the TFTP server host is a UNIX machine, the full file name
+            might be  /tftpboot/ad_sb.hex, or if the TFTP server host is a Windows
+            machine, the full file name might be  C:\tftpboot\ad_sb.hex."
+        DEFVAL  {"Not Defined Yet"}
+        ::= { snDownloadParams 11 }
+
+snDownloadConfigControl    OBJECT-TYPE
+        SYNTAX  INTEGER {
+        start-load(2),
+        start-save(3)
+    }
+        ACCESS  write-only
+        STATUS  mandatory
+        DESCRIPTION  "Setting this object to start-load(2) causes the
+            system to start a downloading process from TFTP server.
+            Setting this object to start-save(3) causes the system to 
+            start uploading process to TFTP server."
+        ::= { snDownloadParams 12 }
+
+
+snDownloadParamsTftpServerHostPort OBJECT-TYPE
+      SYNTAX INTEGER 
+      ACCESS read-write
+      STATUS    mandatory
+      DESCRIPTION "Port of the TFTP server host. Dafault value is 69."
+      DEFVAL { 69 }
+      ::= {  snDownloadParams 13 }
+
+-- --------------------------------------------------------------
+-- AD-NVLOG-MIB: only SCALANCE X-200IRT Devices
+-- --------------------------------------------------------------
+snNvLogMaxEntries  OBJECT-TYPE
+  SYNTAX    INTEGER (10..400)
+  ACCESS    read-write
+  STATUS    mandatory
+  DESCRIPTION
+    "Maximum number of events that can be kept in 
+        Non-Volatile Memory."
+        DEFVAL { 200 }
+  ::= { snNvLog 1 }
+
+snNvLogCurrentEntries  OBJECT-TYPE
+  SYNTAX    INTEGER
+  ACCESS    read-only
+  STATUS    mandatory
+  DESCRIPTION
+    "Number of events that are currently kept in 
+        Non-Volatile Memory."
+        DEFVAL { 0 }
+  ::= { snNvLog 2 }
+  
+snNvLogNewEntries  OBJECT-TYPE
+  SYNTAX    INTEGER
+  ACCESS    read-write
+  STATUS    mandatory
+  DESCRIPTION
+    "Counter for events that are logged in Non-Volatile Memory. 
+        This counter starts at 0 after each system start. User can reset 
+        this counter at any time by writing 0 to this object."
+        DEFVAL { 0 }
+  ::= { snNvLog 3 }
+  
+snNvLogClear   OBJECT-TYPE
+  SYNTAX    INTEGER{
+        clear(1)
+    }
+  ACCESS    write-only
+  STATUS    mandatory
+  DESCRIPTION
+    "Setting this object to clear(1) value, clears the
+     events that are kept in Non-Volatile Memory."
+  ::= { snNvLog 4 }
+
+snNvLogTable   OBJECT-TYPE
+  SYNTAX    SEQUENCE OF SnNvLogEntry
+  ACCESS    not-accessible
+  STATUS    mandatory
+  DESCRIPTION
+    "The table contains the last events that occurred 
+        in the system."
+  ::= { snNvLog 5 }
+
+snNvLogEntry   OBJECT-TYPE
+  SYNTAX    SnNvLogEntry
+  ACCESS    not-accessible
+  STATUS    mandatory
+  DESCRIPTION
+    "The description of an event that occurred in the system,
+     and was stored in Non-Volatile memory."
+  INDEX { snNvLogSequenceNumber }
+  ::= { snNvLogTable 1 }
+
+SnNvLogEntry ::= SEQUENCE {
+  snNvLogPowerUpCount
+    INTEGER,
+  snNvLogTime
+    TimeTicks,
+  snNvLogSequenceNumber
+    INTEGER,
+  snNvLogDescr
+    DisplayString,
+  snNvLogType
+    INTEGER
+  }
+
+snNvLogPowerUpCount       OBJECT-TYPE
+        SYNTAX  INTEGER
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION
+                "The number of times the system was powered up."
+        DEFVAL { 0 }
+        ::= { snNvLogEntry 1 }
+
+snNvLogTime       OBJECT-TYPE
+        SYNTAX  TimeTicks
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION
+                "The sysUpTime of the system when the event occurred."
+        DEFVAL { 0 }
+        ::= { snNvLogEntry 2 }
+
+snNvLogSequenceNumber       OBJECT-TYPE
+        SYNTAX  INTEGER
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION
+                "The system Sequence Number Count."
+	REFERENCE
+		"snNvLogSequenceNumber"
+        ::= { snNvLogEntry 3 }
+
+snNvLogDescr   OBJECT-TYPE
+	SYNTAX    DisplayString (SIZE (0..256))
+	ACCESS    read-only
+	STATUS    mandatory
+	DESCRIPTION
+		"ASCII Description of the event."
+	DEFVAL { "" }
+	::= { snNvLogEntry 4 }
+  
+snNvLogType   OBJECT-TYPE
+        SYNTAX  INTEGER {
+        system(1),
+        ethernet(2),
+        pnio(3),
+        other(4)
+    }
+	ACCESS    read-only
+	STATUS    mandatory
+	DESCRIPTION
+		"Type of event."
+	DEFVAL { system }
+	::= { snNvLogEntry 5 }
+  
+-- --------------------------------------------------------------
+-- AD-GEN-MIB:
+-- --------------------------------------------------------------
+
+snUserDescription  OBJECT-TYPE
+  SYNTAX    DisplayString (SIZE (0..255))
+  ACCESS    read-write
+  STATUS    mandatory
+  DESCRIPTION
+    "Extended description of the station including user specific
+      information"
+   DEFVAL  {"Not Defined Yet"}
+  ::= { snGen 1 }
+
+snHwVersion OBJECT-TYPE
+  SYNTAX DisplayString (SIZE (0..20))
+  ACCESS read-only
+  STATUS mandatory
+  DESCRIPTION
+    "The hardware version of the system in the format major.minor."
+  ::= { snGen 2 }
+
+snBootStrapVersion OBJECT-TYPE
+  SYNTAX DisplayString (SIZE (0..20))
+  ACCESS read-only
+  STATUS mandatory
+  DESCRIPTION
+    "The firmware version of the bootstrap program installed
+     in the system in the format major.minor."
+  ::= { snGen 3 }
+
+snSwVersion OBJECT-TYPE
+   SYNTAX  DisplayString (SIZE(0..255))
+   ACCESS  read-only
+   STATUS  mandatory
+   DESCRIPTION
+    "The software version of the system in the format major.minor."
+   ::= { snGen 4 }
+
+snInfoSerialNr OBJECT-TYPE
+   SYNTAX DisplayString (SIZE(0..20))
+   ACCESS read-only
+   STATUS mandatory
+   DESCRIPTION "The serial number of this product."
+   ::= { snGen 6 }
+
+snTelnetEnable OBJECT-TYPE
+    SYNTAX  INTEGER {
+      not-supported(10),
+      enabled(1),
+      disabled(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION   ""
+    DEFVAL { enabled }
+    ::= { snGen 9 }
+
+snTelnetTimeOutEnable OBJECT-TYPE
+    SYNTAX  INTEGER {
+      enabled(1),
+      disabled(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION   "Enables or disables the time out for a TELNET session"
+    DEFVAL { enabled }
+    ::= { snGen 10 }
+
+snTelnetTimeOut OBJECT-TYPE
+    SYNTAX  INTEGER (60..600)
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION   "Time out for the TELNET session. The time could be set in 
+                   steps of 10 secounds"
+    DEFVAL { 300 }
+    ::= { snGen 11 }
+
+
+snSNMPEnable OBJECT-TYPE
+    SYNTAX  INTEGER {
+      not-supported(10),
+      enabled(1),
+      disabled(2)
+    }
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+       "Determines whether this device may be
+         accessed by SNMP management stations"
+    DEFVAL { enabled }
+    ::= { snGen 12 }
+
+
+-- --------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200System Reset Group
+--
+-- This group contains Action MIB Objects that perform reset operations.
+-- --------------------------------------------------------------
+snSysReset  OBJECT-TYPE
+  SYNTAX  INTEGER {
+        cold-reset(1),
+        warm-reset(2)
+    }
+  ACCESS  write-only
+  STATUS  mandatory
+  DESCRIPTION
+    "Restarts the system.
+     cold-reset(1) is identical to Power-On-Reset or Watchdog-Reset.
+     warm-reset(2) is identical to restart command."
+  ::= { snGen 13 }
+
+snResetPowerUpCount OBJECT-TYPE
+  SYNTAX INTEGER
+  ACCESS read-only
+  STATUS  mandatory
+  DESCRIPTION 
+    "The number of times the sytem was powered up."
+  ::= { snGen 14 }
+
+snSetFactoryDefs   OBJECT-TYPE
+  SYNTAX    INTEGER {
+        set-factory-defaults(1),
+	set-factory-defaults-complete(2)
+	}
+  ACCESS    write-only
+  STATUS    mandatory
+  DESCRIPTION
+    "Restore factory defaults. The following settings are 
+     not modified by setting the value 'set-factory-defaults':
+     IP-Address, Subnet-Mask, Gateway-Address, SSID, DHCP-Flag, 
+     System Name, System Location, System Contact, Device Mode, 
+     Country Code.
+     'set-factory-defaults-complete' will erase all configuration."
+  ::= { snGen 15 }
+
+snResetCounters   OBJECT-TYPE
+  SYNTAX    INTEGER {
+        reset-counters(1)
+                }
+  ACCESS    write-only
+  STATUS    mandatory
+  DESCRIPTION
+    "Reset all counters."
+  ::= { snGen 16 }
+
+--
+-- Email objects
+-- This group includes parameters for the Email.
+--
+
+snEmailSMTPIpAddress   OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (0..64))
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "IP address or host name of SMTP e-mail server."
+    ::= { snGen 20 }
+
+snEmailSMTPPort    OBJECT-TYPE
+    SYNTAX  INTEGER (1..65535)
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Number of TCP port to which the SMTP e-mail server will listen."
+      DEFVAL  {25}
+    ::= { snGen 21 }
+
+snEmailEnable OBJECT-TYPE
+    SYNTAX  INTEGER {
+      enabled(1),
+      disabled(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+          "E-mail functionality for sending a message when a trap is generated."
+    DEFVAL { disabled }
+    ::= { snGen 22 }
+
+snEmailAddress OBJECT-TYPE
+    SYNTAX  DisplayString (SIZE (0..255))
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "E-mail address to which messages will be sent."
+      DEFVAL  {"user@host.domain"}
+    ::= { snGen 23 }
+
+snSNMPReadOnly OBJECT-TYPE
+    SYNTAX  INTEGER {
+      enabled(1),
+      disabled(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+       "Determines whether some SNMPv1/v2c Agents may write 
+         variables on this device"
+    DEFVAL { enabled }
+    ::= { snGen 24 }
+
+snInfoMLFBNr OBJECT-TYPE
+   SYNTAX DisplayString (SIZE(0..20))
+   ACCESS read-only
+   STATUS mandatory
+   DESCRIPTION "The MLFB number of this product."
+   ::= { snGen 26 }
+    
+-- --------------------------------------------------------------
+-- AD-TCPIP-MIB:
+-- --------------------------------------------------------------
+
+-- --------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200Ip Address Group
+-- --------------------------------------------------------------
+
+snIpAddress OBJECT-TYPE
+    SYNTAX  IpAddress
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "IP address to be used for the agent after reset of the system."
+      DEFVAL  {0}
+    ::= { snTcpIp 2 }
+
+snIpSubnetMask OBJECT-TYPE
+    SYNTAX  IpAddress
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "IP subnet mask to be used by the agent after reset of the system."
+      DEFVAL  {0}
+    ::= { snTcpIp 3 }
+
+snIpDefaultGateway OBJECT-TYPE
+    SYNTAX  IpAddress
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "IP address of the default gateway to be used by the agent
+         after next reset of the system."
+      DEFVAL  {0}
+      ::= { snTcpIp 4 }
+
+snDhcp OBJECT-TYPE
+        SYNTAX INTEGER {
+	  enabled-via-mac-address (1),
+          disabled(2),
+	  enabled-via-client-id (3),
+	  enabled-via-sysname (4)
+        }
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "The value enabled_via_mac_address(3) runs DHCP, enabled_via_client_id(4) runs DHCP
+		with option ClientId, enabled_via_sysname(5) runs DHCP with the sysname as ClientId.
+		The value disabled(2) will inhibit DHCP."
+        DEFVAL { enabled-via-mac-address }
+        ::= { snTcpIp 6 }
+      
+snClientId OBJECT-TYPE
+        SYNTAX  DisplayString (SIZE (0..255))
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION ""
+        DEFVAL { "" }
+        ::= { snTcpIp 7 }
+	
+snDcp OBJECT-TYPE
+        SYNTAX INTEGER {
+	      enabled (1),
+          disabled(2)
+        }
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "The value enabled(1) will automatically run DCP (Detection & Configuration Protocoll).
+                The value disabled(2) will inhibit DCP."
+        DEFVAL { enabled }
+        ::= { snTcpIp 8 }
+
+
+snMacAddressBase OBJECT-TYPE
+      SYNTAX MacAddress
+      ACCESS read-only
+      STATUS    mandatory
+      DESCRIPTION "MAC address base of the SCALANCE X-200."
+      ::= { snTcpIp 10 }
+
+-- --------------------------------------------------------------
+-- AD-TRAP-MIB:
+-- --------------------------------------------------------------
+snTrapsEnable OBJECT-TYPE
+      SYNTAX  INTEGER {
+      not-supported(10),
+      enabled(1),
+       disabled(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+       "Determines whether this device will
+        transmit traps to SNMP management stations.
+        This if this object is set to disable no traps
+        will be sent.  Setting object is set to enabled
+        is a necessary, but not a sufficient condition for
+        transmission of traps."
+     DEFVAL { enabled }
+    ::= { snTrapInfo 1 }
+
+snTrapTimeLastGenerated OBJECT-TYPE
+        SYNTAX TimeTicks
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION
+                "The value of sysUpTime at the time the last trap was
+     generated.
+
+     This object can be used by the management station to
+     determine whether traps were generated since the last poll."
+        DEFVAL { 0 }
+        ::= { snTrapInfo 5 }
+
+snTrapMaxManagers  OBJECT-TYPE
+  SYNTAX    INTEGER
+  ACCESS    read-only
+  STATUS    mandatory
+  DESCRIPTION
+    "The maximum number of managers that can be registered
+     for receiving traps."
+        DEFVAL { 10 }
+  ::= { snTrapInfo 6 }
+
+snTrapTable    OBJECT-TYPE
+  SYNTAX  SEQUENCE OF SnTrapEntry
+  ACCESS  not-accessible
+  STATUS  mandatory
+  DESCRIPTION
+    "This table contains information about the managers
+     to which traps should be directed.
+
+     Setting the snTrapState to inactive(3) removes
+     the corresponding entry from the table."
+  ::= { snTrapInfo 7 }
+
+snTrapEntry    OBJECT-TYPE
+  SYNTAX  SnTrapEntry
+  ACCESS  not-accessible
+  STATUS  mandatory
+        DESCRIPTION
+                   "This object contains runtime information about
+                    an individual trap destination."
+  INDEX   { snTrapIndex }
+  ::= { snTrapTable 1 }
+
+SnTrapEntry ::= SEQUENCE {
+  snTrapAddress DisplayString (SIZE (0..64)),
+  snTrapState   INTEGER,
+  snTrapIndex   INTEGER
+  }
+
+snTrapAddress  OBJECT-TYPE
+  SYNTAX    DisplayString (SIZE (0..64))
+        ACCESS  read-write
+        STATUS  mandatory
+  DESCRIPTION
+    "The IP address or host name of the network management entity
+     to which traps (of the type specified in this
+     table entry) should be sent."
+  ::= { snTrapEntry 1 }
+
+snTrapState    OBJECT-TYPE
+  SYNTAX  INTEGER {
+        other(1),
+        active(2),
+        inactive(3)
+    }
+        ACCESS  read-write
+        STATUS  mandatory
+  DESCRIPTION
+    "The state of this entry in the trap address
+     table.  Setting this object to inactive(2)
+     removes the corresponding entry from the table."
+  DEFVAL { inactive }
+  ::= { snTrapEntry 3 }
+
+snTrapIndex    OBJECT-TYPE
+  SYNTAX    INTEGER
+  ACCESS    read-only
+  STATUS    mandatory
+  DESCRIPTION
+    "The Index of Trap Table"
+  REFERENCE
+    "snTrapIndex"
+  ::= { snTrapEntry 6 }
+
+-- --------------------------------------------------------------
+-- AD SIMATIC NET SCALANCEX200 COMMON C-PLUG MIB
+-- --------------------------------------------------------------
+snCPlugStatus OBJECT-TYPE
+        SYNTAX INTEGER {
+          accepted(1),
+          not-present(2),
+          not-accepted(3),
+          not-accepted-crc-error(4),
+          not-accepted-group-error(5),
+          not-accepted-type-error(6),
+          not-accepted-version-error(7),
+          not-accepted-fstype-error(8),
+          not-accepted-config-error(9)
+        }
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Current status of the C-PLUG: 
+		accepted(1) C-PLUG is completely accepted (and used) by this device.
+		not-present(2) C-PLUG is (physically) not present.
+		not-accepted(3) C-PLUG is not accepted (reason unknown).
+				not-accepted-crc-error(4) C-PLUG is not accepted, because header CRC is wrong.
+		not-accepted-group-error(5) C-PLUG is not accepted, reason: device group mis-match,   see snCPlugGroupDetected for details.
+		not-accepted-type-error(6) C-PLUG is not accepted, reason: device type mismatch, see snCPlugDeviceDetected for details.
+		not-accepted-version-error(7) C-PLUG is not accepted, wrong configuration revision, see snCPlugConfigRevision for details.
+		not-accepted-fstype-error(8) C-PLUG is not accepted, reason: wrong flash file sytem,  see snCPlugFilesysType for details.
+		not-accepted-config-error(9) C-PLUG is not accepted, because unable to load configuration."
+         ::= { snCPlug 1 }
+
+snCPlugGroupDetected OBJECT-TYPE
+        SYNTAX DisplayString (SIZE(0..32))
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Device group that is currently read from C-PLUG: 
+		'EMPTY' detect a cleaned or a new C-PLUG.
+		'SCALANCE X-400'  detect a C-PLUG that is formatted for X-400 series.
+		'SCALANCE X-200'  detect a C-PLUG that is formatted for X-200 series.
+		'SCALANCE W-700'  detect a C-PLUG that is formatted for W-700series.
+		'SCALANCE S-600'  detect a C-PLUG that is formatted for S-600 series.
+		'CP300' detect a C-PLUG that is formatted for CP300 series.
+		'CP400' detect a C-PLUG that is formatted for CP400 series.
+		'IE/PB-Link'  detect a C-PLUG that is formatted for IE/PB-Link series.
+		'IE/ASi-Link' detect a C-PLUG that is formatted for IE/ASi-Link series.
+		'SINAUT' detect a C-PLUG that is formatted for SIMAUT series.
+		'UNKNOWN' detect a C-PLUG with an unknown (could be too new) device group.
+		'ERROR' detect a C-PLUG with an invalid device group value."
+        ::= { snCPlug 2 }
+      
+snCPlugDeviceDetected OBJECT-TYPE
+         SYNTAX DisplayString (SIZE(0..32))
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Device type that is currently read from the C-PLUG:
+	this value Depends on the device group, and could be (for example):
+	'SCALANCE X414-3E'
+	'SCALANCE X408-2'
+	'SCALANCE X208'
+	...
+	'SCALANCE W788-1PRO'
+	.
+	'CP 443-1 Advanced'
+	."
+       ::= { snCPlug 3 }
+ 
+snCPlugConfigRevision OBJECT-TYPE
+        SYNTAX INTEGER 
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Device/group configuration revision found on the C-PLUG: 
+                     Each device or device group has its own configuration 
+		     revision value to decide wether  a C-PLUG data could be accepted, 
+		     has to be migrated or could not be used at all.
+	             A value (0) means error, a value (255) means empty."
+        ::= { snCPlug 4 }
+
+snCPlugFilesysType OBJECT-TYPE
+        SYNTAX INTEGER {
+          tffs(1),
+          simatic-net-fs(2),
+          unknown(253),
+          error(254),		
+          empty(255)	
+        }
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Type of the filesystem on the C-PLUG flash."
+      ::= { snCPlug 5 }
+
+      
+snCPlugFilesysSize OBJECT-TYPE
+        SYNTAX INTEGER 
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Maximum size of the filesystem on the C-PLUG flash in bytes."
+        ::= { snCPlug 6 }
+      
+snCPlugFilesysUsage OBJECT-TYPE
+        SYNTAX INTEGER 
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Current usage of the filesystem on the C-PLUG flash in bytes."
+        ::= { snCPlug 7 }
+      
+snCPlugInfoString OBJECT-TYPE
+        SYNTAX DisplayString (SIZE(0..255))
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Shows the information string stored in the C-PLUG"
+        ::= { snCPlug 8 }
+
+snCPlugFormat OBJECT-TYPE
+        SYNTAX INTEGER {
+		no-operation(1),
+		format-int(2),
+		format-def(3),
+		clean(4),
+		format-in-progress(5)		
+	}        
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "Modify content of the C-PLUG as follows:
+		     format-int(2) format the C-PLUG for this device and copy device internal values into C-PLUG (if internal values are present). May be supported only by some devices. 
+                     format-def(3) format the C-PLUG for this device and copy default values into C-PLUG (if any default values are defined). May be supported only by some devices. Restart required.
+		     clean(4) format the C-PLUG (physically), thsi will result in a complete empty C-PLUG (if you remove C-PLUG after next power down)."
+        ::= { snCPlug 9 }
+
+-- --------------------------------------------------------------
+-- AD SIMATIC NET SCALANCEX200 COMMON TIME MIB (only SCALANCE X-200IRT Devices)
+-- --------------------------------------------------------------
+snTimeClientEnable OBJECT-TYPE
+        SYNTAX INTEGER {
+            enabled (1),
+            disabled (2)
+        }
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "Enables/Disables Time Client."
+      	DEFVAL { disabled }
+        ::= { snTime 1 }
+
+snTimeClientType OBJECT-TYPE
+        SYNTAX INTEGER {
+            sntp-poll(1),
+            sntp-listen(2),
+            simatic(3),
+            manual(4)
+        }
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "Choose type of time client"
+        ::= { snTime 2 }
+   
+snTimeServer OBJECT-TYPE
+        SYNTAX  DisplayString (SIZE (0..64))
+        ACCESS  read-write
+        STATUS  mandatory
+        DESCRIPTION "IP Address or host name of the SNTP server (x.y.z.w)."
+        ::= { snTime 3 }
+    
+snTimeServerPort OBJECT-TYPE
+       SYNTAX INTEGER 
+       ACCESS read-write
+       STATUS    mandatory
+       DESCRIPTION "Port of the SNTP server host. Dafault value is 123."
+       DEFVAL { 123 }
+       ::= {  snTime 4 }
+       
+snTimeShift OBJECT-TYPE
+        SYNTAX  INTEGER {
+          timeSNTP-minus-12h (1),
+          timeSNTP-minus-11h (2),
+          timeSNTP-minus-10h (3),
+          timeSNTP-minus-09h (4),
+          timeSNTP-minus-08h (5),
+          timeSNTP-minus-07h (6),
+          timeSNTP-minus-06h (7),
+          timeSNTP-minus-05h (8),
+          timeSNTP-minus-04h (9),
+          timeSNTP-minus-03h (10),
+          timeSNTP-minus-02h (11),
+          timeSNTP-minus-01h (12),
+          timeSNTP-plus-minus-00h (13),
+          timeSNTP-plus-01h (14),
+          timeSNTP-plus-02h (15),
+          timeSNTP-plus-03h (16),
+          timeSNTP-plus-04h (17),
+          timeSNTP-plus-05h (18),
+          timeSNTP-plus-06h (19),
+          timeSNTP-plus-07h (20),
+          timeSNTP-plus-08h (21),
+          timeSNTP-plus-09h (22),
+          timeSNTP-plus-10h (23),
+          timeSNTP-plus-11h (24),
+          timeSNTP-plus-12h (25),
+          timeSNTP-plus-13h (26)
+        }
+        ACCESS  read-write
+        STATUS  mandatory
+        DESCRIPTION "Time difference between SNTP server and switch time."
+        DEFVAL { timeSNTP-plus-minus-00h }
+        ::= { snTime 5 }           
+	
+snTimeClientPollInitInterval OBJECT-TYPE
+       SYNTAX INTEGER 
+       ACCESS read-write
+       STATUS    mandatory
+       DESCRIPTION "Polling interval of SNTP requests before time was read from server.
+		    Can be set from 1000 ms to 100000 ms"
+       DEFVAL { 1000 }
+       ::= {  snTime 6 }
+
+snTimeClientPollInterval OBJECT-TYPE
+       SYNTAX INTEGER 
+       ACCESS read-write
+       STATUS    mandatory
+       DESCRIPTION "Polling interval of SNTP requests after time was ever read from server.
+		    Can be set from 10 sec to 100000 sec"
+       DEFVAL { 3600 }
+       ::= {  snTime 7 }
+
+snTimeSetManually OBJECT-TYPE
+        SYNTAX DisplayString (SIZE(0..64))
+        ACCESS read-write
+        STATUS mandatory
+        DESCRIPTION "Show/Set MMM DD hh:mm:ss YYYY- date and time of the switch."
+        ::= { snTime 8 }
+	
+snTimeCurrent OBJECT-TYPE
+        SYNTAX DisplayString (SIZE(0..64))
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Show date and time of the switch in following format: MMM DD hh:mm:ss YYYY."
+        ::= { snTime 9 }
+	
+snTimeLastTime OBJECT-TYPE
+        SYNTAX DisplayString (SIZE(0..64))
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Shows the last time when the snSwitchTime was set."
+        ::= { snTime 10 }
+
+snTimeLastTimeType OBJECT-TYPE
+        SYNTAX INTEGER {
+            not-set(1),
+            manually(2),
+            by-sntp(3),
+            by-sntp-not-synchronal(4),
+            by-simatic-synchronal(5),
+            by-simatic-not-synchronal(6)
+        }
+        ACCESS read-only
+        STATUS mandatory
+        DESCRIPTION "Mechanism, which set the snSwitchTime at last."
+        ::= { snTime 11 }
+
+-- -------------------------------------------------------------
+-- SIMATIC NET SCALANCE X200 Product Specific Objects
+-- -------------------------------------------------------------
+snX200Common     OBJECT IDENTIFIER ::= { snProductSpecific 1 } 
+snX200Switch     OBJECT IDENTIFIER ::= { snProductSpecific 2 } 
+snX200Redundancy OBJECT IDENTIFIER ::= { snProductSpecific 4 } 
+snX200Standby    OBJECT IDENTIFIER ::= { snProductSpecific 5 } 
+
+-- --------------------------------------------------------------
+-- SN-SCALANCE-X-MIB Product SPECIFIC :
+-- --------------------------------------------------------------
+snX200FaultState OBJECT-TYPE
+    SYNTAX  INTEGER {
+      noFault(1),
+      fault(2)
+    }
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+          "Indicates SCALANCE X200 fault state
+           (state of fault LED/signaling contact)"
+    DEFVAL { noFault }
+    ::= { snX200Common 2 }
+
+snX200SignalledFaults OBJECT-TYPE
+    SYNTAX  Counter 
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+          "Number of signalled faults."    
+    ::= { snX200Common 3 }
+
+snX200FaultValue OBJECT-TYPE
+    SYNTAX  OCTET STRING
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+         "Fault value:  0      = no fault,
+			bit 0  = no redundancy power
+			bit 2  = internal error, 
+			bit 3  = Standby manager error,  only for SCALANCE X-200IRT Devices;
+			bit 8  = Link down on port 1, 
+			bit 9  = Link down on port 2, 
+			bit 10 = Link down on port 3, 
+			bit 11 = Link down on port 4, 
+			bit 12 = Link down on port 5,  only for SCALANCE X-200 Devices;
+			bit 13 = Link down on port 6,  only for SCALANCE X-200 Devices;
+			bit 14 = Link down on port 7,  only for SCALANCE X-200 Devices; 
+			bit 15 = Link down on port 8,  only for SCALANCE X-200 Devices; 
+			bit 17 = non-recoverable ring error,  only for SCALANCE X-200IRT Devices;
+			bit 26 = Cold/Warm start, 
+			bit 27 = C-PLUG error,
+			bit 29 = Redundnacy manager error,  only for SCALANCE X-200IRT Devices;
+			bit 30 = PNIO Error - C-PLUG not exists,
+			bit 31 = PNIO Error - C-PLUG Error
+			bit 32 = Link up on port 1,  only for SCALANCE X-200IRT Devices;
+			bit 33 = Link up on port 2,  only for SCALANCE X-200IRT Devices;
+			bit 34 = Link up on port 3,  only for SCALANCE X-200IRT Devices;
+			bit 35 = Link up on port 4,  only for SCALANCE X-200IRT Devices;
+			
+			The length of the fault value is 4 bytes for SCALANCE X-200 devices 
+			and 5 bytes for SCALANCE X-200IRT Devices."
+    ::= { snX200Common 4 }
+
+
+snX200PowerSupplyState OBJECT-TYPE
+    SYNTAX  INTEGER {
+      redundance(1),
+      non-redundance(2)
+    }
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+          "State of power supply."
+    DEFVAL { redundance }
+    ::= { snX200Common 41 }
+
+snX200AuthFailureValue OBJECT-TYPE
+    SYNTAX  DisplayString  (SIZE(0..64))
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+         "Description of the last snX200AuthFailure Trap"
+    ::= { snX200Common 55 }
+ 
+snX200RMFaultMaskState OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2),
+        checked-but-disabled-while-PNIO-in-DataEx(3)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Mask for checking Redundancy Manager state.
+         If a Redundancy Manager will be in active state or if non-recoverable ring error happens
+             a fault will be generated. 
+        
+	checked(1)    - Generate Fault if Ring error or if RM in Active mode;
+        notChecked(2) - do not generate fault;
+        checked-but-disabled-while-PNIO-in-DataEx(3) - Cannot Generate Fault, 
+                                                       because PNIO is in data exchange state. 
+						       But if PNIO will be not in data echange state, the fault will be generated.
+        (Only for SCALANCE X-200IRT)"
+    DEFVAL { notChecked }
+    ::= { snX200Common 56 }
+    
+snX200StandbyFaultMaskState OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2),
+        checked-but-disabled-while-PNIO-in-DataEx(3)
+   }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Mask for checking Standby Manager state.
+             If a Standby Manager will change the defined state
+             a fault will be generated. 
+	     
+	checked(1)    - Generate Fault if:
+	                      Standby Manager cannot find or has lost its partner,
+	                      if it is Master in Passive state,
+			      if it is Slave in Active state,
+			      if partner has wrong version of Standby Manager;
+        notChecked(2) - do not generate fault;
+        checked-but-disabled-while-PNIO-in-DataEx(3) - Cannot Generate Fault, 
+                                                       because PNIO is in data exchange state. 
+						       But if PNIO will be not in data echange state, the fault will be generated.
+	     
+	     (Only for SCALANCE X-200IRT)"
+    DEFVAL { notChecked }
+    ::= { snX200Common 57 }
+   
+snX200PowerFaultMaskState OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Mask for checking power state.
+             If a power will be not redundance then
+             a fault will be generated."
+    DEFVAL { notChecked }
+    ::= { snX200Common 60 }
+    
+-- --------------------------------------------------------------
+-- This group includes additional parameters for the ports.
+-- --------------------------------------------------------------
+snX200PortTable OBJECT-TYPE
+    SYNTAX  SEQUENCE OF SnX200PortEntry
+    ACCESS  not-accessible
+    STATUS  mandatory
+    DESCRIPTION
+             "Table containing per-port objects in the form of private
+              extensions of interface objects."
+    ::= { snX200Common 61 }
+
+snX200PortEntry OBJECT-TYPE
+    SYNTAX  SnX200PortEntry
+    ACCESS  not-accessible
+    STATUS  mandatory
+    DESCRIPTION
+            "Interface entry containing objects at the
+             subnetwork layer and below for a particular
+            interface."
+    INDEX   { snX200PortIndex }
+    ::= { snX200PortTable 1 }
+
+SnX200PortEntry ::=
+    SEQUENCE {
+        snX200PortIndex
+            INTEGER,
+        snX200PortFaultMaskState
+            INTEGER,
+        snX200PortUpFaultMaskState
+            INTEGER
+    }
+
+snX200PortIndex OBJECT-TYPE
+    SYNTAX  INTEGER
+    ACCESS  not-accessible
+    STATUS  mandatory
+    DESCRIPTION
+            "Unique number for each interface. The number is in the range
+             1 to ifNumber - 2. The number for each interface must remain
+             constant at least from one re-initialization of the entity's
+             network management system to the next re-initialization."
+    ::= { snX200PortEntry 1 }
+
+
+snX200PortFaultMaskState OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Mask for checking link state of the port.
+             If a link of a unmasked (checked) port is down then
+             a fault will be generated."
+    DEFVAL { notChecked }
+    ::= { snX200PortEntry 2 }
+
+snX200PortUpFaultMaskState OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Mask for checking link state of the port.
+             If a link of a unmasked (checked) port is up then
+             a fault will be generated. (Only for SCALANCE X-200IRT)"
+    DEFVAL { notChecked }
+    ::= { snX200PortEntry 3 }
+    
+-- --------------------------------------------------------------
+-- This group includes additional parameters for the event table.
+-- --------------------------------------------------------------
+snX200EventTable OBJECT-TYPE
+    SYNTAX  SEQUENCE OF SnX200EventEntry
+    ACCESS  not-accessible
+    STATUS  mandatory
+    DESCRIPTION
+             "Event configuration table."
+    ::= { snX200Common 62 }
+
+snX200EventEntry OBJECT-TYPE
+    SYNTAX  SnX200EventEntry
+    ACCESS  not-accessible
+    STATUS  mandatory
+    DESCRIPTION
+            "Events table rows entries."
+    INDEX   { snX200EventIndex }
+    ::= { snX200EventTable 1 }
+
+SnX200EventEntry ::=
+    SEQUENCE {
+	snX200EventIndex
+	    INTEGER,
+        snX200EventColdWarmStart
+            INTEGER,
+        snX200EventLinkChange
+            INTEGER,
+        snX200EventAuthenticationFailure
+            INTEGER,
+        snX200EventPowerChange
+            INTEGER,
+	snX200EventFault
+	    INTEGER,
+	snX200EventRedundancy
+	    INTEGER,
+	snX200EventStandby
+	    INTEGER
+    }
+
+snX200EventIndex OBJECT-TYPE
+    SYNTAX  INTEGER {
+        eMail(1),
+        trap(2),
+	logTable(3),
+	faultState(4)
+    }
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+        "Index of columns : E-Mail = 1, Traps = 2, LogTable = 3, 
+         Fault state = 4"
+    DEFVAL { eMail }
+    ::= { snX200EventEntry 1 }
+
+snX200EventColdWarmStart OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables cold/warm start notification."
+    DEFVAL { checked }
+    ::= { snX200EventEntry 2 }
+
+snX200EventLinkChange OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables link up notification (There is no Fault notification)."
+    DEFVAL { checked }
+    ::= { snX200EventEntry 3 }
+
+snX200EventAuthenticationFailure OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables authentication failure notification (There is no Fault notification)."
+    DEFVAL { checked }
+    ::= { snX200EventEntry 5 }
+
+snX200EventPowerChange OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables power change notification."
+    DEFVAL { checked }
+    ::= { snX200EventEntry 6 }
+
+snX200EventFault OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables fault notification (There is no Fault notification)."
+	DEFVAL { checked }
+    ::= { snX200EventEntry 9 }
+   
+snX200EventRedundancy OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables the Redundancy Manager state change notification. (Only for SCALANCE X-200IRT)"
+	DEFVAL { checked }
+    ::= { snX200EventEntry 14 }
+   
+snX200EventStandby OBJECT-TYPE
+    SYNTAX  INTEGER {
+        checked(1),
+        notChecked(2)
+    }
+    ACCESS  read-write
+    STATUS  mandatory
+    DESCRIPTION
+        "Enables/Disables the Standby Manager state change notification. (Only for SCALANCE X-200IRT)"
+	DEFVAL { checked }
+    ::= { snX200EventEntry 15 }
+   
+-- --------------------------------------------------------------
+-- AD-SN-MIB:
+-- --------------------------------------------------------------
+snConfigId OBJECT-TYPE
+    SYNTAX  INTEGER {
+      scalanceX206-1	   	 (1),
+      scalanceX204-2		 (2),
+      scalanceX208	   	 (3),
+      scalanceX208PRO		 (4),
+      scalanceX204IRT		 (5),
+      scalanceX202-2IRT		 (6)
+    }
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+		"SCALANCE X200 hardware and configuration type.
+		 scalanceX200Group    	 - type unknown,
+		 scalanceX206-1	 	 - 6 electric and 1 optic port,
+		 scalanceX204-2		 - 4 electric and 2 optic ports,
+	         scalanceX208	   	 - 8 electric ports,
+	         scalanceX208PRO	 - 8 electric ports in IP65,
+	         scalanceX204IRT	 - 4 electric ports with IRT,
+	         scalanceX202-2IRT	 - 2 electric ports and 2 optic ports with IRT,
+		"          
+    ::= { snX200Common 100 }
+
+-- --------------------------------------------------------------
+-- SN-SCALANCE-X-MIB SWITCH MIB:
+-- --------------------------------------------------------------
+
+snX200SwitchSnifferDest OBJECT-TYPE
+	    SYNTAX  INTEGER {
+              port1(1),
+	      port2(2),
+	      port3(3),
+	      port4(4),
+	      port5(5),
+	      port6(6),
+	      port7(7),
+	      port8(8)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Destination port for traffic mirroring."
+	    DEFVAL { port1 }
+	    ::= { snX200Switch 10 }
+
+snX200SwitchSnifferSrc OBJECT-TYPE
+	    SYNTAX  INTEGER {
+              port1(1),
+	      port2(2),
+	      port3(3),
+	      port4(4),
+	      port5(5),
+	      port6(6),
+	      port7(7),
+	      port8(8)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Source port for traffic mirroring."
+	    DEFVAL { port2 }
+	    ::= { snX200Switch 11 }
+
+snX200SwitchSnifferEnable OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      enabled(1),
+	      disabled(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Enable/Disable mirroring functionality."
+	    DEFVAL { disabled }
+	    ::= { snX200Switch 12 }
+
+-- --------------------------------------------------------------
+-- SN-SCALANCE-X-MIB REDUNDANCY MIB:
+-- --------------------------------------------------------------
+snX200RingRedundancyMode OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      ringRedundancyOn(1),
+	      ringRedundancyOff(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "RM mode."
+	    DEFVAL { ringRedundancyOff}
+	    ::= { snX200Redundancy 1 }
+
+snX200RmMode OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      rmManager(1),
+	      rmClient(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Redundancy manager enabled or not. (Only for SCALANCE X-200IRT)"
+	    DEFVAL { rmOff}
+	    ::= { snX200Redundancy 2 }
+	    
+snX200RmState OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      rmPassive(1),
+	      rmActive(2),
+	      rmOtherRM(3),
+	      rmSingleSideReceive(4),
+	      rmDisabled(300)
+	    }
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION "By SCALANCE X-200 is RM State always passive.
+	      rmPassive(1) - Redundancy manager is in passive state
+	      rmActive(2)  - Redundancy manager is in active state
+	      rmOtherRM(3) - Redundancy manager is in passive state but other RM was found
+	      rmSingleSideReceive(4) - Redundancy manager is in passive state but test frames are received only from one ring port
+	      rmDisabled(300) - Redundancy manager is disabled
+	    "
+	    DEFVAL { rmPassive}
+	    ::= { snX200Redundancy 3 }
+
+snX200RmStateChanges OBJECT-TYPE
+	    SYNTAX  Counter
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION "Number of changes to RM active state. (Only for SCALANCE X-200IRT)"
+	    ::= { snX200Redundancy 4 }
+
+snX200RmRingPort1 OBJECT-TYPE
+	    SYNTAX  INTEGER (1..8)
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Port number of the first ring port. (By SCALANCE X-200IRT it is static port)"
+	    ::= { snX200Redundancy 5 }
+
+snX200RmRingPort2 OBJECT-TYPE
+	    SYNTAX  INTEGER (1..8)
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Port number of the second ring port.(By SCALANCE X-200IRT it is isolated port)"
+	    ::= { snX200Redundancy 6 }
+
+snX200RmTestMaxDelay OBJECT-TYPE
+	    SYNTAX  INTEGER (0..200)
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION "Measured maximum delay of RM test telegrams. (Only for SCALANCE X-200IRT)"
+	    ::= { snX200Redundancy 7 }
+
+snX200RmResetCounters OBJECT-TYPE
+	    SYNTAX  INTEGER {
+		    no-operation(1),
+		    reset(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Reset all counters of Redundancy protocol software. (Only for SCALANCE X-200IRT)"
+	    ::= { snX200Redundancy 8 }
+
+-- --------------------------------------------------------------
+-- SN-SCALANCE-X-MIB STANDBY MIB:  (Only for SCALANCE X-200IRT)
+-- --------------------------------------------------------------
+snX200StandbyMode OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      standbyOn(1),
+	      standbyOff(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Standny manager mode; Enabled or Disabled."
+	    DEFVAL { standbyOff}
+	    ::= { snX200Standby 1 }
+     
+snX200StandbyPort OBJECT-TYPE
+	    SYNTAX  INTEGER (1..4)
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Port number of the standby port. Cannot be equal to redundancy port."
+	    ::= { snX200Standby 2 }
+	    
+snX200StandbyConnectionName OBJECT-TYPE
+	    SYNTAX  DisplayString  (SIZE(0..32))
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "The standby connection name (Max 32 Symbol)."
+	    ::= { snX200Standby 3 }
+
+snX200StandbyState OBJECT-TYPE
+	    SYNTAX  INTEGER {
+	      standbyMasterPassive(1),
+	      standbySlavePassive(3),
+	      standbyMasterActive(5),
+	      standbySlaveActive(7),
+	      standbyMasterPassive-lost(17),
+	      standbySlavePassive-lost(19),
+	      standbyMasterActive-lost(21),
+	      standbySlaveActive-lost(23),
+	      standbyWrongPartnerVersion(256),
+	      standbyWatingForPartner(257),
+	      standbyAmbiguousError(258),
+	      standbyDisabled(300)
+	    }
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION "Standby manager state.
+	      Bit 0 is always 1, bit 1 is Master/Slave, 
+	      bit 2 is Active/Passive and bit 8 is Partner not found or not.
+	      
+	      standbyMasterPassive(1) - Master in passive state
+	      standbySlavePassive(3)  - Slave in passive state
+	      standbyMasterActive(5)  - Master in active state
+	      standbySlaveActive(7)   - Slave in passive state
+	      standbyMasterPassive-lost(17)   - Master in passive state but partner is lost
+	      standbySlavePassive-lost(19)    - Slave in passive state but partner is lost
+	      standbyMasterActive-lost(21)    - Master in active state but partner is lost
+	      standbySlaveActive-lost(23)     - Slave in passive state but partner is lost
+	      standbyWrongPartnerVersion(256) - The standby manager partner has wrong version
+	      standbyWatingForPartner(257)    - Wating for partner, partner was not yet found
+	      standbyAmbiguousError(258)      - Stanby manager found more than one partner
+	      standbyDisabled(300)            - Standby Manager is disabled"
+	    ::= { snX200Standby 4 }
+
+snX200StandbyStateChanges OBJECT-TYPE
+	    SYNTAX  Counter
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION "Number of changes to Standby Manager active state."
+	    ::= { snX200Standby 5 }
+
+snX200StandbyResetCounters OBJECT-TYPE
+	    SYNTAX  INTEGER {
+		    no-operation(1),
+		    reset(2)
+	    }
+	    ACCESS  read-write
+	    STATUS  mandatory
+	    DESCRIPTION "Reset all counters of Standby protocol software."
+	    ::= { snX200Standby 6 }
+
+-- --------------------------------------------------------------
+-- SN-SCALANCE-X-MIB TRAPS:
+-- --------------------------------------------------------------
+
+snX200AuthFailure TRAP-TYPE
+        ENTERPRISE  snX200Common
+        VARIABLES { snX200AuthFailureValue }
+        DESCRIPTION
+            "Authentication failure in WEB or CLI"
+    ::= 4
+
+snX200RmActiveState TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Redundancy manager entered active state. (Only for SCALANCE X-200IRT)"
+    ::= 11
+     
+snX200RmPassiveState TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Redundancy manager entered passive state. (Only for SCALANCE X-200IRT)"
+    ::= 12
+     
+snX200RmRingError TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Redundancy manager has detected non-recoverable ring error. See snX200RmState for details.
+	    (Only for SCALANCE X-200IRT)"
+    ::= 13
+
+snX200StandbyActiveState TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Standby manager entered active state. (Only for SCALANCE X-200IRT)"
+    ::= 21
+     
+snX200StandbyPassiveState TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Standby manager entered passive state. (Only for SCALANCE X-200IRT)"
+    ::= 22
+     
+snX200StandbyPartnerLost TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Standby manager lost its partner. (Only for SCALANCE X-200IRT)"
+    ::= 23
+    
+snX200StandbyPartnerFound TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Standby manager found again its partner. (Only for SCALANCE X-200IRT)"
+    ::= 24
+    
+snX200StandbyPartnerVersionError TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "The standby manager partner has wrong version. (Only for SCALANCE X-200IRT)"
+    ::= 25
+    
+snX200StandbyAmbiguousError TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "The standby manager found more than one partner. (Only for SCALANCE X-200IRT)"
+    ::= 26
+    
+snX200PowerOneLine TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Power supply is not redundant."
+    ::= 31
+
+snX200PowerRedundance TRAP-TYPE
+        ENTERPRISE  snX200Common
+        DESCRIPTION
+            "Power supply is redundant."
+    ::= 32
+
+snX200Fault TRAP-TYPE
+        ENTERPRISE  snX200Common
+        VARIABLES { snX200FaultValue }
+        DESCRIPTION
+            "Device entered fault state."
+    ::= 41
+     
+     
+-- -------------------------------------------------------------
+-- Groups in SN-PRIVATE-MIB
+-- -------------------------------------------------------------
+snLastObject     OBJECT-TYPE
+        SYNTAX  INTEGER {
+                last-object(1)
+        }
+        ACCESS  read-only
+        STATUS  mandatory
+        DESCRIPTION
+                "This object is defined as a dummy object. The object
+                 is used to indicate that no other objects can appear
+                 after it in this private MIB.
+                 The only purpose of this object is for MIB browsers
+                 that need a valid object at the end of a private MIB."
+        DEFVAL { last-object }
+        ::= { iScalanceX200Mib 999 }
+
+END
+

@@ -1,0 +1,28 @@
+[2364508]
+KatEntryName=V3.0
+InfoText = Memoria de trabajo 256KB; 0,05ms/1000 instr.; conexión MPI+ DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32 módulos; emisor y receptor para comunicación directa, equidistancia, routing, comunicación S7 (FBs/FCs cargables), firmware V3.0
+SHORTNAME=CPU 315-2 DP
+Comment=6ES7 315-2AH14-0AB0 V3.0, 6ES7 315-6FF04-0AB0 V3.0
+
+[2364509]		
+SHORTNAME=DP
+InfoText=
+
+[2364510]
+KatEntryName = 6ES7 315-2AH14-0AB0
+InfoText = 
+SHORTNAME=CPU 315-2 DP
+
+[2364511]
+KatEntryName=V3.0
+InfoText = Memoria de trabajo 384KB; 0,05ms/1000 instr.; conexiones MPI + DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32, emisor y receptor para comunicación directa, equidistancia, routing, comunicación S7 (FBs/FCs cargables), firmware V3.0, para aplicaciones de seguridad; soporta PROFIsafe V2
+SHORTNAME=CPU 315F-2 DP
+
+[2364512]		
+SHORTNAME=DP
+InfoText=
+
+[2364513]
+KatEntryName = 6ES7 315-6FF04-0AB0
+InfoText = 
+SHORTNAME=CPU 315F-2 DP

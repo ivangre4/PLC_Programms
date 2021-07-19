@@ -1,0 +1,17 @@
+; Hahne, 22.2: Basistyp ist AUT_HW_KOMP stat S7H_STATION_AT
+
+[_AUT_HWKOMP_AT]
+Subtype=_S7V_STATION_S7200_CT
+
+[_S7V_STATION_S7200_CT]
+; has to be changed vvvv
+server= s72xxomx.dll
+objtype=0x00145504
+basetype=_AUT_MOVE_AT
+basetype=_AUT_DELETE_AT
+basetype=_AUT_COPY_AT
+prefix=OM
+;CAPABLE_PBK=0
+;CAPABLE_PTP=0
+
+

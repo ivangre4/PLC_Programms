@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2017
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- AI 6 x 14 Bit, high accuracy
+[_S7H_HSP_6AG1_431_1KF20_4AY0_CT]
+ObjType=2366948
+prefix=OM
+server=s7h2017x.dll
+basetype=_S7H_6ES7_431_1KF20_0AB0_CT
+CatalogParent=1314958
+IsCatEntry=1
+nKatChilds=0
+MLFB=6AG1 431-1KF20-4AY0
+SHORTNAME=AI6x14Bit
+IN_ADDRESS_RANGE=16
+COUNT_INPUT_CHANNELS_ANALOG=8 
+CAPABLE_DIAG=0
+CAPABLE_ALARM=0
+paramDescr=KF43112x.dsc
+HSP_ID=2017
+HSP_NAME=SM431 BEG, AI 6 x 14 Bit HA
+HWCNFX_FOR_HWU=5.2.1.0
+HWCNFX_VER=5.4.2.0|0
+

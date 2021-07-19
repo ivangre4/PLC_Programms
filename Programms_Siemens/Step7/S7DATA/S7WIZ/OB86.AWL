@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Loss of Rack Fault"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB86_EV_CLASS : BYTE ;	//16#38/39 Event class 3
+  OB86_FLT_ID : BYTE ;	//16#C1/C4/C5, Fault identification code
+  OB86_PRIORITY : BYTE ;	//26/28 (Priority of 1 is lowest)
+  OB86_OB_NUMBR : BYTE ;	//86 (Organization block 86, OB86)
+  OB86_RESERVED_1 : BYTE ;	//Reserved for system
+  OB86_RESERVED_2 : BYTE ;	//Reserved for system
+  OB86_MDL_ADDR : WORD ;	//Depending on fault identification code
+  OB86_RACKS_FLTD : ARRAY  [0 .. 31 ] OF BOOL ;	//Racks in fault
+  OB86_DATE_TIME : DATE_AND_TIME ;	//Date and time OB86 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

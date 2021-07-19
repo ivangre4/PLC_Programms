@@ -1,0 +1,11 @@
+ORGANIZATION_BLOCK "Multicomputing Interrupt"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  Default : ARRAY  [1 .. 20 ] OF BYTE ;	
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

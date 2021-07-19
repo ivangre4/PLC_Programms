@@ -1,0 +1,354 @@
+;*********************************************************************
+;**                                                                 **
+;**         GSD Datei fuer DP/AS-Interface LINK 20, SIEMENS AG      **
+;**         MLFB: 6GK1415-2AA00                                     **
+;**         Stand: 19.02.99                                         **
+;**         SIEM804F.GSD                                            **
+;**         V1.4  GW                                                **
+;**                09.10.02  V 2.1                                  **
+;*********************************************************************
+#Profibus_DP
+; <Prm-Text-Def-List>
+PrmText=1
+Text(15)="P3 P2 P1 P0 = 1 1 1 1 (def.)"
+Text(0)="P3 P2 P1 P0 = 0 0 0 0"
+Text(1)="P3 P2 P1 P0 = 0 0 0 1"
+Text(2)="P3 P2 P1 P0 = 0 0 1 0"
+Text(3)="P3 P2 P1 P0 = 0 0 1 1"
+Text(4)="P3 P2 P1 P0 = 0 1 0 0"
+Text(5)="P3 P2 P1 P0 = 0 1 0 1"
+Text(6)="P3 P2 P1 P0 = 0 1 1 0"
+Text(7)="P3 P2 P1 P0 = 0 1 1 1"
+Text(8)="P3 P2 P1 P0 = 1 0 0 0"
+Text(9)="P3 P2 P1 P0 = 1 0 0 1"
+Text(10)="P3 P2 P1 P0 = 1 0 1 0"
+Text(11)="P3 P2 P1 P0 = 1 0 1 1"
+Text(12)="P3 P2 P1 P0 = 1 1 0 0"
+Text(13)="P3 P2 P1 P0 = 1 1 0 1"
+Text(14)="P3 P2 P1 P0 = 1 1 1 0"
+EndPrmText
+;
+; <Ext-User-Prm-Data-Def-List>D-Param. 33
+ExtUserPrmData=1 "Parameter Slave  1"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Parameter Slave  2"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "Parameter Slave  3"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=4 "Parameter Slave  4"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=5 "Parameter Slave  5"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "Parameter Slave  6"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=7 "Parameter Slave  7"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=8 "Parameter Slave  8"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=9 "Parameter Slave  9"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=10 "Parameter Slave 10"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=11 "Parameter Slave 11"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=12 "Parameter Slave 12"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=13 "Parameter Slave 13"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=14 "Parameter Slave 14"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=15 "Parameter Slave 15"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=16 "Parameter Slave 16"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=17 "Parameter Slave 17"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=18 "Parameter Slave 18"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=19 "Parameter Slave 19"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=20 "Parameter Slave 20"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=21 "Parameter Slave 21"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=22 "Parameter Slave 22"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=23 "Parameter Slave 23"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=24 "Parameter Slave 24"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=25 "Parameter Slave 25"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=26 "Parameter Slave 26"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=27 "Parameter Slave 27"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=28 "Parameter Slave 28"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=29 "Parameter Slave 29"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=30 "Parameter Slave 30"
+BitArea(4-7) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=31 "Parameter Slave 31"
+BitArea(0-3) 15 0-15
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "Módulo de acoplamiento entre PROFIBUS-DP y AS-Interface: grado de protección IP 20."
+Vendor_Name="SIEMENS"
+Model_Name="DP/AS-i Link 20"
+Revision="V 2.0"
+Ident_Number=0x804F
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+45.45_supp = 1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_45.45 = 250
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+Implementation_Type="SPC3"
+Bitmap_Device="SI804F_N"
+Bitmap_SF = "SI804F_S"
+; Slave-Specification:
+OrderNumber="6GK1415-2AA00"
+Freeze_Mode_supp=1
+Sync_Mode_supp=1
+Auto_Baud_supp=1
+Min_Slave_Intervall=1
+Max_Diag_Data_Len=24
+Modul_Offset=0
+Slave_Family=9@AS-I
+Modular_Station = 0
+Max_Module=2
+Max_Input_Len=20
+Max_Output_Len=20
+Max_Data_Len=40
+;
+; Diagnosetexte fuer gerätespezifische Diagnose:
+Unit_Diag_Area = 28-28
+Value(1) = "AS-i Powerfault"
+Unit_Diag_Area_End
+Unit_Diag_Area = 80-80
+Value(1) = "Fault: AS-i Slave 0"
+Unit_Diag_Area_End
+Unit_Diag_Area = 81-81
+Value(1) = "Fault: AS-i Slave 1"
+Unit_Diag_Area_End
+Unit_Diag_Area = 82-82
+Value(1) = "Fault: AS-i Slave 2"
+Unit_Diag_Area_End
+Unit_Diag_Area = 83-83
+Value(1) = "Fault: AS-i Slave 3"
+Unit_Diag_Area_End
+Unit_Diag_Area = 84-84
+Value(1) = "Fault: AS-i Slave 4"
+Unit_Diag_Area_End
+Unit_Diag_Area = 85-85
+Value(1) = "Fault: AS-i Slave 5"
+Unit_Diag_Area_End
+Unit_Diag_Area = 86-86
+Value(1) = "Fault: AS-i Slave 6"
+Unit_Diag_Area_End
+Unit_Diag_Area = 87-87
+Value(1) = "Fault: AS-i Slave 7"
+Unit_Diag_Area_End
+Unit_Diag_Area = 88-88
+Value(1) = "Fault: AS-i Slave 8"
+Unit_Diag_Area_End
+Unit_Diag_Area = 89-89
+Value(1) = "Fault: AS-i Slave 9"
+Unit_Diag_Area_End
+Unit_Diag_Area = 90-90
+Value(1) = "Fault: AS-i Slave 10"
+Unit_Diag_Area_End
+Unit_Diag_Area = 91-91
+Value(1) = "Fault: AS-i Slave 11"
+Unit_Diag_Area_End
+Unit_Diag_Area = 92-92
+Value(1) = "Fault: AS-i Slave 12"
+Unit_Diag_Area_End
+Unit_Diag_Area = 93-93
+Value(1) = "Fault: AS-i Slave 13"
+Unit_Diag_Area_End
+Unit_Diag_Area = 94-94
+Value(1) = "Fault: AS-i Slave 14"
+Unit_Diag_Area_End
+Unit_Diag_Area = 95-95
+Value(1) = "Fault: AS-i Slave 15"
+Unit_Diag_Area_End
+Unit_Diag_Area = 96-96
+Value(1) = "Fault: AS-i Slave 16"
+Unit_Diag_Area_End
+Unit_Diag_Area = 97-97
+Value(1) = "Fault: AS-i Slave 17"
+Unit_Diag_Area_End
+Unit_Diag_Area = 98-98
+Value(1) = "Fault: AS-i Slave 18"
+Unit_Diag_Area_End
+Unit_Diag_Area = 99-99
+Value(1) = "Fault: AS-i Slave 19"
+Unit_Diag_Area_End
+Unit_Diag_Area = 100-100
+Value(1) = "Fault: AS-i Slave 20"
+Unit_Diag_Area_End
+Unit_Diag_Area = 101-101
+Value(1) = "Fault: AS-i Slave 21"
+Unit_Diag_Area_End
+Unit_Diag_Area = 102-102
+Value(1) = "Fault: AS-i Slave 22"
+Unit_Diag_Area_End
+Unit_Diag_Area = 103-103
+Value(1) = "Fault: AS-i Slave 23"
+Unit_Diag_Area_End
+Unit_Diag_Area = 104-104
+Value(1) = "Fault: AS-i Slave 24"
+Unit_Diag_Area_End
+Unit_Diag_Area = 105-105
+Value(1) = "Fault: AS-i Slave 25"
+Unit_Diag_Area_End
+Unit_Diag_Area = 106-106
+Value(1) = "Fault: AS-i Slave 26"
+Unit_Diag_Area_End
+Unit_Diag_Area = 107-107
+Value(1) = "Fault: AS-i Slave 27"
+Unit_Diag_Area_End
+Unit_Diag_Area = 108-108
+Value(1) = "Fault: AS-i Slave 28"
+Unit_Diag_Area_End
+Unit_Diag_Area = 109-109
+Value(1) = "Fault: AS-i Slave 29"
+Unit_Diag_Area_End
+Unit_Diag_Area = 110-110
+Value(1) = "Fault: AS-i Slave 30"
+Unit_Diag_Area_End
+Unit_Diag_Area = 111-111
+Value(1) = "Fault: AS-i Slave 31"
+Unit_Diag_Area_End
+;
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=25
+User_Prm_Data=0x00,0x20,0x00,0x16,0x5F,0x04,0x8A,0x11,0x00,0x0F,\
+0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF
+;
+Max_User_Prm_Data_Len=25
+Ext_User_Prm_Data_Const(0)=0x00,0x20,0x00,0x16,0x5F,0x04,0x8A,0x11,0x00,0x0F,\
+0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF
+;
+Ext_User_Prm_Data_Ref(9)=1
+Ext_User_Prm_Data_Ref(10)=2
+Ext_User_Prm_Data_Ref(10)=3
+Ext_User_Prm_Data_Ref(11)=4
+Ext_User_Prm_Data_Ref(11)=5
+Ext_User_Prm_Data_Ref(12)=6
+Ext_User_Prm_Data_Ref(12)=7
+Ext_User_Prm_Data_Ref(13)=8
+Ext_User_Prm_Data_Ref(13)=9
+Ext_User_Prm_Data_Ref(14)=10
+Ext_User_Prm_Data_Ref(14)=11
+Ext_User_Prm_Data_Ref(15)=12
+Ext_User_Prm_Data_Ref(15)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(16)=15
+Ext_User_Prm_Data_Ref(17)=16
+Ext_User_Prm_Data_Ref(17)=17
+Ext_User_Prm_Data_Ref(18)=18
+Ext_User_Prm_Data_Ref(18)=19
+Ext_User_Prm_Data_Ref(19)=20
+Ext_User_Prm_Data_Ref(19)=21
+Ext_User_Prm_Data_Ref(20)=22
+Ext_User_Prm_Data_Ref(20)=23
+Ext_User_Prm_Data_Ref(21)=24
+Ext_User_Prm_Data_Ref(21)=25
+Ext_User_Prm_Data_Ref(22)=26
+Ext_User_Prm_Data_Ref(22)=27
+Ext_User_Prm_Data_Ref(23)=28
+Ext_User_Prm_Data_Ref(23)=29
+Ext_User_Prm_Data_Ref(24)=30
+Ext_User_Prm_Data_Ref(24)=31
+;
+; <Module-Definition-List>
+Module="16/16 Bytes I/O Byte Con" 0x3F
+1
+EndModule
+Module="16/16 Byte Con + 4/4 Block Con" 0x3F,0xB3
+2
+EndModule

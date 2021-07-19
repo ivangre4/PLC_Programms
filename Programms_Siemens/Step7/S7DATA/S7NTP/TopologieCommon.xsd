@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DeviceType">
+		<xs:annotation>
+			<xs:documentation>Speichert Informationen die pro Geraetetyp gelten (also nicht Instanzspezifisch)</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.02</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.03: Definition von WiringTpes uebernommen</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.04: Attribute Webable bei Element DeviceType eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.05: Attribute ProductFamily bei Element DeviceType eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.06: Attribute FOTypes bei Element PortType eingefuegt</xs:documentation>
+			<xs:documentation>Schemaversion 01.00.07: Attribute MLFB bei Element DeviceType eingefuegt</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GraphLayout" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Speichert den Pfad und Dateinamen der Bitmap-Datei, die im Viewer fuer den Geraetetyp dargestellt wird</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="BitMapPath" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Windows-konforme Pfad u. Dateiname zu dem 24-Bit-BMP-Bitmap eines Geraetetyps. Falls relative Angabe verwendet wird ist sie relativ zur Umgebungsvariable $STEP7</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Diagnose" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Speichert die Informationen zum Aufruf einer Diagnosefunktion</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="DllCall" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="ID" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Fortlaufende Nummer innerhalb des Projekts. Wird nicht referenziert</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="InterfaceType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Fortlaufende ID des DeviceTyps. Wird von den Elementen 'Device' referenziert</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Name" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Name des Geraetetyps  (z.B. ET200)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ObjType" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Objekttyp eines Geraetetyps (Step7-spezifisch)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="CatalogId" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Identifier des Komponentenkatalogs aus dem der DeviceTyp stammt. Normalerweise der Dateiname des Katalogs</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="CatalogVersion" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Versionsnummer des Komponentenkatalogs von dem der Devicetyp stammt</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="DeviceID" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>DeviceID des Geraetetyps (Step7-spezifisch)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Webable" type="xs:int" use="optional">
+				<xs:annotation>
+					<xs:documentation>Webable gibt an ob das Geraet ein Webinterface besitzt. 1 fuer ja und 0 fuer nein</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ProductFamily" type="xs:string" use="optional"/>
+			<xs:attribute name="MLFB" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WiringTypes">
+		<xs:annotation>
+			<xs:documentation>Liste der Ethernet-Leitungstypen</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="WiringType">
+					<xs:annotation>
+						<xs:documentation>Beschreibung eines einzelnen Leitungstyps (MauTyp)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="ID" type="xs:int" use="required">
+							<xs:annotation>
+								<xs:documentation>Fortlaufende Id fuer einen Leitungstyps (=Mautyp). Wird von den Ports von DeviceTypes und Devices referenziert</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Name" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Name der Leitungstyps wie im Tooltip in der graphischen Ansicht dargestellt.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Class" type="xs:int" use="required">
+							<xs:annotation>
+								<xs:documentation>Gibt die Medientyp-Klasse an ('0' = Kupferkabel, '1' = Lichtwellenleiter). Nur Ports mit gleicher Medientyp-Klasse koennen verschaltet werden.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InterfaceType">
+		<xs:annotation>
+			<xs:documentation>Beschreibt die allgemeinen Eigenschaften einer Schnittstelle eines Geraetetyps</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="PortType">
+					<xs:annotation>
+						<xs:documentation>Beschreibt die allgemeinen Eigenschaft eines Port eines Geraetetyps</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="ID" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Topologie-Editor interner Identifier fuer einen Port. Fortlaufende Nummer innerhalb eines DeviceTyps kann mittels PortRefId vom Device-Tag aus referenziert werden. Das verweisen ist nur notwendig, wenn die Anzahl der Ports im DeviceTyp nicht mit der Anzahl der Ports im Device uebereinstimmen (z.B. Modulare Devices mit variabler Portanzahl). Ansonsten wird die Annahme gemacht, dass die Reihenfolge der Ports im DeviceTyp die gleiche ist wie im Device</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="Name" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Name des Ports</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="ObjType" type="xs:string" use="optional"/>
+						<xs:attribute name="WiringTypeRefId" type="xs:int" use="optional">
+							<xs:annotation>
+								<xs:documentation>Referenziert eine WiringType-ID die das Medium des Ports kodiert. Achtung: Die WiringType-ID ist projektuebergreifend, so dass bei einer Aenderung der WiringTypes ALLE Komponentenkataloge angepasst werden muessen</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="IsLockedPort" type="xs:boolean" use="optional" default="0">
+							<xs:annotation>
+								<xs:documentation>Gibt an ob der Port gesperrt ist oder nicht</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="SupportedDiagnoseProtocol" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>Gibt das Protocol an falls das Geraet diagnosefaehig ist (Erlaubte Werte: leer=kein Protocol, 'DCP'=DCP faehig, 'CD7'=unterstuetzt CD7)</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="IsRingCapable" type="xs:boolean" use="optional" default="1"/>
+						<xs:attribute name="FOTypes" type="xs:long" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:int" use="required">
+				<xs:annotation>
+					<xs:documentation>Fortlaufende Nummer innerhalb des Topologie-Projects. Wird momentan nicht referenziert</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Name" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Falls im Komponentenkatalog verwendet: vordefinierter Interfacename</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ObjType" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DllCall">
+		<xs:annotation>
+			<xs:documentation>Beschreibt die Aufrufschablone zu einer Dynamic Link Library Funktion</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="RequestName" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Beschreibender Name der Aufrufs</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="DllPath" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Windows-konformer Pfad u. Dateiname zu einer DLL. Falls relativ angegeben bezieht sich der Pfad auf $STEP7/bin</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Procedure" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Procedurename innerhalb der DLL</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Param" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Festwert-Parameterliste. Falls mehrere Parameter angebbar sind, dann werden diese mittels ';' getrennt</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

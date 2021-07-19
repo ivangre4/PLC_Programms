@@ -1,0 +1,37 @@
+:Base S7usiahb.HLP
+1 Dialog Boxes and Tabs for Module Information
+2 Introduction=Einfuehrung
+2 What's New?=Was_ist_neu
+2 Help on Help=Info_zur_Hilfe
+2 Status Display=Statusanzeige
+2 Buttons in the Dialog Box=Schaltflaechen
+2 Module Information: Tabs
+3 "General" Tab=HIDD_DLG_CDATA
+3 "Diagnostic Buffer" Tab=HIDD_DLG_DIAGN
+3 "Diagnostic Interrupt" Tab=HIDD_DLG_DS0_1
+3 "DP Slave Diagnostics" Tab=HIDD_IDD_DLG_DP_NORM
+3 "DP Cycle Time" Tab=HIDD_DLG_DP_CYCLETIME
+3 "Memory" Tab=HIDD_DLG_STORE
+3 "Scan Cycle Time" Tab=HIDD_DLG_CTIME
+3 "Time System" Tab=HIDD_DLG_TIMEB
+3 "Performance Data" Tab=HIDD_IDD_DLG_CAPAB
+3 "Communication" Tab=HIDD_DLG_COMMU
+3 "Stacks" Tab=HIDD_DLG_STACK
+3 "H State" Tab=HIDD_DLG_HFCPU
+3 "IP Parameters" Tab=Register_IP_Parameter_Baugruppenzustand_Ind_Ethernet
+3 "Network Connection" Tab=Register_Netzanschluss_Baugruppenzustand_Ind_Ethernet
+3 "Statistics" Tab=Register_Statistik_Baugruppenzustand_Ind_Ethernet
+3 "Statistics" Tab=HIDD_DLG_STATSNMP
+3 "Communication Diagnostics" Tab=HIDD_DLG_PN_COMDIAG
+2 Module Information: Dialog Boxes
+3 "Open Block" Dialog Box=HIDD_DLG_DIAGN_NOBLOCK
+3 "Open Block" Dialog Box (Block Changed)=HIDD_DLG_DIAGN_TIMESTAMP
+3 "L Stack" Dialog Box=HIDD_DLG_LSTCK
+3 "I Stack" Dialog Box=HIDD_DLG_ISTCK
+3 "Nesting Stack" Dialog Box=HIDD_DLG_NSTCK
+3 "Settings for Displaying the Diagnostic Buffer" Dialog Box=HIDD_DIAG_OPTION
+3 "Diagnostics in Hexadecimal Format" Dialog Box=HIDD_DLG_DP_NORM_HEX
+3 "Details for Memory Area" Dialog Box=HIDD_DLG_MEMDETAIL
+3 "Select Rack" Dialog Box=HIDD_SELECT_H_RACK
+3 "Print" Dialog Box=Dialogfeld_Drucken
+3 "Display Statistics Settings" Dialog Box=HIDD_DLG_STATSNMP_EINST

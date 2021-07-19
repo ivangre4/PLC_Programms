@@ -1,0 +1,43 @@
+:Base S7lgdhdb.HLP
+:Title Help on Defining Global Data
+1 Introduction=HIDU_HELP_INTRO
+1 What's New?=HIDU_HELP_NEW
+1 Help on Help=HIDU_HELP_INFO
+1 Getting Started=HIDU_HELP_GETTING
+1 What You Should Know About Global Data Communication
+2 About Global Data=IDH_About_Global_Data
+2 Global Data Exchange Between Multiple CPUs=HIDU_CONTEXT
+2 Resource Limitations=IDH_Communication_resource_limits
+2 Global Data Transfer Using System Functions=IDH__Data_Transfer_Timing
+1 About Global Data Tables
+2 Overview=IDH_About_Global_Data_Tables_GDTs
+2 Columns
+3 CPU Columns=IDH_CPU_Columns
+3 Global Data Column (GD)=IDH_GD_Column
+2 Rows
+3 Global Data Row=IDH_Data_Rows
+3 Global Status Row (GST)=IDH_Global_Status_Row
+3 Status Row (GDS)=IDH_Global_Data_Status_Rows
+3 Scan Rate Row (SR)=IDH_Scan_Rate_Row
+3 GD Identifier=IDH_GD_Kennung
+1 Handling
+2 Menu Commands
+3 GD Table Menu=HIDU_GD_Tabelle
+3 Edit Menu=HIDU_Bearbeiten
+3 Insert Menu=HIDU_Einf_gen
+3 PLC Menu=HIDU_Zielsystem
+3 View Menu=HIDU_Ansicht
+3 Window Menu=HIDU_Fenster
+3 Help Menu=HIDU_Hilfe
+2 Keyboard
+3 Shortcuts for Menu Commands=Shortcuts_fuer_Menuebefehle
+3 Key Combinations for Menu Commands=Tastenkombinationen_fuer_Menuebefehle
+3 Moving the Cursor in the Menu Bar/Pop-Up Menu=Bewegen_des_Cursors_in_der_Men_leiste_im_Kontext_Men
+3 Selecting Rows Using Key Commands=HIDH_Markieren_von_Zeilen_mit_der_Tastatur
+3 Moving the Cursor in the Global Data Table=Bewegen_des_Cursors_in_der_GD_Tabelle
+3 Editing in Table Cells=Editieren_in_Tabellenfeldern
+3 Selecting Text Using Key Commands=Markieren_von_Texten
+3 Moving the Cursor in Dialog Boxes=Bewegen_des_Cursors_in_Dialogfeldern
+3 International/German Key Names=KEYBOARD_INT_GER
+3 Access to Help Using Key Commands=Zugriff_auf_die_Hilfe
+3 Buttons in the Toolbar=IDH_Icons_In_The_Tool_Bar

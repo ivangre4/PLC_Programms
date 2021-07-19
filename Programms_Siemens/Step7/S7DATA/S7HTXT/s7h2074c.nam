@@ -1,0 +1,75 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2074
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Départs-moteurs ET 200S DPV1
+
+;---------- DS1e-x HF 0,3-3A,   3RK1 301-0AB10-0AB4
+[2366408]
+KatEntryName=DS1e-x HF 0,3-3A
+InfoText=Départ-moteur ET200S DS1e-x HF; commut. mécan.; prot. électro. contre les surtensions; 3 AC 400V/1,1kW; 0,30A...3,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DS1e-x HF 0,3-3A
+
+
+;---------- DS1e-x HF 2,4-8A,   3RK1 301-0BB10-0AB4
+[2366409]
+KatEntryName=DS1e-x HF 2,4-8A
+InfoText=Départ-moteur ET200S DS1e-x HF; commut. mécan.; ; prot. électro. contre les surtensions; 3 AC 400V/3kW; 2,40A...8,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DS1e-x HF 2,4-8A
+
+
+;---------- DS1e-x HF 2,4-16A,   3RK1 301-0CB10-0AB4
+[2366410]
+KatEntryName=DS1e-x HF 2,4-16A
+InfoText=Départ-moteur ET200S DS1e-x HF; commut. mécan.; ; prot. électro. contre les surtensions; 3 AC 400V/7,5kW; 2,40A...16,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DS1e-x HF 2,4-16A
+
+
+;---------- RS1e-x HF 0,3-3A,   3RK1 301-0AB10-1AB4
+[2366411]
+KatEntryName=RS1e-x HF 0,3-3A
+InfoText=Départ-moteur ET200S RS1e-x HF; commut. mécan.; ; prot. électro. contre les surtensions; 3 AC 400V/1,1kW; 0,30A...3,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=RS1e-x HF 0,3-3A
+
+
+;---------- RS1e-x HF 2,4-8A,   3RK1 301-0BB10-1AB4
+[2366412]
+KatEntryName=RS1e-x HF 2,4-8A
+InfoText=Départ-moteur ET200S RS1e-x HF; commut. mécan.; ; prot. électro. contre les surtensions; 3 AC 400V/3kW; 2,40A...8,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=RS1e-x HF 2,4-8A
+
+
+;---------- RS1e-x HF 2,4-16A,   3RK1 301-0CB10-1AB4
+[2366413]
+KatEntryName=RS1e-x HF 2,4-16A
+InfoText=Départ-moteur ET200S RS1e-x HF; commut. mécan.; prot. électro. contre les surtensions; 3 AC 400V/7,5kW; 2,40A...16,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=RS1e-x HF 2,4-16A
+
+
+;---------- DSS1e-x HF 0,3-3A,   3RK1 301-0AB20-0AB4
+[2366414]
+KatEntryName=DSS1e-x HF 0,3-3A
+InfoText=Départ-moteur ET200S sDSS1e-x HF; commut. électro.; prot. électro. contre les surtensions; 3 AC 400V/1,1kW; 0,30A...3,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DSS1e-x HF 0,3-3A
+
+
+;---------- DSS1e-x HF 2,4-8A,   3RK1 301-0BB20-0AB4
+[2366415]
+KatEntryName=DSS1e-x HF 2,4-8A
+InfoText=Départ-moteur ET200S sDSS1e-x HF; commut. électro.; prot. électro. contre les surtensions; 3 AC 400V/3kW; 2,40A...8,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DSS1e-x HF 2,4-8A
+
+
+;---------- DSS1e-x HF 2,4-16A,   3RK1 301-0CB20-0AB4
+[2366416]
+KatEntryName=DSS1e-x HF 2,4-16A
+InfoText=Départ-moteur ET200S sDSS1e-x HF; commut. électro.; prot. électro. contre les surtensions; 3 AC 400V/7,5kW; 2,40A...16,00A; module de commande de frein optionnel; module de commande 2DI/LC/COM; sans fusible; communication acyclique
+SHORTNAME=DSS1e-x HF 2,4-16A
+
+
+;---------- xB6 AC400V/0,5A,   3RK1 903-0CK00
+[2366417]
+KatEntryName=xB6 AC400V/0,5A
+InfoText=Brake Module de commande xB6 AC400V/0,5A; 2DI DC24V
+SHORTNAME=xB6 AC400V/0,5A

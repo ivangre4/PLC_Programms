@@ -1,0 +1,41 @@
+;------------------------------ SI-Module ASCII- und 3964(R)-Protokoll-Treiber
+[2363652]
+KatEntryName = 1 SI  ASCII  (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 4 bytes
+SHORTNAME=1 SI  ASCII  (4 Byte)
+Comment=Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo 3964(R) o protocolo ASCII
+
+[2363653]
+KatEntryName = 1 SI  ASCII  (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 8 bytes
+SHORTNAME=1 SI  ASCII  (8 Byte)
+[2363654]
+KatEntryName = 1 SI  ASCII  (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 32 bytes
+SHORTNAME=1 SI  ASCII  (32 Byte)
+[2363655]
+KatEntryName = 1 SI  3964(R)  (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo 3964(R) con interface I/O de 4 bytes
+SHORTNAME=1 SI  3964(R)  (4 Byte)
+[2363656]
+KatEntryName = 1 SI  3964(R)  (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo 3964(R) con interface I/O de 8 bytes
+SHORTNAME=1 SI  3964(R)  (8 Byte)
+[2363657]
+KatEntryName = 1 SI  3964(R)  (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y 3964(R) protocolo con interface I/O de 32 bytes
+SHORTNAME=1 SI  3964(R)  (32 Byte)
+
+;---------- V1.3
+[2364748]
+KatEntryName = 1 SI  ASCII  V1.3 (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 4 bytes, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (4 B)
+[2364749]
+KatEntryName = 1 SI  ASCII  V1.3 (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 8 bytes, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (8 B)
+[2364750]
+KatEntryName = 1 SI  ASCII  V1.3 (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo ASCII con interface I/O de 32 bytes, V1.3
+SHORTNAME=1 SI  ASCII  V1.3 (32 B)

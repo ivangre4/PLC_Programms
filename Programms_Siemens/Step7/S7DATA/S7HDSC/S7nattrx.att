@@ -1,0 +1,151 @@
+/ Aufbau des ATT Files
+/ AttributID, Datentyp, Use, [CLSID,] Name [,Grenzwerte]
+/
+/ AttributID:
+/	AttributID des Attributes, das Beschrieben ist (Dezimal)
+/
+/Datentyp:
+/	0->BYTE
+/	1->SHORT
+/	2->LONG
+/	3->STRING
+/	4->LONGBINARY
+/	5->LONGBINARY, für das ein COM-Interface Existiert (dual)
+/
+/Use:
+/	0->Steht für die Kommandoschnittstelle und dem Export / Import nicht zur Verfügung
+/	1->Steht für die Kommandoschnittstelle und dem Export / Import voll zur Verfügung
+/	2->Steht für die Kommandoschnittstelle und dem Export / Import eingeschränkt zur Verfügung
+/		d.H. Das Attribut kann zwar Importiert werden wird aber nicht Exportiert.
+/			 Über die Kommandoschnittstelle kann auf das Attribut zugegriffen werden,
+/			 es wird jedoch nicht über die Funktionen GetAllAttributes 
+/			 und GetFirst-, -NextAttribute angeboten.
+/
+/CLSID: Achtung Nur Datentyp 5!
+/	ClassID eines Cominterfaces, das für den Zugriff auf ein Longbinary-Attribut
+/	verwendet werden soll. Dadurch ist es möglich Longbinarysstrukturiert zu exportieren / 
+/	Importieren, oder über die Kommandoschnittstelle zu bearbeiten
+/
+/Name:
+/	Attributname, wie das Attribut im Import-/Exportfile erscheint, bzw. über die 
+/	Kommandoschnittselle auf das Attribut zugegriffen werden kann.
+/
+/Gerenzwerte: (Optional und nicht für Datentyp 3, 4 u. 5)
+/	, Min, Max	-> Es sind Werte von Min bis Max, einschließlich der Grenzen, zugelassen
+/   	, Min		-> Werte >= Min sind zugelassen
+/	, -, Max	-> Werte <= Max sind zugelassen
+/	, enum (a, b, ... , c)
+/	-> Nur die Werte a, b, ... und c sind zugelassen
+
+/ Net. attributes
+/ 004098,3,1,TYPE_NAME
+
+/ PROFIBUS
+002101,0,1,PROFIBUS_HSA		, 0, 126
+/ 002104,0,1,PROFIBUS_BAUDRATE	, 0, 255
+002104,0,1,PROFIBUS_BAUDRATE	, enum (0 = 9.6_KBPS, 1 = 19.2_KBPS, 2 = 93.75_KBPS, 3 = 187.5_KBPS, 4 = 500_KBPS, 6 = 1.5_MBPS, 7 = 3_MBPS, 8 = 6_MBPS, 9 = 12_MBPS, 11 = 45.45_KBPS)
+
+002106,0,1,PROFIBUS_RETRIES		, 1, 7
+002108,1,1,PROFIBUS_TSL			, 0, 16383
+002109,1,1,PROFIBUS_TQUI		, 0, 31
+002110,0,1,PROFIBUS_GAP		, 1, 100
+002111,1,1,PROFIBUS_IDLE1		, 35, 1023
+002112,1,1,PROFIBUS_IDLE2		, 35, 1023
+002113,0,1,PROFIBUS_READY		, 11, 255
+002116,2,1,PROFIBUS_TTR			, 0, 1048320
+002199,0,1,PROFILE_OPTIMIZATION	, 0, 1
+010042,0,1,OPTIMIZE_TSLOT       , 0, 1
+010045,0,1,OPTIMIZE_CONF        , 0, 1
+
+002121,1,1,TSET				, 0, 494
+002122,1,1,MIN_TSDR			, 0, 1023
+002123,1,1,MAX_TSDR			, 0, 1023
+002134,2,1,WATCHDOG			, 0, 9999999
+002131,0,1,PROFILE_SELECTION		, enum (0 = DP, 1 = STANDARD, 2 = UNIVERSAL, 3 = USERDEFINED)
+002132,0,1,DP_ONLY			, 0, 1
+002133,0,1,DP_CONTEXT			, 0, 1
+002148,0,1,NETCONFIG_ENABLE		, 0, 1
+002149,0,1,NETCONFIG_AKTIV		, 0, 126
+002150,0,1,NETCONFIG_PASSIV		, 0, 126
+002151,0,1,NETCONFIG_XYZ		, 0, 126
+002152,0,1,CNT_ACT_NODES		, 0, 126
+002153,0,1,CNT_PAS_NODES		, 0, 126
+002154,0,1,CNT_XYZ_NODES		, 0, 126
+002155,2,1,CNT_REPEATER		, 0, 999
+002156,2,1,CU_WIRE_LENGTH		, 0, 9999999
+002158,2,1,CNT_OLM			, 0, 999
+002157,2,1,LWL_WIRE_LENGTH		, 0, 9999999
+002160,0,1,AEQU_ENABLE			, 0, 1
+002161,2,1,AEQU_PG_CNT			, 0, 128
+002162,2,1,AEQU_MASTER_TIME_INP	, 0, 1747000000
+002163,2,1,AEQU_PG_TIME_INP		, 0, 1747000000
+002164,2,1,AEQU_DP_TIME_INP		, 0, 1747000000
+002165,0,1,AEQU_PROFILE			, 0, 2
+002171,2,1,DDB_TIME_PCI			, 0, 2147483647
+002174,2,1,AEQU_PAUSE_TIME		, 0, 65535
+002179,2,1,TTH_STD			, 0, 1747000000
+002180,2,1,TAEQ_STD			, 0, 1747000000
+002176,2,1,AEQU_TDE			, 0, 1747000000
+002166,0,1,OLM_CONFIG_ENABLE		, 0, 1
+002167,2,1,DLG_CNT_REPEATER		, 0, 999
+002168,2,1,DLG_CU_WIRE_LENGTH		, 0, 9999999
+002170,2,1,DLG_CNT_OLM			, 0, 999
+002169,2,1,DLG_LWL_WIRE_LENGTH	, 0, 9999999
+002182,0,1,BROADCAST_ENABLE		, 0, 1
+002181,1,1,DLG_TSL_INIT			, 0, 16383
+002184,0,1,NETCONFIG_BUSLAST	, enum (0 = LOW, 1 = MEDIUM, 2 = HIGH)
+002147,2,1,MIN_SLAVE	, 0, 2147483647
+/ TTR_SLAVE_INT = Ttr_typisch:
+002196,2,1,TTR_SLAVE_INT	, 0, 2147483647
+
+/ neues Attribut für PROFIBUS-Netze:  optischer Ring und OLM-Typen (bitcodiert)
+010046,2,1,OPTICAL_RING				, 0, 31
+
+/ neue Attribute für Taktsynchronität, nur PROFIBUS-Netze
+010020,0,1,AEQU_CLOCK_ENABLE		, 0, 1
+010021,2,1,AEQU_CLOCK_TI			, 0, 2147483647
+010022,2,1,AEQU_CLOCK_TO			, 0, 2147483647
+010023,2,1,AEQU_DP_BASE				, enum (12 = 0.001_MS, 375 = 0.03125_MS, 750 = 0.0625_MS, 1500 = 0.125_MS, 3000 = 0.250_MS, 6000 = 0.500_MS, 12000 = 1_MS, 24000 = 2_MS)
+010024,2,1,AEQU_SLAVE_BASE			, enum (12 = 0.001_MS, 375 = 0.03125_MS, 750 = 0.0625_MS, 1500 = 0.125_MS, 3000 = 0.250_MS, 6000 = 0.500_MS, 12000 = 1_MS, 24000 = 2_MS)
+010025,2,1,AEQU_CLOCK_TI_MIN			, 0, 2147483647
+010026,2,1,AEQU_CLOCK_TO_MIN			, 0, 2147483647
+010027,2,1,AEQU_CLOCK_DP_MAX			, 0, 2147483647
+010028,2,1,AEQU_CLOCK_TITO_MIN			, 0, 2147483647
+010029,2,1,AEQU_CLOCK_DP_MIN			, 0, 2147483647
+
+/ V5.2:  Netzsperre nach KiR, nur PROFIBUS-Netze:
+040978,0,1,NET_CIR_LOCKED					,0, 1
+002173,2,1,TIME_SHORTCUT_OUTOF_RING			,0, 65535
+002191,2,1,TIME_SHORTCUT_OUTOF_RING_V5SP3	,0, 65535
+002172,2,1,TIME_SHORTCUT_IN_RING			,0, 65535
+002190,2,1,TIME_SHORTCUT_IN_RING_V5SP3		,0, 65535
+002119,2,1,BUSPROFILE_INTERVAL				,0, 65535
+002192,2,1,BUSPROFILE_INTERVAL_V5SP3		,0, 65535
+002197,0,1,RETRY_IMMEDIATE					,0, 255
+010005,0,1,DCI_COUNTER						,0, 255
+
+/ ... V5.2:  weitere Attribute wegen KiR, nur PROFIBUS-Netze:
+002118,2,1,NONCYCLIC_REQUEST_CTR			,0, 65535
+010000,0,1,NONCYCLIC_REQUEST_CTR_DIAG2		,0, 255
+
+/ MPI
+002201,0,1,MPI_HSA			, 15, 126
+002204,0,1,MPI_BAUDRATE		, enum (2 = 19.2_KBPS, 4 = 187.5_KBPS, 7 = 1.5_MBPS, 8 = 3_MBPS, 9 = 6_MBPS, 10 = 12_MBPS)
+002206,0,1,MPI_RETRIES			, 1, 7
+002208,2,1,MPI_TSL			, 0, 65535
+002209,1,1,MPI_TQUI			, 0, 31
+002210,0,1,MPI_GAP			, 1, 100
+002211,1,1,MPI_IDLE1			, 35, 1023
+002212,1,1,MPI_IDLE2			, 35, 1023
+002213,0,1,MPI_READY			, 11, 255
+002216,2,1,MPI_TTR			, 0, 1048320
+ 
+/ Alle !?
+004104,2,1,NET_VERSION, 0, 2147483647
+004111,2,1,NET_FLAGS, 0, 2147483647
+040968,3,1,NET_ID
+040971,3,0,NET_ID_1
+040967,4,1,NET_ID_2
+
+040983,0,0,NET_IS_MERGED, 0, 255
+040980,0,2,NET_RESTRICTED_VISIBLE, 0, 255

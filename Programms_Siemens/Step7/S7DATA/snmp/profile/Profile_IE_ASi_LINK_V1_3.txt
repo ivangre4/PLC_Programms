@@ -1,0 +1,181 @@
+;DO NOT CHANGE lines between BEGIN and END
+;BEGIN
+;MODULE=RFC-1212=C:\Siemens\SIMATIC_NCM\s7data\SNMP\Mib\\RFC-1212.mib
+;MODULE=RFC-1215=C:\Siemens\SIMATIC_NCM\s7data\SNMP\Mib\\RFC-1215.mib
+;MODULE=RFC1155-SMI=C:\Siemens\SIMATIC_NCM\s7data\SNMP\Mib\\RFC1155-SMI.mib
+;MODULE=RFC1213-MIB=C:\Siemens\SIMATIC_NCM\s7data\SNMP\Mib\\RFC1213-MIB.mib
+;MODULE=SN-ASI-LINK-PRIV-MIB=C:\Siemens\SIMATIC_NCM\s7data\SNMP\Mib\\snAsi.mib
+;END
+
+;MainItems have to be the first items in file
+
+[Private-Common]
+SNMPItem=snDownloadParamsTftpServerHostName|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.2.0|04|IP address (x.y.z.w) otherwise name of the TFTP server host, if the name server is present.
+SNMPItem=snDownloadFirmwareFile|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.3.0|04|Full path name of firmware file to be saved to the TFTP server host. Note that the file name must have the appropriate syntax for the TFTP server host. E.g., if the TFTP server host is a UNIX machine, the full file name might be /tftp/name.frm, or if the TFTP server host is a Windows machine, the full file name might be C:\tftp\name.frm.
+SNMPItem=snDownloadFirmwareControl|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.4.0|02|Setting this object to start-load(2) causes the system to start downloading the firmware file from TFTP server. Setting this object to start-save(3) causes the system to start uploading the firmware file to TFTP server.
+SNMPItem=snDownloadParamsStatus|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.5.0|02|The status of the TFTP client.
+SNMPItem=snDownloadError|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.7.0|04|The error status of the TFTP client.
+SNMPItem=snDownloadEventLogTableFile|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.9.0|04|Full path name of file to be saved to the TFTP server host. Note that the file name must have the appropriate syntax for the TFTP server host. E.g., if the TFTP server host is a UNIX machine, the full file name might be /tftp/name.txt, or if the TFTP server host is a Windows machine, the full file name might be C:\tftp\name.txt. 
+SNMPItem=snDownloadEventLogTableControl|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.10.0|02|Setting this object to start-save(3) causes the system to start uploading the event log table to TFTP server.
+SNMPItem=snDownloadConfigFile|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.11.0|04|Full path name of config file to be downloaded from the TFTP server host. Note that the file name must have the appropriate syntax for the TFTP server host. E.g., if the TFTP server host is a UNIX machine, the full file name might be /tftpboot/ad_sb.hex, or if the TFTP server host is a Windows machine, the full file name might be C:\tftpboot\ad_sb.hex.
+SNMPItem=snDownloadConfigControl|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.12.0|02|Setting this object to start-load(2) causes the system to start downloading the configuration file from TFTP server. Setting this object to start-save(3) causes the system to start uploading the configuration file to TFTP server.
+SNMPItem=snDownloadParamsTftpServerHostPort|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.5.1.13.0|02|Port of the TFTP server host. Dafault value is 69.
+SNMPItem=snTrapsEnable|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.1.0|02|Determines whether this device will transmit traps to SNMP management stations. If this object is set to disable, no traps will be sent. Setting object to enabled is a necessary, but not the only condition for transmission of traps.
+SNMPItem=snTrapTimeLastGenerated|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.5.0|43|The value of sysUpTime at the time the last trap was generated. This object can be used by the management station to determine whether traps were generated since the last poll.
+SNMPItem=snTrapMaxManagers|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.6.0|02|The maximum number of managers that can be registered for receiving traps.
+SNMPItem=snTrapAddress.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.1.1|04|The IP address or host name of the network management entity to which traps (of the type specified in this table entry) will be sent.
+SNMPItem=snTrapAddress.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.1.2|04|The IP address or host name of the network management entity to which traps (of the type specified in this table entry) will be sent.
+SNMPItem=snTrapState.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.3.1|02|The state of this entry in the trap address table. Setting this object to inactive(2) removes the corresponding entry from the table.
+SNMPItem=snTrapState.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.3.2|02|The state of this entry in the trap address table. Setting this object to inactive(2) removes the corresponding entry from the table.
+SNMPItem=snTrapIndex.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.6.1|02|The Index of Trap Table
+SNMPItem=snTrapIndex.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.7.7.1.6.2|02|The Index of Trap Table
+SNMPItem=snUserDescription|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.1.0|04|Extended description of the station including user specific information. (Used for the E-mail sender definition)
+SNMPItem=snHwVersion|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.2.0|04|The hardware version of the system in the format major.minor.
+SNMPItem=snBootStrapVersion|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.3.0|04|The firmware version of the bootstrap program installed in the system in the format major.minor.
+SNMPItem=snSwVersion|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.4.0|04|The software version of the system in the format major.minor.
+SNMPItem=snInfoSerialNr|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.6.0|04|The serial number of this product.
+SNMPItem=snTelnetEnable|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.9.0|02|Enables or disables the TELNET interface
+SNMPItem=snTelnetTimeOutEnable|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.10.0|02|Enables or disables the timeout for a TELNET session
+SNMPItem=snTelnetTimeOut|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.11.0|02|Timeout for the TELNET session. The time can be set in steps of 10 seconds
+SNMPItem=snSNMPEnable|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.12.0|02|Determines whether this device may be accessed by SNMP management stations
+SNMPItem=snSysReset|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.13.0|02|Restarts the system. cold-reset(1) is identical to Power-On-Reset or Watchdog-Reset. warm-reset(2) is identical to restart command.
+SNMPItem=snResetPowerUpCount|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.14.0|02|The number of times the sytem was powered up.
+SNMPItem=snSetFactoryDefs|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.15.0|02|Restore factory defaults. The following settings are not modified by setting the value 'set-factory-defaults': IP address, subnet mask, gateway address, SSID, DHCP flag, system name, system location, system contact, device mode, Country Code. 'set-factory-defaults-complete' will erase the entire configuration.
+SNMPItem=snResetCounters|W|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.16.0|02|Reset following variables: snAsiLinkSignalledFaults, snAsiLinkFaultState, snAsiLinkFaultValue, snAsiLinkAuthFailureValue, snNvLogNewEntries, snTrapTimeLastGenerate, snDownloadError, all interface counters in ifMib. 
+SNMPItem=snEmailSMTPIpAddress|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.20.0|04|IP address or host name of SMTP E-mail server.
+SNMPItem=snEmailSMTPPort|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.21.0|02|Port of the SMTP server host. Default value is 25.
+SNMPItem=snEmailEnable|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.22.0|02|E-mail functionality for sending a message when a trap is generated.
+SNMPItem=snEmailAddress|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.23.0|04|E-mail address to which messages will be sent.
+SNMPItem=snSNMPReadOnly|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.24.0|02|Determines whether some SNMPv1/v2c agents may write variables on this device
+SNMPItem=snInfoMLFBNr|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.26.0|04|The MLFB number of this product.
+SNMPItem=snInfoOrderNr|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.8.26.0|04|The MLFB number of this product.
+SNMPItem=snIpAddress|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.2.0|40|IP address to be used for the agent after system reset.
+SNMPItem=snIpSubnetMask|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.3.0|40|IP subnet mask to be used by the agent after system reset.
+SNMPItem=snIpDefaultGateway|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.4.0|40|IP address of the default gateway to be used by the agent after next reset of the system.
+SNMPItem=snDhcp|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.6.0|02|The value enabled-via-mac-address(1) runs DHCP, enabled-via-client-id(3) runs DHCP with option ClientId, enabled-via-sysname(4) runs DHCP with the system name as ClientId, enabled-via-devname(4) runs DHCP with the pnio device name as ClientId. The value disabled(2) disables DHCP.
+SNMPItem=snClientId|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.7.0|04|User-defined client identifier for DHCP
+SNMPItem=snDcp|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.8.0|02|Show if device supports DCP (Detection & Configuration Protocoll).
+SNMPItem=snMacAddressBase|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.10.10.0|04|MAC address base of the AS-i LINK.
+SNMPItem=snCPlugStatus|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.1.0|02|Current status of the C-PLUG: accepted(1) C-PLUG is completely accepted (and used) by this device. not-present(2) C-PLUG is (physically) not present. not-accepted(3) C-PLUG is not accepted (reason unknown). not-accepted-crc-error(4) C-PLUG is not accepted, because header CRC is wrong. not-accepted-group-error(5) C-PLUG is not accepted, reason: device group mismatch, see snCPlugGroupDetected for details. not-accepted-type-error(6) C-PLUG is not accepted, reason: device type mismatch, see snCPlugDeviceDetected for details. not-accepted-version-error(7) C-PLUG is not accepted, wrong configuration revision, see snCPlugConfigRevision for details. not-accepted-fstype-error(8) C-PLUG is not accepted, reason: wrong flash file sytem, see snCPlugFilesysType for details. not-accepted-config-error(9) C-PLUG is not accepted, because unable to load configuration.
+SNMPItem=snCPlugGroupDetected|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.2.0|04|Device group that is currently read from C-PLUG: 'EMPTY' detect a cleaned or a new C-PLUG. 'SCALANCE X-400' detect a C-PLUG that is formatted for X-400 series. 'SCALANCE X-200' detect a C-PLUG that is formatted for X-200 series. 'SCALANCE W-700' detect a C-PLUG that is formatted for W-700 series. 'SCALANCE S-600' detect a C-PLUG that is formatted for S-600 series. 'CP300' detect a C-PLUG that is formatted for CP300 series. 'CP400' detect a C-PLUG that is formatted for CP400 series. 'IE/PB Link' detect a C-PLUG that is formatted for IE/PB-Link series. 'IE/AS-i Link' detect a C-PLUG that is formatted for IE/AS-i LINK series. 'DP/AS-i LINK' detect a C-PLUG that is formatted for DP/AS-i LINK Advanced series. 'SINAUT' detect a C-PLUG that is formatted for SIMAUT series. 'UNKNOWN' detect a C-PLUG with an unknown (could be too new) device group. 'ERROR' detect a C-PLUG with an invalid device group value.
+SNMPItem=snCPlugDeviceDetected|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.3.0|04|Device type that is currently read from the C-PLUG: This value depends on the device group, and could be (for example): 'SCALANCE X414-3E' 'SCALANCE X408-2' 'SCALANCE X208' ... 'SCALANCE W788-1PRO' . 'DP/AS-i LINK Advanced 1 Line' 'DP/AS-i LINK Advanced 2 Lines' 'IE/AS-i LINK PN IO 1 Line' 'IE/AS-i LINK PN IO 2 Lines' 'CP 443-1 Advanced' .
+SNMPItem=snCPlugConfigRevision|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.4.0|02|Device/group configuration revision found on the C-PLUG: Each device or device group has its own configuration Revision value to decide whether C-PLUG data could be accepted, Must be migrated or could not be used at all. A value (0) means error, a value (255) means empty.
+SNMPItem=snCPlugFilesysType|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.5.0|02|Type of file system on the C-PLUG flash.
+SNMPItem=snCPlugFilesysSize|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.6.0|02|Maximum size of the file system on the C-PLUG flash in bytes.
+SNMPItem=snCPlugFilesysUsage|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.7.0|02|Current usage of the file system on the C-PLUG flash in bytes.
+SNMPItem=snCPlugInfoString|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.8.0|04|Shows the information string stored on the C-PLUG
+SNMPItem=snCPlugFormat|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.11.9.0|02|Modify content of the C-PLUG as follows: format-int(2) format the C-PLUG for this device and copy device-internal values into C-PLUG (if internal values are present). May be supported only by some devices. clean(4) format the C-PLUG (physically). This will result in a completely empty C-PLUG (if you remove C-PLUG after next power down).
+SNMPItem=snTimeClientEnable|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.1.0|02|Enables/disables time client.
+SNMPItem=snTimeClientType|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.2.0|02|Choose type of time client: sntp-poll(1) - Poll SNTP server. snTimeClientPollInitInterval and snTimeClientPollInterval variables set polling interval before and after first time synchronisation. SNTP server IP address can be set in nTimeServerPort variable. sntp-listen(2) - Listen for SNTP frames, simatic(3) - Synchronise to SINEC time information, manual(4) - Set time manually with snTimeSetManually variable
+SNMPItem=snTimeServer|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.3.0|04|IP Address or host name of the SNTP server (x.y.z.w).
+SNMPItem=snTimeServerPort|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.4.0|02|Port of the SNTP server host. Dafault value is 123.
+SNMPItem=snTimeShift|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.5.0|02|Time difference between SNTP server and device time.
+SNMPItem=snTimeClientPollInitInterval|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.6.0|02|Polling interval of SNTP requests before the first time synchronisation. Can be set from 1000 ms to 100000 ms
+SNMPItem=snTimeClientPollInterval|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.7.0|02|Polling interval of SNTP requests after time was ever read from server. Can be set from 10 sec to 100000 sec
+SNMPItem=snTimeSetManually|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.8.0|04|Show/set date and time of the device in following format: MMM DD hh:mm:ss YYYY.
+SNMPItem=snTimeCurrent|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.9.0|04|Show date and time of the device in following format: MMM DD hh:mm:ss YYYY.
+SNMPItem=snTimeLastTime|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.10.0|04|Shows the last time when the device time was set.
+SNMPItem=snTimeLastTimeType|R|.1.3.6.1.4.1.4196.1.1.8.3.100.1.12.11.0|02|Mechanism, which set the device time last.
+
+[Private-Product-Specific]
+SNMPItem=snOsmFaultState|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.2.0|02|Indicates ASI LINK fault state (state of fault LED/signaling contact)
+SNMPItem=snAsiLinkFaultState|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.2.0|02|Indicates ASI LINK fault state (state of fault LED/signaling contact)
+SNMPItem=snAsiLinkSignalledFaults|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.3.0|41|Number of signaled faults.
+SNMPItem=snAsiLinkFaultValue|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.4.0|04|Fault value: 0 = no fault, bit 1 = AS-i 1 fault bit 2 = internal error, bit 3 = Profibus/PNIO error, bit 16 = AS-i 2 fault bit 26 = Cold/warm start, bit 27 = C-PLUG error, bit 30 = PNIO Error - C-PLUG does not exist, bit 31 = PNIO Error - C-PLUG error The length of the fault value is 5 bytes.
+SNMPItem=snAsiLinkPowerSupplyState|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.41.0|02|State of power supply.
+SNMPItem=snAsiLinkAuthFailureValue|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.55.0|04|Description of the last snAsiLinkAuthFailure trap
+SNMPItem=snConfigId|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.100.0|02|ASI LINK hardware and configuration type. dpASiLinkAdvancedSingleMaster (15) - PB/AS-i LINK Advanced Single Master, dpASiLinkAdvancedDualMaster (16) - PB/AS-i LINK Advanced Dual Master, ieASiLinkSingleMaster (17) - IE/AS-i LINK Single Master, ieASiLinkDualMaster (18) - IE/AS-i LINK Dual Master, 
+SNMPItem=snAsiLastEventAsiLine|NA|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.150.0|02|AS-i line index of last generated trap. Used only to describe variable in traps.
+SNMPItem=snAsiLastEventSlave|NA|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.151.0|02|AS-i slave index from last generated trap. Used only to describe variable in traps.
+SNMPItem=snAsiLinkEventIndex.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.1.1|02|Index of columns : E-mail = 1, Traps = 2, LogTable = 3, Fault state = 4
+SNMPItem=snAsiLinkEventIndex.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.1.2|02|Index of columns : E-mail = 1, Traps = 2, LogTable = 3, Fault state = 4
+SNMPItem=snAsiLinkEventIndex.3|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.1.3|02|Index of columns : E-mail = 1, Traps = 2, LogTable = 3, Fault state = 4
+SNMPItem=snAsiLinkEventColdWarmStart.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.2.1|02|Enables/disables cold/warm restart notification.
+SNMPItem=snAsiLinkEventColdWarmStart.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.2.2|02|Enables/disables cold/warm restart notification.
+SNMPItem=snAsiLinkEventColdWarmStart.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.2.3|02|Enables/disables cold/warm restart notification.
+SNMPItem=snAsiLinkEventLinkChange.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.3.1|02|Enables/Disables link up notification (There is no fault notification).
+SNMPItem=snAsiLinkEventLinkChange.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.3.2|02|Enables/Disables link up notification (There is no fault notification).
+SNMPItem=snAsiLinkEventLinkChange.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.3.3|02|Enables/Disables link up notification (There is no fault notification).
+SNMPItem=snAsiLinkEventAuthenticationFailure.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.5.1|02|Enables/Disables authentication failure notification (There is no fault notification).
+SNMPItem=snAsiLinkEventAuthenticationFailure.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.5.2|02|Enables/Disables authentication failure notification (There is no fault notification).
+SNMPItem=snAsiLinkEventAuthenticationFailure.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.5.3|02|Enables/Disables authentication failure notification (There is no fault notification).
+SNMPItem=snAsiLinkEventPowerChange.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.6.1|02|Enables/disables power change notification.
+SNMPItem=snAsiLinkEventPowerChange.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.6.2|02|Enables/disables power change notification.
+SNMPItem=snAsiLinkEventPowerChange.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.6.3|02|Enables/disables power change notification.
+SNMPItem=snAsiLinkEventFault.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.9.1|02|Enables/Disables fault notification (There is no fault notification).
+SNMPItem=snAsiLinkEventFault.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.9.2|02|Enables/Disables fault notification (There is no fault notification).
+SNMPItem=snAsiLinkEventFault.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.9.3|02|Enables/Disables fault notification (There is no fault notification).
+SNMPItem=snAsiLinkEventProfix.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.16.1|02|Enables/Disables the PROFIBUS or PNIO state change notification.
+SNMPItem=snAsiLinkEventProfix.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.16.2|02|Enables/Disables the PROFIBUS or PNIO state change notification.
+SNMPItem=snAsiLinkEventProfix.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.16.3|02|Enables/Disables the PROFIBUS or PNIO state change notification.
+SNMPItem=snAsiLinkEventAsi.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.17.1|02|Enables/Disables the AS-i state change notification.
+SNMPItem=snAsiLinkEventAsi.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.17.2|02|Enables/Disables the AS-i state change notification.
+SNMPItem=snAsiLinkEventAsi.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.17.3|02|Enables/Disables the AS-i state change notification.
+SNMPItem=snAsiLinkEventAsiSlaves.1|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.18.1|02|Enables/disables the AS-i slaves state change notification.
+SNMPItem=snAsiLinkEventAsiSlaves.2|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.18.2|02|Enables/disables the AS-i slaves state change notification.
+SNMPItem=snAsiLinkEventAsiSlaves.3|RW|.1.3.6.1.4.1.4196.1.1.8.3.100.2.1.62.1.18.3|02|Enables/disables the AS-i slaves state change notification.
+SNMPItem=snAsiLinkLinesCount|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.1.0|02|Number of AS-i Lines.
+SNMPItem=snAsiLinkLineIndex.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.1.1|02|Index of AS-i line.
+SNMPItem=snAsiLinkLineIndex.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.1.2|02|Index of AS-i line.
+SNMPItem=snAsiLinkLineSystemFault.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.2.1|02|Fault state of AS-i line.
+SNMPItem=snAsiLinkLineSystemFault.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.2.2|02|Fault state of AS-i line.
+SNMPItem=snAsiLinkLineApf.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.3.1|02|AS-i power fail state of AS-i line.
+SNMPItem=snAsiLinkLineApf.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.3.2|02|AS-i power fail state of AS-i line.
+SNMPItem=snAsiLinkLineConfigError.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.4.1|02|AS-i configuration error state of AS-i line.
+SNMPItem=snAsiLinkLineConfigError.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.4.2|02|AS-i configuration error state of AS-i line.
+SNMPItem=snAsiLinkLineAutoAddressAvailable.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.5.1|02|Auto addressing available on AS-i line.
+SNMPItem=snAsiLinkLineAutoAddressAvailable.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.5.2|02|Auto addressing available on AS-i line.
+SNMPItem=snAsiLinkLineMode.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.6.1|02|Mode of AS-i line: protected or configuration.
+SNMPItem=snAsiLinkLineMode.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.6.2|02|Mode of AS-i line: protected or configuration.
+SNMPItem=snAsiLinkLineState.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.7.1|02|Online/Offline state of AS-i line.
+SNMPItem=snAsiLinkLineState.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.7.2|02|Online/Offline state of AS-i line.
+SNMPItem=snAsiLinkLineGroundShort.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.8.1|02|Ground short state of AS-i line.
+SNMPItem=snAsiLinkLineGroundShort.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.8.2|02|Ground short state of AS-i line.
+SNMPItem=snAsiLinkLineAutoAddressMode.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.9.1|02|Auto addressing mode on AS-i line.
+SNMPItem=snAsiLinkLineAutoAddressMode.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.9.2|02|Auto addressing mode on AS-i line.
+SNMPItem=snAsiLinkLinePowerFailsCounter.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.10.1|02|Count of AS-i power fails on AS-i line.
+SNMPItem=snAsiLinkLinePowerFailsCounter.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.10.2|02|Count of AS-i power fails on AS-i line.
+SNMPItem=snAsiLinkLinePowerShortsCounter.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.11.1|02|Count of AS-i power shorts on AS-i line.
+SNMPItem=snAsiLinkLinePowerShortsCounter.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.11.2|02|Count of AS-i power shorts on AS-i line.
+SNMPItem=snAsiLinkLineListOfDetectedSlaves.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.20.1|04|List of detected slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is detected, 0 - not detected. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '100000000000000000000000000000000010000000000000000000000000000001' Detected: Slaves 0a, 1b, 31b.
+SNMPItem=snAsiLinkLineListOfDetectedSlaves.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.20.2|04|List of detected slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is detected, 0 - not detected. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '100000000000000000000000000000000010000000000000000000000000000001' Detected: Slaves 0a, 1b, 31b.
+SNMPItem=snAsiLinkLineListOfProjectedSlaves.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.21.1|04|List of projected slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is projected, 0 - not projected. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '000010000000000000000000000000001000000000000000000000000000000100' Projected: Slaves 4a, 31a, 29b.
+SNMPItem=snAsiLinkLineListOfProjectedSlaves.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.21.2|04|List of projected slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is projected, 0 - not projected. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '000010000000000000000000000000001000000000000000000000000000000100' Projected: Slaves 4a, 31a, 29b.
+SNMPItem=snAsiLinkLineListOfActivatedSlaves.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.22.1|04|List of activated slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is activated, 0 - not activated. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '000010000000000000000000000000001000000000000000000000000000000100' Activated: Slaves 4a, 31a, 29b.
+SNMPItem=snAsiLinkLineListOfActivatedSlaves.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.22.2|04|List of activated slaves. String size is 64 characters. Every slave is represented by one character. 1 - slave is activated, 0 - not activated. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '000010000000000000000000000000001000000000000000000000000000000100' Activated: Slaves 4a, 31a, 29b.
+SNMPItem=snAsiLinkLineListOfSlavePeripheralFaults.1|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.23.1|04|List of the slave peripheral faults. String size is 64 characters. Every slave is represented by one character. 1 - slave has peripheral fault, 0 - slave has no peripheral fault. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '010000000000000000000000000000000000000000000000000000000000000000' Slave 1a with peripheral fault.
+SNMPItem=snAsiLinkLineListOfSlavePeripheralFaults.2|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.20.10.1.23.2|04|List of the slave peripheral faults. String size is 64 characters. Every slave is represented by one character. 1 - slave has peripheral fault, 0 - slave has no peripheral fault. Starting with the state of slave 0a and ending with slave 31b. 33th Symbol is always 0. Example: '010000000000000000000000000000000000000000000000000000000000000000' Slave 1a with peripheral fault.
+SNMPItem=snAsiLinkPnioState|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.1.0|02|State of PNIO Connection.
+SNMPItem=snAsiLinkPnioDeviceName|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.2.0|04|PNIO Device name of AS-i Link.
+SNMPItem=snAsiLinkPnioControllerAddress|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.3.0|40|IP address of PNIO Controller if connection is online.
+SNMPItem=snAsiLinkPnioControllerName|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.4.0|04|Name of PNIO Controller if connection is online.
+SNMPItem=snAsiLinkPnioControllerState|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.5.0|02|State of PNIO Controller if connection is online.
+SNMPItem=snAsiLinkPnioUpdateTime|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.6.0|02|PNIO cyclic time in ms.
+SNMPItem=snAsiLinkPnioError|R|.1.3.6.1.4.1.4196.1.1.8.3.100.2.21.7.0|04|Actual error of PNIO connection.
+
+[mib-2 interfaces]
+SNMPItem=ifNumber|R|.1.3.6.1.2.1.2.1.0|02|The number of network interfaces (regardless of their current state) present on this system.
+SNMPItem=ifSpeed.1|R|.1.3.6.1.2.1.2.2.1.5.1|42|An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.
+SNMPItem=ifSpeed.2|R|.1.3.6.1.2.1.2.2.1.5.2|42|An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.
+SNMPItem=ifOperStatus.1|R|.1.3.6.1.2.1.2.2.1.8.1|02|The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.
+SNMPItem=ifOperStatus.2|R|.1.3.6.1.2.1.2.2.1.8.2|02|The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.
+SNMPItem=ifInErrors.1|R|.1.3.6.1.2.1.2.2.1.14.1|41|The number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.
+SNMPItem=ifInErrors.2|R|.1.3.6.1.2.1.2.2.1.14.2|41|The number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.
+SNMPItem=ifOutErrors.1|R|.1.3.6.1.2.1.2.2.1.20.1|41|The number of outbound packets that could not be transmitted because of errors.
+SNMPItem=ifOutErrors.2|R|.1.3.6.1.2.1.2.2.1.20.2|41|The number of outbound packets that could not be transmitted because of errors.
+
+[mib-2 snmp traps]
+Trap=coldStart|GTrap.0||500|A coldStart trap signifies that the SNMP entity, acting in an agent role, is reinitializing itself such that its configuration may be altered.
+Trap=warmStart|GTrap.1||500|A warmStart trap signifies that the SNMP entity, acting in an agent role, is reinitializing itself such that its configuration is unaltered.
+Trap=linkDown|GTrap.2||500|A linkDown trap signifies that the SNMP entity, acting in an agent role, recognizes a failure in one of the communication links represented in its configuration.
+Trap=linkUp|GTrap.3||500|A linkUp trap signifies that the SNMP entity, acting in an agent role, recognizes that one of the communication links represented in its configuration has come up.
+Trap=authenticationFailure|GTrap.4||500|An authenticationFailure trap signifies that the SNMP entity, acting in an agent role, has received a protocol message that is not properly authenticated.  While all implementations of the SNMPv2 must be capable of generating this trap, the snmpV2EnableAuthenTraps object indicates whether this trap will be generated.
+
+[mib-2 system]
+SNMPItem=sysContact|RW|.1.3.6.1.2.1.1.4.0|04|The textual identification of the contact person for this managed node, together with information on how to contact this person.
+SNMPItem=sysDescr|R|.1.3.6.1.2.1.1.1.0|04|A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.
+SNMPItem=sysLocation|RW|.1.3.6.1.2.1.1.6.0|04|The physical location of this node (e.g., `telephone closet, 3rd floor').
+SNMPItem=sysName|RW|.1.3.6.1.2.1.1.5.0|04|An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name.
+SNMPItem=sysObjectID|R|.1.3.6.1.2.1.1.2.0|06|The vendor's authoritative identification of the network management subsystem contained in the entity. This value is allocated within the SMI enterprises subtree (1.3.6.1.4.1) and provides an easy and unambiguous means for determining `what kind of box' is being managed. For example, if vendor `Flintstones, Inc.' was assigned the subtree 1.3.6.1.4.1.4242, it could assign the identifier 1.3.6.1.4.1.4242.1.1 to its `Fred Router'.
+SNMPItem=sysServices|R|.1.3.6.1.2.1.1.7.0|02|A value which indicates the set of services that this entity primarily offers. The value is a sum. This sum initially takes the value zero, Then, for each layer, L, in the range 1 through 7, that this node performs transactions for, 2 raised to (L - 1) is added to the sum. For example, a node which performs primarily routing functions would have a value of 4 (2^(3-1)). In contrast, a node which is a host offering application services would have a value of 72 (2^(4-1) + 2^(7-1)). Note that in the context of the Internet suite of protocols, values should be calculated accordingly: layer functionality 1 physical (e.g., repeaters) 2 datalink/subnetwork (e.g., bridges) 3 internet (e.g., IP gateways) 4 end-to-end (e.g., IP hosts) 7 applications (e.g., mail relays) For systems including OSI protocols, layers 5 and 6 may also be counted.
+SNMPItem=sysUpTime|R|.1.3.6.1.2.1.1.3.0|43|The time (in hundredths of a second) since the network management portion of the system was last re-initialized.

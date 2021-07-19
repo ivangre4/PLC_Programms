@@ -1,0 +1,100 @@
+AG 95 mit DP-Schnittstelle, MLFB<6ES5 095-8MD01>, Siemens-Slave, V 1.2
+V5.x;
+S5-95U         DP;
+SIEMENS   ;
+SIMATIC   ;
+S5-95U    ;
+PPROCDPS       ;
+32780;
+J;
+J;
+N;
+N;
+N;
+N;
+N;
+N;
+N;
+N;
+N;
+J;
+N;
+N;
+00030;
+0001011111;
+032;
+032;
+032;
+016;
+032;
+PV000;
+PSL000;
+KV000;
+SY;
+DKM013;
+DBO003"1"STEUB - Desbord. lote módulos "1";
+DBO003"2"STS - STOP tramite PG / Progr."1";
+DBO003"3"NNN - Comando non interpret.  "1";
+DBO003"4"TRAF - Errore trasferimento   "1";
+DBO003"5"SUF - Errore sostituzione     "1";
+DBO003"6"KEIN AS - Memoria usu.peque ña"1";
+DBO003"7"STOPS - Interruttore in STOP  "1";
+DBO004"0"ASPFA - Modulo mem. non amm.  "1";
+DBO004"2"PEU - Periferia non chiara    "1";
+DBO004"3"SYS FEH - Errore in DB1       "1";
+DBO004"4"ZYK - Superamento tempo ciclo "1";
+DBO004"5"NINEU - Nuovo avvio non poss. "1";
+DBO004"6"SYN FEH - Errore sincronizz.  "1";
+DKK000;
+AG95DP_;
+ISNONAME;
+SO000;
+064;
+MLFB000;
+LSK000;
+000;
+SPT000;
+HTT000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

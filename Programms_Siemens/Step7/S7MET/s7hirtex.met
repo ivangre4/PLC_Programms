@@ -1,0 +1,366 @@
+;========================================================================================
+; ** DO NOT EDIT **
+; Topologie OM und QVK
+; Meta File for IRT and DX
+; Copyright(c) 2005, Siemens AG. All Rights Reserved.
+;========================================================================================
+; ------------------------------ Node
+[_AUT_NODE_AT]
+;node  --->  switch
+relation=1315890,_S7H_HWMODULE_AT{1}[1315889]
+
+; ------------------------------ (Sub)Module
+[_S7H_HWMODULE_AT]
+;switch  --->  port
+relation=1315888,_S7H_PORT_AT[1315887]
+
+; ----------------------------- Port (Sub)Module
+[_S7H_PORT_AT]
+abstract=true
+ObjType=1316821
+;port ---> switch
+relation=1315887,_S7H_HWMODULE_AT{1}[1315888]
+; port ---> line
+relation=1315886,_S7H_HWMODULE_AT
+
+[_S7H_IO_NORM_MODULE_AT]
+;provider --> consumer
+relation=1315895,_S7H_IO_NORM_MODULE_AT[1315896]
+
+[_S7H_IO_SUBMODULE_AT]
+;provider --> consumer
+relation=1315895,_S7H_IO_SUBMODULE_AT[1315896]
+
+; ------------------------------ Topologie Algorithmus
+[_S7H_IRT_CALCULATOR_CT]
+ObjType=1316824
+basetype=_S7H_HWEXTAPI_AT
+prefix=OM
+server=s7hirtex.dll
+nKatChilds=0
+CLASS_PROPERTIES=0
+BYTE_LENGTH_FACTOR=80
+FRAME_APPENDIX=32
+MIN_INTER_LSDU_GAP=1120
+START_ALIGNED_BORDER=1
+SHORTEST_PATHS=0
+SHARE_EDGES=Always
+ADDITIONAL_LINK_DELAY=1000
+;MAX_TX_RX_TIME=3000000
+;Value in procent now, MAX_IRT_TIME see "_S7H_IRT_SYNCH_MASTER_AT::IRT_CYCLE_NRT::Default-value" (value is for NRT !!!)
+START_OFFSET=5000
+HWCNFX_VER=5.3.3.0|0
+WATCHDOGFACTOR=3
+DATAHOLDFACTOR=3
+; Länge für Sync Frames nach Norm
+LENGTH_SYNC_MSG=114					
+							; minimale +
+MIN_FRAME_IRT_LENGTH=40				
+							; maximale Länge für Nutzdaten von Telegram.(ohne IP Header mit IOXS) 
+MAX_FRAME_IRT_LENGTH=1440			
+
+
+
+; -----------------------------	Port SubModule located in controller
+[_S7H_IRT_PORT_SUBMODULE_CT]
+prefix=OM
+server=S7HDEVNX.DLL
+nKatChilds=0
+CLASS_PROPERTIES=0
+ObjType=1316822
+SHORTNAME=Port
+HWCNFX_VER=5.3.2.0|0
+
+;SYSTEMPC | SYSTEM300 | SYSTEM400
+SYSTEM_TYPE=0x1C
+IO_TYPE=0x0041 
+S7_TYPE_CODE=0x82CB
+basetype=_S7H_PORT_AT
+basetype=_S7H_SUBMODULE_AT
+;SDB_CAUSED_LIST=2002
+IRT_PORT_TX_DELAY=1217
+IRT_PORT_RX_DELAY=333
+
+; -----------------------------	Controller (virtual)Device Provider CT
+[_S7H_IO_CONTROLLER_DEVICE_PROVIDER_CT]
+basetype=_S7H_IO_NORM_DEVICE_AT
+ObjType=1316827
+prefix=OM
+server=S7HDEVNX.DLL
+ICON_TYPE=4
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+IsCatEntry=0
+SHORTNAME=Provider
+nKatChilds=0
+CLASS_PROPERTIES=0
+MLFB=
+PN_DEVICE_ID=769
+PN_VENDOR_ID=42
+PN_GSDML_ID=DIM 1
+PN_MIN_DEVICE_INT=32
+MAX_NUM_OF_CHILDS=100
+;provider --> io-controller
+relation=1315893,_S7H_IO_CONTROLLER_BASE_AT{1}[1315894]
+
+; -----------------------------	Controller (virtual)Device Consumer CT
+[_S7H_IO_CONTROLLER_DEVICE_CONSUMER_CT]
+basetype=_S7H_IO_NORM_DEVICE_AT
+ObjType=1316828
+prefix=OM
+server=S7HDEVNX.DLL
+ICON_TYPE=4
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+IsCatEntry=0
+SHORTNAME=Consumer
+InfoText=PROFINET IO-Controller Consumer
+nKatChilds=0
+CLASS_PROPERTIES=0
+MLFB=
+PN_DEVICE_ID=769
+PN_VENDOR_ID=42
+PN_GSDML_ID=DIM 1
+PN_MIN_DEVICE_INT=32
+MAX_NUM_OF_CHILDS=100
+;consumer --> io-controller
+relation=1315891,_S7H_IO_CONTROLLER_BASE_AT[1315892]
+
+; -----------------------------	Controller (virtual)Device Header CT obsolet
+[_S7H_IO_CONTROLLER_DEVICE_HEADER_CT]
+basetype=_S7H_IO_NORM_ETER_AT
+ObjType=1316829
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Header DAP
+nKatChilds=0
+CLASS_PROPERTIES=0
+IO_TYPE=0
+SIGNAL_TYPE=0 
+IN_ADDRESS_RANGE=0
+OUT_ADDRESS_RANGE=0
+MLFB=
+FIRST_VISIBLE_CHILD_NO=1
+SLOTOFFSET=-1
+IsCatEntry=0
+MAX_NUM_OF_CHILDS=4
+
+; -----------------------------	Controller (virtual)Device Header CT
+[_S7H_IO_CONTROLLER_DEVICE_MODULE_DIAG_CT]
+basetype=_S7H_IO_NORM_ETER_AT
+ObjType=1316838
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Header Diag
+nKatChilds=0
+CLASS_PROPERTIES=0
+IO_TYPE=0x0041 
+SIGNAL_TYPE=1 
+IN_ADDRESS_RANGE=0
+OUT_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+
+; -----------------------------	Controller (virtual)Device Module CT
+[_S7H_IO_CONTROLLER_DEVICE_MODULE_CT]
+basetype=_S7H_IO_NORM_MODULE_AT
+ObjType=1316830
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Module
+nKatChilds=0
+CLASS_PROPERTIES=0
+FIRST_VISIBLE_CHILD_NO=1
+SLOTOFFSET=-1
+IN_ADDRESS_RANGE=0
+IO_TYPE=0
+SIGNAL_TYPE=0 
+IN_ADDRESS_RANGE=0
+OUT_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+MAX_NUM_OF_CHILDS=4
+
+; -----------------------------	Controller (virtual)Device Diagnose SubModule CT
+[_S7H_IO_CONTROLLER_DEVICE_SUBMODULE_DIAG_CT]
+basetype=_S7H_IO_SUBMODULE_AT
+ObjType=1316831
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+MLFB=
+IN_ADDRESS_RANGE=0
+IO_TYPE=0x0041 
+SIGNAL_TYPE=1 
+IN_ADDRESS_RANGE=0
+OUT_ADDRESS_RANGE=0
+SHORTNAME=Device Submodul Diagnose 
+nKatChilds=0
+CLASS_PROPERTIES=0
+CatalogParent=1316787
+MODULE_TYPE=4
+PLUG_CLASS=x00000080
+IsCatEntry=0
+
+; -----------------------------	Controller (virtual)Device A-SubModule CT
+[_S7H_IO_CONTROLLER_DEVICE_SUBMODULE_OUT_CT]
+basetype=_S7H_IO_SUBMODULE_AT
+ObjType=1316832
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Submodul Ausgang
+nKatChilds=0
+CLASS_PROPERTIES=0
+SIGNAL_TYPE=2
+IO_TYPE=2
+OUT_ADDRESS_RANGE=1
+IN_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+
+; -----------------------------	Controller (virtual)Device E-SubModule CT
+[_S7H_IO_CONTROLLER_DEVICE_SUBMODULE_IN_CT]
+basetype=_S7H_IO_SUBMODULE_AT
+ObjType=1316833
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Submodul Eingang
+nKatChilds=0
+CLASS_PROPERTIES=0
+SIGNAL_TYPE=2
+IO_TYPE=1
+IN_ADDRESS_RANGE=1
+OUT_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+
+; -----------------------------	Controller (virtual)Device Module CT
+[_S7H_IO_CONTROLLER_DEVICE_MODULE_IN_CT]
+basetype=_S7H_IO_NORM_MODULE_AT
+ObjType=1316836
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Module Eingang
+nKatChilds=0
+CLASS_PROPERTIES=0
+MLFB=
+FIRST_VISIBLE_CHILD_NO=1
+SLOTOFFSET=-1
+SIGNAL_TYPE=2
+IO_TYPE=1
+IN_ADDRESS_RANGE=1
+OUT_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+MAX_NUM_OF_CHILDS=0
+;;MAX_NUM_OF_CHILDS=4
+
+; -----------------------------	Controller (virtual)Device Module CT
+[_S7H_IO_CONTROLLER_DEVICE_MODULE_OUT_CT]
+basetype=_S7H_IO_NORM_MODULE_AT
+ObjType=1316837
+prefix=OM
+server=S7HDEVNX.DLL
+HWCNFX_VER=5.3.2.0|0
+CatalogParent=1316787
+SHORTNAME=Device Module Ausgang
+nKatChilds=0
+CLASS_PROPERTIES=0
+MLFB=
+FIRST_VISIBLE_CHILD_NO=1
+SLOTOFFSET=-1
+SIGNAL_TYPE=2
+IO_TYPE=2
+OUT_ADDRESS_RANGE=1
+IN_ADDRESS_RANGE=0
+MLFB=
+IsCatEntry=0
+MAX_NUM_OF_CHILDS=0
+;;MAX_NUM_OF_CHILDS=4
+
+;------------------------------ Sync-Master for IRT-Sync-Domain
+[_S7H_IRT_SYNCH_MASTER_AT]
+abstract=true
+ObjType=1316840
+IRT_NRT_MIN=50
+IRT_NRT_TIME_MIN=125000
+IRT_CYCLE_GROUP_MAX=1
+IRT_SUPP_SENDCLOCKS=32|40|48|56|64|72|80|88|96|104|112|120|128
+IRT_SENDCLOCK_FACTOR_DEFAULT=32
+IRT_SUPP_REDUCTION_RATIOS=1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16
+IRT_REDUCTION_RATIO_DEFAULT=2
+IRT_REDUCTION_RATIO_MAX=16
+							; PTCP_TIMEOUT_FACTOR for PTCP over RTC
+IRT_PTCP_TIMEOUT_FACTOR=5
+IRT_USE_SPECIAL_SDB_GENERATION=0
+;LENGTH_SYNC_MSG=104 or 120(first version of MC controllers)   ; Sync master can override default value from S7H_IRT_CALCULATOR_CT
+HWCNFX_VER=5.3.3.0|0
+							; SyncSendFactor for IRTadd (not for IRTtop) - new in V5.4SP1
+IRT_ADD_SYNCSENDFACTOR=960	
+							; PTCP_TIMEOUT_FACTOR for PTCP over RTA		
+IRT_ADD_PTCP_TIMEOUT_FACTOR=3
+
+
+
+;------------------------------ IO-Controller for IRT switches
+[_S7H_IO_CONTROLLER_SWITCH_CT]
+prefix=OM
+ObjType=1316841
+basetype=_S7H_HSP_IO_CONTROLLER_317_2EJ10_FW23_CT
+basetype=_S7H_IRT_SYNCH_MASTER_AT
+server=S7HSSIOX.DLL
+SDB_CAUSED_LIST=3|2002|2003|2004|2005|2006|2008
+
+CountAutoCreatedPorts=4
+AutoCreatedPort0=1316822
+AutoCreatedPort1=1316822
+AutoCreatedPort2=1316822
+AutoCreatedPort3=1316822
+
+IRT_SWITCH_KRAMSIZE=131072
+IRT_SWITCH_MAXCUTTROUGH=100
+SHORTNAME=PN-IO
+;IRT_SYNC_ABILITY=15				; This controller can be a syncmaster, -backupmaster and -slave
+IRT_SYNC_ABILITY=7				
+					; This controller can be a syncmaster, -backupmaster and -slave
+IRT_SWITCH_BRIDGING_DELAY=1720
+IRT_SWITCH_MAX_BUFFER_TIME=0
+IRT_SWITCH_ADDITIONAL_LSDU_GAP=0
+IRT_SWITCH_ADDITIONAL_REDUCTION_GAP=0
+;IRT_SWITCH_PROXY=0/1
+IRT_ISOCHRONE_MODE_SUPPORTED=1
+PN_IMPLEMENTATION_TYPE=ERTEC400A
+CAPABLE_DEV_V101=1						
+						; Is API supported or not
+PDEV_SUPPORTED=1						
+						; Devices supported
+CAPABLE_MULTIPLEWRITE=0					
+						; Multiple Write supported
+PN_MAX_DEVICE_SUBMODULES=8192			
+						; This IO-Controller can support 8192 submodules
+PN_MAX_DEVICE_SUBMODULE_DATA_LENGTH=254	
+						; Maximum size of data
+;IRT_CYCLE_GROUP_MAX=3					; IO-Controller can use 3 update groups
+
+;SUPPORTED RT Classes = RT Class 3, without RT Class2 , RT Class 1 = 101 = 5
+CONTROLLER_RT_CLASS=5     	
+;QUERVERKEHR RTClass3 eingeschaltet
+PN_RT_CLASS3_QUERVERKEHR=1
+SUBNETMASK_UNRESTRICTED=0
+ALLOW_LOCAL_DDX_SUBSCRIPTION=0
+PN_MC_DEVICEID_ASSIGNMENT_OLD=1
+
+MEDIA_REDUNDANCY_SUPPORTED=1 
+								; Is Media-Redundancy available 1 = Yes, 0 = No

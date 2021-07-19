@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ET200M Module Description ET200M_AI2moddesc.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2002-03-08T08:35:18Z" Tool="STEP7 Version V5.2" User="BT3192"/>
+		<prim:LastModified Timestamp="2002-04-12T10:03:00Z" Tool="Textpad" User="BT3192"/>
+	</prim:FileInfo>
+	<base:Project ID="{469DAA15-4E0D-11d6-9762-00104B42C6B5}" Name="Module Description for ET200M AI 2 channels">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="Module">
+				<base:SettingsFeature>	
+					<hwk:ModuleDescList>
+						<hwk:ModuleDesc Name="test">
+							<hwk:Attr Name="MLFB" Value="6ES7 331 7KB01 0AB0" Datatype="STRING"/>
+							<hwk:Attr Name="ShortName" Value="AI2x12Bit" Datatype="STRING"/>
+						</hwk:ModuleDesc>
+					</hwk:ModuleDescList>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Diagnosis" DSNr="0" DSLen="2">
+							<!-- Diagnosefreigaben 1 -->
+							<hwk:Par Name="Group_Diagnosis" PNr="1">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Diagnose:Freigabe"/>
+									<base:Text xml:lang="en" Value="Group Diagnosis"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Wire_Break" PNr="2">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Drahtbruch"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:instances>4</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Alarmparameters and Groupranges" DSNr="1" DSLen="14">
+							<!-- Alarmeinstellungen und Bereichseinstellungen der Gruppen 2 -->
+							<hwk:Par Name="Limit_Violation" PNr="1">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grundeinstellungen:Grenzwertalarmfreigabe"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Diagnostics" PNr="2">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grundeinstellungen:Diagnosealarmfreigabe"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Cycleend" PNr="3">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grundeinstellungen:Zyklusendealarmfreigabe"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Integration_Time" PNr="4">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Integrationszeit"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>2</hwk:defStep7>
+								<hwk:defPcs7>2</hwk:defPcs7>
+								<hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="AI_Type" PNr="5">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>1</hwk:defPcs7>
+								<hwk:instances>2</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="AI_Range" PNr="6">
+								<!-- Vorsicht hier eingeschränkter Mess-Bereich -->
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Bereich"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>9</hwk:defStep7>
+								<hwk:defPcs7>9</hwk:defPcs7>
+								<hwk:instances>2</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Upper_Limit_Value_Group0" PNr="7">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grenzwerte Gruppe 0:oberer"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>32767</hwk:defStep7>
+								<hwk:defPcs7>32767</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Lower_Limit_Value_Group0" PNr="8">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grenzwerte Gruppe 0:unterer"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>-32768</hwk:defStep7>
+								<hwk:defPcs7>-32768</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Upper_Limit_Value_Group1" PNr="9">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grenzwerte Gruppe 1:oberer"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>32767</hwk:defStep7>
+								<hwk:defPcs7>32767</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Lower_Limit_Value_Group1" PNr="10">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Grenzwerte Gruppe 1:unterer"/>
+								</base:DisplayNameFeature>
+								<hwk:defStep7>-32767</hwk:defStep7>
+								<hwk:defPcs7>-32767</hwk:defPcs7>
+							</hwk:Par>
+						</hwk:Dataset>
+					</hwk:DatasetList>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

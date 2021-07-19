@@ -1,0 +1,118 @@
+@CONVERTER ERRLIST1 V0.1                				# aktuelle Listenkennung
+@LANGUAGE  DEUTSCH                     					# Sprache
+#--------------------------------------------------------------------------------
+	SYSERRORTEXT:	"Systemfehler"                      # Standardtextelemente
+	ERRORTEXT:		"Fehler"                            # Standardtextelemente
+	WARNINGTEXT:	"Warnung"                           # Standardtextelemente
+	RLINENRTEXT:	"Regeldatei-Zeile"
+	ALINENRTEXT:	"Asciidatei-Zeile"
+	ELINENRTEXT:	"Fehlerdatei-Zeile"
+	LPOSITIONTEXT:	"Zeilenpos."
+	OWNERTEXT:		"Besitzer"
+	TOOLTEXT:		"Werkzeug"
+	TPOSITIONTEXT:	"DB-Pos."
+#--------------------------------------------------------------------------------
+														# err # ascii  # rul
+#--------------------------------------------------------------------------------
+00001  "falsches Zeichen"                           	#  x	  x      x
+00002  "Syntax-Fehler"				                	#  x      x      x
+00003  "Fehlernummer zu lang (Datei *.err)"         	#  x
+00004  "Syntax-Fehler (Gruppe)"							#		  x      x
+#--------------------------------------------------------------------------------
+00005  "Setze Parameterwert, falscher Name/kein Zugriff"#                x
+00006  "Setze Parameterwert, falscher bzw. kein Wert"  	#                x
+00007  "Setze Parameterwert, Ursache unbekannt" 		#                x
+00008  "ASCII-Datei Header fehlt bzw. fehlerhaft"		#		  x
+00009  "Regeldatei nicht vorhanden"						#		  x
+00010  "Gruppenabschluß fehlerhaft"						#		  x
+00011  "Regeldatei nicht bearbeitbar (ConverterVersion)"#         x
+
+00012  "Erzeuge Parameter, falscher Name/kein Zugriff"  #                x
+00013  "Erzeuge Parameter, falscher Wert" 			    #                x
+00014  "Erzeuge Parameter, Ursache unbekannt" 		    #                x
+00015  "Erzeuge Parameter, doppelter Name"			    #                x
+00016  "Regeldatei fehlerhaft"							#		  x
+
+00017  "Probleme bei Laden der Fehlermelde-Sprachdatei"	#		  x
+
+00018  "Gruppe -> falscher Name/kein Zugriff"			#                x
+00019  "Gruppe -> keine Erzeugung, Ursache unbekannt"   #                x
+00020  "Name, String, Kommentar länger 255"             #  x      x      x
+
+00021  "Setze Paramterwert, Speicherengpass"			#                x
+00022  "Erzeuge Gruppe, Speicherengpass"
+00023  "Erzeuge Gruppe, Fehlerursache unbekannt"
+00024  "Erzeuge Gruppe, doppelter Name"
+
+00050  "Regel-Datei kann nicht geöffnet werden"			#
+00051  "Regeldatei kann nicht geladen werden"			#
+00052  "ASCII Datei fehlerhaft"							#
+00053  "Binär Datei fehlerhaft"							#
+00054  "ASCII/Binär-Datei kann nicht geöffnet werden"	#
+00055  "Error-LanguageDatei kann nicht geöffnet werden"	#
+00056  "Trace/Error-Datei kann nicht geöffnet werden"	#
+#--------------------------------------------------------------------------------
+00100  "Binär-Datei Typfehler (DOS, TIS)"				#				 x
+00101  "Gruppenbeginn ignoriert"						#				 x
+00102  "Gruppenabschluß mit Fehler, fehlende Elemente"	#				 x
+00103  "Defaultwert nicht möglich"						#				 x
+00104  "Defaultwert notwendig"							#				 x
+00105  "Namenserweiterung falsch"						#				 x
+00106  "Aufzählvariable Beginnfehler"					#				 x
+00107  "Attribute falsch, kein Aufzählungstyp"			#				 x
+00108  "Defaultwert zu kurz"							#				 x
+00109  "Defaultwert zu lang"							#				 x
+
+00110  "Defaultwert der Aufzählvariablen falsch"		#		         x
+00111  "Aufzählvariable Abschlußfehler"					#				 x
+00112  "Duplikat in Aufzählvariable"					#				 x
+00113  "Aufzählvariable Teil Fehlerhaft"				#				 x
+00114  "Aufzählvariable Teil Ignoriert"   				#				 x
+00115  "Attribute falsch, kein Aufzähltyp 2"			#				 x
+
+00116  "Parametertyp nicht möglich"						#				 x
+00117  "Parameterhäufigkeit nicht möglich"				#				 x
+00118  "Minimalwert fehlerhaft, Gruppe"    				#				 x
+00119  "Maximalwert fehlerhaft, Gruppe"					#				 x
+00120  "Gruppenhäufigkeit nicht möglich"				#				 x
+00121  "Parametertyp/häufigkeit nicht möglich"			#				 x
+00122  "Aufzählvariable Wert zu lang"					#				 x
+00123  "Bit -> Hex nicht möglich (modulo 8)"			#				 x
+00124  "Attributtype nicht erlaubt"						#				 x
+00125  "Wert zu groß"									#				 x
+00126  "Gruppenname im Header ungleich im Beginn"		#				 x
+00127  "Sichtweise der Gruppe, des Parameters falsch"   #                x
+
+00130  "Minimalwert > Maximalwert"						#				 x
+00131  "Defaultwert > Maximalwert oder < Minimalwert"	#				 x
+00132  "Defaultwert nicht im Raster (Schrittweite)"		#				 x
+00133  "Maximalwert nicht im Raster (Schrittweite)"		#				 x
+00134  "Minimalwert!=Maximalwert -> Schrittweite = 0"   #				 x
+00135  "Minimallänge > Maximallänge"					#				 x
+00136  "Maximallänge > Fester Länge"					#				 x
+00137  "Längenfehler (Bytegrenze)"						#				 x
+00138  "Gruppe oder Parameter nicht gefunden"			#		  		 x
+00139  "mehre Defaults bei Auswahl"                     #                x
+00140  "Länge nicht im angegebenen Bereich"             #
+00141  "Anzahl nicht im angegebenen Bereich"            #
+00142  "Nummerierung nicht im angegebenen Bereich"      #
+00143  "gemischte Strings nicht erlaubt"				#         x      x
+00144  "kein extended-Format möglich"                   #         x      x
+00145  "Gruppe mit Fehler 146"
+00146  "Mindestanzahl nicht eingehalten"
+00147  "Gruppe mit Fehler 148"
+00148  "Maximalanzahl nicht eingehalten"
+00149  "Kein Element einer Auswahl vorhanden"
+00150  "Mehr als ein Element einer Auswahl vorhanden"
+00151  "Kein Numerischer Typ für Bereiche"
+00152  "Bereichdefinition ignoriert"
+00153  "Bereichdefinition fehlerhaft"
+00154  "Bereich Abschlussfehler, z.B. Defaultwert"
+00155  "Länge/Häufigkeit passen nicht zusammen"
+#---------------------------------------------------------------------------------
+00200  "Speicherengpaß" 
+
+#--------------------------------------------------------------------------------
+01000  "Implementierungsfehler"							#         x
+#--------------------------------------------------------------------------------
+#--------------------------------- ENDE -----------------------------------------

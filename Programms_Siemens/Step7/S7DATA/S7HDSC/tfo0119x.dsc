@@ -1,0 +1,50 @@
+[AO8xHART, ex]
+[PARAMETERS]
+001;000;000.0;001;001;0001;AO;000;Group_Diagnosis
+002;000;001.0;001;001;0001;AO;000;Short_Circuit
+003;000;002.0;001;001;0001;AO;000;HART_Diagnosis
+004;000;003.0;001;001;0001;AO;000;Discrepancy_Analysis
+005;001;000.6;001;000;0001;  ;000;Diagnostics
+006;001;026.0;002;002;0002;AO;000;Reaction_to_CPU_STOP
+007;001;002.4;004;008;0002;AO;000;AO_Type
+008;001;002.0;004;008;0002;AO;007;AO_Area
+009;001;010.0;016;016;0004;AO;008;Substitute_Value
+010;131;002.0;008;000;0001;  ;000;Count_Of_Retries_131
+011;131;006.0;001;000;0001;  ;000;HART_Function_131
+012;132;002.0;008;000;0001;  ;000;Count_Of_Retries_132
+013;132;006.0;001;000;0001;  ;000;HART_Function_132
+014;133;002.0;008;000;0001;  ;000;Count_Of_Retries_133
+015;133;006.0;001;000;0001;  ;000;HART_Function_133
+016;134;002.0;008;000;0001;  ;000;Count_Of_Retries_134
+017;134;006.0;001;000;0001;  ;000;HART_Function_134
+018;135;002.0;008;000;0001;  ;000;Count_Of_Retries_135
+019;135;006.0;001;000;0001;  ;000;HART_Function_135
+020;136;002.0;008;000;0001;  ;000;Count_Of_Retries_136
+021;136;006.0;001;000;0001;  ;000;HART_Function_136
+022;137;002.0;008;000;0001;  ;000;Count_Of_Retries_137
+023;137;006.0;001;000;0001;  ;000;HART_Function_137
+024;138;002.0;008;000;0001;  ;000;Count_Of_Retries_138
+025;138;006.0;001;000;0001;  ;000;HART_Function_138
+026;140;004.0;008;016;0001;AO;000;HART_Var_Channel
+027;140;005.0;008;016;0002;AO;000;HART_Variable
+
+[AO_Type]
+000=Deactivated
+003=Current_2_Wire_Transducer
+
+[Current_2_Wire_Transducer]
+002=0;27648;0.000;20.000;0_to_20_mA
+003=0;27648;4.000;20.000;4_to_20_mA
+
+[Reaction_to_CPU_STOP]
+000=Outputs_Without_Voltage_or_Current
+001=Retain_Last_Value
+002=Switch_to_Substitute_Value
+
+[HART_Variable]
+000=None
+001=Primary_Variable
+002=Secondary_Variable
+003=Tertiary_Variable
+004=Quatenary_Variable
+015=CiR

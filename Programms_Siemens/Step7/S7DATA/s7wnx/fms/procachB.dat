@@ -1,0 +1,13 @@
+CP 5431#CP 5431 FMS#si00001x.fms#G#0#0
+CP 343-5#S7-300 CP343-5 FMS#si00002x.fms#G#0#0
+CP 443-5 A#S7-400 CP443-5 FMS#si00003x.fms#G#0#0
+CP5412#CP 5412 (A2)#si00004x.fms#G#0#0
+SIMOCODE#SIMOCODE  FMS#si00005x.fms#G#0#0
+ET200U#ET 200U DP/FMS#si00006x.fms#G#0#0
+CP 5613/CP 5614#CP 5613/CP 5614#si00007x.fms#G#0#0
+CP_Profibus#CP/Profibus#Si00020x.FMS#G#0#0
+UniMaster#General FMS Master#univmstr.fms#G#0#0
+UniSlave#General FMS Slave#univslve.fms#G#0#0
+GeneralRequester#Send (BRCT/MULT)#FMSSYS.SND#S#0#0
+GeneralReceiver#Receive (BRCT/MULT/OPEN)#FMSSYS.RSP#R#0#0
+UniDevice#General FMS Device#FMSSYS.UNI#U#0#0

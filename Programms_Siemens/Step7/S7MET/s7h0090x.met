@@ -1,0 +1,67 @@
+;;------------------------------------------------------------------------
+;;  Dies ist ein MODIFIZIERTE KOPIE der Meta-Datei aus HSP0090.
+;;  Sie wird bei der Installation von HSP0099 mit-installiert
+;;  (--> beigestellte Datei "hsp0090_meta.sch").
+;;
+;;  Man braucht den Objekt-Typ 'S7H_HSP_IO_ET200S_151_3BA00_CT' als
+;;  Basis-Typ fuer den Device-Typ in 's7h0099x.met', weil sonst das
+;;  F-Configuration-Pack V5.4, SP 1 NICHT erkennt, dass man auch in
+;;  das Device des HSP0099 F-Baugruppen stecken darf.
+;;  Siehe dazu den ARTS-Request AP00265972.
+;;
+;;  Ab  V5.4, SP 2 sollte das F-Configuration-Pack ueber das
+;;  Device-Attribut 'F_MODULE_ALLOWED' pruefen, ob man F-Module
+;;  ins Device stecken darf.
+;;------------------------------------------------------------------------
+
+;;------------------------------------------------------------------------
+;;  ET200S-Device IM 151-3BA00-0AB0: Basis-Typ aus HSP0090 fuer HSP0099
+;;------------------------------------------------------------------------
+
+[_S7H_HSP_IO_ET200S_151_3BA00_CT]
+prefix=OM
+ObjType=2363838
+basetype=_S7H_IO_S7_DEVICE_AT
+basetype=_S7H_ET200S_AT
+CatalogParent=2363841
+
+;;  Im Gegensatz zum ECHTEN Objekt-Typ aus 's7h0090x.met' soll dieser
+;;  "virtuelle" Objekt-Typ NICHT im Katalog erscheinen.
+;;  Den Server sollte man ebenfalls weglassen, weil sonst eine Meldung
+;;  erscheint, dass der Server (den man nicht braucht) nicht gefunden
+;;  wird.
+;;
+IsCatEntry=0
+nKatChilds=0
+server=
+
+relation=1315826,_S7H_ET200S_MODULE_AT[1315827];deep
+ICON_TYPE = 4
+
+MLFB=6ES7 151-3BA00-0AB0
+CLASS_PROPERTIES=0
+ALARM_MODE=2
+CountAutoCreatedChilds=0
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=64
+IAM_THIS_SLAVE=1
+IAMA_S7SLAVE=0
+DP_STATION_TYPE=ET200S
+SLAVE_FAMILY=ET200S
+SLAVE_BMP_FILE=ET200S1N
+PN_VENDOR_ID=0x002A
+PN_DEVICE_ID=0x0301
+PN_MIN_DEVICE_INTERVAL=32
+PN_DEVICE_SUPPORTS_MMC=1
+IS_PARAMETRIZEABLE=1
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.3.3.0
+HSP_ID=0090
+HSP_NAME=ET 200S IM 151-3 HF
+
+; Die Counter-Module sollen im SKF-Modus betreibbar sein; sh. AP00243678.
+SUPPORT_MODULES_WITH_SKF=1
+
+; Anforderung von Heiner Fuchs:
+; Das F-Control muss erkennen koennen, ob man F-Baugruppen stecken darf.
+F_MODULE_ALLOWED=1

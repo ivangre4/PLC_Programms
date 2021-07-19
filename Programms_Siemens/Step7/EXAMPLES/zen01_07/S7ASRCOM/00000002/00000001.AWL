@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK OB 1
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB1_EV_CLASS : BYTE ;	//Bits 0 to 3 = 1 (incoming event), bits 4 to 7 = 1 (event class 1)
+  OB1_SCAN_1 : BYTE ;	//1 (cold restart scan 1 of OB1), 3 (scan 2-n of OB1)
+  OB1_PRIORITY : BYTE ;	//1 (priority of 1 is lowest)
+  OB1_OB_NUMBR : BYTE ;	//1 (organization block 1, OB1)
+  OB1_RESERVED_1 : BYTE ;	//Reserved for system
+  OB1_RESERVED_2 : BYTE ;	//Reserved for system
+  OB1_PREV_CYCLE : INT ;	//Cycle time of previous OB1 scan (milliseconds)
+  OB1_MIN_CYCLE : INT ;	//Minimum cycle time of OB1 (milliseconds)
+  OB1_MAX_CYCLE : INT ;	//Maximum cycle time of OB1 (milliseconds)
+  OB1_DATE_TIME : DATE_AND_TIME ;	//Date and time OB1 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

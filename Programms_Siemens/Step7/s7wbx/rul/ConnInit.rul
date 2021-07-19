@@ -1,0 +1,29 @@
+@DB_TYP CON_INIT_SDB V1.0 DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+ALL
+{
+	VTYP_INFO_PBLK$NAM		_M||||
+	VTYP_INFO_PBLK
+	{
+		PBL_ID					BC|0|||
+		PBL_ID_VERSION			BC|0|||
+		VTYP_INFO_PBLK$LNG		WM||||
+		
+		CONN_TYPE				DM||||
+		VMD_ID					DM||||
+	}
+
+	VERB_ENTRY_PBLK$NAM		_A||||
+	VERB_ENTRY_PBLK
+	{
+		PBL_ID					BC|1|||
+		PBL_ID_VERSION			BC|0|||
+		VERB_ENTRY_PBLK$LNG		WM||||
+		
+		NAME$LNG				WM||||
+		NAME					AM||0|256|
+	}
+}
+

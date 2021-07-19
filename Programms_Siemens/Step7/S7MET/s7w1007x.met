@@ -1,0 +1,72 @@
+;------------------------------------------------------------------------
+;                            PROFINET Device
+;------------------------------------------------------------------------
+
+;---------------------------------------------
+; IE/PB Link IO Device V2.0
+;---------------------------------------------
+
+[_S7H_6GK1_411_5AB00_V20_CT_HSP]
+basetype=_IE_PB_LINK_PNIO_AT
+
+ObjType=2367405
+prefix=OM
+server=S7WBPROX.DLL
+
+FW_VERSION=V2.0
+MLFB=6GK1 411-5AB00
+MLFB_PREFIX=PN_DPV1
+
+CatalogParent=1335477
+IsCatEntry=1
+AdditionalKatalogInfo=0x03
+
+PN_MAX_FRAMES_PER_CYCLE=7
+
+DEVICE_INSTANCE=0
+PN_DEVICE_ID=0x0601
+
+DP_OBJTYPE=1335499
+
+INFO_SECTION3_COUNT=2
+INFO_SECTION3_1=164089,4
+INFO_SECTION3_2=164095,4
+
+CAN_DO_CLOCK=yes
+CAN_DO_CLOCK_DIR=1
+
+
+;------------------------------------------------------------------------
+;                         Netzübergang
+;------------------------------------------------------------------------
+
+; ----------------------------- S7-300 Rack für IE/PB Link Basic V2.0
+[_S7H_6ES7_RACK_IE_PB_LINK_5AB00_V20_CT_HSP]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=2367406
+MLFB=6GK1 411-5AB00
+FW_VERSION=V2.0
+CatalogParent=1335476
+basetype=_S7H_6ES7_RACK_IE_PB_LINK_CT
+AutoCreatedChild1=2367407, 2, FIXED
+
+
+; ----------------------------- IE/PB Link PNIO V2.0
+[_S7H_CBA_IE_PB_LINK_5AB00_V20_CT_HSP]
+server=s7wblnkx.dll
+prefix=OM
+ObjType=2367407
+MLFB=6GK1 411-5AB00
+MLFB_PREFIX=PN_DPV1
+
+basetype=_S7H_CBA_IE_PB_LINK_CT
+AutoCreatedChild1=1335474, 1, FIXED
+AutoCreatedChild2=1335501, 2, FIXED
+FW_VERSION=V2.0
+
+
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.3.2.1
+HSP_NAME=IE/PB Link V2.0
+HSP_ID=1007

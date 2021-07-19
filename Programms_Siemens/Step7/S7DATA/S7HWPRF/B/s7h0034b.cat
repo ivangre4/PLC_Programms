@@ -1,0 +1,19 @@
+S7HPROFX V0.1
+
+
+//RQ 50015
+// Folgende EMs dürfen nicht an folgenden BMs steckbar sein und werden aus Katalog entfernt:
+//------------------------------------------------------------------------------------------
+
+//RQ 50015
+// Pneumatik 6ES7 148-1DA00-0XA0
+[PROFIBUS DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF01-0AB0\Pneumatic\EM 148-P DI 4xDC24V/ DO 2xP::6ES7 148-1DA00-0XA0]
+@DELETE
+//RQ 50015
+// 6ES7 141-1BD30-0XA0
+[PROFIBUS DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF01-0AB0\DI\EM 141 DI 4xDC24V, short::6ES7 141-1BD30-0XA0]
+@DELETE
+//RQ 50015
+// 6ES7 141-1BF30-0XA0
+[PROFIBUS DP\ET 200X\X-BM141 Ecofast DI 8xDC24V::6ES7 141-1BF01-0AB0\DI\EM 141 DI 8xDC24V, short::6ES7 141-1BF30-0XA0]
+@DELETE

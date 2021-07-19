@@ -1,0 +1,22 @@
+[2363775]
+KatEntryName=V2.3
+InfoText=Work memory 192KB; 0.1ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; Transport protocol TCP/IP; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier installation up to 32 modules; equidistant DP bus cycle; Routing; firmware V2.3, can be used for safety applications
+SHORTNAME=CPU 315F-2 PN/DP
+Comment=Work memory 192KB; 0.1ms/1000 instructions; PROFINET connection; S7 Communication (loadable FBs/FCs); PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; Transport protocol TCP/IP; combined MPI/DP connection (MPI or DP master or DP slave); multi-tier installation up to 32 modules; equidistant DP bus cycle; Routing; firmware V2.3, can be used for safety applications
+
+[2363776]
+SHORTNAME=MPI/DP
+
+[2363777]
+InfoText=PROFINET IO Controller of CPU 315F-2 PN/DP
+SHORTNAME=PN-IO
+
+[2363778]
+KatEntryName=CPU 315F-2 PN/DP
+InfoText=Central modules of type CPU 315F-2 PN/DP
+
+[2363779]
+KatEntryName=6ES7 315-2FH10-0AB0
+SHORTNAME=CPU 315F-2 PN/DP
+InfoText=
+

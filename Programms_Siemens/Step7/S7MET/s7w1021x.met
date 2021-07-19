@@ -1,0 +1,503 @@
+;############################################## IE/AS-i Link #########################
+
+; -----------------  DAP-Modul ----------------------
+[_S7H_DAP_IEASI_LINK_ADV_CT]   
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338050
+basetype=_S7H_IO_S7_ETER_AT
+basetype=_AUT_GENCOMM_AT
+IO_DATA_SIZE=32
+PN_MAX_INPUT_LEN=256
+PN_MAX_OUTPUT_LEN=256
+PN_MAX_DATA_LEN=512
+PN_OBJECTUUID_LOCAL_INDEX=1
+PN_MODULE_IDENTNUMBER=0x01010000
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+; IP-Adresse zuweisen aktivierbar
+PN_IPADR_CHCK_DEV=1
+SHORTNAME=IE-ASi-Link
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+; -----------------  DAP-Modul Doppelmaster ----------------------
+[_S7H_DAP_IEASI_LINK_ADV_2M_CT]   
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338085
+basetype=_S7H_DAP_IEASI_LINK_ADV_CT
+basetype=_AUT_GENCOMM_AT
+PN_MODULE_IDENTNUMBER=0x01020000
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+SHORTNAME=IE-ASi-Link
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+; -----------------  DAP-Modul V2.0 ----------------------
+[_S7H_DAP_IEASI_LINK_ADV_V2_CT]   
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338076
+basetype=_S7H_DAP_IEASI_LINK_ADV_CT
+basetype=_AUT_GENCOMM_AT
+PN_MODULE_IDENTNUMBER=0x01030000
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1338077, 1, FIXED
+
+; -----------------  DAP-Modul Doppelmaster V2.0  ----------------------
+[_S7H_DAP_IEASI_LINK_ADV_V2_2M_CT]   
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338086
+basetype=_S7H_DAP_IEASI_LINK_ADV_CT
+basetype=_AUT_GENCOMM_AT
+PN_MODULE_IDENTNUMBER=0x01040000
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1338077, 1, FIXED
+
+
+;------------------------------ Ports for IRT ASi Link
+[_S7H_IRT_PORT_SUBMODULE_ASI1_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338088
+basetype=_S7H_HSP_151_3AA20_V40_PNIO_PORT_8001_CT
+; Sendedelay bei ERTEC400 Stempel vor MAC in ns
+IRT_PORT_TX_DELAY=1192
+; Empfangsdelay
+IRT_PORT_RX_DELAY=363
+
+IRT_SUBSLOT=32769
+PN_SUBMODULE_IDENTNUMBER=0x00000002
+
+;  I&M-Support
+IUM_SUPPORT=1
+IUA_SUPPORT=1
+FW_DOWNLOAD_CAPABLE=1
+
+SLOT_LABEL="X1 P1"
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+;------------------------------ Ports for IRT ASi Link
+[_S7H_IRT_PORT_SUBMODULE_ASI2_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338089
+basetype=_S7H_IRT_PORT_SUBMODULE_ASI1_CT
+
+IRT_SUBSLOT=32770
+
+SLOT_LABEL="X1 P2"
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+
+; ----------------- Interfacemodul V2.0 geklaut aus HSP 111 (ET200 ST) ----------------------
+[_S7H_PNIO_INTERFACE_ASI_2_PORTS_CT]   
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338077
+basetype=_S7H_HSP_151_3AA20_V40_PNIO_INTERFACE_CBE20_2_PORTS_CT
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+; noch ERTEC400 -> ERTEC200
+;PN_IMPLEMENTATION_TYPE=
+SHORTNAME=PN-IO
+
+PN_SUBMODULE_IDENTNUMBER=0x00000001
+
+CountAutoCreatedPorts=2
+AutoCreatedPort0=1338088
+AutoCreatedPort1=1338089
+
+;tp
+;----------------- LEITUNGSPROXY (vormals Grundbaugruppe) ---------------------
+;instanziiert die Modulliste, repräsentiert den V1 ASi Strang Leitungsproxy
+[_S7H_LEITUNGSPROXY_IEASI_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338082
+basetype=_S7H_IO_MODULE_AT
+
+PN_MODULE_IDENTNUMBER=0x01020001
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+SHORTNAME=IE/AS-i 1M
+IO_TYPE=0x41
+
+; repräsentiert den V2 ASi Strang Leitungsproxy: 2M -> V2 !!!
+[_S7H_LEITUNGSPROXY_IEASI_2M_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=1338084
+basetype=_S7H_LEITUNGSPROXY_IEASI_CT
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+SHORTNAME=IE/AS-i 2M
+
+PN_MODULE_IDENTNUMBER=0x01040001
+PN_SUBMODULE_IDENTNUMBER=0x01000000
+;tp
+
+
+
+; -----------------  IE/AS-i Link Katalog ----------------------
+[_S7H_IEASI_LINK_ADV_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1338051
+CatalogParent=2363996
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+;--------------------------------
+
+; -----------------  IE/AS-i Link Einfachmaster Katalog ----------------------
+[_S7H_IEASI_LINK_ADV_1M_KAT_AT]
+ABSTRACT=true
+;basetype=S7H_KATALOGFOLDDER_AT
+basetype=_S7H_IEASI_LINK_ADV_KAT_AT
+prefix=OM
+ObjType=1338060
+CatalogParent=1338051
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+;--------------------------------
+; -----------------  IE/AS-i Link Doppelmaster Katalog ----------------------
+[_S7H_IEASI_LINK_ADV_2M_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1338061
+CatalogParent=1338051
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+;--------------------------------
+
+
+; ----------------------------- IO-Device IE/AS-Interface Link Adv. Einfachmaster
+[_S7H_IEASI_LINK_ADV_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=2367451
+CatalogParent=1338060
+basetype=_S7H_IO_S7_DEVICE_AT
+IsCatEntry=1
+IsInKatVisible=1
+
+AdditionalKatalogInfo=0x03
+
+FW_VERSION=V1.0
+CP_FW_VERSION=400
+
+MLFB=6GK1 411-2AB10
+SHORTNAME=IE/AS-i Link Adv.
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=1
+; _S7H_DAP_IEASI_LINK_ADV_CT
+AutoCreatedChild1=1338050, 1, FIXED
+; _S7H_LEITUNGSPROXY_IEASI_CT
+; muss mit DAP zusammengeführt werden
+;AutoCreatedChild2=1338082, 2, FIXED
+; ############## Module im Link #######################
+
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=2367455
+
+
+; Device spezifische Erweiterungen
+DEFAULT_UPDATE_TIME=1
+DEVICE_INSTANCE=0
+DP_VERSION_SUPPORT=7
+IO_TYPE=0x41
+MIN_SV_UPDATE_TIME=128
+; nur IE/PB Link ?
+NET_PROTOCOLS_SELECT=IP
+PN_CAPABILITY_RECEIVE=1536
+PN_CAPABILITY_SEND=1536
+PN_DEVICE_ID=0x0603
+PN_MAX_FRAMES_PER_CYCLE=14
+PN_MIN_DEVICE_INT=32
+PN_VENDOR_ID=0x002A
+PNIO_SDB_STATION_FUNCTION_STATUS=1
+; UNBEDINGT ändern !!!!!!!!!!!!!!!!!!!!!!!!!!!
+S7_TYPE_CODE=0x9600
+SLAVE_BMP_FILE=ASI_IE1N
+SLAVE_FAMILY=IE/AS-i Link PN IO
+PRODUCT_FAMILY=IE/AS-i Link PN IO
+
+
+FIRST_VISIBLE_CHILD_NO=1
+SLOT_NO_TYPE="0,[1],1A,B,2A,B,3A,B,4A,B,5A,B,6A,B,7A,B,8A,B,9A,B,10A,B,11A,B,12A,B,13A,B,14A,B,15A,B,16A,B,17A,B,18A,B,19A,B,20A,B,21A,B,22A,B,23A,B,24A,B,25A,B,26A,B,27A,B,28A,B,29A,B,30A,B,31A,B"
+
+; V1.0 Devices können kein Packen und Upload
+CAN_DO_PACK=0
+CAN_DO_STRANG_UPLOAD=0
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+; ----------------------------- IO-Device IE/AS-Interface Link Adv. Doppelmaster
+[_S7H_IEASI_LINK_ADV_2M_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=2367452
+CatalogParent=1338061
+basetype=_S7H_IEASI_LINK_ADV_CT
+FW_VERSION=V1.0
+CP_FW_VERSION=400
+
+MLFB=6GK1 411-2AB20
+SLAVE_BMP_FILE=ASI_IE2N
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=2
+; keine _S7H_ETER_ASI_20_2_PLUS_CT mehr
+; _S7H_DAP_IEASI_LINK_ADV_2M_CT
+AutoCreatedChild1=1338085, 1, FIXED
+;_S7H_LEITUNGSPROXY_IEASI_2M_CT
+AutoCreatedChild2=1338082, 64, FIXED
+
+; ############## Module im Link #######################
+
+FIRST_VISIBLE_CHILD_NO=1
+SLOT_NO_TYPE="0,[1],[1]:1A,[1]:B,[1]:2A,[1]:B,[1]:3A,[1]:B,[1]:4A,[1]:B,[1]:5A,[1]:B,[1]:6A,[1]:B,[1]:7A,[1]:B,[1]:8A,[1]:B,[1]:9A,[1]:B,[1]:10A,[1]:B,[1]:11A,[1]:B,[1]:12A,[1]:B,[1]:13A,[1]:B,[1]:14A,[1]:B,[1]:15A,[1]:B,[1]:16A,[1]:B,[1]:17A,[1]:B,[1]:18A,[1]:B,[1]:19A,[1]:B,[1]:20A,[1]:B,[1]:21A,[1]:B,[1]:22A,[1]:B,[1]:23A,[1]:B,[1]:24A,[1]:B,[1]:25A,[1]:B,[1]:26A,[1]:B,[1]:27A,[1]:B,[1]:28A,[1]:B,[1]:29A,[1]:B,[1]:30A,[1]:B,[1]:31A,[1]:B,[2],[2]:1A,[2]:B,[2]:2A,[2]:B,[2]:3A,[2]:B,[2]:4A,[2]:B,[2]:5A,[2]:B,[2]:6A,[2]:B,[2]:7A,[2]:B,[2]:8A,[2]:B,[2]:9A,[2]:B,[2]:10A,[2]:B,[2]:11A,[2]:B,[2]:12A,[2]:B,[2]:13A,[2]:B,[2]:14A,[2]:B,[2]:15A,[2]:B,[2]:16A,[2]:B,[2]:17A,[2]:B,[2]:18A,[2]:B,[2]:19A,[2]:B,[2]:20A,[2]:B,[2]:21A,[2]:B,[2]:22A,[2]:B,[2]:23A,[2]:B,[2]:24A,[2]:B,[2]:25A,[2]:B,[2]:26A,[2]:B,[2]:27A,[2]:B,[2]:28A,[2]:B,[2]:29A,[2]:B,[2]:30A,[2]:B,[2]:31A,[2]:B"
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=2367455
+
+
+; ----------------------------- IO-Device V2.0 IE/AS-Interface Link Adv. Einfachmaster
+[_S7H_IEASI_LINK_ADV_V2_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=2367453
+CatalogParent=1338060
+basetype=_S7H_IEASI_LINK_ADV_CT
+IsCatEntry=1
+IsInKatVisible=1
+
+AdditionalKatalogInfo=0x03
+
+FW_VERSION=V2.0
+CP_FW_VERSION=400
+
+MLFB=6GK1 411-2AB10
+SHORTNAME=IE/AS-i Link Adv.
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=1
+; keine _S7H_ETER_ASI_20_2_PLUS_CT mehr
+; _S7H_DAP_IEASI_LINK_ADV_V2_CT
+AutoCreatedChild1=1338076, 1, FIXED
+
+FIRST_VISIBLE_CHILD_NO=1
+; ############## Module im Link #######################
+
+
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=2367455
+
+
+; Device spezifische Erweiterungen
+DEFAULT_UPDATE_TIME=1
+DEVICE_INSTANCE=0
+DP_VERSION_SUPPORT=7
+IO_TYPE=0x41
+
+MIN_SV_UPDATE_TIME=128
+; nur IE/PB Link ?
+NET_PROTOCOLS_SELECT=IP
+PN_CAPABILITY_RECEIVE=1536
+PN_CAPABILITY_SEND=1536
+PN_DEVICE_ID=0x0603
+PN_MAX_FRAMES_PER_CYCLE=14
+PN_MIN_DEVICE_INT=32
+PN_VENDOR_ID=0x002A
+PNIO_SDB_STATION_FUNCTION_STATUS=1
+; UNBEDINGT ändern !!!!!!!!!!!!!!!!!!!!!!!!!!!
+S7_TYPE_CODE=0x9600
+SLAVE_BMP_FILE=ASI_IE1N
+
+; V2.0 Devices können Packen und Upload
+CAN_DO_PACK=1
+CAN_DO_STRANG_UPLOAD=1
+
+FIRST_VISIBLE_CHILD_NO=1
+SLOT_NO_TYPE="0,[1],1A,B,2A,B,3A,B,4A,B,5A,B,6A,B,7A,B,8A,B,9A,B,10A,B,11A,B,12A,B,13A,B,14A,B,15A,B,16A,B,17A,B,18A,B,19A,B,20A,B,21A,B,22A,B,23A,B,24A,B,25A,B,26A,B,27A,B,28A,B,29A,B,30A,B,31A,B"
+
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+
+; ----------------------------- IO-Device V2.0 IE/AS-Interface Link Adv. Doppelmaster
+[_S7H_IEASI_LINK_ADV_V2_2M_CT]
+server=s7w1021x.DLL
+prefix=OM
+ObjType=2367454
+CatalogParent=1338061
+basetype=_S7H_IEASI_LINK_ADV_V2_CT
+FW_VERSION=V2.0
+CP_FW_VERSION=400
+
+MLFB=6GK1 411-2AB20
+SLAVE_BMP_FILE=ASI_IE2N
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=2
+; _S7H_DAP_IEASI_LINK_ADV_V2_CT
+AutoCreatedChild1=1338086, 1, FIXED
+;_S7H_LEITUNGSPROXY_IEASI_CT
+AutoCreatedChild2=1338084, 64, FIXED
+
+; DAP und Slotlücken verbergen
+; Slot-Offset muss korrigiert werden -> -3
+FIRST_VISIBLE_CHILD_NO=1
+; ############## Module im Link #######################
+
+FIRST_VISIBLE_CHILD_NO=1
+SLOT_NO_TYPE="0,[1],[1]:1A,[1]:B,[1]:2A,[1]:B,[1]:3A,[1]:B,[1]:4A,[1]:B,[1]:5A,[1]:B,[1]:6A,[1]:B,[1]:7A,[1]:B,[1]:8A,[1]:B,[1]:9A,[1]:B,[1]:10A,[1]:B,[1]:11A,[1]:B,[1]:12A,[1]:B,[1]:13A,[1]:B,[1]:14A,[1]:B,[1]:15A,[1]:B,[1]:16A,[1]:B,[1]:17A,[1]:B,[1]:18A,[1]:B,[1]:19A,[1]:B,[1]:20A,[1]:B,[1]:21A,[1]:B,[1]:22A,[1]:B,[1]:23A,[1]:B,[1]:24A,[1]:B,[1]:25A,[1]:B,[1]:26A,[1]:B,[1]:27A,[1]:B,[1]:28A,[1]:B,[1]:29A,[1]:B,[1]:30A,[1]:B,[1]:31A,[1]:B,[2],[2]:1A,[2]:B,[2]:2A,[2]:B,[2]:3A,[2]:B,[2]:4A,[2]:B,[2]:5A,[2]:B,[2]:6A,[2]:B,[2]:7A,[2]:B,[2]:8A,[2]:B,[2]:9A,[2]:B,[2]:10A,[2]:B,[2]:11A,[2]:B,[2]:12A,[2]:B,[2]:13A,[2]:B,[2]:14A,[2]:B,[2]:15A,[2]:B,[2]:16A,[2]:B,[2]:17A,[2]:B,[2]:18A,[2]:B,[2]:19A,[2]:B,[2]:20A,[2]:B,[2]:21A,[2]:B,[2]:22A,[2]:B,[2]:23A,[2]:B,[2]:24A,[2]:B,[2]:25A,[2]:B,[2]:26A,[2]:B,[2]:27A,[2]:B,[2]:28A,[2]:B,[2]:29A,[2]:B,[2]:30A,[2]:B,[2]:31A,[2]:B"
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=2367455
+
+
+; S7HWAPIX.MET ----------------------------- universal AS-i Slave
+[_S7H_CLASS_SC_IEASI_SLV_SPACE_CT]      
+server=S7HK12AX.DLL
+prefix=OM
+ObjType=2367455
+basetype=_S7H_IO_MODULE_AT
+CLASS_PROPERTIES=0
+IsCatEntry=1
+CatalogParent=
+ICON_TYPE=3
+nKatChilds=0
+; bekommt DS solange er nicht gepackt wurde
+IS_PARAMETRIZEABLE=1
+
+PN_MODULE_IDENTNUMBER=0x02030001
+PN_SUBMODULE_IDENTNUMBER=0x02000101
+
+MLFB=AS-i Proxy Slave
+SHORTNAME=AS-i Proxy Slave
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+
+[_S7H_CLASS_SC_IEASI_SUBMODULE_SPACE_CT]      
+server=S7HK12AX.DLL
+prefix=OM
+ObjType=1338090
+basetype=_S7H_IO_SUBMODULE_AT
+CLASS_PROPERTIES=0
+IsCatEntry=0
+CatalogParent=
+ICON_TYPE=3
+nKatChilds=0
+; bekommt DS solange er nicht gepackt wurde
+IS_PARAMETRIZEABLE=1
+
+PN_MODULE_IDENTNUMBER=0x02030001
+PN_SUBMODULE_IDENTNUMBER=0x02000101
+
+MLFB=
+SHORTNAME=
+
+HSP_NAME=IE-ASi-Link-PN-IO
+HSP_ID=1021
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0

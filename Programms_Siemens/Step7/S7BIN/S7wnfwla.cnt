@@ -1,0 +1,17 @@
+:Base S7wnfwla.hlp
+:Title Firmware-Lader - Hilfe
+1 Einsatzbereich=HDD_S0
+1 Firmware-Lader aufrufen=Firmware_laden
+1 Dialoge / Vorgehensweise
+1 Dialoge / Vorgehensweise - PROFIBUS Baugruppen
+2 1. Schritt: Ladedatei öffnen=HDD_S1
+2 2. Schritt: Schnittstelle auswählen=HDD_S2
+2 3. Schritt: Verbindung zur Baugruppe herstellen=HDD_S3_PB
+2 4. Schritt: Ladevorgang durchführen=HDD_S4_PB
+1 Dialoge / Vorgehensweise - Ethernet Baugruppen
+2 1. Schritt: Ladedatei öffnen=HDD_S1
+2 2. Schritt: Schnittstelle auswählen=HDD_S2
+2 3. Schritt: Ladevorgang über die MAC-Adresse direkt durchführen (MAC-Adresse gewählt)=HDD_S3_IE
+2 3. Schritt: MAC-Adresse ermitteln /  Kompatibilität prüfen (IP-Adresse gewählt)=HID_S3_IEIP
+2 4. Schritt: Ladevorgang durchführen (CP mit PROFINET)=HDD_S4_PN
+2 4. Schritt: Ladevorgang durchführen (CP ohne PROFINET)=HID_S4_IEIP

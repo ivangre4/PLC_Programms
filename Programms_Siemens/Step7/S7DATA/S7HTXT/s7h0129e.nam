@@ -1,0 +1,36 @@
+[2364129]
+KatEntryName=V5.1
+SHORTNAME=CPU 414-3 PN/DP
+InfoText= Memoria di lavoro: 1,4 MB di codice e 1,4 MB di dati; 0,045 ms/kAW; 8KB DI/O; 32 collegamenti; 1*DP/MPI, 1*PN e 1 vano per moduli IF; mittente e ricevente nella comunicazione diretta; equidistanza e elaborazione con funzionamento in sincronismo di clock; routing; routing record dati; funzione di multicomputing; PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 2 porte; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.1
+Comment=6ES7 414-3EM05-0AB0 V5.1, 6ES7 416-3FR05-0AB0 V5.1, 6ES7 416-3ER05-0AB0 V5.1
+
+[2364130]
+SHORTNAME=MPI/DP
+
+[2364131]
+InfoText=Controller PROFINET IO della CPU 414-3 PN/DP
+SHORTNAME=PN-IO
+
+[2364133]
+KatEntryName=V5.1
+SHORTNAME=CPU 416-3 PN/DP
+InfoText=Memoria di lavoro 5,6 MB di codice e 5,6 MB di dati; 0,030 ms/kAW; 16KB DI/O; 64 collegamenti; 1*DP/MPI, 1*PN e 1 vano per moduli IF; mittente e ricevente nella comunicazione diretta; equidistanza e elaborazione con funzionamento in sincronismo di clock; routing; routing record dati; funzione di multicomputing; PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 2 porte; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.1
+
+[2364134]
+SHORTNAME=MPI/DP
+
+[2364135]
+InfoText=Controller PROFINET IO della CPU 416-3 PN/DP
+SHORTNAME=PN-IO
+
+[2364137]
+KatEntryName=V5.1
+SHORTNAME=CPU 416F-3 PN/DP
+InfoText=Memoria di lavoro 5,6 MB di codice e 5,6 MB di dati; 0,030 ms/kAW; 16KB DI/O; 64 collegamenti; 1*DP/MPI, 1*PN e 1 vano per moduli IF; mittente e ricevente nella comunicazione diretta; equidistanza e elaborazione con funzionamento in sincronismo di clock; routing; routing record dati; funzione di multicomputing; PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 2 porte; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.1. Per applicazioni di sicurezza; supporta PROFIsafe V2
+
+[2364138]
+SHORTNAME=MPI/DP
+
+[2364139]
+InfoText=Controller PROFINET IO della CPU 416F-3 PN/DP
+SHORTNAME=PN-IO

@@ -1,0 +1,47 @@
+:Base s7upahdb.hlp
+:Title Help on Process Diagnostics with S7-PDIAG
+1 Introduction=HIDU_TOPIC_INTRODUCE
+1 About Help=HIDU_TOPIC_USAGE
+1 Getting Started=HIDU_TOPIC_FIRSTSTEPS
+1 Icons=Symbole
+1 Dialogs
+2 "Termination Addresses" Dialog Box=HIDD_ABBOP_DIALOG
+2 "Exclusion Address" Dialog Box=HIDD_ASOP_DIALOG
+2 "Edit" Dialog Box=Dialogfeld_Bearbeiten
+2 "Motion Screen" Dialog Box=HIDD_MOTION_DLG
+2 "Image Attributes" Dialog Box=HIDD_MUL_BILDATTR
+2 "Group Units" Dialog Box=HIDD_GROUP_DLG
+2 "Customize" Dialog Box=Dialogfeld_Einstellungen
+2 "Export" Dialog Box=Dialogfeld_Exportieren
+2 "Group Definitions" Dialog Box=HIDD_GROUP_WRK
+2 "Find in - ..." Dialog Box=HIDD_MUL_SEARCHDLG
+2 "General" Tab (Edit - ...)=HIDD_MUL_ALLGEMEIN_TYP
+2 "General" Tab (Edit - Units/Motions)=HIDD_MUL_EX_ALLGEMEIN
+2 "General" Tab (Edit - Instances)=HIDD_MUL_ALLGEMEIN
+2 "General" Tab (Customize)=HIDD_FORM_PP1
+2 "Motion" Tab (Edit)=HIDD_MUL_MOTIONATTR
+2 "Units" Tab (Edit)=HIDD_MUL_UNITATTR
+2 "Defaults" Tab (Customize)=HIDD_FORM_PP3
+2 "Compile" Tab (Customize)=HIDD_FORM_PP2
+2 "Monitoring" (Edit - Instances)=HIDD_MUL_FDEFATTR
+2 "Monitoring" Tab (Edit)=HIDD_MUL_FDEFATTR_TYP
+1 Menu Commands
+2 Process Diagnostics Menu=HIDU_MENU_FILE
+2 Edit Menu=HIDU_MENU_EDIT
+2 Insert Menu=HIDU_MENU_INSERT
+2 PLC Menu=HIDU_MENU_TARGET
+2 View Menu=HIDU_MENU_VIEW
+2 Options Menu=HIDU_MENU_OPTION
+2 Window Menu=HIDU_MENU_WINDOW
+2 Help Menu=HIDU_MENU_HELP
+1 Keyboard Operation
+2 Overview of Keyboard Operation=Tastaturbedienung
+2 Hotkeys for Menu Commands=Tastenkombinationen_f_r_Men_befehle
+2 Shortcuts for Menu Commands=Shortcuts_f_r_Men_befehle
+2 Selecting Menu Commands Using the Keyboard=Bewegen_der_Einf_gemarke_in_der_Men_leiste_PopUp_Men
+2 Moving the Text Cursor=Bewegen_der_Einf_gemarke_beim_Bearbeiten_von_Texten
+2 Moving the Cursor in Dialog Boxes=Bewegen_der_Einf_gemarke_in_Dialogfeldern
+2 Using the Keyboard to Select Text=Markieren_von_Texten_mit_Tastenbefehlen
+2 Selecting Objects from the Tree Structure=Markieren_von_Objekten_in_der_Verzeichnisstruktur
+2 International/German Keyboard Layout=Tastenbezeichnung_International_Deutsch
+2 Access to Help via Keyboard=Zugriff_auf_die_Hilfe_mit_Tastenbefehlen

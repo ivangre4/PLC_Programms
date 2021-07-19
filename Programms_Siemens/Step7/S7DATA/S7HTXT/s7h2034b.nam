@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2034
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S 4DO/8DO/8DI
+
+;---------- DO 4xDC24V/0,5A SINK OUTPUT,   6ES7 132-4BD50-0AA0
+[2366961]
+KatEntryName=4DO DC24V/0,5A SINK OUT
+InfoText=Digital output module DO 4xDC24V/0.5A, SINK OUTPUT; switching M, supports isochrone mode
+SHORTNAME=4DO DC24V/0,5A SINK OUT
+
+
+;---------- DO 8xDC24V/0,5A SINK OUTPUT,   6ES7 132-4BF50-0AA0
+[2366962]
+KatEntryName=8DO DC24V/0,5A SINK OUT
+InfoText=Digital output module DO 8xDC24V/0.5A, SINK OUTPUT; switching M, supports isochrone mode
+SHORTNAME=8DO DC24V/0,5A SINK OUT
+
+
+;---------- 8DI DC24V/SRC ST,   6ES7 131-4BF50-0AA0
+[2366963]
+KatEntryName=8DI DC24V/SRC ST
+InfoText=Digital input module 8DI DC24V, SOURCE INPUT; reading M, supports isochrone mode
+SHORTNAME=8DI DC24V/SRC ST
+

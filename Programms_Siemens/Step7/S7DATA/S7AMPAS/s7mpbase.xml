@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) Siemens AG 2002. All Rights Reserved. Confidential. -->
+<Steps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="s7ampas.xsd" ResourcePath="s7ampas">
+	<!-- Subnetze zusammenführen / trennen -->
+	<Step ID="1000">
+		<Resource Position="Tree" ID="3"/>
+		<Resource Position="Title" ID="3"/>
+		<Resource Position="Description" ID="15"/>
+	</Step>
+	<!-- Ethernet-Subnetze zusammenführen / trennen -->
+	<Step ID="1100" ParentID="1000" ObjType="1331459" TypeVerb="43966">
+		<Resource Position="Tree" ID="6"/>
+		<Resource Position="Title" ID="9"/>
+		<Resource Position="Description" ID="12"/>
+	</Step>
+	<!-- MPI-Subnetze zusammenführen / trennen -->
+	<Step ID="1200" ParentID="1000" ObjType="1331457" TypeVerb="43966">
+		<Resource Position="Tree" ID="4"/>
+		<Resource Position="Title" ID="7"/>
+		<Resource Position="Description" ID="10"/>
+	</Step>
+	<!-- PROFIBUS-Subnetze zusammenführen / trennen -->
+	<Step ID="1300" ParentID="1000" ObjType="1331458" TypeVerb="43966">
+		<Resource Position="Tree" ID="5"/>
+		<Resource Position="Title" ID="8"/>
+		<Resource Position="Description" ID="11"/>
+	</Step>
+	<!-- Verbindungen zusammenführen -->
+	<Step ID="2000" ObjType="1122320" TypeVerb="8196">
+		<Resource Position="Tree" ID="2"/>
+		<Resource Position="Title" ID="2"/>
+		<Resource Position="Description" ID="1"/>
+		<Resource Position="Error" ID="16"/>
+		<Resource Position="Success" ID="17"/>
+		<Resource Position="NothingToDo" ID="18"/>
+		<Relation SourceType="12" RelID="205" TargetType="12"/>
+	</Step>
+</Steps>
+<!-- Copyright (C) Siemens AG 2002. All Rights Reserved. Confidential. -->

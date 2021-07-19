@@ -1,0 +1,34 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2039
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Counter modules 5V V2.0 for ET 200S; counter operation, measurement operation, position encoding, Fast Mode
+
+;---------- 1 COUNT 5V C,   6ES7 138-4DE02-0AB0 C
+[2367033]
+KatEntryName=1 COUNT 5V counter operation V2.0
+InfoText=Counter module, 5V for once-only, endless and periodic counting, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 5V C V2.0
+
+
+;---------- 1 COUNT 5V M,   6ES7 138-4DE02-0AB0 M
+[2367050]
+KatEntryName=1 COUNT 5V measurement operation V2.0
+InfoText=Counter module, 5V for measurement of rotational speed, frequency and period measuring, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 5V M V2.0
+
+
+;---------- 1 COUNT 5V W,   6ES7 138-4DE02-0AB0 W
+[2367051]
+KatEntryName=1 COUNT 5V position feedback V2.0
+InfoText=Counter module, 5V for position feedback, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 5V W V2.0
+
+
+;---------- 1 COUNT 5V F,   6ES7 138-4DE02-0AB0 F
+[2367052]
+KatEntryName=1 COUNT 5V Fast Mode V2.0
+InfoText=Counter module, 5V for fast counting, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 5V F V2.0
+

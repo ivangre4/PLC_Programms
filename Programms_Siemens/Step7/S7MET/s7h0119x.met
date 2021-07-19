@@ -1,0 +1,136 @@
+;---------------------------------------------------------------------------
+;   ACHTUNG:
+;   ========
+;   Wegen einer PDM-Spezialität MUSS man als Parent-Objekt-Typ den Typ einer
+;   Baugruppe mit ACHT Kanaelen verwenden.
+;   Insbesondere sind deshalb die frueheren (zwei-kanaligen) HART-Baugruppen
+;   NICHT ERLAUBT.
+;   Siehe dazu AP00224861.
+;---------------------------------------------------------------------------
+
+; ----------------------------- HART-AI300-Baugruppe fuer ET200M-Slave
+[_S7H_HSP_6ES7_331_7TF01_CT]
+server=s7h0119x.dll
+prefix=OM
+ObjType=2364038
+basetype=_S7H_6ES7_331_7NF00_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=1314946
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x3CC1
+MLFB=6ES7 331-7TF01-0AB0
+IS_PARAMETRIZEABLE=1
+OM_VERSION_INDEPENDENT=1
+
+; ADDRESS_RANGE_CODE fuer Konsistenz ueber gesamte Laenge
+ADDRESS_RANGE_CODE=7
+
+IO_TYPE=4
+IN_ADDRESS_RANGE=16 
+OUT_ADDRESS_RANGE=16 
+COUNT_INPUT_CHANNELS_ANALOG=8 
+COUNT_INPUT_GROUPS_ANALOG=8 
+MAX_NUM_OF_CHILDS=8
+FIRST_VISIBLE_CHILD_NO=1 
+IUA_SUPPORT=1
+IUM_SUPPORT=1
+
+REDUNDANZ=0x08
+RED_PAR_TYPE=0x42
+
+DATA_CHECK_ARWB=1 
+D_USE=1
+IO_ADDRESS_EQUAL=1
+HART_VISIBLE_SLOTOFFSET=-1
+
+; Eintraege fuer "Zielsystem >> Firmware aktualisieren"
+; Laut AP00384731 soll der Button "Firmware nach Laden aktivieren"
+; ZWANGSWEISE gesetzt sein
+;
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_ASK4POST_RESET=0
+FW_DOWNLOAD_POST_RESET_DEFAULT=1
+
+; Eintraege fuer PDM-Anschluss der HART-Feldgeraete
+;
+DeviceSelectionPath=DP\IO-Systeme\Siemens\ET200M\Module\MODUL_AI8_HART1
+FC_DLL=p7sp_fc_hart_rio_x.dll 
+
+PLUG_CLASS=0x00200010
+HSP_ID=0119
+HSP_NAME=AI/AO 8x16Bit HART
+SHORTNAME=AI8xHART
+paramDescr=tfi0119x.dsc
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+MODULEDESC = ET200M_AI8moddesc.xml
+
+; ----------------------------- HART-AO300-Baugruppe fuer ET200M-Slave
+[_S7H_HSP_6ES7_332_8TF01_CT]
+server=s7h0119x.dll
+prefix=OM
+ObjType=2364039
+basetype=_S7H_6ES7_332_5HF00_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=1314949
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x4CC1
+MLFB=6ES7 332-8TF01-0AB0
+IS_PARAMETRIZEABLE=1
+OM_VERSION_INDEPENDENT=1
+
+; ADDRESS_RANGE_CODE fuer Konsistenz ueber gesamte Laenge
+ADDRESS_RANGE_CODE=7
+
+IO_TYPE=4
+IN_ADDRESS_RANGE=16 
+OUT_ADDRESS_RANGE=16 
+COUNT_OUTPUT_CHANNELS_ANALOG=8 
+COUNT_OUTPUT_GROUPS_ANALOG=8 
+MAX_NUM_OF_CHILDS=8
+FIRST_VISIBLE_CHILD_NO=1 
+IUA_SUPPORT=1
+IUM_SUPPORT=1
+
+REDUNDANZ=0x08
+RED_PAR_TYPE=0xC2
+
+DATA_CHECK_ARWB=1
+D_USE=1
+IO_ADDRESS_EQUAL=1
+HART_VISIBLE_SLOTOFFSET=-1
+
+; Eintraege fuer "Zielsystem >> Firmware aktualisieren"
+; Laut AP00384731 soll der Button "Firmware nach Laden aktivieren"
+; ZWANGSWEISE gesetzt sein
+;
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_ASK4POST_RESET=0
+FW_DOWNLOAD_POST_RESET_DEFAULT=1
+
+; Eintraege fuer PDM-Anschluss der HART-Feldgeraete
+;
+DeviceSelectionPath=DP\IO-Systeme\Siemens\ET200M\Module\MODUL_AO8_HART1
+FC_DLL=p7sp_fc_hart_rio_x.dll 
+
+PLUG_CLASS=0x00200010
+HSP_ID=0119
+HSP_NAME=AI/AO 8x16Bit HART
+SHORTNAME=AO8xHART
+paramDescr=tfo0119x.dsc
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+
+;----------------------------- HART SUBMODUL für HSP0119
+[_S7H_HSP_SUBMODUL_HART__TF01_CT]
+server=s7hk33ax.dll
+prefix=OM
+ObjType=2364040
+basetype=_S7H_HART_SUBMODUL_CT
+CatalogParent=2364038,2364039
+HWCNFX_VER=5.4.3.0|0
+HWCNFX_FOR_HWU=5.4.3.0
+HSP_NAME=AI/AO 8x16Bit HART
+HSP_ID=0119

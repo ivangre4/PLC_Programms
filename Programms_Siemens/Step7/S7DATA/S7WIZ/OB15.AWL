@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Time of Day Interrupt 5"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB15_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB15_STRT_INFO : BYTE ;	//16#16 (OB 15 has started)
+  OB15_PRIORITY : BYTE ;	//2 (Priority of 1 is lowest)
+  OB15_OB_NUMBR : BYTE ;	//15 (Organization block 15, OB15)
+  OB15_RESERVED_1 : BYTE ;	//Reserved for system
+  OB15_RESERVED_2 : BYTE ;	//Reserved for system
+  OB15_PERIOD_EXE : WORD ;	//Period of execution (once, per minute/hour/day/week/month/year)
+  OB15_RESERVED_3 : INT ;	//Reserved for system
+  OB15_RESERVED_4 : INT ;	//Reserved for system
+  OB15_DATE_TIME : DATE_AND_TIME ;	//Date and time OB15 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

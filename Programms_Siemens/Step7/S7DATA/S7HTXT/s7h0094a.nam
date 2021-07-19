@@ -1,0 +1,71 @@
+[2363843]
+KatEntryName=V5.0
+SHORTNAME=CPU 414-3 PN/DP
+InfoText=Arbeitsspeicher 1,4 MB Code und 1,4 MB Daten; 0,045 ms/kAW; 8KB DI/O; 32 Verbindungen; 1*DP/MPI, 1*PN und 1 Schacht für IF-Module; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Multicomputingfähig; PROFINET IO-Controller; unterstützt RT; PROFINET Schnittstelle und 2 Ports; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.0
+Comment=6ES7 414-3EM05-0AB0, 6ES7 416-3FR05-0AB0, 6ES7 416-3ER05-0AB0
+
+[2363845]
+SHORTNAME=MPI/DP
+
+[2363846]
+InfoText=PROFINET IO-Controller der CPU 414-3 PN/DP
+SHORTNAME=PN-IO
+
+
+
+[2363848]
+KatEntryName=V5.0
+SHORTNAME=CPU 416F-3 PN/DP
+InfoText=Arbeitsspeicher 5,6 MB Code und 5,6 MB Daten; 0,030 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI, 1*PN und 1 Schacht für IF-Module; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz und taktsynchrone Bearbeitung; Routing; Multicomputingfähig; PROFINET IO-Controller; unterstützt RT; PROFINET Schnittstelle und 2 Ports; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.0. Einsetzbar für Sicherheitsanwendungen; unterstützt PROFIsafe V2
+
+[2363850]
+SHORTNAME=MPI/DP
+
+[2363851]
+InfoText=PROFINET IO-Controller der CPU 416F-3 PN/DP
+SHORTNAME=PN-IO
+
+
+
+[2363853]
+KatEntryName=V5.0
+SHORTNAME=CPU 416-3 PN/DP
+InfoText=Arbeitsspeicher 5,6 MB Code und 5,6 MB Daten; 0,030 ms/kAW; 16KB DI/O; 64 Verbindungen; 1*DP/MPI, 1*PN und 1 Schacht für IF-Module; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; Multicomputingfähig; PROFINET IO-Controller; unterstützt RT; PROFINET Schnittstelle und 2 Ports; PROFINET CBA; PROFINET CBA-Proxy; Firmware V5.0.
+
+[2363855]
+SHORTNAME=MPI/DP
+
+[2363856]
+InfoText=PROFINET IO-Controller der CPU 416-3 PN/DP
+SHORTNAME=PN-IO
+
+
+
+[2363847]
+KatEntryName=CPU 414-3 PN/DP
+InfoText=Zentralbaugruppen des Typs CPU 414-3 PN/DP
+
+[2363852]
+KatEntryName=CPU 416F-3 PN/DP
+InfoText=Zentralbaugruppen des Typs CPU 416F-3 PN/DP
+
+[2363857]
+KatEntryName=CPU 416-3 PN/DP
+InfoText=Zentralbaugruppen des Typs CPU 416-3 PN/DP
+
+
+
+[2363858]
+KatEntryName=6ES7 414-3EM05-0AB0
+SHORTNAME=CPU 414-3 PN/DP
+InfoText=
+
+[2363859]
+KatEntryName=6ES7 416-3FR05-0AB0
+SHORTNAME=CPU 416F-3 PN/DP
+InfoText=
+
+[2363860]
+KatEntryName=6ES7 416-3ER05-0AB0
+SHORTNAME=CPU 416-3 PN/DP
+InfoText=

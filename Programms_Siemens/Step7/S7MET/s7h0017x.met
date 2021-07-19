@@ -1,0 +1,71 @@
+; ----------------------------- Kataloghierarchieobjekt C7 636 Touch
+[_S7H_HSP_C7_636_TOUCH_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363536
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=1315061
+IsCatEntry=1
+nKatChilds=0
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_NAME=C7 636 Touch V2.0
+HSP_ID=0017
+
+; ----------------------------- Kataloghierarchieobjekt CPU FW
+[_S7H_HSP_6ES7_636_2EB00_FOLDER_AT]
+abstract=true
+prefix=OM
+ObjType=2363535
+basetype=_S7H_KATALOGFOLDDER_AT
+CatalogParent=2363536
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 636-2EB00-0AE3
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_NAME=C7 636 Touch V2.0
+HSP_ID=0017
+
+; ----------------------------- C7-636 Touch
+[_S7H_HSP_6ES7_636_2EB00_0AE3_V20_CT]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=2363533
+basetype=_S7H_CASRACK300_CT
+CLASS_PROPERTIES=0
+nKatChilds=0
+MLFB=6ES7 636-2EB00-0AE3
+FW_VERSION=V2.0
+S7_TYPE_CODE=0x9EC0
+SHORTNAME=C7 636 Touch
+CountAutoCreatedChilds=1
+AutoCreatedChild1=2363534, 2, FIXED
+ICON_TYPE=9
+CatalogParent=2363535
+IsCatEntry=1
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_NAME=C7 636 Touch V2.0
+HSP_ID=0017
+
+[_S7H_HSP_CAS_CPU_636_2EB00_V20_CT]
+server=S7HWCPUX.DLL
+prefix=OM
+ObjType=2363534
+basetype=_S7H_6ES7_315_2AG10_0AB0_CT
+IsCatEntry=0
+MLFB=
+ALTERNATIVE_MLFB=6ES7 636-2EB00-0AE3
+FW_VERSION=V2.0
+SHORTNAME=C7 CPU 636 Touch
+CountAutoCreatedChilds=5
+AutoCreatedChild2=1316238, 2, FIXED
+AutoCreatedChild3=1316236, 3, FIXED
+AutoCreatedChild4=1322034, 4, FIXED
+AutoCreatedChild5=1322036, 5, FIXED
+MAX_NUM_OF_CHILDS=5
+HWCNFX_VER=5.3.2.0|0
+HWCNFX_FOR_HWU=5.2.1.0
+HSP_NAME=C7 636 Touch V2.0
+HSP_ID=0017

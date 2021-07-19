@@ -1,0 +1,60 @@
+[2363865]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 32 Ko; 0,2ms/kinst; DI10/DO6 intégrées; 2 sorties d'impulsion (2,5kHz); comptage et mesure sur 2 voies avec codeurs incrémentaux 24V (10kHz); port MPI; configuration à une rangée jusqu'à 8 modules; firmware V2.0
+SHORTNAME=CPU 312C
+Comment=6ES7 312-5BE03-0AB0, 6ES7 313-5BF03-0AB0, 6ES7 313-6BF03-0AB0, 6ES7 313-6CF03-0AB0, 6ES7 314-6BG03-0AB0, 6ES7 314-6CG03-0AB0
+
+[2363867]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 64 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure sur 3 voies avec codeurs incrémentaux 24V (30kHz); port MPI; configuration multi-rangées jusqu'à 31 modules; firmware V2.0
+SHORTNAME=CPU 313C
+
+[2363869]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 64 Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); 3 voies pour comptage et mesure avec codeurs incrémentaux 24V (30kHz); ports MPI+ PtP (RS422/485 (ASCII, 3964(R))); configuration multi-rangées jusqu'à 31 modules; Firmware V2.0
+SHORTNAME=CPU 313C-2 PtP
+
+[2363871]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 64 Ko; 0,1ms/kinst; DI16/DO16 intégrées; 3 sorties d'impulsion (2,5kHz); comptage et mesure sur 3 voies avec codeurs incrémentaux 24V (30kHz); ports MPI+ DP (maître DP ou esclave DP); configuration multi-rangées jusqu'à 31 modules; échange direct de données possible (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); firmware V2.0
+SHORTNAME=CPU 313C-2 DP
+
+[2363873]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 96 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ PtP (RS422/485 (ASCII, 3964(R), RK512)); configuration multi-rangées jusqu'à 31 modules; Firmware V2.0
+SHORTNAME=CPU 314C-2 PtP
+
+[2363875]
+KatEntryName = V2.0
+InfoText = Mémoire de travail 96 Ko; 0,1ms/kinst; DI24/DO16; AI5/AO2 intégrées; 4 sorties d'impulsion (2,5kHz); 4 voies pour comptage et mesure avec codeurs incrémentaux 24V (60kHz); fonction de positionnement intégrée; ports MPI+ DP (Maître ou esclave DP); configuration multi-rangées jusqu'à 31 modules; échange de données direct possible (émetteur et récepteur); équidistance; routage; communication S7 (FB/FC chargeables); Firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+
+[2363866]
+KatEntryName = 6ES7 312-5BE03-0AB0
+InfoText = 
+SHORTNAME=CPU 312C
+
+[2363868]
+KatEntryName = 6ES7 313-5BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C
+
+[2363870]
+KatEntryName = 6ES7 313-6BF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 PtP
+
+[2363872]
+KatEntryName = 6ES7 313-6CF03-0AB0
+InfoText = 
+SHORTNAME=CPU 313C-2 DP
+
+[2363874]
+KatEntryName = 6ES7 314-6BG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 PtP
+
+[2363876]
+KatEntryName = 6ES7 314-6CG03-0AB0
+InfoText = 
+SHORTNAME=CPU 314C-2 DP

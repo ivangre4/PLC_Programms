@@ -1,0 +1,315 @@
+@DB_TYP SDB3100_L2_300_CONVERT    V0.01  DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+ALL
+{
+ 	ALL_DATA$LNG	DM||||	# für lokale Zwecke
+	ALL_DATA
+	{
+		PBL_SDB_KENNUNG$NAM		_M||||
+		PBL_SDB_KENNUNG
+		{
+			PBL_SDB_KENNUNG$LNG	BM||||
+			PBL_SDB_KENNUNG_ID	BC|1|||
+			BAUGRUPPENTYP		SM||||
+			SDB_INHALT			SC|0|||
+			UEBERTRAGUNGSATTR	BM|3|||		# in V2.1 = 0 !
+			SDB_KENNUNG_RESV	BM|0|||		
+			TSAP_ID_TYP			BM|0|||		# K-Bus/Partyline
+			DEVICE_ID			BM|0|||		# K-Bus, ohne Bedeutung
+			TSAP_ID1			BM|0xfe|||	# PG-Verbindung			
+			TSAP_ID2			BM|0|||		# ohne Bedeutung
+			NEXT_STADDR			BM|0|||		# ohne Bedeutung
+			REM_STADDR			BM|0|||		# Rack/Steckplatz			
+		}
+
+		PBL_L2_BUSPARA$NAM		_M||||
+		PBL_L2_BUSPARA
+		{
+			PBL_L2_BUSPARA_ID	BC|2|||
+			PBL_L2_BUSPARA_RESV	BC|0|||
+			PBL_L2_BUSPARA$LNG	WM||||
+
+			# Highest Station Adress
+			Hsa			BM||2|126|
+
+			# (Parameter ignored) SINEC L2 Adress			
+			Ts			BM||0|126|
+			
+			# Stationtype ( Master or Slave)
+			StationType		WM||||
+			
+			# Baudrate
+			BaudRate		WM||0|12|
+			
+			# Medium Redundancy
+			MediumRed		WM||||
+#?
+			# Requester Send Retry Counter
+			RetryCtr		WM||0|7|
+
+			# Default Adress, used for Telegram without Adress Extension
+			DefaultSap		BC|0xff|||		# AUT1 has other value in subnet
+#?
+			# Network Conection Sap
+			NetwkConSap		BC|0|||			# no value in subnet
+#?
+			# Slot Time
+			Tsl			WM||35|16383|
+
+			#Transmitter Fall Time
+			Tqui			WM||0|31|
+
+			# Setuptime
+			Tsel			WM||0|494|
+
+			# Minimum Station Delay Time
+			MinTsdr			WM||11|255|
+
+			# Maximum Station Delay Time
+			MaxTsdr			WM||35|1023|
+
+			# Target Rotation Time
+			Ttr			DM||35|16777215|
+
+			# Gap Update Factor
+			G			BM||1|100|
+
+			# Always true
+			InRingDesired		WM||||
+
+			# Always RS485
+			PhysicalLayer		WM||||
+		}
+		
+		PBL_UHRZEIT$NAM _O||||
+		PBL_UHRZEIT
+		{
+			PBL_UHRZEIT_ID		BC|4|||
+			PBL_UHRZEIT_RESV	BC|0|||
+			PBL_UHRZEIT$LNG		WM||||
+			UHRZEIT_Val		WM|1|0|1|
+		}
+
+		PBL_DPMODE$NAM _M||||
+		PBL_DPMODE
+		{
+			PBL_ID_DP_MODE		BC|6|||
+			PBL_ID_DP_MODE_RESV	BC|0|||
+			PBL_DPMODE$LNG		WM||||
+			ID_DP_MODE_Val		BM|0|0|2|
+			ID_DP_MODE_RESV		BC|0|||
+		}
+		
+		# CP-Ident Block für CP342-5 ab Firmware 4.0 (elektrische und LWL-Variante)
+		PBL_CP_IDENT$NAM _O||||
+		PBL_CP_IDENT
+		{
+			PBL_ID_CP_IDENT		BC|0x18|||
+			PBL_ID_CP_IDENT_RESV	BC|0|||
+			PBL_CP_IDENT$LNG	WM||||
+			PNO_NR_DP_MASTER	WM|0x8092|||
+			PNO_NR_DP_SLAVE		WM|0x8093|||
+			PBUS_MODE		BM|1|||
+			ID_CP_IDENT_RESV	BC|0|||
+		}
+
+		PBL_DP_DELAYTIME$NAM _O||||
+		PBL_DP_DELAYTIME
+		{
+			PBL_ID_DP_DELAYTIME	BC|7|||
+			PBL_ID_DP_DELAYTIME_RESV	BC|0|||
+			PBL_DP_DELAYTIME$LNG	WM||||
+			DELAYTIME_Val		WM||||
+		}
+
+
+		PBL_PRIVATE$NAM _O||||
+		PBL_PRIVATE
+		{
+			PBL_ID_PRIVATE			BC|0xFE|||
+			PBL_ID_PRIVATE_RESV		BC|0|||
+			PBL_PRIVATE$LNG			WM||||
+
+			PBL_PRIV1		# Netzeigenschaften
+			{		
+				PBL_PRIV1_ID			WC|1|||
+				PBL_PRIV1$LNG			WM||||
+					
+				NETID					HM||6|6|6	# AUT_NET_UNIQUE_ID_LB
+				NETNAME					AM||1|24|25	# AUT_NAME
+
+					# ATT_NETCONFIG_ENABLE_B	  TRUE						FALSE
+				ACT_STATION				BM||||	# ATT_NETCONFIG_AKTIV_B		ATT_CNT_ACT_NODES_B
+				PAS_STATION				BM||||	# ATT_NETCONFIG_PASSIV_B	ATT_CNT_PAS_NODES_B
+				SPE_STATION				BM||||	# ATT_NETCONFIG_XYZ_B		ATT_CNT_XYZ_NODES_B			
+					#	Anmerkung: Setzen der Attribute unabhängig vom
+					# Unterscheidungskriterium in den Attributen 
+					# ATT_NETCONFIG_AKTIV_B, ATT_NETCONFIG_PASSIV_B und ATT_NETCONFIG_XYZ_B
+
+				#	L2-Netzeigenschaften
+#				HSA						BM||||	# ATT_HSA_B
+#				BAUDRATE				BM||||	# ATT_BAUDRATE_B
+				PROFILE					BM||||	# ATT_L2_PROFILE_SELECTION_B 
+				DP_ONLY					BM||||	# ATT_L2_DP_ONLY_B
+#				TTR						DM||||	# ATT_TTR_L
+				WATCHDOG				DM||||	# ATT_WATCHDOG_L
+
+				# if "benutzerdefiniertes Profil"
+#				TSL						WM|0|||	# ATT_TSL_S
+#				MAX_TSDR				WM|0|||	# ATT_MAX_TSDR_S
+#				MIN_TSDR				WM|0|||	# ATT_MIN_TSDR_S
+#				TSET					WM|0|||	# ATT_TSET_S
+#				TQUI					WM|0|||	# ATT_TQUI_S
+#				GAP						BM|0|||	# ATT_GAP_B
+#				RETRY_CTR				BM|0|||	# ATT_RETRY_CTR_B
+				TREADY					BM|0|||	# ATT_TREADY_B
+				TIDLE1					WM|0|||	# ATT_IDLE1_S
+				TIDLE2					WM|0|||	# ATT_IDLE2_S
+			}
+
+			PBL_PRIV2$NAM	_O||||
+			PBL_PRIV2
+			{
+				PBL_PRIV2_ID			WC|2|||
+				PBL_PRIV2$LNG			WM||||
+				DPSLAVE_SUBSYSID		DM|0|||	
+				MASTER_TS				BM|0|||
+				RES						BC|0|||
+			}
+
+			PBL_PRIV3$NAM	_O||||
+			PBL_PRIV3
+			{
+				PBL_PRIV3_ID			WC|3|||
+				PBL_PRIV3$LNG			WM||||
+				CNT_REPEATER			DM||||	# ATT_CNT_REPEATER_L
+				CU_WIRE_LENGTH			DM||||	# ATT_CU_WIRE_LENGTH_L
+				LWL_WIRE_LENGTH			DM||||	# ATT_LWL_WIRE_LENGTH_L
+				CNT_OLM					DM||||	# ATT_CNT_OLM_L
+			}
+
+			PBL_NETCONFIG_PRIV5$NAM		_O||||
+			PBL_NETCONFIG_PRIV5
+			{
+				PBL_NETCONFIG_PRIV5_ID			WC|5|||
+				PBL_NETCONFIG_PRIV5$LNG			WM||||
+				
+				# Atttibute für Netzteilnehmer
+				# im Dialog einzustellen
+				NETCONFIG_ENABLE			BM||||	# ATT_NETCONFIG_ENABLE_B
+				NETCONFIG_AKTIV				BM||||	# ATT_NETCONFIG_AKTIV_B
+				NETCONFIG_PASSIV			BM||||	# ATT_NETCONFIG_PASSIV_B
+				NETCONFIG_XYZ				BM||||	# ATT_NETCONFIG_XYZ_B
+				NETCONFIG_BUSLAST			BM||||	# ATT_NETCONFIG_BUSLAST_B
+				#berechnet
+				CNT_ACT_NODES				BM||||	# ATT_CNT_ACT_NODES_B
+				CNT_PAS_NODES				BM||||	# ATT_CNT_PAS_NODES_B
+				CNT_XYZ_NODES				BM||||	# ATT_CNT_XYZ_NODES_B
+
+				# Attribute für OLM's
+				# im Dialog einzustellen
+				OLM_CONFIG_ENABLE			BM||||	# ATT_OLM_CONFIG_ENABLE_B
+				DLG_CNT_REPEATER			DM||||	# ATT_DLG_CNT_REPEATER_L
+				DLG_CU_WIRE_LENGTH			DM||||	# ATT_DLG_CU_WIRE_LENGTH_L
+				DLG_LWL_WIRE_LENGTH			DM||||	# ATT_DLG_LWL_WIRE_LENGTH_L
+				DLG_CNT_OLM				DM||||	# ATT_DLG_CNT_OLM_L
+				# berechnete sind in PBL_PRIV3
+				# für gerade Blocklänge
+				RES					BC|0|||
+			}
+
+			RESERV_ALL_BLOCK1$NAM _A||||
+			RESERV_ALL_BLOCK1
+			{
+				RESERV_ALL1		BM|0|||
+			}
+
+		}
+
+		PBL_BUSPROFIL$NAM _O||||
+		PBL_BUSPROFIL
+		{
+			PBL_BUSPROFIL_ID	BC|8|||
+			PBL_BUSPROFIL_RESV	BC|0|||
+			PBL_BUSPROFIL$LNG	WM||||
+
+			busprofil					BM|0|||
+			betriebsart					BM|0|||
+			aequi_funktionen			BM|0|||
+			number_master_cl2_allowed	BM|0xff|||
+			token_hold_time				DM|0|||
+			azykl_req_ctr				WM|0xffff|||
+			aequi_intervall				DM|0|||
+			aequi_master				BM|0xff|||
+			untersetzungsfaktor			BM|1|||
+			aequi_passive_pause			WM|0|||
+			token_retry_ctr				BM|0|||
+			data_retry_ctr				BM|0|||
+			publ_ctrl_intervall			DM|10|||
+			t_busctrl_in_ring			WM|0|||
+			t_busctrl_outof_ring		WM|0|||
+			physical_layer				BM|0|||
+			medium_red					BM|0|||
+			aequi_group					BM|0|||
+			aequi_command				BM|0|||
+			aequi_clock_sap				BM|58|||
+			aequi_clock_cmd_len			BM|2|||
+			aequi_max_clock_tjitter		BM|10|||
+			maxActiveStation			BM|0|0|0x7e|
+			bus_profil_trans_interval	WM|0xffff|||
+			all_slave_data_time			DM|0|||
+			sync_optimize				DM|0|||
+			asic_e_debug_control1		WM|0|||
+			asic_e_debug_control2		WM|0|||
+			reserve3					HM|0h000000000000000000000000|12|12|12
+		}
+
+		PBL_TIME_SYNC$NAM _O||||
+		PBL_TIME_SYNC
+		{
+			PBL_TIME_SYNC_ID			BC|9|||
+			PBL_TIME_SYNC_RESV			BC|0|||
+			PBL_TIME_SYNC$LNG			WM||||
+			time_sync_interval			WM|0|||
+			time_sync_mode				BM|0|||
+			time_sync_PB_addr			BM|0xff|||
+			time_sync_PB_addr_alter		BM|0xff|||
+			time_sync_timeout			BM|1|||
+			time_sysn_reserved			HM|0h0000000000000000|8|8|8
+		}
+
+		PBL_DS_ROUTING$NAM	_O||||
+		PBL_DS_ROUTING
+		{
+			PBL_DS_ROUTING_ID			BC|13|||
+			PBL_DS_ROUTING_RESV			BC|0|||
+			PBL_DS_ROUTING$LNG			WM||||
+			ds_rout_val					BM|0|||
+			ds_rout_reserved			BM|0|||
+		}
+
+		# Block zur Aktivierung des OP-Multiplexers
+		PBL_OPMUX_ENABLE$NAM _O||||
+		PBL_OPMUX_ENABLE
+		{
+			PBL_ID_OPMUX_ENABLE		BC|0x11|||		# Parameterblock-ID 
+			PBL_ID_OPMUX_ENABLE_RESV	BC|0|||
+			PBL_OPMUX_ENABLE$LNG		WM||||			# Länge des ganzen Parameterblocks
+			MPI_ADR_CPU			BM|2|||			# MPI-Adresse der CPU
+			FORCE_OPMUX_CHANNEL		BM|0x00|||		# 1 = es wird immer der hier eingetragene TSAP verwendet
+			REMOTE_TSAP_TYP			BM|0x03|||		# Verbindungsresource
+			REMOTE_RS			BM|0x02|||		# Rack/Slot der CPU, im AS-300 immer 0x2
+			
+		}
+
+		RESERV_ALL_BLOCK$NAM _A||||
+		RESERV_ALL_BLOCK
+		{
+			RESERV_ALL		BM|0|||
+		}
+	}
+}
+
+

@@ -1,0 +1,503 @@
+;  GSD file for IM174, SIEMENS AG
+;  Version: V1.1.1 - Mr. Ren Jinliang, 0086 25 52101888 (Ext.) 328
+;  DATE: 15.01.2009
+;  FILE: SI018133.GSD
+;  ==============================================================
+
+#Profibus_DP
+
+;<Prm-Text-Def-List>
+PrmText = 4
+Text(0) = "Normal mode"
+Text(1) = "611U compliant mode"
+EndPrmText
+PrmText = 8
+Text(0) = "encoder not present"
+Text(1) = "encoder type TTL"
+Text(2) = "encoder type SSI"
+Text(3) = "pulse refeed (stepper only)"
+EndPrmText
+PrmText = 9
+Text(0) = "bipolar spindle (-10V - +10V)"
+Text(1) = "unipolar spindle (0-10V only)"
+EndPrmText
+PrmText = 16
+Text(0) = "187,5 kBaud(S)/0(T)/Res(P)"
+Text(1) = "375   kBaud(S)/1(T)/Res(P)"
+Text(2) = "750   kBaud(S)/2(T)/Res(P)"
+Text(3) = "1,5   MBaud(S)/3(T)/Res(P)"
+Text(4) = "3,0   MBaud(S)/4(T)/Res(P)"
+Text(5) = "Res(S)/5(T)/Res(P)"
+Text(6) = "Res(S)/6(T)/Res(P)"
+Text(7) = "Res(S)/7(T)/Res(P)"
+EndPrmText
+PrmText = 17
+Text(0) = "Right align(S)/0(T)/Res(P)"
+Text(1) = "Pinetree(S)/1(T)"
+EndPrmText
+PrmText = 18
+Text(0) = "Parity off(S)/0(T)/Res(P)"
+Text(1) = "Parity on(S)/1(T)/Res(P)"
+EndPrmText
+PrmText = 19
+Text(0) = "Binary (S)/0(T)/Res(P)"
+Text(1) = "Gray   (S)/1(T)/Res(P)"
+EndPrmText
+PrmText = 20
+Text(0) = "Analog"
+Text(1) = "Stepper"
+EndPrmText
+PrmText = 21
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+PrmText = 22
+Text(0) = "NO"
+Text(1) = "YES"
+EndPrmText
+PrmText = 23
+Text(0) = "DrvRdy:Ready for switching ON"
+Text(1) = "DrvRdy:semantic Operate"
+EndPrmText
+
+;<Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=2 "Shutdown ramp (in ms) LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=3 "Shutdown ramp (in ms) MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=4 "611U compliant mode"
+Bit(7) 0 0-1
+Prm_Text_Ref = 4
+EndExtUserPrmData
+ExtUserPrmData=5 "Version of user data (1-127)"
+;Version of user data is 0x42
+BitArea(0-6) 66 66,66
+EndExtUserPrmData
+ExtUserPrmData=6 "Tolerated MLZ faults (0-15)"
+BitArea(0-3) 0 0-15
+EndExtUserPrmData
+ExtUserPrmData=7 "Reserved"
+BitArea(4-7) 0 0,0
+EndExtUserPrmData
+ExtUserPrmData=8 "Type Encoder1"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 8
+EndExtUserPrmData
+ExtUserPrmData=81 "Type Axis1"
+Bit(2) 0 0-1
+Prm_Text_Ref = 9
+EndExtUserPrmData
+ExtUserPrmData=9  "Type Encoder2"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 8
+EndExtUserPrmData
+ExtUserPrmData=91 "Type Axis2"
+Bit(6) 0 0-1
+Prm_Text_Ref = 9
+EndExtUserPrmData
+ExtUserPrmData=10 "Type Encoder3"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 8
+EndExtUserPrmData
+ExtUserPrmData=101 "Type Axis3"
+Bit(2) 0 0-1
+Prm_Text_Ref = 9
+EndExtUserPrmData
+ExtUserPrmData=11 "Type Encoder4"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 8
+EndExtUserPrmData
+ExtUserPrmData=111 "Type Axis4"
+Bit(6) 0 0-1
+Prm_Text_Ref = 9
+EndExtUserPrmData
+ExtUserPrmData=12 "Shut.DelayAfterTempFail (ms) LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=13 "Shut.DelayAfterTempFail (ms) MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+;ExtUserPrmData=14 "Encoder Resolution(increments per revolution) LSB(SSI/TTL) / Reserved(Pulse Refeeding)"
+ExtUserPrmData=14 "Enc Resol LSB(S/T)/Res(P)"
+;Description Encoder BYTE0
+Unsigned8 0 0-255
+EndExtUserPrmData
+;ExtUserPrmData=15 "Encoder Resolution(increments per revolution) MSB(SSI/TTL) / Reserved(Pulse Refeeding)"
+ExtUserPrmData=15 "Enc Resol MSB(S/T)/Res(P)"
+;Description Encoder BYTE1
+Unsigned8 0 0-255
+EndExtUserPrmData
+;ExtUserPrmData=16 "Baudrate (SSI) / NormSpeed in RPM(LSB,Bit0-2) (TTL) / Reserved(Pulse Refeeding)"
+ExtUserPrmData=16 "Baud(S)/NS Bit0-2(T)/Res(P)"
+;Description Encoder BYTE2, BIT0-2
+BitArea(0-2) 0 0-7
+;for SSI shoulde only be 0-4
+Prm_Text_Ref  =16
+EndExtUserPrmData
+;ExtUserPrmData=17 "MsgLen(0-25) (SSI) / NormSpeed in RPM(LSB,Bit3-7) (TTL) / Reserved(Pulse Refeeding)"
+ExtUserPrmData=17 "MsgL 0-25(S)/NS Bit3-7(T)/Res(P)"
+;Description Encoder BYTE2, BIT3-7
+BitArea(3-7) 0 0-31
+EndExtUserPrmData
+;ExtUserPrmData=18 "Parity (SSI) / NormSpeed in RPM(MSB,Bit0) (TTL) / Reserved(Pulse Refeeding)"
+ExtUserPrmData=18 "Parity(S)/NS Bit8(T)/Res(P)"
+;Description Encoder BYTE3,BIT0
+Bit(0) 0 0-1
+Prm_Text_Ref  =18
+EndExtUserPrmData
+;ExtUserPrmData=19 "Encoding (SSI) / NormSpeed in RPM(MSB,Bit1) (TTL) / Reserved (Pulse Refeeding)"
+ExtUserPrmData=19 "Encoding(S)/NS Bit9(T)/Res(P)"
+;Description Encoder BYTE3,BIT1
+Bit(1) 0 0-1
+Prm_Text_Ref  =19
+EndExtUserPrmData
+;ExtUserPrmData=191 "Format (SSI) / NormSpeed in RPM(MSB,Bit0) (TTL) / Reserved (Pulse Refeeding)"
+ExtUserPrmData=191 "Format(S)/NS Bit10(T)/Res(P)"
+;Description Encoder BYTE3,BIT2
+Bit(2) 0 0-1
+Prm_Text_Ref  =17
+EndExtUserPrmData
+;ExtUserPrmData=192 "Reserved (SSI) / NormSpeed in RPM(LSB,Bit3) (TTL) / Reserved (Pulse Refeeding)"
+ExtUserPrmData=192 "Res(S)/NS BIT11(T)/Res(P)"
+;Description Encoder BYTE3,BIT3
+Bit(3) 0 0-1
+EndExtUserPrmData
+;ExtUserPrmData=193 "Reserved bits for subincremental(0-15) (SSI) / NormSpeed in RPM(MSB) (TTL) / Reserved (Pulse Refeeding)"
+ExtUserPrmData=193 "Res bits(S)/NS B12-15(T)/Res(P)"
+;Description Encoder BYTE3,BIT4-7
+BitArea(4-7) 0 0-15
+;for SSI shoulde only be 0-15
+EndExtUserPrmData
+;ExtUserPrmData=194 "Reserved(SSI) / Reserved bits for subincremental(0-15) (TTL/Pulse Refeeding)"
+ExtUserPrmData=194 "Res(S)/Res bits(T/P)"
+;Description Encoder BYTE4,BIT0-3
+BitArea(0-3) 0 0-15
+EndExtUserPrmData
+;ExtUserPrmData=195 "Reserved(SSI/Pulse Refeeding) /  Provide actual speed val(TTL)"
+ExtUserPrmData=195 "Res(S)/Provide act spd(T)/Res(P)"
+;Description Encoder BYTE4,BIT4-7
+BitArea(4-7) 0 0-1
+Prm_Text_Ref  =22
+EndExtUserPrmData
+ExtUserPrmData=196 "Reserved"
+BitArea(0-7) 0 0,0 
+EndExtUserPrmData
+ExtUserPrmData=20 "Drive Type"
+Bit(0) 0 0-1
+Prm_Text_Ref  =20
+EndExtUserPrmData
+ExtUserPrmData=21 "Stepper Motor Monitoring"
+Bit(0) 0 0-1
+Prm_Text_Ref  =21
+EndExtUserPrmData
+ExtUserPrmData=211 "Alternative DrvRdy"
+Bit(1) 0 0-1
+Prm_Text_Ref  =23
+EndExtUserPrmData
+ExtUserPrmData=22 "Max Frequency [1/s] LSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=221 "Max Frequency [1/s] LSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=222 "Max Frequency [1/s] MSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=223 "Max Frequency [1/s] MSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=23 "Norm Frequency [1/s] LSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=231 "Norm Frequency [1/s] LSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=232 "Norm Frequency [1/s] MSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=233 "Norm Frequency [1/s] MSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=24 "Bero Cycl Dist. [pulses] LSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=241 "Bero Cycl Dist. [pulses] LSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=242 "Bero Cycl Dist. [pulses] MSW LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=243 "Bero Cycl Dist. [pulses] MSW MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=25 "Bero Cycl Tol. [pulses] LSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+ExtUserPrmData=251 "Bero Cycl Tol. [pulses] MSB"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+;<Unit Definition List>
+GSD_Revision        = 4
+Vendor_Name         = "SIEMENS"
+Model_Name          = "IM174"
+Revision            = "V1.1"
+Ident_Number        = 0x8133
+Protocol_Ident      = 0
+OrderNumber         = "6ES7 174-0AA10-0AA0"
+Station_Type        = 0
+FMS_supp            = 0 
+Hardware_Release    = "01"
+Software_Release    = "V1.1.0"
+
+;<Channel-Diag>
+Channel_Diag(16) = "-"
+Channel_Diag(17) = "-"
+Channel_Diag(18) = "-"
+Channel_Diag(19) = "-"
+Channel_Diag(20) = "-"
+Channel_Diag(21) = "-"
+Channel_Diag(22) = "-"
+Channel_Diag(23) = "-"
+Channel_Diag(24) = "-"
+Channel_Diag(25) = "-"
+Channel_Diag(26) = "Falta señal Drive Ready (24V)"
+Channel_Diag(27) = "-"
+Channel_Diag(29) = "Error impulso origen encóder"
+Channel_Diag(30) = "Error sincronización"
+ 
+;  Baud-Rate, TSDR
+9.6_supp   = 1
+19.2_supp  = 1
+45.45_supp  = 1
+93.75_supp = 1
+187.5_supp = 1
+500_supp   = 1
+1.5M_supp  = 1
+3M_supp    = 1
+6M_supp    = 1
+12M_supp   = 1
+; 
+MaxTsdr_9.6   = 15
+MaxTsdr_19.2  = 15
+MaxTsdr_45.45 = 15
+MaxTsdr_93.75 = 15
+MaxTsdr_187.5 = 15
+MaxTsdr_500   = 15
+MaxTsdr_1.5M  = 25
+MaxTsdr_3M    = 50
+MaxTsdr_6M    =100
+MaxTsdr_12M   =200
+; 
+Redundancy = 0                         
+Repeater_Ctrl_Sig = 1                  
+24V_Pins = 0              
+; 
+Implementation_Type ="DPC31"
+Bitmap_Device       ="si8133_n"
+; 
+Freeze_Mode_supp    = 0   
+Sync_Mode_supp      = 0
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+
+;
+;Starting from GSD revision 3
+DPV1_Slave             = 1
+C1_Read_Write_supp     = 1
+C2_Read_Write_supp     = 1
+C1_Read_Write_required = 1
+C2_Read_Write_required = 1
+C1_Max_Data_Len        = 240
+C2_Max_Data_Len        = 240
+;try time out as 1000ms
+C1_Response_Timeout    = 100
+C2_Response_Timeout    = 100
+C2_Max_Count_Channels  = 3
+Max_Initiate_PDU_Length= 244
+Alarm_Type_Mode_supp   = 1
+Diagnostic_Alarm_supp  = 1
+
+Fail_Safe              = 1
+Fail_Safe_required     = 1
+
+;Starting from GSD revision 4
+;
+Prm_Block_Structure_supp = 1
+Prm_Block_Structure_req  = 1
+
+;Starting from GSD revision 5
+Ident_Maintenance_supp = 1
+;
+Isochron_Mode_supp  = 1
+Isochron_Mode_required  = 1
+TBASE_DP            = 1500
+TDP_MIN             = 12
+TDP_MAX             = 64
+T_PLL_W_MAX         = 48
+TBASE_IO            = 1500
+TI_MIN              = 2
+TO_MIN              = 1
+
+; DPV1 header (3) + User Block (98) + Iso Block (28) = 129
+Max_User_Prm_Data_len       = 129
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08,0x62,0x81
+
+Ext_User_Prm_Data_Ref( 5)= 2 
+Ext_User_Prm_Data_Ref( 6)= 3 
+Ext_User_Prm_Data_Ref( 7)= 4 
+Ext_User_Prm_Data_Ref( 7)= 5 
+Ext_User_Prm_Data_Ref( 8)= 6 
+Ext_User_Prm_Data_Ref( 8)= 7 
+Ext_User_Prm_Data_Ref( 9)= 8 
+Ext_User_Prm_Data_Ref( 9)= 81 
+Ext_User_Prm_Data_Ref( 9)= 9 
+Ext_User_Prm_Data_Ref( 9)= 91 
+Ext_User_Prm_Data_Ref(10)= 10
+Ext_User_Prm_Data_Ref(10)= 101
+Ext_User_Prm_Data_Ref(10)= 11
+Ext_User_Prm_Data_Ref(10)= 111
+Ext_User_Prm_Data_Ref(11)= 12
+Ext_User_Prm_Data_Ref(12)= 13
+Ext_User_Prm_Data_Ref(13)= 14   ;parameter of axis 1
+Ext_User_Prm_Data_Ref(14)= 15
+Ext_User_Prm_Data_Ref(15)= 16
+Ext_User_Prm_Data_Ref(15)= 17
+Ext_User_Prm_Data_Ref(16)= 18
+Ext_User_Prm_Data_Ref(16)= 19
+Ext_User_Prm_Data_Ref(16)= 191
+Ext_User_Prm_Data_Ref(16)= 192
+Ext_User_Prm_Data_Ref(16)= 193
+Ext_User_Prm_Data_Ref(17)= 194
+Ext_User_Prm_Data_Ref(17)= 195
+Ext_User_Prm_Data_Ref(18)= 196
+Ext_User_Prm_Data_Ref(19)= 14   ;parameter of axis 2
+Ext_User_Prm_Data_Ref(20)= 15
+Ext_User_Prm_Data_Ref(21)= 16
+Ext_User_Prm_Data_Ref(21)= 17
+Ext_User_Prm_Data_Ref(22)= 18
+Ext_User_Prm_Data_Ref(22)= 19
+Ext_User_Prm_Data_Ref(22)= 191
+Ext_User_Prm_Data_Ref(22)= 192
+Ext_User_Prm_Data_Ref(22)= 193
+Ext_User_Prm_Data_Ref(23)= 194
+Ext_User_Prm_Data_Ref(23)= 195
+Ext_User_Prm_Data_Ref(24)= 196
+Ext_User_Prm_Data_Ref(25)= 14   ;parameter of axis 3
+Ext_User_Prm_Data_Ref(26)= 15
+Ext_User_Prm_Data_Ref(27)= 16
+Ext_User_Prm_Data_Ref(27)= 17
+Ext_User_Prm_Data_Ref(28)= 18
+Ext_User_Prm_Data_Ref(28)= 19
+Ext_User_Prm_Data_Ref(28)= 191
+Ext_User_Prm_Data_Ref(28)= 192
+Ext_User_Prm_Data_Ref(28)= 193
+Ext_User_Prm_Data_Ref(29)= 194
+Ext_User_Prm_Data_Ref(29)= 195
+Ext_User_Prm_Data_Ref(30)= 196
+Ext_User_Prm_Data_Ref(31)= 14   ;parameter of axis 4
+Ext_User_Prm_Data_Ref(32)= 15
+Ext_User_Prm_Data_Ref(33)= 16
+Ext_User_Prm_Data_Ref(33)= 17
+Ext_User_Prm_Data_Ref(34)= 18
+Ext_User_Prm_Data_Ref(34)= 19
+Ext_User_Prm_Data_Ref(34)= 191
+Ext_User_Prm_Data_Ref(34)= 192
+Ext_User_Prm_Data_Ref(34)= 193
+Ext_User_Prm_Data_Ref(35)= 194
+Ext_User_Prm_Data_Ref(35)= 195
+Ext_User_Prm_Data_Ref(36)= 196
+Ext_User_Prm_Data_Ref(37)= 20   ;parameter of drive 1
+Ext_User_Prm_Data_Ref(38)= 21
+Ext_User_Prm_Data_Ref(38)= 211
+Ext_User_Prm_Data_Ref(39)= 22
+Ext_User_Prm_Data_Ref(40)= 221
+Ext_User_Prm_Data_Ref(41)= 222
+Ext_User_Prm_Data_Ref(42)= 223
+Ext_User_Prm_Data_Ref(43)= 23
+Ext_User_Prm_Data_Ref(44)= 231
+Ext_User_Prm_Data_Ref(45)= 232
+Ext_User_Prm_Data_Ref(46)= 233
+Ext_User_Prm_Data_Ref(47)= 24
+Ext_User_Prm_Data_Ref(48)= 241
+Ext_User_Prm_Data_Ref(49)= 242
+Ext_User_Prm_Data_Ref(50)= 243
+Ext_User_Prm_Data_Ref(51)= 25
+Ext_User_Prm_Data_Ref(52)= 251
+Ext_User_Prm_Data_Ref(53)= 20   ;parameter of drive 2
+Ext_User_Prm_Data_Ref(54)= 21
+Ext_User_Prm_Data_Ref(54)= 211
+Ext_User_Prm_Data_Ref(55)= 22
+Ext_User_Prm_Data_Ref(56)= 221
+Ext_User_Prm_Data_Ref(57)= 222
+Ext_User_Prm_Data_Ref(58)= 223
+Ext_User_Prm_Data_Ref(59)= 23
+Ext_User_Prm_Data_Ref(60)= 231
+Ext_User_Prm_Data_Ref(61)= 232
+Ext_User_Prm_Data_Ref(62)= 233
+Ext_User_Prm_Data_Ref(63)= 24
+Ext_User_Prm_Data_Ref(64)= 241
+Ext_User_Prm_Data_Ref(65)= 242
+Ext_User_Prm_Data_Ref(66)= 243
+Ext_User_Prm_Data_Ref(67)= 25
+Ext_User_Prm_Data_Ref(68)= 251
+Ext_User_Prm_Data_Ref(69)= 20   ;parameter of drive 3
+Ext_User_Prm_Data_Ref(70)= 21
+Ext_User_Prm_Data_Ref(70)= 211
+Ext_User_Prm_Data_Ref(71)= 22
+Ext_User_Prm_Data_Ref(72)= 221
+Ext_User_Prm_Data_Ref(73)= 222
+Ext_User_Prm_Data_Ref(74)= 223
+Ext_User_Prm_Data_Ref(75)= 23
+Ext_User_Prm_Data_Ref(76)= 231
+Ext_User_Prm_Data_Ref(77)= 232
+Ext_User_Prm_Data_Ref(78)= 233
+Ext_User_Prm_Data_Ref(79)= 24
+Ext_User_Prm_Data_Ref(80)= 241
+Ext_User_Prm_Data_Ref(81)= 242
+Ext_User_Prm_Data_Ref(82)= 243
+Ext_User_Prm_Data_Ref(83)= 25
+Ext_User_Prm_Data_Ref(84)= 251
+Ext_User_Prm_Data_Ref(85)= 20   ;parameter of drive 4
+Ext_User_Prm_Data_Ref(86)= 21
+Ext_User_Prm_Data_Ref(86)= 211
+Ext_User_Prm_Data_Ref(87)= 22
+Ext_User_Prm_Data_Ref(88)= 221
+Ext_User_Prm_Data_Ref(89)= 222
+Ext_User_Prm_Data_Ref(90)= 223
+Ext_User_Prm_Data_Ref(91)= 23
+Ext_User_Prm_Data_Ref(92)= 231
+Ext_User_Prm_Data_Ref(93)= 232
+Ext_User_Prm_Data_Ref(94)= 233
+Ext_User_Prm_Data_Ref(95)= 24
+Ext_User_Prm_Data_Ref(96)= 241
+Ext_User_Prm_Data_Ref(97)= 242
+Ext_User_Prm_Data_Ref(98)= 243
+Ext_User_Prm_Data_Ref(99)= 25
+Ext_User_Prm_Data_Ref(100)= 251
+
+Min_Slave_Intervall 	=  1
+Modular_Station     	=  1
+Max_Module		        =  5
+Max_Input_Len		= 74
+Max_Output_Len		= 42
+Max_Data_Len		= 116
+Max_Diag_Data_Len   	=  64
+Slave_Family        	=  1@SINUMERIK
+Info_Text               =  "IM174 with PROFIdrive-Functionality with isochronous \
+                            mode and without acyclic parameter access"
+; 
+; Moduldefinitionen
+;
+;<Module-Definition-List>
+Module="1 Axes,PZD-5/9"0xE4,0xD8,0x01,0xFE
+1
+EndModule
+Module="1 Encoder,PZD-2/6"0xE1,0xD5,0x01,0xFE
+2
+EndModule
+Module="1 DIO,PZD-1/1"0xE0,0xD0
+3
+EndModule

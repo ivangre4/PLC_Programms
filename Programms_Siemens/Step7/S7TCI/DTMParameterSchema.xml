@@ -1,0 +1,85 @@
+<Schema name="DTMParameterSchema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:fdt="x-schema:FDTDataTypesSchema.xml">
+	<!--Definition of Attributes-->
+	<AttributeType name="busAddress" dt:type="ui4"/>
+	<AttributeType name="busMasterConfigurationPart" dt:type="bin.hex"/>
+	<AttributeType name="configurationData" dt:type="bin.hex"/>
+	<AttributeType name="moduleId" dt:type="ui4"/>
+	<AttributeType name="moduleTypeId" dt:type="ui4"/>
+	<AttributeType name="redundant" dt:type="boolean"/>
+	<AttributeType name="slaveAddress" dt:type="ui4"/>
+	<AttributeType name="slot" dt:type="ui4"/>
+	<!--Definition of Elements-->
+	<ElementType name="SlaveAddress" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="slaveAddress" required="yes"/>
+	</ElementType>
+	<ElementType name="MasterSlaveBus" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="busAddress" required="yes"/>
+		<attribute type="busMasterConfigurationPart" required="yes"/>
+	</ElementType>
+	<ElementType name="UserDefinedBus" content="mixed" model="open"/>
+	<ElementType name="BusInformation" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+            <attribute type="fdt:busCategory" required="no"/>                                          
+		<element type="fdt:BusRedundancy" maxOccurs="1" minOccurs="0"/>                     
+		<group order="one" minOccurs="0" maxOccurs="*">                                                                                                                                  
+			<element type="SlaveAddress"/>
+			<element type="MasterSlaveBus"/>
+			<element type="UserDefinedBus"/>
+		</group>
+	</ElementType>
+	<ElementType name="ExportedVariables" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="fdt:DtmVariables" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="Module" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="moduleId" required="yes"/>
+		<attribute type="moduleTypeId" required="no"/>
+		<attribute type="slot" required="no"/>
+		<attribute type="redundant" required="no"/>
+		<attribute type="configurationData" required="no"/>
+		<element type="fdt:VersionInformation" minOccurs="1" maxOccurs="1"/>
+		<element type="fdt:ChannelReferences" minOccurs="0" maxOccurs="1"/>
+		<element type="ExportedVariables" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="InternalChannel" content="eltOnly" model="closed">
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="Module" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="InternalTopology" content="eltOnly" model="closed">
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="BusInformation" minOccurs="0" maxOccurs="1"/>
+		<element type="InternalChannel" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="DtmDevice" content="eltOnly" model="closed" order="seq">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:readAccess" required="no"/>
+		<attribute type="fdt:writeAccess" required="no"/>
+		<attribute type="fdt:tag" required="yes"/>
+		<attribute type="redundant" required="no"/>
+		<element type="fdt:ChannelReferences" minOccurs="0" maxOccurs="1"/>
+		<element type="BusInformation" minOccurs="0" maxOccurs="*"/>                                          
+		<element type="InternalTopology" minOccurs="0" maxOccurs="1"/>
+		<element type="ExportedVariables" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="FDT" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:storageState" required="yes"/>
+		<attribute type="fdt:dataSetState" required="yes"/>
+		<attribute type="fdt:modifiedInDevice" required="no"/>                      
+		<element type="fdt:DtmDeviceType" minOccurs="1" maxOccurs="1"/>
+		<element type="DtmDevice" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+</Schema>

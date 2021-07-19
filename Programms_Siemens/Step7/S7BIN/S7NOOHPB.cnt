@@ -1,0 +1,35 @@
+:Base s7noohpb.hlp
+1 Subnets in STEP 7
+2 PROFIBUS
+3 "Network Settings" Tab (Properties - PROFIBUS)=HIDD_L2PROPDLG
+3 Considering Additional PROFIBUS Nodes=Zusaezliche_PROFIBUS_Teilnehmer
+3 Bus Profiles
+4 Profile=Profil
+4 "DP" Bus Profile=Busprofil_DP
+4 "Standard" Bus Profile=Busprofil_Standard
+4 "Universal (DP/FMS)" Bus Profile=Busprofil_Universell_DP_FMS
+4 "User-Defined" Bus Profile "Benutzerdefiniert"=Busprofil_Benutzerdefiniert
+3 Bus Parameters
+4 "Bus Parameters" Tab=HIDD_L2BUSPARAMDLG
+4 Communication Load=Kommunikationslast
+3 Options
+4 "Cables" Tab=HIDD_L2_PHYSIK_NETZKONF
+4 "Network Nodes" Tab=HIDD_L2NETZKONFIG
+4 Constant Bus Cycle Time
+5 Default Settings
+6 "Constant Bus Cycle Time" Tab=HIDD_AEQUIDISTANZ
+6 Number of Programming Devices/Operator Panels/Text Displays, etc. on the PROFIBUS=Anz_PGOPTD_PROFIBUS
+6 Constant DP Cycle Time=aequidistanz_Zeit
+5 Fine-tuning and Background Knowledge
+6 "Constant Bus Cycle Time" Dialog Box=HIDD_AEQUISYSPROP
+6 Effects of a Change in the Constant DP Cycle Time or the Number of Programming Devices/Operator Panels/Text Displays=Auswirkungen_zeit_oder_pg_anz_aendern
+6 Meaning of 'Minimum' and 'Prescribed' Time for the Constant DP Cycle Time=aequidistanzprofil
+6 Basis for Calculating Constant Constant DP Cycle Times=Zeiten_Aequidistanzprofile
+2 PTP
+3 "Parameters" Tab (Properties - PTP Interface)=HIDD_PTPNODEPROPDLG
+2 MPI
+3 "Network Settings" Tab (Properties - MPI)=HIDD_MPIPROPDLG
+3 "Parameters" Tab (Properties - MPI Interface)=HIDD_MPINODEPROPDLG
+2 Industrial Ethernet
+3 "Parameters" Tab(Properties - Ethernet Interface)=HIDD_H1PROPDLG
+3 Value Ranges for IP Address, Subnet Screen Form and Address of Router=WB_IP_Adresse_Subnetzmaske

@@ -1,0 +1,67 @@
+// ---------------------------------------------------------------------------
+// File: S7UPBEWX.TEM
+// Templates UDT Motion
+//
+// Copyright (c) Siemens AG, 1996 - 1998     All Rights Reserved
+// ---------------------------------------------------------------------------
+
+// Start (Anlaufüberwachung)
+Type= 4; DEOTemplate=.Final_Position[0];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[0];
+Type= 4; DEOTemplate=.Final_Position[1];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[1];
+Type= 4; DEOTemplate=.Final_Position[2];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[2];
+Type= 4; DEOTemplate=.Final_Position[3];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[3];
+Type= 4; DEOTemplate=.Final_Position[4];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[4];
+Type= 4; DEOTemplate=.Final_Position[5];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[5];
+Type= 4; DEOTemplate=.Final_Position[6];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[6];
+Type= 4; DEOTemplate=.Final_Position[7];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[7];
+Type= 4; DEOTemplate=.Final_Position[8];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[8];
+Type= 4; DEOTemplate=.Final_Position[9];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[9];
+Type= 4; DEOTemplate=.Final_Position[10]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[10];
+Type= 4; DEOTemplate=.Final_Position[11]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[11];
+Type= 4; DEOTemplate=.Final_Position[12]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[12];
+Type= 4; DEOTemplate=.Final_Position[13]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[13];
+Type= 4; DEOTemplate=.Final_Position[14]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[14];
+Type= 4; DEOTemplate=.Final_Position[15]; Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\n!!DEOPrefix!!.Final_Position[15];
+
+// Action (Aktionsüberwachung)
+Type= 5; DEOTemplate=.Final_Position[0];  Template= ONDT( !!DEOPrefix!!.Control1, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[0];
+Type= 5; DEOTemplate=.Final_Position[1];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[1];
+Type= 5; DEOTemplate=.Final_Position[2];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[2];
+Type= 5; DEOTemplate=.Final_Position[3];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[3];
+Type= 5; DEOTemplate=.Final_Position[4];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[4];
+Type= 5; DEOTemplate=.Final_Position[5];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[5];
+Type= 5; DEOTemplate=.Final_Position[6];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[6];
+Type= 5; DEOTemplate=.Final_Position[7];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[7];
+Type= 5; DEOTemplate=.Final_Position[8];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[8];
+Type= 5; DEOTemplate=.Final_Position[9];  Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[9];
+Type= 5; DEOTemplate=.Final_Position[10]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[10];
+Type= 5; DEOTemplate=.Final_Position[11]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[11];
+Type= 5; DEOTemplate=.Final_Position[12]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[12];
+Type= 5; DEOTemplate=.Final_Position[13]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[13];
+Type= 5; DEOTemplate=.Final_Position[14]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[14];
+Type= 5; DEOTemplate=.Final_Position[15]; Template= ONDT( !!DEOPrefix!!.Control2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Final_Position[15];
+
+// Reaction (Reaktionsüberwachung)
+Type= 6; DEOTemplate=.Final_Position[0];  Template= ONDT( !!DEOPrefix!!.Position_Flag[0] AND NOT !!DEOPrefix!!.Final_Position[0], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[1];  Template= ONDT( !!DEOPrefix!!.Position_Flag[1] AND NOT !!DEOPrefix!!.Final_Position[1], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[2];  Template= ONDT( !!DEOPrefix!!.Position_Flag[2] AND NOT !!DEOPrefix!!.Final_Position[2], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[3];  Template= ONDT( !!DEOPrefix!!.Position_Flag[3] AND NOT !!DEOPrefix!!.Final_Position[3], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[4];  Template= ONDT( !!DEOPrefix!!.Position_Flag[4] AND NOT !!DEOPrefix!!.Final_Position[4], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[5];  Template= ONDT( !!DEOPrefix!!.Position_Flag[5] AND NOT !!DEOPrefix!!.Final_Position[5], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[6];  Template= ONDT( !!DEOPrefix!!.Position_Flag[6] AND NOT !!DEOPrefix!!.Final_Position[6], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[7];  Template= ONDT( !!DEOPrefix!!.Position_Flag[7] AND NOT !!DEOPrefix!!.Final_Position[7], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[8];  Template= ONDT( !!DEOPrefix!!.Position_Flag[8] AND NOT !!DEOPrefix!!.Final_Position[8], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[9];  Template= ONDT( !!DEOPrefix!!.Position_Flag[9] AND NOT !!DEOPrefix!!.Final_Position[9], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[10]; Template= ONDT( !!DEOPrefix!!.Position_Flag[10] AND NOT !!DEOPrefix!!.Final_Position[10], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[11]; Template= ONDT( !!DEOPrefix!!.Position_Flag[11] AND NOT !!DEOPrefix!!.Final_Position[11], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[12]; Template= ONDT( !!DEOPrefix!!.Position_Flag[12] AND NOT !!DEOPrefix!!.Final_Position[12], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[13]; Template= ONDT( !!DEOPrefix!!.Position_Flag[13] AND NOT !!DEOPrefix!!.Final_Position[13], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[14]; Template= ONDT( !!DEOPrefix!!.Position_Flag[14] AND NOT !!DEOPrefix!!.Final_Position[14], !!Tempty!!);
+Type= 6; DEOTemplate=.Final_Position[15]; Template= ONDT( !!DEOPrefix!!.Position_Flag[15] AND NOT !!DEOPrefix!!.Final_Position[15], !!Tempty!!);
+
+// Interlocks (Verriegelungsüberwachung)
+Type= 7; DEOTemplate=.Executability1; Template=ONDT( !!DEOPrefix!!.Trigger1, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Executability1;
+Type= 7; DEOTemplate=.Executability2; Template=ONDT( !!DEOPrefix!!.Trigger2, !!Tempty!!)\r\nAND\r\nNOT !!DEOPrefix!!.Executability2;
+
+// Customer Templates
+// Type= 3; DEOTemplate=A0.0;        Template=E0.0; 

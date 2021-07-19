@@ -1,0 +1,185 @@
+;
+; Metafile DP/AS-i Link Adv. und Metafile IE/AS-i Link Adv.
+
+;############################################## DP/AS-i Link #########################
+[_S7H_DPASI_LINK_ADV_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1338044
+CatalogParent=1315144
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.4.0.0|0
+;--------------------------------
+
+; ----------------------------- S7SLAVE DP/AS-Interface Link Adv. Einfachmaster Katalog
+[_S7H_DPASI_LINK_ADV_1M_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1338058
+CatalogParent=1338044
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.4.0.0|0
+
+; ----------------------------- S7SLAVE DP/AS-Interface Link Adv. Doppelmaster Katalog
+[_S7H_DPASI_LINK_ADV_2M_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_AT
+prefix=OM
+ObjType=1338059
+CatalogParent=1338044
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+HWCNFX_VER=5.4.0.0|0
+
+
+; S7HWAPIX.MET ----------------------------- universal AS-i Slave
+[_S7H_CLASS_SC_DPASI_SLV_CT]      
+server=S7HK12AX.DLL
+prefix=OM
+ObjType=1338062
+CLASS_PROPERTIES=0
+IsCatEntry=1
+CatalogParent=
+ICON_TYPE=3
+nKatChilds=0
+MLFB=ASI Slave
+SHORTNAME=AS-i Slave
+HWCNFX_VER=5.4.0.0|0
+S7_TYPE_CODE=0x8340
+
+;------------------------------neue Kopfbaugruppe um PNO_IDENT_NO zu ändern
+[_S7H_ETER_ASI_ADV_CT]
+basetype=_S7H_ETER_ASI_20_2_PLUS_CT
+ObjType=1338067
+server=S7HSL7AX.DLL
+PNO_IDENT_NO=0x8139
+prefix=OM
+
+
+
+; ----------------------------- S7SLAVE DP/AS-Interface Link Adv. Einfachmaster
+[_S7H_DPASI_LINK_ADV_CT]
+server=S7HSL7AX.DLL
+prefix=OM
+ObjType=1338045
+CatalogParent=1338058
+basetype=_S7H_DPASI_LINK_20_2_PLUS_CT
+FW_VERSION=V1.0
+;CP_FW_VERSION=V1.0
+PROGID_SLAVEWRAPPER=S7hwSlaveWrapper.ASI.1
+MLFB=6GK1 415-2BA10
+SLAVE_BMP_FILE=ASI_DP1N
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=2
+; _S7H_ETER_ASI_ADV_CT
+AutoCreatedChild1=1338067, 2, FIXED
+:AutoCreatedChild1=1335374, 2, FIXED
+; _S7H_GRUNDBAUGRUPPE_ASI_ADV_CT
+AutoCreatedChild2=1338047, 4, FIXED
+; ############## Module im Link ######################
+
+HWCNFX_VER=5.4.0.0|0
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=1338062
+
+
+; ----------------------------- S7SLAVE DP/AS-Interface Link Adv. Doppelmaster
+[_S7H_DPASI_LINK_ADV_2M_CT]
+server=S7HSL7AX.DLL
+prefix=OM
+ObjType=1338046
+CatalogParent=1338059
+basetype=_S7H_DPASI_LINK_ADV_CT
+FW_VERSION=V1.0
+;CP_FW_VERSION=V1.0
+PROGID_SLAVEWRAPPER=S7hwSlaveWrapper.ASI.1
+MLFB=6GK1 415-2BA20
+SLAVE_BMP_FILE=ASI_DP2N
+
+; ############## Module im Link #######################
+CountAutoCreatedChilds=3
+; _S7H_ETER_ASI_ADV_CT
+AutoCreatedChild1=1338067, 2, FIXED
+:AutoCreatedChild1=1335374, 2, FIXED
+; _S7H_GRUNDBAUGRUPPE_ASI_ADV_2M_CT
+AutoCreatedChild2=1338047, 4, FIXED
+AutoCreatedChild3=1338048, 5, FIXED
+; ############## Module im Link #######################
+
+HWCNFX_VER=5.4.0.0|0
+; Katalog Ansicht: AS-i Slaves
+nKatChilds=1
+KatChild1=1338062
+
+
+; A S I - V I R T U E L L E - G R U N D B A U G R U P P E ------Erzeugnisstand 4---------
+
+[_S7H_GRUNDBAUGRUPPE_ASI_ADV_CT]
+server=S7HK46AX.DLL
+prefix=OM
+ObjType=1338047
+basetype=_S7H_GRUNDBAUGRUPPE_ASI_20_2_PLUS_CT
+HWCNFX_VER=5.4.0.0|0
+SHORTNAME=DP/AS-i Adv.
+
+[_S7H_GRUNDBAUGRUPPE_ASI_ADV_2M_CT]
+server=S7HK46AX.DLL
+prefix=OM
+ObjType=1338048
+basetype=_S7H_GRUNDBAUGRUPPE_ASI_ADV_CT
+
+;werte bleibt bei 32, da sie pro strang gelten.
+COUNT_INPUT_CHANNELS_DIGITAL=32
+COUNT_OUTPUT_CHANNELS_DIGITAL=32
+IN_ADDRESS_RANGE=32
+OUT_ADDRESS_RANGE=32
+SC_DIGITAL_IN_DEFAULT_LEN=32
+SC_DIGITAL_OUT_DEFAULT_LEN=32
+
+HWCNFX_VER=5.4.0.0|0
+SHORTNAME=DP/AS-i Adv. 2M
+
+
+; S7HWAPIX.MET ----------------------------- Virtuelles Terminal für DP/AS-i Link Adv. Einfachmaster
+[_S7H_TERMBLOCK_ASI_ADV_CT]   
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1338049
+; basetype seltsamerweise von _S7H_CLASS_SC_TB_400_CT abgeleitet
+basetype=_S7H_TERMBLOCK_ASI_20_2_PLUS_CT
+CLASS_PROPERTIES=0
+nKatChilds=0
+MLFB= 
+SHORTNAME=DP/AS-i Link Adv. 
+FIRST_VISIBLE_CHILD_NO=1
+MAX_NUM_OF_CHILDS=62
+SLOT_NO_TYPE="0,1A,B,2A,B,3A,B,4A,B,5A,B,6A,B,7A,B,8A,B,9A,B,10A,B,11A,B,12A,B,13A,B,14A,B,15A,B,16A,B,17A,B,18A,B,19A,B,20A,B,21A,B,22A,B,23A,B,24A,B,25A,B,26A,B,27A,B,28A,B,29A,B,30A,B,31A,B"
+SUPP_BY_STEP7_VER=30
+HWCNFX_VER=5.4.0.0|0
+
+;////////////////////////
+; S7HWAPIX.MET ----------------------------- Virtuelles Terminal für DP/AS-i Link Adv. Doppelmaster
+[_S7H_TERMBLOCK_ASI_ADV_1M_CT]   
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1338063
+basetype=_S7H_TERMBLOCK_ASI_ADV_CT
+SLOT_NO_TYPE="[1]:0,[1]:1A,[1]:B,[1]:2A,[1]:B,[1]:3A,[1]:B,[1]:4A,[1]:B,[1]:5A,[1]:B,[1]:6A,[1]:B,[1]:7A,[1]:B,[1]:8A,[1]:B,[1]:9A,[1]:B,[1]:10A,[1]:B,[1]:11A,[1]:B,[1]:12A,[1]:B,[1]:13A,[1]:B,[1]:14A,[1]:B,[1]:15A,[1]:B,[1]:16A,[1]:B,[1]:17A,[1]:B,[1]:18A,[1]:B,[1]:19A,[1]:B,[1]:20A,[1]:B,[1]:21A,[1]:B,[1]:22A,[1]:B,[1]:23A,[1]:B,[1]:24A,[1]:B,[1]:25A,[1]:B,[1]:26A,[1]:B,[1]:27A,[1]:B,[1]:28A,[1]:B,[1]:29A,[1]:B,[1]:30A,[1]:B,[1]:31A,[1]:B"
+
+; S7HWAPIX.MET ----------------------------- Virtuelles Terminal für DP/AS-i Link Adv. Doppelmaster
+[_S7H_TERMBLOCK_ASI_ADV_2M_CT]   
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1338064
+basetype=_S7H_TERMBLOCK_ASI_ADV_CT
+SLOT_NO_TYPE="[2]:0,[2]:1A,[2]:B,[2]:2A,[2]:B,[2]:3A,[2]:B,[2]:4A,[2]:B,[2]:5A,[2]:B,[2]:6A,[2]:B,[2]:7A,[2]:B,[2]:8A,[2]:B,[2]:9A,[2]:B,[2]:10A,[2]:B,[2]:11A,[2]:B,[2]:12A,[2]:B,[2]:13A,[2]:B,[2]:14A,[2]:B,[2]:15A,[2]:B,[2]:16A,[2]:B,[2]:17A,[2]:B,[2]:18A,[2]:B,[2]:19A,[2]:B,[2]:20A,[2]:B,[2]:21A,[2]:B,[2]:22A,[2]:B,[2]:23A,[2]:B,[2]:24A,[2]:B,[2]:25A,[2]:B,[2]:26A,[2]:B,[2]:27A,[2]:B,[2]:28A,[2]:B,[2]:29A,[2]:B,[2]:30A,[2]:B,[2]:31A,[2]:B"
+;/////////////////////////////////////////

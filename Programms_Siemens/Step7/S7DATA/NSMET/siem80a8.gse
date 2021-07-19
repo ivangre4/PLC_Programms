@@ -1,0 +1,170 @@
+;==========================================================
+; GSD-File  for ET 200R
+; MLFB        : 6ES7 143-2BH00-0AB0 (Handling module)
+; MLFB        : 6ES7 143-2BH50-0AB0 (Welding module)
+; GSDRevision : 4
+; Version     : 24.06.02  GW  2.1
+; File        : SIEM80A8.GSD
+;==========================================================
+
+;==========================================================
+#Profibus_DP
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; <Prm-Text-Def-List>
+;----------------------------------------------------------
+PrmText=1
+Text(0)="Digital Input"
+Text(1)="Digital Output"
+EndPrmText
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; <Ext-User-Prm-Data-Def-List>
+;----------------------------------------------------------
+ExtUserPrmData=1 "Channel type for I/O 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Channel type for I/O 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "Channel type for I/O 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=4 "Channel type for I/O 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=5 "Channel type for I/O 4"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "Channel type for I/O 5"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=7 "Channel type for I/O 6"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=8 "Channel type for I/O 7"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; <Unit-Definition-List>
+GSD_Revision=4
+Vendor_Name="SIEMENS"
+Model_Name="ET200R"
+Revision="V1.0"
+;----------------------------------------------------------
+Ident_Number=0x80A8
+Protocol_Ident=0
+Station_Type=0
+;----------------------------------------------------------
+;Releases
+;----------------------------------------------------------
+Hardware_Release="1.0"
+Software_Release="0.1"
+;----------------------------------------------------------
+;Baud rates
+;----------------------------------------------------------
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+;----------------------------------------------------------
+;Bus timing
+;----------------------------------------------------------
+MaxTsdr_9.6   =  15
+MaxTsdr_19.2  =  15
+MaxTsdr_45.45 =  15
+MaxTsdr_93.75 =  15
+MaxTsdr_187.5 =  15
+MaxTsdr_500   =  15
+MaxTsdr_1.5M  =  25
+MaxTsdr_3M    =  50
+MaxTsdr_6M    = 100
+MaxTsdr_12M   = 200
+;----------------------------------------------------------
+;Sync Freeze
+;----------------------------------------------------------
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+;----------------------------------------------------------
+Implementation_Type = "DPC31"
+Bitmap_Device       = "ET200R_N"
+Bitmap_SF           = "ET200R_S"
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; Slave-Specification:
+OrderNumber= "6ES7 143-2BH*0-0AB0"  
+
+Auto_Baud_supp=1
+Set_Slave_Add_supp = 0
+
+Min_Slave_Intervall=1
+
+Max_Diag_Data_Len=18
+
+Modul_Offset=1
+Slave_Family=3@ET200R
+Modular_Station=1
+Max_Module=1 
+Max_Input_Len=2
+Max_Output_Len=1
+Max_Data_Len=3
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len   = 4
+User_Prm_Data       = 0x00,0x00,0x00,0xFF
+Max_User_Prm_Data_Len=4  ; 3 const + 1 for E/A
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x00,0xFF
+
+Ext_User_Prm_Data_Ref(3)=1
+Ext_User_Prm_Data_Ref(3)=2
+Ext_User_Prm_Data_Ref(3)=3
+Ext_User_Prm_Data_Ref(3)=4
+Ext_User_Prm_Data_Ref(3)=5
+Ext_User_Prm_Data_Ref(3)=6
+Ext_User_Prm_Data_Ref(3)=7
+Ext_User_Prm_Data_Ref(3)=8
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; <Module-Definition-List>
+;----------------------------------------------------------
+Module = "6ES7 143-2BH00-0AB0 Handling"  0xC0,0x00,0x01
+1
+EndModule
+Module = "6ES7 143-2BH50-0AB0 Weld.mod." 0xC0,0x00,0x01
+2
+EndModule
+;ET200R-W (Welding module): 6ES7 143-2BH00-0AB0
+;ET200R-H (Handling):       6ES7 143-2BH50-0AB0
+;----------------------------------------------------------
+
+;----------------------------------------------------------
+;Info Text
+;----------------------------------------------------------
+Info_text="ET200R is a digital input/output module for robots"
+
+;----------------------------------------------------------
+; Publisher
+;----------------------------------------------------------
+Publisher_supp=1;
+
+;----------------------------------------------------------
+; Device specific error
+;----------------------------------------------------------
+Unit_Diag_Bit(24) = "DO X0-X1 Overload/Short Circuit "
+Unit_Diag_Bit(25) = "DO X2-X3 Overload/Short Circuit "
+Unit_Diag_Bit(26) = "Missing load voltage 24V (US2)  "
+Unit_Diag_Bit(27) = "DO X0-X3 Overload Total Current "
+Unit_Diag_Bit(28) = "DI X0-X3 Overload/Short Circuit "
+Unit_Diag_Bit(29) = "DI X4-X7 Overload/Short Circuit "
+Unit_Diag_Bit(30) = "Error info 30 reserved          "
+Unit_Diag_Bit(31) = "Error info 31 reserved          "

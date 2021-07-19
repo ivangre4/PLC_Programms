@@ -1,0 +1,21 @@
+:Base S7WBPCAA.HLP
+1 Übersicht=Welcome
+1 Register "Allgemein"=HIDD_ALLG_BASE
+1 PC-Applikation "Standard"
+2 Register "FMS"=HIDD_FMS
+1 PC-Applikation "OPC-Server"
+2 Register "DP"=HIDD_DP
+2 Register "DP-Master Klasse 2"=HIDD_OPC_DPC2
+2 Register "FDL"=HIDD_FDL
+2 Register "FMS"=HIDD_FMS
+2 Register "ISO/TCP"=HIDD_SENDRECV
+2 Register "S7"=HIDD_S7
+2 Objektverzeichnis editieren=HIDD_OVZ
+2 Item spezifische Zugriffsrechte vergeben=HIDD_ITEM
+2 Dialog "VFD bearbeiten"=HIDD_VFD
+2 Register "SNMP"=ID_Register_SNMP
+2 Register "PROFINET"=HIDD_OPC_PROFINET
+2 Register "PROFINET IO"=HID_OPC_PNIO
+2 SNMP: Anlagenkonfiguration bearbeiten=ID_Anlagenkonfiguration_bearbeiten
+2 SNMP: Teilnehmerdaten bearbeiten=ID_Teilnehmerdaten_bearbeiten
+2 Dialog "Symbole verwenden"=HIDD_OPC_SYM_VERW

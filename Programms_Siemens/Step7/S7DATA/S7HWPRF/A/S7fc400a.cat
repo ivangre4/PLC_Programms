@@ -1,0 +1,164 @@
+S7HPROFX V0.1
+
+// ===================
+// CP 44x Point-to-Point
+// ===================
+
+[SIMATIC 400\CP-400\Point-to-Point]
+ObjectName="Point-to-Point"
+ObjectType="0x00141525"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 440]
+ObjectName="CP 440"
+ObjectType="0x001416d3"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 440\CP 440::6ES7 440-1CS00-0YE0]
+ObjectName="6ES7 440-1CS00-0YE0"
+ObjectType="0x00142c1a"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-1]
+ObjectName="CP 441-1"
+ObjectType="0x001416d4"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-1\CP 441-1::6ES7 441-1AA00-0AE0]
+ObjectName="6ES7 441-1AA00-0AE0"
+ObjectType="0x00141051"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-1\CP 441-1::6ES7 441-1AA01-0AE0]
+ObjectName="6ES7 441-1AA01-0AE0"
+ObjectType="0x001412b3"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-1\CP 441-1::6ES7 441-1AA02-0AE0]
+ObjectName="6ES7 441-1AA02-0AE0"
+ObjectType="0x001412cb"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-1\CP 441-1::6ES7 441-1AA03-0AE0]
+ObjectName="6ES7 441-1AA03-0AE0"
+ObjectType="0x00142c18"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-2]
+ObjectName="CP 441-2"
+ObjectType="0x001416d5"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-2\CP 441-2::6ES7 441-2AA00-0AE0]
+ObjectName="6ES7 441-2AA00-0AE0"
+ObjectType="0x00141052"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-2\CP 441-2::6ES7 441-2AA01-0AE0]
+ObjectName="6ES7 441-2AA01-0AE0"
+ObjectType="0x001412b4"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-2\CP 441-2::6ES7 441-2AA02-0AE0]
+ObjectName="6ES7 441-2AA02-0AE0"
+ObjectType="0x001412cc"
+
+[SIMATIC 400\CP-400\Point-to-Point\CP 441-2\CP 441-2::6ES7 441-2AA03-0AE0]
+ObjectName="6ES7 441-2AA03-0AE0"
+ObjectType="0x00142c19"
+
+
+
+// ===================
+// FM 400
+// ===================
+
+[SIMATIC 400\FM-400\Nockensteuerungen]
+ObjectName="Nockensteuerungen"
+ObjectType="0x00141520"
+
+[SIMATIC 400\FM-400\Nockensteuerungen\FM 452 CAM MODULE::6ES7 452-1AH00-0AE0]
+ObjectName="FM 452 CAM MODULE"
+ObjectType="0x00141055"
+
+[SIMATIC 400\FM-400\Positionierbaugruppen]
+ObjectName="Positionierbaugruppen"
+ObjectType="0x0014151d"
+
+[SIMATIC 400\FM-400\Positionierbaugruppen\FM 451 FIXED SPEED POS.::6ES7 451-3AL00-0AE0]
+ObjectName="FM 451 FIXED SPEED POS."
+ObjectType="0x00141054"
+
+[SIMATIC 400\FM-400\Positionierbaugruppen\FM 453::6ES7 453-3AH00-0AE0]
+ObjectName="FM 453"
+ObjectType="0x00141057"
+
+[SIMATIC 400\FM-400\Reglerbaugruppen]
+ObjectName="Reglerbaugruppen"
+ObjectType="0x0014151e"
+
+[SIMATIC 400\FM-400\Reglerbaugruppen\FM 455 C PID Control::6ES7 455-0VS00-0AE0]
+ObjectName="FM 455 C PID Control"
+ObjectType="0x00141119"
+
+[SIMATIC 400\FM-400\Reglerbaugruppen\FM 455 S PID Control::6ES7 455-1VS00-0AE0]
+ObjectName="FM 455 S PID Control"
+ObjectType="0x0014111a"
+
+[SIMATIC 400\FM-400\Zählerbaugruppen]
+ObjectName="Zählerbaugruppen"
+ObjectType="0x0014151c"
+
+[SIMATIC 400\FM-400\Zählerbaugruppen\FM 450-1 COUNTER MODULE::6ES7 450-1AP00-0AE0]
+ObjectName="FM 450-1 COUNTER MODULE"
+ObjectType="0x00141053"
+
+
+// ====================
+// Loeschen der Elemente:
+// ====================
+
+// CP 440:
+// ------------
+[SIMATIC 400\CP-400\CP 440::6ES7 440-1CS00-0YE0]
+@DELETE
+
+// CP 441-1:
+// --------------
+[SIMATIC 400\CP-400\CP 441-1::6ES7 441-1AA00-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-1::6ES7 441-1AA03-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-1::6ES7 441-1AA01-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-1::6ES7 441-1AA02-0AE0]
+@DELETE
+
+// CP 441-2:
+// -------------
+[SIMATIC 400\CP-400\CP 441-2::6ES7 441-2AA00-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-2::6ES7 441-2AA03-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-2::6ES7 441-2AA01-0AE0]
+@DELETE
+[SIMATIC 400\CP-400\CP 441-2::6ES7 441-2AA02-0AE0]
+@DELETE
+
+
+// FM 450:
+// ------------
+[SIMATIC 400\FM-400\FM 450-1 COUNTER MODULE::6ES7 450-1AP00-0AE0]
+@DELETE
+
+// FM 451:
+// ------------
+[SIMATIC 400\FM-400\FM 451 FIXED SPEED POS.::6ES7 451-3AL00-0AE0]
+@DELETE
+
+// FM 452:
+// ------------
+[SIMATIC 400\FM-400\FM 452 CAM MODULE::6ES7 452-1AH00-0AE0]
+@DELETE
+
+// FM 453:
+// ------------
+[SIMATIC 400\FM-400\FM 453::6ES7 453-3AH00-0AE0]
+@DELETE
+
+// FM 455:
+// ------------
+[SIMATIC 400\FM-400\FM 455 C PID Control::6ES7 455-0VS00-0AE0]
+@DELETE
+[SIMATIC 400\FM-400\FM 455 S PID Control::6ES7 455-1VS00-0AE0]
+@DELETE
+

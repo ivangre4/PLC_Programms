@@ -1,0 +1,1412 @@
+@DB_TYP CP5412A2  V1.24  DOS
+@CONVERTER        V1.0
+@CPMODUL          SPEZIELL
+@LANGUAGE         ENGLISH
+#@@DB_EXT CP5412A2 V1.0
+#@@DB_EXT CP5412A2 V1.06
+#@@DB_EXT CP5412A2 V1.07
+#@@DB_EXT CP5412A2 V1.08
+#@@DB_EXT CP5412A2 V1.09
+#@@DB_EXT CP5412A2 V1.10
+#@@DB_EXT CP5412A2 V1.11  
+#@@DB_EXT CP5412A2 V1.12
+#@@DB_EXT CP5412A2 V1.13
+#@@DB_EXT CP5412A2 V1.14
+#@@DB_EXT CP5412A2 V1.15
+#@@DB_EXT CP5412A2 V1.16
+#@@DB_EXT CP5412A2 V1.17
+#@@DB_EXT CP5412A2 V1.18
+#@@DB_EXT CP5412A2 V1.19
+#@@DB_EXT CP5412A2 V1.20
+#@@DB_EXT CP5412A2 V1.21
+#@@DB_EXT CP5412A2 V1.22
+#@@DB_EXT CP5412A2 V1.23
+#
+# NCM-WINDOWS ASCII Converter Rule File for CP 5412 A2 DOS Database
+# Copyright (C) Siemens AG 2000  All Rights Reserved. Confidential
+
+# Identifier            Rule                    Comment
+#==========================================================================
+
+# **************************************************************************
+# Header
+# **************************************************************************
+DB_IDENTBLK
+  {
+  DB_Ident_ID                              BC|0|||         # Blockidentifier
+  DB_Ident$LNG                             DM||0|1000000|  # Laenge des SDB
+  DB_Ident
+    {
+    versionStr        AC|"@@DB_TYP CP5412A2 V1.0 DEUTSCH DOS"||| # corresponding Rule Ident
+    versionCtr        AC|"@(#1)CP5412A2.rul     V 1.24 26.04.00"|||
+    creator           EM|UNKNOWN|8|COMLFMS(1)|COMLDP(2)|SGT(3)|COMPB(4)|UNKNOWN(0)
+    }
+  }
+
+# ****************************************************************************
+# Systemgrenzen
+# ****************************************************************************
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!! nicht editieren ! Gehoert nicht zur Datenbasis !!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+SysProperties$NAM             _O!B||||
+SysProperties
+  {
+  # vefügbarer Speicher auf dem CP
+  CP_memory_available<CP_Speicherausbau> DM|148888|0|262144|1024
+
+  MaxSlave              WM|64|0|125|1      # maximale Anzahl an gleichzeitig angeschlossenen Slave
+  MaxMasterInputSize    WM|240|0|240|1     # maximale Groesse des Input IO Bereiches
+  MaxMasterOutputSize   WM|240|0|240|1     # maximale Groesse des Output IO Bereiches
+  DftModInLen           BM|1|0|4|1         # Default Input Laenge eines neuen Modules
+  DftModOutLen          BM|1|0|4|1         # Default Output Laenge eines neuen Modules
+  DftAlignment          AM|Byte|1|4|4      # Default Alignment eines neuen Modules
+  DftConsistency        AM|Value|1|5|5     # Default Konsistenz eines neuen Modules
+  DftInModName          AM|"xxxE"|1|24|24        # Default Input Module Name
+  DftOutModName         AM|"xxxA"|1|24|24        # Default Output Module Name
+  DftInOutModName       AM|"xxxX"|1|24|24        # Default InOutput Module Name
+  DftEmptyModName       AM|"Leerplatz"|1|24|24   # Default Leerplatz Module Name
+
+  # Liste reservierter LSAP
+  ReservedLsapList      HM|0h54.58.59.60.61.62|0|126|0
+
+  # Watchdog AddOn Zeiten in [ ms]
+  TWdAdd9_6             WM|0x0006|0|0xffff|1     # bei 9.6    KBaud
+  TWdAdd19_2            WM|0x0005|0|0xffff|1     # bei 19.2   KBaud
+  TWdAdd93_75           WM|0x0004|0|0xffff|1     # bei 93.75  KBaud
+  TWdAdd187_5           WM|0x0003|0|0xffff|1     # bei 187.5  KBaud
+  TWdAdd500             WM|0x0002|0|0xffff|1     # bei 500    KBaud
+  TWdAdd1_5             WM|0x0002|0|0xffff|1     # bei 1500   KBaud
+  TWdAdd3_0             WM|0x0001|0|0xffff|1     # bei 3000   KBaud
+  TWdAdd6_0             WM|0x0001|0|0xffff|1     # bei 6000   KBaud
+  TWdAdd12              WM|0x0001|0|0xffff|1     # bei 12000  KBaud
+
+  # Granularitätsfaktor bei der Anzeige der DP Raktionszeit
+  GranFaktor            WM|5|0|0xffff|1
+
+  # DP Zeit Tabelle Ttab  _x ; x= Anzahl Slave
+  TTab_1                WM|200|0|0xffff|1
+  TTab_2                WM|200|0|0xffff|1
+  TTab_3                WM|200|0|0xffff|1
+  TTab_4                WM|200|0|0xffff|1
+  TTab_5                WM|200|0|0xffff|1
+  TTab_6                WM|212|0|0xffff|1
+  TTab_7                WM|224|0|0xffff|1
+  TTab_8                WM|236|0|0xffff|1
+  TTab_9                WM|248|0|0xffff|1
+  TTab_10               WM|260|0|0xffff|1
+  TTab_11               WM|272|0|0xffff|1
+  TTab_12               WM|284|0|0xffff|1
+  TTab_13               WM|296|0|0xffff|1
+  TTab_14               WM|308|0|0xffff|1
+  TTab_15               WM|320|0|0xffff|1
+  TTab_16               WM|332|0|0xffff|1
+  TTab_17               WM|344|0|0xffff|1
+  TTab_18               WM|356|0|0xffff|1
+  TTab_19               WM|368|0|0xffff|1
+  TTab_20               WM|380|0|0xffff|1
+  TTab_21               WM|392|0|0xffff|1
+  TTab_22               WM|404|0|0xffff|1
+  TTab_23               WM|416|0|0xffff|1
+  TTab_24               WM|428|0|0xffff|1
+  TTab_25               WM|440|0|0xffff|1
+  TTab_26               WM|452|0|0xffff|1
+  TTab_27               WM|464|0|0xffff|1
+  TTab_28               WM|476|0|0xffff|1
+  TTab_29               WM|488|0|0xffff|1
+  TTab_30               WM|500|0|0xffff|1
+  TTab_31               WM|512|0|0xffff|1
+  TTab_32               WM|524|0|0xffff|1
+  TTab_33               WM|536|0|0xffff|1
+  TTab_34               WM|548|0|0xffff|1
+  TTab_35               WM|560|0|0xffff|1
+  TTab_36               WM|572|0|0xffff|1
+  TTab_37               WM|584|0|0xffff|1
+  TTab_38               WM|596|0|0xffff|1
+  TTab_39               WM|608|0|0xffff|1
+  TTab_40               WM|620|0|0xffff|1
+  TTab_41               WM|632|0|0xffff|1
+  TTab_42               WM|644|0|0xffff|1
+  TTab_43               WM|656|0|0xffff|1
+  TTab_44               WM|668|0|0xffff|1
+  TTab_45               WM|680|0|0xffff|1
+  TTab_46               WM|692|0|0xffff|1
+  TTab_47               WM|704|0|0xffff|1
+  TTab_48               WM|716|0|0xffff|1
+  TTab_49               WM|728|0|0xffff|1
+  TTab_50               WM|740|0|0xffff|1
+  TTab_51               WM|752|0|0xffff|1
+  TTab_52               WM|764|0|0xffff|1
+  TTab_53               WM|776|0|0xffff|1
+  TTab_54               WM|788|0|0xffff|1
+  TTab_55               WM|800|0|0xffff|1
+  TTab_56               WM|812|0|0xffff|1
+  TTab_57               WM|824|0|0xffff|1
+  TTab_58               WM|836|0|0xffff|1
+  TTab_59               WM|848|0|0xffff|1
+  TTab_60               WM|860|0|0xffff|1
+  TTab_61               WM|872|0|0xffff|1
+  TTab_62               WM|884|0|0xffff|1
+  TTab_63               WM|896|0|0xffff|1
+  TTab_64               WM|908|0|0xffff|1
+
+  # Laufzeit der FW für die Bearbeitung eines zyklischen Global Control
+  Tg                    WM|40|0|0xffff|1
+
+  # Typ des verwendeten ASIC / SPC2 = 1 ASPC2 = 2
+  ASIC_Typ              WM|1|0|0xffff|1
+
+  }
+
+
+# ****************************************************************************
+# SDB for System-Parameter
+# ****************************************************************************
+# **************************************************************************
+# Header
+# **************************************************************************
+SystemSDBHeader
+{
+  SystemSDBBlockId       BC|121|||       # Blockidentifier
+  SystemSDB$LNG          DM||0|1000000|  # Laenge des SDB
+}
+
+SystemSDB$NAM            _M||||          # SDB for System-Parameter
+SystemSDB
+{   * Important! Do not modify the system SDB field (bus parameters)
+    *            using a text editor !!!
+    * System Information
+         * contains all the information for the module to start up
+
+  SDBParameterblock$NAM  _M||||
+  SDBParameterblock
+  {
+    BusParHeader                         # Busparameter Header
+    {
+      # Parameterblock
+      # ********
+      PblkNo1             BC|1|||        # Parameterblock Number
+      PblkVersion1        BC|0|||        # Version  0
+      BusParHeader$LNG    WM||||         # Parameterblock Length
+      # ********
+
+      # Are Busparameter local edited ?
+      LocalEdit                               EM|TRUE|8|FALSE(0)|TRUE(1)
+      * The bus parameters were edited locally
+
+      # Maximum Amount Masters
+      MaxMaster<MaxMaster>                    BM|126|1|126|1
+      * Number of master modules in the network
+
+      # Busparameter Calculation Algorithm
+          BusParCalculate<BusParCalculate> EM|Fast|8|Smart<universell>(1)
+                                              |Fast<standard>(2)
+                                              |DpMono<dpmono>(3)
+                                              |UserDefined<benutzerdefiniert>(0)
+      * Algorithm for calculating the bus parameters
+
+      # logical Subnet Profile
+          ProfileType<ProfileType>                  BM|0|0|255|1
+      * Type of subnet
+
+      # maximale Anzahl Slave
+          MaxSlave<MaxSlave>               BM|10|0|126|1
+      * Number of DP slaves in the network
+
+    }
+
+    # SINEC Busparameter Block
+    BusParBlk                                 
+    {
+      # Parameterblock
+      # ********
+      PblkNo2                  BC|2|||             # Parameterblock Number
+      PblkVersion2             BC|0|||             # Version  0
+      BusParBlk$LNG            WM||||              # Parameterblock Length
+      # ********
+
+      # Highest Station Adress
+          Hsa<Hsa>                 BM|126|2|126|1
+      * Highest station address in the network
+
+      # SINEC L2 Adress
+          Ts<Ts>                                   BM|1|0|126|1
+      * Local SINEC L2 station address
+
+      # Stationtype ( Master or Slave )
+          StationType<StationType>         EM|ACTIVE|16|ACTIVE(1)|PASSIVE(0)
+      * Master (ACTIVE) or slave (PASSIVE)
+
+      # Baudrate
+          BaudRate<BaudRate>       EM|"187.5"|16|"9.6"(0)
+                                            |"19.2"(1)
+                                            |"93.75"(2)
+                                            |"187.5"(3)
+                                            |"500.0"(4)
+                                            |"1500.0"(7)
+                                            |"3000.0"(8)
+                                            |"6000.0"(9)
+                                            |"12000.0"(10)
+                                            |"45.45"(12)
+      * SINEC L2 transmission rate
+
+      # ( Parameter ignored ) Medium Redundancy
+          MediumRed<MediumRed>           WC|0|||
+      * Medium redundancy is not supported
+
+      # Requester Send Retry Counter
+          RetryCtr<RetryCtr> WM|1|0|8|1
+      * Number of frame repetitions
+
+      # Default Adress, used for Telegram without Adress Extension
+          DefaultSap<DefaultSap>               BM|52|0|52|1       [0-2]
+      * SAP used for frames without address extension
+
+      # Network Connection Sap
+          NetwkConSap<NetwkConSap>                    BM|0|0|255|1
+      * SAP used for network interconnections
+
+      # Slot Time
+          Tsl<Tsl>                             WM||35|65535|1
+      * Receive timeout of sender for acknowledgment of receiver
+
+      # ( Parameter ignored ) Transmitter Fall Time
+          Tqui<Tqui>                           WM|0|0|31|1
+      * Parameter not required
+
+      # Setup Time
+          Tset<Tset>                           WM||0|255|1
+      * Minimum time between receiving an acknowledgment
+      * and sending a new job 
+
+      # Minimum Station Delay Time
+          MinTsdr<MinTsdr>                    WM||0|1023|1
+      * The earliest time after which a receiver can send
+      * an acknowledgment after receiving a job.
+
+      # Maximum Station Delay Time
+          MaxTsdr<MaxTsdr>                    WM||0|1023|1
+      * The earliest time after which the sender can send a
+      * new job after sending a job. 
+
+      # Target Rotation Time
+          Ttr<Ttr>                             DM||35|0xffffffff|1
+      * Target rotation time within which the token 
+      * must be passed around the logical ring
+
+      # Gap Update Factor
+      G<G>         BM||1|100|1
+      * After the time "G*TTR" has expired, the gap to the next
+      * active station is checked for new stations desiring to enter the ring
+
+      # Always True
+      InRingDesired                        WC|1|||
+      * The station must always be accepted into the logical ring
+
+      # Always RS485
+      PhysLayer                            WC|0|||
+      * SINEC L2 supports only RS485
+
+    }
+
+    LSAPListPblk
+    {
+      # Subblock
+      # ********
+      SblkNo5                              BC|5|||    # Subblock Number
+      SblkVersion5                         BC|0|||    # Version  0
+      LSAPListPblk$LNG                     WM||||     # Subblock Length
+      # ********
+
+      # List of protected LSAP
+          ProtectedLsapList<ProtectedLsapList>   HO||0|126|0
+      * List of SAPs reserved for FDL
+
+    }
+    
+	BusProfile$NAM 					_O||||
+	BusProfile
+	{
+		BusProfileId				BC|30|||
+		BusProfileFeatures			WM|0|0|0xffff|1   # default : Alle optionale Blöcke aus
+		                                                      # Bit 0=1 : Äquidistanz/Busprofil Block ist vorhanden
+		BusProfile$LNG				WM||||
+
+		BusProfileAddData
+		{
+			BusProfileAddDataId                     BC|0|||           
+			BusProfileAddData$LNG                   WM||||
+			
+			Reserved0					WM|0|||
+			Busprofil					BM|0|||
+			EquDisMode					BM|0|||
+			EquDisFunction				BM|0|||
+			NumMasterCl2Allowed			BM|0xff|||
+			TokenHoldTime				DM|0|||
+			AcycRequestCounter			WM|0xffff|||
+			EquDistInterval				DM|0|||
+			EquDisMasterAdr				BM|0xff|||
+			UF							BM|1|||
+			EquDisPassivePause			WM|0|||
+			TokenRetryCounter			BM|0|||
+			DataRetryCounter			BM|0|||
+			PublisherControlInt			DM|10|||
+			BscInRing					WM|0|||
+			BscOutOfRing				WM|0|||
+			PhysicalLayer				BM|0|||
+			MediumRedundancy			BM|0|||
+			EquDisPulseGroup			BM|0|||
+			EquDisPulseCommand			BM|0|||
+			EquDisPulseGrFilter			BM|0|||
+			MaxActiveStation			BM|0|0|0x7e|
+			SynSapEquDis				BM|58|||
+			SynSduLenEquDis				BM|2|||
+			BusProfileSendInt			WM|0xffff|||
+			TDE							DM|0|||
+			TM							DM|0|||
+			ASPC2EDebugContr1			WM|0|||
+			ASPC2EDebugContr2			WM|0|||
+			Tjitter						BM|10|||
+			Reserved1					HM|0h0000000000000000000000|11|11|11
+		}
+	}
+  }  
+}
+
+
+# ****************************************************************************
+# SDB for SINEC L2 DP
+# ****************************************************************************
+# **************************************************************************
+# Header
+# **************************************************************************
+DpSdbHeader
+  {
+  DpSdbBlockId                             BC|128|||       # Blockidentifier
+  DpSDB$LNG                                DM||0|1000000|  # Laenge des SDB
+  }
+# **************************************************************************
+
+DpSDB$NAM               _O||||                  # DP SDB
+DpSDB
+  { * This parameter field contains the DP configuration
+
+  SDBParameterblock$NAM   _M||||
+  SDBParameterblock
+         {
+         #
+         # DP Management Parameterblock
+         #
+         # Parameterblock 1
+         PblkDpMgt                       BC|1|||
+         # Version  0
+         PblkVersion                     BC|0|||
+         # Parameterblock Length
+         #DpManagement$LNG      WM||||
+         DpManagementLEN                 WC|37|||                
+
+         # Amount Poll Cycles to reset Station List
+         CtrPollToResetStatLst BM|1|0|255|1
+         * Number of polling cycles until the station list is reset
+
+         # ueberwacht Datentransfer und Benutzer Interface ( 6 * Watchdog [ 10 ms])
+         DataControlTime       WM|0|0|0xffff|1
+         * Monitors the DP data transfer and the user interface
+
+         # Master Poll Timeout
+         MasterPollTimeout     WM|1000|0|0xffff|1
+         * Minimum polling cycle time of the master
+
+         # Poll_Timeout fuer den Master 2
+         Master2PollTimeout    WM|200|0|0xffff|1
+         * Polling timeout of the MASTER class 2
+
+         # Name of corresponding Master GSD File
+         MasterGsdFile         AM|"CP5412A2.GSD"|1|14|14
+         * Name of the master GSD file
+
+         # Watchdog Timeout für die Oberfläche
+         reservedWdTimeout     WM|400|10|0xfe01|1
+         * Watchdog timeout, only used by the user interface
+
+         # Verhalten bei Übertragung des DP-Ausgangsbereichs
+         ClearDP               EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+         * Behavior during transfer of the DP output area
+
+         # Ist ein Zyklisches Steuertelegramm gefordert
+         zyklGlobalCtrlCommand           EM|NONE|2|NONE(0b00)|SYNC(0b01)|FREEZE(0b10)|SYNC_FREEZE(0b11)
+         * Which cyclic control frame is requested
+
+         # Soll die Watchdog Zeit automatisch berechnet werden
+         bWdDefault                      EM|TRUE|1|FALSE(0b0)|TRUE(0b1)
+         * Will the watchdog time be calculated automatically
+
+         # Reserve
+         ReservedDp                      IC|0b0000|4|4|4
+
+         # Gruppen Identifikation für zyklisches Steuertelegramm
+         zyklGlobalCtrlGrpIdent          BM|0|0|255|1
+         * Group identification for cyclic control frame
+
+         # maximaler Wert des Min Slave Intervall in der Datenbasis
+         maxMinSlvIntervall              WM|0|0|0xffff|1
+         * Maximum value of the min. slave interval in the database [ ms]
+
+         # DP Bremszeit
+         DpDelayTime                     WM|0|0|0xffff|1
+         * Time for delaying DP [ ms]
+
+         # Amount Not Norm Slaves ( Maximum 125 )
+         NotNormSlave$CNT      WO||0|125|1
+
+         # Amount edited Slave ( Maximum 125 )
+         NormSlave$CNT         WO||0|125|1              
+
+         #
+         # Ende DP Management Parameterblock
+         #
+
+
+
+         # Norm Slave Description
+         NormSlave$NAM         _A||||                  
+         NormSlave
+                {  * Contains the complete description of standrd slave
+                # Parameterblock
+                # ********
+                PblkDpMgt           BC|2|||                 # Parameterblock 2
+                PblkVersion         BC|0|||                 # Version  0
+                NormSlave$LNG       WM||||                  # Parameterblock Length
+                # ********
+
+                # Slave Header
+                SlvHeader                                   
+                  {
+
+                  # Length of Slave Header
+                  SlvHeader$LNG       WM||||
+
+                  # Slave SINEC L2 Adress
+                  SlvAdr              BM|1|1|126|1
+                  * SINEC L2 station address of the slave          
+                                                                                                                                
+                  # Identifikation fuer einen Norm Slave
+                  NormSlaveKey$KEY    BC|0|||
+
+                  # Name of Slave
+                  SlvName             AM|"                        "|1|24|24
+                  * Name of the slave
+
+                  # Name of corresponding GSD File
+                  GsdFile             AM|"              "|1|14|14
+                  * Name of the corresponding GSD file              
+
+                  # Min Slave Intervall
+                  MinSlvIntervall     WM|20|0|0xffff|1
+                  * Minimum slave interval
+
+                  # Aktiver oder passives Slave
+                  SlvActivate         EM|Activated|1|Activated(0b1)|NotActivated(0b0)
+                  * Will the slave be polled by the master
+
+       # DPV1-Master quits alarms via SAP 51 (FALSE - Defaul) or via SAP 50 (TRUE)
+                  DPV1ExtraAlarmSAP EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * DPV1-Master quiitiert Alarme über den SAP 51 (FALSE - Default) oder SAP 50 (TRUE)
+
+                  # Slave CFG data of DPV1?
+                  DPV1DataTypes               EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave CFG data of DPV1?
+
+                  # DPV1 functionality
+                  DPV1Supported               EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave functionally of DPV1
+
+                  # DPV1 Alarm supported
+                  DPV1AlarmSupported          EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave Diag format of DPV1
+
+                  # Failsafe mode
+                  FailSafe                    EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave receives zero or no data in CLEAR mode
+
+                  # Slave receives new PRM data
+                  NewPrm                      EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave receives data or new PRM data
+
+                  # Slave is activated
+                  Active                      EM|TRUE|1|FALSE(0b0)|TRUE(0b1)
+                  * Slave is activated or deactivated
+
+				  SubScribBlk$NAM						_O||||
+  			      SubScribBlk
+			      {
+			        SubScribBlkId						BC|10|||          # Slavequerverkehr (Publisher/Subscriber) Block
+			        SubScribFeatures					WM|0|0|0xffff|1   # default : Alle optionale Blöcke aus
+			                                                              # Bit 0=1 : Publisher/Subscriber Version 2.0
+			        SubScribBlk$LNG                     WM||||
+			      
+			        SubScribAddData$NAM					_O||||
+			        SubScribAddData
+			        {
+			          SubScribAddDataId                 BC|0|||           
+			          SubScribAddData$LNG               WM||||
+			        
+			          SlvPublisher                      BM|0|0|1|1          # Slave is publisher  : 0=off 1=on
+			          SlvSubscriber                     BM|0|0|1|1          # Slave is subscriber : 0=off 1=on
+			          UsedSap							WM|0|0|2|1          # 0 : Default SAP
+			                                                                # 1 : in case of ddb_sap_60_activation
+			                                                                # 2 : in case of ddb_sap_57_activation
+			          DDBBlock1$NAM                      _H||||
+					  DDBBlock1
+					  {			                                                                
+				          PrmChannel                    DC|0|0|0|0          # 0 : parameter are sent via DDB-Prm-Channel
+			              DDBList$LNG                   DM|0|0|0xffffffff|1 
+				          DDBList						HO||1|0xffff|0
+				      }
+	
+			          DDBBlock2$NAM                      _H||||
+					  DDBBlock2
+					  {			                                                                
+				          PrmChannel                    DM||1|0xffffffff|1  # 0 : parameter are sent via DDB-Prm-Channel
+			                                                                # n : parameter are sent via Prm_data, 
+			                                                                #     n is index within Prm_data (begin of DDB-Data)
+				                                                                
+			              DDBLen                        DM|0|0|0xffffffff|1 
+				      }
+			        }
+			      }
+
+				  Dpv1Blk$NAM							_O||||
+  			      Dpv1Blk
+			      {
+			        Dpv1BlkId						    BC|20|||          # DPV1 Block
+			        Dpv1ProfilesFeatures				WM|0|0|0xffff|1   # default : Alle optionalen Blöcke aus
+			                                                              # Bit 0=1 : DPV1 Version 2.0
+			        Dpv1Blk$LNG                         WM||||
+			      
+			        Dpv1AddData$NAM                     _O||||
+			        Dpv1AddData
+			        {
+			          Dpv1AddDataId                     BC|0|||           
+			          Dpv1AddData$LNG                   WM||||
+			        
+			          S7ModeEnable                      BM|0|0|1|1          # Slave wird im S7-Modus betrieben
+			          AsicType                          BM|0|0|255|1        # 0 : Default, 1 : LSPM2
+			          MaxDiagDataLen                    BM|0|0|255|1        # 
+			          MaxAlarmLen                       BM|4|4|64|1       # Maximum length of DPV1-Alarm within Slave-Diag-PDU
+			          MaxChannelDataLength              BM|4|4|244|1        # Maximum Size of MSAC1-PDU
+			          DiagUpdDelay                      BM|0|0|255|1        # Counter for Slaves with reduced performance
+			          AlarmMode                         BM|0|0|7|1          # Maximum number of possible active alarms
+			                                                                # 0:one of each type 
+			                                                                # 1:--> 2 in total
+			                                                                # 2:4; 3:8; 4:12; 5:16; 6:24; 7:32
+			          AddSlFlag                         BM|0|0|255|1        # 
+			          C1ResponseTimeout                 BM|0|0|255|1        #
+			          C1ServSupported                   WM|0|0|0xffff|1     # Bit 0 : ReadWrite supported
+			                                                                # Bit 1 : ReadWrite required
+			                                                                # Bit 2 : DiagAlarm supported
+			                                                                # Bit 3 : DiagAlarm required
+			                                                                # Bit 4 : ProcessAlarm supported
+			                                                                # Bit 5 : ProcessAlarm required
+			                                                                # Bit 6 : PullPlugAlarm supported
+			                                                                # Bit 7 : PullPlugAlarm required
+			                                                                # Bit 8 : StatusAlarm supported
+			                                                                # Bit 9 : StatusAlarm required
+			                                                                # Bit 10 : UpdateAlarm supported
+			                                                                # Bit 11 : UpdateAlarm required
+			                                                                # Bit 12 : ManufactorAlarm supported
+			                                                                # Bit 13 : ManufactorAlarm required
+			                                                                # Bit 14 : reserved
+			                                                                # Bit 15 : reserved
+			          
+			          Reserved                          DM|0|0|0xffffffff|1 # Reserviert
+			        }
+			      }
+                }
+
+                # DP Slave Para Data
+                SlvParData                                  
+                        {
+                        # Length of Slave Para Data
+                        SlvParData$LNG   WM||||
+                                      
+                        Reserved1        IC|0b000|3|3|3
+
+                        # Watchdog On = 1 / Watchdog Off = 0
+                        Watchdog         EM|On|1|On(1)|Off(0)
+                        * Activate watchdog
+
+                        # Freeze Mode supported = 1 / Freeze Mode not supported = 0
+                        FreezeMode       EM|On|1|On(1)|Off(0)
+                        * Do you want to check whether the FREEZE mode is supported ?
+
+                        # Sync Mode supported = 1,Sync Mode not supported = 0
+                        SyncMode         EM|On|1|On(1)|Off(0)
+                        * Do you want to check whether the SYNC mode is supported ?
+
+                        # Master Access Restrictions
+                        MstAccess        IC|0b01|2|2|2
+
+                        # Watchdog Timeout Factor 1
+                        WdFact1          BM|22|0|255|1
+                        * Factor 1 for watchdog timeout
+
+                        # Watchdog Timeout Factor 2
+                        WdFact2          BM|22|0|255|1
+                        * Factor 2 for watchdog timeout
+
+                        # Minimum Station Delay Time
+                        MinTsdr          BM|0|0|255|1
+
+                        # Manufacturor specific Identification Code
+                        IdentNumber      SM|0|0|0xffff|1
+                        * Unique slave identification number
+
+                        # Group Identification
+                        GrpIdent         BM|0|0|255|1
+                        * Assigns slaves to a group
+
+                        # Manufacturor specific User configurated Data
+                        UserParData      HO||0|235|0
+                        * Data configured by user
+                        }
+
+                # Slave Module List
+                SlvModLst                                   
+                        {
+                        # Slave Module List Length
+                        SlvModLst$LNG     WM||||
+
+                        # length of Output Area
+                        OutLenAll         BM|0|0|0xff|1
+                        * Total length of the output area of the slave
+
+                        # length of Input Area
+                        InLenAll          BM|0|0|0xff|1
+                        * Total length of the input area of the slave
+
+                        # Amount Modules
+                        ModEntry$CNT      BO||||
+
+                        # several Modul Entries
+                        ModEntry$NAM      _A||||
+                        ModEntry
+                                { * Additional description of the modules not accounted for in the standard
+
+                                # Modullist Entry Length
+                                ModEntry$LNG   WM||||
+
+                                # Type of Module
+                                ModType        AM|""|0|24|24
+                                * Module name
+
+                                # Begin of Output Process Image
+                                OutBegin       WM|0|0|0xffff|1
+                                * Offset of start of output area
+
+                                # Begin of Input Process Image
+                                InBegin        WM|0|0|0xffff|1
+                                * Offset of start of input area
+
+                                # Verweis auf Typdatei Parametrierungsdaten Strukturierung
+                                paraDataIdx                WO||0|0xffff|1
+                                * Reference to type file parameter assignment data structure
+                                }
+                        }
+
+                # Slave Configuration Data
+                SlvCfgData                                                 
+                        {
+
+                        # Length of Configuration Data
+                        SlvCfgData$LNG                                  WM||||                        
+
+                        # Module Configuration Data
+                        Module$NAM                                      _A||||                     
+                        Module
+                                { * Standard module description
+
+
+                                # simple Module Description
+                                SimpleModDescr$NAM              _H||||                  
+                                SimpleModDescr
+                                        { * Simple module description
+
+                                        # I/O Area Length
+                                        IoLen                           IM|0b1000|0|4|4
+                                        * I/O area length
+
+                                        # This Parameter describes the I/O Type
+                                        IoType$KEY                      EM|Input|2|Input(1)|Output(2)|InOutput(3)
+                                        * I/O area type
+
+                                        # Beschreibt die Granularität des IO Bereichs
+                                        Alignment                       EM|Byte|1|Byte(0)|Word(1)
+                                        * Describes the granularity of the I/O area
+
+                                        # Beschreibt die Bereichs Konsistenz des IO-Bereichs     
+                                        Consistency                     EM|Value|1|Value(0)|Area(1)
+                                        * Describes the area consistency of the I/O area
+                                        }
+
+                                # extended Module Description
+                                ExtModDescr$NAM                 _H||||                      
+                                ExtModDescr
+                                        { * Contains an extended module description
+
+                                        # Length of Manufacturor specific Data
+                                        ManufData$LNG                   IM||4|4|4
+
+                                        # This Parameter identifies the extended Modul Description Format
+                                        IoTypeKey$KEY                   IC|0b00|2|2|2               
+
+                                        # Leermodul Definition
+                                        EmptyMod$NAM                    _H||||                      
+                                        EmptyMod
+                                                { * Contains the module description of an empty module
+
+                                                # extended I/O Description Empty Module
+                                                ExtIoTypeKey$KEY  IC|0b00|2|2|2                
+                                                }
+
+                                        # Input Area Description
+                                        InDescr$NAM                     _H||||                           
+                                        InDescr
+                                                { * Contains the module description of an input module
+
+                                                # extended I/O Description "Input"
+                                                ExtIoTypeKey$KEY  IC|0b10|2|2|2
+
+                                                # Length of Input I/O Area
+                                                IoLen           IM|0b100000|0|6|6
+                                                * Length of the input area
+
+                                                # Beschreibt die Granularität des IO Bereiches
+                                                Alignment       EM|Byte|1|Byte(0)|Word(1)
+                                                * Describes the granularity of the I/O area
+
+                                                # Beschreibt die Konsistenz des IO Bereiches
+                                                Consistency     EM|Area|1|Value(0)|Area(1)
+                                                * Describes the consistency of the I/O area
+
+                                                }
+
+                                        # Output Area Description
+                                        OutDescr$NAM                    _H||||                           
+                                        OutDescr
+                                                { * Contains the module description of an output module
+                                                
+                                                # extended I/O Description "Output"
+                                                ExtIoTypeKey$KEY  IC|0b01|2|2|2             
+
+                                                # Length of Output I/O Area
+                                                IoLen           IM|0b100000|0|6|6
+                                                * Length of the output area
+
+                                                # Beschreibt die Granularität des IO Bereiches
+                                                Alignment       EM|Byte|1|Byte(0)|Word(1)
+                                                * Describes the granularity of the I/O area
+
+                                                # Beschreibt die Konsistenz des IO Bereiches   
+                                                Consistency     EM|Area|1|Value(0)|Area(1)
+                                                * Describes the consistency of the I/O area
+
+                                                }
+
+                                        # Input- Output Area Description
+                                        InOutDescr$NAM                  _H||||              
+                                        InOutDescr
+                                                { * Contains the module description of an input/output module
+
+                                                # extended I/O Description "Input/Output"
+                                                ExtIoTypeKey$KEY  IC|0b11|2|2|2
+
+                                                # Length of Output I/O Area
+                                                OutLength       IM|0b100000|0|6|6
+                                                * Length of the output area
+
+                                                # Beschreibt die Granularität des Ausgangs- IO Bereiches
+                                                OutAlignment    EM|Byte|1|Byte(0)|Word(1)
+                                                * Describes the granularity of the output I/O area
+
+                                                # Beschreibt die Konsistenz des Ausgangs- IO Bereiches
+                                                OutConsistency  EM|Area|1|Value(0)|Area(1)
+                                                * Describes the consistency of the output I/O area
+
+                                                # Length of Input I/O Area
+                                                InLength        IM|0b100000|0|6|6
+                                                * Length of the input I/O area
+                                                           
+                                                # Beschreibt die Granularität des Eingangs- IO Bereiches
+                                                InAlignment     EM|Byte|1|Byte(0)|Word(1)
+                                                * Describes the granularity of the input I/O area
+
+                                                # Beschreibt die Konsistenz des Eingangs- IO Bereiches
+                                                InConsistency   EM|Area|1|Value(0)|Area(1)
+                                                * Describes the consistency of the input I/O area
+                                                                                                                                                                                                                         # of the I/O Area.
+                                                }
+
+                                        # optional Manufacturor specific Data Group
+                                        ManufData                                           
+                                                {
+
+                                                # Manufacturor specific Module Data
+                                                ManufactData   HO||0|232|0
+                                                * Vendor-specific data
+                                                         
+                                                }
+                                }
+                        }
+                    }
+
+                # Manufacturor specific module configuration data
+                SlvModParData
+                    {
+
+                    # Length of SlvModParData
+                    SlvModParData$LNG        WO||||
+                    * length of SlvModParData
+
+                    # Configuration data
+                    ModParData               HO||0|235|0
+                    * configuration data
+                    }
+                }
+
+         # ******************************************************************
+         # Definition nicht Norm konformer Slave
+         # ******************************************************************
+         NotNormSlave$NAM                                       _A||||
+         NotNormSlave
+                { * Definition of a non-standard slave
+
+
+                # Parameterblock
+                # ********
+                SblkDmgt                                        BC|2||| # Parameterblock Nummer
+                SblkVersion                                     BC|0||| # Version
+                NotNormSlave$LNG                                WO||||  # Länge des Parameterblocks
+                # ********
+
+                # Slave Header
+                SlvHeader                                    
+                {
+
+                        # Length of Slave Header
+                        SlvHeader$LNG           WO||||
+
+                        # Slave SINEC L2 Adress
+                        SlvAdr                  BM|3|3|124|1
+                        * SINEC L2 station address of the non-standard slave
+
+                        # The Slave Type chooses between Norm Slave, ET 200 U/K ....
+                        NotNormSlaveKey$KEY     BC|1|||
+
+
+                        # Name of Slave
+                        SlvName                 AM|""|1|24|24
+                        * Name of the non-standard slave
+
+                        # Name of corresponding GSD File
+                        GsdFile                 AM|""|1|14|14
+                        * Name of the corresponding GSD file  
+
+                }
+
+                # Slave Module List
+                SlvModLst                                       
+                {
+
+                        # Slave Module List Length
+                        SlvModLst$LNG          WO||||
+
+                        # length of Output Area
+                        OutLenAll              BM||0|0xff|1
+                        * Total length of the slave output area
+
+                        # length of Input Area
+                        InLenAll               BM||0|0xff|1
+                        * Total length of the slave input area
+
+                        # Amount Modules
+                        ModEntry$CNT           BO||||
+
+                        # several Modul Entries
+                        ModEntry$NAM           _S||||
+                        ModEntry                                  
+                        { * Contains extended information describing the module
+
+                                # Modullist Entry Length
+                                ModEntry$LNG        WO||||
+
+                                # Type of Module
+                                ModType             AM|""|1|24|24
+                                * Module name
+
+                                # Begin of Output Process Image
+                                OutBegin            WM|0|0|0xffff|1
+                                * Start of process image of the inputs
+
+                                # Begin of Input Process Image
+                                InBegin             WM|0|0|0xffff|1
+                                * Start of process image of the outputs
+                                    
+                        }
+                }
+
+                #**********************************************************************
+                # Define for ET200B_K_SPM-slave parameter set
+                # SPM           : Port B,C (A,D = 0)
+                # ET200K        : Port A,D (B,C = 0)
+                # ET200B        : Port A,B,C,D
+                #**********************************************************************
+                SlaveDescrET200ALL$NAM           _H||||
+                SlaveDescrET200ALL
+                {  * Slave description SPM station, ET200K, ET200B
+
+                        # Identifikationsbyte ET200ALL
+                        SlaveDescrET200ALLKey$KEY        BC|2|||
+
+                        # Slave Parametrierungsdaten 
+                        SlvParData
+                        {
+                                # Parametrierung Port A
+                                PortA                 IM||8|8|8        # Port A
+                                * Parameter assignment port A
+
+                                # Parametrierung Port B
+                                PortB                 IM||8|8|8        # Port B
+                                * Parameter assignment port B
+
+                                # Parametrierung Port C
+                                PortC                 IM||8|8|8        # Port C
+                                * Parameter assignment port C
+
+                                # Parametrierung Port D
+                                PortD                 IM||8|8|8        # Port D
+                                * Parameter assignment port D
+
+                                # *
+                                # * Configuration data
+                                # *
+
+                                # Länge der Daten
+                                LenghtOfReplyData     IM|0b0000|4|4|4
+                                * Length of the data
+
+                                # T(Ready)
+                                Trdy                  EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Job dwell time
+
+                                # with Diagnosis
+                                Diag                  EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Diagnostics necessary
+
+                                # diagnosis on reply frame
+                                DiagOnReplyFrame      EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Diagnostics necessary for reply frame
+
+                                # outputport is free (=0)
+                                OutPortFree           EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Set initial state of the outputs to FREE   
+
+                                # Auftragsüberwachungszeit
+                                Wd                    BM||0|0xff|1                                                # Watchdog
+                                * Watchdog time
+
+                                # eigene Stationsadresse
+                                Ts                    IM|0b1100000|7|7|7
+                                * SINEC L2 station address
+
+                                # liegt es als EPROM vor
+                                SaveToEprom           EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * exists as EPROM
+
+                                # Diagnosemaske Port A
+                                DiagMaskA             IM|0b00000000|8|8|8
+                                * Diagnostic dialog port A
+
+                                # Diagnosemaske Port B
+                                DiagMaskB             IM|0b00000000|8|8|8
+                                * Diagnostic dialog port B
+
+                                # Diagnosemaske Port C
+                                DiagMaskC             IM|0b00000000|8|8|8
+                                * Diagnostic dialog port C
+
+                                # Diagnosemaske Port D
+                                DiagMaskD             IM|0b00000000|8|8|8
+                                * Diagnostic dialog port D
+
+                        }
+                        Dummy                    BC|0|||
+                }
+
+                #**********************************************************************
+                # Define for ET200U-slave parameter set
+                # for IM318 and SPC
+                #**********************************************************************
+                SlaveDescrET200U$NAM             _H||||                     
+                SlaveDescrET200U
+                {
+
+                        # Identifikationsbyte ET200U
+                        SlaveDescrET200UKey$KEY  BC|1|||
+
+                        # Slave Parametrierungsdaten
+                        SlvParData
+                                {
+                                # --- alte Version
+                                # Disable Port Write
+                                #DisablePortWrite      EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+
+                                # Direct Diagnosis
+                                #DirectDiag            EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+
+                                # Diagnosis Error Off
+                                #DiagErrOff            EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+
+                                # AG100 Slow Mode
+                                #AG100SlowMode         IC|0b0|1|1|1
+
+                                # Watch Dog on
+                                #Wd                    EM|On|1|Off(0b0)|On(0b1)
+
+                                # Stationstyp          
+                                #StationType           IC|0b001|3|3|3
+
+                                # ---- neue Version
+                                # ---- 21.10.94
+
+                                # Stationstyp
+                                StationType           IC|0b100|3|3|3
+                                * Station type
+
+                                # Watch Dog on
+                                Wd                    EM|On|1|Off(0b0)|On(0b1)
+                                * Activate/deactivate watchdog
+
+                                # AG100 Slow Mode
+                                AG100SlowMode         IC|0b0|1|1|1
+                                * Activate the S5-100 slow mode
+
+                                # Diagnosis Error Off
+                                DiagErrOff            EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Activate diagnostic output
+
+                                # Direct Diagnosis
+                                DirectDiag            EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Activate direct diagnostics
+
+                                # Disable Port Write
+                                DisablePortWrite      EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Disable writing to ports
+
+                                # Ansprechueberwachung untere Grenze
+                                WdLow                 BM||0|0xff|1
+                                * Lower limit of the watchdog time
+
+                                # Ansprechüberwachung obere Grenze
+                                WdHigh                BM||0|0xff|1
+                                * Upper limit of the watchdog time
+
+                                # Auftrags- Verweilzeit
+                                TrDy                  BM|0x37|0x0b|0xff|1   # T(Ready)
+                                * Job dwell time
+
+                                # rest of parameters is equal 0
+                                Para4to10             HC|0h0000000000000000|8|8|8
+                                }                                                        
+
+                        # Amount of config data
+                        SlvCfgData$CNT           BO||||                                                  
+
+                        # Konfigurationsdaten
+                        SlvCfgData$NAM           _S||||
+                        SlvCfgData
+                                {
+                                # ----------- neue Version 
+                                # ----------- am 20.10.94
+
+                                # Len in Words or Nibbles
+                                IoLen                 IM|0b00|2|2|2
+                                * Length of the I/O area in words or nibbles
+
+                                # Analog/Digital
+                                Alignment             EM|Nibble|1|Nibble(0b0)|Word(0b1)
+                                * Describes the granularity of the I/O area
+
+                                # Typ des IO Bereiches
+                                IoType                EM|InOutput|2|EmptyMod(0b00)|Input(0b10)|Output(0b01)|InOutput(0b11)
+                                * I/O area type
+
+                                # Extended Diagnosis
+                                ExtDiag               EM|FALSE|1|FALSE(0b0)|TRUE(0b1)
+                                * Activate extended diagnostics
+
+                                # Lese oder Schreib Konsistenz aktivieren     
+                                Consistency           EM|None|2|None(0b00)|Read(0b01)|Write(0b10)|ReadWrite(0b11) # Consistency read/write
+                                * Activate read or write consistency
+
+                                }
+                        }
+                }
+         }
+  }
+
+
+# -----------------------------------------------------------------
+#     FMS Rules
+# -----------------------------------------------------------------
+FMSHeader
+{
+  FMS_ID                  BC|129|||      
+  FMS$LNG                 DM||0|1000000| 
+}
+
+FMS
+{
+  VFD$CNT                   BM||0|5|                      
+  VFD<VFD>$NAM              _A||||                  [2-0] 
+  VFD
+  {
+         layer                           BC|1|1|1|
+         service                         BC|46|46|46|       
+         VFD_Number<VFD_Number>          DM|1|1|5| [2-3]     
+         VendorName$LNG                  BM||0|32|1
+         VendorName<Vendor_Name>         AM|""|0|32|32 [2-4] 
+         ModelName$LNG                   BM||0|32|1
+         ModelName<VFD_Name>             AM||1|32|32   [2-5] 
+         Revision$LNG                    BM||0|32|1          
+         Revision<Revision>              AM|""|0|32|32 [2-6] 
+         Profile_Number<Profile_Number>  WM|0|0|255|1  [2-7]
+         nr_of_OS                        WM|0|0|0|1
+  } 
+
+  # -----------------------------------------------------------------
+  #     CRH, CRLs
+  # -----------------------------------------------------------------
+  CRL_Header<CRL_Header>$NAM                    _O||||          [12-0]
+  CRL_Header
+  {
+         layer                                  BC|4|4|4|
+         service                                BC|13|13|13|
+         CREF                                   WC|0|0|0|
+         Number_of_FMS_CRL_Entries              WM|1|1|126|1
+         Symbol_Length<CR_Name_Length>          BM|32|32|32|1 [12-1]
+
+         CvMaskGroup_Poll_List_Sap {
+                Poll_List_Sap<Poll_List_SAP>     BD|51|0|61| [12-2]  
+         }
+
+         Ass_Abt_Ci_Timer<ASS/ABT-CI>           DM|3000|1|999999|
+         VFD_Pointer_Supported<VFD_Pointer_Supported>   EM|FALSE|8|FALSE(0)|TRUE(255) [12-3]
+         dummy                                                  BC|0|0|0|
+  }
+
+  CRL<CRL>$NAM                                  _A||||         [13-0]
+  CRL
+  {
+
+         layer                                  BC|4|4|4|
+         service                                BC|13|13|13|
+
+         Peer<Remote_Station_Type> EM!B|CP5431|8|CP5431("A")|CPFMS("B")|DefaultCP5431("A")
+         CREF<CREF>                         WM||3|128|    [13-6] 
+
+         CvMaskGroup_Local_LSAP {
+                Local_LSAP_A<Local_LSAP_A> BH||2|52|1 & 0|0|1 & 63|63|1 & 128|128|1 [13-9]         
+                Local_LSAP_B<Local_LSAP_B> BH||2|52|1 & 0|0|1 & 63|63|1 & 128|128|1 [13-9]          
+         }
+
+         CvMaskGroup_Remote_Address {
+              Remote_Address_1A<Remote_Address_1A> BH||0|126|1 & 0|0|1 & 127|127|1 & 255|255|1  [13-10]
+              Remote_Address_2A<Remote_Address_2A> BH||255|255|1 [13-10]      
+              Remote_Address_1B<Remote_Address_1B> BH||0|126|1 & 0|0|1 & 127|127|1 & 255|255|1   [13-10]      
+              Remote_Address_2B<Remote_Address_2B> BH||255|255|1 [13-10]      
+         }
+
+         remote_segment                                BM|255|0|255|1 
+
+         CvMaskGroup_Remote_LSAP {
+                Remote_LSAP_1A<Remote_LSAP_1A>   BH||2|52|1 & 0|0|1 & 63|63|1 & 128|128|1 & 255|255|1      [13-11]        
+                Remote_LSAP_2A<Remote_LSAP_2A>   BH||255|255|1    [13-11]
+                Remote_LSAP_1B<Remote_LSAP_1B>   BH||2|63|1 & 0|0|1 & 128|128|1 & 255|255|1      [13-11]
+                Remote_LSAP_2B<Remote_LSAP_2B>   BH||255|255|1   [13-11]
+         }
+
+         LLI_SAP<LLI_SAP>                   EM|FMS|8|FMS(0) [13-5]
+
+         CvMaskGroup_Type {
+                Type_A<Type_A>                ED|MMAC|8|MMAC(0) |BRCT(8) [13-5]
+                Type_B<Type_B>                EH||8|MMAC(0)
+                                                   |MSAC(1)
+                                                   |MSCY(3)
+                                                   |MSAC_SI(5)
+                                                   |MSCY_SI(7)
+                                                   |BRCT(8)
+                                                   |MULT(10)
+                                                   |DefaultMMAC(0)  [13-5] 
+         }
+
+         Multiplier                       BM|1|1|48|
+
+         CvMaskGroup_Connection_Attribute {
+                Connection_Attribute_1A<Connection_Attribute_1A>     EH||8|defined_connection-D(0)
+                                                                                                                                                                  |open_at_requester-I(1)
+                                                              |open_at_responder-O(2)
+                                                              |Defaultdefined_connection-D(0) [13-8] 
+            Connection_Attribute_2A<Connection_Attribute_2A>     EH||8|defined_connection-D(0)
+                                                              |open_at_responder-O(2)
+                                                              |Defaultdefined_connection-D(0) [13-8]
+            Connection_Attribute_1B<Connection_Attribute_1B>     EH||8|defined_connection-D(0)
+                                                              |open_at_requester-I(1)
+                                                              |open_at_responder-O(2)
+                                                              |Defaultdefined_connection-D(0) [13-8] 
+            Connection_Attribute_2B<Connection_Attribute_2B>     EH||8|defined_connection-D(0)
+                                                              |open_at_responder-O(2)
+                                                              |Defaultdefined_connection-D(0) [13-8] 
+    }
+
+    CvMaskGroup_max_SCC {
+                max_SCC_A<MAX_SCC_A>   BH||0|4| [13-7]           
+            max_SCC_B<MAX_SCC_B>   BH||0|32| [13-7]          
+   }
+
+    CvMaskGroup_max_RCC {
+      max_RCC_A<MAX_RCC_A>   BH||0|4|  [13-8]          
+      max_RCC_B<MAX_RCC_B>   BH||0|32| [13-8]           
+    }
+
+    CvMaskGroup_max_SAC {
+      max_SAC_A<MAX_SAC_A>   BH||0|4|  [13-9]           
+      max_SAC_B<MAX_SAC_B>   BH||0|32|  [13-9]            
+   }
+
+   CvMaskGroup_max_RAC {
+     max_RAC_A<MAX_RAC_A>   BH||0|4|  [13-10]           
+     max_RAC_B<MAX_RAC_B>   BH||0|32| [13-10]            
+   }
+
+
+   CvMaskGroup_CI {
+     CI_A<CI_A> DH||500|500| & 0|0|1 & 52|499|1 & 501|99999|1 [13-11] 
+     CI_B<CI_B> DH||0|4294967295|                  [13-11]            
+    }
+
+   C_MAX_PDU_Sending_High_Prio {
+     MAX_PDU_Sending_High_Prio_A<MAX_PDU_Sending_High_Prio_A> BH||0|0| &
+                                                1|32|1 [13-12]            
+     MAX_PDU_Sending_High_Prio_B<MAX_PDU_Sending_High_Prio_B> BH||0|241|1 [13-12] 
+    }
+
+    C_MAX_PDU_Sending_Low_Prio {
+      MAX_PDU_Sending_Low_Prio_A<MAX_PDU_Sending_Low_Prio_A> BH||241|241| &
+                                               0|240|1 [13-13] 
+      MAX_PDU_Sending_Low_Prio_B<MAX_PDU_Sending_Low_Prio_B> BH||241|241| &
+                                               0|240|1  [13-13]                      
+    }
+
+    C_MAX_PDU_Receiving_High_Prio {
+      MAX_PDU_Receiving_High_Prio_A<MAX_PDU_Receiving_High_Prio_A> BH||241|241| &
+                                               0|240|1 [13-14] 
+      MAX_PDU_Receiving_High_Prio_B<MAX_PDU_Receiving_High_Prio_B> BH||241|241| &
+                                               0|240|1 [13-14] 
+    }
+
+    C_MAX_PDU_Receiving_Low_Prio {
+      MAX_PDU_Receiving_Low_Prio_A<MAX_PDU_Receiving_Low_Prio_A> BH||241|241| &
+                                                0|240|1  [13-15]  
+      MAX_PDU_Receiving_Low_Prio_B<MAX_PDU_Receiving_Low_Prio_B> BH||241|241| &
+                                                0|240|1  [13-15]
+    }
+
+    CvMaskGroup_FMS_FS {
+      FMS_Features_Supported<FMS_Features_Supported>$NAM   _D||||
+      FMS_Features_Supported {
+
+          R7<CreateProgramInvocation_R> EM|OFF|1|OFF(0)|ON(1)      [14-8] 
+          R6<RequestDomainUpLoad_R>     EM|OFF|1|OFF(0)|ON(1)      [14-7] 
+          R5<RequestDomainDownLoad_R>   EM|OFF|1|OFF(0)|ON(1)      [14-6] 
+          R4<UploadSegment_R>           EM|OFF|1|OFF(0)|ON(1)      [14-5] 
+          R3<DownloadSegment_R>         EM|OFF|1|OFF(0)|ON(1)      [14-4] 
+          R2<PutOD_R>                   EM|OFF|1|OFF(0)|ON(1)      [14-3] 
+          R1<UnsolicitedStatus_R>       EM|OFF|1|OFF(0)|ON(1)      [14-2] 
+          R0<GetOD_R>                   EM|OFF|1|OFF(0)|ON(1)      [14-1] 
+
+          R15<PhysWrite_R>              EM|OFF|1|OFF(0)|ON(1)     [14-16] 
+          R14<PhysRead_R>               EM|OFF|1|OFF(0)|ON(1)     [14-15] 
+          R13<WriteWithType_R>          EM|OFF|1|OFF(0)|ON(1)     [14-14] 
+          R12<ReadWithType_R>           EM|OFF|1|OFF(0)|ON(1)     [14-13] 
+          R11<Write_R>                  EM|ON|1|OFF(0)|ON(1)  [14-12] 
+          R10<Read_R>                   EM|ON|1|OFF(0)|ON(1)  [14-11]   
+          R9 <Kill_R>                   EM|OFF|1|OFF(0)|ON(1)      [14-10] 
+          R8<Start_R>                   EM|OFF|1|OFF(0)|ON(1)      [14-9]
+
+          R23<Addressing_with_name_R>   EM|OFF|1|OFF(0)|ON(1)[14-24] 
+          R22<AlterEventConditionMonitoring_R> EM|OFF|1|OFF(0)|ON(1) [14-24] 
+          R21<AcknowledgeEventNotication_R>    EM|OFF|1|OFF(0)|ON(1) [14-23] 
+          R20<EventNotificationWithType_R>     EM|OFF|1|OFF(0)|ON(1) [14-22] 
+          R19<EventNotification_R>             EM|OFF|1|OFF(0)|ON(1) [14-21] 
+          R18<DefineVariableList_R>        EM|OFF|1|OFF(0)|ON(1)    [14-19] 
+          R17<InformationReportWithType_R> EM|OFF|1|OFF(0)|ON(1)    [14-18] 
+          R16<InformationReport_R>         EM|OFF|1|OFF(0)|ON(1)    [14-17] 
+
+          O31<CreateProgramInvocation_O>     EM|OFF|1|OFF(0)|ON(1) [14-8] 
+          O30<RequestDomainUpLoad_O>         EM|OFF|1|OFF(0)|ON(1) [14-7] 
+          O29<RequestDomainDownLoad_O>       EM|OFF|1|OFF(0)|ON(1) [14-6]
+          O28<UploadSegment_O>               EM|OFF|1|OFF(0)|ON(1) [14-5] 
+          O27<DownloadSegment_O>             EM|OFF|1|OFF(0)|ON(1) [14-4] 
+          O26<PutOD_O>                       EM|OFF|1|OFF(0)|ON(1) [14-3] 
+          O25<UnsolicitedStatus_O>           EM|OFF|1|OFF(0)|ON(1) [14-2] 
+          O24<GetOD_O>                       EM|OFF|1|OFF(0)|ON(1)  
+
+
+          O39<PhysWrite_O>                   EM|OFF|1|OFF(0)|ON(1) [14-16] 
+          O38<PhysRead_O>                    EM|OFF|1|OFF(0)|ON(1) [14-15]
+          O37<WriteWithType_O>               EM|OFF|1|OFF(0)|ON(1) [14-14]
+          O36<ReadWithType_O>                EM|OFF|1|OFF(0)|ON(1) [14-13] 
+          O35<Write_O>                       EM|ON|1|OFF(0)|ON(1) [14-11]
+          O34<Read_O>                        EM|ON|1|OFF(0)|ON(1) [14-12] 
+          O33<Kill_O>                        EM|OFF|1|OFF(0)|ON(1) [14-10] 
+          O32<Start_O>                       EM|OFF|1|OFF(0)|ON(1) [14-9] 
+
+          O47<Addressing_with_name_O> EM|OFF|1|OFF(0)|ON(1)[14-24] 
+          O46<AlterEventConditionMonitoring_O> EM|OFF|1|OFF(0)|ON(1)[14-24] 
+          O45<AcknowledgeEventNotication_O>    EM|OFF|1|OFF(0)|ON(1)[14-23] 
+          O44<EventNotificationWithType_O>    EM|OFF|1|OFF(0)|ON(1)[14-22]  
+          O43<EventNotification_O>            EM|OFF|1|OFF(0)|ON(1)[14-21] 
+          O42<DefineVariableList_O>           EM|OFF|1|OFF(0)|ON(1)[14-19] 
+          O41<InformationReportWithType_O>    EM|OFF|1|OFF(0)|ON(1)[14-18] 
+          O40<InformationReport_O>       EM|ON|1|OFF(0)|ON(1)[14-17] 
+
+      }
+
+    }
+
+          Symbol$LNG                          BM||0|32|1 [13-7]
+          Symbol<CR_Name>                     AM||1|32|32   [13-7]
+          VFD_Pointer<Related_VFD>          DM|1|1|5|1   [13-14]
+          Extension<Extension>          HM|0h00|1|32|32  [13-20]
+  }
+}
+
+
+DB_CLOSE_Header
+{
+  DB_CLOSE_ID       BC|0xFF|||
+  DB_CLOSE$LNG      DM||||
+}
+
+DB_CLOSE
+{
+  Copyright   AC|"Copyright (C) Siemens AG 1994 All Rights Reserved"|||
+}
+# -----------------------------------------------------------------------
+#       end
+# -----------------------------------------------------------------------
+
+
+
+

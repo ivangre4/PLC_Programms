@@ -1,0 +1,219 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1316285]		
+KatEntryName=CPU 312C
+InfoText=Zentralbaugruppen des Typs CPU 312C
+[1316286]		
+KatEntryName=CPU 313C
+InfoText=Zentralbaugruppen des Typs CPU 313C
+[1316287]		
+KatEntryName=CPU 313C-2 DP
+InfoText=Zentralbaugruppen des Typs CPU 313C-2 DP
+[1316229]		
+KatEntryName=CPU 314C-2 DP
+InfoText=Zentralbaugruppen des Typs CPU 314C-2 DP
+[1316288]		
+KatEntryName=CPU 313C-2 PtP
+InfoText=Zentralbaugruppen des Typs CPU 313C-2 PtP
+[1316230]		
+KatEntryName=CPU 314C-2 PtP
+InfoText=Zentralbaugruppen des Typs CPU 314C-2 PtP
+[1316289]		
+KatEntryName = 6ES7 312-5BD00-0AB0
+InfoText = Arbeitsspeicher 16KB; 0,2ms/kAW; DI10/DO6 integriert; 2 Impulsausgänge (2,5kHz); 2-kanalig zählen und messen mit Inkrementalgebern 24V (10kHz); MPI-Anschluß; einzeiliger Aufbau bis 8 Baugruppen; Firmware V1.0
+SHORTNAME=CPU 312C
+[1316290]		
+KatEntryName = 6ES7 313-5BE00-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI-Anschluß; mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V1.0
+SHORTNAME=CPU 313C
+[1316291]		
+KatEntryName = 6ES7 313-6CE00-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=CPU 313C-2 DP
+[1316231]		
+KatEntryName = 6ES7 314-6CF00-0AB0
+InfoText = Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=CPU 314C-2 DP
+[1316292]		
+KatEntryName = 6ES7 313-6BE00-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R))); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V1.0
+SHORTNAME=CPU 313C-2 PtP
+[1316232]		
+KatEntryName = 6ES7 314-6BF00-0AB0
+InfoText = Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R), RK512)); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V1.0
+SHORTNAME=CPU 314C-2 PtP
+[1316295]		
+SHORTNAME=AI5/AO2
+InfoText=Analogein-/ausgabe AI5 + AO2
+[1316236]		
+SHORTNAME=AI5/AO2
+InfoText=Analogein-/ausgabe AI5 + AO2
+[1316237]		
+SHORTNAME=AI5/AO2
+InfoText=Analogein-/ausgabe AI5 + AO2
+[1316293]		
+SHORTNAME=DI10/DO6
+InfoText=Digitalein-/ausgabe DI10 + DO6
+[1316294]		
+SHORTNAME=DI24/DO16
+InfoText=Digitalein-/ausgabe DI24 + DO16
+[1316296]		
+SHORTNAME=DI16/DO16
+InfoText=Digitalein-/ausgabe DI16 + DO16
+[1316297]		
+SHORTNAME=DI16/DO16
+InfoText=Digitalein-/ausgabe DI16 + DO16
+[1316238]		
+SHORTNAME=DI24/DO16
+InfoText=Digitalein-/ausgabe DI24 + DO16
+[1316239]		
+SHORTNAME=DI24/DO16
+InfoText=Digitalein-/ausgabe DI24 + DO16
+[1316298]		
+SHORTNAME=DP
+InfoText=
+[1316241]		
+SHORTNAME=DP
+InfoText=
+[1322013]		
+SHORTNAME=PtP
+InfoText=PtP-Kommunikation mit RS422/485 Schnittstelle ( ASCII, 3964(R) )
+[1322014]		
+SHORTNAME=PtP
+InfoText=PtP-Kommunikation mit RS422/485 Schnittstelle ( ASCII, 3964(R), RK512 )
+[1322016]		
+SHORTNAME=Zählen
+InfoText=2 Kanäle; Zählen und Frequenzmessen mit 10kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322017]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322018]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322019]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322020]		
+SHORTNAME=Zählen
+InfoText=4 Kanäle; Zählen und Frequenzmessen mit 60kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322021]		
+SHORTNAME=Zählen
+InfoText=4 Kanäle; Zählen und Frequenzmessen mit 60kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz
+[1322023]		
+SHORTNAME=Positionieren
+InfoText=
+[1322024]		
+SHORTNAME=Positionieren
+InfoText=
+[1322025]		
+SHORTNAME=Positionieren
+InfoText=1 Kanal; Positionieren mit Analogausgang oder Digitalausgängen
+[1322026]		
+SHORTNAME=Positionieren
+InfoText=1 Kanal; Positionieren mit Analogausgang oder Digitalausgängen
+;
+;
+;
+[1316583]
+KatEntryName = C7-635 TB
+InfoText = Komplettsystem SIMATIC C7 des Typs C7-635 TB mit PROFIBUS DP-Schnittstelle für dezentrale Strukturen
+SHORTNAME=C7-635 TB
+[1316584]
+KatEntryName=6ES7 635-2EB00-0AE3
+InfoText=Komplettgerät; TP 170 B + CPU mit Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=C7 635 TB
+[1316585]
+KatEntryName=C7-CPU 635TB
+InfoText=CPU mit Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=C7 CPU 635 TB
+;
+;
+;
+[1316620]
+KatEntryName = C7-635 OP
+InfoText = Komplettsystem SIMATIC C7 des Typs C7-635 OP mit PROFIBUS DP-Schnittstelle für dezentrale Strukturen
+SHORTNAME=C7-635 OP
+[1316621]
+KatEntryName=6ES7 635-2EC00-0AE3
+InfoText=Komplettgerät; OP 170 + CPU mit Arbeitsspeicher 64KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=C7 635 OP
+[1316622]
+KatEntryName=C7-CPU 635OP
+InfoText=CPU mit Arbeitsspeicher 64KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V1.0
+SHORTNAME=C7 CPU 635 OP
+[1316623]
+KatEntryName = C7-613
+InfoText = Komplettsystem SIMATIC C7 des Typs C7-613
+SHORTNAME=C7-613
+[1316624]
+KatEntryName=6ES7 613-1CA00-0AE3
+InfoText=Komplettgerät; TD 4zeilig + CPU mit Arbeitsspeicher 32KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI-Anschluß; einzeiliger Aufbau bis 4 Baugruppen; Firmware V1.0
+SHORTNAME=C7 613
+[1316625]
+KatEntryName=C7-CPU 613
+InfoText=CPU mit Arbeitsspeicher 32KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI-Anschluß; einzeiliger Aufbau bis 4 Baugruppen; Firmware V1.0
+SHORTNAME=C7 CPU 613
+;
+;
+;
+[1322029]
+KatEntryName=C7-613 Panel
+InfoText=Integrierte HMI-Baugruppe zur Anzeige und Bedienung von C7 613 Anwendungen
+SHORTNAME=C7-613 Panel
+;
+;
+;
+[1316596]
+KatEntryName = 6ES7 312-5BD01-0AB0
+InfoText = Arbeitsspeicher 16KB; 0,2ms/kAW; DI10/DO6 integriert; 2 Impulsausgänge (2,5kHz); 2-kanalig zählen und messen mit Inkrementalgebern 24V (10kHz); MPI-Anschluß; einzeiliger Aufbau bis 8 Baugruppen; Firmware V2.0; auch als SIPLUS-Baugruppe mit der Bestellnummer 6AG1 312-5BD01-2AB0 erhältlich
+SHORTNAME=CPU 312C
+[1316598]
+KatEntryName = 6ES7 313-5BE01-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI-Anschluß; mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0;auch als SIPLUS-Baugruppe mit der Bestellnummer 6AG1 313-5BE01-2AB0 erhältlich
+SHORTNAME=CPU 313C
+[1316600]
+KatEntryName = 6ES7 313-6CE01-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V2.0;auch als SIPLUS-Baugruppe mit der Bestellnummer 6AG1 313-6CE01-2AB0 erhältlich
+SHORTNAME=CPU 313C-2 DP
+[1316602]
+KatEntryName = 6ES7 313-6BE01-0AB0
+InfoText = Arbeitsspeicher 32KB; 0,1ms/kAW; DI16/DO16 integriert; 3 Impulsausgänge (2,5kHz); 3-kanalig zählen und messen mit Inkrementalgebern 24V (30kHz); MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R))); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 313C-2 PtP
+[1316604]
+KatEntryName = 6ES7 314-6CF01-0AB0
+InfoText = Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ DP-Anschluß (DP-Master oder DP-Slave); mehrzeiliger Aufbau bis 31 Baugruppen; Sende- und Empfangsfähigkeit für direkten Datenaustausch; Äquidistanz; Routing; S7-Kommunikation (ladbare FBs/FCs); Firmware V2.0
+SHORTNAME=CPU 314C-2 DP
+[1316606]
+KatEntryName = 6ES7 314-6BF01-0AB0
+InfoText = Arbeitsspeicher 48KB; 0,1ms/kAW; DI24/DO16; AI5/AO2 integriert; 4 Impulsausgänge (2,5kHz); 4-kanalig zählen und messen mit Inkrementalgebern 24V (60kHz); integrierte Positionierfunktion; MPI+ PtP-Anschluß (RS422/485 (ASCII, 3964(R), RK512)); mehrzeiliger Aufbau bis 31 Baugruppen; Firmware V2.0
+SHORTNAME=CPU 314C-2 PtP
+[1316607]		
+SHORTNAME=DP
+InfoText=
+[1316608]		
+SHORTNAME=DP
+InfoText=
+[1322030]		
+SHORTNAME=Zählen
+InfoText=2 Kanäle; Zählen und Frequenzmessen mit 10kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322031]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322032]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322033]		
+SHORTNAME=Zählen
+InfoText=3 Kanäle; Zählen und Frequenzmessen mit 30kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322034]		
+SHORTNAME=Zählen
+InfoText=4 Kanäle; Zählen und Frequenzmessen mit 60kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322035]		
+SHORTNAME=Zählen
+InfoText=4 Kanäle; Zählen und Frequenzmessen mit 60kHz, Pulsweitenmodulation mit 2,5 kHz Schaltfrequenz, Zählfrequenz
+[1322036]		
+SHORTNAME=Positionieren
+InfoText=1 Kanal; Positionieren mit Analogausgang oder Digitalausgängen, Zählfrequenz
+[1322037]		
+SHORTNAME=Positionieren
+InfoText=1 Kanal; Positionieren mit Analogausgang oder Digitalausgängen, Zählfrequenz

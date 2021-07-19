@@ -1,0 +1,100 @@
+@DB_TYP KBUS_VER   V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           DEUTSCH
+
+KBusSDB$NAM                           _A||||
+KBusSDB
+{
+   BTRV_CLASS_A_HEADER
+   {
+        Synchronisationsmuster          SC|0x7070|||
+	Reserved			BC|0x00|||
+        Attribut                        BM|0x01|0x01|0x02|1 &
+                                                0x04|0x04|1 &
+                                                0x0e|0x0e|1
+	Erstellungssprache		BM|0x08|0x01|0x08|1
+        Bausteintyp                     BM|0x0b|0x00|0x00|1 &
+                                                0x08|0x08|1 &
+                                                0x0a|0x0c|1 &
+                                                0x0e|0x0e|1
+        Bausteinnummer                  SM||||
+        KBusSDB$LNG                     OM||||
+	Password			HM|0h00.00.00.00|4|4|4
+	MMS_Zeitstempel1		HM|0h00.00.00.00.00.00|6|6|6
+	MMS_Zeitstempel2		HM|0h00.00.00.00.00.00|6|6|6
+ 	Laenge2				SC|0x0000|||
+	Laenge3				SC|0x0000|||
+	Schreibschutz			HM|0h00.00|2|2|2
+        SDBParameterbereich$LNG         SM||||
+   }
+   SDBParameterbereich$NAM              _M||||
+   SDBParameterbereich
+   {
+      SDBIdentblock$NAM                 _M||||
+      SDBIdentblock
+      {
+         SDBIdentblock$LNG              BM||||
+         Parameterblock_ID              BC|0x01|||                     #Warum nicht 1 ? S6/42
+         Baugruppentyp                  SC|0x2cab|||                   #S6/42 ;  S9/42 CP443-5
+         SDB_Inhalt                     SM|0x0700|0x0700|0x07ff|1 &
+                                                  0x2700|0x27ff|1 &
+                                                  0x4700|0x47ff|1 &
+                                                  0x6700|0x67ff|1 &
+                                                  0x8700|0x87ff|1 &
+                                                  0xa700|0xa7ff|1 &
+                                                  0xc700|0xc7ff|1 &
+                                                  0xe700|0xe7ff|1
+         Uebertragungsattribut          BM|0x02|0x00|0x04|1
+         Reserved                       BC|0x00|||
+         Kennung                        BC|0x00|||
+         rem_TSAP_id                    WM|0x0000|0x0000|0x0012|1 &
+                                                  0x0020|0x0032|1 &
+                                                  0x0040|0x0052|1 &
+                                                  0x0060|0x0072|1 &
+                                                  0x0080|0x0092|1 &
+                                                  0x00a0|0x00b2|1 &
+                                                  0x00c0|0x00d2|1 &
+                                                  0x00e0|0x00f2|1
+         Device_ID                      BM|0x00|||
+         next_staddr                    BM|0x00|0x00|0x7e|1
+         rem_staddr                     BM|0x00|0x00|0x7e|1
+      }
+
+      Parameterblock1$NAM             _M||||
+      Parameterblock1
+      {
+        Parameterblock_ID       BC|0x01|||
+        Version                 BC|0x00|||
+        Parameterblock1$LNG     WM||||
+        con_id                  WM||||
+        typ                     BM|0x01|||
+        prio                    BM|0x00|0x00|0x01|1
+        con_req_ctr             WM|0x0000|||
+        con_req_time            WM|0x0000|||
+        req_ctr                 WM|0x0000|||
+        req_time                WM|0x0000|||
+        supervision_time        WM|0x0000|||
+        value                   WM|0x0000|||
+        name_len                BC|0x00|||
+      }
+
+      Parameterblock2$NAM             _M||||
+      Parameterblock2
+      {
+        Parameterblock_ID       BC|0x02|||
+        Version                 BC|0x00|||
+        Parameterblock2$LNG     WM||||
+        ta_typ                  BM|0x01|0x00|0x01|1
+        loc_tsap_len            BC|0x02|||                          # L2
+        local_tsap              HM|0h00.00|0|2|2
+        rem_net_adr_len         BC|0x06|||
+        rem_net_adr             HM|0h00.00.00.00.00.00|0|6|6
+        rem_tsap_len            BC|0x02|||
+        rem_tsap                HM|0h00.00|0|2|2
+        loc_nsap_len            BM|0x00|0x00|0x0e|1
+        loc_nsap                HO||0|14|                           # L2
+        rem_nsap_len            BM|0x00|0x00|0x0e|1
+        rem_nsap                HO||0|14|                           # L2
+      }                                         
+   }
+}

@@ -1,0 +1,34 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2040
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Módulos contador 24V V2.0 para ET 200S; modo de contaje, modo de medición, lectura de recorrido, Fast Mode
+
+;---------- 1 COUNT 24V C,   6ES7 138-4DA04-0AB0 C
+[2367053]
+KatEntryName=1 COUNT 24V Modo de contaje V2.0
+InfoText=Módulo contador, 24V para contaje único, sin fin y periódico, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 24V C V2.0
+
+
+;---------- 1 COUNT 24V M,   6ES7 138-4DA04-0AB0 M
+[2367056]
+KatEntryName=1 COUNT 24V Modo de medición V2.0
+InfoText=Módulo contador, 24V para medición de velocidad, frecuencia y periodo, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 24V M V2.0
+
+
+;---------- 1 COUNT 24V W,   6ES7 138-4DA04-0AB0 W
+[2367057]
+KatEntryName=1 COUNT 24V Lectura de recorrido V2.0
+InfoText=Módulo contador, 24V para lectura de recorrido, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 24V W V2.0
+
+
+;---------- 1 COUNT 24V F,   6ES7 138-4DA04-0AB0 F
+[2367069]
+KatEntryName=1 COUNT 24V Fast Mode V2.0
+InfoText=Módulo contador, 24V para contaje rápido, soporta modo isócrono, V2.0
+SHORTNAME=1 COUNT 24V F V2.0
+

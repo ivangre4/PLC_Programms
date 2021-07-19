@@ -1,0 +1,648 @@
+; ========================================================================================
+; -----------------------------  IM 153-4 - PN -Device
+[_S7H_HSP_PN_ET200M_153_4AA00_CT]
+server=s7h0138x.dll
+prefix=OM
+ObjType=2364113
+basetype=_S7H_IO_S7_DEVICE_AT
+basetype=_S7H_ET200M_AT
+CatalogParent=1316862
+IsCatEntry=1
+relation=1315826,_S7H_MODULE300_AT[1315827];deep
+CLASS_PROPERTIES=0
+SHORTNAME=IM 153-4PN
+MLFB=6ES7 153-4AA00-0XB0
+SLAVE_FAMILY=ET 200M
+SLAVE_TYPE=16 
+FIRST_VISIBLE_CHILD_NO=4 
+MAX_NUM_OF_CHILDS=13 
+ICON_TYPE=4
+;--- Anfang Module
+;--- neue Katalogeinträge s.u.
+nKatChilds=10
+KatChild1=2364181
+KatChild2=2364182
+KatChild3=2364183
+KatChild4=2364184
+KatChild5=2364185
+KatChild6=2364186
+KatChild7=2364187
+KatChild8=2364188
+KatChild9=2364189
+KatChild10=2364190
+;--- Ende Module
+CountAutoCreatedChilds=1
+ALLOW_MODULE_NOT_IN_RULE=FALSE
+;Hart-Baugruppen (IDPC_HART, IDPC_HART_8KAN)
+Rule_00020010= MAXC(0)
+Rule_00200010= MAXC(0)
+;SM (IDPC_GEN_SM)
+Rule_00000010= INCL (2,13)
+;FM (IDPC_GEN_FM)
+Rule_00000008= INCL (2,13)
+;DUMMY (IDPC_DUMMY)
+Rule_00010010= INCL (2,13)
+;CP (IDPC_CP)
+Rule_00010100= INCL (2,13)
+
+; neue Katalogeinträge siehe unten
+
+REDUNDANZ=1
+;oder = 3???
+;--- PNIO
+PN_VENDOR_ID=0x002A
+PN_DEVICE_ID=0x0302
+PN_MIN_DEVICE_INTERVAL=8
+PN_DEVICE_SUPPORTS_MMC=1
+IS_PARAMETRIZEABLE=1
+;I&M-Support
+IUA_SUPPORT=1
+IUM_SUPPORT=1
+;FW-Download...
+FW_DOWNLOAD_CAPABLE=1
+INFO_SECTION3_COUNT=2
+INFO_SECTION3_1=111504,3
+INFO_SECTION3_2=111779,2
+;gsdml-Handling
+GSDML_VENDOR_NAME=Siemens
+GSDML_DEVICE_NAME=ET200M
+
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+
+; ----------------------------- IM153-4 PN(KOPF)    
+[_S7H_HSP_PN_ET200M_ETER_153_4AA00_CT] 
+server=s7h0138x.dll
+prefix=OM
+ObjType=2364114
+basetype=_AUT_GENCOMM_AT
+basetype=_S7H_IO_S7_ETER_AT
+;S7H_IO_ET200M_ETER_153_4AA00_CT
+;--- PNIO
+IO_DATA_SIZE=32
+PN_MODULE_IDENTNUMBER=0x0400
+PN_MAX_INPUT_LEN=192
+PN_MAX_OUTPUT_LEN=192
+PN_MAX_DATA_LEN=384
+PN_OBJECTUUID_LOCAL_INDEX=1
+PN_SUPP_REDUCTIONS==1|2|4|8|16
+PN_SUPP_SENDCLOCKS=8|16|24|32|40|48|56|64|72|80|88|96|104|112|120|128
+PN_IS_IOXS_REQUIRED=1
+PN_SUBMODULE_IDENTNUMBER=0
+; minimale Aktualisierungszeit (250µs)
+PN_MIN_DEVICE_INT=8
+CountAutoCreatedChilds=1
+AutoCreatedChild1=2364118, 1, FIXED
+SHORTNAME = IM153-4PN
+;RWB-Module, ZiehenSteckenAlarm
+PHYSICAL_WIDTH=1
+DATA_CHECK_ARWB=0
+ZS_ENABLE=1
+FW_DOWNLOAD_ASK4POST_RESET=1
+FW_DOWNLOAD_POST_RESET_DEFAULT=1
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+
+; ========================================================================================
+; ----------------------------- Abstrakte Submodule Basis
+[_S7H_HSP_153_4AA00_PNIO_SUBMODULE_AT]
+;provider --> consumer
+abstract=true
+basetype=_S7H_IO_SUBMODULE_AT
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+ObjType=2364115
+prefix=OM
+; S7H_PROVIDER_2_CONSUMER_RT und S7H_CONSUMER_2_PROVIDER_RT
+relation=1315895,_S7H_IO_SUBMODULE_AT[1315896]
+relation=1315895,_S7H_IO_NORM_MODULE_AT[1315896]
+
+
+; ========================================================================================
+;---------------------------------- Interface für Kopf
+[_S7H_HSP_153_4AA00_PNIO_INTERFACE_CBE20_2_PORTS_CT]
+basetype=_S7H_HSP_151_3AA20_V40_PNIO_SUBMODULE_AT
+basetype=_S7H_IRT_SYNCH_MASTER_AT
+ADDRESS_RANGE_CODE=
+AutoCreatedPort0=2364116
+AutoCreatedPort1=2364117
+BUS_MASTER=0
+CAPABLE_ALARM=1
+CAPABLE_DIAG=1
+CAPABLE_OBK=0
+CAPABLE_PBK=0
+CAPABLE_PTP=0
+CatalogParent=
+COUNT_INPUT_CHANNELS_ANALOG=0
+COUNT_INPUT_CHANNELS_DIGITAL=0
+COUNT_OUTPUT_CHANNELS_ANALOG=0
+COUNT_OUTPUT_CHANNELS_DIGITAL=0
+CountAutoCreatedPorts=2
+CPU_ZUORDNUNG=1
+DATA_CHECK_ARWB=0
+FIRST_VISIBLE_CHILD_NO=0
+GD_UF0_CAPABLE=0
+GLOBAL_DATA_CAPABLE=0
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+ICON_TYPE=0
+IN_ADDRESS_RANGE=0
+IO_TYPE=1
+IRT_CYCLE_GROUP_MAX=1
+IRT_ISOCHRONE_MODE_SUPPORTED=0
+IRT_MAX_LOCAL_JITTER=50
+IRT_MAX_NO_IR_FRAME_DATA=400
+IRT_NRT_MIN=50
+IRT_NRT_TIME_MIN=125000
+IRT_PLL_WINDOW=1000
+IRT_PTCP_TIMEOUT_FACTOR=5
+IRT_REDUCTION_RATIO_DEFAULT=2
+IRT_REDUCTION_RATIO_MAX=16
+IRT_REDUNDANCY_SUPPORTED=1
+IRT_SENDCLOCK_FACTOR_DEFAULT=32
+IRT_SUBSLOT=32768
+;IRT_SUPP_REDUCTION_RATIOS=1|2|4|8|16
+;IRT_SUPP_SENDCLOCKS=8|16|24|32|40|48|56|64|72|80|88|96|104|112|120|128
+;**hier Einstellungen IRTflex/top
+IRT_SUPPORTED_RT_CLASS=3
+IRT_SUPPORTED_RT_CLASSES=3
+IRT_SWITCH_BRIDGING_DELAY=1720
+;**hier Einstellungen IRTflex/top
+IRT_SYNC_ABILITY=3
+IRT_USE_SPECIAL_SDB_GENERATION=0
+IS_DP_MASTER=0
+IS_PARAMETRIZEABLE=0
+KBUS=0
+LOCAL_SEGMENT_CAPABLE=0
+MAX_CONN_CNT=0
+MAX_COUNT_RACKS=4
+MAX_NUM_OF_CHILDS=0
+MODULE_TYPE=
+nKatChilds=0
+NO_OF_INPUT_CR=1
+NO_OF_MCAST_CONS_CR=0
+NO_OF_MCAST_PROV_CR=1
+NO_OF_OUTPUT_CR=1
+NUM_OF_CHILDS_FIXED=0
+ObjType=2364118
+ONLINE_FUNCTIONS=0x3FFF
+OUT_ADDRESS_RANGE=0
+PHYSICAL_WIDTH=1
+PLUG_CLASS=
+PN_IMPLEMENTATION_TYPE=ERTEC200
+PN_RT_SUPP_REDUCTION_RATIOS=1|2|4|8|16
+PN_RT_SUPP_SENDCLOCKS=8|16|24|32|40|48|56|64|72|80|88|96|104|112|120|128
+PN_SUBMODULE_IDENTNUMBER=1
+POSITION_BUS_CONNECTION=1
+prefix=OM
+REGISTER_ADR_IMPORT_VERB=
+SDB_CARRIER=0
+SDB_CARRIER_LIST=0|100
+SDB_CAUSED_LIST=
+server=s7h0138x.dll
+SIGNAL_TYPE=0
+SLAVE_MODULE_GROUP=0x00000001
+SHORTNAME=IM153-4PN
+SLOT_LABEL=X1
+SYSTEM_TYPE=
+WIDTH=1
+; S7H_PROVIDER_2_CONSUMER_RT und S7H_CONSUMER_2_PROVIDER_RT
+relation=1315895,_S7H_IO_SUBMODULE_AT[1315896]
+relation=1315895,_S7H_IO_NORM_MODULE_AT[1315896]
+
+
+; =================================================================================
+; ----------------------------- Port 1
+[_S7H_HSP_153_4AA00_PNIO_PORT_1_CT]
+basetype=_S7H_HSP_153_4AA00_PNIO_SUBMODULE_AT
+basetype=_S7H_PORT_AT
+ObjType=2364116
+prefix=OM
+server=s7h0138x.dll
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+SLOT_LABEL=X1 P1
+IRT_SUBSLOT=32769
+IRT_PORT_RX_DELAY=333
+IRT_PORT_TX_DELAY=1217
+IRT_MAU_TYPES=
+SUPPRESS_DEFAULT_MAUTYPE=1
+SHORTNAME=Port 1
+PN_SUBMODULE_IDENTNUMBER=1
+LINK_STATE_DIAG_CAPABLE=1
+PORT_SUPPORT_DEACTIVATE=1
+
+; ========================================================================================
+; ----------------------------- Port 2
+[_S7H_HSP_153_4AA00_PNIO_PORT_2_CT]
+basetype=_S7H_HSP_153_4AA00_PNIO_SUBMODULE_AT
+basetype=_S7H_PORT_AT
+ObjType=2364117
+prefix=OM
+server=s7h0138x.dll
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+SLOT_LABEL=X1 P2
+IRT_SUBSLOT=32770
+IRT_PORT_RX_DELAY=333
+IRT_PORT_TX_DELAY=1217
+IRT_MAU_TYPES=
+SUPPRESS_DEFAULT_MAUTYPE=1
+SHORTNAME=Port 2
+PN_SUBMODULE_IDENTNUMBER=1
+LINK_STATE_DIAG_CAPABLE=1
+PORT_SUPPORT_DEACTIVATE=1
+
+; ========================================================================================
+; ----------------------------- neue Kataloge
+;nKatChilds=10
+;KatChild1=1314946
+;KatChild2=1314949
+;KatChild3=1314948
+;KatChild4=1314951 
+;KatChild5=1314953 
+;KatChild6=1314952
+;KatChild7=1315031
+;KatChild8=1315019
+,KatChild9=1315021
+;KatChild10=1316818
+
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für AI
+[_S7H_HSP138_CLASS_AI_300_CT]
+basetype=_S7H_CLASS_AI_300_CT
+abstract=true
+ObjType=2364181
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter AI
+nKatChilds=10
+KatChild1=1316108
+KatChild2=1314846
+KatChild3=1316109
+KatChild4=1316798
+KatChild5=1316814
+KatChild6=1315646
+KatChild7=1316227
+KatChild8=2363671
+KatChild9=2363672
+KatChild10=1314847
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für AI/AO
+[_S7H_HSP138_CLASS_AIO_SPEZ_CT]
+basetype=_S7H_CLASS_AIO_SPEZ_CT
+abstract=true
+ObjType=2364182
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter AI/AO
+nKatChilds=3
+KatChild1=1315518
+KatChild2=1315054
+KatChild3=1315236
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für AO
+[_S7H_HSP138_CLASS_AO_300_CT]
+basetype=_S7H_CLASS_AO_300_CT
+abstract=true
+ObjType=2364183
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter AO
+nKatChilds=5
+KatChild1=1315052
+KatChild2=1314850
+KatChild3=1315053
+KatChild4=2363559
+KatChild5=1316642
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für CP
+[_S7H_HSP138_CLASS_CP_300_CT ]
+basetype=_S7H_CLASS_CP_300_CT
+abstract=true
+ObjType=2364184
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter CP
+nKatChilds=7
+;	    ASI_Katalog
+KatChild1=2364193
+;	    Module
+KatChild2=2363769
+KatChild3=2363767
+KatChild4=2363771
+KatChild5=1322006
+KatChild6=1322005
+KatChild7=1322007
+
+;--- extra Folder ASi 
+;--- falls Unterstützung nicht für alle Module gegeben
+[_S7H_HSP138_KATALOGFOLDER_CP300_ASI_AT]
+basetype=_S7H_KATALOGFOLDER_CP300_ASI_AT
+abstract=true
+ObjType=2364193
+CatalogParent=2364184
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=2
+KatChild1=1336001
+KatChild2=1335449
+
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für DI
+[_S7H_HSP138_CLASS_DI_300_CT]
+basetype=_S7H_CLASS_DI_300_CT
+abstract=true
+ObjType=2364185
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter DI
+nKatChilds=13
+KatChild1=1316222
+KatChild2=1315991
+KatChild3=1316707
+KatChild4=1315046
+KatChild5=1316711
+KatChild6=2363511
+KatChild7=1316645
+KatChild8=1315643
+KatChild9=1314826
+KatChild10=1314830
+KatChild11=2366981
+KatChild12=1316221
+KatChild13=1315048
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für DI/DO
+[_S7H_HSP138_CLASS_DIO_300_CT]
+basetype=_S7H_CLASS_DIO_300_CT
+abstract=true
+ObjType=2364186
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter DI/DO
+nKatChilds=3
+KatChild1=1314843
+KatChild2=1316077
+KatChild3=1316816
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für DO
+[_S7H_HSP138_CLASS_DO_300_CT]
+basetype=_S7H_CLASS_DO_300_CT
+abstract=true
+ObjType=2364187
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter DO
+nKatChilds=19
+KatChild1=1316224
+KatChild2=1314998
+KatChild3=1316708
+KatChild4=1316225
+KatChild5=1316646
+KatChild6=2363527
+KatChild7=1314833
+KatChild8=1314839
+KatChild9=1314840
+KatChild10=2366982
+KatChild11=2366983
+KatChild12=1316223
+KatChild13=1314836
+KatChild14=1314997
+KatChild15=2363528
+KatChild16=1314999
+KatChild17=1315682
+KatChild18=1316577
+KatChild19=1314841
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM
+
+[_S7H_HSP138_CLASS_FM_300_CT]
+basetype=_S7H_CLASS_FM_300_CT
+abstract=true
+ObjType=2364188
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter FM
+nKatChilds=2
+KatChild1=1322038
+KatChild2=1315166
+;--- in HSP2016 bearbeitet=2366988
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM Durchflussmessbaugruppen
+[_S7H_HSP138_KAT_FM_SIFLOW_AT]
+basetype=_S7H_HSP_SIFLOW_KAT_AT
+abstract=true
+ObjType=2364267
+CatalogParent=2364188
+IsCatEntry=0
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=2
+KatChild1=2366902
+KatChild2=2366903
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM Prozessoren
+[_S7H_HSP138_FM352_KATALOG_ROOT_AT]
+basetype=_FM352_KATALOG_ROOT_AT
+abstract=true
+ObjType=2364269
+CatalogParent=2364188
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=2
+KatChild1=18878519
+KatChild2=18878477
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Reglerbaugruppen-Kataloge
+[_S7H_HSP138_KATALOGFOLDER_FM300_PID_AT]
+basetype=_S7H_KATALOGFOLDER_FM300_PID_AT
+abstract=true
+ObjType=2364270
+CatalogParent=2364188
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=4
+KatChild1=2364271
+KatChild2=2364272
+KatChild3=2364273
+KatChild4=2364274
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM355_2C
+[_S7H_HSP138_KATALOGFOLDER_FM355_2C_AT]
+basetype=_S7H_KATALOGFOLDER_FM355_2C_AT
+abstract=true
+ObjType=2364271
+CatalogParent=2364270
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=1
+KatChild1=1322027
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM355_2S
+[_S7H_HSP138_KATALOGFOLDER_FM355_2S_AT]
+basetype=_S7H_KATALOGFOLDER_FM355_2S_AT
+abstract=true
+ObjType=2364272
+CatalogParent=2364270
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=1
+KatChild1=1322028
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM355_C_PID
+[_S7H_HSP138_KATALOGFOLDER_FM355_C_PID_AT]
+basetype=_S7H_KATALOGFOLDER_FM355_C_PID_AT
+abstract=true
+ObjType=2364273
+CatalogParent=2364270
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=1
+KatChild1=1315516
+; =================================================================================
+; ---------------- Katalogeintrag/folder für FM355_S_PID
+[_S7H_HSP138_KATALOGFOLDER_FM355_S_PID_AT]
+basetype=_S7H_KATALOGFOLDER_FM355_S_PID_AT
+abstract=true
+ObjType=2364274
+CatalogParent=2364270
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=1
+KatChild1=1315517
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Wägebaugruppen
+[_S7H_HSP138_KATALOGFOLDER_FM300_SIWAREX_AT]
+basetype=_P7H_KATALOGFOLDER_FM300_SIWAREX_AT
+abstract=true
+ObjType=2364275
+CatalogParent=2364188
+IsCatEntry=0
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+nKatChilds=1
+KatChild1=18878468
+; =================================================================================
+; ---------------- Katalogeintrag/folder für IQ-Sense
+[_S7H_HSP138_ET200M_KAT_IQSENSE_AT]
+basetype=_S7H_6ES7_ET200M_KAT_IQSENSE_AT
+abstract=true
+ObjType=2364189
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter IQ-Sense
+nKatChilds=2
+KatChild1=1316817
+KatChild2=1316820
+;IQ_Opto_nicht vorhanden
+
+; =================================================================================
+; ---------------- Katalogeintrag/folder für Spezial
+[_S7H_HSP138_CLASS_PM3_300_CT]
+basetype=_S7H_CLASS_PM3_300_CT
+abstract=true
+ObjType=2364190
+CatalogParent=2364113
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter Spezial
+nKatChilds=1
+KatChild1=1315505
+
+;-- extra Folder Wegerfassungsbaugruppen POS-INPUT 
+[_S7H_HSP138_SM_338_POS_INPUT_FAMILY_AT]
+basetype=_S7H_SM_338_POS_INPUT_FAMILY_AT
+abstract=true
+ObjType=2364192
+CatalogParent=2364190
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter Wegerfassung
+nKatChilds=1
+KatChild1=2364268
+
+;-- Folder POS-INPUT (4bc01_Version 2.0)
+[_S7H_HSP138_338_4BC01_FOLDER_AT]
+basetype=_S7H_6ES7_338_4BC01_FOLDER_AT
+abstract=true
+ObjType=2364268
+CatalogParent=2364192
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+HSP_ID=0138
+HSP_NAME=ET 200M IM 153-4 PN
+; Baugruppen unter Wegerfassung
+nKatChilds=1
+KatChild1=1316842

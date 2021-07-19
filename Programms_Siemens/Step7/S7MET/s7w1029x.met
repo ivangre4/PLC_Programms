@@ -1,0 +1,21 @@
+;---------------------------------------------
+; CP343-1 EX21 V1.2
+;---------------------------------------------
+
+[_S7H_6GK7_343_1EX21_0XEO_V12_CT]
+server=S7WB53AX.DLL
+basetype=_S7H_6GK7_343_1EX21_0XEO_V11_CT
+prefix=OM
+ObjType=2367469
+CatalogParent=1338038
+IsCatEntry=1
+nKatChilds=0
+FW_VERSION=V1.2
+;CIDR
+SUBNETMASK_UNRESTRICTED=1
+MLFB=6GK7 343-1EX21-0XE0
+SHORTNAME=CP 343-1
+HWCNFX_VER=5.4.4.0|0
+HWCNFX_FOR_HWU=5.4.1.0
+HSP_ID=1029
+HSP_NAME=CP343-1 EX21 V1.2

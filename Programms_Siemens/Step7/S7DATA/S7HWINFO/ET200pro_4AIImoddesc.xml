@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200pro Module Description ET200pro_4AIImoddesc.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+             http://www.siemens.com/Industry/2002/07/Automation/Base                ADBaseV1.xsd
+             http://www.siemens.com/Industry/2002/07/Automation/HWKonfig            HWKV1.xsd
+             " DefaultLanguage="de">
+    <prim:FileInfo Version="1.0">
+        <prim:Created Timestamp="2004-10-22T10:25:00Z" Tool="STEP7 Version V5.3SP2" User="SS5026"/>
+        <prim:LastModified Timestamp="2004-10-22T10:25:00Z" Tool="Textpad" User="SS5026"/>
+     </prim:FileInfo>
+    <base:Project ID="{2B501703-E36A-42fc-9F91-0282749E2EAB}" Name="ModuleDesc for ET200pro 4 AI I">
+        <base:StructuralFeature>
+            <base:Device ID="1" OType="Module">
+                <base:SettingsFeature>
+                    <hwk:DatasetList>
+                        <hwk:Dataset Name="Dataset1" DSNr="0" DSLen="14">
+                            <!-- Bereichseinstellungen -->
+                            <hwk:Par Name="AI_Type" PNr="21">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Messung:Art"/>
+                                </base:DisplayNameFeature>
+                                <hwk:defStep7>2</hwk:defStep7>
+                                <hwk:defPcs7>2</hwk:defPcs7>
+                                <hwk:instances>4</hwk:instances>
+                            </hwk:Par>
+                            <hwk:Par Name="AI_Range" PNr="22">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Messung:Bereich"/>
+                                </base:DisplayNameFeature>
+                                <hwk:defStep7>3</hwk:defStep7>
+                                <hwk:defPcs7>3</hwk:defPcs7>
+                                <hwk:instances>4</hwk:instances>
+                            </hwk:Par>
+                        </hwk:Dataset>
+                    </hwk:DatasetList>
+                </base:SettingsFeature>
+            </base:Device>
+        </base:StructuralFeature>
+    </base:Project>
+</prim:Document>

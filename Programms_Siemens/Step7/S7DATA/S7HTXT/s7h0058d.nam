@@ -1,0 +1,39 @@
+;------------------------------ SI-Module Modbus Master/Slave und USS Master
+[2363658]
+KatEntryName = 1 SI Modbus Master (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Master con interface I/O de 4 bytes
+SHORTNAME = 1 SI Modbus Master (4 B)
+Comment=Módulo de comunicación con un interface serie (RS485, RS232) y protocolo USS Master o protocolo Modbus Slave o Modbus Master
+
+[2363659]
+KatEntryName = 1 SI Modbus Master (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Master con interface I/O de 8 bytes
+SHORTNAME = 1 SI Modbus Master (8 B)
+[2363660]
+KatEntryName = 1 SI Modbus Master (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Master con interface I/O de 32 bytes
+SHORTNAME = 1 SI Modbus Master(32 B)
+[2363661]
+KatEntryName = 1 SI Modbus Slave (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Slave con interface I/O de 4 bytes
+SHORTNAME = 1 SI Modbus Slave (4 B)
+[2363662]
+KatEntryName = 1 SI Modbus Slave (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Slave con interface I/O de 8 bytes
+SHORTNAME = 1 SI Modbus Slave (8 B)
+[2363663]
+KatEntryName = 1 SI Modbus Slave (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS232, RS422 o RS485) y protocolo Modbus Slave con interface I/O de 32 bytes
+SHORTNAME = 1 SI Modbus Slave (32 B)
+[2363664]
+KatEntryName = 1 SI USS Master (4 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS485, RS232) y protocolo USS Master con interface I/O de 4 bytes
+SHORTNAME = 1 SI USS Master (4 B)
+[2363665]
+KatEntryName = 1 SI USS Master (8 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS485, RS232) y protocolo USS Master con interface I/O de 8 bytes
+SHORTNAME = 1 SI USS Master (8 B)
+[2363666]
+KatEntryName = 1 SI USS Master (32 Byte)
+InfoText =Módulo de comunicación con un interface serie (RS485, RS232) y protocolo USS Master con interface I/O de 32 bytes
+SHORTNAME = 1 SI USS Master (32 B)

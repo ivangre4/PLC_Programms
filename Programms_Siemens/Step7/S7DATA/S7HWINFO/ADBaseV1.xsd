@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Dieter (Siemens AG) -->
+<xsd:schema targetNamespace="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns="http://www.siemens.com/Industry/2002/07/Automation/Base" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.siemens.com/Industry/2002/07/Automation/Primitives" schemaLocation="PrimitivesV1.xsd"/>
+	<!-- SIMPLE TYPES -->
+	<xsd:simpleType name="MLFBT">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<!-- COMPLEX TYPES -->
+	<!-- DIA-X Objects -->
+	<xsd:complexType name="ProjectT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element ref="DisplayNameFeature" minOccurs="0"/>
+					<xsd:element name="StructuralFeature" type="ProjectStructuralFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProjectStructuralFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="Device" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Network" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element ref="DisplayNameFeature" minOccurs="0"/>
+					<xsd:element name="StandardFeature" type="DeviceStandardFeatureT" minOccurs="0"/>
+					<xsd:element name="StructuralFeature" type="DeviceStructuralFeatureT" minOccurs="0"/>
+					<xsd:element name="NetworkFeature" type="DeviceNetworkFeatureT" minOccurs="0"/>
+					<xsd:element name="SoftwareFeature" type="DeviceSoftwareFeatureT" minOccurs="0"/>
+					<xsd:element name="HMIFeature" type="DeviceHMIFeatureT" minOccurs="0"/>
+					<xsd:element name="SettingsFeature" type="DeviceSettingsFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceStandardFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="MLFB" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MLFBParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ParameterT">
+				<xsd:attribute name="Value" type="MLFBT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceStructuralFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="Location" minOccurs="0"/>
+					<xsd:element ref="Device" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceNetworkFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="NetworkConnectionPointFeature" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceSoftwareFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="Symbol" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Block" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceHMIFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="Tag" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Screen" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceSettingsFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element ref="AddressRange" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="prim:Feature" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TagT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="GeneralFeature" type="TagGeneralFeatureT" minOccurs="0"/>
+					<xsd:element name="ConnectionFeature" type="TagConnectionFeatureT" minOccurs="0"/>
+					<xsd:element name="LimitFeature" type="TagLimitFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TagGeneralFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Type" type="prim:StringParameterT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TagConnectionFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="SymbolName" type="prim:StringParameterT"/>
+					<xsd:element name="Connection" type="prim:ReferenceT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TagLimitFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0">
+						<xsd:element name="HighHighRef" type="prim:ReferenceT"/>
+						<xsd:element name="HighHigh" type="prim:StringParameterT"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0">
+						<xsd:element name="HighRef" type="prim:ReferenceT"/>
+						<xsd:element name="High" type="prim:StringParameterT"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0">
+						<xsd:element name="LowRef" type="prim:ReferenceT"/>
+						<xsd:element name="Low" type="prim:StringParameterT"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0">
+						<xsd:element name="LowLowRef" type="prim:ReferenceT"/>
+						<xsd:element name="LowLow" type="prim:StringParameterT"/>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ScreenT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="StructuralFeature" type="ScreenStructuralFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ScreenStructuralFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="ScreenItem" type="ScreenItemT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ScreenItemT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="DataSourceFeature" type="ScreenItemDataSourceFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ScreenItemDataSourceFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="DataSource" type="prim:ReferenceT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NetworkT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element ref="DisplayNameFeature" minOccurs="0"/>
+					<xsd:element name="StandardFeature" type="NetworkStandardFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NetworkStandardFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Type" type="prim:StringParameterT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SymbolT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="AddressFeature" type="SymbolAddressFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SymbolAddressFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="SymbolAddress" type="SymbolAddressT"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SymbolAddressT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ParameterT">
+				<xsd:attribute name="AddressType" type="AddressTypeEnumT" use="required"/>
+				<xsd:attribute name="Direction" type="DirectionEnumT" use="required"/>
+				<xsd:attribute name="Value" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="DirectionEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="In"/>
+			<xsd:enumeration value="Out"/>
+			<xsd:enumeration value="InOut"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AddressTypeEnumT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Bit"/>
+			<xsd:enumeration value="Byte"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="BlockT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element name="HeaderFeature" type="BlockHeaderFeatureT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BlockHeaderFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="ProgrammingLanguage" type="prim:StringParameterT"/>
+					<xsd:element name="BlockType" type="BlockTypeParameterT"/>
+					<xsd:element name="BlockNumber" type="prim:IntegerParameterT"/>
+					<xsd:element name="RelevantForRuntime" type="prim:BoolParameterT"/>
+					<xsd:element name="SystemBlock" type="prim:BoolParameterT"/>
+					<xsd:element name="CFB" type="prim:BoolParameterT"/>
+					<xsd:element name="Loadable" type="prim:BoolParameterT"/>
+					<xsd:element name="Version" type="prim:StringParameterT"/>
+					<xsd:element name="TotalLength" type="prim:IntegerParameterT"/>
+					<xsd:element name="Section1Length" type="prim:IntegerParameterT"/>
+					<xsd:element name="Section2Length" type="prim:IntegerParameterT"/>
+					<xsd:element name="Section3Length" type="prim:IntegerParameterT"/>
+					<xsd:element name="LocalDataLength" type="prim:IntegerParameterT"/>
+					<xsd:element name="BlockTimestamp" type="prim:TimestampParameterT"/>
+					<xsd:element name="InterfaceTimestamp" type="prim:TimestampParameterT"/>
+					<xsd:element name="Password" type="prim:StringParameterT"/>
+					<xsd:element name="ProtectionLevel" type="prim:StringParameterT"/>
+					<xsd:element name="Author" type="prim:StringParameterT" minOccurs="0"/>
+					<xsd:element name="Family" type="prim:StringParameterT" minOccurs="0"/>
+					<xsd:element name="CheckSum" type="prim:IntegerParameterT" minOccurs="0"/>
+					<xsd:element name="CPUType" type="prim:StringParameterT" minOccurs="0"/>
+					<xsd:element name="Signature" type="prim:StringParameterT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BlockTypeParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:StringParameterT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- DisplayNameFeature -->
+	<xsd:element name="DisplayNameFeature" type="DisplayNameFeatureT" substitutionGroup="prim:Feature"/>
+	<xsd:complexType name="DisplayNameFeatureT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:sequence>
+					<xsd:element name="Text" type="LocalizableTextParameterT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NetworkConnectionPointFeatureT">
+		<xsd:sequence>
+			<xsd:element name="NetworkRef" type="prim:ReferenceT"/>
+			<xsd:element ref="NetAddress"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AddressRangeParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:FeatureT">
+				<xsd:attribute name="Type" type="xsd:string" use="required"/>
+				<xsd:attribute name="Value" type="xsd:string" use="required"/>
+				<xsd:attribute name="Consistency" type="xsd:unsignedByte" use="optional" default="1"/>
+				<xsd:attribute name="Structure" type="xsd:string" use="optional"/>
+				<xsd:attribute name="Length" type="xsd:string" use="optional" default="0"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NetAddressParameterT">
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+		<xsd:attribute name="type" type="xsd:string" use="optional"/>
+		<xsd:attribute name="name" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="LocationParameterT">
+		<xsd:sequence>
+			<xsd:element name="Place" type="prim:StringParameterT" minOccurs="0"/>
+			<xsd:element ref="Location" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LocalizableTextParameterT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ParameterT">
+				<xsd:attribute ref="xml:lang" use="optional"/>
+				<xsd:attribute name="Value" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ELEMENTS -->
+	<!-- DIA-X Objects -->
+	<xsd:element name="Project" type="ProjectT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Device" type="DeviceT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Tag" type="TagT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Screen" type="ScreenT" substitutionGroup="prim:Object"/>
+	<xsd:element name="ScreenItem" type="ScreenItemT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Symbol" type="SymbolT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Network" type="NetworkT" substitutionGroup="prim:Object"/>
+	<xsd:element name="Block" type="BlockT" substitutionGroup="prim:Object"/>
+	<xsd:element name="NetworkConnectionPointFeature" type="NetworkConnectionPointFeatureT"/>
+	<xsd:element name="AddressRange" type="AddressRangeParameterT"/>
+	<xsd:element name="Location" type="LocationParameterT"/>
+	<xsd:element name="NetAddress" type="NetAddressParameterT"/>
+	<xsd:element name="MLFB" type="MLFBParameterT"/>
+</xsd:schema>

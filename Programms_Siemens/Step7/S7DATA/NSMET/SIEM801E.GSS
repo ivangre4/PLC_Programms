@@ -1,0 +1,4627 @@
+;=================================================================
+; GSD-File for ET 200M  -2                              Siemens AG
+; MLFB    :  6ES7 153-2AA02-0XB0
+;            6ES7 153-2AA01-0XB0
+;            6ES7 153-2AA00-0XB0
+;            6ES7 153-2BA00-0XB0
+;            
+;            V01.13.00
+;            
+; Date    :  02.12.05  GW
+; File    : "SIEM801E.GSS"
+;=================================================================
+; reserved Text   Refs : 1 ... 82
+; reserved Prm    Refs : 1 ... 687
+;=================================================================
+#Profibus_DP
+; ============================
+; <Prm-Text-Def-List>
+; ============================
+PrmText=2
+Text(0)="SIMATIC S7"
+Text(1)="SIMATIC S5"
+EndPrmText
+PrmText=3
+Text(0)="No"
+Text(1)="Si"
+EndPrmText
+PrmText=4
+Text(0)="No"
+Text(1)="Si"
+EndPrmText
+PrmText=5
+Text(0)="3 (DC)"
+Text(1)="0,1 (DC)"
+Text(2)="0,5 (DC)"
+Text(3)="15 (DC)"
+Text(4)="20 (DC/AC)"
+EndPrmText
+PrmText=6
+Text(0)="2,5"
+Text(1)="16,6"
+Text(2)="20"
+Text(3)="100"
+EndPrmText
+PrmText=7
+Text(0)="Desactivado"
+Text(23)="Tension                 1..5 V"
+Text(24)="Tension                0..10 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Intensidad            0..20 mA"
+Text(35)="Intensidad            4..20 mA"
+Text(36)="Intensidad           +/- 20 mA"
+EndPrmText
+PrmText=8
+Text(0)="Desactivado"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+Text(51)="Transd. med. 2 hilos 4..20 mA"
+EndPrmText
+PrmText=9
+Text(0)="Desactivado"
+Text(26)="Tension              +/- 25 mV"
+Text(27)="Tension              +/- 50 mV"
+Text(17)="Tension              +/- 80 mV"
+Text(18)="Tension             +/- 250 mV"
+Text(19)="Tension             +/- 500 mV"
+Text(20)="Tension                +/- 1 V"
+Text(66)="Resistencia 4 hilos 150 ohmios"
+Text(68)="Resistencia 4 hilos 300 ohmios"
+Text(70)="Resistencia 4 hilos 600 ohmios"
+Text(128)="Termorresistencia Pt 100 climat."
+Text(130)="Termorresistencia Pt 100 est."
+Text(129)="Termorresistencia Ni 100 climat."
+Text(139)="Termorresistencia Pt 200 est."
+Text(135)="Termorresistencia Pt 200 climat."
+Text(131)="Termorresist. Ni 100 est."
+Text(160)="Comp. termopar  0ºC Tipo B"
+Text(161)="Comp. termopar  0ºC Tipo N"
+Text(162)="Comp. termopar  0ºC Tipo E"
+Text(163)="Comp. termopar  0ºC Tipo R"
+Text(164)="Comp. termopar  0ºC Tipo S"
+Text(165)="Comp. termopar  0ºC Tipo J"
+Text(166)="Comp. termopar  0ºC Tipo L"
+Text(167)="Comp. termopar  0ºC Tipo T"
+Text(168)="Comp. termopar  0ºC Tipo K"
+Text(169)="Comp. termopar  0ºC Tipo U"
+Text(176)="Comp. termopar 50ºC Tipo B"
+Text(177)="Comp. termopar 50ºC Tipo N"
+Text(178)="Comp. termopar 50ºC Tipo E"
+Text(179)="Comp. termopar 50ºC Tipo R"
+Text(180)="Comp. termopar 50ºC Tipo S"
+Text(181)="Comp. termopar 50ºC Tipo J"
+Text(182)="Comp. termopar 50ºC Tipo L"
+Text(183)="Comp. termopar 50ºC Tipo T"
+Text(184)="Comp. termopar 50ºC Tipo K"
+Text(185)="Comp. termopar 50ºC Tipo U"
+Text(208)="Termopar CompInt      Tipo B"
+Text(209)="Termopar CompInt      Tipo N"
+Text(210)="Termopar CompInt      Tipo E"
+Text(211)="Termopar CompInt      Tipo R"
+Text(212)="Termopar CompInt      Tipo S"
+Text(213)="Termopar CompInt      Tipo J"
+Text(214)="Termopar CompInt      Tipo L"
+Text(215)="Termopar CompInt      Tipo T"
+Text(216)="Termopar CompInt      Tipo K"
+Text(217)="Termopar CompInt      Tipo U"
+Text(224)="Termopar CompExt      Tipo B"
+Text(225)="Termopar CompExt      Tipo N"
+Text(226)="Termopar CompExt      Tipo E"
+Text(227)="Termopar CompExt      Tipo R"
+Text(228)="Termopar CompExt      Tipo S"
+Text(229)="Termopar CompExt      Tipo J"
+Text(230)="Termopar CompExt      Tipo L"
+Text(231)="Termopar CompExt      Tipo T"
+Text(232)="Termopar CompExt      Tipo K"
+Text(233)="Termopar CompExt      Tipo U"
+EndPrmText
+PrmText=10
+Text(0)="Desactivado"
+Text(17)="Tension              +/- 80 mV"
+Text(18)="Tension             +/- 250 mV"
+Text(19)="Tension             +/- 500 mV"
+Text(20)="Tension                +/- 1 V"
+Text(21)="Tension              +/- 2,5 V"
+Text(22)="Tension                +/- 5 V"
+Text(23)="Tension                 1..5 V"
+Text(25)="Tension               +/- 10 V"
+Text(32)="Transd. med. 4 hilos +/-3,2mA"
+Text(33)="Transd. med. 4 hilos +/-10 mA"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+Text(36)="Transd. med. 4 hilos +/-20 mA"
+Text(51)="Transd. med. 2 hilos 4..20 mA"
+Text(66)="Resistencia 4 hilos 150 ohmios"
+Text(68)="Resistencia 4 hilos 300 ohmios"
+Text(70)="Resistencia 4 hilos 600 ohmios"
+Text(128)="Termorresistencia Pt 100 climat."
+Text(129)="Termorresistencia Ni 100 climat."
+Text(130)="Termorresistencia Pt 100 est."
+Text(131)="Termorresist. Ni 100 est."
+Text(161)="Termopar CompInt      Tipo N"
+Text(162)="Termopar CompInt      Tipo E"
+Text(165)="Termopar CompInt      Tipo J"
+Text(166)="Termopar CompInt      Tipo L"
+Text(168)="Termopar CompInt      Tipo K"
+Text(177)="Termopar CompExt      Tipo N"
+Text(178)="Termopar CompExt      Tipo E"
+Text(181)="Termopar CompExt      Tipo J"
+Text(182)="Termopar CompExt      Tipo L"
+Text(184)="Termopar CompExt      Tipo K"
+Text(209)="Termopar CompIntLin   Tipo N"
+Text(210)="Termopar CompIntLin   Tipo E"
+Text(213)="Termopar CompIntLin   Tipo J"
+Text(214)="Termopar CompIntLin   Tipo L"
+Text(216)="Termopar CompIntLin   Tipo K"
+Text(225)="Termopar CompExtLin   Tipo N"
+Text(226)="Termopar CompExtLin   Tipo E"
+Text(229)="Termopar CompExtLin   Tipo J"
+Text(230)="Termopar CompExtLin   Tipo L"
+Text(232)="Termopar CompExtLin   Tipo K"
+EndPrmText
+PrmText=11
+Text(0)="Desactivado"
+Text(34)="Intensidad            0..20 mA"
+Text(35)="Intensidad            4..20 mA"
+EndPrmText
+PrmText=12
+Text(1)="16,6"
+Text(2)="20"
+EndPrmText
+PrmText=13
+Text(0)="Desactivado"
+Text(73)="Resistencia 4 hilos 10 kohmios"
+Text(128)="Termorresistencia Pt 100 climat."
+EndPrmText
+PrmText=14
+Text(0)="Desactivado"
+Text(24)="Tension                0..10 V"
+Text(73)="Resistencia 4 hilos 10 kohmios"
+Text(128)="Termorresistencia Pt 100 climat."
+EndPrmText
+PrmText=15
+Text(0)="Desactivado"
+Text(24)="Tension                0..10 V"
+EndPrmText
+PrmText=16
+Text(0)="Desactivado"
+Text(24)="Tension                0..10 V"
+Text(25)="Tension               +/- 10 V"
+EndPrmText
+PrmText=17
+Text(0)="bloquear"
+Text(1)="liberar"
+EndPrmText
+PrmText=18
+Text(0)="Aplicar cero"
+Text(1)="Aplicar ultimo valor valido"
+EndPrmText
+PrmText=19
+Text(0)="Desactivado"
+Text(20)="Tension                +/- 1 V"
+Text(21)="Tension              +/- 2,5 V"
+Text(24)="Tension                0..10 V"
+Text(25)="Tension               +/- 10 V"
+Text(28)="Tension                 0..2 V"
+Text(33)="Transd. med. 4 hilos +/-10 mA"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+EndPrmText
+PrmText=20
+Text(0)="Desactivado"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+Text(51)="Transd. med. 2 hilos 4..20 mA"
+Text(124)="HART"
+EndPrmText
+PrmText=21
+Text(0)="Binario"
+Text(1)="Gray"
+EndPrmText
+PrmText=22
+Text(0)="ninguno"
+Text(1)="13 bits"
+Text(2)="21 bits"
+Text(3)="25 bits"
+EndPrmText
+PrmText=23
+Text(0)="off"
+Text(1)="on"
+EndPrmText
+PrmText=24
+Text(0)="125 kHz"
+Text(1)="250 kHz"
+Text(2)="500 kHz"
+Text(3)="1 MHz"
+EndPrmText
+PrmText=25
+Text(0)="16 µs"
+Text(1)="32 µs"
+Text(2)="48 µs"
+Text(3)="64 µs"
+EndPrmText
+PrmText=26
+Text(0)="I 0"
+Text(1)="I 1"
+EndPrmText
+PrmText=27
+Text(0)="Desactivado"
+Text(22)="Tension                +/- 5 V"
+Text(23)="Tension                 1..5 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+Text(36)="Transd. med. 4 hilos +/-20 mA"
+EndPrmText
+PrmText=28
+Text(1)="Transm.impulsos"
+Text(2)="Med. durac. periodo"
+Text(3)="Reloj"
+Text(4)="Posicionamiento"
+EndPrmText
+PrmText=29
+Text(0)="Desactivado"
+Text(34)="Intensidad            0..20 mA"
+Text(35)="Intensidad            4..20 mA"
+Text(124)="HART"
+EndPrmText
+PrmText=30
+Text(0)="No"
+Text(1)="Si (desde ref. ..-2AA*2-..)"
+EndPrmText
+PrmText=31
+Text(0)="Modo 8 canales"
+Text(1)="Modo 4 canales"
+EndPrmText
+PrmText=32
+Text(0)="400 Hz"
+Text(1)=" 60 Hz"
+Text(2)=" 50 Hz"
+Text(3)=" 50/60/400 Hz"
+EndPrmText
+PrmText=33
+Text(0)="ninguno"
+Text(1)="debil"
+Text(2)="medio"
+Text(3)="fuerte"
+EndPrmText
+PrmText=34
+Text(0)="Modo filtro HW 8 canales"
+Text(1)="Modo filtro SW 8 canales"
+Text(2)="Modo filtro HW 4 canales"
+EndPrmText
+PrmText=35
+Text(0)="Desactivado"
+Text(160)="Comp. termopar  0ºC Tipo B"
+Text(161)="Comp. termopar  0ºC Tipo N"
+Text(162)="Comp. termopar  0ºC Tipo E"
+Text(163)="Comp. termopar  0ºC Tipo R"
+Text(164)="Comp. termopar  0ºC Tipo S"
+Text(165)="Comp. termopar  0ºC Tipo J"
+Text(166)="Comp. termopar  0ºC Tipo L"
+Text(167)="Comp. termopar  0ºC Tipo T"
+Text(168)="Comp. termopar  0ºC Tipo K"
+Text(169)="Comp. termopar  0ºC Tipo U"
+Text(170)="Comp. termopar  0ºC Tipo C"
+Text(176)="Comp. termopar 50ºC Tipo B"
+Text(177)="Comp. termopar 50ºC Tipo N"
+Text(178)="Comp. termopar 50ºC Tipo E"
+Text(179)="Comp. termopar 50ºC Tipo R"
+Text(180)="Comp. termopar 50ºC Tipo S"
+Text(181)="Comp. termopar 50ºC Tipo J"
+Text(182)="Comp. termopar 50ºC Tipo L"
+Text(183)="Comp. termopar 50ºC Tipo T"
+Text(184)="Comp. termopar 50ºC Tipo K"
+Text(185)="Comp. termopar 50ºC Tipo U"
+Text(186)="Comp. termopar 50ºC Tipo C"
+Text(208)="Termopar CompInt      Tipo B"
+Text(209)="Termopar CompInt      Tipo N"
+Text(210)="Termopar CompInt      Tipo E"
+Text(211)="Termopar CompInt      Tipo R"
+Text(212)="Termopar CompInt      Tipo S"
+Text(213)="Termopar CompInt      Tipo J"
+Text(214)="Termopar CompInt      Tipo L"
+Text(215)="Termopar CompInt      Tipo T"
+Text(216)="Termopar CompInt      Tipo K"
+Text(217)="Termopar CompInt      Tipo U"
+Text(218)="Termopar CompInt      Tipo C"
+Text(224)="Termopar CompExt      Tipo B"
+Text(225)="Termopar CompExt      Tipo N"
+Text(226)="Termopar CompExt      Tipo E"
+Text(227)="Termopar CompExt      Tipo R"
+Text(228)="Termopar CompExt      Tipo S"
+Text(229)="Termopar CompExt      Tipo J"
+Text(230)="Termopar CompExt      Tipo L"
+Text(231)="Termopar CompExt      Tipo T"
+Text(232)="Termopar CompExt      Tipo K"
+Text(233)="Termopar CompExt      Tipo U"
+Text(234)="Termopar CompExt      Tipo C"
+EndPrmText
+PrmText=36
+Text(0)="Desactivado"
+Text(1)="Resistencia 4 hilos 150 ohmios"
+Text(2)="Resistencia 4 hilos 300 ohmios"
+Text(3)="Resistencia 4 hilos 600 ohmios"
+Text(4)="Resistencia 3 hilos 150 ohmios"
+Text(5)="Resistencia 3 hilos 300 ohmios"
+Text(6)="Resistencia 4 hilos 600 ohmios"
+Text(10)="RTD conex. 4 h. PT100 clim. 3850"
+Text(11)="RTD conex. 4 h. PT100 est.3850"
+Text(12)="RTD conex. 4 h. PT200 clim. 3850"
+Text(13)="RTD conex. 4 h. PT200 est.3850"
+Text(14)="RTD conex. 4 h. PT500 clim. 3850"
+Text(15)="RTD conex. 4 h. PT500 est.3850"
+Text(16)="RTD conex. 4 h. PT1000 clim.3850"
+Text(17)="RTD conex. 4 h. PT1000 est.3850"
+Text(18)="RTD conex. 4 h. PT100 clim. 3916"
+Text(19)="RTD conex. 4 h. PT100 est.3916"
+Text(20)="RTD conex. 4 h. PT200 clim. 3916"
+Text(21)="RTD conex. 4 h. PT200 est.3916"
+Text(22)="RTD conex. 4 h. PT500 clim. 3916"
+Text(23)="RTD conex. 4 h. PT500 est.3916"
+Text(24)="RTD conex. 4 h.PT1000 clim. 3916"
+Text(25)="RTD conex. 4 h. PT1000 est.3916"
+Text(26)="RTD conex. 4 h. PT100 clim. 3902"
+Text(27)="RTD conex. 4 h. PT100 est.3902"
+Text(28)="RTD conex. 4 h. PT200 clim. 3902"
+Text(29)="RTD conex. 4 h. PT200 est.3902"
+Text(30)="RTD conex. 4 h. PT500 clim. 3902"
+Text(31)="RTD conex. 4 h. PT500 est.3902"
+Text(32)="RTD conex. 4 h.PT1000 clim. 3902"
+Text(33)="RTD conex. 4 h. PT1000 est.3902"
+Text(34)="RTD conex. 4 h. PT100 clim. 3920"
+Text(35)="RTD conex. 4 h. PT100 est.3920"
+Text(36)="RTD conex. 4 h. PT200 clim. 3920"
+Text(37)="RTD conex. 4 h. PT200 est.3920"
+Text(38)="RTD conex. 4 h. PT500 clim. 3920"
+Text(39)="RTD conex. 4 h. PT500 est.3920"
+Text(40)="RTD conex. 4 h.PT1000 clim. 3920"
+Text(41)="RTD conex. 4 h. PT1000 est.3920"
+Text(42)="RTD conex. 4 h. PT100 clim. 3851"
+Text(43)="RTD conex. 4 h. PT100 est.3851"
+Text(44)="RTD conex. 4 h. PT200 clim. 3851"
+Text(45)="RTD conex. 4 h. PT200 est.3851"
+Text(46)="RTD conex. 4 h. PT500 clim. 3851"
+Text(47)="RTD conex. 4 h. PT500 est.3851"
+Text(48)="RTD conex. 4 h.PT1000 clim. 3851"
+Text(49)="RTD conex. 4 h. PT1000 est.3851"
+Text(50)="RTD conex. 3 h. PT100 clim. 3850"
+Text(51)="RTD conex. 3 h. PT100 est.3850"
+Text(52)="RTD conex. 3 h. PT200 clim. 3850"
+Text(53)="RTD conex. 3 h. PT200 est.3850"
+Text(54)="RTD conex. 3 h. PT500 clim. 3850"
+Text(55)="RTD conex. 3 h. PT500 est.3850"
+Text(56)="RTD conex. 3 h.PT1000 clim. 3850"
+Text(57)="RTD conex. 3 h. PT1000 est.3850"
+Text(58)="RTD conex. 3 h. PT100 clim. 3916"
+Text(59)="RTD conex. 3 h. PT100 est.3916"
+Text(60)="RTD conex. 3 h. PT200 clim. 3916"
+Text(61)="RTD conex. 3 h. PT200 est.3916"
+Text(62)="RTD conex. 3 h. PT500 clim. 3916"
+Text(63)="RTD conex. 3 h. PT500 est.3916"
+Text(64)="RTD conex. 3 h.PT1000 clim. 3916"
+Text(65)="RTD conex. 3 h. PT1000 est.3916"
+Text(66)="RTD conex. 3 h. PT100 clim. 3902"
+Text(67)="RTD conex. 3 h. PT100 est.3902"
+Text(68)="RTD conex. 3 h. PT200 clim. 3902"
+Text(69)="RTD conex. 3 h. PT200 est.3902"
+Text(70)="RTD conex. 3 h. PT500 clim. 3902"
+Text(71)="RTD conex. 3 h. PT500 est.3902"
+Text(72)="RTD conex. 3 h.PT1000 clim. 3902"
+Text(73)="RTD conex. 3 h. PT1000 est.3902"
+Text(74)="RTD conex. 3 h. PT100 clim. 3920"
+Text(75)="RTD conex. 3 h. PT100 est.3920"
+Text(76)="RTD conex. 3 h. PT200 clim. 3920"
+Text(77)="RTD conex. 3 h. PT200 est.3920"
+Text(78)="RTD conex. 3 h. PT500 clim. 3920"
+Text(79)="RTD conex. 3 h. PT500 est.3920"
+Text(80)="RTD conex. 3 h.PT1000 clim. 3920"
+Text(81)="RTD conex. 3 h. PT1000 est.3920"
+Text(82)="RTD conex. 3 h. PT100 clim. 3851"
+Text(83)="RTD conex. 3 h. PT100 est.3851"
+Text(84)="RTD conex. 3 h. PT200 clim. 3851"
+Text(85)="RTD conex. 3 h. PT200 est.3851"
+Text(86)="RTD conex. 3 h. PT500 clim. 3851"
+Text(87)="RTD conex. 3 h. PT500 est.3851"
+Text(88)="RTD conex. 3 h.PT1000 clim. 3851"
+Text(89)="RTD conex. 3 h. PT1000 est.3851"
+Text(90)="RTD conex. 4 h. NI100 clim. 6180"
+Text(91)="RTD conex. 4 h. NI100 est.6180"
+Text(92)="RTD conex. 4 h. NI120 clim. 6180"
+Text(93)="RTD conex. 4 h. NI120 est.6180"
+Text(94)="RTD conex. 4 h. NI200 clim. 6180"
+Text(95)="RTD conex. 4 h. NI200 est.6180"
+Text(96)="RTD conex. 4 h. NI500 clim. 6180"
+Text(97)="RTD conex. 4 h. NI500 est.6180"
+Text(98)="RTD conex. 4 h.NI1000 clim. 6180"
+Text(99)="RTD conex. 4 h. NI1000 est.6180"
+Text(100)="RTD conex. 4 h. NI100 clim. 6720"
+Text(101)="RTD conex. 4 h. NI100 est.6720"
+Text(102)="RTD conex. 4 h. NI120 clim. 6720"
+Text(103)="RTD conex. 4 h. NI120 est.6720"
+Text(104)="RTD conex. 4 h. NI200 clim. 6720"
+Text(105)="RTD conex. 4 h. NI200 est.6720"
+Text(106)="RTD conex. 4 h. NI500 clim. 6720"
+Text(107)="RTD conex. 4 h. NI500 est.6720"
+Text(108)="RTD conex. 4 h.NI1000 clim. 6720"
+Text(109)="RTD conex. 4 h. NI1000 est.6720"
+Text(110)="RTD conex. 3 h. NI100 clim. 6180"
+Text(111)="RTD conex. 3 h. NI100 est.6180"
+Text(112)="RTD conex. 3 h. NI120 clim. 6180"
+Text(113)="RTD conex. 3 h. NI120 est.6180"
+Text(114)="RTD conex. 3 h. NI200 clim. 6180"
+Text(115)="RTD conex. 3 h. NI200 est.6180"
+Text(116)="RTD conex. 3 h. NI500 clim. 6180"
+Text(117)="RTD conex. 3 h. NI500 est.6180"
+Text(118)="RTD conex. 3 h.NI1000 clim. 6180"
+Text(119)="RTD conex. 3 h. NI1000 est.6180"
+Text(120)="RTD conex. 3 h. NI100 clim. 6720"
+Text(121)="RTD conex. 3 h. NI100 est.6720"
+Text(122)="RTD conex. 3 h. NI120 clim. 6720"
+Text(123)="RTD conex. 3 h. NI120 est.6720"
+Text(124)="RTD conex. 3 h. NI200 clim. 6720"
+Text(125)="RTD conex. 3 h. NI200 est.6720"
+Text(126)="RTD conex. 3 h. NI500 clim. 6720"
+Text(127)="RTD conex. 3 h. NI500 est.6720"
+Text(128)="RTD conex. 3 h.NI1000 clim. 6720"
+Text(129)="RTD conex. 3 h. NI1000 est.6720"
+Text(130)="RTD conex. 4 h. CU10 clim. 4270"
+Text(131)="RTD conex. 4 h. CU10 est.4270"
+Text(132)="RTD conex. 3 h. CU10 clim. 4270"
+Text(133)="RTD conex. 3 h. CU10 est.4270"
+EndPrmText
+PrmText=37
+Text(0)="Rebase por exceso"
+Text(1)="Rebase por defecto"
+EndPrmText
+PrmText=38
+Text(0)="Celsius"
+Text(1)="Fahrenheit"
+EndPrmText
+PrmText=39
+Text(1)="Mantener ultimo valor"
+Text(2)="Aplicar valor sustitutivo"
+EndPrmText
+PrmText=40
+Text(0)="STOP"
+Text(1)="Buscar siguiente"
+EndPrmText
+PrmText=41
+Text(0)="Desactivado"
+Text(27)="Tension              +/- 50 mV"
+Text(19)="Tension             +/- 500 mV"
+Text(20)="Tension                +/- 1 V"
+Text(22)="Tension                +/- 5 V"
+Text(23)="Tension                 1..5 V"
+Text(24)="Tension                0..10 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Intensidad            0..20 mA"
+Text(35)="Intensidad            4..20 mA"
+Text(36)="Intensidad           +/- 20 mA"
+Text(86)="Resistencia 4 hilos 600 ohmios"
+Text(88)="Resistencia 3 hilos 6 kohmios"
+Text(144)="RTD conex. 3 h.      Pt100 clim."
+Text(146)="RTD conex. 3 h.      Pt100 est."
+EndPrmText
+PrmText=42
+Text(0)="Grados Celsius"
+Text(8)="Grados Fahrenheit"
+Text(16)="Kelvin"
+EndPrmText
+PrmText=43
+Text(1)="16,6"
+Text(2)="20"
+EndPrmText
+PrmText=45
+Text(0)="Salida off"
+Text(1)="Salida on"
+EndPrmText
+PrmText=46
+Text(1)="Mantener ultimo valor"
+Text(2)="Valores sust."
+EndPrmText
+PrmText=47
+Text(0)="bloquear"
+Text(1)="liberar (desde ..153-2BA00-0XB0)"
+EndPrmText
+PrmText=50
+Text(0)="2,5"
+Text(1)="16,6"
+Text(2)="20"
+Text(3)="ninguna"
+EndPrmText
+PrmText=51
+Text(0)="Desactivado"
+Text(20)="Tension                +/- 1 V"
+Text(22)="Tension                +/- 5 V"
+Text(23)="Tension                 1..5 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Transd. med. 4 hilos 0..20 mA"
+Text(35)="Transd. med. 4 hilos 4..20 mA"
+Text(36)="Transd. med. 4 hilos +/-20 mA"
+Text(51)="Transd. med. 2 hilos 4..20 mA"
+EndPrmText
+PrmText=52
+Text(0)="Desactivado"
+Text(27)="Tension              +/- 50 mV"
+Text(19)="Tension             +/- 500 mV"
+Text(20)="Tension                +/- 1 V"
+Text(22)="Tension                +/- 5 V"
+Text(23)="Tension                 1..5 V"
+Text(24)="Tension                0..10 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Intensidad            0..20 mA"
+Text(35)="Intensidad            4..20 mA"
+Text(36)="Intensidad           +/- 20 mA"
+Text(86)="Resistencia 4 hilos 600 ohmios"
+Text(88)="Resistencia 3 hilos 6 kohmios"
+Text(144)="RTD conex. 3 h.     Pt100 clim."
+Text(146)="RTD conex. 3 h.     Pt100 est."
+Text(145)="RTD conex. 3 h.     Ni100 clim."
+Text(147)="RTD conex. 3 h.     Ni100 est."
+Text(154)="RTD conex. 3 h.     Ni1000 clim."
+Text(150)="RTD conex. 3 h.     Ni1000 est."
+EndPrmText
+PrmText=53
+Text(0)="Coeficiente temp.  0.003850"
+Text(4)="Coeficiente temp.  0.003851"
+Text(8)="Coeficiente temp.  0.006180"
+Text(10)="Coeficiente temp.  0.005000"
+EndPrmText
+PrmText = 54
+Text(0) = "Teach in con tecla"
+Text(1) = "Teach in con tecla impos."
+EndPrmText
+PrmText = 55
+Text(0) = "Ninguno"
+Text(2) = "3"
+Text(3) = "4"
+EndPrmText
+PrmText = 56
+Text(0) = "Ninguno"
+Text(1) = "Retardo a la desexcitacion"
+Text(2) = "Retardo a la excitacion"
+Text(3) = "Retardo a la excitac. y desexc."
+Text(4) = "Impulso momentaneo"
+EndPrmText
+PrmText = 57
+Text(0) = "Pequeno"
+Text(1) = "Normal"
+Text(2) = "Grande"
+Text(3) = "Maximo"
+EndPrmText
+PrmText = 58
+Text(0) = "5ms"
+Text(1) = "10ms"
+Text(2) = "20ms"
+Text(3) = "50ms"
+Text(4) = "100ms"
+Text(5) = "200ms"
+Text(6) = "500ms"
+Text(7) = "1s"
+Text(8) = "2s"
+Text(9) = "5s"
+Text(10) = "10s"
+EndPrmText
+PrmText = 59
+Text(0) = "Barrera fotoel. por reflexion"
+Text(1) = "Sensor difuso"
+Text(3) = "Desactivado"
+EndPrmText
+PrmText = 62
+Text(0) = "Desactivado"
+Text(1) = "ID1 (opto)"
+EndPrmText
+PrmText = 74
+Text(0) = "Barrera fotoel. por reflexion"
+Text(1) = "Sensor difuso"
+EndPrmText
+;PrmText = 75
+;Text(0) = "Canal Cx"
+;EndPrmText
+PrmText = 76
+Text(1) = "Ninguno"
+Text(2) = "3"
+Text(3) = "4"
+EndPrmText
+PrmText=78
+Text(0)="Desactivado"
+Text(1)="Resistencia 4 hilos 150 ohmios"
+Text(2)="Resistencia 4 hilos 300 ohmios"
+Text(3)="Resistencia 4 hilos 600 ohmios"
+Text(4)="Resistencia 3 hilos 150 ohmios"
+Text(5)="Resistencia 3 hilos 300 ohmios"
+Text(6)="Resistencia 4 hilos 600 ohmios"
+Text(10)="RTD 4L PT100 clim. 3850"
+Text(11)="RTD 4L PT100 est. 3850"
+Text(12)="RTD 4L PT200 clim. 3850"
+Text(13)="RTD 4L PT200 est. 3850"
+Text(14)="RTD 4L PT500 clim. 3850"
+Text(15)="RTD 4L PT500 est. 3850"
+Text(16)="RTD 4L PT1000 clim. 3850"
+Text(17)="RTD 4L PT1000 est. 3850"
+Text(18)="RTD 4L PT100 clim. 3916"
+Text(19)="RTD 4L PT100 est. 3916"
+Text(20)="RTD 4L PT200 clim. 3916"
+Text(21)="RTD 4L PT200 est. 3916"
+Text(22)="RTD 4L PT500 clim. 3916"
+Text(23)="RTD 4L PT500 est. 3916"
+Text(24)="RTD 4L PT1000 clim. 3916"
+Text(25)="RTD 4L PT1000 est. 3916"
+Text(26)="RTD 4L PT100 clim. 3902"
+Text(27)="RTD 4L PT100 est. 3902"
+Text(28)="RTD 4L PT200 clim. 3902"
+Text(29)="RTD 4L PT200 est. 3902"
+Text(30)="RTD 4L PT500 clim. 3902"
+Text(31)="RTD 4L PT500 est. 3902"
+Text(32)="RTD 4L PT1000 clim. 3902"
+Text(33)="RTD 4L PT1000 est. 3902"
+Text(34)="RTD 4L PT100 clim. 3920"
+Text(35)="RTD 4L PT100 est. 3920"
+Text(36)="RTD 4L PT200 clim. 3920"
+Text(37)="RTD 4L PT200 est. 3920"
+Text(38)="RTD 4L PT500 clim. 3920"
+Text(39)="RTD 4L PT500 est. 3920"
+Text(40)="RTD 4L PT1000 clim. 3920"
+Text(41)="RTD 4L PT1000 est. 3920"
+Text(42)="RTD 4L PT100 clim. 3851"
+Text(43)="RTD 4L PT100 est. 3851"
+Text(44)="RTD 4L PT200 clim. 3851"
+Text(45)="RTD 4L PT200 est. 3851"
+Text(46)="RTD 4L PT500 clim. 3851"
+Text(47)="RTD 4L PT500 est. 3851"
+Text(48)="RTD 4L PT1000 clim. 3851"
+Text(49)="RTD 4L PT1000 est. 3851"
+Text(50)="RTD 3L PT100 clim. 3850"
+Text(51)="RTD 3L PT100 est. 3850"
+Text(52)="RTD 3L PT200 clim. 3850"
+Text(53)="RTD 3L PT200 est. 3850"
+Text(54)="RTD 3L PT500 clim. 3850"
+Text(55)="RTD 3L PT500 est. 3850"
+Text(56)="RTD 3L PT1000 clim. 3850"
+Text(57)="RTD 3L PT1000 est. 3850"
+Text(58)="RTD 3L PT100 clim. 3916"
+Text(59)="RTD 3L PT100 est. 3916"
+Text(60)="RTD 3L PT200 clim. 3916"
+Text(61)="RTD 3L PT200 est. 3916"
+Text(62)="RTD 3L PT500 clim. 3916"
+Text(63)="RTD 3L PT500 est. 3916"
+Text(64)="RTD 3L PT1000 clim. 3916"
+Text(65)="RTD 3L PT1000 est. 3916"
+Text(66)="RTD 3L PT100 clim. 3902"
+Text(67)="RTD 3L PT100 est. 3902"
+Text(68)="RTD 3L PT200 clim. 3902"
+Text(69)="RTD 3L PT200 est. 3902"
+Text(70)="RTD 3L PT500 clim. 3902"
+Text(71)="RTD 3L PT500 est. 3902"
+Text(72)="RTD 3L PT1000 clim. 3902"
+Text(73)="RTD 3L PT1000 est. 3902"
+Text(74)="RTD 3L PT100 clim. 3920"
+Text(75)="RTD 3L PT100 est. 3920"
+Text(76)="RTD 3L PT200 clim. 3920"
+Text(77)="RTD 3L PT200 est. 3920"
+Text(78)="RTD 3L PT500 clim. 3920"
+Text(79)="RTD 3L PT500 est. 3920"
+Text(80)="RTD 3L PT1000 clim. 3920"
+Text(81)="RTD 3L PT1000 est. 3920"
+Text(82)="RTD 3L PT100 clim. 3851"
+Text(83)="RTD 3L PT100 est. 3851"
+Text(84)="RTD 3L PT200 clim. 3851"
+Text(85)="RTD 3L PT200 est. 3851"
+Text(86)="RTD 3L PT500 clim. 3851"
+Text(87)="RTD 3L PT500 est. 3851"
+Text(88)="RTD 3L PT1000 clim. 3851"
+Text(89)="RTD 3L PT1000 est. 3851"
+Text(90)="RTD 4L NI100 clim. 6180"
+Text(91)="RTD 4L NI100 est. 6180"
+Text(92)="RTD 4L NI120 clim. 6180"
+Text(93)="RTD 4L NI120 est. 6180"
+Text(94)="RTD 4L NI200 clim. 6180"
+Text(95)="RTD 4L NI200 est. 6180"
+Text(96)="RTD 4L NI500 clim. 6180"
+Text(97)="RTD 4L NI500 est. 6180"
+Text(98)="RTD 4L NI1000 clim. 6180"
+Text(99)="RTD 4L NI1000 est. 6180"
+Text(100)="RTD 4L NI100 clim. 6720"
+Text(101)="RTD 4L NI100 est. 6720"
+Text(102)="RTD 4L NI120 clim. 6720"
+Text(103)="RTD 4L NI120 est. 6720"
+Text(104)="RTD 4L NI200 clim. 6720"
+Text(105)="RTD 4L NI200 est. 6720"
+Text(106)="RTD 4L NI500 clim. 6720"
+Text(107)="RTD 4L NI500 est. 6720"
+Text(108)="RTD 4L NI1000 clim. 6720"
+Text(109)="RTD 4L NI1000 est. 6720"
+Text(110)="RTD 3L NI100 clim. 6180"
+Text(111)="RTD 3L NI100 est. 6180"
+Text(112)="RTD 3L NI120 clim. 6180"
+Text(113)="RTD 3L NI120 est. 6180"
+Text(114)="RTD 3L NI200 clim. 6180"
+Text(115)="RTD 3L NI200 est. 6180"
+Text(116)="RTD 3L NI500 clim. 6180"
+Text(117)="RTD 3L NI500 est. 6180"
+Text(118)="RTD 3L NI1000 clim. 6180"
+Text(119)="RTD 3L NI1000 est. 6180"
+Text(120)="RTD 3L NI100 clim. 6720"
+Text(121)="RTD 3L NI100 est. 6720"
+Text(122)="RTD 3L NI120 clim. 6720"
+Text(123)="RTD 3L NI120 est. 6720"
+Text(124)="RTD 3L NI200 clim. 6720"
+Text(125)="RTD 3L NI200 est. 6720"
+Text(126)="RTD 3L NI500 clim. 6720"
+Text(127)="RTD 3L NI500 est. 6720"
+Text(128)="RTD 3L NI1000 clim. 6720"
+Text(129)="RTD 3L NI1000 est. 6720"
+Text(130)="RTD 4L CU10 clim. 4270"
+Text(131)="RTD 4L CU10 est. 4270"
+Text(132)="RTD 3L CU10 clim. 4270"
+Text(133)="RTD 3L CU10 est. 4270"
+Text(134)="RTD 4L PT10 GOST clim. 3850"
+Text(135)="RTD 4L PT10 GOST est. 3850"
+Text(136)="RTD 4L PT50 GOST clim. 3850"
+Text(137)="RTD 4L PT50 GOST est. 3850"
+Text(138)="RTD 4L PT100 GOST clim. 3850"
+Text(139)="RTD 4L PT100 GOST est. 3850"
+Text(140)="RTD 4L PT500 GOST clim. 3850"
+Text(141)="RTD 4L PT500 GOST est. 3850"
+Text(142)="RTD 4L PT10 GOST clim. 3910"
+Text(143)="RTD 4L PT10 GOST est. 3910"
+Text(144)="RTD 4L PT50 GOST clim. 3910"
+Text(145)="RTD 4L PT50 GOST est. 3910"
+Text(146)="RTD 4L PT100 GOST clim. 3910"
+Text(147)="RTD 4L PT100 GOST est. 3910"
+Text(148)="RTD 4L PT500 GOST clim. 3910"
+Text(149)="RTD 4L PT500 GOST est. 3910"
+Text(150)="RTD 3L PT10 GOST clim. 3850"
+Text(151)="RTD 3L PT10 GOST est. 3850"
+Text(152)="RTD 3L PT50 GOST clim. 3850"
+Text(153)="RTD 3L PT50 GOST est. 3850"
+Text(154)="RTD 3L PT100 GOST clim. 3850"
+Text(155)="RTD 3L PT100 GOST est. 3850"
+Text(156)="RTD 3L PT500 GOST clim. 3850"
+Text(157)="RTD 3L PT500 GOST est. 3850"
+Text(158)="RTD 3L PT10 GOST clim. 3910"
+Text(159)="RTD 3L PT10 GOST est. 3910"
+Text(160)="RTD 3L PT50 GOST clim. 3910"
+Text(161)="RTD 3L PT50 GOST est. 3910"
+Text(162)="RTD 3L PT100 GOST clim. 3910"
+Text(163)="RTD 3L PT100 GOST est. 3910"
+Text(164)="RTD 3L PT500 GOST clim. 3910"
+Text(165)="RTD 3L PT500 GOST est. 3910"
+Text(166)="RTD 4L NI100 GOST clim. 6170"
+Text(167)="RTD 4L NI100 GOST est. 6170"
+Text(168)="RTD 4L LG-NI1000 clim. 5000"
+Text(169)="RTD 4L LG-NI1000 est. 5000"
+Text(170)="RTD 3L NI100 GOST clim. 6170"
+Text(171)="RTD 3L NI100 GOST est. 6170"
+Text(172)="RTD 3L LG-NI1000 clim. 5000"
+Text(173)="RTD 3L LG-NI1000 est. 5000"
+Text(174)="RTD 4L CU10 GOST clim. 4260"
+Text(175)="RTD 4L CU10 GOST est. 4260"
+Text(176)="RTD 4L CU50 GOST clim. 4260"
+Text(177)="RTD 4L CU50 GOST est. 4260"
+Text(178)="RTD 4L CU100 GOST clim. 4260"
+Text(179)="RTD 4L CU100 GOST est. 4260"
+Text(180)="RTD 4L CU10 GOST clim. 4280"
+Text(181)="RTD 4L CU10 GOST est. 4280"
+Text(182)="RTD 4L CU50 GOST clim. 4280"
+Text(183)="RTD 4L CU50 GOST est. 4280"
+Text(184)="RTD 4L CU100 GOST clim. 4280"
+Text(185)="RTD 4L CU100 GOST est. 4280"
+Text(186)="RTD 3L CU10 GOST clim. 4260"
+Text(187)="RTD 3L CU10 GOST est. 4260"
+Text(188)="RTD 3L CU50 GOST clim. 4260"
+Text(189)="RTD 3L CU50 GOST est. 4260"
+Text(190)="RTD 3L CU100 GOST clim. 4260"
+Text(191)="RTD 3L CU100 GOST est. 4260"
+Text(192)="RTD 3L CU10 GOST clim. 4280"
+Text(193)="RTD 3L CU10 GOST est. 4280"
+Text(194)="RTD 3L CU50 GOST clim. 4280"
+Text(195)="RTD 3L CU50 GOST est. 4280"
+Text(196)="RTD 3L CU100 GOST clim. 4280"
+Text(197)="RTD 3L CU100 GOST est. 4280"
+EndPrmText
+PrmText=79
+Text(0)="Desactivado"
+Text(160)="Termopar 0ºC tipo B"
+Text(161)="Termopar 0ºC tipo N"
+Text(162)="Termopar 0ºC tipo E"
+Text(163)="Termopar 0ºC tipo R"
+Text(164)="Termopar 0ºC tipo S"
+Text(165)="Termopar 0ºC tipo J"
+Text(166)="Termopar 0ºC tipo L"
+Text(167)="Termopar 0ºC tipo T"
+Text(168)="Termopar 0ºC tipo K"
+Text(169)="Termopar 0ºC tipo U"
+Text(170)="Termopar 0ºC tipo C"
+Text(171)="Termopar 0ºC tipo TxK GOST"
+Text(176)="Termopar 50ºC tipo B"
+Text(177)="Termopar 50ºC tipo N"
+Text(178)="Termopar 50ºC tipo E"
+Text(179)="Termopar 50ºC tipo R"
+Text(180)="Termopar 50ºC tipo S"
+Text(181)="Termopar 50ºC tipo J"
+Text(182)="Termopar 50ºC tipo L"
+Text(183)="Termopar 50ºC tipo T"
+Text(184)="Termopar 50ºC tipo K"
+Text(185)="Termopar 50ºC tipo U"
+Text(186)="Termopar 50ºC tipo C"
+Text(187)="Termopar 50ºC tipo TxK GOS"
+Text(208)="Termopar int. tipo B"
+Text(209)="Termopar int. tipo N"
+Text(210)="Termopar int. tipo E"
+Text(211)="Termopar int. tipo R"
+Text(212)="Termopar int. tipo S"
+Text(213)="Termopar int. tipo J"
+Text(214)="Termopar int. tipo L"
+Text(215)="Termopar int. tipo T"
+Text(216)="Termopar int. tipo K"
+Text(217)="Termopar int. tipo U"
+Text(218)="Termopar int. tipo C"
+Text(219)="Termopar int. tipo TxK GOST"
+Text(224)="Termopar ext tipo B"
+Text(225)="Termopar ext tipo N"
+Text(226)="Termopar ext tipo E"
+Text(227)="Termopar ext tipo R"
+Text(228)="Termopar ext tipo S"
+Text(229)="Termopar ext tipo J"
+Text(230)="Termopar ext tipo L"
+Text(231)="Termopar ext tipo T"
+Text(232)="Termopar ext tipo K"
+Text(233)="Termopar ext tipo U"
+Text(234)="Termopar ext tipo C"
+Text(235)="Termopar ext tipo TxK GOST"
+EndPrmText
+PrmText = 80
+Text(0) = "Desactivado"
+Text(248) = "IDENT"
+EndPrmText
+PrmText = 81
+Text(0) = "0: especif. del fabricante"
+Text(1) = "1: Transponder ISO"
+EndPrmText
+PrmText = 82
+Text(1)="Estandar"
+Text(3)="fast"
+EndPrmText
+; ============================
+; <Ext-User-Prm-Data-Def-List>
+; ============================
+ExtUserPrmData=1 "Alarma de diagnostico"
+Bit(5) 1 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=2 "Alarma de proceso"
+Bit(6) 1 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=3 "Formato valores analogicos"
+Bit(0) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=4 "Arranque si conf.teorica<>real"
+Bit(0) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=5 "Alarma extraccion/insercion"
+Bit(7) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=6 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=7 "Retardo de entrada (ms)"
+BitArea(0-2) 0 000-004
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=8 "Diag:Alimentacion sensor 1"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=9 "Diag:Alimentacion sensor 2"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=10 "Habil. alarma proceso"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=11 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=12 "Alpro:caso de flanco pos. GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=13 "Alpro:caso de flanco neg. GrC0"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=14 "Alpro:caso de flanco pos. GrC1"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=15 "Alpro:caso de flanco neg. GrC1"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=16 "Alpro:caso de flanco pos. GrC2"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=17 "Alpro:caso de flanco neg. GrC2"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=18 "Alpro:caso de flanco pos. GrC3"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=19 "Alpro:caso de flanco neg. GrC3"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=20 "Alpro:caso de flanco pos. GrC4"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=21 "Alpro:caso de flanco neg. GrC4"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=22 "Alpro:caso de flanco pos. GrC5"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=23 "Alpro:caso de flanco neg. GrC5"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=24 "Alpro:caso de flanco pos. GrC6"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=25 "Alpro:caso de flanco neg. GrC6"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=26 "Alpro:caso de flanco pos. GrC7"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=27 "Alpro:caso de flanco neg. GrC7"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=28 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=29 "Diag:Cortocircuito a M, C0"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=30 "Diag:Cortocircuito a M, C1"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=31 "Diag:Cortocircuito a M, C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=32 "Diag:Cortocircuito a M, C3"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=33 "Diag:Cortocircuito a M, C4"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=34 "Diag:Cortocircuito a M, C5"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=35 "Diag:Cortocircuito a M, C6"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=36 "Diag:Cortocircuito a M, C7"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=37 "Diag:Cortocircuito a P, C0"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=38 "Diag:Cortocircuito a P, C1"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=39 "Diag:Cortocircuito a P, C2"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=40 "Diag:Cortocircuito a P, C3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=41 "Diag:Cortocircuito a P, C4"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=42 "Diag:Cortocircuito a P, C5"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=43 "Diag:Cortocircuito a P, C6"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=44 "Diag:Cortocircuito a P, C7"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=45 "Diag:Rotura de hilo, canal 0"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=46 "Diag:Rotura de hilo, canal 1"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=47 "Diag:Rotura de hilo, canal 2"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=48 "Diag:Rotura de hilo, canal 3"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=49 "Diag:Rotura de hilo, canal 4"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=50 "Diag:Rotura de hilo, canal 5"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=51 "Diag:Rotura de hilo, canal 6"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=52 "Diag:Rotura de hilo, canal 7"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=53 "Diag:falta tension carga canal 0"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=54 "Diag:falta tension carga canal 1"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=55 "Diag:falta tension carga canal 2"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=56 "Diag:falta tension carga canal 3"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=57 "Diag:falta tension carga canal 4"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=58 "Diag:falta tension carga canal 5"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=59 "Diag:falta tension carga canal 6"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=60 "Diag:falta tension carga canal 7"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+;ExtUserPrmData=61 "Mantener ultimo valor"
+;Bit(0) 0 0-1
+;Prm_Text_Ref=4
+;EndExtUserPrmData
+;ExtUserPrmData=62 "Salida valores sustitutivo"
+;Bit(1) 0 0-1
+;Prm_Text_Ref=4
+;EndExtUserPrmData
+ExtUserPrmData=63 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=64 "Valor sustitutivo canal 0"
+Bit(0) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=65 "Valor sustitutivo canal 1"
+Bit(1) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=66 "Valor sustitutivo canal 2"
+Bit(2) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=67 "Valor sustitutivo canal 3"
+Bit(3) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=68 "Valor sustitutivo canal 4"
+Bit(4) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=69 "Valor sustitutivo canal 5"
+Bit(5) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=70 "Valor sustitutivo canal 6"
+Bit(6) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=71 "Valor sustitutivo canal 7"
+Bit(7) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=72 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=73 "Retardo de entrada (ms)"
+BitArea(0-2) 0 000-004
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=74 "Diag:Rotura de hilo, canal 0"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=75 "Diag:Rotura de hilo, canal 1"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=76 "Diag:Rotura de hilo, canal 2"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=77 "Diag:Rotura de hilo, canal 3"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=78 "Diag:Cortocircuito a M, C0"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=79 "Diag:Cortocircuito a M, C1"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=80 "Diag:Cortocircuito a M, C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=81 "Diag:Cortocircuito a M, C3"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=82 "Habil. alarma proceso"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=83 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=84 "Alpro:caso de flanco pos., C0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=85 "Alpro:caso de flanco pos., C1"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=86 "Alpro:caso de flanco pos., C2"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=87 "Alpro:caso de flanco pos., C3"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=88 "Alpro:caso de flanco neg., C0"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=89 "Alpro:caso de flanco neg., C1"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=90 "Alpro:caso de flanco neg., C2"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=91 "Alpro:caso de flanco neg., C3"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=92 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=93 "Diag:Cortocircuito a M, C0"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=94 "Diag:Cortocircuito a M, C1"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=95 "Diag:Cortocircuito a M, C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=96 "Diag:Cortocircuito a M, C3"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=97 "Diag:Rotura de hilo, canal 0"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=98 "Diag:Rotura de hilo, canal 1"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=99 "Diag:Rotura de hilo, canal 2"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=100 "Diag:Rotura de hilo, canal 3"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=101 "Diag:falta tension carga canal 0"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=102 "Diag:falta tension carga canal 1"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=103 "Diag:falta tension carga canal 2"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=104 "Diag:falta tension carga canal 3"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=105 "Mantener ultimo valor"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=106 "Salida valores sustitutivo"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=107 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=108 "Valor sustitutivo canal 0"
+Bit(0) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=109 "Valor sustitutivo canal 1"
+Bit(1) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=110 "Valor sustitutivo canal 2"
+Bit(2) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=111 "Valor sustitutivo canal 3"
+Bit(3) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=112 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=113 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=114 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=115 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=116 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=117 "Diag:Rotura de hilo, canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=118 "Diag:Rotura de hilo, canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=119 "Diag:Rotura de hilo, canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=120 "Diag:Rotura de hilo, canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=121 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=122 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=123 "Habil. alarma final ciclo"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=124 "Med:Tiempo integracion (ms) C0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=125 "Med:Tiempo integracion (ms) C1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=126 "Med:Tiempo integracion (ms) C2"
+BitArea(4-5) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=127 "Med:Tiempo integracion (ms) C3"
+BitArea(6-7) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=128 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 35 000-051
+Prm_Text_Ref=8
+EndExtUserPrmData
+ExtUserPrmData=129 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 35 000-051
+Prm_Text_Ref=8
+EndExtUserPrmData
+ExtUserPrmData=130 "Med:Tipo/margen, canal 2"
+BitArea(0-7) 35 000-051
+Prm_Text_Ref=8
+EndExtUserPrmData
+ExtUserPrmData=131 "Med:Tipo/margen, canal 3"
+BitArea(0-7) 35 000-051
+Prm_Text_Ref=8
+EndExtUserPrmData
+ExtUserPrmData=132 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=133 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=134 "Valor limite canal 2: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=135 "Valor limite canal 2: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=136 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=137 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=138 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=139 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=140 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=141 "Diag:Rotura de hilo, canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=142 "Diag:Rotura de hilo, canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=143 "Diag:Rotura de hilo, canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=144 "Diag:Rotura de hilo, canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=145 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=146 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=147 "Habil. alarma final ciclo"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=148 "Med:Tiempo integracion (ms) C0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=149 "Med:Tiempo integracion (ms) C1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=150 "Med:Tiempo integracion (ms) C2"
+BitArea(4-5) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=151 "Med:Tiempo integracion (ms) C3"
+BitArea(6-7) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=152 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 20 000-233
+Prm_Text_Ref=9
+EndExtUserPrmData
+ExtUserPrmData=153 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 20 000-233
+Prm_Text_Ref=9
+EndExtUserPrmData
+ExtUserPrmData=154 "Med:Tipo/margen, canal 2"
+BitArea(0-7) 20 000-233
+Prm_Text_Ref=9
+EndExtUserPrmData
+ExtUserPrmData=155 "Med:Tipo/margen, canal 3"
+BitArea(0-7) 20 000-233
+Prm_Text_Ref=9
+EndExtUserPrmData
+ExtUserPrmData=156 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=157 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=158 "Valor limite canal 2: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=159 "Valor limite canal 2: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=160 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=161 "Alarma de diagnostico"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=162 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=163 "Modo de operacion"
+Unsigned8 3 3-3
+EndExtUserPrmData
+ExtUserPrmData=164 "Modo de operacion"
+Unsigned8 3 3-3
+EndExtUserPrmData
+ExtUserPrmData=165 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=166 "Diag:Habilit. GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=167 "Diag:Rotura de hilo GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=168 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=169 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=170 "Med:Tiempo integracion (ms) GrC0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=171 "Med:Tipo/margen GrC0"
+BitArea(0-7) 25 000-232
+Prm_Text_Ref=10
+EndExtUserPrmData
+ExtUserPrmData=172 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=173 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=174 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=175 "Diag:Habilit. GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=176 "Diag:Habilit. GrC1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=177 "Diag:Habilit. GrC2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=178 "Diag:Habilit. GrC3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=179 "Diag:Rotura de hilo GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=180 "Diag:Rotura de hilo GrC1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=181 "Diag:Rotura de hilo GrC2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=182 "Diag:Rotura de hilo GrC3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=183 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=184 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=185 "Med:Tiempo integracion (ms) GrC0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=186 "Med:Tiempo integracion (ms) GrC1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=187 "Med:Tiempo integracion (ms) GrC2"
+BitArea(4-5) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=188 "Med:Tiempo integracion (ms) GrC3"
+BitArea(6-7) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=189 "Med:Tipo/margen GrC0"
+BitArea(0-7) 25 000-232
+Prm_Text_Ref=10
+EndExtUserPrmData
+ExtUserPrmData=190 "Med:Tipo/margen GrC1"
+BitArea(0-7) 25 000-232
+Prm_Text_Ref=10
+EndExtUserPrmData
+ExtUserPrmData=191 "Med:Tipo/margen GrC2"
+BitArea(0-7) 25 000-232
+Prm_Text_Ref=10
+EndExtUserPrmData
+ExtUserPrmData=192 "Med:Tipo/margen GrC3"
+BitArea(0-7) 25 000-232
+Prm_Text_Ref=10
+EndExtUserPrmData
+ExtUserPrmData=193 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=194 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=195 "Valor limite canal 2: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=196 "Valor limite canal 2: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=197 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=198 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=199 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=200 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=201 "Valsu:Mantener ultimo valor C0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=202 "Valsu:Mantener ultimo valor C1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=203 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=204 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=205 "Valor sustitutivo   C 0"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=206 "Valor sustitutivo   C 1"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=207 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=208 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=209 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=210 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=211 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=212 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=213 "Valsu:Mantener ultimo valor C0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=214 "Valsu:Mantener ultimo valor C1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=215 "Valsu:Mantener ultimo valor C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=216 "Valsu:Mantener ultimo valor C3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=217 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=218 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=219 "Sali:Tipo/margen, canal 2"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=220 "Sali:Tipo/margen, canal 3"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=221 "Valor sustitutivo   C 0"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=222 "Valor sustitutivo   C 1"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=223 "Valor sustitutivo   C 2"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=224 "Valor sustitutivo   C 3"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=225 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=226 "Alarma de diagnostico"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=227 "Alarma de proceso"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=228 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=229 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=230 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=231 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=232 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=233 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=234 "Valsu:Mantener ultimo valor C0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=235 "Valsu:Mantener ultimo valor C1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=236 "Valsu:Mantener ultimo valor C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=237 "Valsu:Mantener ultimo valor C3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=238 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 35 000-035
+Prm_Text_Ref=11
+EndExtUserPrmData
+ExtUserPrmData=239 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 35 000-035
+Prm_Text_Ref=11
+EndExtUserPrmData
+ExtUserPrmData=240 "Sali:Tipo/margen, canal 2"
+BitArea(0-7) 35 000-035
+Prm_Text_Ref=11
+EndExtUserPrmData
+ExtUserPrmData=241 "Sali:Tipo/margen, canal 3"
+BitArea(0-7) 35 000-035
+Prm_Text_Ref=11
+EndExtUserPrmData
+ExtUserPrmData=242 "Valsu:Valor, canal 0"
+Signed16 -6912 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=243 "Valsu:Valor, canal 1"
+Signed16 -6912 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=244 "Valsu:Valor, canal 2"
+Signed16 -6912 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=245 "Valsu:Valor, canal 3"
+Signed16 -6912 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=246 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=247 "Med:Tiempo integracion (ms) C0"
+BitArea(0-1) 1 001-002
+Prm_Text_Ref=12
+EndExtUserPrmData
+ExtUserPrmData=248 "Med:Tiempo integracion (ms) C1"
+BitArea(2-3) 1 001-002
+Prm_Text_Ref=12
+EndExtUserPrmData
+ExtUserPrmData=249 "Med:Tiempo integracion (ms) C2"
+BitArea(4-5) 1 001-002
+Prm_Text_Ref=12
+EndExtUserPrmData
+ExtUserPrmData=250 "Med:Tiempo integracion (ms) C3"
+BitArea(6-7) 1 001-002
+Prm_Text_Ref=12
+EndExtUserPrmData
+ExtUserPrmData=251 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 128 000-128
+Prm_Text_Ref=13
+EndExtUserPrmData
+ExtUserPrmData=252 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 128 000-128
+Prm_Text_Ref=13
+EndExtUserPrmData
+ExtUserPrmData=253 "Med:Tipo/margen, canal 2"
+BitArea(0-7) 128 000-128
+Prm_Text_Ref=14
+EndExtUserPrmData
+ExtUserPrmData=254 "Med:Tipo/margen, canal 3"
+BitArea(0-7) 128 000-128
+Prm_Text_Ref=14
+EndExtUserPrmData
+ExtUserPrmData=255 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 24 000-024
+Prm_Text_Ref=15
+EndExtUserPrmData
+ExtUserPrmData=256 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 24 000-024
+Prm_Text_Ref=15
+EndExtUserPrmData
+ExtUserPrmData=257 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=258 "Habilit. diagn. canal entr. 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=259 "Habilit. diagn. canal entr. 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=260 "Habilit. diagn. canal entr. 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=261 "Habilit. diagn. canal entr. 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=262 "Habilit. diagn. canal salida 0"
+Bit(4) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=263 "Habilit. diagn. canal salida 1"
+Bit(5) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=264 "Habilit. diagn. canal salida 2"
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=265 "Habilit. diagn. canal salida 3"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=266 "Valor sustitutivo   C 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=18
+EndExtUserPrmData
+ExtUserPrmData=267 "Valor sustitutivo   C 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=18
+EndExtUserPrmData
+ExtUserPrmData=268 "Valor sustitutivo   C 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=18
+EndExtUserPrmData
+ExtUserPrmData=269 "Valor sustitutivo   C 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=18
+EndExtUserPrmData
+ExtUserPrmData=270 "Alarma de diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=271 "Alarma de proceso"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=272 "Med:Tipo/margen, canal 0"
+Unsigned8 025 000-035
+Prm_Text_Ref=19
+EndExtUserPrmData
+ExtUserPrmData=273 "Med:Tipo/margen, canal 1"
+Unsigned8 025 000-035
+Prm_Text_Ref=19
+EndExtUserPrmData
+ExtUserPrmData=274 "Med:Tipo/margen, canal 2"
+Unsigned8 025 000-035
+Prm_Text_Ref=19
+EndExtUserPrmData
+ExtUserPrmData=275 "Med:Tipo/margen, canal 3"
+Unsigned8 025 000-035
+Prm_Text_Ref=19
+EndExtUserPrmData
+ExtUserPrmData=276 "Sali:Tipo/margen, canal 0"
+Unsigned8 025 000-025
+Prm_Text_Ref=16
+EndExtUserPrmData
+ExtUserPrmData=277 "Sali:Tipo/margen, canal 1"
+Unsigned8 025 000-025
+Prm_Text_Ref=16
+EndExtUserPrmData
+ExtUserPrmData=278 "Sali:Tipo/margen, canal 2"
+Unsigned8 025 000-025
+Prm_Text_Ref=16
+EndExtUserPrmData
+ExtUserPrmData=279 "Sali:Tipo/margen, canal 3"
+Unsigned8 025 000-025
+Prm_Text_Ref=16
+EndExtUserPrmData
+ExtUserPrmData=280 "Tiempo ciclo conversion A/D"
+Unsigned8 001 000-031
+EndExtUserPrmData
+ExtUserPrmData=281 "            Rotura hilo  C 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=282 "            Rotura hilo  C 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=283 "            Rotura hilo  C 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=284 "            Rotura hilo  C 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=285 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=286 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=287 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=288 "Diag:Rotura de hilo, canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=289 "Diag:Rotura de hilo, canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=290 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=291 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=292 "Habil. alarma final ciclo"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=293 "Med:Tiempo integracion (ms) C0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=294 "Med:Tiempo integracion (ms) C1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=295 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 124 000-124
+Prm_Text_Ref=20
+EndExtUserPrmData
+ExtUserPrmData=296 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 124 000-124
+Prm_Text_Ref=20
+EndExtUserPrmData
+ExtUserPrmData=297 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=298 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=299 "Valor limite canal 1: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=300 "Valor limite canal 1: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=301 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=302 "Habil. alarma diagnostico"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=303 "Encoder absoluto (SSI) C0"
+BitArea(0-1) 0 000-003
+Prm_Text_Ref=22
+EndExtUserPrmData
+ExtUserPrmData=304 "Tipo de codigo C0"
+Bit(3) 0 0-1
+Prm_Text_Ref=21
+EndExtUserPrmData
+ExtUserPrmData=305 "Velocidad C0"
+BitArea(4-5) 0 000-003
+Prm_Text_Ref=24
+EndExtUserPrmData
+ExtUserPrmData=306 "Tiempo monoflop C0"
+BitArea(6-7) 0 000-003
+Prm_Text_Ref=25
+EndExtUserPrmData
+ExtUserPrmData=307 "Normaliz. digitos [0-12] C0"
+BitArea(0-3) 0 000-012
+EndExtUserPrmData
+ExtUserPrmData=308 "Funcion FREEZE C0"
+Bit(6) 0 0-1
+Prm_Text_Ref=23
+EndExtUserPrmData
+ExtUserPrmData=309 "Entrada FREEZE C0"
+Bit(7) 0 0-1
+Prm_Text_Ref=26
+EndExtUserPrmData
+ExtUserPrmData=310 "Encoder absoluto (SSI) C1"
+BitArea(0-1) 0 000-003
+Prm_Text_Ref=22
+EndExtUserPrmData
+ExtUserPrmData=311 "Tipo de codigo C1"
+Bit(3) 0 0-1
+Prm_Text_Ref=21
+EndExtUserPrmData
+ExtUserPrmData=312 "Velocidad C1"
+BitArea(4-5) 0 000-003
+Prm_Text_Ref=24
+EndExtUserPrmData
+ExtUserPrmData=313 "Tiempo monoflop C1"
+BitArea(6-7) 0 000-003
+Prm_Text_Ref=25
+EndExtUserPrmData
+ExtUserPrmData=314 "Normaliz. digitos [0-12] C1"
+BitArea(0-3) 0 000-012
+EndExtUserPrmData
+ExtUserPrmData=315 "Funcion FREEZE C1"
+Bit(6) 0 0-1
+Prm_Text_Ref=23
+EndExtUserPrmData
+ExtUserPrmData=316 "Entrada FREEZE C1"
+Bit(7) 0 0-1
+Prm_Text_Ref=26
+EndExtUserPrmData
+ExtUserPrmData=317 "Encoder absoluto (SSI) C2"
+BitArea(0-1) 0 000-003
+Prm_Text_Ref=22
+EndExtUserPrmData
+ExtUserPrmData=318 "Tipo de codigo C2"
+Bit(3) 0 0-1
+Prm_Text_Ref=21
+EndExtUserPrmData
+ExtUserPrmData=319 "Velocidad C2"
+BitArea(4-5) 0 000-003
+Prm_Text_Ref=24
+EndExtUserPrmData
+ExtUserPrmData=320 "Tiempo monoflop C2"
+BitArea(6-7) 0 000-003
+Prm_Text_Ref=25
+EndExtUserPrmData
+ExtUserPrmData=321 "Normaliz. digitos [0-12] C2"
+BitArea(0-3) 0 000-012
+EndExtUserPrmData
+ExtUserPrmData=322 "Funcion FREEZE C2"
+Bit(6) 0 0-1
+Prm_Text_Ref=23
+EndExtUserPrmData
+ExtUserPrmData=323 "Entrada FREEZE C2"
+Bit(7) 0 0-1
+Prm_Text_Ref=26
+EndExtUserPrmData
+ExtUserPrmData=324 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=325 "Diag:Habilit. GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=326 "Diag:Habilit. GrC1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=327 "Diag:Habilit. GrC2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=328 "Diag:Habilit. GrC3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=329 "Diag:Rotura de hilo GrC0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=330 "Diag:Rotura de hilo GrC1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=331 "Diag:Rotura de hilo GrC2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=332 "Diag:Rotura de hilo GrC3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=333 "Habil. alarma valor limit"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=334 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=335 "Med:Tiempo integracion (ms) GrC0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=336 "Med:Tiempo integracion (ms) GrC1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=337 "Med:Tiempo integracion (ms) GrC2"
+BitArea(4-5) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=338 "Med:Tiempo integracion (ms) GrC3"
+BitArea(6-7) 2 000-003
+Prm_Text_Ref=6
+EndExtUserPrmData
+ExtUserPrmData=339 "Med:Tipo/margen GrC0"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=27
+EndExtUserPrmData
+ExtUserPrmData=340 "Med:Tipo/margen GrC1"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=27
+EndExtUserPrmData
+ExtUserPrmData=341 "Med:Tipo/margen GrC2"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=27
+EndExtUserPrmData
+ExtUserPrmData=342 "Med:Tipo/margen GrC3"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=27
+EndExtUserPrmData
+ExtUserPrmData=343 "Valor limite canal 0: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=344 "Valor limite canal 0: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=345 "Valor limite canal 2: superior"
+Signed16 32767 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=346 "Valor limite canal 2: inferior"
+Signed16 -32768 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=347 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=348 "Modo de operacion"
+Unsigned8 3 1-4
+Prm_Text_Ref=28
+EndExtUserPrmData
+ExtUserPrmData=349 "Modo de operacion"
+Unsigned8 3 1-4
+Prm_Text_Ref=28
+EndExtUserPrmData
+ExtUserPrmData=350 "Valsu:Valor, canal 0"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=351 "Valsu:Valor, canal 1"
+Signed16 0 -32512-32511
+EndExtUserPrmData
+ExtUserPrmData=352 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 124 000-124
+Prm_Text_Ref=29
+EndExtUserPrmData
+ExtUserPrmData=353 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 124 000-124
+Prm_Text_Ref=29
+EndExtUserPrmData
+ExtUserPrmData=354 "Diagnostico ampliado"
+Bit(4) 0 0-1
+Prm_Text_Ref=30
+EndExtUserPrmData
+ExtUserPrmData=389 "Diag:Rotura de hilo GrC 0"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=390 "Diag:Rotura de hilo GrC 1"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=391 "Diag:Rotura de hilo GrC 2"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=392 "Diag:Rotura de hilo GrC 3"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=393 "Modo modulo"
+Bit(4) 0 0-1
+Prm_Text_Ref=31
+EndExtUserPrmData
+ExtUserPrmData=394 "Frec. perturb. gr. canales 0"
+BitArea(0-1) 3 0-3
+Prm_Text_Ref=32
+EndExtUserPrmData
+ExtUserPrmData=395 "Frec. perturb. gr. canales 1"
+BitArea(2-3) 3 0-3
+Prm_Text_Ref=32
+EndExtUserPrmData
+ExtUserPrmData=396 "Frec. perturb. gr. canales 2"
+BitArea(4-5) 3 0-3
+Prm_Text_Ref=32
+EndExtUserPrmData
+ExtUserPrmData=397 "Frec. perturb. gr. canales 3"
+BitArea(6-7) 3 0-3
+Prm_Text_Ref=32
+EndExtUserPrmData
+ExtUserPrmData=398 "Alisamiento gr. canales 0"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=33
+EndExtUserPrmData
+ExtUserPrmData=399 "Alisamiento gr. canales 1"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=33
+EndExtUserPrmData
+ExtUserPrmData=400 "Alisamiento gr. canales 2"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=33
+EndExtUserPrmData
+ExtUserPrmData=401 "Alisamiento gr. canales 3"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=33
+EndExtUserPrmData
+ExtUserPrmData=402 "Modo modulo"
+BitArea(4-5) 0 0-2
+Prm_Text_Ref=34
+EndExtUserPrmData
+ExtUserPrmData=403 "Med:Tipo/margen GrC0"
+BitArea(0-7) 216 000-234
+Prm_Text_Ref=35
+EndExtUserPrmData
+ExtUserPrmData=404 "Med:Tipo/margen GrC1"
+BitArea(0-7) 216 000-234
+Prm_Text_Ref=35
+EndExtUserPrmData
+ExtUserPrmData=405 "Med:Tipo/margen GrC2"
+BitArea(0-7) 216 000-234
+Prm_Text_Ref=35
+EndExtUserPrmData
+ExtUserPrmData=406 "Med:Tipo/margen GrC3"
+BitArea(0-7) 216 000-234
+Prm_Text_Ref=35
+EndExtUserPrmData
+ExtUserPrmData=407 "Med:Tipo/margen GrC0"
+BitArea(0-7) 10 000-133
+Prm_Text_Ref=36
+EndExtUserPrmData
+ExtUserPrmData=408 "Med:Tipo/margen GrC1"
+BitArea(0-7) 10 000-133
+Prm_Text_Ref=36
+EndExtUserPrmData
+ExtUserPrmData=409 "Med:Tipo/margen GrC2"
+BitArea(0-7) 10 000-133
+Prm_Text_Ref=36
+EndExtUserPrmData
+ExtUserPrmData=410 "Med:Tipo/margen GrC3"
+BitArea(0-7) 10 000-133
+Prm_Text_Ref=36
+EndExtUserPrmData
+ExtUserPrmData=411 "Termopar fundido gr. canales.0"
+Bit(0) 0 0-1
+Prm_Text_Ref=37
+EndExtUserPrmData
+ExtUserPrmData=412 "Termopar fundido gr. canales.1"
+Bit(1) 0 0-1
+Prm_Text_Ref=37
+EndExtUserPrmData
+ExtUserPrmData=413 "Termopar fundido gr. canales.2"
+Bit(2) 0 0-1
+Prm_Text_Ref=37
+EndExtUserPrmData
+ExtUserPrmData=414 "Termopar fundido gr. canales.3"
+Bit(3) 0 0-1
+Prm_Text_Ref=37
+EndExtUserPrmData
+ExtUserPrmData=415 "Formato salida"
+Bit(0) 0 0-1
+Prm_Text_Ref=38
+EndExtUserPrmData
+ExtUserPrmData=416 "Formato salida"
+Bit(7) 0 0-1
+Prm_Text_Ref=38
+EndExtUserPrmData
+ExtUserPrmData=417 "Salida valores sustitutivo"
+Unsigned8 2 1-2
+Prm_Text_Ref=39
+EndExtUserPrmData
+ExtUserPrmData=418 "Valor sustitutivo canal 8"
+Bit(0) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=419 "Valor sustitutivo canal 9"
+Bit(1) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=420 "Valor sustitutivo canal 10"
+Bit(2) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=421 "Valor sustitutivo canal 11"
+Bit(3) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=422 "Valor sustitutivo canal 12"
+Bit(4) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=423 "Valor sustitutivo canal 13"
+Bit(5) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=424 "Valor sustitutivo canal 14"
+Bit(6) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=425 "Valor sustitutivo canal 15"
+Bit(7) 0 0-1
+EndExtUserPrmData
+ExtUserPrmData=426 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=427 "Habil. gener. alarma"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=428 "Habil. alarma diagnostico"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=429 "Habil. alarma proceso"
+Bit(1) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=430 "Respuesta a bloqueo salidas"
+Bit(0) 0 0-1
+Prm_Text_Ref=40
+EndExtUserPrmData
+ExtUserPrmData=431 "Diag:Falta habil. sensor V"
+Bit(4) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=432 "Diag:Habil. sensor V sobrecarga"
+Bit(5) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=433 "Diag:Falta habil. vers. perif."
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=434 "Diag:Falta habil. aux. V"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=435 "Diag:Habil. rotura de hilo"
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=436 "Diag:Habil. SSI rebase tel."
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=437 "Diag:Habil. salida 0 sobrecarga"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=438 "Diag:Habil. salida 1 sobrecarga"
+Bit(1) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=439 "Diag:Habil. salida 2 sobrecarga"
+Bit(2) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=440 "Diag:Habil. salida 3 sobrecarga"
+Bit(3) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=441 "Diag:Habil. salida 4 sobrecarga"
+Bit(4) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=442 "Diag:Habil. salida 5 sobrecarga"
+Bit(5) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=443 "Diag:Habil. salida 6 sobrecarga"
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=444 "Diag:Habil. salida 7 sobrecarga"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=445 "Diag:Habil. error MMC"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=446 "Habil. alarma canal 0 proceso"
+Bit(0) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=447 "Habil. alarma canal 1 proceso"
+Bit(1) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=448 "Habil. alarma canal 2 proceso"
+Bit(2) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=449 "Habil. alarma canal 3 proceso"
+Bit(3) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=450 "Habil. alarma canal 4 proceso"
+Bit(4) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=451 "Habil. alarma canal 5 proceso"
+Bit(5) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=452 "Habil. alarma canal 6 proceso"
+Bit(6) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=453 "Habil. alarma canal 7 proceso"
+Bit(7) 0 0-1
+Prm_Text_Ref=17
+EndExtUserPrmData
+ExtUserPrmData=454 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=455 "Unidad de temperatura:"
+BitArea(0-7) 0 000-016
+Prm_Text_Ref=42
+EndExtUserPrmData
+ExtUserPrmData=456 "Tiempo de integracion(ms):"
+BitArea(0-7) 2 001-002
+Prm_Text_Ref=43
+EndExtUserPrmData
+ExtUserPrmData=457 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=458 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=459 "Med:Tipo/margen, canal 2"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=460 "Med:Tipo/margen, canal 3"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=461 "Med:Tipo/margen, canal 4"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=462 "Med:Tipo/margen, canal 5"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=463 "Med:Tipo/margen, canal 6"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=464 "Med:Tipo/margen, canal 7"
+BitArea(0-7) 25 000-146
+Prm_Text_Ref=41
+EndExtUserPrmData
+ExtUserPrmData=465 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=466 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=467 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=468 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=469 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=470 "Diag:Habilit., canal 4"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=471 "Diag:Habilit., canal 5"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=472 "Diag:Habilit., canal 6"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=473 "Diag:Habilit., canal 7"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=474 "Liberar alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=475 "Valsu:Mantener ultimo valor C0"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=476 "Valsu:Mantener ultimo valor C1"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=477 "Valsu:Mantener ultimo valor C2"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=478 "Valsu:Mantener ultimo valor C3"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=479 "Valsu:Mantener ultimo valor C4"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=480 "Valsu:Mantener ultimo valor C5"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=481 "Valsu:Mantener ultimo valor C6"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=482 "Valsu:Mantener ultimo valor C7"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=483 "Sali:Tipo/margen, canal 0"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=484 "Sali:Tipo/margen, canal 1"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=485 "Sali:Tipo/margen, canal 2"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=486 "Sali:Tipo/margen, canal 3"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=487 "Sali:Tipo/margen, canal 4"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=488 "Sali:Tipo/margen, canal 5"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=489 "Sali:Tipo/margen, canal 6"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=490 "Sali:Tipo/margen, canal 7"
+BitArea(0-7) 25 000-036
+Prm_Text_Ref=7
+EndExtUserPrmData
+ExtUserPrmData=491 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=492 "Reaccion modulo a STOP de la CPU"
+BitArea(0-1) 2 001-002
+Prm_Text_Ref=46
+EndExtUserPrmData
+ExtUserPrmData=494 "Liberar alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=495 "Valor sustitutivo canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=496 "Valor sustitutivo canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=497 "Valor sustitutivo canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=498 "Valor sustitutivo canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=499 "Valor sustitutivo canal 4"
+Bit(4) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=500 "Valor sustitutivo canal 5"
+Bit(5) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=501 "Valor sustitutivo canal 6"
+Bit(6) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=502 "Valor sustitutivo canal 7"
+Bit(7) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=503 "Valor sustitutivo canal 8"
+Bit(0) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=504 "Valor sustitutivo canal 9"
+Bit(1) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=505 "Valor sustitutivo canal 10"
+Bit(2) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=506 "Valor sustitutivo canal 11"
+Bit(3) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=507 "Valor sustitutivo canal 12"
+Bit(4) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=508 "Valor sustitutivo canal 13"
+Bit(5) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=509 "Valor sustitutivo canal 14"
+Bit(6) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=510 "Valor sustitutivo canal 15"
+Bit(7) 0 0-1
+Prm_Text_Ref=45
+EndExtUserPrmData
+ExtUserPrmData=511 "Unbundled H-KIR"
+Bit(6) 0 0-1
+Prm_Text_Ref=47
+EndExtUserPrmData
+ExtUserPrmData=517 "Med:Tipo/margen GrC0"
+BitArea(0-7) 25 000-51
+Prm_Text_Ref=51
+EndExtUserPrmData
+ExtUserPrmData=518 "Med:Tipo/margen GrC1"
+BitArea(0-7) 25 000-51
+Prm_Text_Ref=51
+EndExtUserPrmData
+ExtUserPrmData=519 "Med:Tipo/margen GrC2"
+BitArea(0-7) 25 000-51
+Prm_Text_Ref=51
+EndExtUserPrmData
+ExtUserPrmData=520 "Med:Tipo/margen GrC3"
+BitArea(0-7) 25 000-51
+Prm_Text_Ref=51
+EndExtUserPrmData
+ExtUserPrmData=521 "Med:Tiempo integracion (ms) GrC0"
+BitArea(0-1) 2 000-003
+Prm_Text_Ref=50
+EndExtUserPrmData
+ExtUserPrmData=522 "Med:Tiempo integracion (ms) GrC1"
+BitArea(2-3) 2 000-003
+Prm_Text_Ref=50
+EndExtUserPrmData
+ExtUserPrmData=523 "Med:Tiempo integracion (ms) GrC2"
+BitArea(4-5) 2 000-003
+Prm_Text_Ref=50
+EndExtUserPrmData
+ExtUserPrmData=524 "Med:Tiempo integracion (ms) GrC3"
+BitArea(6-7) 2 000-003
+Prm_Text_Ref=50
+EndExtUserPrmData
+ExtUserPrmData=525 "[SlotNumber]"
+Unsigned8 1 1-11
+EndExtUserPrmData
+ExtUserPrmData=526 "Unidad de temperatura:"
+BitArea(0-7) 0 0,8,16
+Prm_Text_Ref=42
+EndExtUserPrmData
+ExtUserPrmData=527 "Tiempo de integracion(ms):"
+BitArea(0-7) 2 1,2
+Prm_Text_Ref=43
+EndExtUserPrmData
+ExtUserPrmData=528 "Med:Tipo/margen, canal 0"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=529 "Med:Tipo/margen, canal 1"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=530 "Med:Tipo/margen, canal 2"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=531 "Med:Tipo/margen, canal 3"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=532 "Med:Tipo/margen, canal 4"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=533 "Med:Tipo/margen, canal 5"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=534 "Med:Tipo/margen, canal 6"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=535 "Med:Tipo/margen, canal 7"
+BitArea(0-7) 25 000-154
+Prm_Text_Ref=52
+EndExtUserPrmData
+ExtUserPrmData=536 "Coeficiente temp. canal 0"
+BitArea(4-7) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=537 "Coeficiente temp. canal 1"
+BitArea(0-3) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=538 "Coeficiente temp. canal 2"
+BitArea(4-7) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=539 "Coeficiente temp. canal 3"
+BitArea(0-3) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=540 "Coeficiente temp. canal 4"
+BitArea(4-7) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=541 "Coeficiente temp. canal 5"
+BitArea(0-3) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=542 "Coeficiente temp. canal 6"
+BitArea(4-7) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=543 "Coeficiente temp. canal 7"
+BitArea(0-3) 0 0,4,8,10
+Prm_Text_Ref=53
+EndExtUserPrmData
+ExtUserPrmData=544 "Utilizar canal 8 como salida"
+Bit(0) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=545 "Utilizar canal 9 como salida"
+Bit(1) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=546 "Utilizar canal 10 como salida"
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=547 "Utilizar canal 11 como salida"
+Bit(3) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=548 "Utilizar canal 12 como salida"
+Bit(4) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=549 "Utilizar canal 13 como salida"
+Bit(5) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=550 "Utilizar canal 14 como salida"
+Bit(6) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=551 "Utilizar canal 15 como salida"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=552 "Modo rapido"
+Bit(7) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData = 553 "Bloqueo teach in C2"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 554 "Bloqueo teach in C3"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 555 "Bloqueo teach in C4"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 556 "Bloqueo teach in C5"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 557 "Bloqueo teach in C6"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 558 "Bloqueo teach in C7"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 559 "Histeresis de conmutacion C0"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 560 "Histeresis de conmutacion C1"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 561 "Histeresis de conmutacion C2"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 562 "Histeresis de conmutacion C3"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 563 "Histeresis de conmutacion C4"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 564 "Histeresis de conmutacion C5"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 565 "Histeresis de conmutacion C6"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 566 "Histeresis de conmutacion C7"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 567 "Funciones de tiempo C0"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 568 "Funciones de tiempo C1"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 569 "Funciones de tiempo C2"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 570 "Funciones de tiempo C3"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 571 "Funciones de tiempo C4"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 572 "Funciones de tiempo C5"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 573 "Funciones de tiempo C6"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 574 "Funciones de tiempo C7"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 575 "Tipo de sensor C0"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 576 "Tipo de sensor C1"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 577 "Tipo de sensor C2"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 578 "Tipo de sensor C3"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 579 "Tipo de sensor C4"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 580 "Tipo de sensor C5"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 581 "Tipo de sensor C6"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 582 "Tipo de sensor C7"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref = 59
+EndExtUserPrmData
+ExtUserPrmData = 583 "Valor de tiempo C0"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 584 "Valor de tiempo C1"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 585 "Valor de tiempo C2"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 586 "Valor de tiempo C3"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 587 "Valor de tiempo C4"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 588 "Valor de tiempo C5"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 589 "Valor de tiempo C6"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 590 "Valor de tiempo C7"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 591 "Diag:Habilit., canal 0"
+Bit(0) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 592 "Diag:Habilit., canal 1"
+Bit(1) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 593 "Diag:Habilit., canal 2"
+Bit(2) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 594 "Diag:Habilit., canal 3"
+Bit(3) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 595 "Diag:Habilit., canal 4"
+Bit(4) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 596 "Diag:Habilit., canal 5"
+Bit(5) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 597 "Diag:Habilit., canal 6"
+Bit(6) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 598 "Diag:Habilit., canal 7"
+Bit(7) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 599 "Habil. alarma diagnostico"
+Bit(6) 0 0-1
+Prm_Text_Ref = 17
+EndExtUserPrmData
+ExtUserPrmData = 600 "Grupo de antiinterferencias"
+BitArea(2-3) 1 0-3
+Prm_Text_Ref = 76
+EndExtUserPrmData
+ExtUserPrmData = 601 "Bloqueo teach in C0"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 602 "Bloqueo teach in C1"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 603 "Perfil IQ C0"
+BitArea(0-7) 1 000-255
+Prm_Text_Ref = 62
+EndExtUserPrmData
+ExtUserPrmData = 604 "Perfil IQ C1"
+BitArea(0-7) 1 000-255
+Prm_Text_Ref = 62
+EndExtUserPrmData
+ExtUserPrmData = 605 "Perfil IQ C2"
+BitArea(0-7) 1 000-255
+Prm_Text_Ref = 62
+EndExtUserPrmData
+ExtUserPrmData = 606 "Perfil IQ C3"
+BitArea(0-7) 1 000-255
+Prm_Text_Ref = 62
+EndExtUserPrmData
+ExtUserPrmData = 641 "Histeresis de conmutacion C2"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 642 "Funciones de tiempo C2"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 643 "Valor de tiempo C2"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 644 "Tipo de sensor C2"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 74
+EndExtUserPrmData
+ExtUserPrmData = 645 "Bloqueo teach in C2"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 646 "Histeresis de conmutacion C3"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 647 "Funciones de tiempo C3"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 648 "Valor de tiempo C3"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 649 "Tipo de sensor C3"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 74
+EndExtUserPrmData
+ExtUserPrmData = 650 "Bloqueo teach in C3"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 651 "Histeresis de conmutacion C0"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 652 "Funciones de tiempo C0"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 653 "Valor de tiempo C0"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 654 "Tipo de sensor C0"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 74
+EndExtUserPrmData
+ExtUserPrmData = 655 "Bloqueo teach in C0"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+ExtUserPrmData = 661 "Histeresis de conmutacion C1"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 57
+EndExtUserPrmData
+ExtUserPrmData = 662 "Funciones de tiempo C1"
+BitArea(4-6) 0 0-4
+Prm_Text_Ref = 56
+EndExtUserPrmData
+ExtUserPrmData = 663 "Valor de tiempo C1"
+BitArea(0-3) 0 0-10
+Prm_Text_Ref = 58
+EndExtUserPrmData
+ExtUserPrmData = 664 "Tipo de sensor C1"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 74
+EndExtUserPrmData
+ExtUserPrmData = 665 "Bloqueo teach in C1"
+Bit(7) 0 0-1
+Prm_Text_Ref = 54
+EndExtUserPrmData
+;ExtUserPrmData = 671 "--------------------"
+;Bit(5) 1 0-1
+;Prm_Text_Ref = 75
+;EndExtUserPrmData
+ExtUserPrmData = 672 "Grupo de antiinterferencias"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref = 55
+EndExtUserPrmData
+ExtUserPrmData=673 "Med:Tipo/margen GrC0"
+BitArea(0-7) 216 000-235
+Prm_Text_Ref=79
+EndExtUserPrmData
+ExtUserPrmData=674 "Med:Tipo/margen GrC1"
+BitArea(0-7) 216 000-235
+Prm_Text_Ref=79
+EndExtUserPrmData
+ExtUserPrmData=675 "Med:Tipo/margen GrC2"
+BitArea(0-7) 216 000-235
+Prm_Text_Ref=79
+EndExtUserPrmData
+ExtUserPrmData=676 "Med:Tipo/margen GrC3"
+BitArea(0-7) 216 000-235
+Prm_Text_Ref=79
+EndExtUserPrmData
+ExtUserPrmData=677 "Med:Tipo/margen GrC0"
+BitArea(0-7) 10 000-197
+Prm_Text_Ref=78
+EndExtUserPrmData
+ExtUserPrmData=678 "Med:Tipo/margen GrC1"
+BitArea(0-7) 10 000-197
+Prm_Text_Ref=78
+EndExtUserPrmData
+ExtUserPrmData=679 "Med:Tipo/margen GrC2"
+BitArea(0-7) 10 000-197
+Prm_Text_Ref=78
+EndExtUserPrmData
+ExtUserPrmData=680 "Med:Tipo/margen GrC3"
+BitArea(0-7) 10 000-197
+Prm_Text_Ref=78
+EndExtUserPrmData
+ExtUserPrmData=681 "Perfil IQ C0"
+Unsigned8 0xF8 0x00-0xFF
+Prm_Text_Ref=80
+EndExtUserPrmData
+ExtUserPrmData=682 "Valor AFI K0"
+Unsigned8 0x00 0x00-0xFF
+EndExtUserPrmData
+ExtUserPrmData=683 "Tipo de transponder K0"
+Bit(0) 0 0-1
+Prm_Text_Ref=81
+EndExtUserPrmData
+ExtUserPrmData=684 "Perfil IQ K4"
+Unsigned8 0xF8 0x00-0xFF
+Prm_Text_Ref=80
+EndExtUserPrmData
+ExtUserPrmData=685 "Valor AFI K4"
+Unsigned8 0x00 0x00-0xFF
+EndExtUserPrmData
+ExtUserPrmData=686 "Tipo de transponder K4"
+Bit(0) 0 0-1
+Prm_Text_Ref=81
+EndExtUserPrmData
+ExtUserPrmData=687 "Modo"
+BitArea(0-1) 1 1,3
+Prm_Text_Ref=82
+EndExtUserPrmData
+; ============================
+; <Unit-Definition-List>
+; ============================
+GSD_Revision=2
+Vendor_Name="SIEMENS"
+Model_Name="ET 200M (IM153-2)"
+Revision="V1.13"
+Ident_Number=0x801E
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_45.45=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+Implementation_Type="ASPC2"
+Bitmap_Device="IM153_1N"
+Bitmap_SF="IM153_1S"
+; Slave-Specification:
+OrderNumber="6ES7 153-2*A0*-0XB0"
+Auto_Baud_supp=1
+Fail_Safe=1
+Min_Slave_Intervall=1
+Max_Diag_Data_Len=64
+Modul_Offset=1
+Slave_Family=3@ET200M
+Modular_Station=1
+Max_Module=11
+Max_Input_Len=128
+Max_Output_Len=128
+Max_Data_Len=256
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len   = 3                          ;3+(8*21)
+User_Prm_Data       = 0x40,0x60,0x00
+Max_User_Prm_Data_Len=171
+Ext_User_Prm_Data_Const(0)=0x40,0x60,0x00
+Ext_User_Prm_Data_Ref(1)=1
+Ext_User_Prm_Data_Ref(1)=2
+Ext_User_Prm_Data_Ref(2)=3
+Ext_User_Prm_Data_Ref(2)=354
+Ext_User_Prm_Data_Ref(1)=4
+Ext_User_Prm_Data_Ref(1)=5
+Ext_User_Prm_Data_Ref(2)=511
+;<Channel-Diag>
+Channel_Diag(16) = "Error parametrizacion"
+Channel_Diag(17) = "Falta tension sensor o carga"
+Channel_Diag(18) = "Fusible defectuoso"
+Channel_Diag(19) = "Slot no direccionable"
+Channel_Diag(20) = "Error de masa"
+Channel_Diag(21) = "Error canal referencia"
+Channel_Diag(22) = "Alarma de proceso perdida"
+Channel_Diag(23) = "Advertencia de actuador"
+Channel_Diag(24) = "Desconexion de actuador"
+Channel_Diag(25) = "Desconexion de seguridad"
+Channel_Diag(26) = "Error externo"
+Channel_Diag(27) = "Error indefinido"
+; ============================
+; <Module-Definition-List>
+; ============================
+FixPresetModules=1
+Module="Config for Slot1" 0x04,0x00,0x00,0xAD,0xC4
+Preset=1
+EndModule
+Module="Config for Slot2" 0x04,0x00,0x00,0x8B,0x41
+Preset=1
+EndModule
+Module="Config for Slot3" 0x04,0x00,0x00,0x8F,0xC0
+Preset=1
+EndModule
+Module="6ES7 321-7RD00-0AB0        4DE" 0x43,0x00,0x00,0x1F,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=72
+Ext_User_Prm_Data_Ref(5)=73
+Ext_User_Prm_Data_Ref(6)=74
+Ext_User_Prm_Data_Ref(7)=75
+Ext_User_Prm_Data_Ref(8)=76
+Ext_User_Prm_Data_Ref(9)=77
+Ext_User_Prm_Data_Ref(6)=78
+Ext_User_Prm_Data_Ref(7)=79
+Ext_User_Prm_Data_Ref(8)=80
+Ext_User_Prm_Data_Ref(9)=81
+Ext_User_Prm_Data_Ref(15)=82
+Ext_User_Prm_Data_Ref(15)=83
+Ext_User_Prm_Data_Ref(16)=84
+Ext_User_Prm_Data_Ref(16)=85
+Ext_User_Prm_Data_Ref(16)=86
+Ext_User_Prm_Data_Ref(16)=87
+Ext_User_Prm_Data_Ref(16)=88
+Ext_User_Prm_Data_Ref(16)=89
+Ext_User_Prm_Data_Ref(16)=90
+Ext_User_Prm_Data_Ref(16)=91
+EndModule
+Module="6ES7 321-1CF00-0AA0        8DE" 0x43,0x00,0x00,0x9F,0xC1
+EndModule
+Module="6ES7 321-1FF01-0AA0        8DE" 0x43,0x00,0x00,0x9F,0xC1
+EndModule
+Module="6ES7 321-1FF1*-0AA0        8DE" 0x43,0x00,0x00,0x9F,0xC1
+EndModule
+Module="6ES7 321-1BH01-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1BH02-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1EH01-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1BH50-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1CH20-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1CH80-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-1CH0*-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 321-7BH00-0AB0       16DE" 0x43,0x01,0x00,0x1F,0xC2
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=6
+Ext_User_Prm_Data_Ref(5)=7
+Ext_User_Prm_Data_Ref(6)=8
+Ext_User_Prm_Data_Ref(10)=9
+Ext_User_Prm_Data_Ref(15)=10
+Ext_User_Prm_Data_Ref(15)=11
+Ext_User_Prm_Data_Ref(16)=12
+Ext_User_Prm_Data_Ref(16)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(16)=15
+Ext_User_Prm_Data_Ref(16)=16
+Ext_User_Prm_Data_Ref(16)=17
+Ext_User_Prm_Data_Ref(16)=18
+Ext_User_Prm_Data_Ref(16)=19
+Ext_User_Prm_Data_Ref(17)=20
+Ext_User_Prm_Data_Ref(17)=21
+Ext_User_Prm_Data_Ref(17)=22
+Ext_User_Prm_Data_Ref(17)=23
+Ext_User_Prm_Data_Ref(17)=24
+Ext_User_Prm_Data_Ref(17)=25
+Ext_User_Prm_Data_Ref(17)=26
+Ext_User_Prm_Data_Ref(17)=27
+EndModule
+Module="6ES7 321-1BL00-0AA0       32DE" 0x43,0x03,0x00,0x9F,0xC3
+EndModule
+Module="6ES7 321-1EL00-0AA0       32DE" 0x43,0x03,0x00,0x9F,0xC3
+EndModule
+Module="6ES7 322-5RD00-0AB0        4DA" 0x83,0x00,0x00,0x2F,0xC8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=92
+Ext_User_Prm_Data_Ref(6)=93
+Ext_User_Prm_Data_Ref(7)=94
+Ext_User_Prm_Data_Ref(8)=95
+Ext_User_Prm_Data_Ref(9)=96
+Ext_User_Prm_Data_Ref(6)=97
+Ext_User_Prm_Data_Ref(7)=98
+Ext_User_Prm_Data_Ref(8)=99
+Ext_User_Prm_Data_Ref(9)=100
+Ext_User_Prm_Data_Ref(6)=101
+Ext_User_Prm_Data_Ref(7)=102
+Ext_User_Prm_Data_Ref(8)=103
+Ext_User_Prm_Data_Ref(9)=104
+Ext_User_Prm_Data_Ref(17)=105
+Ext_User_Prm_Data_Ref(17)=106
+Ext_User_Prm_Data_Ref(17)=107
+Ext_User_Prm_Data_Ref(18)=108
+Ext_User_Prm_Data_Ref(18)=109
+Ext_User_Prm_Data_Ref(18)=110
+Ext_User_Prm_Data_Ref(18)=111
+EndModule
+Module="6ES7 322-5SD00-0AB0        4DA" 0x83,0x00,0x00,0x2F,0xC8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=92
+Ext_User_Prm_Data_Ref(6)=93
+Ext_User_Prm_Data_Ref(7)=94
+Ext_User_Prm_Data_Ref(8)=95
+Ext_User_Prm_Data_Ref(9)=96
+Ext_User_Prm_Data_Ref(6)=97
+Ext_User_Prm_Data_Ref(7)=98
+Ext_User_Prm_Data_Ref(8)=99
+Ext_User_Prm_Data_Ref(9)=100
+Ext_User_Prm_Data_Ref(6)=101
+Ext_User_Prm_Data_Ref(7)=102
+Ext_User_Prm_Data_Ref(8)=103
+Ext_User_Prm_Data_Ref(9)=104
+Ext_User_Prm_Data_Ref(17)=105
+Ext_User_Prm_Data_Ref(17)=106
+Ext_User_Prm_Data_Ref(17)=107
+Ext_User_Prm_Data_Ref(18)=108
+Ext_User_Prm_Data_Ref(18)=109
+Ext_User_Prm_Data_Ref(18)=110
+Ext_User_Prm_Data_Ref(18)=111
+EndModule
+Module="6ES7 322-1BF01-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1FF01-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1HF01-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1HF**-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1HF20-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1CF00-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-1CF80-0AA0        8DA" 0x83,0x00,0x00,0xAF,0xC8
+EndModule
+Module="6ES7 322-8BF00-0AB0        8DA" 0x83,0x00,0x00,0x2F,0xC8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=28
+Ext_User_Prm_Data_Ref(6)=29
+Ext_User_Prm_Data_Ref(7)=30
+Ext_User_Prm_Data_Ref(8)=31
+Ext_User_Prm_Data_Ref(9)=32
+Ext_User_Prm_Data_Ref(10)=33
+Ext_User_Prm_Data_Ref(11)=34
+Ext_User_Prm_Data_Ref(12)=35
+Ext_User_Prm_Data_Ref(13)=36
+Ext_User_Prm_Data_Ref(6)=37
+Ext_User_Prm_Data_Ref(7)=38
+Ext_User_Prm_Data_Ref(8)=39
+Ext_User_Prm_Data_Ref(9)=40
+Ext_User_Prm_Data_Ref(10)=41
+Ext_User_Prm_Data_Ref(11)=42
+Ext_User_Prm_Data_Ref(12)=43
+Ext_User_Prm_Data_Ref(13)=44
+Ext_User_Prm_Data_Ref(6)=45
+Ext_User_Prm_Data_Ref(7)=46
+Ext_User_Prm_Data_Ref(8)=47
+Ext_User_Prm_Data_Ref(9)=48
+Ext_User_Prm_Data_Ref(10)=49
+Ext_User_Prm_Data_Ref(11)=50
+Ext_User_Prm_Data_Ref(12)=51
+Ext_User_Prm_Data_Ref(13)=52
+Ext_User_Prm_Data_Ref(6)=53
+Ext_User_Prm_Data_Ref(7)=54
+Ext_User_Prm_Data_Ref(8)=55
+Ext_User_Prm_Data_Ref(9)=56
+Ext_User_Prm_Data_Ref(10)=57
+Ext_User_Prm_Data_Ref(11)=58
+Ext_User_Prm_Data_Ref(12)=59
+Ext_User_Prm_Data_Ref(13)=60
+Ext_User_Prm_Data_Ref(17)=492
+Ext_User_Prm_Data_Ref(17)=63
+Ext_User_Prm_Data_Ref(18)=64
+Ext_User_Prm_Data_Ref(18)=65
+Ext_User_Prm_Data_Ref(18)=66
+Ext_User_Prm_Data_Ref(18)=67
+Ext_User_Prm_Data_Ref(18)=68
+Ext_User_Prm_Data_Ref(18)=69
+Ext_User_Prm_Data_Ref(18)=70
+Ext_User_Prm_Data_Ref(18)=71
+EndModule
+Module="6ES7 322-1BH01-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 322-1EH01-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 322-1HH00-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 322-1HH0*-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 322-1BL00-0AA0       32DA" 0x83,0x03,0x00,0xAF,0xD8
+EndModule
+Module="6ES7 322-1EL00-0AA0       32DA" 0x83,0x03,0x00,0xAF,0xD8
+EndModule
+Module="6ES7 322-1FL00-0AA0       32DA" 0x83,0x03,0x00,0xAF,0xD8
+EndModule
+Module="6ES7 323-1BH0*-0AA0        8DX" 0xC2,0x00,0x00,0xBF,0xC9
+EndModule
+Module="6ES7 323-1BL00-0AA0       16DX" 0xC2,0x01,0x01,0xBF,0xD2
+EndModule
+Module="6ES7 327-1BH00-0AB0    8DE/8DX" 0xC2,0x01,0x01,0x3F,0xD2
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(20)=544
+Ext_User_Prm_Data_Ref(20)=545
+Ext_User_Prm_Data_Ref(20)=546
+Ext_User_Prm_Data_Ref(20)=547
+Ext_User_Prm_Data_Ref(20)=548
+Ext_User_Prm_Data_Ref(20)=549
+Ext_User_Prm_Data_Ref(20)=550
+Ext_User_Prm_Data_Ref(20)=551
+EndModule
+Module="6ES7 331-7KB01-0AB0        2AE" 0x43,0x41,0x00,0x15,0xC3
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x02,0x19,\
+0x00,0x00,0x00,0x7F,0xFF,0x80,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=165
+Ext_User_Prm_Data_Ref(5)=166
+Ext_User_Prm_Data_Ref(6)=167
+Ext_User_Prm_Data_Ref(7)=168
+Ext_User_Prm_Data_Ref(7)=169
+Ext_User_Prm_Data_Ref(8)=170
+Ext_User_Prm_Data_Ref(9)=171
+Ext_User_Prm_Data_Ref(13)=172
+Ext_User_Prm_Data_Ref(15)=173
+EndModule
+Module="6ES7 331-7KB02-0AB0        2AE" 0x43,0x41,0x00,0x15,0xC3
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x02,0x19,\
+0x00,0x00,0x00,0x7F,0xFF,0x80,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=165
+Ext_User_Prm_Data_Ref(5)=166
+Ext_User_Prm_Data_Ref(6)=167
+Ext_User_Prm_Data_Ref(7)=168
+Ext_User_Prm_Data_Ref(7)=169
+Ext_User_Prm_Data_Ref(8)=170
+Ext_User_Prm_Data_Ref(9)=171
+Ext_User_Prm_Data_Ref(13)=172
+Ext_User_Prm_Data_Ref(15)=173
+EndModule
+Module="6ES7 331-7RD00-0AB0        4AE" 0x43,0x43,0x00,0x15,0xC4
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x23,\
+0x23,0x23,0x23,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=112
+Ext_User_Prm_Data_Ref(5)=113
+Ext_User_Prm_Data_Ref(5)=114
+Ext_User_Prm_Data_Ref(5)=115
+Ext_User_Prm_Data_Ref(5)=116
+Ext_User_Prm_Data_Ref(6)=117
+Ext_User_Prm_Data_Ref(6)=118
+Ext_User_Prm_Data_Ref(6)=119
+Ext_User_Prm_Data_Ref(6)=120
+Ext_User_Prm_Data_Ref(7)=121
+Ext_User_Prm_Data_Ref(7)=122
+Ext_User_Prm_Data_Ref(7)=123
+Ext_User_Prm_Data_Ref(8)=124
+Ext_User_Prm_Data_Ref(8)=125
+Ext_User_Prm_Data_Ref(8)=126
+Ext_User_Prm_Data_Ref(8)=127
+Ext_User_Prm_Data_Ref(9)=128
+Ext_User_Prm_Data_Ref(10)=129
+Ext_User_Prm_Data_Ref(11)=130
+Ext_User_Prm_Data_Ref(12)=131
+Ext_User_Prm_Data_Ref(13)=132
+Ext_User_Prm_Data_Ref(15)=133
+Ext_User_Prm_Data_Ref(17)=134
+Ext_User_Prm_Data_Ref(19)=135
+EndModule
+Module="6ES7 331-7SF00-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x14,\
+0x14,0x14,0x14,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=136
+Ext_User_Prm_Data_Ref(5)=137
+Ext_User_Prm_Data_Ref(5)=138
+Ext_User_Prm_Data_Ref(5)=139
+Ext_User_Prm_Data_Ref(5)=140
+Ext_User_Prm_Data_Ref(6)=141
+Ext_User_Prm_Data_Ref(6)=142
+Ext_User_Prm_Data_Ref(6)=143
+Ext_User_Prm_Data_Ref(6)=144
+Ext_User_Prm_Data_Ref(7)=145
+Ext_User_Prm_Data_Ref(7)=146
+Ext_User_Prm_Data_Ref(7)=147
+Ext_User_Prm_Data_Ref(8)=148
+Ext_User_Prm_Data_Ref(8)=149
+Ext_User_Prm_Data_Ref(8)=150
+Ext_User_Prm_Data_Ref(8)=151
+Ext_User_Prm_Data_Ref(9)=152
+Ext_User_Prm_Data_Ref(10)=153
+Ext_User_Prm_Data_Ref(11)=154
+Ext_User_Prm_Data_Ref(12)=155
+Ext_User_Prm_Data_Ref(13)=156
+Ext_User_Prm_Data_Ref(15)=157
+Ext_User_Prm_Data_Ref(17)=158
+Ext_User_Prm_Data_Ref(19)=159
+EndModule
+Module="6ES7 331-7KF01-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x19,\
+0x19,0x19,0x19,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=174
+Ext_User_Prm_Data_Ref(5)=175
+Ext_User_Prm_Data_Ref(5)=176
+Ext_User_Prm_Data_Ref(5)=177
+Ext_User_Prm_Data_Ref(5)=178
+Ext_User_Prm_Data_Ref(6)=179
+Ext_User_Prm_Data_Ref(6)=180
+Ext_User_Prm_Data_Ref(6)=181
+Ext_User_Prm_Data_Ref(6)=182
+Ext_User_Prm_Data_Ref(7)=183
+Ext_User_Prm_Data_Ref(7)=184
+Ext_User_Prm_Data_Ref(8)=185
+Ext_User_Prm_Data_Ref(8)=186
+Ext_User_Prm_Data_Ref(8)=187
+Ext_User_Prm_Data_Ref(8)=188
+Ext_User_Prm_Data_Ref(9)=189
+Ext_User_Prm_Data_Ref(10)=190
+Ext_User_Prm_Data_Ref(11)=191
+Ext_User_Prm_Data_Ref(12)=192
+Ext_User_Prm_Data_Ref(13)=193
+Ext_User_Prm_Data_Ref(15)=194
+Ext_User_Prm_Data_Ref(17)=195
+Ext_User_Prm_Data_Ref(19)=196
+EndModule
+Module="6ES7 331-7KF02-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x19,\
+0x19,0x19,0x19,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=174
+Ext_User_Prm_Data_Ref(5)=175
+Ext_User_Prm_Data_Ref(5)=176
+Ext_User_Prm_Data_Ref(5)=177
+Ext_User_Prm_Data_Ref(5)=178
+Ext_User_Prm_Data_Ref(6)=179
+Ext_User_Prm_Data_Ref(6)=180
+Ext_User_Prm_Data_Ref(6)=181
+Ext_User_Prm_Data_Ref(6)=182
+Ext_User_Prm_Data_Ref(7)=183
+Ext_User_Prm_Data_Ref(7)=184
+Ext_User_Prm_Data_Ref(8)=185
+Ext_User_Prm_Data_Ref(8)=186
+Ext_User_Prm_Data_Ref(8)=187
+Ext_User_Prm_Data_Ref(8)=188
+Ext_User_Prm_Data_Ref(9)=189
+Ext_User_Prm_Data_Ref(10)=190
+Ext_User_Prm_Data_Ref(11)=191
+Ext_User_Prm_Data_Ref(12)=192
+Ext_User_Prm_Data_Ref(13)=193
+Ext_User_Prm_Data_Ref(15)=194
+Ext_User_Prm_Data_Ref(17)=195
+Ext_User_Prm_Data_Ref(19)=196
+EndModule
+Module="6ES7 331-7NF00-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x19,\
+0x19,0x19,0x19,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(6)=329
+Ext_User_Prm_Data_Ref(6)=330
+Ext_User_Prm_Data_Ref(6)=331
+Ext_User_Prm_Data_Ref(6)=332
+Ext_User_Prm_Data_Ref(7)=333
+Ext_User_Prm_Data_Ref(7)=334
+Ext_User_Prm_Data_Ref(8)=335
+Ext_User_Prm_Data_Ref(8)=336
+Ext_User_Prm_Data_Ref(8)=337
+Ext_User_Prm_Data_Ref(8)=338
+Ext_User_Prm_Data_Ref(9)=339
+Ext_User_Prm_Data_Ref(10)=340
+Ext_User_Prm_Data_Ref(11)=341
+Ext_User_Prm_Data_Ref(12)=342
+Ext_User_Prm_Data_Ref(13)=343
+Ext_User_Prm_Data_Ref(15)=344
+Ext_User_Prm_Data_Ref(17)=345
+Ext_User_Prm_Data_Ref(19)=346
+EndModule
+Module="6ES7 331-7TB00-0AB0   2AE_HART" 0xC2,0x47,0x47,0x3C,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x0A,0x7C,\
+0x7C,0x00,0x00,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=285
+Ext_User_Prm_Data_Ref(5)=286
+Ext_User_Prm_Data_Ref(5)=287
+Ext_User_Prm_Data_Ref(6)=288
+Ext_User_Prm_Data_Ref(6)=289
+Ext_User_Prm_Data_Ref(7)=290
+Ext_User_Prm_Data_Ref(7)=291
+Ext_User_Prm_Data_Ref(7)=292
+Ext_User_Prm_Data_Ref(8)=293
+Ext_User_Prm_Data_Ref(8)=294
+Ext_User_Prm_Data_Ref(9)=295
+Ext_User_Prm_Data_Ref(10)=296
+Ext_User_Prm_Data_Ref(13)=297
+Ext_User_Prm_Data_Ref(15)=298
+Ext_User_Prm_Data_Ref(17)=299
+Ext_User_Prm_Data_Ref(19)=300
+EndModule
+Module="6ES7 332-5HB01-0AB0        2AA" 0x83,0x41,0x00,0x25,0xD8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=197
+Ext_User_Prm_Data_Ref(5)=198
+Ext_User_Prm_Data_Ref(5)=199
+Ext_User_Prm_Data_Ref(7)=200
+Ext_User_Prm_Data_Ref(8)=201
+Ext_User_Prm_Data_Ref(8)=202
+Ext_User_Prm_Data_Ref(9)=203
+Ext_User_Prm_Data_Ref(10)=204
+Ext_User_Prm_Data_Ref(13)=205
+Ext_User_Prm_Data_Ref(15)=206
+EndModule
+Module="6ES7 332-5HD01-0AB0        4AA" 0x83,0x43,0x00,0x25,0xE0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=207
+Ext_User_Prm_Data_Ref(5)=208
+Ext_User_Prm_Data_Ref(5)=209
+Ext_User_Prm_Data_Ref(5)=210
+Ext_User_Prm_Data_Ref(5)=211
+Ext_User_Prm_Data_Ref(7)=212
+Ext_User_Prm_Data_Ref(8)=213
+Ext_User_Prm_Data_Ref(8)=214
+Ext_User_Prm_Data_Ref(8)=215
+Ext_User_Prm_Data_Ref(8)=216
+Ext_User_Prm_Data_Ref(9)=217
+Ext_User_Prm_Data_Ref(10)=218
+Ext_User_Prm_Data_Ref(11)=219
+Ext_User_Prm_Data_Ref(12)=220
+Ext_User_Prm_Data_Ref(13)=221
+Ext_User_Prm_Data_Ref(15)=222
+Ext_User_Prm_Data_Ref(17)=223
+Ext_User_Prm_Data_Ref(19)=224
+EndModule
+Module="6ES7 332-7ND00-0AB0        4AA" 0x83,0x43,0x00,0x25,0xE0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=207
+Ext_User_Prm_Data_Ref(5)=208
+Ext_User_Prm_Data_Ref(5)=209
+Ext_User_Prm_Data_Ref(5)=210
+Ext_User_Prm_Data_Ref(5)=211
+Ext_User_Prm_Data_Ref(7)=212
+Ext_User_Prm_Data_Ref(8)=213
+Ext_User_Prm_Data_Ref(8)=214
+Ext_User_Prm_Data_Ref(8)=215
+Ext_User_Prm_Data_Ref(8)=216
+Ext_User_Prm_Data_Ref(9)=217
+Ext_User_Prm_Data_Ref(10)=218
+Ext_User_Prm_Data_Ref(11)=219
+Ext_User_Prm_Data_Ref(12)=220
+Ext_User_Prm_Data_Ref(13)=221
+Ext_User_Prm_Data_Ref(15)=222
+Ext_User_Prm_Data_Ref(17)=223
+Ext_User_Prm_Data_Ref(19)=224
+EndModule
+Module="6ES7 332-7ND01-0AB0        4AA" 0x83,0x43,0x00,0x25,0xE0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=207
+Ext_User_Prm_Data_Ref(5)=208
+Ext_User_Prm_Data_Ref(5)=209
+Ext_User_Prm_Data_Ref(5)=210
+Ext_User_Prm_Data_Ref(5)=211
+Ext_User_Prm_Data_Ref(7)=212
+Ext_User_Prm_Data_Ref(8)=213
+Ext_User_Prm_Data_Ref(8)=214
+Ext_User_Prm_Data_Ref(8)=215
+Ext_User_Prm_Data_Ref(8)=216
+Ext_User_Prm_Data_Ref(9)=217
+Ext_User_Prm_Data_Ref(10)=218
+Ext_User_Prm_Data_Ref(11)=219
+Ext_User_Prm_Data_Ref(12)=220
+Ext_User_Prm_Data_Ref(13)=221
+Ext_User_Prm_Data_Ref(15)=222
+Ext_User_Prm_Data_Ref(17)=223
+Ext_User_Prm_Data_Ref(19)=224
+EndModule
+Module="6ES7 332-7ND02-0AB0        4AA" 0x83,0x43,0x00,0x25,0xE0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=207
+Ext_User_Prm_Data_Ref(5)=208
+Ext_User_Prm_Data_Ref(5)=209
+Ext_User_Prm_Data_Ref(5)=210
+Ext_User_Prm_Data_Ref(5)=211
+Ext_User_Prm_Data_Ref(7)=212
+Ext_User_Prm_Data_Ref(8)=213
+Ext_User_Prm_Data_Ref(8)=214
+Ext_User_Prm_Data_Ref(8)=215
+Ext_User_Prm_Data_Ref(8)=216
+Ext_User_Prm_Data_Ref(9)=217
+Ext_User_Prm_Data_Ref(10)=218
+Ext_User_Prm_Data_Ref(11)=219
+Ext_User_Prm_Data_Ref(12)=220
+Ext_User_Prm_Data_Ref(13)=221
+Ext_User_Prm_Data_Ref(15)=222
+Ext_User_Prm_Data_Ref(17)=223
+Ext_User_Prm_Data_Ref(19)=224
+EndModule
+Module="6ES7 332-5RD00-0AB0        4AA" 0x83,0x43,0x00,0x25,0xE0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x23,\
+0x23,0x23,0x23,0xE5,0x00,0xE5,0x00,0xE5,0x00,0xE5,0x00
+Ext_User_Prm_Data_Ref(2)=228
+Ext_User_Prm_Data_Ref(5)=229
+Ext_User_Prm_Data_Ref(5)=230
+Ext_User_Prm_Data_Ref(5)=231
+Ext_User_Prm_Data_Ref(5)=232
+Ext_User_Prm_Data_Ref(7)=233
+Ext_User_Prm_Data_Ref(8)=234
+Ext_User_Prm_Data_Ref(8)=235
+Ext_User_Prm_Data_Ref(8)=236
+Ext_User_Prm_Data_Ref(8)=237
+Ext_User_Prm_Data_Ref(9)=238
+Ext_User_Prm_Data_Ref(10)=239
+Ext_User_Prm_Data_Ref(11)=240
+Ext_User_Prm_Data_Ref(12)=241
+Ext_User_Prm_Data_Ref(13)=242
+Ext_User_Prm_Data_Ref(15)=243
+Ext_User_Prm_Data_Ref(17)=244
+Ext_User_Prm_Data_Ref(19)=245
+EndModule
+Module="6ES7 332-5TB00-0AB0   2AA_HART" 0xC2,0x47,0x47,0x4C,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x7C,\
+0x7C,0x00,0x00,0xE5,0x00,0xE5,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=285
+Ext_User_Prm_Data_Ref(5)=286
+Ext_User_Prm_Data_Ref(5)=287
+Ext_User_Prm_Data_Ref(7)=291
+Ext_User_Prm_Data_Ref(8)=201
+Ext_User_Prm_Data_Ref(8)=202
+Ext_User_Prm_Data_Ref(9)=352
+Ext_User_Prm_Data_Ref(10)=353
+Ext_User_Prm_Data_Ref(13)=350
+Ext_User_Prm_Data_Ref(15)=351
+EndModule
+Module="6ES7 334-0CE01-0AA0    4AE/2AA" 0xC2,0x41,0x43,0xC5,0xDC
+EndModule
+Module="6ES7 334-0KE00-0AB0    4AE/2AA" 0xC2,0x41,0x43,0x45,0xDC
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x01,0x10,0x00,0x00,0x00,0x55,0x80,\
+0x80,0x80,0x80,0x18,0x18,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=246
+Ext_User_Prm_Data_Ref(8)=247
+Ext_User_Prm_Data_Ref(8)=248
+Ext_User_Prm_Data_Ref(8)=249
+Ext_User_Prm_Data_Ref(8)=250
+Ext_User_Prm_Data_Ref(9)=251
+Ext_User_Prm_Data_Ref(10)=252
+Ext_User_Prm_Data_Ref(11)=253
+Ext_User_Prm_Data_Ref(12)=254
+Ext_User_Prm_Data_Ref(13)=255
+Ext_User_Prm_Data_Ref(14)=256
+EndModule
+Module="6ES7 335-7HG01-0AB0    4AE/4AA" 0xC2,0x43,0x47,0x55,0xE5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x01,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x19,0x19,0x19,0x19,0x01,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=257
+Ext_User_Prm_Data_Ref(5)=258
+Ext_User_Prm_Data_Ref(5)=259
+Ext_User_Prm_Data_Ref(5)=260
+Ext_User_Prm_Data_Ref(5)=261
+Ext_User_Prm_Data_Ref(5)=262
+Ext_User_Prm_Data_Ref(5)=263
+Ext_User_Prm_Data_Ref(5)=264
+Ext_User_Prm_Data_Ref(5)=265
+Ext_User_Prm_Data_Ref(7)=266
+Ext_User_Prm_Data_Ref(7)=267
+Ext_User_Prm_Data_Ref(7)=268
+Ext_User_Prm_Data_Ref(7)=269
+Ext_User_Prm_Data_Ref(7)=270
+Ext_User_Prm_Data_Ref(7)=271
+Ext_User_Prm_Data_Ref(9)=272
+Ext_User_Prm_Data_Ref(10)=273
+Ext_User_Prm_Data_Ref(11)=274
+Ext_User_Prm_Data_Ref(12)=275
+Ext_User_Prm_Data_Ref(13)=276
+Ext_User_Prm_Data_Ref(14)=277
+Ext_User_Prm_Data_Ref(15)=278
+Ext_User_Prm_Data_Ref(16)=279
+Ext_User_Prm_Data_Ref(17)=280
+Ext_User_Prm_Data_Ref(19)=281
+Ext_User_Prm_Data_Ref(19)=282
+Ext_User_Prm_Data_Ref(19)=283
+Ext_User_Prm_Data_Ref(19)=284
+EndModule
+Module="6ES7 338-4BC00-0AB0  POS-INPUT" 0xC2,0x00,0x8F,0x05,0xCD
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x00,0x08,0x00,0x01,0x00,0x00,0x00,\
+0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=301
+Ext_User_Prm_Data_Ref(5)=302
+Ext_User_Prm_Data_Ref(7)=303
+Ext_User_Prm_Data_Ref(7)=304
+Ext_User_Prm_Data_Ref(7)=305
+Ext_User_Prm_Data_Ref(7)=306
+Ext_User_Prm_Data_Ref(8)=307
+Ext_User_Prm_Data_Ref(8)=308
+Ext_User_Prm_Data_Ref(8)=309
+Ext_User_Prm_Data_Ref(9)=310
+Ext_User_Prm_Data_Ref(9)=311
+Ext_User_Prm_Data_Ref(9)=312
+Ext_User_Prm_Data_Ref(9)=313
+Ext_User_Prm_Data_Ref(10)=314
+Ext_User_Prm_Data_Ref(10)=315
+Ext_User_Prm_Data_Ref(10)=316
+Ext_User_Prm_Data_Ref(11)=317
+Ext_User_Prm_Data_Ref(11)=318
+Ext_User_Prm_Data_Ref(11)=319
+Ext_User_Prm_Data_Ref(11)=320
+Ext_User_Prm_Data_Ref(12)=321
+Ext_User_Prm_Data_Ref(12)=322
+Ext_User_Prm_Data_Ref(12)=323
+EndModule
+Module="6ES7 338-4BC01-0AB0  POS-INPUT" 0xC2,0x00,0x8F,0x05,0xCD
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x01,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=301
+Ext_User_Prm_Data_Ref(5)=302
+Ext_User_Prm_Data_Ref(6)=687
+Ext_User_Prm_Data_Ref(7)=303
+Ext_User_Prm_Data_Ref(7)=304
+Ext_User_Prm_Data_Ref(7)=305
+Ext_User_Prm_Data_Ref(7)=306
+Ext_User_Prm_Data_Ref(8)=307
+Ext_User_Prm_Data_Ref(8)=308
+Ext_User_Prm_Data_Ref(8)=309
+Ext_User_Prm_Data_Ref(9)=310
+Ext_User_Prm_Data_Ref(9)=311
+Ext_User_Prm_Data_Ref(9)=312
+Ext_User_Prm_Data_Ref(9)=313
+Ext_User_Prm_Data_Ref(10)=314
+Ext_User_Prm_Data_Ref(10)=315
+Ext_User_Prm_Data_Ref(10)=316
+Ext_User_Prm_Data_Ref(11)=317
+Ext_User_Prm_Data_Ref(11)=318
+Ext_User_Prm_Data_Ref(11)=319
+Ext_User_Prm_Data_Ref(11)=320
+Ext_User_Prm_Data_Ref(12)=321
+Ext_User_Prm_Data_Ref(12)=322
+Ext_User_Prm_Data_Ref(12)=323
+EndModule
+Module="6ES7 370-0AA01-0AA0      DUMMY" 0x04,0x00,0x00,0x8F,0xC0
+EndModule
+Module="7MH4553-1AA**        SIWAREX_M" 0xC2,0x8F,0x8F,0x08,0xC3
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x01,0x10,0x01,0x00,0x00,0x00,0x01,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=160
+Ext_User_Prm_Data_Ref(6)=161
+EndModule
+Module="7MH4601-1*A01        SIWAREX_U" 0xC2,0x8F,0x8F,0x08,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x01,0x10,0x01,0x00,0x00,0x00,0x01,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=225
+Ext_User_Prm_Data_Ref(6)=226
+Ext_User_Prm_Data_Ref(6)=227
+EndModule
+Module="6GT2002-0FA00           ASM470" 0xC2,0x47,0x47,0x85,0xED
+EndModule
+Module="6AT1735-0AA00-0AA0       CM_35" 0xC2,0x47,0x47,0x05,0xED
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x03,0x00,0x00,0x03,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=162
+Ext_User_Prm_Data_Ref(5)=163
+Ext_User_Prm_Data_Ref(8)=164
+EndModule
+Module="6AT1735-0AA01-0AA0       CM_35" 0xC2,0x47,0x47,0x05,0xED
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x03,0x00,0x00,0x03,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=347
+Ext_User_Prm_Data_Ref(5)=348
+Ext_User_Prm_Data_Ref(8)=349
+EndModule
+Module="6GK7 342-2AH00-0XA0    CP342-2" 0xC2,0x0F,0x0F,0xBC,0xC3
+EndModule
+Module="6GK7 343-2AH00-0XA0    CP343-2" 0xC2,0x0F,0x0F,0xBC,0xC3
+EndModule
+Module="6GK7 343-2AH10-0XA0   CP343-2P" 0xC2,0x0F,0x0F,0x3C,0xC3
+EndModule
+Module="6ES7 331-7NF10-0AB0        8AE" 0x43,0x47,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x81,0x08,0x00,0x00,0xFF,0x00,\
+0x19,0x19,0x19,0x19
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(5)=389
+Ext_User_Prm_Data_Ref(5)=390
+Ext_User_Prm_Data_Ref(5)=391
+Ext_User_Prm_Data_Ref(5)=392
+Ext_User_Prm_Data_Ref(6)=334
+Ext_User_Prm_Data_Ref(6)=393
+Ext_User_Prm_Data_Ref(7)=394
+Ext_User_Prm_Data_Ref(7)=395
+Ext_User_Prm_Data_Ref(7)=396
+Ext_User_Prm_Data_Ref(7)=397
+Ext_User_Prm_Data_Ref(8)=398
+Ext_User_Prm_Data_Ref(8)=399
+Ext_User_Prm_Data_Ref(8)=400
+Ext_User_Prm_Data_Ref(8)=401
+Ext_User_Prm_Data_Ref(9)=339
+Ext_User_Prm_Data_Ref(10)=340
+Ext_User_Prm_Data_Ref(11)=341
+Ext_User_Prm_Data_Ref(12)=342
+EndModule
+Module="6ES7 331-7PF00-0AB0        RTD" 0x43,0x47,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x81,0x08,0x00,0x00,0xFF,0x00,\
+0x0A,0x0A,0x0A,0x0A
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(5)=389
+Ext_User_Prm_Data_Ref(5)=390
+Ext_User_Prm_Data_Ref(5)=391
+Ext_User_Prm_Data_Ref(5)=392
+Ext_User_Prm_Data_Ref(6)=334
+Ext_User_Prm_Data_Ref(6)=415
+Ext_User_Prm_Data_Ref(6)=402
+Ext_User_Prm_Data_Ref(7)=394
+Ext_User_Prm_Data_Ref(7)=395
+Ext_User_Prm_Data_Ref(7)=396
+Ext_User_Prm_Data_Ref(7)=397
+Ext_User_Prm_Data_Ref(8)=398
+Ext_User_Prm_Data_Ref(8)=399
+Ext_User_Prm_Data_Ref(8)=400
+Ext_User_Prm_Data_Ref(8)=401
+Ext_User_Prm_Data_Ref(9)=407
+Ext_User_Prm_Data_Ref(10)=408
+Ext_User_Prm_Data_Ref(11)=409
+Ext_User_Prm_Data_Ref(12)=410
+EndModule
+Module="6ES7 331-7PF01-0AB0        RTD" 0x43,0x47,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x81,0x08,0x00,0x00,0xFF,0x00,\
+0x0A,0x0A,0x0A,0x0A
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(5)=389
+Ext_User_Prm_Data_Ref(5)=390
+Ext_User_Prm_Data_Ref(5)=391
+Ext_User_Prm_Data_Ref(5)=392
+Ext_User_Prm_Data_Ref(6)=334
+Ext_User_Prm_Data_Ref(6)=415
+Ext_User_Prm_Data_Ref(6)=402
+Ext_User_Prm_Data_Ref(7)=394
+Ext_User_Prm_Data_Ref(7)=395
+Ext_User_Prm_Data_Ref(7)=396
+Ext_User_Prm_Data_Ref(7)=397
+Ext_User_Prm_Data_Ref(8)=398
+Ext_User_Prm_Data_Ref(8)=399
+Ext_User_Prm_Data_Ref(8)=400
+Ext_User_Prm_Data_Ref(8)=401
+Ext_User_Prm_Data_Ref(9)=677
+Ext_User_Prm_Data_Ref(10)=678
+Ext_User_Prm_Data_Ref(11)=679
+Ext_User_Prm_Data_Ref(12)=680
+EndModule
+Module="6ES7 331-7PF10-0AB0         TC" 0x43,0x47,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x81,0x08,0x00,0x00,0xFF,0x00,\
+0xD8,0xD8,0xD8,0xD8
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(5)=389
+Ext_User_Prm_Data_Ref(5)=390
+Ext_User_Prm_Data_Ref(5)=391
+Ext_User_Prm_Data_Ref(5)=392
+Ext_User_Prm_Data_Ref(6)=334
+Ext_User_Prm_Data_Ref(6)=416
+Ext_User_Prm_Data_Ref(6)=402
+Ext_User_Prm_Data_Ref(7)=394
+Ext_User_Prm_Data_Ref(7)=395
+Ext_User_Prm_Data_Ref(7)=396
+Ext_User_Prm_Data_Ref(7)=397
+Ext_User_Prm_Data_Ref(8)=398
+Ext_User_Prm_Data_Ref(8)=399
+Ext_User_Prm_Data_Ref(8)=400
+Ext_User_Prm_Data_Ref(8)=401
+Ext_User_Prm_Data_Ref(9)=403
+Ext_User_Prm_Data_Ref(10)=404
+Ext_User_Prm_Data_Ref(11)=405
+Ext_User_Prm_Data_Ref(12)=406
+Ext_User_Prm_Data_Ref(6)=411
+Ext_User_Prm_Data_Ref(6)=412
+Ext_User_Prm_Data_Ref(6)=413
+Ext_User_Prm_Data_Ref(6)=414
+EndModule
+Module="6ES7 331-7PF11-0AB0         TC" 0x43,0x47,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=13
+Ext_User_Prm_Data_Const(0)=0x0D,0x5F,0x04,0x81,0x08,0x00,0x00,0xFF,0x00,\
+0xD8,0xD8,0xD8,0xD8
+Ext_User_Prm_Data_Ref(2)=324
+Ext_User_Prm_Data_Ref(5)=325
+Ext_User_Prm_Data_Ref(5)=326
+Ext_User_Prm_Data_Ref(5)=327
+Ext_User_Prm_Data_Ref(5)=328
+Ext_User_Prm_Data_Ref(5)=389
+Ext_User_Prm_Data_Ref(5)=390
+Ext_User_Prm_Data_Ref(5)=391
+Ext_User_Prm_Data_Ref(5)=392
+Ext_User_Prm_Data_Ref(6)=334
+Ext_User_Prm_Data_Ref(6)=416
+Ext_User_Prm_Data_Ref(6)=402
+Ext_User_Prm_Data_Ref(7)=394
+Ext_User_Prm_Data_Ref(7)=395
+Ext_User_Prm_Data_Ref(7)=396
+Ext_User_Prm_Data_Ref(7)=397
+Ext_User_Prm_Data_Ref(8)=398
+Ext_User_Prm_Data_Ref(8)=399
+Ext_User_Prm_Data_Ref(8)=400
+Ext_User_Prm_Data_Ref(8)=401
+Ext_User_Prm_Data_Ref(9)=673
+Ext_User_Prm_Data_Ref(10)=674
+Ext_User_Prm_Data_Ref(11)=675
+Ext_User_Prm_Data_Ref(12)=676
+Ext_User_Prm_Data_Ref(6)=411
+Ext_User_Prm_Data_Ref(6)=412
+Ext_User_Prm_Data_Ref(6)=413
+Ext_User_Prm_Data_Ref(6)=414
+EndModule
+Module="6ES7 321-1FH00-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 322-1FH00-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 321-7TH00-0AB0 16DE_NAMUR" 0x43,0x83,0x00,0x08,0xC1
+EndModule
+Module="6ES7 322-8BH00-0AB0   16DA_24V" 0x83,0x01,0x00,0x08,0xC1
+Ext_Module_Prm_Data_Len=09
+Ext_User_Prm_Data_Const(0)=0x09,0x5F,0x04,0x01,0x04,0x02,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=28
+Ext_User_Prm_Data_Ref(5)=417
+Ext_User_Prm_Data_Ref(6)=64
+Ext_User_Prm_Data_Ref(6)=65
+Ext_User_Prm_Data_Ref(6)=66
+Ext_User_Prm_Data_Ref(6)=67
+Ext_User_Prm_Data_Ref(6)=68
+Ext_User_Prm_Data_Ref(6)=69
+Ext_User_Prm_Data_Ref(6)=70
+Ext_User_Prm_Data_Ref(6)=71
+Ext_User_Prm_Data_Ref(7)=418
+Ext_User_Prm_Data_Ref(7)=419
+Ext_User_Prm_Data_Ref(7)=420
+Ext_User_Prm_Data_Ref(7)=421
+Ext_User_Prm_Data_Ref(7)=422
+Ext_User_Prm_Data_Ref(7)=423
+Ext_User_Prm_Data_Ref(7)=424
+Ext_User_Prm_Data_Ref(7)=425
+EndModule
+Module="6ES7 352-5AH00-0AE0    FM352-5" 0xC2,0x47,0x47,0x08,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x81,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01
+Ext_User_Prm_Data_Ref(2)=426
+Ext_User_Prm_Data_Ref(5)=427
+Ext_User_Prm_Data_Ref(6)=428
+Ext_User_Prm_Data_Ref(6)=429
+Ext_User_Prm_Data_Ref(7)=430
+Ext_User_Prm_Data_Ref(13)=431
+Ext_User_Prm_Data_Ref(13)=432
+Ext_User_Prm_Data_Ref(13)=433
+Ext_User_Prm_Data_Ref(13)=434
+Ext_User_Prm_Data_Ref(14)=435
+Ext_User_Prm_Data_Ref(14)=436
+Ext_User_Prm_Data_Ref(15)=437
+Ext_User_Prm_Data_Ref(15)=438
+Ext_User_Prm_Data_Ref(15)=439
+Ext_User_Prm_Data_Ref(15)=440
+Ext_User_Prm_Data_Ref(15)=441
+Ext_User_Prm_Data_Ref(15)=442
+Ext_User_Prm_Data_Ref(15)=443
+Ext_User_Prm_Data_Ref(15)=444
+Ext_User_Prm_Data_Ref(16)=445
+Ext_User_Prm_Data_Ref(17)=446
+Ext_User_Prm_Data_Ref(17)=447
+Ext_User_Prm_Data_Ref(17)=448
+Ext_User_Prm_Data_Ref(17)=449
+Ext_User_Prm_Data_Ref(17)=450
+Ext_User_Prm_Data_Ref(17)=451
+Ext_User_Prm_Data_Ref(17)=452
+Ext_User_Prm_Data_Ref(17)=453
+EndModule
+Module="6ES7 352-5AH10-0AE0    FM352-5" 0xC2,0x47,0x47,0x08,0xC1
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x81,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01
+Ext_User_Prm_Data_Ref(2)=426
+Ext_User_Prm_Data_Ref(5)=427
+Ext_User_Prm_Data_Ref(6)=428
+Ext_User_Prm_Data_Ref(6)=429
+Ext_User_Prm_Data_Ref(7)=430
+Ext_User_Prm_Data_Ref(13)=431
+Ext_User_Prm_Data_Ref(13)=432
+Ext_User_Prm_Data_Ref(13)=433
+Ext_User_Prm_Data_Ref(13)=434
+Ext_User_Prm_Data_Ref(14)=435
+Ext_User_Prm_Data_Ref(14)=436
+Ext_User_Prm_Data_Ref(15)=437
+Ext_User_Prm_Data_Ref(15)=438
+Ext_User_Prm_Data_Ref(15)=439
+Ext_User_Prm_Data_Ref(15)=440
+Ext_User_Prm_Data_Ref(15)=441
+Ext_User_Prm_Data_Ref(15)=442
+Ext_User_Prm_Data_Ref(15)=443
+Ext_User_Prm_Data_Ref(15)=444
+Ext_User_Prm_Data_Ref(16)=445
+Ext_User_Prm_Data_Ref(17)=446
+Ext_User_Prm_Data_Ref(17)=447
+Ext_User_Prm_Data_Ref(17)=448
+Ext_User_Prm_Data_Ref(17)=449
+Ext_User_Prm_Data_Ref(17)=450
+Ext_User_Prm_Data_Ref(17)=451
+Ext_User_Prm_Data_Ref(17)=452
+Ext_User_Prm_Data_Ref(17)=453
+EndModule
+Module="6ES7 331-1KF00-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x02,0x19,\
+0x19,0x19,0x19,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=454
+Ext_User_Prm_Data_Ref(7)=455
+Ext_User_Prm_Data_Ref(8)=456
+Ext_User_Prm_Data_Ref(9)=457
+Ext_User_Prm_Data_Ref(10)=458
+Ext_User_Prm_Data_Ref(11)=459
+Ext_User_Prm_Data_Ref(12)=460
+Ext_User_Prm_Data_Ref(13)=461
+Ext_User_Prm_Data_Ref(14)=462
+Ext_User_Prm_Data_Ref(15)=463
+Ext_User_Prm_Data_Ref(16)=464
+EndModule
+Module="6ES7 331-1KF01-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x02,0x19,\
+0x19,0x19,0x19,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=525
+Ext_User_Prm_Data_Ref(7)=526
+Ext_User_Prm_Data_Ref(8)=527
+Ext_User_Prm_Data_Ref(9)=528
+Ext_User_Prm_Data_Ref(10)=529
+Ext_User_Prm_Data_Ref(11)=530
+Ext_User_Prm_Data_Ref(12)=531
+Ext_User_Prm_Data_Ref(13)=532
+Ext_User_Prm_Data_Ref(14)=533
+Ext_User_Prm_Data_Ref(15)=534
+Ext_User_Prm_Data_Ref(16)=535
+Ext_User_Prm_Data_Ref(17)=536
+Ext_User_Prm_Data_Ref(17)=537
+Ext_User_Prm_Data_Ref(18)=538
+Ext_User_Prm_Data_Ref(18)=539
+Ext_User_Prm_Data_Ref(19)=540
+Ext_User_Prm_Data_Ref(19)=541
+Ext_User_Prm_Data_Ref(20)=542
+Ext_User_Prm_Data_Ref(20)=543
+EndModule
+Module="6ES7 332-5HF00-0AB0        8AA" 0x83,0x47,0x00,0x25,0xE8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x19,\
+0x19,0x19,0x19,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=465
+Ext_User_Prm_Data_Ref(5)=466
+Ext_User_Prm_Data_Ref(5)=467
+Ext_User_Prm_Data_Ref(5)=468
+Ext_User_Prm_Data_Ref(5)=469
+Ext_User_Prm_Data_Ref(5)=470
+Ext_User_Prm_Data_Ref(5)=471
+Ext_User_Prm_Data_Ref(5)=472
+Ext_User_Prm_Data_Ref(5)=473
+Ext_User_Prm_Data_Ref(7)=474
+Ext_User_Prm_Data_Ref(8)=475
+Ext_User_Prm_Data_Ref(8)=476
+Ext_User_Prm_Data_Ref(8)=477
+Ext_User_Prm_Data_Ref(8)=478
+Ext_User_Prm_Data_Ref(8)=479
+Ext_User_Prm_Data_Ref(8)=480
+Ext_User_Prm_Data_Ref(8)=481
+Ext_User_Prm_Data_Ref(8)=482
+Ext_User_Prm_Data_Ref(9)=483
+Ext_User_Prm_Data_Ref(10)=484
+Ext_User_Prm_Data_Ref(11)=485
+Ext_User_Prm_Data_Ref(12)=486
+Ext_User_Prm_Data_Ref(13)=487
+Ext_User_Prm_Data_Ref(14)=488
+Ext_User_Prm_Data_Ref(15)=489
+Ext_User_Prm_Data_Ref(16)=490
+EndModule
+Module="6ES7 322-5HF00-0AB0        8DA" 0x83,0x00,0x00,0x2F,0xC8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(17)=492
+Ext_User_Prm_Data_Ref(17)=494
+Ext_User_Prm_Data_Ref(18)=495
+Ext_User_Prm_Data_Ref(18)=496
+Ext_User_Prm_Data_Ref(18)=497
+Ext_User_Prm_Data_Ref(18)=498
+Ext_User_Prm_Data_Ref(18)=499
+Ext_User_Prm_Data_Ref(18)=500
+Ext_User_Prm_Data_Ref(18)=501
+Ext_User_Prm_Data_Ref(18)=502
+EndModule
+Module="6ES7 322-5FF00-0AB0        8DA" 0x83,0x00,0x00,0x2F,0xC8
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(17)=492
+Ext_User_Prm_Data_Ref(17)=494
+Ext_User_Prm_Data_Ref(18)=495
+Ext_User_Prm_Data_Ref(18)=496
+Ext_User_Prm_Data_Ref(18)=497
+Ext_User_Prm_Data_Ref(18)=498
+Ext_User_Prm_Data_Ref(18)=499
+Ext_User_Prm_Data_Ref(18)=500
+Ext_User_Prm_Data_Ref(18)=501
+Ext_User_Prm_Data_Ref(18)=502
+EndModule
+Module="6ES7 322-5GH00-0AB0       16DA" 0x83,0x01,0x00,0x2F,0xD0
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(17)=492
+Ext_User_Prm_Data_Ref(17)=494
+Ext_User_Prm_Data_Ref(18)=495
+Ext_User_Prm_Data_Ref(18)=496
+Ext_User_Prm_Data_Ref(18)=497
+Ext_User_Prm_Data_Ref(18)=498
+Ext_User_Prm_Data_Ref(18)=499
+Ext_User_Prm_Data_Ref(18)=500
+Ext_User_Prm_Data_Ref(18)=501
+Ext_User_Prm_Data_Ref(18)=502
+Ext_User_Prm_Data_Ref(19)=503
+Ext_User_Prm_Data_Ref(19)=504
+Ext_User_Prm_Data_Ref(19)=505
+Ext_User_Prm_Data_Ref(19)=506
+Ext_User_Prm_Data_Ref(19)=507
+Ext_User_Prm_Data_Ref(19)=508
+Ext_User_Prm_Data_Ref(19)=509
+Ext_User_Prm_Data_Ref(19)=510
+EndModule
+Module="6ES7 321-7BH01-0AB0       16DE" 0x43,0x01,0x00,0x1F,0xC2
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=6
+Ext_User_Prm_Data_Ref(5)=7
+Ext_User_Prm_Data_Ref(6)=8
+Ext_User_Prm_Data_Ref(10)=9
+Ext_User_Prm_Data_Ref(6)=45
+Ext_User_Prm_Data_Ref(7)=46
+Ext_User_Prm_Data_Ref(8)=47
+Ext_User_Prm_Data_Ref(9)=48
+Ext_User_Prm_Data_Ref(10)=49
+Ext_User_Prm_Data_Ref(11)=50
+Ext_User_Prm_Data_Ref(12)=51
+Ext_User_Prm_Data_Ref(13)=52
+Ext_User_Prm_Data_Ref(15)=10
+Ext_User_Prm_Data_Ref(15)=11
+Ext_User_Prm_Data_Ref(16)=12
+Ext_User_Prm_Data_Ref(16)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(16)=15
+Ext_User_Prm_Data_Ref(16)=16
+Ext_User_Prm_Data_Ref(16)=17
+Ext_User_Prm_Data_Ref(16)=18
+Ext_User_Prm_Data_Ref(16)=19
+Ext_User_Prm_Data_Ref(17)=20
+Ext_User_Prm_Data_Ref(17)=21
+Ext_User_Prm_Data_Ref(17)=22
+Ext_User_Prm_Data_Ref(17)=23
+Ext_User_Prm_Data_Ref(17)=24
+Ext_User_Prm_Data_Ref(17)=25
+Ext_User_Prm_Data_Ref(17)=26
+Ext_User_Prm_Data_Ref(17)=27
+EndModule
+Module="6ES7 321-7BH81-0AB0       16DE" 0x43,0x01,0x00,0x1F,0xC2
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=6
+Ext_User_Prm_Data_Ref(5)=7
+Ext_User_Prm_Data_Ref(6)=8
+Ext_User_Prm_Data_Ref(10)=9
+Ext_User_Prm_Data_Ref(6)=45
+Ext_User_Prm_Data_Ref(7)=46
+Ext_User_Prm_Data_Ref(8)=47
+Ext_User_Prm_Data_Ref(9)=48
+Ext_User_Prm_Data_Ref(10)=49
+Ext_User_Prm_Data_Ref(11)=50
+Ext_User_Prm_Data_Ref(12)=51
+Ext_User_Prm_Data_Ref(13)=52
+Ext_User_Prm_Data_Ref(15)=10
+Ext_User_Prm_Data_Ref(15)=11
+Ext_User_Prm_Data_Ref(16)=12
+Ext_User_Prm_Data_Ref(16)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(16)=15
+Ext_User_Prm_Data_Ref(16)=16
+Ext_User_Prm_Data_Ref(16)=17
+Ext_User_Prm_Data_Ref(16)=18
+Ext_User_Prm_Data_Ref(16)=19
+Ext_User_Prm_Data_Ref(17)=20
+Ext_User_Prm_Data_Ref(17)=21
+Ext_User_Prm_Data_Ref(17)=22
+Ext_User_Prm_Data_Ref(17)=23
+Ext_User_Prm_Data_Ref(17)=24
+Ext_User_Prm_Data_Ref(17)=25
+Ext_User_Prm_Data_Ref(17)=26
+Ext_User_Prm_Data_Ref(17)=27
+EndModule
+Module="6ES7 321-1BH10-0AA0       16DE" 0x43,0x01,0x00,0x9F,0xC2
+EndModule
+Module="6ES7 322-1BH10-0AA0       16DA" 0x83,0x01,0x00,0xAF,0xD0
+EndModule
+Module="6ES7 331-7HF00-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x19,\
+0x19,0x19,0x19,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=174
+Ext_User_Prm_Data_Ref(5)=175
+Ext_User_Prm_Data_Ref(5)=176
+Ext_User_Prm_Data_Ref(5)=177
+Ext_User_Prm_Data_Ref(5)=178
+Ext_User_Prm_Data_Ref(6)=179
+Ext_User_Prm_Data_Ref(6)=180
+Ext_User_Prm_Data_Ref(6)=181
+Ext_User_Prm_Data_Ref(6)=182
+Ext_User_Prm_Data_Ref(7)=183
+Ext_User_Prm_Data_Ref(7)=184
+Ext_User_Prm_Data_Ref(8)=521
+Ext_User_Prm_Data_Ref(8)=522
+Ext_User_Prm_Data_Ref(8)=523
+Ext_User_Prm_Data_Ref(8)=524
+Ext_User_Prm_Data_Ref(9)=517
+Ext_User_Prm_Data_Ref(10)=518
+Ext_User_Prm_Data_Ref(11)=519
+Ext_User_Prm_Data_Ref(12)=520
+Ext_User_Prm_Data_Ref(13)=193
+Ext_User_Prm_Data_Ref(15)=194
+Ext_User_Prm_Data_Ref(17)=195
+Ext_User_Prm_Data_Ref(19)=196
+EndModule
+Module="6ES7 331-7HF01-0AB0        8AE" 0x43,0x47,0x00,0x15,0xC5
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x00,0x10,0x00,0x00,0x00,0xAA,0x19,\
+0x19,0x19,0x19,0x7F,0xFF,0x80,0x00,0x7F,0xFF,0x80,0x00
+Ext_User_Prm_Data_Ref(2)=174
+Ext_User_Prm_Data_Ref(5)=175
+Ext_User_Prm_Data_Ref(5)=176
+Ext_User_Prm_Data_Ref(5)=177
+Ext_User_Prm_Data_Ref(5)=178
+Ext_User_Prm_Data_Ref(6)=179
+Ext_User_Prm_Data_Ref(6)=180
+Ext_User_Prm_Data_Ref(6)=181
+Ext_User_Prm_Data_Ref(6)=182
+Ext_User_Prm_Data_Ref(6)=552
+Ext_User_Prm_Data_Ref(7)=183
+Ext_User_Prm_Data_Ref(7)=184
+Ext_User_Prm_Data_Ref(8)=521
+Ext_User_Prm_Data_Ref(8)=522
+Ext_User_Prm_Data_Ref(8)=523
+Ext_User_Prm_Data_Ref(8)=524
+Ext_User_Prm_Data_Ref(9)=517
+Ext_User_Prm_Data_Ref(10)=518
+Ext_User_Prm_Data_Ref(11)=519
+Ext_User_Prm_Data_Ref(12)=520
+Ext_User_Prm_Data_Ref(13)=193
+Ext_User_Prm_Data_Ref(15)=194
+Ext_User_Prm_Data_Ref(17)=195
+Ext_User_Prm_Data_Ref(19)=196
+EndModule
+Module="E 6ES7 338-7XF00-0AB0  IQ-Opto" 0xC2,0x47,0x47,0x5C,0xC3
+Ext_Module_Prm_Data_Len=21
+Ext_User_Prm_Data_Const(0)=0x15,0x5F,0x04,0x01,0x10,0x11,0x01,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(5)=599
+Ext_User_Prm_Data_Ref(5)=600
+Ext_User_Prm_Data_Ref(7)=591
+Ext_User_Prm_Data_Ref(7)=592
+Ext_User_Prm_Data_Ref(7)=593
+Ext_User_Prm_Data_Ref(7)=594
+Ext_User_Prm_Data_Ref(7)=595
+Ext_User_Prm_Data_Ref(7)=596
+Ext_User_Prm_Data_Ref(7)=597
+Ext_User_Prm_Data_Ref(7)=598
+Ext_User_Prm_Data_Ref(8)=575
+Ext_User_Prm_Data_Ref(8)=559
+Ext_User_Prm_Data_Ref(12)=583
+Ext_User_Prm_Data_Ref(12)=567
+Ext_User_Prm_Data_Ref(12)=601
+Ext_User_Prm_Data_Ref(8)=576
+Ext_User_Prm_Data_Ref(8)=560
+Ext_User_Prm_Data_Ref(13)=584
+Ext_User_Prm_Data_Ref(13)=568
+Ext_User_Prm_Data_Ref(13)=602
+Ext_User_Prm_Data_Ref(9)=577
+Ext_User_Prm_Data_Ref(9)=561
+Ext_User_Prm_Data_Ref(14)=585
+Ext_User_Prm_Data_Ref(14)=569
+Ext_User_Prm_Data_Ref(14)=553
+Ext_User_Prm_Data_Ref(9)=578
+Ext_User_Prm_Data_Ref(9)=562
+Ext_User_Prm_Data_Ref(15)=586
+Ext_User_Prm_Data_Ref(15)=570
+Ext_User_Prm_Data_Ref(15)=554
+Ext_User_Prm_Data_Ref(10)=579
+Ext_User_Prm_Data_Ref(10)=563
+Ext_User_Prm_Data_Ref(16)=587
+Ext_User_Prm_Data_Ref(16)=571
+Ext_User_Prm_Data_Ref(16)=555
+Ext_User_Prm_Data_Ref(10)=580
+Ext_User_Prm_Data_Ref(10)=564
+Ext_User_Prm_Data_Ref(17)=588
+Ext_User_Prm_Data_Ref(17)=572
+Ext_User_Prm_Data_Ref(17)=556
+Ext_User_Prm_Data_Ref(11)=581
+Ext_User_Prm_Data_Ref(11)=565
+Ext_User_Prm_Data_Ref(18)=589
+Ext_User_Prm_Data_Ref(18)=573
+Ext_User_Prm_Data_Ref(18)=557
+Ext_User_Prm_Data_Ref(11)=582
+Ext_User_Prm_Data_Ref(11)=566
+Ext_User_Prm_Data_Ref(19)=590
+Ext_User_Prm_Data_Ref(19)=574
+Ext_User_Prm_Data_Ref(19)=558
+;Ext_User_Prm_Data_Ref(20)=671
+EndModule
+Module="6ES7 338-7XF00_IQ-ID1/248" 0xC2,0xC7,0xC7,0x5C,0xC3
+146
+Ext_Module_Prm_Data_Len=33
+Ext_User_Prm_Data_Const(0)=0x21,0x5F,0x04,0x80,0x1C,0x33,0x00,0x04,0x01,0x00,\
+0x00,0x04,0x01,0x00,0x00,0x04,0x01,0x00,0x00,0x04,0x01,0x00,0x00,0x04,0xF8,\
+0x00,0x00,0x02,0x00,0x02,0x00,0x02,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(5)=599
+;Ext_User_Prm_Data_Ref(5)=671
+Ext_User_Prm_Data_Ref(5)=672
+Ext_User_Prm_Data_Ref(6)=591
+Ext_User_Prm_Data_Ref(6)=592
+Ext_User_Prm_Data_Ref(6)=593
+Ext_User_Prm_Data_Ref(6)=594
+Ext_User_Prm_Data_Ref(6)=595
+Ext_User_Prm_Data_Ref(8)=603
+Ext_User_Prm_Data_Ref(9)=654
+Ext_User_Prm_Data_Ref(9)=651
+Ext_User_Prm_Data_Ref(9)=655
+Ext_User_Prm_Data_Ref(10)=652
+Ext_User_Prm_Data_Ref(10)=653
+Ext_User_Prm_Data_Ref(12)=604
+Ext_User_Prm_Data_Ref(13)=664
+Ext_User_Prm_Data_Ref(13)=661
+Ext_User_Prm_Data_Ref(13)=665
+Ext_User_Prm_Data_Ref(14)=662
+Ext_User_Prm_Data_Ref(14)=663
+Ext_User_Prm_Data_Ref(16)=605
+Ext_User_Prm_Data_Ref(17)=644
+Ext_User_Prm_Data_Ref(17)=641
+Ext_User_Prm_Data_Ref(17)=645
+Ext_User_Prm_Data_Ref(18)=642
+Ext_User_Prm_Data_Ref(18)=643
+Ext_User_Prm_Data_Ref(20)=606
+Ext_User_Prm_Data_Ref(21)=649
+Ext_User_Prm_Data_Ref(21)=646
+Ext_User_Prm_Data_Ref(21)=650
+Ext_User_Prm_Data_Ref(22)=647
+Ext_User_Prm_Data_Ref(22)=648
+Ext_User_Prm_Data_Ref(24)=684
+Ext_User_Prm_Data_Ref(25)=685
+Ext_User_Prm_Data_Ref(26)=686
+EndModule
+Module="6ES7 338-7XF00-0AB0  IQ-Ident" 0xC2,0xC7,0xC7,0x5C,0xC3
+147
+Ext_Module_Prm_Data_Len=27
+Ext_User_Prm_Data_Const(0)=0x1B,0x5F,0x04,0x80,0x16,0x77,0x00,0x04,0xF8,0x00,\
+0x00,0x02,0x00,0x02,0x00,0x02,0x00,0x04,0xF8,0x00,0x00,0x02,0x00,0x02,0x00,\
+0x02,0x00
+Ext_User_Prm_Data_Ref(2)=491
+Ext_User_Prm_Data_Ref(5)=599
+Ext_User_Prm_Data_Ref(5)=600
+Ext_User_Prm_Data_Ref(6)=591
+Ext_User_Prm_Data_Ref(6)=595
+Ext_User_Prm_Data_Ref(8)=681
+Ext_User_Prm_Data_Ref(9)=682
+Ext_User_Prm_Data_Ref(10)=683
+Ext_User_Prm_Data_Ref(18)=684
+Ext_User_Prm_Data_Ref(19)=685
+Ext_User_Prm_Data_Ref(20)=686
+EndModule
+

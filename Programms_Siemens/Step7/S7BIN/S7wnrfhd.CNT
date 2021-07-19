@@ -1,0 +1,13 @@
+:Base S7WNrfhd.HLP
+:Title CONFIGURACION DE ENLACES DE ISO ON TCP
+1 Configurar enlaces ISO-on-TCP
+2 Resumen=IDH_CONTENTS
+2 Ficha "General=HID_ALLGEMEIN
+2 Ficha "Direcciones"=IDD_RFC1006_ADDRESS
+2 Ficha "Opciones"=Register_"Betriebsart"
+2 RFC1006: Ficha "Panorámica"=IDD_IP_UEBER
+2 Cambiar de interlocutor=IDD_CHANGE_REMOTE
+2 Selección de vías en caso de reparto de cargas=HIDD_Weg
+2 Informaciones sobre estado=Statusinformationen
+2 Ficha "Propiedades del OPC"=OPC
+2 Detalles relativos al establecimiento del enlace=Details_Verb

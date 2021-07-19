@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Time of Day Interrupt 0"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB10_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB10_STRT_INFO : BYTE ;	//16#11 (OB 10 has started)
+  OB10_PRIORITY : BYTE ;	//2 (Priority of 1 is lowest)
+  OB10_OB_NUMBR : BYTE ;	//10 (Organization block 10, OB10)
+  OB10_RESERVED_1 : BYTE ;	//Reserved for system
+  OB10_RESERVED_2 : BYTE ;	//Reserved for system
+  OB10_PERIOD_EXE : WORD ;	//Period of execution (once, per minute/hour/day/week/month/year)
+  OB10_RESERVED_3 : INT ;	//Reserved for system
+  OB10_RESERVED_4 : INT ;	//Reserved for system
+  OB10_DATE_TIME : DATE_AND_TIME ;	//Date and time OB10 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

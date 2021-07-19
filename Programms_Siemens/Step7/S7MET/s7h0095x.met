@@ -1,0 +1,26 @@
+;----------------------------------------
+; --- IM  157-0AC83-0XA0 - Redundanter DP/PA-Koppler
+;----------------------------------------
+
+[_S7H_HSP_6ES7_157_0AC83_0XA0_CT]
+server=S7HSLNTX.DLL
+EXT_OBJ_NAME= META\SI028131.GSG
+EXT_OTYP=1
+prefix=OM
+ObjType=2363932
+basetype=_S7H_DP_NOSLAVE_CT
+CLASS_PROPERTIES=0
+CatalogParent=1315395
+IsCatEntry=1
+MLFB=6ES7 157-0AC83-0XA0
+;CountAutoCreatedChilds=1
+;AutoCreatedChild1=2363933, 2, FIXED
+nKatChilds=0
+FIRST_VISIBLE_CHILD_NO=4
+
+ADV_USR_PRM_DATA=1
+
+HSP_ID=0095
+HSP_NAME=FDC157_0
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.3.3.0

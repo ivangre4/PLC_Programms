@@ -1,0 +1,378 @@
+@DB_TYP SDB3100_L2_PC_CONVERT V0.01  DOS
+@CONVERTER        V1.0
+@LANGUAGE         SYSTEM
+
+ALL
+{
+ 	ALL_DATA$LNG	DM||||	# für lokale Zwecke
+	ALL_DATA
+	{
+		PBL_SDB_KENNUNG$NAM		_M||||
+		PBL_SDB_KENNUNG
+		{
+			PBL_SDB_KENNUNG$LNG	BM||||
+			PBL_SDB_KENNUNG_ID	BC|1|||
+			BAUGRUPPENTYP		SM||||
+			SDB_INHALT			SC|0|||
+			UEBERTRAGUNGSATTR	BM|3|||		# in V2.1 = 0 !
+			SDB_KENNUNG_RESV	BM|0|||		
+			TSAP_ID_TYP			BM|0|||		# K-Bus/Partyline
+			DEVICE_ID			BM|0|||		# K-Bus, ohne Bedeutung
+			TSAP_ID1			BM|0xfe|||	# PG-Verbindung			
+			TSAP_ID2			BM|0|||		# ohne Bedeutung
+			NEXT_STADDR			BM|0|||		# ohne Bedeutung
+			REM_STADDR			BM|0|||		# Rack/Steckplatz			
+		}
+
+		PBL_PC_BGR_PARAM$NAM	_M||||		# PC Baugruppenparametrierung
+		PBL_PC_BGR_PARAM
+		{
+			# Pblk Header
+			PBL_PC_BGR_PARAM_ID			BC|10|||
+			PBL_PC_BGR_PARAM_VERSION	BC|0|||
+			PBL_PC_BGR_PARAM$LNG		WM||||
+
+			# Daten
+			ProtokollId					BM|0|||		# Protokoll Identifier 
+													# 0 = Profibus
+													# 1 = Iso
+													# 2 = Tcp/Ip
+			BgrParametrierung$LNG		BM||||		# Länge des Baugruppen Parametrierungsstring
+			BgrParametrierung			AO||0|255|0	# Baugruppenparametrierungsstring
+		}
+
+		PBL_L2_BUSPARA$NAM		_M||||
+		PBL_L2_BUSPARA
+		{
+			PBL_L2_BUSPARA_ID	BC|2|||
+			PBL_L2_BUSPARA_RESV	BC|0|||
+			PBL_L2_BUSPARA$LNG	WM||||
+
+			# Highest Station Adress
+			Hsa			BM||2|126|
+
+			# (Parameter ignored) SINEC L2 Adress			
+			Ts			BM||0|126|
+			
+			# Stationtype ( Master or Slave)
+			StationType		WM||||
+			
+			# Baudrate
+			BaudRate		WM||0|12|
+			
+			# Medium Redundancy
+			MediumRed		WM||||
+#?
+			# Requester Send Retry Counter
+			RetryCtr		WM||0|7|
+
+			# Default Adress, used for Telegram without Adress Extension
+			DefaultSap		BC|0xff|||		# AUT1 has other value in subnet
+#?
+			# Network Conection Sap
+			NetwkConSap		BC|0|||			# no value in subnet
+#?
+			# Slot Time
+			Tsl			WM||35|16383|
+
+			#Transmitter Fall Time
+			Tqui			WM||0|31|
+
+			# Setuptime
+			Tsel			WM||0|494|
+
+			# Minimum Station Delay Time
+			MinTsdr			WM||11|255|
+
+			# Maximum Station Delay Time
+			MaxTsdr			WM||35|1023|
+
+			# Target Rotation Time
+			Ttr			DM||35|16777215|
+
+			# Gap Update Factor
+			G			BM||1|100|
+
+			# Always true
+			InRingDesired		WM||||
+
+			# Always RS485
+			PhysicalLayer		WM||||
+		}
+
+		DpExtInfoPblk$NAM		_O||||			# PBLK DP erweiterte Informationen
+		DpExtInfoPblk
+		{
+			# Subblock
+			# ********
+			PBL_ID								BC|0x0B|||
+			PBL_ID_VERSION						BC|0|||
+			DpExtInfoPblk$LNG					WM||||
+			# ********
+
+			bPcDpFlags							BM|0|||
+			bGroupsForCyclic					BM|0|||
+
+			bGenLdb								BM|1|||
+			bLdbVersion							BM|0|||
+			LdbFileName$LNG						WM||||
+			LdbFileName							AM||0|256|
+		}
+
+		LSAPListPblk$NAM		_O||||			# LSAP Sperrliste
+		LSAPListPblk
+		{
+			PBL_ID								BC|0x0C|||
+			PBL_ID_VERSION						BC|0|||
+			LSAPListPblk$LNG					WM||||
+
+			ProtectedLsapList					HO||0|126|0
+		}
+		
+		DpSlavePblk$NAM		_O||||			# DP-Slave Parametrierung
+		DpSlavePblk
+		{
+			PBL_ID								BC|0x0D|||
+			PBL_ID_VERSION						BC|0|||
+			DpSlavePblk$LNG						WM||||
+
+			BAUDRATE							WM|3|0|255|1
+			TS									BM||0|128|1
+			PNO_IDENT							DM||||
+			
+			CFG_DATA$LNG						WM||||
+			CFG_DATA							HO||||0
+		}
+		
+		FO_CONNECTOR_PBLK$NAM		_O||||			# Konfigurieren von Optischen, bzw. elektrischen Anschluß für DP-Master
+		FO_CONNECTOR_PBLK
+		{
+			PBL_ID								BC|0x10|||
+			PBL_ID_VERSION						BC|0|||
+			FO_CONNECTOR_PBLK$LNG					WM||||
+
+			CONNECTOR							WM|0|0|1|1
+		}
+		
+		UHRZEIT_PBLK$NAM		_O||||			# Konfigurieren von Optischen, bzw. elektrischen Anschluß für DP-Master
+		UHRZEIT_PBLK
+		{
+			PBL_ID								BC|0x11|||
+			PBL_ID_VERSION						BC|0|||
+			UHRZEIT_PBLK$LNG					WM||||
+
+			MODE								WM|0|0|2|1
+		}
+		
+		
+		PBL_DP_MASTER_OPC$NAM					_O||||
+		PBL_DP_MASTER_OPC
+		{
+			PBL_ID								BC|0x0E|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_DP_MASTER_OPC$LNG				WM||||
+			
+			REFERENCE_ACCESS					WM|0x50||| # 0x50 = AutoOperate   0xA0 = OPC Server stellt auf OPERATE
+			WATCHDOG_TIMEOUT					DM|6000|||
+			TIMEOUT								DM|15000|||
+			DIAG_TIMEOUT						WM|500|||
+			
+			MODE								WM|0|||   # 0 = DP-Lib   1 = DP-Base
+			
+			VMDID_APP							DM||||
+		}
+		
+		PBL_DP_MASTER_HW_EVENT$NAM				_O||||
+		PBL_DP_MASTER_HW_EVENT
+		{
+			PBL_ID								BC|0x0F|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_DP_MASTER_HW_EVENT$LNG			WM||||
+			
+			SLAVE_ADR$CNT						BM||||
+			SLAVE_ADR$NAM						_A||||
+			SLAVE_ADR
+			{
+				L2_ADR							BM||||	
+			}
+		}
+		
+		PBL_BGR_NAME$NAM			_O||||			# Name und Object-ID der Baugruppe
+		PBL_BGR_NAME
+		{
+			PBL_ID								BC|0x15|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_BGR_NAME$LNG					WM||||
+			
+			OBJ_ID								DM||||
+			BGR_NAME$LNG						BM||||
+			BGR_NAME							AO||0|255|0
+		}
+
+		PBL_OPC_FMS_VFD$NAM		_O||||
+		PBL_OPC_FMS_VFD
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für VFD Liste
+			# ---------------------------------------------------
+
+			PBL_OPC_FMS_VFD_ID		BC|0x40|||
+			PBL_OPC_FMS_VFD_VERSION		BC|0|||
+			PBL_OPC_FMS_VFD$LNG		WM||||
+			
+			PBL_OPC_FMS_VFD_ENTRY$CNT	WM||||
+			PBL_OPC_FMS_VFD_ENTRY$NAM	_A||||
+			PBL_OPC_FMS_VFD_ENTRY
+			{
+				PBL_OPC_FMS_VFD_ENTRY_ID		BC|0x41|||
+				PBL_OPC_FMS_VFD_ENTRY_VERSION		BC|0|||
+				PBL_OPC_FMS_VFD_ENTRY$LNG		WM||||
+				
+				VFD_NUMBER				DM||||
+				PROFILE_NUMBER				WM|0|||
+				
+				VFD_NAME$LNG				BM||||
+				VFD_NAME				AM||||
+
+				VENDOR_NAME$LNG				BM||||
+				VENDOR_NAME				AM||||
+
+				REVISION$LNG				BM||||
+				REVISION				AM||||
+			}
+		}
+		
+		PBL_DPC2$NAM		_O||||
+		PBL_DPC2
+		{
+			PBL_DPC2_ID			BC|0x42|||
+			PBL_DPC2_VERSION	BC|0|||
+			PBL_DPC2$LNG		WM||||
+			
+			IS_CP5613_14		BM|0|0|1|1
+			USE_DPC2			BM|0|0|2|1
+			USE_DPC2_CY			BM|0|0|1|1
+			
+			DPC2_TIMEOUT			DM|15000|0|100000|1
+			DPC2_TIMEOUT_CONNECT	DM|15000|0|100000|1
+		}
+		
+		PBL_PRIVATE$NAM _O||||
+		PBL_PRIVATE
+		{
+			PBL_ID_PRIVATE			BC|0xFE|||
+			PBL_ID_PRIVATE_RESV		BC|0|||
+			PBL_PRIVATE$LNG			WM||||
+
+			PBL_PRIV1		# Netzeigenschaften
+			{		
+				PBL_PRIV1_ID			WC|1|||
+				PBL_PRIV1$LNG			WM||||
+					
+				NETID					HM||6|6|6	# AUT_NET_UNIQUE_ID_LB
+				NETNAME					AM||1|24|25	# AUT_NAME
+
+					# ATT_NETCONFIG_ENABLE_B	  TRUE						FALSE
+				ACT_STATION				BM||||	# ATT_NETCONFIG_AKTIV_B		ATT_CNT_ACT_NODES_B
+				PAS_STATION				BM||||	# ATT_NETCONFIG_PASSIV_B	ATT_CNT_PAS_NODES_B
+				SPE_STATION				BM||||	# ATT_NETCONFIG_XYZ_B		ATT_CNT_XYZ_NODES_B			
+					#	Anmerkung: Setzen der Attribute unabhängig vom
+					# Unterscheidungskriterium in den Attributen 
+					# ATT_NETCONFIG_AKTIV_B, ATT_NETCONFIG_PASSIV_B und ATT_NETCONFIG_XYZ_B
+
+				#	L2-Netzeigenschaften
+#				HSA						BM||||	# ATT_HSA_B
+#				BAUDRATE				BM||||	# ATT_BAUDRATE_B
+				PROFILE					BM||||	# ATT_L2_PROFILE_SELECTION_B 
+				DP_ONLY					BM||||	# ATT_L2_DP_ONLY_B
+#				TTR						DM||||	# ATT_TTR_L
+				WATCHDOG				DM||||	# ATT_WATCHDOG_L
+
+				# if "benutzerdefiniertes Profil"
+#				TSL						WM|0|||	# ATT_TSL_S
+#				MAX_TSDR				WM|0|||	# ATT_MAX_TSDR_S
+#				MIN_TSDR				WM|0|||	# ATT_MIN_TSDR_S
+#				TSET					WM|0|||	# ATT_TSET_S
+#				TQUI					WM|0|||	# ATT_TQUI_S
+#				GAP						BM|0|||	# ATT_GAP_B
+#				RETRY_CTR				BM|0|||	# ATT_RETRY_CTR_B
+				TREADY					BM|0|||	# ATT_TREADY_B
+				TIDLE1					WM|0|||	# ATT_IDLE1_S
+				TIDLE2					WM|0|||	# ATT_IDLE2_S
+			}
+
+			PBL_PRIV2$NAM	_O||||
+			PBL_PRIV2
+			{
+				PBL_PRIV2_ID			WC|2|||
+				PBL_PRIV2$LNG			WM||||
+				DPSLAVE_SUBSYSID		DM|0|||	
+				MASTER_TS				BM|0|||
+				RES						BC|0|||
+			}
+
+			PBL_PRIV3$NAM	_O||||
+			PBL_PRIV3
+			{
+				PBL_PRIV3_ID			WC|3|||
+				PBL_PRIV3$LNG			WM||||
+				CNT_REPEATER			DM||||	# ATT_CNT_REPEATER_L
+				CU_WIRE_LENGTH			DM||||	# ATT_CU_WIRE_LENGTH_L
+				LWL_WIRE_LENGTH			DM||||	# ATT_LWL_WIRE_LENGTH_L
+				CNT_OLM				DM||||	# ATT_CNT_OLM_L
+			}
+			
+			PBL_MPI_PRIV4$NAM	_O||||
+			PBL_MPI_PRIV4
+			{
+				PBL_MPI_PRIV4_ID		WC|4|||		# ist der Block vorhanden => Baugruppe ist an MPI vernetzt 
+				PBL_MPI_PRIV4$LNG		WM||||
+			}
+
+			PBL_NETCONFIG_PRIV5$NAM		_O||||
+			PBL_NETCONFIG_PRIV5
+			{
+				PBL_NETCONFIG_PRIV5_ID			WC|5|||
+				PBL_NETCONFIG_PRIV5$LNG			WM||||
+				
+				# Atttibute für Netzteilnehmer
+				# im Dialog einzustellen
+				NETCONFIG_ENABLE			BM||||	# ATT_NETCONFIG_ENABLE_B
+				NETCONFIG_AKTIV				BM||||	# ATT_NETCONFIG_AKTIV_B
+				NETCONFIG_PASSIV			BM||||	# ATT_NETCONFIG_PASSIV_B
+				NETCONFIG_XYZ				BM||||	# ATT_NETCONFIG_XYZ_B
+				NETCONFIG_BUSLAST			BM||||	# ATT_NETCONFIG_BUSLAST_B
+				#berechnet
+				CNT_ACT_NODES				BM||||	# ATT_CNT_ACT_NODES_B
+				CNT_PAS_NODES				BM||||	# ATT_CNT_PAS_NODES_B
+				CNT_XYZ_NODES				BM||||	# ATT_CNT_XYZ_NODES_B
+
+				# Attribute für OLM's
+				# im Dialog einzustellen
+				OLM_CONFIG_ENABLE			BM||||	# ATT_OLM_CONFIG_ENABLE_B
+				DLG_CNT_REPEATER			DM||||	# ATT_DLG_CNT_REPEATER_L
+				DLG_CU_WIRE_LENGTH			DM||||	# ATT_DLG_CU_WIRE_LENGTH_L
+				DLG_LWL_WIRE_LENGTH			DM||||	# ATT_DLG_LWL_WIRE_LENGTH_L
+				DLG_CNT_OLM				DM||||	# ATT_DLG_CNT_OLM_L
+				# berechnete sind in PBL_PRIV3
+				# für gerade Blocklänge
+				RES					BC|0|||
+			}
+
+			RESERV_ALL_BLOCK1$NAM _A||||
+			RESERV_ALL_BLOCK1
+			{
+				RESERV_ALL1		BM|0|||
+			}
+
+		}
+
+		RESERV_ALL_BLOCK$NAM _A||||
+		RESERV_ALL_BLOCK
+		{
+			RESERV_ALL		BM|0|||
+		}
+	}
+}
+
+

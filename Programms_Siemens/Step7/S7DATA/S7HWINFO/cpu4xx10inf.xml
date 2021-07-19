@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<objectinfo xmlns="http://www.ad.siemens.de/simatic/step7/ksw">
+   <localdata>
+      <priorityclass_item index="1">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="2">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="3">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="4">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="9">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="12">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="16">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="17">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="24">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="25">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="26">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="27">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="28">
+         <size>256</size>
+      </priorityclass_item>
+      <priorityclass_item index="29">
+         <size>256</size>
+      </priorityclass_item>
+   </localdata>
+   <blocks>
+      <ob index="1">
+         <priorityclass>1</priorityclass>
+      </ob>
+      <ob index="10">
+         <priorityclass>2</priorityclass>
+      </ob>
+      <ob index="11">
+         <priorityclass>2</priorityclass>
+      </ob>
+      <ob index="20">
+         <priorityclass>3</priorityclass>
+      </ob>
+      <ob index="21">
+         <priorityclass>4</priorityclass>
+      </ob>
+      <ob index="32">
+         <priorityclass>9</priorityclass>
+      </ob>
+      <ob index="35">
+         <priorityclass>12</priorityclass>
+      </ob>
+      <ob index="40">
+         <priorityclass>16</priorityclass>
+      </ob>
+      <ob index="41">
+         <priorityclass>17</priorityclass>
+      </ob>
+      <ob index="81">
+         <priorityclass>25</priorityclass>
+      </ob>
+      <ob index="82">
+         <priorityclass>25</priorityclass>
+      </ob>
+      <ob index="85">
+         <priorityclass>25</priorityclass>
+      </ob>
+      <ob index="86">
+         <priorityclass>25</priorityclass>
+      </ob>
+      <ob index="87">
+         <priorityclass>25</priorityclass>
+      </ob>
+   </blocks>
+</objectinfo>
+

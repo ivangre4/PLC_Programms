@@ -1,0 +1,67 @@
+
+
+;------------------------------------------------------
+;------------------------------------------------------
+; WinLC RTX V4.3 und CP 5611 V4.3
+;------------------------------------------------------
+
+; ----------------------------- WinLC RTX V4.3
+[_S7H_HSP_WINLC_RTX_V43_CT]
+ObjType=2366931
+CatalogParent=1316813
+MLFB=6ES7 611-4SB00-0YB7
+HSP_NAME=WinLC RTX V4.3
+HSP_ID=2013
+HWCNFX_VER=5.4.4.0|0
+HWCNFX_FOR_HWU=5.3.3.0
+basetype=_S7H_HSP_6ES7_611_4SB00_0YB7_V42_CT
+server=S7HKCOMX.DLL
+prefix=OM
+IsCatEntry=1
+FW_VERSION=V4.3
+S7DPV1SLAVEABLE=1
+MODULEDESC=CPU_2013moddesc.xml
+MAX_C_CNT=2048
+MAX_T_CNT=2048
+
+
+; ----------------------------- steckbarer DP-Master 5611 für WinLC RTX V4.3
+[_S7H_HSP_WINLC_RTX_V43_CP5611_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+ObjType=2366932
+basetype=_S7H_DP_ETCR_EXTERN_WINLC_5613_CT
+CatalogParent=2366931
+IsCatEntry=1
+FW_VERSION=V4.3
+HSP_NAME=WinLC RTX V4.3
+HSP_ID=2013
+HWCNFX_VER=5.4.4.0|0
+HWCNFX_FOR_HWU=5.3.3.0
+MAX_SLAVES=64
+CP_MAX_CONN_CNT=6
+PLUG_CLASS=0x01000100
+MAX_KONSIST_DATA_LEN=32
+S7_TYPE_CODE=0xAC0A
+CAPABLE_AEQU=1
+;CLOCK_SYNC_FCT=0
+;CAN_NOT_TAKTSYNC=0
+;CLOCK_NOT_SHOW=1
+
+
+; ----------------------------- steckbarer DP-Master 5613 für WinLC RTX V4.3
+[_S7H_HSP_WINLC_RTX_V43_CP5613_CT]
+server=S7HKDMAX.DLL
+prefix=OM
+ObjType=2366939
+basetype=_S7H_HSP_DP_ETCR_EXTERN_WINLCRTX42_5613_CT
+CatalogParent=2366931
+IsCatEntry=1
+FW_VERSION=V4.3
+HSP_NAME=WinLC RTX V4.3
+HSP_ID=2013
+HWCNFX_VER=5.4.4.0|0
+HWCNFX_FOR_HWU=5.3.3.0
+PLUG_CLASS=0x02000100
+
+

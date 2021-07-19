@@ -1,0 +1,214 @@
+:Base S7rfup_b.HLP
+:Title Help on Function Block Diagram
+1 Overview of All FBD Instructions
+2 FBD Instructions Sorted According to German Mnemonics (SIMATIC)=FUP_Operationen_sortiert_nach_SIMATIC_Mnemonik
+2 FBD Instructions Sorted According to English Mnemonics (International)=FUP_Operationen_sortiert_nach_Internationaler_Mnemonik
+1 Bit Logic Instructions
+2 Overview of Bit Logic Instructions=Overview_of_Bit_Logic_Instructions
+2 OR Logic Operation=ODER_Verkn_pfung
+2 AND Logic Operation=UND_Verkn_pfung
+2 AND before OR Logic Operation and OR before AND Logic Operation=UND_vor_ODER_Verkn_pfung_und_ODER_vor_UND_Verkn_pfung
+2 XOR    Exclusive OR Logic Operation=EXKLUSIV_ODER_Verkn_pfung
+2 Insert Binary Input=Bin_ren_Eingang_einf_gen
+2 Negate Binary Input=Bin_ren_Eingang_negieren
+2 Assign=Zuweisung
+2 #    Midline Output=Konnektor
+2 R    Reset Output=Ausgang_r_cksetzen
+2 S    Set Output=Ausgang_setzen
+2 RS   Reset Set Flip Flop=Flipflop_r_cksetzen_setzen
+2 SR   Set Reset Flip Flop=Flipflop_setzen_r_cksetzen
+2 N    Negative RLO Edge Detection=Flanke_1_____0_abfragen
+2 P    Positive RLO Edge Detection=Flanke_0____1_abfragen
+2 SAVE    Save RLO to BR Memory=Verkn_pfungsergebnis_in_BIE_Register_laden
+2 NEG    Address Negative Edge Detection=Signalflanke_1____0_abfragen
+2 POS    Address Positive Edge Detection=Signalflanke_0____1_abfragen
+1 Comparison Instructions
+2 Overview of Comparison Instruction=Overview_of_Comparison_Instructions
+2 CMP ? I   Compare Integer=Ganze_Zahlen_vergleichen__16_Bit_
+2 CMP ? D  Compare Double Integer=Ganze_Zahlen_vergleichen__32_Bit_
+2 CMP ? R  Compare Real=Gleitpunktzahlen_vergleichen
+1 Conversion Instructions
+2 Overview of Conversion Instructions=Overview_of_Conversion_Instructions
+2 BCD to Integer=BCD_Zahl_in_Ganzzahl__16_Bit__wandeln
+2 Integer to BCD=Ganzzahl__16_Bit__in_BCD_Zahl_wandeln
+2 Integer to Double Integer=Ganzzahl__16_Bit__in_Ganzzahl__32_Bit__wandeln
+2 BCD to Double Integer=BCD_Zahl_in_Ganzzahl__32_Bit__wandeln
+2 Double Integer to BCD=Ganzzahl__32_Bit__in_BCD_Zahl_wandeln
+2 Double Integer to Real=Ganzzahl__32_Bit__in_Gleitpunktzahl_wandeln
+2 Ones Complement Integer=Einer_Komplement_zu_Ganzzahl__16_Bit__erzeugen
+2 Ones Complement Double Integer=Einer_Komplement_zu_Ganzzahl__32_Bit__erzeugen
+2 Twos Complement Integer=Zweier_Komplement_zu_Ganzzahl__16_Bit__erzeugen
+2 Twos Complement Double Integer=Zweier_Komplement_zu_Ganzzahl__32_Bit__erzeugen
+2 Negate Real Number=Vorzeichen_einer_Gleitpunktzahl_wechseln
+2 Round to Double Integer=Zahl_runden
+2 Truncate Double Integer Part=Ganze_Zahl_erzeugen
+2 Ceiling=Aus_Gleitpunktzahl_n_chsth_here_Ganzzahl_erzeugen
+2 Floor=Aus_Gleitpunktzahl_n_chstniedere_Ganzzahl_erzeugen
+1 Counter Instructions
+2 Overview of Counter Instructions=Overview_of_Counter_Instructions
+2 Assign Parameters and Count Up/Down=Vorw_rts__R_ckw_rtsz_hlen
+2 Assign Parameters and Count Up=Vorw_rtsz_hlen
+2 Assign Parameters and Count Down=R_ckw_rtsz_hlen
+2 Set Counter Value=Z_hleranfangswert_setzen
+2 Up Counter=Operation__Vorw_rtsz_hlen
+2 Down Counter=Operation__R_ckw_rtsz_hlen
+1 Data Block Instructions
+2 Open Data Block=Datenbaustein__ffnen
+1 Jump Instructions
+2 Overview of Jump Instructions=Sprungoperationen__bersicht
+2 Unconditional Jump in a Block=Springe_im_Baustein_absolut
+2 Conditional Jump in a Block=Springe_im_Baustein_wenn_1__bedingt_
+2 Jump If Not=Springe_im_Baustein_wenn_0__bedingt_
+2 Jump Label=Sprungmarke
+1 Integer Math Instructions
+2 Overview of Integer Math Instructions=Overview_of_Integer_Math_Instructions
+2 Evaluating the Bits of the Status Word with Integer Math Instructions=Auswerten_der_Bits_im_Statuswort_bei_Grundrechenoperationen
+2 Add Integer=Ganze_Zahlen_addieren__16_Bit_
+2 Subtract Integer=Ganze_Zahlen_subtrahieren__16_Bit_
+2 Multiply Integer=Ganze_Zahlen_multiplizieren__16_Bit_
+2 Divide Integer=Ganze_Zahlen_dividieren__16_Bit_
+2 Add Double Integer=Ganze_Zahlen_addieren__32_Bit_
+2 Subtract Double Integer=Ganze_Zahlen_subtrahieren__32_Bit_
+2 Multiply Double Integer=Ganze_Zahlen_multiplizieren__32_Bit_
+2 Divide Double Integer=Ganze_Zahlen_dividieren__32_Bit_
+2 Return Fraction Double Integer=Divisionsrest_gewinnen__32_Bit_
+1 Floating-Point Math Instructions
+2 Overview of Floating-Point Math=Gleitpunktarithmetik__bersicht
+2 Evaluating the Bits of the Status Word with Floating-Point Instructions=Auswerten_der_Bits_im_Statuswort_bei_Gleitpunktoperationen
+2 Basic Instructions
+3 Add Real=Gleitpunktzahlen_addieren
+3 Subtract Real=Gleitpunktzahlen_subtrahieren
+3 Multiply Real=Gleitpunktzahlen_multiplizieren
+3 Divide Real=Gleitpunktzahlen_dividieren
+3 Forming the Absolute Value of a Floating-Point Number=Bilden_des_Absolutwertes_einer_Gleitpunktzahl
+2 Extended Instructions
+3 Forming the Square (SQR) of a Floating-Point Number=Bilden_des_Quadrats__SQR__einer_Gleitpunktzahl
+3 Forming the Square Root (SQRT) of a Floating-Point Number_=Bilden_der_Quadratwurzel__SQRT__einer_Gleitpunktzahl
+3 Forming the Exponential Value of a Floating-Point Number=Bilden_des_Exponentialwerts_einer_Gleitpunktzahl
+3 Forming the Natural Logarithm of a Floating-Point Number=Bilden_des_nat_rlichen_Logarithmus_einer_Gleitpunktzahl
+3 Forming Trigonometric Functions of Angles as Floating-Point Numbers=Bilden_von_trigonometrischen_Funktionen_von_Winkeln_als_Gleitpunktzahlen
+1 Move Instructions
+2 Assign Value=Wert__bertragen
+1 Program Control Instructions
+2 Overview of Program Control Instructions=Programmsteuerung_bersicht
+2 Calling an FC/SFC without Parameters=FC_SFC_aufrufen_ohne_Parameter
+2 CALL FB  (Call FB as Box)=CALL_FB_FB_als_Box_aufrufen
+2 CALL FC (Call FC as Box)=CALL_FC_FC_als_Box_aufrufen
+2 CALL SFB (Call System FB as Box)=CALL_SFB_System_FB_als_Box_aufrufen
+2 CALL SFC (Call System FC as Box)=CALL_SFC_System_FC_als_Box_aufrufen
+2 Calling Multiple Instances=Multiinstanzen_aufrufen
+2 Calling a Block from a Library=Baustein_aus_einer_Bibliothek_aufrufen
+2 Master Control Relay Instructions=Funktionen_des_Master_Control_Relay
+2 Important Notes on Using MCR Functions=Wichtige_Hinweise_zu_MCR
+2 ---(MCR<) Master Control Relay On=Master_Control_Relay_einschalten_ausschalten
+2 ---(MCR>) Master Control Relay Off=Master_Control_Relay_einschalten_ausschalten
+2 ---(MCRA) Master Control Relay Activate=Master_Control_Relay_Anfang_Ende
+2 ---(MCRD) Master Control Relay Deactivate=Master_Control_Relay_Anfang_Ende
+2 ---(RET)  Return=Springe_zur_ck
+1 Shift and Rotate Instructions
+2 Shift Instructions
+3 Overview of Shift Instructions=Schiebeoperationen__bersicht
+3 Shift Right Integer=Ganzzahl_rechts_schieben__16_Bit_
+3 Shift Right Double Integer=Ganzzahl_rechts_schieben__32_Bit_
+3 Shift Left Word=Links_schieben_16_Bit
+3 Shift Right Word=Rechts_schieben_16_Bit
+3 Shift Left Double_Word=Links_schieben_32_Bit
+3 Shift Right Double Word=Rechts_schieben_32_Bit
+2 Rotate Instructions
+3 Overview of Rotate Instructions=Rotieroperationen__bersicht
+3 Rotate Left Double Word=Links_rotieren_32_Bit
+3 Rotate Right Double Word=Rechts_rotieren_32_Bit
+1 Status Bit Instructions
+2 Overview of Status Bit Instructions=Statusbitoperationen__bersicht
+2 Exception Bit Overflow=St_rungsbit__berlauf
+2 Exception Bit Overflow Stored=St_rungsbit__berlauf_gespeichert
+2 Exception Bit Unordered=St_rungsbit_ung_ltige_Operation
+2 Exception Bit BR Memory=St_rungsbit_BIE_Register
+2 Result Bits=Ergebnisbits
+2 Evaluating the Bits of the Status Word with Integer Math Instructions=Auswerten_der_Bits_im_Statuswort_bei_Grundrechenoperationen
+2 Evaluating the Bits of the Status Word with Floating-Point Instructions=Auswerten_der_Bits_im_Statuswort_bei_Gleitpunktoperationen
+1 Timer Instructions
+2 Overview of Timer Instructions=Overview_of_Timer_Instructions
+2 Memory Areas and Components of a Timer=Speicherbereiche_und_Komponenten_einer_Zeit
+2 Assign Pulse Timer Parameters and Start=Zeit_als_Impuls_starten
+2 Assign Extended Pulse Timer Parameters and Start=Zeit_als_verl_ngerten_Impuls_starten
+2 Assign On-Delay Timer Parameters and Start=Zeit_als_Einschaltverz_gerung_starten
+2 Assign Retentive On-Delay Timer Parameters and Start=Zeit_als_speichernde_Einschaltverz_gerung_starten
+2 Assign Off-Delay Timer Parameters and Start=Zeit_als_Ausschaltverz_gerung_starten
+2 Start Pulse Timer=Operation__Zeit_als_Impuls_starten
+2 Start Extended Pulse Timer=Operation__Zeit_als_verl_ngerten_Impuls_starten
+2 Start On-Delay Timer=Operation__Zeit_als_Einschaltverz_gerung_starten
+2 Start Retentive On-Delay Timer=Operation__Zeit_als_speichernde_Einschaltverz_gerung_starten
+2 Start Off-Delay Timer=Operation__Zeit_als_Ausschaltverz_gerung_starten
+1 Word Logic Instructions
+2 Overview of Word Logic Instructions=Overview_of_Word_Logic_Instructions
+2 AND Word (Word)=UND_verkn_pfen_16_Bit
+2 OR Word (Word)=ODER_verkn_pfen_16_Bit
+2 Exclusive OR Word (Word)=EXKLUSIV_ODER_verkn_pfen_16_Bit
+2 AND Double Word (Word)=UND_verkn_pfen_32_Bit
+2 OR Double Word (Word)=ODER_verkn_pfen_32_Bit
+2 Exclusive OR Double Word (Word)=EXKLUSIV_ODER_verkn_pfen_32_Bit
+1 Programming Examples
+2 Overview of Programming Examples=Programmierbsp_bersicht
+2 Example: Bit Logic Instructions=Bitverkn_pfungen_Beispiel
+2 Example: Counter and Comparison Instructions=Z_hl_und_Vergleichsoperationen_Beispiel
+2 Example: Timer Instructions=Zeitoperationen_Beispiel
+2 Example: Integer Math Instructions=Arithmetische_Operationen_mit_Ganzzahlen_Beispiel
+2 Example: Word Logic Instructions=Wortverkn_pfungsoperationen_Beispiel
+1 Working with Function Block Diagram
+2 Types of Blocks=Bausteinarten
+2 EN/ENO Mechanism=EN_ENO_Mechanismus
+2 Parameter Transfer=Parameteruebergabe
+2 Addressing
+3 Absolute and Symbolic Addressing=Absolute_und_symbolische_Adressierung
+3 Direct Addressing=Direkte_Adressierung
+3 Immediate Addressing=Unmittelbare_Adressierung
+3 Process Images (Input and Output Memory Areas)=Proze_abbilder__Speicherbereich_der_Ein__und_Ausg_nge_
+3 Direct Access to the Peripheral I/Os (PI and PQ Memory Areas)=Direkter_Zugriff_auf_die_Peripherie__Speicherbereiche_PE_und_PA_
+3 Entering and Displaying Constants=Eingeben_und_Anzeigen_von_Konstanten
+3 Summary of the Bit, Byte, Word and Double Word Identifiers=Zusammenfassung_der_Bit___Byte___Wort__und_Doppelwortkennungen
+3 Identifiers of Elements and Blocks=Kennungen_von_Elementen_und_Bausteinen
+3 Absolute Addressing=Absolute_Adressierung
+3 Symbolic Addressing=Symbolische_Adressierung
+2 Status Word
+3 Status Word=Statuswort
+3 First Check Bit (Status Word, Bit 0)=Erstabfragebit__Statuswort__Bit_0_
+3 RLO Result of Logic Operation (Status Word, Bit 1)=VKE_Verkn_pfungsergebnis__Statuswort__Bit_1_
+3 STA Status Bit  (Status Word, Bit 2)=STA_Statusbit__Statuswort__Bit_2_
+3 OR  (Status Word, Bit 3)=OR__Statuswort__Bit_3_
+3 OS  Stored Overflow (Status Word, Bit 4)=OS__berlauf__speichernd__Statuswort__Bit_4_
+3 OV  Overflow (Status Word, Bit 5)=OV__berlauf__Statuswort__Bit_5_
+3 CC1, CC0 Condition Code Bits (Status Word, Bits 6 and 7)=A1__A0_Anzeigenbits__Statuswort__Bits_6_und_7_
+3 CC1 and CC0: Results of Math Instructions=A1_und_A0__Ergebnisse_aus_arithmetischen_Operationen
+3 CC1 and CC0: Results of Comparison Instructions=A1_und_A0__Ergebnisse_aus_Vergleichsoperationen
+3 CC1 and CC0: Results of Shift and Rotate Instructions=A1_und_A0__Ergebnisse_aus_Schiebe__und_Rotieroperationen
+3 CC1 and CC0: Results of Word Logic instructions=A1_und_A0__Ergebnisse_aus_Wortverkn_pfungsoperationen
+3 BR Binary Result Bit (Status Word, Bit 8)=BIE_Bin_rergebnisbit__Statuswort__Bit_8_
+2 Data Types
+3 Data Types=Datentypen
+3 Elementary Data Types=Elementare_Typen
+3 Complex Data Types=Zusammengesetzte_Typen
+3 Parameter Types=Parametertypen
+3 ARRAY Data Type=Datentyp_ARRAY
+3 BOOL Data Type=Datentyp_BOOL
+3 BYTE Data Type=Datentyp_BYTE
+3 CHAR Data Type=Datentyp_CHAR
+3 DATE Data Type=Datentyp_DATE
+3 DATE AND TIME Data Type=Datentyp_DATE_AND_TIME
+3 DINT Data Type=Datentyp_DINT
+3 DWORD Data Type=Datentyp_DWORD
+3 INT Data Type=Datentyp_INT
+3 REAL Data Type=Datentyp_REAL
+3 S5TIME Data Type=Datentyp_S5TIME
+3 STRING Data Type=Datentyp_STRING
+3 STRUCT Data Type=Datentyp_STRUCT
+3 TIME Data Type=Datentyp_TIME
+3 TIME OF DAY Data Type=Datentyp_TIME_OF_DAY
+3 UDT Data Type=Datentyp_UDT
+3 WORD Data Type=Datentyp_WORD
+1 CPU Information
+2 Addresses: CPU-Specific Address Areas=Operanden__CPU_spezifische_Adre_bereiche
+2 CPU Registers=Register_der_CPU
+2 Accumulators=Akkumulatoren
+2 CPU Resources=Ressourcen_der_CPU
+2 Integrated System Functions SFB/SFC=Integrierte_Systemfunktionen__SFB__SFC_

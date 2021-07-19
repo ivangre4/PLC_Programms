@@ -1,0 +1,2219 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EXPORT>
+
+ <EXPORT_XML>
+
+  <Instructions>
+    <Instruction>version="1.0" encoding="UTF-8"</Instruction>
+  </Instructions>
+
+  <Comments>
+    <Comment>S7-PDIAG Source created at:</Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-PDIAG Container Attributes                                             *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>610A6	= Initial Value Acquisition </Comment>
+    <Comment>61056	= Aux networks </Comment>
+    <Comment>6105B	= Using outputs </Comment>
+    <Comment>6105C	= Data in PLC </Comment>
+    <Comment>6105A	= Overwrite instances </Comment>
+    <Comment>61057	= Preset final positions </Comment>
+    <Comment>61006	= Update message texts </Comment>
+    <Comment>6102E	= Record Associated Value </Comment>
+    <Comment>61023	= Display warnings </Comment>
+    <Comment>61058	= Call User Block </Comment>
+    <Comment>61078	= User Block FB </Comment>
+    <Comment>61079	= User Block DB </Comment>
+    <Comment>61059	= Storage Active </Comment>
+    <Comment>61065	= Storage Number </Comment>
+    <Comment>80000002	= Groupname </Comment>
+    <Comment>80000007	= Groupnumber </Comment>
+    <Comment>80000003	= Error Detection FB </Comment>
+    <Comment>80000004	= Error Detection DB </Comment>
+    <Comment>80000005	= Initial Value FB </Comment>
+    <Comment>80000006	= Initial Value DB </Comment>
+    <Comment>61077	= Exclusion Addresses (abs) </Comment>
+    <Comment>610EA	= Exclusion Addresses (sym) </Comment>
+    <Comment>610F4	= Termination Addresses (abs) </Comment>
+    <Comment>610F5	= Termination Addresses (sym) </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-PDIAG, S7-Graph, S7-HiGraph Unit Attributes                            *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>VDisp	= Virtual Displacement </Comment>
+    <Comment>6109D	= Original Name </Comment>
+    <Comment>8006109D	= Original Name (abs) </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+    <Comment>61050 	= Group Error Display </Comment>
+    <Comment>61051 	= Acknowledgement </Comment>
+    <Comment>61052 	= Operating Mode Display </Comment>
+    <Comment>61053 	= Operating Mode Selection </Comment>
+    <Comment>6100E 	= Display ID </Comment>
+    <Comment>61062 	= Belongs to Image </Comment>
+    <Comment>61063 	= Position in Image </Comment>
+    <Comment>6108D - 9C	= Name of Operating Mode1-16 </Comment>
+    <Comment>61077	= Exclusion Addresses (abs) </Comment>
+    <Comment>610EA	= Exclusion Addresses (sym) </Comment>
+    <Comment>610F4	= Termination Addresses (abs) </Comment>
+    <Comment>610F5	= Termination Addresses (sym) </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-PDIAG, S7-Graph, S7-HiGraph Motion Attributes                          *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>6109D	= Original Name </Comment>
+    <Comment>8006109D	= Original Name (abs) </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+    <Comment>61050 	= Group Error Display </Comment>
+    <Comment>61062 	= Belongs to Image </Comment>
+    <Comment>61063 	= Position in Image </Comment>
+    <Comment>6107B	= Text Direction1 </Comment>
+    <Comment>610AF	= Contr. address dir.1 </Comment>
+    <Comment>6107C	= Text Direction2 </Comment>
+    <Comment>610B0	= Contr. address dir.2 </Comment>
+    <Comment>610B6 - C5	= Use of Final Position 1-16 </Comment>
+    <Comment>6107D - 8C	= Name of Final Position 1-16 </Comment>
+    <Comment>610C6 - D5	= Address of Final Position 1-16 </Comment>
+    <Comment>610D6 - E5	= Symbolic address of Final Position 1-16</Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-Graph Step Attributes                                                  *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>61061	= Object Number </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-HiGraph State Attributes                                               *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>61061	= Object Number </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-Graph, S7-HiGraph Transition Attributes                                *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>61061	= Object Number </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-PDIAG Error Definition                                                 *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+    <Comment>61010 	= Monitoring Definition Type </Comment>
+    <Comment>6100C	= Initial Diagnostic Address (abs) </Comment>
+    <Comment>6100B	= Initial Diagnostic Address (sym) </Comment>
+    <Comment>61014 	= Error Recognition </Comment>
+    <Comment>80061103 	= Logic (abs) </Comment>
+    <Comment>61103 	= Logic (sym) </Comment>
+    <Comment>80061038	= Time (abs) </Comment>
+    <Comment>80061102	= Time (abs) </Comment>
+    <Comment>61038	= Time (sym) </Comment>
+    <Comment>61102	= Time (sym) </Comment>
+    <Comment>61016	= Initial Value Detection </Comment>
+    <Comment>61018	= Criteria Analysis </Comment>
+    <Comment>6102B	= Process Variable (abs) </Comment>
+    <Comment>6102A	= Process Variable (sym) </Comment>
+    <Comment>6102E	= Record Associated Value </Comment>
+    <Comment>610A3	= Alarm_S Acknowledgement </Comment>
+    <Comment>61004	= Source of alarm text </Comment>
+    <Comment>61104	= Message Number </Comment>
+    <Comment>61105	= Message Text </Comment>
+    <Comment>61107	= Message Priority </Comment>
+    <Comment>80061108 	= Trigger (abs)</Comment>
+    <Comment>61108 	= Trigger (sym)</Comment>
+    <Comment>61029 	= Type Error Definition </Comment>
+    <Comment>61066 	= Type </Comment>
+    <Comment>61067 	= Type Block Number </Comment>
+    <Comment>61068 	= Block Type </Comment>
+    <Comment>61069 	= Block Number </Comment>
+    <Comment>61113 	= Monitoring status </Comment>
+    <Comment>61114 	= Acknowledgement status </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-PDIAG Template Error Definition                                        *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>61010 	= Monitoring Definition Type </Comment>
+    <Comment>61014 	= Error Recognition </Comment>
+    <Comment>61103 	= Logic </Comment>
+    <Comment>61102	= Time </Comment>
+    <Comment>61016	= Initial Value Detection </Comment>
+    <Comment>61018	= Criteria Analysis </Comment>
+    <Comment>6102B	= Process Variable (abs) </Comment>
+    <Comment>6102A	= Process Variable (sym) </Comment>
+    <Comment>6102E	= Record Associated Value </Comment>
+    <Comment>610A3	= Alarm_S Acknowledgement </Comment>
+    <Comment>61004	= Source of alarm text </Comment>
+    <Comment>61108 	= Trigger </Comment>
+    <Comment>61113 	= Monitoring status </Comment>
+    <Comment>61114 	= Acknowledgement status </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>* S7-Graph, S7-HiGraph Error Definition                                     *</Comment>
+    <Comment>*****************************************************************************</Comment>
+    <Comment>1001	= Name </Comment>
+    <Comment>1005	= Creator </Comment>
+    <Comment>1003	= Date Created </Comment>
+    <Comment>1004	= Date Modified </Comment>
+    <Comment>1006	= Comment </Comment>
+    <Comment>6107A	= Is Member of Group </Comment>
+    <Comment>61010	= Error Type </Comment>
+    <Comment>61038	= Supervision Condition </Comment>
+    <Comment>61016	= Initial Value Detection </Comment>
+    <Comment>61018	= Criteria Analysis </Comment>
+    <Comment>61104	= Message Number </Comment>
+    <Comment>61105	= Message Text </Comment>
+
+    <Comment>*****************************************************************************</Comment>
+    <Comment>*                                                                           *</Comment>
+    <Comment>*****************************************************************************</Comment>
+
+</Comments>
+
+  <Object name="Container" rid="0x00116001">
+  </Object>
+
+  <Object name="Globals" rid="0x00161001">
+     <Sequence name="ObjAttrSeq">
+       <ObjAttr ref="A1TML"/>
+       <ObjAttr ref="A4"/>
+       <ObjAttr ref="A5"/>
+       <ObjAttr ref="P14"/>
+       <ObjAttr ref="P18"/>
+       <ObjAttr ref="P10"/>
+       <ObjAttr ref="P11"/>
+       <ObjAttr ref="P33"/>
+       <ObjAttr ref="P19"/>
+       <ObjAttr ref="P34"/>
+       <ObjAttr ref="P38"/>
+       <ObjAttr ref="P9"/>
+       <ObjAttr ref="P20"/>
+       <ObjAttr ref="P21"/>
+       <ObjAttr ref="P22"/>
+       <ObjAttr ref="P31"/>
+       <ObjAttr ref="P32"/>
+       <ObjAttr ref="P2"/>
+       <ObjAttr ref="P7"/>
+       <ObjAttr ref="P3"/>
+       <ObjAttr ref="P4"/>
+       <ObjAttr ref="P5"/>
+       <ObjAttr ref="P6"/>
+       <ObjAttr ref="P36"/>
+       <ObjAttr ref="P37"/>
+       <ObjAttr ref="P40"/>
+       <ObjAttr ref="P41"/>
+     </Sequence>
+  </Object>
+
+  <Object name="Templates" rid="0x00161002">
+  </Object>
+
+  <Object name="Unit" rid="0x00161101">
+
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="Block" type="V" seq="0">S7UP_AVSOURCEBLOCK</TagAttr>
+       <TagAttr name="Type" type="V" seq="1">S7UP_ASOBLKTYPE</TagAttr>
+       <TagAttr name="Num" type="V" seq="2">S7UP_ASOBLKNR</TagAttr>
+       <TagAttr name="TypeBType" type="V" seq="3">S7UP_ASOTYPEBLKTYPE</TagAttr>
+       <TagAttr name="TypeBNum" type="V" seq="4">S7UP_ASOTYPEBLKNR</TagAttr>
+     </Sequence>
+
+     <Sequence name="ObjAttrSeq">
+       <ObjAttr ref="A1TMLN"/>
+       <ObjAttr ref="A4N"/>
+       <ObjAttr ref="A5N"/>
+       <ObjAttr ref="A2TMLN"/>
+       <ObjAttr ref="A3TMLN"/>
+       <ObjAttr ref="A6"/>
+       <ObjAttr ref="A6ABS"/>
+       <ObjAttr ref="U30"/>
+       <ObjAttr ref="M5"/>
+       <ObjAttr ref="U7"/>
+       <ObjAttr ref="U9"/>
+       <ObjAttr ref="U11"/>
+       <ObjAttr ref="M9"/>
+       <ObjAttr ref="M10"/>
+       <ObjAttr ref="M11"/>
+       <ObjAttr ref="UB1"/>
+       <ObjAttr ref="UB2"/>
+       <ObjAttr ref="UB3"/>
+       <ObjAttr ref="UB4"/>
+       <ObjAttr ref="UB5"/>
+       <ObjAttr ref="UB6"/>
+       <ObjAttr ref="UB7"/>
+       <ObjAttr ref="UB8"/>
+       <ObjAttr ref="UB9"/>
+       <ObjAttr ref="UB10"/>
+       <ObjAttr ref="UB11"/>
+       <ObjAttr ref="UB12"/>
+       <ObjAttr ref="UB13"/>
+       <ObjAttr ref="UB14"/>
+       <ObjAttr ref="UB15"/>
+       <ObjAttr ref="UB16"/>
+       <ObjAttr ref="P36"/>
+       <ObjAttr ref="P37"/>
+       <ObjAttr ref="P40"/>
+       <ObjAttr ref="P41"/>
+     </Sequence>
+
+  </Object>
+
+  <Object name="Motion" rid="0x00161103">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="Type" type="V" seq="0">S7UP_AVSOURCEBLOCK</TagAttr>
+       <TagAttr name="BlockType" type="V" seq="1">S7UP_ASOBLKTYPE</TagAttr>
+       <TagAttr name="BlockNum" type="V" seq="2">S7UP_ASOBLKNR</TagAttr>
+     </Sequence>
+     <Sequence name="ObjAttrSeq">
+       <ObjAttr ref="A1TMLN"/>
+       <ObjAttr ref="A4N"/>
+       <ObjAttr ref="A5N"/>
+       <ObjAttr ref="A2TMLN"/>
+       <ObjAttr ref="A3TMLN"/>
+       <ObjAttr ref="A6"/>
+       <ObjAttr ref="A6ABS"/>
+       <ObjAttr ref="U30"/>
+       <ObjAttr ref="M5"/>
+       <ObjAttr ref="M10"/>
+       <ObjAttr ref="M11"/>
+       <ObjAttr ref="M15"/>
+       <ObjAttr ref="M17"/>
+       <ObjAttr ref="M16"/>
+       <ObjAttr ref="M18"/>
+       <ObjAttr ref="ME1"/>
+       <ObjAttr ref="MU1"/>
+       <ObjAttr ref="MA1"/>
+       <ObjAttr ref="MS1"/>
+       <ObjAttr ref="ME2"/>
+       <ObjAttr ref="MU2"/>
+       <ObjAttr ref="MA2"/>
+       <ObjAttr ref="MS2"/>
+       <ObjAttr ref="ME3"/>
+       <ObjAttr ref="MU3"/>
+       <ObjAttr ref="MA3"/>
+       <ObjAttr ref="MS3"/>
+       <ObjAttr ref="ME4"/>
+       <ObjAttr ref="MU4"/>
+       <ObjAttr ref="MA4"/>
+       <ObjAttr ref="MS4"/>
+       <ObjAttr ref="ME5"/>
+       <ObjAttr ref="MU5"/>
+       <ObjAttr ref="MA5"/>
+       <ObjAttr ref="MS5"/>
+       <ObjAttr ref="ME6"/>
+       <ObjAttr ref="MU6"/>
+       <ObjAttr ref="MA6"/>
+       <ObjAttr ref="MS6"/>
+       <ObjAttr ref="ME7"/>
+       <ObjAttr ref="MU7"/>
+       <ObjAttr ref="MA7"/>
+       <ObjAttr ref="MS7"/>
+       <ObjAttr ref="ME8"/>
+       <ObjAttr ref="MU8"/>
+       <ObjAttr ref="MA8"/>
+       <ObjAttr ref="MS8"/>
+       <ObjAttr ref="ME9"/>
+       <ObjAttr ref="MU9"/>
+       <ObjAttr ref="MA9"/>
+       <ObjAttr ref="MS9"/>
+       <ObjAttr ref="ME10"/>
+       <ObjAttr ref="MU10"/>
+       <ObjAttr ref="MA10"/>
+       <ObjAttr ref="MS10"/>
+       <ObjAttr ref="ME11"/>
+       <ObjAttr ref="MU11"/>
+       <ObjAttr ref="MA11"/>
+       <ObjAttr ref="MS11"/>
+       <ObjAttr ref="ME12"/>
+       <ObjAttr ref="MU12"/>
+       <ObjAttr ref="MA12"/>
+       <ObjAttr ref="MS12"/>
+       <ObjAttr ref="ME13"/>
+       <ObjAttr ref="MU13"/>
+       <ObjAttr ref="MA13"/>
+       <ObjAttr ref="MS13"/>
+       <ObjAttr ref="ME14"/>
+       <ObjAttr ref="MU14"/>
+       <ObjAttr ref="MA14"/>
+       <ObjAttr ref="MS14"/>
+       <ObjAttr ref="ME15"/>
+       <ObjAttr ref="MU15"/>
+       <ObjAttr ref="MA15"/>
+       <ObjAttr ref="MS15"/>
+       <ObjAttr ref="ME16"/>
+       <ObjAttr ref="MU16"/>
+       <ObjAttr ref="MA16"/>
+       <ObjAttr ref="MS16"/>
+     </Sequence>
+  </Object>
+
+  <Object name="Step" rid="0x00161104" >
+     <Sequence name="ObjAttrSeq">
+     </Sequence>
+  </Object>
+
+  <Object name="Transition" rid="0x00161105" >
+     <Sequence name="ObjAttrSeq">
+     </Sequence>
+  </Object>
+
+  <Object name="State" rid="0x00161106" >
+     <Sequence name="ObjAttrSeq">
+       <ObjAttr ref="A1N"/>
+       <ObjAttr ref="A2N"/>
+       <ObjAttr ref="A4N"/>
+       <ObjAttr ref="A5N"/>
+       <ObjAttr ref="A3N"/>
+       <ObjAttr ref="U42"/>
+       <ObjAttr ref="U30"/>
+     </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x01">
+     <Sequence name="ObjAttrSeq">
+     </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x02">
+     <Sequence name="ObjAttrSeq">
+      </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x03">
+     <Sequence name="ObjAttrSeq">
+     </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x04">
+     <Sequence name="ObjAttrSeq">
+      </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x05">
+     <Sequence name="ObjAttrSeq">
+      </Sequence>
+  </Object>
+
+  <Object name="Fdef" rid="0x00161102" subid="0x06">
+     <Sequence name="ObjAttrSeq">
+      </Sequence>
+  </Object>
+
+  <Object name="Fdefa" rid="0x00161108" >
+     <Sequence name="ObjAttrSeq">
+     </Sequence>
+  </Object>
+
+ </EXPORT_XML>
+
+ <AttrTypeSeq>
+
+   <!-- Liste der Attributtypen -->
+
+   <!-- At allgemein -->
+
+   <AttrType name="At" rid="A1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1001</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Name</TagAttr>
+       <TagVal type="V">S7UP_ANAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A1N" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1001</TagAttr>
+       <TagVal type="V">S7UP_ANAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A1TML" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1001</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Name</TagAttr>
+       <TagVal type="V">S7TML_ANAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A1TMLN" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1001</TagAttr>
+       <TagVal type="V">S7TML_ANAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1005</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Author</TagAttr>
+       <TagVal type="V">S7UP_ACREATOR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A2N" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1005</TagAttr>
+       <TagVal type="V">S7UP_ACREATOR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A2TML" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1005</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Author</TagAttr>
+       <TagVal type="V">S7TML_ACREATOR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A2TMLN" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1005</TagAttr>
+       <TagVal type="V">S7TML_ACREATOR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A3">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1006</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Comment</TagAttr>
+       <TagVal type="V">S7UP_ACOMMENT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A3N">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1006</TagAttr>
+       <TagVal type="V">S7UP_ACOMMENT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A3TML">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1006</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Comment</TagAttr>
+       <TagVal type="V">S7TML_ACOMMENT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A3TMLN">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1006</TagAttr>
+       <TagVal type="V">S7TML_ACOMMENT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1003</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Date Created</TagAttr>
+       <TagVal type="V">S7UP_ACRDATE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A4N" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1003</TagAttr>
+       <TagVal type="V">S7UP_ACRDATE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A4D" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1003</TagAttr>
+       <TagVal type="V">S7UP_ACRDATE_D</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A4T" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1003</TagAttr>
+       <TagVal type="V">S7UP_ACRDATE_T</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1004</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Date Modified</TagAttr>
+       <TagVal type="V">S7UP_ALMDATE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A5N" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1004</TagAttr>
+       <TagVal type="V">S7UP_ALMDATE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A5D" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1004</TagAttr>
+       <TagVal type="V">S7UP_ALMDATE_D</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A5T" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1004</TagAttr>
+       <TagVal type="V">S7UP_ALMDATE_T</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A6">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6109D</TagAttr>
+       <TagVal type="V">S7UP_ASOORGNAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="A6ABS">
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">8006109D</TagAttr>
+       <TagVal type="V">S7UP_ASOORGNAME_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <!-- At PDiag Container -->
+
+   <AttrType name="At" rid="P1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000001</TagAttr>
+       <TagAttr name="n" type="C" seq="1">BlockName</TagAttr>
+       <TagVal type="V">S7PD_AROOTNAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000002</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Groupname</TagAttr>
+       <TagVal type="V">S7PD_AGROUPNAME</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000003</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Error Detection FB</TagAttr>
+       <TagVal type="V">S7PD_AFEFBNUM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000004</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Error Detection DB</TagAttr>
+       <TagVal type="V">S7PD_AFEDBNUM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000005</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Init Value FB</TagAttr>
+       <TagVal type="V">S7PD_AEWFBNUM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000006</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Init Value DB</TagAttr>
+       <TagVal type="V">S7PD_AEWDBNUM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80000007</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Groupnumber</TagAttr>
+       <TagVal type="V">S7PD_AGROUPNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61022</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Overwrite instances</TagAttr>
+       <TagVal type="V">S7UP_AINSTANZALL</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61023</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Display warnings</TagAttr>
+       <TagVal type="V">S7UP_AWARNINGLEVEL</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6105B</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Using outputs</TagAttr>
+       <TagVal type="V">S7UP_AAUSGANGEINSETZEN</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6105C</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Data in PLC</TagAttr>
+       <TagVal type="V">S7UP_ANORMALFORMNEU</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610A3</TagAttr>
+       <TagAttr name="n" type="C" seq="1">With ackn</TagAttr>
+       <TagVal type="V">S7UP_AALARMSQUITT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610A6</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Initial Value Acquisition</TagAttr>
+       <TagVal type="V">S7UP_AEESTATUS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61054</TagAttr>
+       <TagAttr name="n" type="C" seq="1">TimeModi</TagAttr>
+       <TagVal type="V">S7UP_AONLMODTIMEENABLE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P18" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61056</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Aux networks</TagAttr>
+       <TagVal type="V">S7UP_AHNWEINSETZEN</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P19" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61057</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Preset final positions</TagAttr>
+       <TagVal type="V">S7UP_AELNEINSETZEN</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P20" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61058</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Call User Block</TagAttr>
+       <TagVal type="V">S7UP_AANWFBCALL</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P21" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61078</TagAttr>
+       <TagAttr name="n" type="C" seq="1">User Block FB</TagAttr>
+       <TagVal type="V">S7UP_AANWFBNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P22" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61079</TagAttr>
+       <TagAttr name="n" type="C" seq="1">User Block DB</TagAttr>
+       <TagVal type="V">S7UP_AANWDBNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P31" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61059</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Storage Active</TagAttr>
+       <TagVal type="V">S7UP_AMWPRIOAKTIV</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P32" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61065</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Storage Number</TagAttr>
+       <TagVal type="V">S7UP_AMWPRIONR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P33" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6105A</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Overwrite instances</TagAttr>
+       <TagVal type="V">S7UP_AREBUILDINSTANZ</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P34" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61006</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Update message texts</TagAttr>
+       <TagVal type="V">S7UP_AREFRESHMELDETEXT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P36" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61077</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Exclusion Addresses (abs)</TagAttr>
+       <TagVal type="V">S7UP_AOPABSLIST</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P37" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610EA</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Exclusion Addresses (sym)</TagAttr>
+       <TagVal type="V">S7UP_AOPSYMLIST</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P38" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102E</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Record Associated Value</TagAttr>
+       <TagVal type="V">S7UP_APWAKTIV</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P40" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610F4</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Termination Addresses (abs)</TagAttr>
+       <TagVal type="V">S7UP_AABBOPABSLIST</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="P41" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610F5</TagAttr>
+       <TagAttr name="n" type="C" seq="1">Termination Addresses (sym)</TagAttr>
+       <TagVal type="V">S7UP_AABBOPSYMLIST</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <!-- At Einheit -->
+
+   <AttrType name="At" rid="U1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100B</TagAttr>
+       <TagVal type="V">S7UP_AOPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61202</TagAttr>
+       <TagVal type="V">S7UP_AOPSYMEXT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100C</TagAttr>
+       <TagVal type="V">S7UP_AOPABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106C</TagAttr>
+       <TagVal type="V">S7UP_ASOADRSF</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106D</TagAttr>
+       <TagVal type="V">S7UP_ASOADRQUIT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61051</TagAttr>
+       <TagVal type="V">S7UP_ASOEINQUIT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106E</TagAttr>
+       <TagVal type="V">S7UP_ASOADRBA</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61052</TagAttr>
+       <TagVal type="V">S7UP_ASOSHOWBA</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106F</TagAttr>
+       <TagVal type="V">S7UP_ASOADRBAANW</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61053</TagAttr>
+       <TagVal type="V">S7UP_ASOEINBAANW</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61072</TagAttr>
+       <TagVal type="V">S7UP_ASOABSADRSTRUKT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61073</TagAttr>
+       <TagVal type="V">S7UP_ASOSYMADRSTRUKT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U17" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106A</TagAttr>
+       <TagVal type="V">S7UP_ASOVERSION</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U18" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61075</TagAttr>
+       <TagVal type="V">S7UP_ASOABSADRDB</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U19" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61076</TagAttr>
+       <TagVal type="V">S7UP_ASOSYMADRDB</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U26" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61066</TagAttr>
+       <TagVal type="V">S7UP_ASOTYPEBLKTYPE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U27" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61067</TagAttr>
+       <TagVal type="V">S7UP_ASOTYPEBLKNR</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U28" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61068</TagAttr>
+       <TagVal type="V">S7UP_ASOBLKTYPE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="U29" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61069</TagAttr>
+       <TagVal type="V">S7UP_ASOBLKNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U30" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107A</TagAttr>
+       <TagVal type="V">S7UP_AGROUP</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U31" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61009</TagAttr>
+       <TagVal type="V">S7UP_APROJTOOL</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U41" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">1008</TagAttr>
+       <TagVal type="V">S7UP_AVERSION</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="U42" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61061</TagAttr>
+       <TagVal type="V">S7UP_ASONR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="UB1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108D</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME1</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108E</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME2</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108F</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME3</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61090</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME4</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61091</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME5</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61092</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME6</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61093</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME7</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61094</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME8</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61095</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME9</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61096</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME11</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61097</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME11</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61098</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME12</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61099</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME13</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6109A</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME14</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6109B</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME15</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="UB16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6109C</TagAttr>
+       <TagVal type="V">S7UP_ASOBANAME16</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <!-- At Bewegung -->
+
+   <AttrType name="At" rid="M1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100B</TagAttr>
+       <TagVal type="V">S7UP_AOPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61202</TagAttr>
+       <TagVal type="V">S7UP_AOPSYMEXT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100C</TagAttr>
+       <TagVal type="V">S7UP_AOPABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106C</TagAttr>
+       <TagVal type="V">S7UP_ASOADRSF</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61050</TagAttr>
+       <TagVal type="V">S7UP_ASOSHOWSF</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61072</TagAttr>
+       <TagVal type="V">S7UP_ASOABSADRSTRUKT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61073</TagAttr>
+       <TagVal type="V">S7UP_ASOSYMADRSTRUKT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6106A</TagAttr>
+       <TagVal type="V">S7UP_ASOVERSION</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100E</TagAttr>
+       <TagVal type="V">S7UP_ASHOW</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61062</TagAttr>
+       <TagVal type="V">S7UP_ABILDNR</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61063</TagAttr>
+       <TagVal type="V">S7UP_ABILDPOSNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61068</TagAttr>
+       <TagVal type="V">S7UP_ASOBLKTYPE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61069</TagAttr>
+       <TagVal type="V">S7UP_ASOBLKNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107A</TagAttr>
+       <TagVal type="V">S7UP_AGROUP</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="M15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107B</TagAttr>
+       <TagVal type="V">S7UP_ASOTEXTRI1</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107C</TagAttr>
+       <TagVal type="V">S7UP_ASOTEXTRI2</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M17" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610AF</TagAttr>
+       <TagVal type="V">S7UP_AAUSBEWRI1</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="M18" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610B0</TagAttr>
+       <TagVal type="V">S7UP_AAUSBEWRI2</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <!-- At Bewegung für Endlagen 1..16 -->
+
+   <AttrType name="At" rid="ME1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107D</TagAttr>
+       <TagVal type="V">S7UP_ASOEL1</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610B6</TagAttr>
+       <TagVal type="V">S7UP_ASOEL1HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C6</TagAttr>
+       <TagVal type="V">S7UP_ASOEL1OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D6</TagAttr>
+       <TagVal type="V">S7UP_ASOEL1OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107E</TagAttr>
+       <TagVal type="V">S7UP_ASOEL2</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610B7</TagAttr>
+       <TagVal type="V">S7UP_ASOEL2HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C7</TagAttr>
+       <TagVal type="V">S7UP_ASOEL2OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D7</TagAttr>
+       <TagVal type="V">S7UP_ASOEL2OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107F</TagAttr>
+       <TagVal type="V">S7UP_ASOEL3</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610B8</TagAttr>
+       <TagVal type="V">S7UP_ASOEL3HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C8</TagAttr>
+       <TagVal type="V">S7UP_ASOEL3OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D8</TagAttr>
+       <TagVal type="V">S7UP_ASOEL3OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61080</TagAttr>
+       <TagVal type="V">S7UP_ASOEL4</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610B9</TagAttr>
+       <TagVal type="V">S7UP_ASOEL4HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C9</TagAttr>
+       <TagVal type="V">S7UP_ASOEL4OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D9</TagAttr>
+       <TagVal type="V">S7UP_ASOEL4OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61081</TagAttr>
+       <TagVal type="V">S7UP_ASOEL5</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BA</TagAttr>
+       <TagVal type="V">S7UP_ASOEL5HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CA</TagAttr>
+       <TagVal type="V">S7UP_ASOEL5OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DA</TagAttr>
+       <TagVal type="V">S7UP_ASOEL5OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61082</TagAttr>
+       <TagVal type="V">S7UP_ASOEL6</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BB</TagAttr>
+       <TagVal type="V">S7UP_ASOEL6HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CB</TagAttr>
+       <TagVal type="V">S7UP_ASOEL6OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DB</TagAttr>
+       <TagVal type="V">S7UP_ASOEL6OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61083</TagAttr>
+       <TagVal type="V">S7UP_ASOEL7</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BC</TagAttr>
+       <TagVal type="V">S7UP_ASOEL7HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CC</TagAttr>
+       <TagVal type="V">S7UP_ASOEL7OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DC</TagAttr>
+       <TagVal type="V">S7UP_ASOEL7OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61084</TagAttr>
+       <TagVal type="V">S7UP_ASOEL8</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BD</TagAttr>
+       <TagVal type="V">S7UP_ASOEL8HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CD</TagAttr>
+       <TagVal type="V">S7UP_ASOEL8OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DD</TagAttr>
+       <TagVal type="V">S7UP_ASOEL8OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61085</TagAttr>
+       <TagVal type="V">S7UP_ASOEL9</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BE</TagAttr>
+       <TagVal type="V">S7UP_ASOEL9HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CE</TagAttr>
+       <TagVal type="V">S7UP_ASOEL9OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DE</TagAttr>
+       <TagVal type="V">S7UP_ASOEL9OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61086</TagAttr>
+       <TagVal type="V">S7UP_ASOEL10</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610BF</TagAttr>
+       <TagVal type="V">S7UP_ASOEL10HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610CF</TagAttr>
+       <TagVal type="V">S7UP_ASOEL10OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610DF</TagAttr>
+       <TagVal type="V">S7UP_ASOEL10OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61087</TagAttr>
+       <TagVal type="V">S7UP_ASOEL11</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C0</TagAttr>
+       <TagVal type="V">S7UP_ASOEL11HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D0</TagAttr>
+       <TagVal type="V">S7UP_ASOEL11OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E0</TagAttr>
+       <TagVal type="V">S7UP_ASOEL11OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61088</TagAttr>
+       <TagVal type="V">S7UP_ASOEL12</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C1</TagAttr>
+       <TagVal type="V">S7UP_ASOEL12HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D1</TagAttr>
+       <TagVal type="V">S7UP_ASOEL12OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E1</TagAttr>
+       <TagVal type="V">S7UP_ASOEL12OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61089</TagAttr>
+       <TagVal type="V">S7UP_ASOEL13</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C2</TagAttr>
+       <TagVal type="V">S7UP_ASOEL13HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D2</TagAttr>
+       <TagVal type="V">S7UP_ASOEL13OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS13" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E2</TagAttr>
+       <TagVal type="V">S7UP_ASOEL13OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108A</TagAttr>
+       <TagVal type="V">S7UP_ASOEL14</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C3</TagAttr>
+       <TagVal type="V">S7UP_ASOEL14HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D3</TagAttr>
+       <TagVal type="V">S7UP_ASOEL14OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E3</TagAttr>
+       <TagVal type="V">S7UP_ASOEL14OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108B</TagAttr>
+       <TagVal type="V">S7UP_ASOEL15</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C4</TagAttr>
+       <TagVal type="V">S7UP_ASOEL15HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D4</TagAttr>
+       <TagVal type="V">S7UP_ASOEL15OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E4</TagAttr>
+       <TagVal type="V">S7UP_ASOEL15OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="ME16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6108C</TagAttr>
+       <TagVal type="V">S7UP_ASOEL16</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MU16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610C5</TagAttr>
+       <TagVal type="V">S7UP_ASOEL16HMIUSE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MA16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610D5</TagAttr>
+       <TagVal type="V">S7UP_ASOEL16OPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="MS16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610E5</TagAttr>
+       <TagVal type="V">S7UP_ASOEL16OPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <!-- At Fehlerdefinition -->
+
+   <AttrType name="At" rid="F1" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100B</TagAttr>
+       <TagVal type="V">S7UP_AOPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F1ABS" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">8006100B</TagAttr>
+       <TagVal type="V">S7UP_AOPSYM_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F2" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61202</TagAttr>
+       <TagVal type="V">S7UP_AOPSYMEXT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F3" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100C</TagAttr>
+       <TagVal type="V">S7UP_AOPABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F3SYM" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">8006100C</TagAttr>
+       <TagVal type="V">S7UP_AOPABS_SYM</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F4" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61011</TagAttr>
+       <TagVal type="V">S7UP_ADEOTYP</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F5" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6103A</TagAttr>
+       <TagVal type="V">S7UP_AFDDEOANZEIGE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F6" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61010</TagAttr>
+       <TagVal type="V">S7UP_AFEHLTYP</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F6P" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61010</TagAttr>
+       <TagVal type="V">S7PD_AFEHLTYP</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F7" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61039</TagAttr>
+       <TagVal type="V">S7UP_AFDBINLOGIK</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F8" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61038</TagAttr>
+       <TagVal type="V">S7UP_AFDLOGIK</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F8Z" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61038</TagAttr>
+       <TagVal type="V">S7UP_AFDLOGIK</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F8U" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61038</TagAttr>
+       <TagVal type="V">S7UP_AFDLOGIK</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F8ABS" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80061038</TagAttr>
+       <TagVal type="V">S7UP_AFDLOGIK_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F9" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61016</TagAttr>
+       <TagVal type="V">S7UP_AFDEWERF</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F9P" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61016</TagAttr>
+       <TagVal type="V">S7PD_AFDEWERF</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F10" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61018</TagAttr>
+       <TagVal type="V">S7UP_AFDKRITPOS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F10P" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61018</TagAttr>
+       <TagVal type="V">S7PD_AFDKRITPOS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F11" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61014</TagAttr>
+       <TagVal type="V">S7UP_AFDFEHERK</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F11P" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61014</TagAttr>
+       <TagVal type="V">S7PD_AFDFEHERK</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F12" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6100E</TagAttr>
+       <TagVal type="V">S7UP_ASHOW</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F14" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102A</TagAttr>
+       <TagVal type="V">S7UP_APWOPSYM</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F14ABS" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">8006102A</TagAttr>
+       <TagVal type="V">S7UP_APWOPSYM_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F15" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102B</TagAttr>
+       <TagVal type="V">S7UP_APWOPABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F15SYM" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">8006102B</TagAttr>
+       <TagVal type="V">S7UP_APWOPABS_SYM</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F16" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102C</TagAttr>
+       <TagVal type="V">S7UP_APWOPTYP</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F17" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102D</TagAttr>
+       <TagVal type="V">S7UP_APWANZEIGE</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F18" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6102E</TagAttr>
+       <TagVal type="V">S7UP_APWAKTIV</TagVal>
+     </Sequence>
+   </AttrType>
+
+
+   <AttrType name="At" rid="F26" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61029</TagAttr>
+       <TagVal type="V">S7UP_AFDFBFDEF</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F31" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">6107A</TagAttr>
+       <TagVal type="V">S7UP_AGROUP</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F41" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610A3</TagAttr>
+       <TagVal type="V">S7UP_AALARMQUITT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F41P" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">610A3</TagAttr>
+       <TagVal type="V">S7PD_AALARMQUITT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F43" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61004</TagAttr>
+       <TagVal type="V">S7UP_AMELDETEXTQUELLE</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F44" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61100</TagAttr>
+       <TagVal type="V">S7UP_AVUSERDEO</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F46" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61103</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKUSER</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F46ABS" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80061103</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKUSER_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F47V" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61102</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKZEIT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F47R" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61102</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKZEIT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F47A" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61102</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKZEIT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F47L" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61102</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKZEIT</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F47ABS" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">80061102</TagAttr>
+       <TagVal type="V">S7UP_AVFDLOGIKZEIT_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F48" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61105</TagAttr>
+       <TagVal type="V">S7UP_AVMELDTEXT</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F49" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61104</TagAttr>
+       <TagVal type="V">S7UP_AVMELDNR</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F50" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61107</TagAttr>
+       <TagVal type="V">S7UP_AVMELDPRIO</TagVal>
+     </Sequence>
+   </AttrType>
+
+   <AttrType name="At" rid="F51ABS" >
+     <Sequence name="TagAttrSeq">
+      <TagAttr name="id" type="C" seq="0">80061108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER_ABS</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F51T" >
+     <Sequence name="TagAttrSeq">
+      <TagAttr name="id" type="C" seq="0">61108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F51V" >
+     <Sequence name="TagAttrSeq">
+      <TagAttr name="id" type="C" seq="0">61108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F51R" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F51A" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER</TagVal>
+     </Sequence>
+   </AttrType>
+   <AttrType name="At" rid="F51L" >
+     <Sequence name="TagAttrSeq">
+       <TagAttr name="id" type="C" seq="0">61108</TagAttr>
+       <TagVal type="V">S7UP_AVAUSLOESER</TagVal>
+     </Sequence>
+   </AttrType>
+
+ </AttrTypeSeq>
+
+   <PdAts>
+
+     <!-- At allgemein -->
+     <!-- AttributID Datentyp Zugriffsfunktion freie Verfügung -->
+     <!-- Datentyp: -->
+     <!-- 1-String 2-Timestamp 3-Bool 4-Byte 5-Word 6-Long 8000001-Multilanguage String -->
+     <!-- Zugriffsfunktion für PDiag-Objekte: -->
+     <!-- 0-AUTGetAttr 1-AUTGetAttrEx 2-AUTGetAttrUserLevel -->
+     <!-- freie Verfügung: -->
+     <!-- 0-Konvertierung Timestamp in Date-String date-time format --> 
+     <!-- 1-Konvertierung Timestamp in Date-String date only --> 
+     <!-- 2-Konvertierung Timestamp in Date-String time only --> 
+     <!-- 3-Konvertierung Originalname symbolisch nach absolut --> 
+ 
+     <PA name="S7UP_ANAME">"1001 1 2 0"</PA>
+     <PA name="S7TML_ANAME">"1001 8000001 0 0"</PA>
+
+     <PA name="S7UP_ACREATOR">"1005 1 2 0"</PA>
+     <PA name="S7TML_ACREATOR">"1005 8000001 0 0"</PA>
+
+     <PA name="S7UP_ACOMMENT">"1006 1 2 0"</PA>
+     <PA name="S7TML_ACOMMENT">"1006 8000001 0 0"</PA>
+
+     <PA name="S7UP_ASOORGNAME">"6109D 1 0 0"</PA>
+     <PA name="S7UP_ASOORGNAME_ABS">"8006109D 1 0 3"</PA>
+
+     <PA name="S7UP_ACRDATE">"1003 2 0 0"</PA>
+     <PA name="S7UP_ALMDATE">"1004 2 0 0"</PA>
+     <PA name="S7UP_ACRDATE_D">"1003 2 0 1"</PA>
+     <PA name="S7UP_ACRDATE_T">"1003 2 0 2"</PA>
+     <PA name="S7UP_ALMDATE_D">"1004 2 0 1"</PA>
+     <PA name="S7UP_ALMDATE_T">"1004 2 0 2"</PA>
+
+     <PA name="S7UP_AOPSYM">"6100B 1 2 0"</PA>
+     <PA name="S7UP_AOPSYMEXT">"61202 1 2 0"</PA>
+     <PA name="S7UP_AOPABS">"6100C 1 2 0"</PA>
+
+     <PA name="S7UP_ASOBLKTYPE">"61068 5 0 0"</PA>
+     <PA name="S7UP_ASOBLKNR">"61069 5 0 0"</PA>
+
+     <PA name="S7UP_ASOVERSION">"6106A 6 0 0"</PA>
+     <PA name="S7UP_ASHOW">"0006100E 5 0 0"</PA>
+     <PA name="S7UP_AGROUP">"0006107A 5 0 0"</PA>
+
+     <PA name="S7UP_AVSOURCEBLOCK">"61106 1 2 0"</PA>
+
+     <!-- At PDiag Container -->
+
+     <PA name="S7PD_AROOTNAME">"80000001 1 0 0"</PA>
+     <PA name="S7PD_AGROUPNAME">"80000002 1 0 0"</PA>
+     <PA name="S7PD_AFEFBNUM">"80000003 1 0 0"</PA>
+     <PA name="S7PD_AFEDBNUM">"80000004 1 0 0"</PA>
+     <PA name="S7PD_AEWFBNUM">"80000005 1 0 0"</PA>
+     <PA name="S7PD_AEWDBNUM">"80000006 1 0 0"</PA>
+     <PA name="S7PD_AGROUPNR">"80000007 1 0 0"</PA>
+
+     <PA name="S7UP_AINSTANZALL">"61022 3 0 0"</PA>
+     <PA name="S7UP_AWARNINGLEVEL">"61023 3 0 0"</PA>
+     <PA name="S7UP_AAUSGANGEINSETZEN">"6105B 3 0 0"</PA>
+     <PA name="S7UP_ANORMALFORMNEU">"6105C 3 0 0"</PA>
+     <PA name="S7UP_ANORMALFORMNEUGEN">"6105D 3 0 0"</PA>
+     <PA name="S7UP_AALARMSQUITT">"610A3 3 0 0"</PA>
+     <PA name="S7UP_AEESTATUS">"610A6 3 0 0"</PA>
+     <PA name="S7UP_AONLMODTIMEENABLE">"61054 3 0 0"</PA>
+     <PA name="S7UP_AHNWEINSETZEN">"61056 3 0 0"</PA>
+     <PA name="S7UP_AELNEINSETZEN">"61057 3 0 0"</PA>
+
+     <PA name="S7UP_AREBUILDINSTANZ">"6105A 3 0 0"</PA>
+     <PA name="S7UP_AREFRESHMELDETEXT">"61006 3 0 0"</PA>
+
+     <PA name="S7UP_AANWFBCALL">"61058 3 0 0"</PA>
+     <PA name="S7UP_AANWFBNR">"61078 5 0 0"</PA>
+     <PA name="S7UP_AANWDBNR">"61079 5 0 0"</PA>
+     <PA name="S7UP_AMWPRIOAKTIV">"61059 3 0 0"</PA>
+     <PA name="S7UP_AMWPRIONR">"61065 6 0 0"</PA>
+
+     <PA name="S7UP_AOPABSLIST">"61077 1000001 0 0"</PA>
+     <PA name="S7UP_AOPSYMLIST">"610EA 4000001 0 0"</PA>
+     <PA name="S7UP_AABBOPABSLIST">"610F4 1000001 0 0"</PA>
+     <PA name="S7UP_AABBOPSYMLIST">"610F5 4000001 0 0"</PA>
+
+     <PA name="S7UP_APWAKTIV">"6102E 3 0 0"</PA>
+
+     <!-- At Einheit -->
+
+     <PA name="S7UP_ASOADRQUIT">"6106D 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEINQUIT">"61051 3 0 0"</PA>
+     <PA name="S7UP_ASOADRBA">"6106E 2000001 0 0"</PA>
+     <PA name="S7UP_ASOSHOWBA">"61052 3 0 0"</PA>
+     <PA name="S7UP_ASOADRBAANW">"6106F 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEINBAANW">"61053 3 0 0"</PA>
+
+     <PA name="S7UP_ASOADRAKTIVLIST">"61070 2000001 0 0"</PA>
+     <PA name="S7UP_ASOADRSTOERLIST">"61071 2000001 0 0"</PA>
+     <PA name="S7UP_ASOABSADREINTR">"61074 2000001 0 0"</PA>
+
+     <PA name="S7UP_ASONR">"61061 1 2 0"</PA>
+
+     <!-- Tag-At Einheit -->
+
+     <PA name="S7UP_ASOTYPEBLKTYPE">"61066 5 0 0"</PA>
+     <PA name="S7UP_ASOTYPEBLKNR">"61067 5 0 0"</PA>
+     <PA name="S7UP_APROJTOOL">"61009 6 0 0"</PA>
+     <PA name="S7UP_AVERSION">"1008 6 0 0"</PA>
+ 
+     <PA name="S7UP_ASOABSADRDB">"61075 2000001 0 0"</PA>
+     <PA name="S7UP_ASOSYMADRDB">"61076 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOBANAME1">"6108D 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME2">"6108E 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME3">"6108F 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME4">"61090 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME5">"61091 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME6">"61092 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME7">"61093 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME8">"61094 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME9">"61095 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME10">"61096 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME11">"61097 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME12">"61098 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME13">"61099 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME14">"6109A 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME15">"6109B 8000001 0 0"</PA>
+     <PA name="S7UP_ASOBANAME16">"6109C 8000001 0 0"</PA>
+
+     <!-- At Bewegung -->
+
+     <PA name="S7UP_ASOSHOWSF">"61050 3 0 0"</PA>
+     <PA name="S7UP_ASOADRSF">"6106C 2000001 0 0"</PA>
+
+     <PA name="S7UP_ASOABSADRSTRUKT">"61072 2000001 0 0"</PA>
+     <PA name="S7UP_ASOSYMADRSTRUKT">"61073 4000001 0 0"</PA>
+
+     <PA name="S7UP_ABILDNR">"61062 5 0 0"</PA>
+     <PA name="S7UP_ABILDPOSNR">"61063 5 0 0"</PA>
+
+     <PA name="S7UP_ASOTEXTRI1">"6107B 8000001 0 0"</PA>
+     <PA name="S7UP_ASOTEXTRI2">"6107C 8000001 0 0"</PA>
+     <PA name="S7UP_AAUSBEWRI1">"610AF 8000001 0 0"</PA>
+     <PA name="S7UP_AAUSBEWRI2">"610B0 8000001 0 0"</PA>
+
+     <!-- At Bewegung für Endlagen 1..16 -->
+
+     <PA name="S7UP_ASOEL1">"6107D 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL1HMIUSE">"610B6 6 0 0"</PA>
+     <PA name="S7UP_ASOEL1OPABS">"610C6 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL1OPSYM">"610D6 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL2">"6107E 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL2HMIUSE">"610B7 6 0 0"</PA>
+     <PA name="S7UP_ASOEL2OPABS">"610C7 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL2OPSYM">"610D7 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL3">"0006107F 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL3HMIUSE">"610B8 6 0 0"</PA>
+     <PA name="S7UP_ASOEL3OPABS">"610C8 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL3OPSYM">"610D8 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL4">"61080 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL4HMIUSE">"610B9 6 0 0"</PA>
+     <PA name="S7UP_ASOEL4OPABS">"610C9 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL4OPSYM">"610D9 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL5">"61081 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL5HMIUSE">"610BA 6 0 0"</PA>
+     <PA name="S7UP_ASOEL5OPABS">"610CA 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL5OPSYM">"610DA 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL6">"61082 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL6HMIUSE">"610BB 6 0 0"</PA>
+     <PA name="S7UP_ASOEL6PABS">"610CB 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL6PSYM">"610DB 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL7">"61083 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL7HMIUSE">"610BC 6 0 0"</PA>
+     <PA name="S7UP_ASOEL7OPABS">"610CC 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL7OPSYM">"610DC 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL8">"61084 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL8HMIUSE">"610BD 6 0 0"</PA>
+     <PA name="S7UP_ASOEL8OPABS">"610CD 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL8OPSYM">"610DD 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL9">"61085 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL9HMIUSE">"610BE 6 0 0"</PA>
+     <PA name="S7UP_ASOEL9OPABS">"610CE 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL9OPSYM">"610DE 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL10">"61086 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL10HMIUSE">"610BF 6 0 0"</PA>
+     <PA name="S7UP_ASOEL10OPABS">"610CF 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL10OPSYM">"610DF 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL11">"61087 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL11HMIUSE">"610C0 6 0 0"</PA>
+     <PA name="S7UP_ASOEL11OPABS">"610D0 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL11OPSYM">"610E0 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL12">"61088 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL12HMIUSE">"610C1 6 0 0"</PA>
+     <PA name="S7UP_ASOEL12OPABS">"610D1 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL12OPSYM">"610E1 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL13">"61089 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL13HMIUSE">"610C2 6 0 0"</PA>
+     <PA name="S7UP_ASOEL13OPABS">"610D2 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL13OPSYM">"610E2 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL14">"6108A 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL14HMIUSE">"610C3 6 0 0"</PA>
+     <PA name="S7UP_ASOEL14OPABS">"610D3 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL14OPSYM">"610E3 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL15">"6108B 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL15HMIUSE">"610C4 6 0 0"</PA>
+     <PA name="S7UP_ASOEL15OPABS">"610D4 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL15OPSYM">"610E4 4000001 0 0"</PA>
+
+     <PA name="S7UP_ASOEL16">"6108C 8000001 0 0"</PA>
+     <PA name="S7UP_ASOEL16HMIUSE">"610C5 6 0 0"</PA>
+     <PA name="S7UP_ASOEL16OPABS">"610D5 2000001 0 0"</PA>
+     <PA name="S7UP_ASOEL16OPSYM">"610E5 4000001 0 0"</PA>
+
+     <!-- At Fehlerdefinition -->
+
+     <PA name="S7UP_APWOPSYM">"6102A 1 2 0"</PA>
+     <PA name="S7UP_APWOPABS">"6102B 1 2 0"</PA>
+     <PA name="S7UP_APWTYP">"6102C 5 0 0"</PA>
+     <PA name="S7UP_APWANZEIGE">"6102D 5 0 0"</PA>
+     <PA name="S7UP_APWAKTIV">"6102E 3 0 0"</PA>
+
+     <PA name="S7UP_AVUSERDEO">"61100 1 2 0"</PA>
+
+     <PA name="S7UP_AFDMLDNRBD">"61028 6 0 0"</PA>
+     <PA name="S7UP_AMELDETEXTQUELLE">"61004 6 0 0"</PA>
+
+     <PA name="S7UP_AVMELDNR">"61104 1 2 0"</PA>
+     <PA name="S7UP_AVMELDTEXT">"61105 1 2 0"</PA>
+     <PA name="S7UP_AVMELDPRIO">"61107 1 2 0"</PA>
+     <PA name="S7UP_AALARMQUITT">"610A3 1 2 0"</PA>
+     <PA name="S7PD_AALARMQUITT">"610A3 3 0 0"</PA>
+
+     <PA name="S7UP_AFDFEHERK">"61014 1 2 0"</PA>
+     <PA name="S7PD_AFDFEHERK">"61014 3 0 0"</PA>
+     <PA name="S7UP_AFDEWERF">"61016 1 2 0"</PA>
+     <PA name="S7PD_AFDEWERF">"61016 3 0 0"</PA>
+     <PA name="S7UP_AFDKRITPOS">"61018 1 2 0"</PA>
+     <PA name="S7PD_AFDKRITPOS">"61018 3 0 0"</PA>
+     <PA name="S7UP_AFDFBFDEF">"61029 6 0 0"</PA>
+
+     <PA name="S7UP_AFEHLTYP">"61010 1 2 0"</PA>
+     <PA name="S7PD_AFEHLTYP">"61010 5 0 0"</PA>
+     <PA name="S7UP_ADEOTYP">"61011 5 0 0"</PA>
+     <PA name="S7UP_AFDLOGIK">"61038 1 2 0"</PA>
+     <PA name="S7UP_AFDBINLOGIK">"61039 1 2 0"</PA>
+     <PA name="S7UP_AFDDEOANZEIGE">"6103A 5 0 0"</PA>
+
+     <PA name="S7UP_AVFDLOGIKZEIT">"61102 1 2 0"</PA>
+     <PA name="S7UP_AVFDLOGIKUSER">"61103 1 2 0"</PA>
+     <PA name="S7UP_AVFDLOGIKUSER_ABS">"80061103 10 2 0"</PA>
+     <PA name="S7UP_AVAUSLOESER">"61108 1 2 0"</PA>
+
+     <PA name="S7UP_AOPABS_SYM">"8006100C 1 2 5"</PA>
+     <PA name="S7UP_AOPSYM_ABS">"8006100B 1 2 4"</PA>
+     <PA name="S7UP_APWOPABS_SYM">"8006102B 1 2 5"</PA>
+     <PA name="S7UP_APWOPSYM_ABS">"8006102A 1 2 3"</PA>
+     <PA name="S7UP_AVFDLOGIKZEIT_ABS">"80061102 1 2 3"</PA>
+     <PA name="S7UP_AVAUSLOESER_ABS">"80061108 1 2 3"</PA>
+     <PA name="S7UP_AFDLOGIK_ABS">"80061038 1 2 3"</PA>
+  </PdAts>
+
+</EXPORT>

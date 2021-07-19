@@ -1,0 +1,56 @@
+:Base s7wndxhc.hlp
+:Title Diagnostic NCM S7 - Aide
+1 NCM S7 Diagnostic
+2 Présentation=uebersicht
+2 Volet de navigation=HIDD_TREE_DIALOG
+2 Chemin en ligne: : Etablissement d’une liaison au CP=HIDD_ONLINEPATH
+2 Commandes de menu=HIDR_MAINFRAME
+2 Paramétrages NCM S7 Diagnostic=HIDD_OPTIONSL2
+2 General
+3 Information CP=HIDD_STATEFIRST
+3 Types de liaison utilisés=HIDD_CONNECTIONS
+3 Tampon de diagnostic=HIDD_DIAGBUFFERS
+3 Etat de fonctionnement CP=HIDD_STATEL2
+3 Objet de diagnostic "C-PLUG"=HIDD_CPLUG
+2 PROFIBUS
+3 Station PROFIBUS=HIDD_L2STATIONEN
+3 Paramètres de bus PROFIBUS=HIDD_L2BUSPARAMS
+3 Statistiques PROFIBUS=HIDD_L2STATISTIC
+3 Diagnostic de maître DP=HIDD_DPMASTER
+3 Diagnostic d'esclave DP=HIDD_DPSLAVE
+3 Diagnostic spécifique au matériel de l'esclave DP=HIDD_DPDEVICE
+3 Diagnostic de module de l'esclave DP=HIDD_DPONEMODUL
+3 Diagnostic de module=HIDD_DPMODUL
+3 Réserve d'esclaves DP=HIDD_CIR_Slave_Res
+3 Réserve de modules DP=HIDD_CiR_Modul_Res
+3 Liaison FDL=HIDD_FDL_CONN
+3 Liaisons FMS - Vue d'ensemble=HIDD_FMS_VLISTE
+3 Liaison FMS=HIDD_FMS_CONN
+3 FMS: Contrats=HIDD_FMSAUFTRAGSZUSTAND
+3 FMS: Variables de signalisation=HIDD_FMSMELDEVAR
+3 FMS: Variables partenaire=HIDD_FMSREMOTE
+2 Ethernet
+3 Industrial Ethernet - Généralités=IDD_IEBUS
+3 Statistiques concernant Industrial Ethernet=IDD_IESTAT
+3 Diagnostic de l'horodatage=IDD_zeit
+3 Liaisons transport ISO - Vue d'ensemble=HIDD_ISO_VLISTE
+3 Liaison transport ISO en détails=HIDD_ISO_CONN
+3 Liaisons TCP - Vue d'ensemble=HIDD_TCP_VLISTE
+3 Liaison TCP en détails=HIDD_NATTCP_CONN
+3 Liaisons UDP - Vue d'ensemble=HIDD_UDP_VLISTE
+3 Liaison UDP en détails=HIDD_UDP_CONN
+3 Liaisons ISO-on-TCP - Vue d'ensemble=HIDD_ONTCP_VLISTE
+3 Liaison ISO-on-TCP en détails=HIDD_TCP_CONN
+3 Liaison E-Mail=HIDD_EMAIL
+3 Protection d'accès IP=HID_IP_DIAGACCESS
+3 Statistique liaisons S/R=HIDD_SR_Verb_statistik
+2 PROFINET
+3 Liaisons TCP pour PROFInet=IDD_TPN
+3 Liaison TCP pour PROFInet - Détails=IDD_TPN_CON
+3 Diagnostic de composants PROFInet=IDD_CBA_PNET
+3 Unité PROFInet=IDD_CBA_LD
+3 Composant PROFInet=IDD_CBA_COMPONENT
+2 Liaisons S7
+3 Liaisons S7 - Vue d'ensemble=IDD_pbk_tab
+3 Liaisons S7 - Détails=IDD_pbk
+3 Statistiques des liaisons S7=HIDD_S7_VERB_Statistik

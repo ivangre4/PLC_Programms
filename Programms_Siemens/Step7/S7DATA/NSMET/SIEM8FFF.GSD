@@ -1,0 +1,65 @@
+#Profibus_DP
+
+;-------------------------------------------------------------------------
+;   Ersatz-GSD fuer Dummy-Slaves
+;-------------------------------------------------------------------------
+
+GSD_Revision = 2
+Ident_Number = 0x8FFF
+Station_Type = 0
+Protocol_Ident = 0
+
+Vendor_Name = "SIEMENS"
+Model_Name = "?????"
+Revision = "---"
+Hardware_Release = "---"
+Software_Release = "---"
+Bitmap_Device = "DP_NORM"
+
+;-------------------------------------------------------------------------
+;   ACHTUNG: Es muessen allen bekannten Baudraten unterstuetzt werden;
+;            siehe ARTS-Request 208106.
+;-------------------------------------------------------------------------
+
+9.6_supp = 1
+19.2_supp = 1
+31.25_supp = 1
+45.45_supp = 1
+93.75_supp = 1
+187.5_supp = 1
+500_supp = 1
+1.5M_supp = 1
+3M_supp = 1
+6M_supp = 1
+12M_supp = 1
+
+;-------------------------------------------------------------------------
+;   Die folgenden MaxTsdr-Werte stimmen mit den Werten ueberein, die man
+;   bei der Typ-Datei SI9999TX.200 erhalten hat.
+;   Fuer die Baudrate 31.25 wurde derselbe Wert verwendet wie fuer die
+;   Baudrate 45.45.
+;-------------------------------------------------------------------------
+
+MaxTsdr_9.6 = 60
+MaxTsdr_19.2 = 60
+MaxTsdr_31.25 = 120
+MaxTsdr_45.45 = 120
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500 = 100
+MaxTsdr_1.5M = 150
+MaxTsdr_3M = 250
+MaxTsdr_6M = 450
+MaxTsdr_12M = 800
+
+;-------------------------------------------------------------------------
+;   Slave-Specifikation
+;   (Auch diese Werte stammen aus der Typ-Datei SI9999TX.200.)
+;-------------------------------------------------------------------------
+
+OrderNumber = "???? ???-?????-????"
+Slave_Family = 0
+Modul_Offset = 1
+Modular_Station = 0
+Max_Diag_Data_Len = 244
+Min_Slave_Intervall = 0

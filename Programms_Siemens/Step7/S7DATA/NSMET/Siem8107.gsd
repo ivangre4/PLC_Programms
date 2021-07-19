@@ -1,0 +1,75 @@
+;===========================================================
+; DDB File for  HMI OP77B, OP177B, TP177B
+; SYNC/FREEZE and Auto_Baud not supported, 12Mbit/s
+; MLFB  : 6AV6 641-0CA01-0AX0 
+; Copyright (C) Siemens AG 2003  All Rights Reserved. Confidential
+;
+; Date  : 11.03.2003
+; File  : SIEM8107.GSD
+;===========================================================
+#Profibus_DP
+
+; Unit-Definition-List:
+GSD_Revision=2
+Vendor_Name="SIEMENS AG"
+Model_Name="HMI OP77B/177B + Mobile"
+Revision="V1.0"
+Ident_Number=0x8107
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V1.0"
+Software_Release="V1.0"
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+Implementation_Type="ASPC2"
+Bitmap_Device="BEBO567N"
+Bitmap_SF="BEBO567S"
+;
+; Slave-Specification:
+OrderNumber="6AV6 641-0CA01-0AX0"
+Periphery="SIMATIC HMI TD/OP"
+OffsetFirstMPDBlock=0
+ETERDelay=0
+MaxResponseDelay=0
+Auto_Baud_supp=0
+Sync_Mode_supp=0
+Freeze_Mode_supp=0
+Min_Slave_Intervall=3
+Max_Diag_Data_Len=6
+Modul_Offset=0
+Slave_Family=6@TdF@SIMATIC_HMI
+;
+Max_Module=1
+Modular_Station=1
+Max_Input_Len=128
+Max_Output_Len=64
+Max_Data_Len=192
+;
+User_Prm_Data_Len=0
+;
+; Module-Definitions:
+;
+Module = "OP77B" 0x33
+EndModule
+Module = "TP177B" 0x13
+EndModule
+Module = "OP177B" 0x33, 0x14
+EndModule
+Module = "Mobile Panel 177" 0x31, 0x16
+EndModule
+Module = "TP177B 4" 0x14
+EndModule
+Module = "MP177 6" 0x13
+EndModule

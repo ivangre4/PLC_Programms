@@ -1,0 +1,45 @@
+/ Aufbau des ATT Files
+/ AttributID, Datentyp, Use, [CLSID,] Name [,Grenzwerte]
+/
+/ AttributID:
+/	AttributID des Attributes, das Beschrieben ist (Dezimal)
+/
+/Datentyp:
+/	0->BYTE
+/	1->SHORT
+/	2->LONG
+/	3->STRING
+/	4->LONGBINARY
+/	5->LONGBINARY, für das ein COM-Interface Existiert (dual)
+/
+/Use:
+/	0->Steht für die Kommandoschnittstelle und dem Export / Import nicht zur Verfügung
+/	1->Steht für die Kommandoschnittstelle und dem Export / Import voll zur Verfügung
+/	2->Steht für die Kommandoschnittstelle und dem Export / Import eingeschränkt zur Verfügung
+/		d.H. Das Attribut kann zwar Importiert werden wird aber nicht Exportiert.
+/			 Über die Kommandoschnittstelle kann auf das Attribut zugegriffen werden,
+/			 es wird jedoch nicht über die Funktionen GetAllAttributes
+/			 und GetFirst-, -NextAttribute angeboten.
+/
+/CLSID: Achtung Nur Datentyp 5!
+/	ClassID eines Cominterfaces, das für den Zugriff auf ein Longbinary-Attribut
+/	verwendet werden soll. Dadurch ist es möglich Longbinarysstrukturiert zu exportieren /
+/	Importieren, oder über die Kommandoschnittstelle zu bearbeiten
+/
+/Name:
+/	Attributname, wie das Attribut im Import-/Exportfile erscheint, bzw. über die
+/	Kommandoschnittselle auf das Attribut zugegriffen werden kann.
+/
+/Gerenzwerte: (Optional und nicht für Datentyp 3, 4 u. 5)
+/	, Min, Max	-> Es sind Werte von Min bis Max, einschließlich der Grenzen, zugelassen
+/   , Min		-> Werte >= Min sind zugelassen
+/	, -, Max	-> Werte <= Max sind zugelassen
+/	, enum (a, b, ... , c)
+/				-> Nur die Werte a, b, ... und c sind zugelassen
+
+/
+
+/ Die speicherbaren ET200pro-Attribute sollen nicht exportiert werden
+
+111525,4,0,ET200PRO_MODULE_PRMDATA
+111526,2,0,ET200PRO_MODULE_BITADDRESS

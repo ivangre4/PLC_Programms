@@ -1,0 +1,1165 @@
+[Version]
+
+Version=4.0
+
+[Attribute]
+
+S7UP_APWAKTIV_STR=   < 6102E 1 2 0 >
+S7UP_APWAKTIV=       < 6102E 3 0 0 >
+S7UP_APWOPSYM=       < 6102A 1 2 0 >
+S7UP_APWOPABS=       < 6102B 1 2 0 >
+
+S7UP_ANAME=          < 1001 8000001 2 0 >
+S7UP_ACREATOR=       < 1005 8000001 2 0 >
+S7UP_ACRDATE=        < 1003 2 0 0 >
+S7UP_ALMDATE=        < 1004 2 0 0 >
+S7UP_ACOMMENT=       < 1006 8000001 2 0 >
+S7UP_AOPABS=         < 6100C 1 2 0 >
+
+S7UP_ACRDATE_D=      < 1003 2 0 1 >
+S7UP_ACRDATE_T=      < 1003 2 0 2 >
+
+S7UP_ALMDATE_D=      < 1004 2 0 1 >
+S7UP_ALMDATE_T=      < 1004 2 0 2 >
+
+S7UP_AFEHLTYP_0=     < 61010 5 0 0 >
+S7UP_AFEHLTYP_2=     < 61010 1 2 0 >
+
+S7UP_AFDFEHERK=      < 61014 1 2 0 >
+S7UP_AFDEWERF=       < 61016 1 2 0 >
+S7UP_AFDKRITPOS=     < 61018 1 2 0 >
+
+S7UP_AFDLOGIK=       < 61038 1 2 0 >
+
+S7UP_AVUSERDEO=      < 61100 1 2 0 >
+S7UP_AVFEHLTYP=      < 61101 1 2 0 >
+S7UP_AVMELDNR=       < 61104 1 2 0 >
+S7UP_AVMELDTEXT=     < 61105 1 2 0 >
+S7UP_AVMELDPRIO=     < 61107 1 2 0 >
+S7UP_AVFDLOGIKUSER = < 61103 1 2 0 >
+
+S7UP_ARBITABS=       < 61311 1 2 0 >
+S7UP_AVUSERARBIT=    < 61113 1 2 0 >
+
+S7UP_AQBITABS=       < 61329 1 2 0 >
+S7UP_AVUSERAQBIT=    < 61114 1 2 0 >
+
+S7UP_AVAUSLOESER=    < 61108 1 2 0 >
+S7UP_AVFDLOGIKZEIT=  < 61102 1 2 0 >
+
+S7UP_AFEFBBLKNR=     < 6109F 1 2 0 >
+S7UP_AFEDBBLKNR=     < 610A0 1 2 0 >
+
+S7UP_AEEFBBLKNR=     < 610A1 1 2 0 >
+S7UP_AEEDBBLKNR=     < 610A2 1 2 0 >
+
+S7UP_AAWFBBLKNR=     < 61078 1 2 0 >
+S7UP_AAWDBBLKNR=     < 61079 1 2 0 >
+
+S7UP_AALARMQUITT=    < 610A3 1 2 0 >
+S7UP_AMELDEQUELLE=   < 61004 5 0 0 >
+
+;Pdiag Object Attribute
+
+S7UP_ASONR=          < 61061 1 2 0 >
+S7UP_ABILDNR=        < 61062 1 2 0 >
+S7UP_ABILDPOSNR=     < 61063 1 2 0 >
+S7UP_AVSOURCEBLOCK=  < 61106 1 2 0 >
+
+S7UP_TEXTRI1=        < 6107B 1 2 0 >
+S7UP_TEXTRI2=        < 6107C 1 2 0 >
+S7UP_ASOEL1=         < 6107D 1 2 0 >
+S7UP_ASOEL2=         < 6107E 1 2 0 >
+
+S7UP_AMWPRIONR=      < 61065 1 2 0 >
+
+S7UP_AANWFBCALL=     < 61058 3 0 0 >
+S7UP_AMWPRIOAKTIV=   < 61059 3 0 0 >
+
+S7UP_AVABBO= <61110 100001 2 0>
+S7UP_AVAUSO= <61111 100001 2 0>
+
+;Pdiag Applikation: Interne Attribute
+
+S7PD_AROOTNAME= < 80000001 1 0 0 > 
+
+;Quadruddel - Attribute
+
+S7PD_AGROUPNAME= < 80000002 1 0 0 >
+S7PD_AFEFBNUM=   < 80000003 1 0 0 >
+S7PD_AFEDBNUM=   < 80000004 1 0 0 >
+S7PD_AEWFBNUM=   < 80000005 1 0 0 >
+S7PD_AEWDBNUM=   < 80000006 1 0 0 >
+
+;Name der uebergeordneten Einheiten bei verschobenen Einheiten
+
+S7PD_ANAME=          < 80001001 8000001 2 0 >
+S7PD_AVSOURCEBLOCK=  <80061106 1 2 0 >
+
+;Name der Gruppe fuer die Einheit, erstmal Attribut Gruppennummer lesen
+S7PD_AGROUP= 	 < 8006107A 6 1 0 >
+
+
+;----------------------------------
+;Root: Pdiag-Header (Koffer)
+;----------------------------------
+[00161001]
+
+layout1=koffer1
+
+;----------------------------------
+;Root: Bausteinbehaelter
+;----------------------------------
+[00116001]
+
+layout1=baustein1
+export1=csv00116001
+
+;----------------------------------
+;Root: Einheit
+;----------------------------------
+[00161101]
+
+layout1=einheit1
+export1=csv00161101
+
+;----------------------------------
+;Root: Verschobene Einheit
+;----------------------------------
+[80161101]
+
+layout1=einheit2
+export1=csv00161101
+
+;----------------------------------
+;Root: Fdef
+;----------------------------------
+[00161102]
+
+layout1=fdef1
+export1=csv00161102
+
+;----------------------------------
+;Root: Template
+;----------------------------------
+[00161FFE]
+
+layout1=template1
+
+;----------------------------------
+;Root: Bewegung
+;----------------------------------
+[00161103]
+
+layout1=bewegung1
+export1=csv00161103
+
+;----------------------------------
+;Root: Zustand
+;----------------------------------
+[00161106]
+
+layout1=zustand1
+export1=csv00161106
+
+;----------------------------------
+;Root: Transition
+;----------------------------------
+[00161105]
+
+layout1=transition1
+export1=csv00161105
+
+
+;----------------------------------
+;Root: Schritt
+;----------------------------------
+[00161104]
+
+layout1=schritt1
+export1=csv00161104
+
+;----------------------------------
+;Root: Aktions Fehlerdef.
+;----------------------------------
+[00161108]
+
+layout1=aktionsfdef1
+export1=csv00161108
+
+
+;----------------------------------
+;Print Descript: Pdiag-Header
+;----------------------------------
+
+[koffer1]
+
+000=<S:>
+001=<F:B>Diagnóstico del proceso - Configuración
+002=<S:>
+003=<F:I>Nombres de bloques reservados
+
+004=<W:1>
+005=<S:>
+006=Grupo:<P:34><V:S7PD_AGROUPNAME>
+007=<I:3>Detección de errores:<P:34>FB <V:S7PD_AFEFBNUM><P:47>DB <V:S7PD_AFEDBNUM>
+008=<I:3>Adquisición 1. valores/estado:<P:34>FB <V:S7PD_AEWFBNUM><P:47>DB <V:S7PD_AEWDBNUM>
+009=<W:1>
+
+010=<G:S7UP_AANWFBCALL 0 13>
+011=Bloque de usuario:<P:34>FB <V:S7UP_AAWFBBLKNR><P:47>DB <V:S7UP_AAWDBBLKNR>
+012=<J:14>
+013=Bloque de usuario:<P:34>---
+014=<S:>
+015=<F:I>Direcciones reservadas
+016=<S:>
+017=<G:S7UP_AMWPRIOAKTIV 0 20>
+018=Prioridad de grupo:<P:34>MW <V:S7UP_AMWPRIONR>
+019=<J:21>
+020=Prioridad de grupo:<P:34>---
+021=<S:>
+022=Operandos excl. del diagnóstico: <P:34><V:S7UP_AVAUSO>
+023=<S:>
+024=Operandos de interrupción:<P:34><V:S7UP_AVABBO>
+025=<S>
+;----------------------------------
+;Print Descript: Carpeta de bloques
+;----------------------------------
+
+[baustein1]
+
+000=<S:>
+001=<F:B>Carpeta de bloques:<P:27><F:B><V:S7UP_ANAME>
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+006=<S:>
+
+;----------------------------------
+;Print Descript: Unidad
+;----------------------------------
+
+[einheit1]
+
+000=<S:>
+001=<F:B>Unidad:<P:27><F:B>[<V:S7UP_AVSOURCEBLOCK>] <V:S7UP_ANAME>
+002=Grupo:<P:27><V:S7PD_AGROUP>
+003=Autor:<P:27><V:S7UP_ACREATOR>
+004=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+005=Última modificación:<P:27><V:S7UP_ALMDATE>
+006=Comentario:<P:27><V:S7UP_ACOMMENT>
+007=<S:>
+008=<F:I>Atributos
+009=<S:>
+010=<L:3,35;37>
+011<S:>
+
+;----------------------------------
+;Print Descript: Verschobene Einheit
+;----------------------------------
+
+[einheit2]
+
+000=<S:>
+001=<F:B>Unidad:<P:27><F:B>[<V:S7UP_AVSOURCEBLOCK>] <V:S7UP_ANAME>
+002=Grupo:<P:27><V:S7PD_AGROUP>
+003=<F:I>Desplazado a:<P:27>[<V:S7PD_AVSOURCEBLOCK>] <V:S7PD_ANAME>
+004=Autor:<P:27><V:S7UP_ACREATOR>
+005=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+006=Última modificación:<P:27><V:S7UP_ALMDATE>
+007=Comentario:<P:27><V:S7UP_ACOMMENT>
+008=<S:>
+009=<F:I>Atributos
+010=<S:>
+011=<L:3,35;37>
+012<S:>
+
+;----------------------------------
+;Print Descript: DefE
+;----------------------------------
+
+[fdef1]
+
+000=<S:>
+001=<F:B>Definición del error:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+008=<S:>
+009=Operando de acceso al diagnóstico
+010=<I:3>Operando absoluto:<P:27><V:S7UP_AOPABS>
+011=<I:3>Símbolo:<P:27><V:S7UP_AVUSERDEO>
+
+012=<S:>
+013=Propiedades del diagnóstico
+014=<I:3>Detección de errores:<P:27><V:S7UP_AFDFEHERK>
+015=<I:3>Adquisición 1os valores:<P:27><V:S7UP_AFDEWERF>
+016=<I:3>Análisis criterios:<P:27><V:S7UP_AFDKRITPOS>
+
+017=<G:S7UP_AFEHLTYP_0  3  40>
+018=<G:S7UP_AFEHLTYP_0  1  50>
+019=<G:S7UP_AFEHLTYP_0  2  50>
+020=<G:S7UP_AFEHLTYP_0 10  50>
+021=<G:S7UP_AFEHLTYP_0 11  50>
+022=<G:S7UP_AFEHLTYP_0  4  60>
+023=<G:S7UP_AFEHLTYP_0  5  70>
+024=<G:S7UP_AFEHLTYP_0  6  80>
+025=<G:S7UP_AFEHLTYP_0  7  90>
+026=<J:150>
+
+040=<S:>
+041=Supervisión
+042=<I:3><V:S7UP_AVFDLOGIKUSER>
+043=<J:150>
+
+050=<S:>
+051=Supervisión
+052=<I:3>Evento:<P:27,-1><V:S7UP_AFEHLTYP_2>
+053=<I:3>Tiempo:<P:27><V:S7UP_AFDLOGIK>
+054=<J:150>
+
+060=<S:>
+061=Supervisión
+062=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+063=<I:3>Tiempo arranque:<P:27><V:S7UP_AVFDLOGIKZEIT>
+064=<J:150>
+
+070=<S:>
+071=Supervisión
+072=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+073=<I:3>Tiempo acción:<P:27><V:S7UP_AVFDLOGIKZEIT>
+074=<J:150>
+
+080=<S:>
+081=Supervisión
+082=<I:3>Marca posición:<P:27,-1><V:S7UP_AVAUSLOESER>
+083=<I:3>Tiempo reacción:<P:27><V:S7UP_AVFDLOGIKZEIT>
+084=<J:150>
+
+090=<S:>
+091=Supervisión
+092=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+093=<I:3>Tiempo enclavamiento:<P:27><V:S7UP_AVFDLOGIKZEIT>
+094=<J:150>
+
+150=<S:>
+151=Estado de vigilancia
+152=<I:3>Operando absoluto:<P:27><V:S7UP_ARBITABS>
+153=<I:3>Símbolo:<P:27><V:S7UP_AVUSERARBIT>
+154=<J:160>
+
+160=<S:>
+161= Estado de acuse
+162=<I:3>Operando absoluto:<P:27><V:S7UP_AQBITABS>
+163=<I:3>Símbolo:<P:27><V:S7UP_AVUSERAQBIT>
+164=<J:200>
+
+200=<S:>
+201=Notificar
+202=<I:3>N° de mensaje:<P:27><V:S7UP_AVMELDNR>
+203=<I:3>Prioridad:<P:27><V:S7UP_AVMELDPRIO>
+204=<I:3>Acuse:<P:27><V:S7UP_AALARMQUITT>
+
+205=<G:S7UP_AMELDEQUELLE 0 210>
+206=<G:S7UP_AMELDEQUELLE 1 212>
+207=<G:S7UP_AMELDEQUELLE 2 214>
+208=<G:S7UP_AMELDEQUELLE 3 216>
+209=<J:210>
+
+210=<I:3>Origen del texto:<P:27>---
+211=<J:220>
+212=<I:3>Origen del texto:<P:27>Configuración de mensajes
+213=<J:220>
+214=<I:3>Origen del texto:<P:27>Nombre simbólico como mensaje
+215=<J:220>
+216=<I:3>Origen del texto:<P:27>Comentario del símbolo como mensaje
+217=<J:220>
+
+220=<I:3>Texto:<P:27><V:S7UP_AVMELDTEXT>
+221=<S:>
+222=<J:230>
+
+230=<G:S7UP_APWAKTIV 0 235>
+
+231=Valor asociado
+232=<I:3>Operando absoluto:<P:27><V:S7UP_APWOPABS>
+233=<I:3>Símbolo:<P:27><V:S7UP_APWOPSYM>
+234=<J:240>
+
+235=Con adquisición de valores asociados:<P:38><V:S7UP_APWAKTIV_STR> 
+236=<J:240>
+
+240=<S:>
+
+;----------------------------------
+;Print Descript: Template
+;----------------------------------
+
+[template1]
+
+000=<S:>
+001=<F:B>Plantilla:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+;DEO gibt es in einer Vorlage nicht!
+;008=<S:>
+;009=Operando de acceso al diagnóstico
+;010=<I:3>Operando absoluto:<P:27><V:S7UP_AOPABS>08011=<I:3>Símbolo:<P:27><V:S7UP_AVUSERDEO>
+
+008=<S:>
+009=Propiedades del diagnóstico
+010=<I:3>Detección de errores:<P:27><V:S7UP_AFDFEHERK>
+011=<I:3>Adquisición 1os valores:<P:27><V:S7UP_AFDEWERF>
+012=<I:3>Análisis criterios:<P:27><V:S7UP_AFDKRITPOS>
+
+013=<G:S7UP_AFEHLTYP_0  3  40>
+014=<G:S7UP_AFEHLTYP_0  1  50>
+015=<G:S7UP_AFEHLTYP_0  2  50>
+016=<G:S7UP_AFEHLTYP_0 10  50>
+017=<G:S7UP_AFEHLTYP_0 11  50>
+018=<G:S7UP_AFEHLTYP_0  4  60>
+019=<G:S7UP_AFEHLTYP_0  5  70>
+020=<G:S7UP_AFEHLTYP_0  6  80>
+021=<G:S7UP_AFEHLTYP_0  7  90>
+022=<J:150>
+
+040=<S:>
+041=Supervisión
+042=<I:3><V:S7UP_AVFDLOGIKUSER>
+043=<J:150>
+
+050=<S:>
+051=Supervisión
+052=<I:3>Evento:<P:27,-1><V:S7UP_AFEHLTYP_2>
+053=<I:3>Tiempo:<P:27><V:S7UP_AFDLOGIK>
+054=<J:150>
+
+060=<S:>
+061=Supervisión
+062=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+063=<I:3>Tiempo arranque:<P:27><V:S7UP_AVFDLOGIKZEIT>
+064=<J:150>
+
+070=<S:>
+071=Supervisión
+072=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+073=<I:3>Tiempo acción:<P:27><V:S7UP_AVFDLOGIKZEIT>
+074=<J:150>
+
+080=<S:>
+081=Supervisión
+082=<I:3>Marca posición:<P:27,-1><V:S7UP_AVAUSLOESER>
+083=<I:3>Tiempo reacción:<P:27><V:S7UP_AVFDLOGIKZEIT>
+084=<J:150>
+
+090=<S:>
+091=Supervisión
+092=<I:3>Señal causante:<P:27,-1><V:S7UP_AVAUSLOESER>
+093=<I:3>Tiempo enclavamiento:<P:27><V:S7UP_AVFDLOGIKZEIT>
+094=<J:150>
+
+150=<S:>
+151=Estado de vigilancia
+152=<I:3>Operando absoluto:<P:27><V:S7UP_ARBITABS>
+153=<I:3>Símbolo:<P:27><V:S7UP_AVUSERARBIT>
+154=<J:160>
+
+160=<S:>
+161= Estado de acuse
+162=<I:3>Operando absoluto:<P:27><V:S7UP_AQBITABS>
+163=<I:3>Símbolo:<P:27><V:S7UP_AVUSERAQBIT>
+164=<J:200>
+
+200=<S:>
+201=Notificar
+;Vorlagen haben keine Meldenummer
+;202=<I:3>N° de mensaje:<P:27><V:S7UP_AVMELDNR>
+202=<I:3>Prioridad:<P:27><V:S7UP_AVMELDPRIO>
+203=<I:3>Acuse:<P:27><V:S7UP_AALARMQUITT>
+
+204=<G:S7UP_AMELDEQUELLE 0 210>
+205=<G:S7UP_AMELDEQUELLE 1 212>
+206=<G:S7UP_AMELDEQUELLE 2 214>
+207=<G:S7UP_AMELDEQUELLE 3 216>
+208=<J:210>
+
+210=<I:3>Origen del texto:<P:27>---
+211=<J:220>
+212=<I:3>Origen del texto:<P:27>Configuración de mensajes
+213=<J:220>
+214=<I:3>Origen del texto:<P:27>Nombre simbólico como mensaje
+215=<J:220>
+216=<I:3>Origen del texto:<P:27>Comentario del símbolo como mensaje
+217=<J:220>
+
+220=<I:3>Texto:<P:27><V:S7UP_AVMELDTEXT>
+221=<S:>
+222=<J:230>
+
+230=<G:S7UP_APWAKTIV 0 235>
+
+231=Valor asociado
+232=<I:3>Operando absoluto:<P:27><V:S7UP_APWOPABS>
+233=<I:3>Símbolo:<P:27><V:S7UP_APWOPSYM>
+234=<J:240>
+
+235=Con adquisición de valores asociados:<P:38><V:S7UP_APWAKTIV_STR> 
+236=<J:240>
+
+240=<S:>
+
+;----------------------------------
+;Print Descript: Movimiento
+;----------------------------------
+
+[bewegung1]
+
+000=<S:>
+001=<F:B>Movimiento:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+006=<S:>
+007=<F:I>Atributos
+008=<S:>
+009=<L:3,30;35>
+010<S:>
+014=<S:>
+
+;----------------------------------
+;Print Descript: Estado
+;----------------------------------
+
+[zustand1]
+
+000=<S:>
+001=<F:B>Estado:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+006=<S:>
+007=Atributos
+008=<I:3>Número de estado:<P:27><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: Transición
+;----------------------------------
+
+[transition1]
+
+000=<S:>
+001=<F:B>Transición:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+006=<S:>
+007=Atributos
+008=<I:3>N° de transición:<P:27><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: Etapa
+;----------------------------------
+
+[schritt1]
+
+000=<S:>
+001=<F:B>Etapa:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+006=<S:>
+007=Atributos
+008=<I:3>N° de etapa:<P:27><V:S7UP_ASONR>
+009=<S:>
+
+;----------------------------------
+;Print Descript: DefE acción
+;----------------------------------
+
+[aktionsfdef1]
+
+000=<S:>
+001=<F:B>Def. del error para acción:<P:27><F:B><V:S7UP_ANAME> 
+002=Autor:<P:27><V:S7UP_ACREATOR>
+003=Fecha de creación:<P:27><V:S7UP_ACRDATE>
+004=Última modificación:<P:27><V:S7UP_ALMDATE>
+005=Comentario:<P:27><V:S7UP_ACOMMENT>
+
+006=<S:>
+007=<F:I><V:S7UP_AVFEHLTYP>
+
+008=<S:>
+009=Propiedades del diagnóstico
+010=<I:3>Análisis de criterios:<P:27><V:S7UP_AFDKRITPOS>
+
+011=<S:>
+012=Supervisión
+013=<I:3><V:S7UP_AFDLOGIK>
+
+014=<S:>
+015=Notificar
+016=<I:3>N° de mensaje:<P:27><V:S7UP_AVMELDNR>
+017=<I:3>Texto:<P:27><V:S7UP_AVMELDTEXT>
+018=<S:>
+
+;----------------------------------
+;Root: Objects to export
+;----------------------------------
+[ObjHead]
+000=csv00116001
+001=csv00161101
+002=csv00161103
+003=csv00161106
+004=csv00161105
+005=csv00161104
+006=csv00161102.1
+007=csv00161102.2
+008=csv00161102.3
+009=csv00161102.4
+010=csv00161102.5
+011=csv00161102.6
+012=csv00161108
+
+;----------------------------------
+;Export Descript: Contenedor de bloques
+;----------------------------------
+
+[csv00116001]
+headlst=head00116001
+attrlst=attr00116001
+
+;Export : Lista atributos cont. bloques
+
+[attr00116001]
+000=Carpeta de bloques;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Unidad
+;----------------------------------
+
+[csv00161101]
+headlst=head00161101
+attrlst=attr00161101
+
+;Export : Lista atributos unidad
+
+[attr00161101]
+000=Unidad;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Movimiento
+;----------------------------------
+
+[csv00161103]
+headlst=head00161103
+attrlst=attr00161103
+
+;Export : Lista atributos movimiento
+
+[attr00161103]
+000=Movimiento;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Estado
+;----------------------------------
+
+[csv00161106]
+headlst=head00161106
+attrlst=attr00161106
+
+;Export : Lista atributos estado
+
+[attr00161106]
+000=Estado;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<R:><N:>
+
+;----------------------------------
+;Export Descript: Transición
+;----------------------------------
+
+[csv00161105]
+headlst=head00161105
+attrlst=attr00161105
+
+;Export : Lista atributos transición
+
+[attr00161105]
+000=Transición;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<V:S7UP_ASONR>;
+009=<R:><N:>
+
+;----------------------------------
+;Export Descript: Etapa
+;----------------------------------
+
+[csv00161104]
+headlst=head00161104
+attrlst=attr00161104
+
+;Export : Lista atributos etapa
+
+[attr00161104]
+000=Etapa;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+008=<V:S7UP_ASONR>;
+009=<R:><N:>
+
+;----------------------------------
+;Export Descript: DefE
+;----------------------------------
+
+[csv00161102.1]
+headlst=head00161102.1
+[csv00161102.2]
+headlst=head00161102.2
+[csv00161102.3]
+headlst=head00161102.3
+[csv00161102.4]
+headlst=head00161102.4
+[csv00161102.5]
+headlst=head00161102.5
+[csv00161102.6]
+headlst=head00161102.6
+
+[csv00161102]
+;headlst=head00161102
+attrlst=attr00161102
+
+;Export : Lista atributos DefE
+
+[attr00161102]
+; switch : Type
+000=<G:S7UP_AFEHLTYP_0  3 5; 1 10; 2 10; 10 10; 11 10; 4 15; 5 20; 6 25; 7 30>
+001=<J:05>
+
+005=Supervisión general;
+006=<J:40>
+
+010=Supervisión operando;
+011=<J:40>
+
+015=Supervisión arranque;
+016=<J:40>
+
+020=Supervisión acción;
+021=<J:40>
+
+025=Supervisión reacción;
+026=<J:40>
+
+030=Enclavamiento supervisión;
+031=<J:40>
+
+040=<V:S7UP_ANAME>;
+041=<V:S7UP_ACREATOR>;
+042=<V:S7UP_ACRDATE_D>;
+043=<V:S7UP_ACRDATE_T>;
+044=<V:S7UP_ALMDATE_D>;
+045=<V:S7UP_ALMDATE_T>;
+046=<V:S7UP_ACOMMENT>;
+047=<J:50>
+
+050=<V:S7UP_AVMELDNR>;
+051=<V:S7UP_AVMELDPRIO>;
+052=<V:S7UP_AALARMQUITT>;
+053=<V:S7UP_AVMELDTEXT>;
+
+054=<V:S7UP_AOPABS>;
+055=<V:S7UP_AVUSERDEO>;
+056=<V:S7PD_AROOTNAME>;
+
+057=<V:S7UP_AFDFEHERK>;
+058=<V:S7UP_AFDEWERF>;
+059=<V:S7UP_AFDKRITPOS>;
+060=<J:70>
+
+; switch : Supervisión
+070=<G:S7UP_AFEHLTYP_0  3  80; 1 90; 2 90; 10 90; 11 90; 4 100; 5 110; 6 120; 7 130>
+071=<J:80>
+
+; Supervisión general
+080=<V:S7UP_AVFDLOGIKUSER>;
+081=<J:500>
+
+; Operandos Supervisión
+090=<V:S7UP_AFEHLTYP_2>;
+091=<V:S7UP_AFDLOGIK>;
+092=<J:500>
+
+; Arranque Supervisión
+100=<V:S7UP_AVAUSLOESER>;
+101=<V:S7UP_AVFDLOGIKZEIT>;
+102=<J:500>
+
+; Acción Supervisión
+110=<V:S7UP_AVAUSLOESER>;
+111=<V:S7UP_AVFDLOGIKZEIT>;
+112=<J:500>
+
+; Reacción Supervisión
+120=<V:S7UP_AVAUSLOESER>;
+121=<V:S7UP_AVFDLOGIKZEIT>;
+122=<J:500>
+
+; Enclavamiento Supervisión
+130=<V:S7UP_AVAUSLOESER>;
+131=<V:S7UP_AVFDLOGIKZEIT>;
+132=<J:500>
+
+500=<V:S7UP_APWOPABS>;
+501=<V:S7UP_APWOPSYM>;
+
+502=<R:><N:>
+
+;----------------------------------
+;Export Descript: DefE acción
+;----------------------------------
+
+[csv00161108]
+headlst=head00161108
+attrlst=attr00161108
+
+;Export : Lista atributos DefE acción
+
+[attr00161108]
+000=Error de acción;
+001=<V:S7UP_ANAME>;
+002=<V:S7UP_ACREATOR>;
+003=<V:S7UP_ACRDATE_D>;
+004=<V:S7UP_ACRDATE_T>;
+005=<V:S7UP_ALMDATE_D>;
+006=<V:S7UP_ALMDATE_T>;
+007=<V:S7UP_ACOMMENT>;
+
+008=<V:S7UP_AVMELDNR>;
+009=<V:S7UP_AVMELDTEXT>;
+
+010=<V:S7UP_AFDKRITPOS>;
+011=<V:S7UP_AFDLOGIK>;
+012=<R:><N:>
+
+
+;----------------------------------
+;Export : Nombres atributos
+;----------------------------------
+
+;Contenedor de bloques
+[head00116001]
+000=C:Carpeta de bloques;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=<R:><N:>
+
+;Unidad
+[head00161101]
+000=C:Unidad;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=<R:><N:>
+
+;Movimiento
+[head00161103]
+000=C:Movimiento;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=<R:><N:>
+
+;Estado
+[head00161106]
+000=C:Estado;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=<R:><N:>
+
+;Transición
+[head00161105]
+000=C:Transición;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=N° de transición;
+009=<R:><N:>
+
+;Etapa
+[head00161104]
+000=C:Etapa;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=N° de etapa;
+009=<R:><N:>
+
+;Definición del error
+[head00161102.1]
+000=C:Supervisión general;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número de mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sim);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios;
+
+018=Lógica supervisión;
+
+019=Valor asociado(abs);
+020=Valor asociado(sim);
+021=<R:><N:>
+
+
+[head00161102.2]
+000=C:Supervisión operando;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número de mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sim);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios
+
+018=Evento;
+019=Tiempo;
+
+020=Valor asociado(abs);
+021=Valor asociado(sim);
+022=<R:><N:>
+
+
+[head00161102.3]
+000=C:Supervisión arranque;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número de mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sim);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios;
+
+018=Señal causante;
+019=Tiempo de arranque;
+
+020=Valor asociado(abs);
+021=Valor asociado(sim);
+022=<R:><N:>
+
+
+[head00161102.4]
+000=C:Supervisión acción;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número de mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sim);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios;
+
+018=Señal causante;
+019=Tiempo de acción;
+
+020=Valor asociado(abs);
+021=Valor asociado(sim);
+022=<R:><N:>
+
+
+[head00161102.5]
+000=C:Supervisión reacción;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número del mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sim);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios;
+
+018=Marca posición;
+019=Tiempo de reacción;
+
+020=Valor asociado(abs);
+021=Valor asociado(sim);
+022=<R:><N:>
+
+
+[head00161102.6]
+000=C:Enclavamiento supervisión;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número del mensaje;
+009=Prioridad;
+010=Acuse;
+011=Texto del mensaje;
+012=Oad(abs);
+013=Oad(sym);
+014=Nombre del bloque;
+015=Detección errores;
+016=Adq. primeros valores;
+017=Análisis de criterios;
+
+018=Señal causante;
+019=Tiempo de enclavamiento;
+
+020=Valor asociado(abs);
+021=Valor asociado(sim);
+022=<R:><N:>
+
+
+;Aktionsfehler
+[head00161108]
+000=C:Error de acción;
+001=Nombre;
+002=Autor;
+003=Fecha de creación;
+004=Hora de creación;
+005=Fecha de modificación;
+006=Hora de modificación;
+007=Comentario;
+008=Número del mensaje;
+009=Texto del mensaje;
+010=Análisis de criterios;
+011=Lógica de supervisión;
+012=<R:><N:>
+013=<R:><N:>

@@ -1,0 +1,133 @@
+[2364725]
+KatEntryName=V5.3
+SHORTNAME=CPU 412-1
+InfoText=Memoria central 144KB código y 144KB datos; 0,075 ms/1000 instr.; 4KB DI/O; 32 enlaces; 1*DP/MPI; emisor y receptor en comunicación directa; equidistancia DP y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+Comment=6ES7 412-1XJ05-0AB0 V5.3, 6ES7 412-2XJ05-0AB0 V5.3, 6ES7 414-2XK05-0AB0 V5.3, 6ES7 414-3XM05-0AB0 V5.3, 6ES7 416-2XN05-0AB0 V5.3, 6ES7 416-2FN05-0AB0 V5.3, 6ES7 416-3XR05-0AB0 V5.3, 6ES7 417-4XT05-0AB0 V5.3
+
+[2364726]
+SHORTNAME=MPI/DP
+
+
+[2364727]
+KatEntryName=V5.3
+SHORTNAME=CPU 412-2 DP
+InfoText=Memoria central 256KB código y 256KB datos; 0,075 ms/1000 instr.; 4KB DI/O; 32 enlaces; 1*DP/MPI y 1*DP; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+
+[2364728]
+SHORTNAME=DP
+
+[2364729]
+SHORTNAME=MPI/DP
+
+
+[2364730]
+KatEntryName=V5.3
+SHORTNAME=CPU 414-2 DP
+InfoText=Memoria central 512KB código y 512KB datos; 0,045 ms/1000 instr.; 8KB DI/O; 32 enlaces; 1*DP/MPI y 1*DP; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+
+[2364731]
+SHORTNAME=DP
+
+[2364732]
+SHORTNAME=MPI/DP
+
+
+[2364733]
+KatEntryName=V5.3
+SHORTNAME=CPU 414-3 DP
+InfoText=Memoria central 1,4MB código y 1,4MB datos; 0,045 ms/1000 instr.; 8KB DI/O; 32 enlaces; 1*DP/MPI, 1*DP y 1 receptáculo para submódulos IF; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+
+[2364734]
+SHORTNAME=DP
+
+[2364735]
+SHORTNAME=MPI/DP
+
+
+[2364736]
+KatEntryName=V5.3
+SHORTNAME=CPU 416-2 DP
+InfoText=Memoria central 2,8MB código y 2,8MB datos; 0,030 ms/1000 instr.; 16KB DI/O; 64 enlaces; 1*DP/MPI y 1*DP; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+
+[2364737]
+SHORTNAME=DP
+
+[2364738]
+SHORTNAME=MPI/DP
+
+
+[2364739]
+KatEntryName=V5.3
+SHORTNAME=CPU 416F-2
+InfoText=Memoria central 2,8MB código y 2,8MB datos; 0,030 ms/1000 instr.; 16KB DI/O; 64 enlaces; 1*DP/MPI y 1*DP; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3; apto para aplicaciones de seguridad; soporta PROFIsafe V2
+
+[2364740]
+SHORTNAME=DP
+
+[2364741]
+SHORTNAME=MPI/DP
+
+
+[2364742]
+KatEntryName=V5.3
+SHORTNAME=CPU 416-3 DP
+InfoText=Memoria central 5,6MB código y 5,6 MB datos; 0,030 ms/1000 instr.; 16KB DI/O; 64 enlaces; 1*DP/MPI, 1*DP y 1 receptáculo para submódulos IF; emisor y receptor en comunicación directa; equidistancia y modo isócrono; routing; routing de registros de datos; apto para multiprocesam.; firmware V5.3
+
+[2364743]
+SHORTNAME=DP
+
+[2364744]
+SHORTNAME=MPI/DP
+
+
+[2364745]
+KatEntryName=V5.3
+SHORTNAME=CPU 417-4
+InfoText=Memoria central 15MB código y 15MB datos; 0,018 ms/1000 instr.; 16KB DI/O; 64 enlaces; 1*DP/MPI, 1*DP y 2 receptáculos para submódulos IF; apto para multiprocesam., emisor y receptor en comunicación directa, equidistancia y modo isócrono, routing, routing de registros de datos; firmware V5.3
+
+[2364746]
+SHORTNAME=DP
+
+[2364747]
+SHORTNAME=MPI/DP
+
+
+[2363956]
+KatEntryName=6ES7 412-1XJ05-0AB0
+SHORTNAME=CPU 412-1
+InfoText=
+
+[2363960]
+KatEntryName=6ES7 412-2XJ05-0AB0
+SHORTNAME=CPU 412-2 DP
+InfoText=
+
+[2363964]
+KatEntryName=6ES7 414-2XK05-0AB0
+SHORTNAME=CPU 414-2 DP
+InfoText=
+
+[2363968]
+KatEntryName=6ES7 414-3XM05-0AB0
+SHORTNAME=CPU 414-3 DP
+InfoText=
+
+[2363972]
+KatEntryName=6ES7 416-2XN05-0AB0
+SHORTNAME=CPU 416-2 DP
+InfoText=
+
+[2363976]
+KatEntryName=6ES7 416-2FN05-0AB0
+SHORTNAME=CPU 416F-2
+InfoText=
+
+[2363980]
+KatEntryName=6ES7 416-3XR05-0AB0
+SHORTNAME=CPU 416-3 DP
+InfoText=
+
+[2363984]
+KatEntryName=6ES7 417-4XT05-0AB0
+SHORTNAME=CPU 417-4
+InfoText=

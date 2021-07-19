@@ -1,0 +1,133 @@
+[2363954]
+KatEntryName=V5.0
+SHORTNAME=CPU 412-1
+InfoText=Mémoire de travail 144 Ko code et 144 Ko données; 0,075 ms/Kinst; 4 Ko DI/O; 32 liaisons; 1*DP/MPI; échange direct côté émetteur et récepteur possible; équidistance DP et synchronisme d'horloge; routage; multicomputing; firmware V5.0
+Comment=6ES7 412-1XJ05-0AB0, 6ES7 412-2XJ05-0AB0, 6ES7 414-2XK05-0AB0, 6ES7 414-3XM05-0AB0, 6ES7 416-2XN05-0AB0, 6ES7 416-2FN05-0AB0, 6ES7 416-3XR05-0AB0, 6ES7 417-4XT05-0AB0
+
+[2363955]
+SHORTNAME=MPI/DP
+
+
+[2363957]
+KatEntryName=V5.0
+SHORTNAME=CPU 412-2 DP
+InfoText=Mémoire de travail 256 Ko code et 256 Ko données; 0,075 ms/Kinst; 4 Ko DI/O; 32 liaisons; 1*DP/MPI et 1*DP; échange direct côté émetteur et récepteur possible; équidistance et synchronisme d'horloge; routage; multicomputing; firmware V5.0
+
+[2363958]
+SHORTNAME=DP
+
+[2363959]
+SHORTNAME=MPI/DP
+
+
+[2363961]
+KatEntryName=V5.0
+SHORTNAME=CPU 414-2 DP
+InfoText=Mémoire de travail 512 Ko code et 512 Ko données; 0,045 ms/Kinst; 8 Ko DI/O; 32 liaisons; 1*DP/MPI et 1*DP; échange direct côté émetteur et récepteur possible; équidistance et synchronisme d'horloge; routage; multicomputing; firmware V5.0
+
+[2363962]
+SHORTNAME=DP
+
+[2363963]
+SHORTNAME=MPI/DP
+
+
+[2363965]
+KatEntryName=V5.0
+SHORTNAME=CPU 414-3 DP
+InfoText=Mémoire de travail 1,4 Mo code et 1,4 Mo données; 0,045 ms/Kinst; 8 Ko DI/O; 32 liaisons; 1*DP/MPI, 1*DP et 1 logement pour cartouches interface; échange direct côté émetteur et récepteur possible; équidistance et synchronisme d'horloge; routage; multicomputing; firmware V5.0
+
+[2363966]
+SHORTNAME=DP
+
+[2363967]
+SHORTNAME=MPI/DP
+
+
+[2363969]
+KatEntryName=V5.0
+SHORTNAME=CPU 416-2 DP
+InfoText=Mémoire de travail 2,8 Mo code et 2,8 Mo données; 0,030 ms/Kinst; 16 Ko DI/O; 64 liaisons; 1*DP/MPI et 1*DP; échange direct côté émetteur et récepteur possible; équidistance; routage; multicomputing; firmware V5.0
+
+[2363970]
+SHORTNAME=DP
+
+[2363971]
+SHORTNAME=MPI/DP
+
+
+[2363973]
+KatEntryName=V5.0
+SHORTNAME=CPU 416F-2
+InfoText=Mémoire de travail 2,8 Mo code et 2,8 Mo données; 0,030 ms/Kinst; 16 Ko DI/O; 64 liaisons; 1*DP/MPI et 1*DP; échange direct côté émetteur et récepteur possible; équidistance et synchronisme d'horloge; routage; multicomputing; firmware V5.0; applications de sécurité; accèpte PROFIsafe V2
+
+[2363974]
+SHORTNAME=DP
+
+[2363975]
+SHORTNAME=MPI/DP
+
+
+[2363977]
+KatEntryName=V5.0
+SHORTNAME=CPU 416-3 DP
+InfoText=Mémoire de travail 5,6 Mo code et 5,6 Mo données; 0,030 ms/Kinst; 16 Ko DI/O; 64 liaisons; 1*DP/MPI, 1*DP et 1 logement pour cartouches interface; échange direct côté émetteur et récepteur possible; équidistance; routage; multicomputing; firmware V5.0
+
+[2363978]
+SHORTNAME=DP
+
+[2363979]
+SHORTNAME=MPI/DP
+
+
+[2363981]
+KatEntryName=V5.0
+SHORTNAME=CPU 417-4
+InfoText=Mémoire de travail 15 Mo code et 15 Mo données; 0,018 ms/Kinst; 16 Ko DI/O; 64 liaisons; 1*DP/MPI, 1*DP et 2 logements pour cartouches interface; multicomputing, échange direct côté émetteur et récepteur possible, équidistance et synchronisme d'horloge, routage, firmware V5.0
+
+[2363982]
+SHORTNAME=DP
+
+[2363983]
+SHORTNAME=MPI/DP
+
+
+[2363956]
+KatEntryName=6ES7 412-1XJ05-0AB0
+SHORTNAME=CPU 412-1
+InfoText=
+
+[2363960]
+KatEntryName=6ES7 412-2XJ05-0AB0
+SHORTNAME=CPU 412-2 DP
+InfoText=
+
+[2363964]
+KatEntryName=6ES7 414-2XK05-0AB0
+SHORTNAME=CPU 414-2 DP
+InfoText=
+
+[2363968]
+KatEntryName=6ES7 414-3XM05-0AB0
+SHORTNAME=CPU 414-3 DP
+InfoText=
+
+[2363972]
+KatEntryName=6ES7 416-2XN05-0AB0
+SHORTNAME=CPU 416-2 DP
+InfoText=
+
+[2363976]
+KatEntryName=6ES7 416-2FN05-0AB0
+SHORTNAME=CPU 416F-2
+InfoText=
+
+[2363980]
+KatEntryName=6ES7 416-3XR05-0AB0
+SHORTNAME=CPU 416-3 DP
+InfoText=
+
+[2363984]
+KatEntryName=6ES7 417-4XT05-0AB0
+SHORTNAME=CPU 417-4
+InfoText=

@@ -1,0 +1,23 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2016
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+
+;---------- FM 352 CAM
+[_S7H_HSP_6ES7_352_1AH02_0AE0_CT]
+ObjType=2366988
+prefix=OM
+server=s7h2016x.dll
+basetype=_S7H_6ES7_352_1AH01_0AE0_CT
+CatalogParent=1315019,2364188
+MLFB=6ES7 352-1AH02-0AE0
+IUA_SUPPORT=1
+FW_DOWNLOAD_CAPABLE=1
+FW_DOWNLOAD_CRITICAL_FWEXCHANGE=1
+PN_PLUGGABLE=1
+HSP_ID=2016
+HSP_NAME=FM 352 CAM, 6ES7 352-1AH02-0AE0
+HWCNFX_FOR_HWU=5.3.0.0
+HWCNFX_VER=5.4.2.0|0
+

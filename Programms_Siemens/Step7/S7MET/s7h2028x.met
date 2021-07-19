@@ -1,0 +1,40 @@
+;------------------------------------------------------------------------
+; Meta-Datei für HSP 2028
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+;---------- Powermodul PM-O 2x24VDC
+;
+[_S7H_HSP_6ES7_148_4CA60_0AA0_C]
+basetype=_S7H_HSP_CLASS_ET200PRO_MODULE_PM_AT
+CatalogParent=2363612
+CLSID={00DA022D-A2FF-441A-A243-D37A70E3DD36}
+
+HSP_ID=2028
+HSP_NAME=PM-O 2x24VDC
+HWCNFX_FOR_HWU=5.4.2.0
+HWCNFX_VER=5.4.4.0|0
+
+ET200PRO_MODULE_KENNUNG=0x00
+ET200PRO_MODULE_PRM_KENNUNG=0x20
+
+IS_PARAMETRIZEABLE=1
+IsCatEntry=1
+MLFB=6ES7 148-4CA60-0AA0
+PN_MODULE_IDENTNUMBER=0x0084
+nKatChilds=0
+ObjType=2367012
+paramDescr=s7h2028x.dsc
+prefix=OM
+S7_TYPE_CODE=0x7DC0
+server=s7hkcomx.dll
+SHORTNAME=PM-O 2x24VDC
+
+USER_DIALOG_1={6645E63A-79CC-4596-97E0-52A23FC1D1DF},s7h2028x.dll
+;USER_DIALOG_1={4D3AAFCD-2319-47c4-BC95-DC61E42524C3},s7h2028x.dll
+:USER_DIALOG_1=STANDARD
+
+
+
+
+
+

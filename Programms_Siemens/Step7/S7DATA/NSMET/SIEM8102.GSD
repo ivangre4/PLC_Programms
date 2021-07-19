@@ -1,0 +1,173 @@
+;============================================================
+; Profibus Device Database of :
+;   SIMATIC DP Slave
+;   Model : SIMATIC VS Link 
+; Language : English
+; Date : 4 January 2003
+; Author : Siemens AG
+;============================================================
+#Profibus_DP
+
+GSD_Revision        = 3
+
+; Device identification
+Vendor_Name         = "Siemens AG"
+Model_Name          = "VS Link"
+Revision            = "1.0"
+Ident_Number        = 0x8102
+Protocol_Ident      = 0              ; DP protocol
+Station_Type        = 0              ; Slave device
+FMS_supp            = 0              ; FMS not supported
+Hardware_Release    = "Version 1.2"
+Software_Release    = "Version 1.0"
+OrderNumber="6GF9 003-2AB"
+Info_Text="VS Link PROFIBUS"
+
+; Supported baudrates
+9.6_supp            = 1
+19.2_supp           = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 1
+12M_supp            = 1
+
+; Maximum responder time for supported baudrates 
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+MaxTsdr_3M          = 50
+MaxTsdr_6M          = 100
+MaxTsdr_12M         = 200
+
+; Supported hardware features
+Redundancy          = 0       ; not supported
+Repeater_Ctrl_Sig   = 2       ; TTL
+24V_Pins            = 0       ; not connected
+Implementation_Type = "SPC3"
+
+; Supported DP features
+Freeze_Mode_supp    = 1       ; supported
+Sync_Mode_supp      = 1       ; supported
+Auto_Baud_supp      = 1       ; supported
+Set_Slave_Add_supp  = 0       ; not supported
+
+; Maximum polling frequency
+Min_Slave_Intervall = 1       ; 100 us
+
+; Maximum supported sizes
+Modular_Station     = 1       ; modular
+Max_Module          = 24
+Max_Input_Len       = 244
+Max_Output_Len      = 244
+Max_Data_Len        = 416
+Modul_Offset        = 1
+
+Fail_Safe           = 0       ; state CLEAR not accepted
+
+Slave_Family        = 0@Machine Vision
+Bitmap_Device="VSLINK_N"              
+Max_Diag_Data_Len   = 6
+
+; Definition of modules
+Module = "IN/OUT:   1 Byte" 0x30
+1
+EndModule
+;
+Module = "IN/OUT:   2 Byte ( 1 word)" 0x70
+2
+EndModule
+;
+Module = "IN/OUT:   4 Byte ( 2 word)" 0x71
+3
+EndModule
+;
+Module = "IN/OUT:   8 Byte ( 4 word)" 0x73
+4
+EndModule
+;
+Module = "IN/OUT:  16 Byte ( 8 word)" 0x77
+5
+EndModule
+;
+Module = "IN/OUT:  32 Byte (16 word)" 0x7F
+6
+EndModule
+;
+Module = "IN/OUT:  64 Byte (32 word)" 0xC0,0x5F,0x5F
+7
+EndModule
+;
+Module = "IN/OUT: 128 Byte (64 word)" 0xC0,0x7F,0x7F
+8
+EndModule
+;
+Module = "INPUT:    1 Byte" 0x10
+9
+EndModule
+;
+Module = "INPUT:    2 Byte ( 1 word)" 0x50
+10
+EndModule
+;
+Module = "INPUT:    4 Byte ( 2 word)" 0x51
+11
+EndModule
+;
+Module = "INPUT:    8 Byte ( 4 word)" 0x53
+12
+EndModule
+;
+Module = "INPUT:   16 Byte ( 8 word)" 0x57
+13
+EndModule
+;
+Module = "INPUT:   32 Byte (16 word)" 0x5F
+14
+EndModule
+;
+Module = "INPUT:   64 Byte (32 word)" 0x40,0x5F
+15
+EndModule
+;
+Module = "INPUT:  128 Byte (64 word)" 0x40,0x7F
+16
+EndModule
+;
+Module = "OUTPUT:   1 Byte" 0x20
+17
+EndModule
+;
+Module = "OUTPUT:   2 Byte ( 1 word)" 0x60
+18
+EndModule
+;
+Module = "OUTPUT:   4 Byte ( 2 word)" 0x61
+19
+EndModule
+;
+Module = "OUTPUT:   8 Byte ( 4 word)" 0x63
+20
+EndModule
+;
+Module = "OUTPUT:  16 Byte ( 8 word)" 0x67
+21
+EndModule
+;
+Module = "OUTPUT:  32 Byte (16 word)" 0x6F
+22
+EndModule
+;
+Module = "OUTPUT:  64 Byte (32 word)" 0x80,0x5F
+23
+EndModule
+;
+Module = "OUTPUT: 128 Byte (64 word)" 0x80,0x7F
+24
+EndModule
+

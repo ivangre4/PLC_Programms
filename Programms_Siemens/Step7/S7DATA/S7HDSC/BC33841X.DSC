@@ -1,0 +1,53 @@
+[SM338 POS-INPUT V2.0]
+[PARAMETERS]
+001;000;000.7;001;000;0001;  ;000;Group_Diagnosis
+002;000;001.0;001;000;0001;  ;000;Mode_Inputs
+003;000;001.1;001;000;0001;  ;000;Fast_Mode
+004;000;002.0;002;016;0002;AI;000;Absolute_Encoder_SSI
+005;000;002.3;001;016;0002;AI;000;Code_Type
+006;000;002.4;002;016;0002;AI;000;Transmission_Rate
+007;000;002.6;002;016;0002;AI;000;Monoflop_Time
+008;000;003.0;004;016;0002;AI;000;Positions_0_to_12
+009;000;003.6;002;016;0002;AI;000;Digital_Input
+
+[Absolute_Encoder_SSI]
+000=no
+001=13_bit
+002=21_bit
+003=25_bit
+
+[Code_Type]
+001=Gray
+000=Binary
+
+[Transmission_Rate]
+000=125_kHz
+001=250_kHz
+002=500_kHz
+003=1_MHz
+
+[Monoflop_Time]
+000=16_ys
+001=32_ys
+002=48_ys
+003=64_ys
+
+[Positions_0_to_12]
+012=2
+011=4
+010=8
+009=16
+008=32
+007=64
+006=128
+005=256
+004=512
+003=1024
+002=2048
+001=4096
+000=8192
+
+[Digital_Input]
+000=off
+001=I0
+003=I1

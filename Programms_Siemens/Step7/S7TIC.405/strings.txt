@@ -1,0 +1,1131 @@
+STR
+STRN
+AND
+ANDN
+OR
+ORN
+STRI
+STRNI
+ANDI
+ANDNI
+ORI
+ORNI
+STRPD
+ANDPD
+.
+.
+ORPD
+SGCNT
+STRND
+FOR
+ANDND
+NCON
+ORND
+ACON
+STRE
+STRNE
+ANDE
+ANDNE
+ORE
+ORNE
+STRGE
+STRLT
+ANDGE
+ANDLT
+ORGE
+ORLT
+SG
+ISG
+OUT
+JMP
+OROUT
+NJMP
+SET
+.
+RST
+OUTI
+OROUTI
+CSG
+MSG
+SETI
+RSTI
+TMR
+TMRF
+.
+.
+PD
+SR
+LD
+LDD
+LDX
+LDI
+OUT
+OUTD
+OUTX
+OUTI
+ADD
+ADDD
+ADDB
+ADDBD
+SUB
+SUBD
+SUBB
+SUBBD
+MUL
+MULB
+DIV
+DIVB
+CMP
+CMPD
+AND
+ANDD
+OR
+ORD
+XOR
+XORD
+FRZ
+MLBL
+.
+.
+.
+.
+.
+.
+TMRA
+TMRAF
+CNT
+.
+UDC
+GTS
+GOTO
+PAUSE
+RST
+LDLBL
+LDSX
+LDD
+LD
+LDA
+ADDD
+ADDBD
+ADDB
+SUBD
+SUBBD
+SUBB
+MUL
+MULB
+DIV
+DIVB
+CMPD
+ANDD
+ORD
+XORD
+PARAM
+PARAM
+PARAM
+PARAM
+.
+EXPAND
+.
+END
+ANDSTR
+ORSTR
+MLS
+MLR
+MULD
+DIVD
+FILL
+.
+RTC
+.
+.
+LDF
+LDIF
+POP
+OUTF
+OUTIF
+ADDF
+ADDS
+SUBF
+SUBS
+MULF
+MULS
+DIVF
+DIVS
+CMPF
+CMPS
+ANDF
+ORF
+XORF
+INV
+BIN
+BCD
+ENCO
+DECO
+SEG
+SHFR
+ROTR
+SHFL
+ROTL
+INC
+DEC
+SWAP
+FIND
+FAULT
+.
+.
+.
+.
+.
+.
+TTD
+STT
+MOV
+ATT
+RFB
+RFT
+.
+SUSIO
+OUTM
+OUTL
+SETBIT
+RSTBIT
+TSHFR
+TSHFL
+DOIO
+.
+SUM
+RSTWT
+BREAK
+DLBL
+NEXT
+.
+LBL
+SBR
+SIN
+COS
+TAN
+ASIN
+ACOS
+ATAN
+RAD
+DEG
+SQRT
+DISI
+ENI
+IRTC
+INT
+STOP
+FDGT
+RD
+WT
+RX
+WX
+.
+.
+INCB
+DECB
+ATH
+HTA
+MOVBLK
+ANDMOV
+ORMOV
+XORMOV
+RT
+BCDCPL
+.
+IRT
+.
+.
+MEND
+CV
+.
+.
+.
+MOVMC
+ADDBS
+SUBBS
+MULBS
+DIVBS
+.
+ANDS
+ORS
+XORS
+.
+.
+NOP
+k
+K
+O
+A
+Z
+V
+P
+GX
+GY
+X
+Y
+C
+S
+T
+CT
+SP
+UNKNOWN
+NONE
+next
+last
+outObj
+.LIS
+.AWL
+ 
+***
+SEE
+FOR CONVERSION REPORT
+COULD NOT OPEN
+FOR OUTPUT
+IS NOT A TISOFT 405 FILE
+TISOFT 405 Program
+BEC
+...TCFUN
+
+      FUNCTION FC 102 : VOID
+        TITLE = TIMER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : TMR
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        TNUM     :  INT;
+        PRESET   :  INT;
+      END_VAR
+      VAR_TEMP
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        TBIT     :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     TNUM;
+        SLD   4;
+        T     CURRENT;
+        L     TNUM;
+        L     P#608.0;
+        +D;
+        T     TBIT;
+        L     128;
+        +D;
+        T     CBIT;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBW[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        A     PF;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        A     TST;
+        JC    X020;
+      NETWORK
+        A     PF;
+        BEC;
+      NETWORK
+        L     0;
+        T     DBW[CURRENT];
+        CLR;
+        =     DBX[TBIT];
+        BE;
+      NETWORK
+X020:   L     DBW1018;
+        L     DBW[CURRENT];
+        +D;
+        L     9999;
+        >D;
+        JC    X030;
+        POP;
+X030:   T     DBW[CURRENT] 
+      NETWORK
+        L     PRESET;
+        L     DBW[CURRENT];
+        <=I;
+        =     DBX[TBIT];
+      END_FUNCTION
+
+      FUNCTION FC 103 : VOID
+        TITLE = FAST TIMER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : TMRF
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        TNUM     :  INT;
+        PRESET   :  INT;
+      END_VAR
+      VAR_TEMP
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        TBIT     :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     TNUM;
+        SLD   4;
+        T     CURRENT;
+        L     TNUM;
+        L     P#608.0;
+        +D;
+        T     TBIT;
+        L     128;
+        +D;
+        T     CBIT;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBW[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        A     PF;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        A     TST;
+        JC    X020;
+      NETWORK
+        A     PF;
+        BEC;
+      NETWORK
+        L     0;
+        T     DBW[CURRENT];
+        CLR;
+        =     DBX[TBIT];
+        BE;
+      NETWORK
+X020:   L     DBW1020;
+        L     DBW[CURRENT];
+        +D;
+        L     9999;
+        >D;
+        JC    X030;
+        POP;
+X030:   T     DBW[CURRENT] 
+      NETWORK
+        L     PRESET;
+        L     DBW[CURRENT];
+        <=I;
+        =     DBX[TBIT];
+      END_FUNCTION
+
+      FUNCTION FC 104 : VOID
+        TITLE = ACCUMULATING TIMER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : TMRA
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        RESET    :  BOOL;
+        TNUM     :  INT;
+        PRESET   :  DINT;
+      END_VAR
+      VAR_TEMP
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        TBIT     :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     TNUM;
+        SLD   4;
+        T     CURRENT;
+        L     TNUM;
+        L     P#608.0;
+        +D;
+        T     TBIT;
+        L     128;
+        +D;
+        T     CBIT;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBD[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        O     PF;
+        O     RESET;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        AN    TST;
+        BEC;
+      NETWORK
+        AN    RESET;
+        JC    X030;
+        L     0;
+        T     DBD[CURRENT];
+        CLR;
+        =     DBX[TBIT];
+        BE;
+      NETWORK
+X030:   L     DBW1018;
+        L     DBD[CURRENT];
+        +D;
+        L     99999999;
+        >D;
+        JC    X040;
+        POP;
+X040:   T     DBD[CURRENT] 
+      NETWORK
+        L     PRESET;
+        L     DBD[CURRENT];
+        <=D;
+        =     DBX[TBIT];
+      END_FUNCTION
+
+      FUNCTION FC 105 : VOID
+        TITLE = FAST ACCUMULATING TIMER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : TMRAF
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        RESET    :  BOOL;
+        TNUM     :  INT;
+        PRESET   :  DINT;
+      END_VAR
+      VAR_TEMP
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        TBIT     :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     TNUM;
+        SLD   4;
+        T     CURRENT;
+        L     TNUM;
+        L     P#608.0;
+        +D;
+        T     TBIT;
+        L     128;
+        +D;
+        T     CBIT;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBD[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        O     PF;
+        O     RESET;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        AN    TST;
+        BEC;
+      NETWORK
+        AN    RESET;
+        JC    X030;
+        L     0;
+        T     DBD[CURRENT];
+        CLR;
+        =     DBX[TBIT];
+        BE;
+      NETWORK
+X030:   L     DBW1020;
+        L     DBD[CURRENT];
+        +D;
+        L     99999999;
+        >D;
+        JC    X040;
+        POP;
+X040:   T     DBD[CURRENT] 
+      NETWORK
+        L     PRESET;
+        L     DBD[CURRENT];
+        <=D;
+        =     DBX[TBIT];
+      END_FUNCTION
+
+      FUNCTION FC 106 : VOID
+        TITLE = COUNTER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : CNT
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        RESET    :  BOOL;
+        CTNUM    :  INT;
+        PRESET   :  INT;
+      END_VAR
+      VAR_TEMP
+        CHNG     :  BOOL;
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        OBIT     :  DWORD;
+        CTBIT    :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     CTNUM;
+        SLD   4;
+        L     P#1024.0;
+        +D;
+        T     CURRENT;
+        L     CTNUM;
+        L     P#640.0;
+        +D;
+        T     CTBIT;
+        L     128;
+        +D;
+        T     CBIT;
+        L     128;
+        +D;
+        T     OBIT;
+      NETWORK
+        A     PF;
+        FP    DBX[OBIT];
+        =     CHNG;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBW[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        O     PF;
+        O     RESET;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        A     TST;
+        JC    X020;
+      NETWORK
+        A     PF;
+        BEC;
+      NETWORK
+        A     RESET;
+        BEC;
+      NETWORK
+X020:   AN    RESET;
+        JC    X030;
+        L     0;
+        T     DBW[CURRENT];
+        CLR;
+        =     DBX[CTBIT];
+        BE;
+      NETWORK
+X030:   AN    CHNG;
+        JC    X040;
+        L     1;
+        L     DBW[CURRENT];
+        +D;
+        L     9999;
+        >D;
+        JC    X050;
+        POP;
+X050:   T     DBW[CURRENT] 
+      NETWORK
+X040:   L     PRESET;
+        L     DBW[CURRENT];
+        <=D;
+        =     DBX[CTBIT];
+      END_FUNCTION
+
+      FUNCTION FC 107 : VOID
+        TITLE = STAGE COUNTER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : SGCNT
+        VERSION  : 1.0
+      VAR_INPUT
+        PF       :  BOOL;
+        CTNUM    :  INT;
+        PRESET   :  INT;
+      END_VAR
+      VAR_TEMP
+        CHNG     :  BOOL;
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        OBIT     :  DWORD;
+        CTBIT    :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     CTNUM;
+        SLD   4;
+        L     P#1024.0;
+        +D;
+        T     CURRENT;
+        L     CTNUM;
+        L     P#640.0;
+        +D;
+        T     CTBIT;
+        L     128;
+        +D;
+        T     CBIT;
+        L     128;
+        +D;
+        T     OBIT;
+      NETWORK
+        A     PF;
+        FP    DBX[OBIT];
+        =     CHNG;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBW[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        A     PF;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        A     TST;
+        JC    X020;
+      NETWORK
+        A     PF;
+        BEC;
+      NETWORK
+X020:   AN    CHNG;
+        JC    X030;
+        L     1;
+        L     DBW[CURRENT];
+        +D;
+        L     9999;
+        >D;
+        JC    X040;
+        POP;
+X040:   T     DBW[CURRENT] 
+      NETWORK
+X030:   L     PRESET;
+        L     DBW[CURRENT];
+        <=D;
+        =     DBX[CTBIT];
+      END_FUNCTION
+
+      FUNCTION FC 108 : VOID
+        TITLE = UP/DOWN COUNTER (405)
+        AUTHOR   : SIA
+        FAMILY   : CONVERT
+        NAME     : UDC
+        VERSION  : 1.0
+      VAR_INPUT
+        UP       :  BOOL;
+        DOWN     :  BOOL;
+        RESET    :  BOOL;
+        CTNUM    :  INT;
+        PRESET   :  DINT;
+      END_VAR
+      VAR_TEMP
+        CHNGU    :  BOOL;
+        CHNGD    :  BOOL;
+        TST      :  BOOL;
+        CURRENT  :  DWORD;
+        CBIT     :  DWORD;
+        OBITU    :  DWORD;
+        OBITD    :  DWORD; 
+        CTBIT    :  DWORD;
+      END_VAR
+      BEGIN
+      NETWORK
+        L     CTNUM;
+        SLD   4;
+        L     P#1024.0;
+        +D;
+        T     CURRENT;
+        L     CTNUM;
+        L     P#640.0;
+        +D;
+        T     CTBIT;
+        L     128;
+        +D;
+        T     CBIT;
+        L     128;
+        +D;
+        T     OBITU;
+        L     1;
+        +D;
+        T     OBITD;
+      NETWORK
+        A     UP;
+        FP    DBX[OBITU];
+        =     CHNGU;
+      NETWORK
+        A     DOWN;
+        FP    DBX[OBITD];
+        =     CHNGD;
+      NETWORK
+        AN    DBX[CBIT];
+        JCN   X010;
+        L     0;
+        T     DBD[CURRENT];
+        =     DBX[CBIT];
+      NETWORK
+X010:   MCRA;
+      NETWORK
+        O     UP;
+        O     DOWN;
+        O     RESET;
+        =     TST;
+      NETWORK
+        MCRD;
+      NETWORK
+        A     TST;
+        JC    X020;
+      NETWORK
+        A     UP;
+        BEC;
+      NETWORK
+        A     DOWN;
+        BEC;
+      NETWORK
+        A     RESET;
+        BEC;
+      NETWORK
+X020:   AN    RESET;
+        JC    X030;
+        L     0;
+        T     DBD[CURRENT];
+        CLR;
+        =     DBX[CTBIT];
+        BE;
+      NETWORK
+X030:   MCRD;
+      NETWORK
+        AN    CHNGU;
+        JC    X040;
+        L     1;
+        L     DBD[CURRENT];
+        +D;
+        L     99999999;
+        >D;
+        JC    X050;
+        POP;
+X050:   T     DBD[CURRENT];
+X040:   AN    CHNGD;
+        JC    X060;
+        L     DBD[CURRENT];
+        L     1;
+        -D;
+        L     0;
+        <D;
+        JC    X070;
+        POP;
+X070:   T     DBD[CURRENT]
+      NETWORK
+X060:   L     PRESET;
+        L     DBD[CURRENT];
+        <=D;
+        =     DBX[CTBIT];
+      END_FUNCTION
+
+...ETCFUN
+CC   FC
+UC   FC
+CALL FC
+CALL
+FC 81  ( S_DATA := P#DB1.???,\n         LENGTH := P#DB1.???,\n         D_DATA := P#DB1.???,\n         E_TYPE := B#16#4); // IBLKMOV
+FC 82  ( S_BIT := P#???, N := ???); // RSET
+FC 83  ( S_BIT := P#???, N := ???); // SET
+FC ATT  84
+FC FIFO 85
+FC TBL FIND 86
+FC LIFO 87
+FC TBL  88
+FC TBL WRD 89
+FC WSR  90
+FC WRD TBL 91
+FC 92  ( DATA := ???, RESET := ???, S_BIT := P#???, N := ???); // SHRB
+FC 93  ( IN := ???, OUT := ???); // SEG
+FC 94  ( IN := P#DB1.???, N := ???, OUT := P#DB1.???, RET_VAL := ???); // ATH
+FC 95  ( IN := P#DB1.???, OUT := P#DB1.???, N := ???); // HTA
+FC 96  ( IN := ???, RET_VAL := ???); // ENCO
+FC 97  ( IN := ???, RET_VAL := ???); // DECO
+FC 98  ( IN := ???, RET_VAL := ???); // BCDCPL
+FC 99  ( IN := ???, RET_VAL := ???); // BITSUM
+FC 102 ( PF := ???, TNUM := ???, PRESET := ???); // TMR
+FC 103 ( PF := ???, TNUM := ???, PRESET := ???); // TMRF
+FC 104 ( PF := ???, RESET := BOX[???], TNUM := ???, PRESET := ???); // TMRA
+FC 105 ( PF := ???, RESET := BOX[???], TNUM := ???, PRESET := ???); // TMRAF
+FC 106 ( PF := ???, RESET := BOX[???], CTNUM := ???, PRESET := ???); // CTR
+FC 107 ( PF := ???, CTNUM := ???, PRESET := ???); // SGCNT
+FC 108 ( UP := ???, DOWN := ???, RESET := BOX[???], CTNUM := ???, PRESET := ???); // UDC
+SFC 20 ( SRCBLK := P#??? WORD ???, RET_VAL := DBW 978, DSTBLK := P#??? WORD ??? ); // BLKMOV
+SFC 21 ( BVAL := P#??? WORD ???, RET_VAL := DBW 980, BLK := P#??? WORD ??? ); // FILL
+INT    108   interrupt functions start
+USER   108   user functions start
+...operand table
+OPERAND MAPPING
+---------------
+V00000 - V00177  DBB0000 - DBB0255
+V01000 - V01177  DBB1024 - DBB1279
+V01400 - V07777  DBB1536 - DBB8191
+V40000 - V40377  DBB0256 - DBB0511 (GX0000 - GX3777)
+ C0000 - C0737    M000.0 - M063.7
+ S0000 - S0577   DBB0512 - DBB0559
+ T0000 - T0177   DBB0608 - DBB0623
+ CT0000 - CT0177 DBB0640 - DBB0655
+ SP0000 - SP0617 DBB0688 - DBB0737 (MAY NOT BE SUPPORTED OR FULLY EQUIVALENT TO 405)
+note: The rest of data block 1 is used for work variables.
+...eoperand table
+X0???  : I???
+Y0???  : Q???
+LABEL ??? : ???
+UNCONVERTED TISOFT 405 BOX
+NOT CONVERTED
+LB
+SP00
+SET INITIAL STAGES/LOAD DATA TABLES
+TABLE ADDRESS ERROR
+STAGE
+END STAGE
+S STAGE
+T STAGE
+DRIVE SP0
+TURN SP1/SP0 ON
+IMMEDIATE OUTPUT BUFFERING
+OROUT AND OROUT IMMEDIATE CLEAR
+READ INPUT IMMEDIATE
+WARNINGS
+AT LINE 
+CONVERTED ASSUMED BCD CONSTANT (???) TO DECIMAL
+LEFT AS HEXADECIMAL CONSTANT (???)
+OPERATION MAY NOT BE NEEDED
+UNUSED EXPRESSION
+COUNTER PRESET VALUE TRUNCATED (???)
+REMAPPED VARIABLES MAY NOW BE DISJOINT
+INTERRUPT SUBROUTINE NOT DRIVEN
+SP VARIABLE NOT DRIVEN
+INDIRECT ACCESS MUST USE STEP 7 POINTER FORMAT TO WORK PROPERLY
+OVERLAY V MEMORY OPERAND MAY BE DISJOINT OR INAPPROPRIATE
+UNEXPECTED OPERAND TYPE
+ADDRESSING MODE NOT SUPPORTED
+UNCONVENTIONAL USE OF MLS/MLR
+UNMATCHED MLS/MLR PAIRS
+EXPRESSION CONTINUITY LOST
+ARGUMENTS NOT CONSTANTS
+FORM OF EXPRESSION NOT SUPPORTED
+MCR STACK EXCEEDED
+MCR CROSSES STAGE BOUNDARY
+MORE BITS TRANSFERED THAN DESIRED
+PD(s) FROM PREVIOUS RUNG
+TITLE = REF ??? *** CHECK WARNINGS ***
+REF 
+//
+BOX
+.
+;
+:
+_
+[0..
+[
+]
+#
+I
+PI
+Q
+PQ
+M
+L
+C
+T
+BR
+DBX
+DBW
+DBD
+DB
+DI
+B
+W
+D
+2#
+16#
+W#
+DW#
+L#
+P#
+AR1
+,
++AR1
+LAR1
+TAR1
+#RET_VAL
+VAR_TEMP
+ARRAY
+OF
+BOOL
+END_VAR
+NETWORK
+TITLE=
+BEGIN
+...ob1 head
+      ORGANIZATION_BLOCK OB 100
+      TITLE = RESTART
+      VERSION : 1.0
+      VAR_TEMP
+      OB100_EV_CLASS   : BYTE ;
+      OB100_STRTUP     : BYTE ;
+      OB100_PRIORITY   : BYTE ;
+      OB100_OB_NUMBR   : BYTE ;
+      OB100_RESERVED_1 : BYTE ;
+      OB100_RESERVED_2 : BYTE ;
+      OB100_STOP       : WORD ;
+      OB100_STRT_INFO  : DWORD ;
+      OB100_DATE_TIME  : DATE_AND_TIME ;
+      END_VAR
+      BEGIN
+      NETWORK
+        OPN DB 1;
+      NETWORK
+        CLR ;
+        = DBX 688.0;
+        = DBX 688.1;
+        L     0;
+        T     DBW 1022;
+        T     DBW 1023;
+      END_ORGANIZATION_BLOCK
+
+      ORGANIZATION_BLOCK OB 1
+      TITLE = TISOFT 405 Program
+      VERSION : 1.0
+      VAR_TEMP
+      OB1_EV_CLASS   : BYTE ;
+      OB1_SCAN_1     : BYTE ;
+      OB1_PRIORITY   : BYTE ;
+      OB1_OB_NUMBR   : BYTE ;
+      OB1_RESERVED_1 : BYTE ;
+      OB1_RESERVED_2 : BYTE ;
+      OB1_PREV_CYCLE : INT ;
+      OB1_MIN_CYCLE  : INT ;
+      OB1_MAX_CYCLE  : INT ;
+      OB1_DATE_TIME  : DATE_AND_TIME ;
+      END_VAR
+      BEGIN
+      NETWORK
+        OPN DB 1;
+      NETWORK
+      TITLE = TIME DELTA's
+        L     OB1_PREV_CYCLE;
+        L     DBB 1022;
+        +I;
+        L     100;
+        /I;
+        T     DBW 1018;
+        SRD   16;
+        T     DBB 1022;
+        L     OB1_PREV_CYCLE;
+        L     DBB 1023;
+        +I;
+        L     10;
+        /I;
+        T     DBW 1020;
+        SRD   16;
+        T     DBB 1023;
+...eob1 head
+END_ORGANIZATION_BLOCK
+DATA_BLOCK DB 1\nVERSION : 1.0\nSTRUCT\nVmem     :       ARRAY [0..4095] OF INT;\nEND_STRUCT ;\nBEGIN???\nEND_DATA_BLOCK
+Vmem[???] := ??? ;
+FUNCTION FC
+END_FUNCTION
+VOID
+SLD 4
+SLD 3
+ - 
+A(
+O(
+O
+)
+A
+AN
+O
+ON
+=
+NOT
+S
+R
+SET
+SAVE
+CLR
+NOP    0
+NOP    1
+BLD 101
+BLD 102
+BLD 103
+MCRA
+MCRD
+MCR(
+)MCR
+POP
+JU
+JC
+JCN
+JNB
+SS
+CD
+CU
+FP
+LOOP
+L
+T
+AW
+==I
+>I
+<I
+<>I
+<=I
+>=I
+==D
+>D
+<D
++I
+-I
++D
+-D
+*D
+/D
+AD
+OD
+XOD
+INVD
+SRW
+SLD
+SRD
+RLD
+RRD
+BTD
+DTB
+txtEnd
+

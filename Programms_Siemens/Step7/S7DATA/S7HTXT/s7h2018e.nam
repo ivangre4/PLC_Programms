@@ -1,0 +1,20 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2018
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S 8DI / 8DO / 2DO AC
+
+;---------- 8xDC24V,   6ES7 131-4BF00-0AA0
+[2366979]
+KatEntryName=8DI DC24V
+InfoText=Unità ingressi digitali DI 8xDC24V, sincronismo di clock
+SHORTNAME=8DI DC24V
+
+
+;---------- DO 8xDC24V/0,5A,   6ES7 132-4BF00-0AA0
+[2366980]
+KatEntryName=8DO DC24V/0,5A
+InfoText=Unità uscite digitali DO 8xDC24V/0,5A, sincronismo di clock
+SHORTNAME=8DO DC24V/0,5A
+

@@ -1,0 +1,121 @@
+;-------------------------------------------------------------------------------------
+;S 7 - 3 0 0
+;-------------------------------------------------------------------------------------
+;-------------------------------------------
+;FM-300
+;-------------------------------------------
+; ----------------------------- FM Counter Module
+[_S7H_6ES7_350_1AH00_0AE0_CT]
+paramDescr=AH35010x.dsc
+
+; ----------------------------- FM Counter Module neu ab V5.2
+[_S7H_6ES7_350_1AH03_0AE0_CT]
+paramDescr=AH35013x.dsc
+
+; ----------------------------- FM Counter Module
+[_S7H_6ES7_350_2AH00_0AE0_CT]
+paramDescr=AH35020x.dsc
+
+; ----------------------------- FM Fixed Speed Pos
+[_S7H_6ES7_351_1AH00_0AE0_CT]
+paramDescr=AH35110x.dsc
+
+; ----------------------------- FM CAM-Module
+[_S7H_6ES7_352_1AH00_0AE0_CT]
+paramDescr=AH35210x.dsc
+
+; ----------------------------- FM Stepper Motor
+[_S7H_6ES7_353_1AH00_0AE0_CT]
+paramDescr=AH35310x.dsc
+
+; ----------------------------- FM Servo Motor
+[_S7H_6ES7_354_1AH00_0AE0_CT]
+paramDescr=AH35310x.dsc
+
+; ----------------------------- FM Regeln Module 
+[_S7H_6ES7_355_0VH00_0AE0_CT]
+paramDescr=VH35500x.dsc
+
+; ----------------------------- FM Regeln Module 
+[_S7H_6ES7_355_0VH10_0AE0_CT]
+paramDescr=VH35500x.dsc
+
+; ----------------------------- FM Regeln Module
+[_S7H_6ES7_355_1VH00_0AE0_CT]
+paramDescr=VH35500x.dsc
+
+; ----------------------------- FM Regeln Module
+[_S7H_6ES7_355_1VH10_0AE0_CT]
+paramDescr=VH35500x.dsc
+
+; ----------------------------- FM NCU
+[_S7H_6FC5_357_0BH00_0XE0_CT]
+paramDescr=NCU570_x.dsc
+
+; ----------------------------- FM NCU
+[_S7H_6FC5_357_0BH00_0XE1_CT]
+paramDescr=NCU570_x.dsc
+
+;-------------------------------------------
+;CP - 300
+;-------------------------------------------
+; ----------------------------- Basisobjekt fuer CP-300: _340_1AH00, _340_1BH00, _340_1CH00_
+[_S7H_CLASS_CP_300_CT]
+paramDescr=CP340__x.dsc
+
+
+;-------------------------------------------------------------------------------------
+;S 7 - 4 0 0
+;-------------------------------------------------------------------------------------
+;-------------------------------------------
+;FM-400
+;-------------------------------------------
+
+; ----------------------------- FM- Zaehler 2 Kanal
+[_S7H_6ES7_450_1AP00_0AE0_CT]
+paramDescr=AP45010x.dsc
+
+; ----------------------------- FM Pos. mit Abschaltpunkte
+[_S7H_6ES7_451_3AL00_0AE0_CT]
+paramDescr=AL45130x.dsc
+
+; ----------------------------- FM Universelles Positionieren 3 Achsen 
+[_S7H_6ES7_453_3AH00_0AE0_CT]
+paramDescr=AH45330x.dsc
+
+; ----------------------------- FM Nocke
+[_S7H_6ES7_452_1AH00_0AE0_CT]
+paramDescr=AH45210x.dsc
+
+; ----------------------------- FM Regeln Module 
+[_S7H_6ES7_455_0VS00_0AE0_CT]
+paramDescr=VS45500x.dsc
+
+; ----------------------------- FM Regeln Module 
+[_S7H_6ES7_455_1VS00_0AE0_CT]
+paramDescr=VS45500x.dsc
+
+; ----------------------------- Schnittstellenmodul Zaehler
+[_S7H_6ES7_961_3AA00_0AC0_CT]
+paramDescr=AA96130x.dsc
+
+;-------------------------------------------
+;CP - 400
+;-------------------------------------------
+[_S7H_6ES7_441_1AA00_0AE0_CT]
+paramDescr=AA4411_x.dsc
+
+[_S7H_6ES7_441_2AA00_0AE0_CT]
+paramDescr=AA4411_x.dsc
+
+[_S7H_6ES7_440_1CS00_0YE0_CT]
+paramDescr=CS4401_x.dsc
+
+;Achtung: MLFB-Schreibweise!!  (wg. Optionspaket)
+[_S7H_6ES7_440-1CS00-0YE0_CT]
+paramDescr=CS4401_x.dsc
+
+;-------------------------------------------
+
+
+

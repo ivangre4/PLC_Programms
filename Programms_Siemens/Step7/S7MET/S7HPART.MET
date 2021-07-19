@@ -1,0 +1,64 @@
+;--------------------------------- BEGIN p7sv01x.met -------------------------------------
+
+;----------------------------------------------------------------
+;      SIMODRIVE ANTRIEBE: KATALOGGRUPPE
+;----------------------------------------------------------------
+
+[_P7H_SIMODRIVE_AT]
+abstract=true
+prefix=OM
+ObjType=1315423
+CLASS_PROPERTIES=0
+CatalogParent=1314971
+IsCatEntry=1
+basetype=_S7H_DP_SLAVE_AT
+
+
+;----------------------------------------------------------------
+;      SIMODRIVE ANTRIEB: POSMO A 
+;----------------------------------------------------------------
+
+[_P7H_SIMODRIVE_POSMO_A_CT]
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=1315424
+basetype=_S7H_DP_NOSLAVE_CT
+CAN_HAVE_PRIVATE_CHILDREN=1
+CLASS_PROPERTIES=0
+CatalogParent=1315423
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=4
+MLFB=6SN2 132-XXXXX-1BA0
+EXT_OBJ_NAME=META\SIEM8054.GSD
+HIDE_OBJECT=0
+IsInKatVisible=1
+
+
+;----------------------------------------------------------------
+;      SIMODRIVE ANTRIEB: 611U (PROFIBUS-DP1)
+;----------------------------------------------------------------
+
+[_P7H_SIMODRIVE_611U_DP1_CT]
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=1201027
+basetype=_S7H_DP_NOSLAVE_CT
+CAN_HAVE_PRIVATE_CHILDREN=1
+CLASS_PROPERTIES=0
+CatalogParent=1315423
+IsCatEntry=1
+nKatChilds=0
+EXT_OTYP=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=12
+MLFB=6SN1 114-0NB00-0AA0
+EXT_OBJ_NAME=META\SIEM8055.GSD
+HIDE_OBJECT=0
+IsInKatVisible=1
+
+;--------------------------------- END p7sv01x.met -------------------------------------
+
+

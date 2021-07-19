@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2006-04-05T13:00:00Z" Tool="STEP7 Version V5.4 SP1" User="KM3841"/>
+		<prim:LastModified Timestamp="2006-04-05T13:30:00Z" Tool="Textpad" User="KM3841"/>
+	</prim:FileInfo>
+	<base:Project ID="{74A16FC3-CA97-4ad6-8B18-869942C4C9E6}" Name="Module Description for S7 CPU 416-2F DP Firmware V5.0, HSP 0110">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="CPU">
+				<base:SettingsFeature>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Startup" DSNr="1" DSLen="8">
+							<hwk:Par Name="Startup_if_Setpoint_Cfg_Not_Equal_to_Actual_Cfg" PNr="2"/>
+							<hwk:Par Name="Startup_after_Power_On" PNr="4">
+								<hwk:rangeList>[0]</hwk:rangeList>
+							</hwk:Par>
+							<hwk:Par Name="Cold_restart" PNr="6"/>
+							<hwk:Par Name="Timebase" PNr="7"/>
+							<hwk:Par Name="Transfer_of_Parameters_to_Modules" PNr="8">
+								<hwk:defStep7>600</hwk:defStep7>
+							</hwk:Par>
+							<hwk:Par Name="Ready_Message_from_Modules" PNr="9"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Cycle" DSNr="2" DSLen="8">
+							<hwk:Par Name="Communication" PNr="1"/>
+							<hwk:Par Name="Update_Process_Image_Table_Cyclically" PNr="2"/>
+							<hwk:Par Name="Call_OB85_on_IO_Access_Error" PNr="4">
+								<hwk:rangeList>[0...3]</hwk:rangeList>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>2</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Scan_Cycle_Monitoring_Time" PNr="6">
+								<hwk:rangeList>[1...6000]</hwk:rangeList>
+								<hwk:defPcs7>6000</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Minimum_Scan_Cycle_Time" PNr="7"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="MPI_Communication" DSNr="3" DSLen="26">
+							<hwk:Par Name="Total_Number_of_Connections" PNr="1"/>
+							<hwk:Par Name="Number_of_Available_Connections" PNr="2">
+								<hwk:rangeList>[0...63]</hwk:rangeList>
+								<hwk:defStep7>255</hwk:defStep7>
+							</hwk:Par>
+							<hwk:Par Name="Number_of_Reserved_Connections_to_Programming_Device" PNr="3">
+								<hwk:rangeList>[1...44]</hwk:rangeList>
+								<hwk:defStep7>1</hwk:defStep7>
+							</hwk:Par>
+							<hwk:Par Name="Number_of_Reserved_Connections_to_OI" PNr="4">
+								<hwk:rangeList>[1...43]</hwk:rangeList>
+								<hwk:defStep7>1</hwk:defStep7>
+							</hwk:Par>
+							<hwk:Par Name="Station_Type_Passive" PNr="5"/>
+							<hwk:Par Name="Medium_Redundancy" PNr="6"/>
+							<hwk:Par Name="Highest_MPI_Address" PNr="7"/>
+							<hwk:Par Name="MPI_Address" PNr="8"/>
+							<hwk:Par Name="Retry_Counter" PNr="9"/>
+							<hwk:Par Name="Transmission_Rate" PNr="10"/>
+							<hwk:Par Name="Physical_Layer" PNr="11"/>
+							<hwk:Par Name="In_Ring_Desired" PNr="12"/>
+							<hwk:Par Name="Default_LSAP_ID" PNr="13"/>
+							<hwk:Par Name="GAP_Update_Factor" PNr="14"/>
+							<hwk:Par Name="Ready_Time" PNr="15"/>
+							<hwk:Par Name="Transmitter_Fall_Time" PNr="16"/>
+							<hwk:Par Name="Slot_Time" PNr="17"/>
+							<hwk:Par Name="IDLE_1" PNr="18"/>
+							<hwk:Par Name="IDLE_2" PNr="19"/>
+							<hwk:Par Name="Factor_for_Target_Rotation_Time" PNr="20"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Local_Data_Priority_Classes" DSNr="4" DSLen="58">
+							<hwk:Par Name="Priority_Class_1" PNr="1">
+								<hwk:defStep7List>[1024,256,256,256,256,256,256,256,1024,1024,1024,1024,256,256,256,256,256,256,256,256,256,256,256,256,256,1024,1024,1024,256]</hwk:defStep7List>
+								<hwk:defPcs7List>[1024,1024,256,256,256,256,256,256,1024,1024,1024,1024,256,256,256,1024,256,256,256,256,256,256,256,1024,1024,1024,1024,1024,256]</hwk:defPcs7List>
+								<hwk:instances>29</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="System_Diagnostics" DSNr="5" DSLen="2">
+							<hwk:Par Name="Process_Control_Messaging_Active" PNr="2"/>
+							<hwk:Par Name="Display_Cause_of_STOP" PNr="3"/>
+							<hwk:Par Name="Acknowledgment_triggered_reporting_of_SFB33_35" PNr="4"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Retentivity" DSNr="6" DSLen="56">
+							<hwk:Par Name="Number_of_Memory_Bytes_from_MB0" PNr="1">
+								<hwk:rangeList>[0...16384]</hwk:rangeList>
+							</hwk:Par>
+							<hwk:Par Name="Number_of_S7_Timers_from_T0" PNr="2">
+								<hwk:rangeList>[0...2048]</hwk:rangeList>
+							</hwk:Par>
+							<hwk:Par Name="Number_of_S7_Counters_from_C0" PNr="3">
+								<hwk:rangeList>[0...2048]</hwk:rangeList>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Clock_Pulse_Memory" DSNr="7" DSLen="6">
+							<hwk:Par Name="Clock_Memory" PNr="1"/>
+							<hwk:Par Name="Memory_Byte" PNr="2"/>
+							<hwk:Par Name="Number_of_S7_Timers" PNr="3"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Hardware_Interrupts" DSNr="8" DSLen="16">
+							<hwk:Par Name="Priority_OB40" PNr="1">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Communication_Interrupts" DSNr="9" DSLen="16">
+							<hwk:Par Name="Priority_OB50" PNr="1">
+								<hwk:instancelist>[5...7]</hwk:instancelist>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Real_Time_Clock" DSNr="10" DSLen="4">
+							<hwk:Par Name="Sync_Type_Sync_on_MPI" PNr="2"/>
+							<hwk:Par Name="Time_Interval_Sync_in_PLC" PNr="5"/>
+							<hwk:Par Name="Time_Interval_Sync_on_MPI" PNr="6"/>
+							<hwk:Par Name="Sync_Type_Sync_in_PLC" PNr="7"/>
+							<hwk:Par Name="Correction_Factor" PNr="8"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Time_Of_Day_Interrupts" DSNr="11" DSLen="80">
+							<hwk:Par Name="Priority_OB10" PNr="1">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Active_OB10" PNr="2">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Execution_OB10" PNr="3">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Start_Date_OB10" PNr="5">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Start_Time_OB10" PNr="7">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Weekday_OB10" PNr="8">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Delay_Alarms" DSNr="12" DSLen="8">
+							<hwk:Par Name="Priority_OB20" PNr="1">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Cyclic_Interrupts" DSNr="13" DSLen="54">
+							<hwk:Par Name="Priority_OB30" PNr="1">
+								  <hwk:instances>9</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Execution_OB30" PNr="2">
+								  <hwk:instances>9</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Phase_Offset_OB30" PNr="3">
+								  <hwk:instances>9</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Protection" DSNr="15" DSLen="10">
+							<hwk:Par Name="Protection_Level" PNr="1"/>
+							<hwk:Par Name="Password" PNr="2"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Multicomputing" DSNr="16" DSLen="2">
+							<hwk:Par Name="Multiprocessor_Operation" PNr="1"/>
+							<hwk:Par Name="CPU_Number" PNr="2"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Asynchronous_Error_Interrupts" DSNr="18" DSLen="14">
+							<hwk:Par Name="Priority_OB81" PNr="1">
+								  <hwk:instances>7</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="CPU_Quantity_Structure" DSNr="19" DSLen="20">
+							<hwk:Par Name="User_Local_Data_Area" PNr="1">
+								<hwk:defPcs7>17000</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Size_of_process_image_input" PNr="2">
+								<hwk:defStep7>512</hwk:defStep7>
+								<hwk:defPcs7>2048</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Size_of_process_image_output" PNr="3">
+								<hwk:defStep7>512</hwk:defStep7>
+								<hwk:defPcs7>2048</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Reserved" PNr="4"/>
+							<hwk:Par Name="Messages" PNr="5">
+								<hwk:defPcs7>3000</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="Max_number_of_communication_jobs" PNr="6">
+								<hwk:rangeList>[0...1800]</hwk:rangeList>
+								<hwk:defStep7>600</hwk:defStep7>
+								<hwk:defPcs7>1800</hwk:defPcs7>
+							</hwk:Par>
+							<hwk:Par Name="FDL_connections" PNr="7"/>
+							<hwk:Par Name="ALARM_S" PNr="8"/>
+							<hwk:Par Name="Max_number_of_S7_connections" PNr="9"/>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Identification" DSNr="21" DSLen="114">
+							<hwk:Par Name="AS_Name" PNr="1"/>
+							<hwk:Par Name="CPU_Name" PNr="2"/>
+							<hwk:Par Name="Plant_Designation" PNr="3"/>
+							<hwk:Par Name="Local_Designation" PNr="7">
+								  <hwk:instances>32</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Order_No_and_firmware" DSNr="22" DSLen="40">
+							<hwk:Par Name="Order_No" PNr="1">
+								  <hwk:instances>20</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Firmware" PNr="2">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Assignment_Of_Part_process_image_To_OB" DSNr="25" DSLen="64">
+							<hwk:Par Name="Part_process_image_inputs_OB10" PNr="1">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_outputs_OB10" PNr="2">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_inputs_OB20" PNr="3">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_outputs_OB20" PNr="4">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_inputs_OB30" PNr="5">
+								  <hwk:instances>9</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_outputs_OB30" PNr="6">
+								  <hwk:instances>9</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_inputs_OB40" PNr="7">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_outputs_OB40" PNr="8">
+								  <hwk:instances>8</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Cycle_Synchronous_OBs" DSNr="26" DSLen="12">
+							<hwk:Par Name="Priority_OB61" PNr="1">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="DP_Mastersystem_No_OB61" PNr="2">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Reserved_OB61" PNr="3">
+								  <hwk:instances>4</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+						<hwk:Dataset Name="Assignment_Of_OB_To_Part_process_image" DSNr="27" DSLen="120">
+							<hwk:Par Name="Part_process_image_1_of_inputs_OB" PNr="1">
+								  <hwk:instances>15</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_1_of_inputs_DP" PNr="2">
+								  <hwk:instances>15</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_1_of_outputs_OB" PNr="3">
+								  <hwk:instances>15</hwk:instances>
+							</hwk:Par>
+							<hwk:Par Name="Part_process_image_1_of_outputs_DP" PNr="4">
+								  <hwk:instances>15</hwk:instances>
+							</hwk:Par>
+						</hwk:Dataset>
+					</hwk:DatasetList>
+					<hwk:ConstantList>
+						<hwk:Constant Name="Lokaldaten_MaxBytes">32768</hwk:Constant>
+						<hwk:Constant Name="PrioKlasse_Max_1">32768</hwk:Constant>
+						<hwk:Constant Name="PrioKlasse_Max_2">32768</hwk:Constant>
+					</hwk:ConstantList>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

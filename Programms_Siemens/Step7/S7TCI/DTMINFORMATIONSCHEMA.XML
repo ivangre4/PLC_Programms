@@ -1,0 +1,40 @@
+<Schema name="DTMInformationSchema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:fdt="x-schema:FDTDataTypesSchema.xml">
+	<!--Definition of Attributes-->
+	<AttributeType name="major" dt:type="number"/>
+	<AttributeType name="minor" dt:type="number"/>
+	<AttributeType name="deviceTypeInformation" dt:type="string"/>
+	<AttributeType name="release" dt:type="number"/>           
+	<AttributeType name="build" dt:type="number"/>          
+	<!--Definition of Elements-->
+	<ElementType name="FDTVersion" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="major" required="yes"/>
+		<attribute type="minor" required="yes"/>
+		<attribute type="release" required="no"/>            
+		<attribute type="build" required="no"/>              
+	</ElementType>
+	<ElementType name="DtmDeviceTypes" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="fdt:DtmDeviceType" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="DtmSchemaPath" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="fdt:busCategory" required="yes"/>
+		<attribute type="fdt:path" required="yes"/>
+	</ElementType>
+	<ElementType name="DtmSchemaPaths" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="DtmSchemaPath" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="DtmInfo" content="eltOnly" model="closed" order="seq">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="FDTVersion" minOccurs="1" maxOccurs="1"/>
+		<element type="fdt:VersionInformation" minOccurs="1" maxOccurs="1"/>
+		<element type="DtmSchemaPaths" minOccurs="0" maxOccurs="1"/>    
+		<element type="DtmDeviceTypes" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FDT" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<element type="DtmInfo" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+</Schema>

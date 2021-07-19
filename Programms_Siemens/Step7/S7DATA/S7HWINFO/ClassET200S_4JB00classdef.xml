@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200S ClassDefinition AI-Module ClassET200S_4JB00classdef.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			 http://www.siemens.com/Industry/2002/07/Automation/Base				ADBaseV1.xsd
+			 http://www.siemens.com/Industry/2002/07/Automation/HWKonfig			HWKV1.xsd
+			 " DefaultLanguage="de">
+	<prim:FileInfo Version="1.0">
+		<prim:Created Timestamp="2002-03-08T08:35:18Z" Tool="STEP7 Version V5.2" User="BT3192"/>
+		<prim:LastModified Timestamp="2002-04-12T10:03:00Z" Tool="Textpad" User="BT3192"/>
+	</prim:FileInfo>
+	<base:Project ID="{A554FF72-665C-11d6-9772-00104B42C6B5}" Name="Class Definition for ET200S AI-Module 4JB00">
+		<base:StructuralFeature>
+			<base:Device ID="1" OType="Module">
+				<base:SettingsFeature>
+					<hwk:DatasetList>
+						<hwk:Dataset Name="Dataset0" DSNr="0" DSLen="4">
+							<hwk:Par Name="Diagnostics" PNr="2">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Freigabe Moduldiagnose"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>0</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Check_for_Over_Underflow" PNr="3">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Freigabe Prüfung auf Unter-/Überlauf"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>1</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Wire_Break" PNr="4">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Freigabe Drahtbruch Kanal0"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>2</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Wire_Break" PNr="5">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Freigabe Drahtbruch Kanal1"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>3</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Smoothing" PNr="6">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Glättung Kanal0"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD2</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>4</hwk:bitAddr>
+								<hwk:distance>2</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Smoothing" PNr="7">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Glättung Kanal1"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD2</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>1</hwk:byteAddr>
+								<hwk:bitAddr>6</hwk:bitAddr>
+								<hwk:distance>2</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Reference_Source" PNr="8">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Vergleichstellennummer"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD4</hwk:datatype>
+								<hwk:defStep7>1</hwk:defStep7>
+								<hwk:defPcs7>1</hwk:defPcs7>
+								<hwk:byteAddr>2</hwk:byteAddr>
+								<hwk:bitAddr>0</hwk:bitAddr>
+								<hwk:distance>4</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Comparison_Location" PNr="9">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Vergleichstelle Kanal0"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>2</hwk:byteAddr>
+								<hwk:bitAddr>4</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="Comparison_Location" PNr="10">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Vergleichstelle Kanal1"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD1</hwk:datatype>
+								<hwk:defStep7>0</hwk:defStep7>
+								<hwk:defPcs7>0</hwk:defPcs7>
+								<hwk:byteAddr>2</hwk:byteAddr>
+								<hwk:bitAddr>5</hwk:bitAddr>
+								<hwk:distance>1</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="AI_Type" PNr="13">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art/Bereich f. Kanal 0"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD4</hwk:datatype>
+								<hwk:defStep7>8</hwk:defStep7>
+								<hwk:defPcs7>8</hwk:defPcs7>
+								<hwk:byteAddr>3</hwk:byteAddr>
+								<hwk:bitAddr>0</hwk:bitAddr>
+								<hwk:distance>4</hwk:distance>
+							</hwk:Par>
+							<hwk:Par Name="AI_Type" PNr="14">
+								<base:DisplayNameFeature>
+									<base:Text xml:lang="de" Value="Messung:Art/Bereich f. Kanal 1"/>
+								</base:DisplayNameFeature>
+								<hwk:datatype>FIELD4</hwk:datatype>
+								<hwk:defStep7>8</hwk:defStep7>
+								<hwk:defPcs7>8</hwk:defPcs7>
+								<hwk:byteAddr>3</hwk:byteAddr>
+								<hwk:bitAddr>4</hwk:bitAddr>
+								<hwk:distance>4</hwk:distance>
+							</hwk:Par>
+						</hwk:Dataset>
+					</hwk:DatasetList>
+					<hwk:TransformTable Name="Transform Table for ET200S to Values of ET200M">
+						<hwk:AI_Range Name="+-80 mV" Nr="1">
+							<hwk:mod_val>0x01</hwk:mod_val>
+							<hwk:exp_art>0x01</hwk:exp_art>
+							<hwk:exp_range>0x01</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ T" Nr="7">
+							<hwk:mod_val>0x07</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x07</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ K" Nr="8">
+							<hwk:mod_val>0x08</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x08</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ B" Nr="9">
+							<hwk:mod_val>0x09</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x00</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ N" Nr="10">
+							<hwk:mod_val>0x0A</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x01</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ E" Nr="11">
+							<hwk:mod_val>0x0B</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x02</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ R" Nr="12">
+							<hwk:mod_val>0x0C</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x03</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ S" Nr="13">
+							<hwk:mod_val>0x0D</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x04</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ J" Nr="14">
+							<hwk:mod_val>0x0E</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x05</hwk:exp_range>
+						</hwk:AI_Range>
+						<hwk:AI_Range Name="TC-EL Typ L" Nr="15">
+							<hwk:mod_val>0x0F</hwk:mod_val>
+							<hwk:exp_art>0x0B</hwk:exp_art>
+							<hwk:exp_range>0x06</hwk:exp_range>
+						</hwk:AI_Range>
+					</hwk:TransformTable>
+				</base:SettingsFeature>
+			</base:Device>
+		</base:StructuralFeature>
+	</base:Project>
+</prim:Document>

@@ -1,0 +1,15 @@
+[2363985]
+KatEntryName=V2.5
+InfoText=Memoria di lavoro 1400KB; 0,01ms/1000 istr.; interfaccia PROFINET; comunicazione S7 (FB/FC caricabile);  PROFINET IO-Controller; supporta RT; interfaccia PROFINET e 1 porta; PROFINET CBA; PROFINET CBA-Proxy; protocolo di trasporte TCP/IP; interfaccia MPI/DP combinata (master MPI o DP oppure slave DP); configurazione a più file con 32 unità; ciclo di bus DP equidistante; routing; firmware V2.5
+SHORTNAME=CPU 319-3 PN/DP
+Comment=Unità centrali del tipo CPU319-3 PN/DP; Memoria di lavoro 1400KB; interfaccia PROFINET; firmware V2.5
+
+[2363986]
+SHORTNAME=MPI/DP
+
+[2363987]
+SHORTNAME=DP
+
+[2363988]
+InfoText=Controller PROFINET IO della CPU 319-3 PN/DP
+SHORTNAME=PN-IO

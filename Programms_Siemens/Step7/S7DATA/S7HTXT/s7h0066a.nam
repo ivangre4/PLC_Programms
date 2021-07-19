@@ -1,0 +1,38 @@
+;----------------------------------------------------------------
+; Namfile für ET200Pro 4 AI U/I
+;----------------------------------------------------------------
+
+
+
+; ----------------------------- 4 AI U
+[2363640]
+KatEntryName = 4 AI U
+InfoText = Analogeingabemodul 4 AI U  +/-10V, +/-5V, 1...5V, 0...10V
+SHORTNAME=4 AI U
+Comment=Analogeingabemodule für ET 200pro
+
+; ----------------------------- 4 AI I
+[2363641]
+KatEntryName = 4 AI I
+InfoText = Analogeingabemodul 4 AI I  +/-20mA, 0...20mA, 4...20mA
+SHORTNAME=4 AI I
+
+; ----------------------------- 4 AI RTD
+[2363642]
+KatEntryName = 4 AI RTD
+InfoText = Analogeingabemodul 4 AI RTD
+SHORTNAME= 4 AI RTD
+
+; ----------------------------- 4 AI U
+[2365117]
+KatEntryName = 4 AI U
+InfoText = Analogeingabemodul 4 AI U  +/-10V, +/-5V, 1...5V, 0...10V; Erweiterte Störfrequenzunterdrückung: "Fast Mode" und  "16,67 Hz"
+SHORTNAME=4 AI U
+Comment=Analogeingabemodule für ET 200pro
+
+; ----------------------------- 4 AI I
+[2365118]
+KatEntryName = 4 AI I
+InfoText = Analogeingabemodul 4AI-I +/-20mA, 0...20mA, 4...20mA; Erweiterte Störfrequenzunterdrückung: "Fast Mode" und "16,67 Hz"
+SHORTNAME=4 AI I
+Comment=Analogeingabemodule für ET 200pro

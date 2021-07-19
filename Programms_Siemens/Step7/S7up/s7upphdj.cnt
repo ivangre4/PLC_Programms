@@ -1,0 +1,31 @@
+:Base S7upphdj.hlp
+:Title プロセス診断データの編集のヘルプ
+1 [診断]タブ
+2 診断データ
+3 プロセス診断データの編集=HIDU_INFO_DIAGNOSE
+3 [名前]列=Spalte_Name_
+3 [初期診断アドレス]列=Spalte_Diagnoseeinstieg_
+3 [タイプ]列=Spalte_Art_
+3 [モニタロジック]列=Spalte_berwachungslogik_
+3 [有効]列=Spalte_aktiv_
+3 [トリガ]列=Spalte_Ausl_ser_
+3 [時間]列=Spalte_Zeit_
+3 [初期値]列=Spalte_Erstwerte_
+3 [分析]列=Spalte_Analyse_
+3 [優先度]列=Spalte_Priorit_t_
+3 [メッセージテキスト]列=Spalte_Meldetext_
+3 [ソース]列=Spalte_Quelle_
+3 [確認]列=Spalte_Quittierung_
+3 [関連値]列=Spalte_Begleitwert_
+2 [診断]ポップアップメニュー
+3 [診断]ポップアップメニューのメニューコマンド=Men_befehle_im_Kontextmen_Diagnose
+3 [新規作成] ([診断]ポップアップメニュー)=Neu_Kontextmen_Diagnose_
+3 [切り取り] ([診断]ポップアップメニュー)=Ausschneiden_Kontextmen_Diagnose_
+3 [コピー] ([診断]ポップアップメニュー)=Kopieren_Kontextmen_Diagnose_
+3 [貼り付け] ([診断]ポップアップメニュー)=Einf_gen_Kontextmen_Diagnose_
+3 [削除] ([診断]ポップアップメニュー)=L_schen_Kontextmen_Diagnose_
+3 [ブロック表示] ([診断]ポップアップメニュー)=Bausteinsicht_ein_Kontextmen_Diagnose_
+3 [ネットワーク表示] ([診断]ポップアップメニュー)=Netzwerksicht_ein_Kontextmen_Diagnose_
+3 [列の表示] ([診断]ポップアップメニュー)=Spalten_anzeigen_Kontextmen_Diagnose_
+3 [メッセージのコンフィグレーション] ([診断]ポップアップメニュー)=Meldung_projektieren_Kontextmen_Diagnose_
+3 [オブジェクトプロパティ] ([診断]ポップアップメニュー)=Objekteigenschaften_Kontextmen_Diagnose_

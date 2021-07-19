@@ -1,0 +1,227 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1322010]
+KatEntryName=CP 440
+InfoText = PtP-Kommunikation mit RS422/485 Schnittstelle ( ASCII, 3964R )
+SHORTNAME=CP 440
+[1314897]
+KatEntryName=CP 441-1
+InfoText=PtP-Kommunikationsprozessor für ein IF963-Modul (3964R)
+SHORTNAME=CP 441-1
+[1315507]
+KatEntryName=CP 441-1
+InfoText=PtP-Kommunikationsprozessor für ein IF963-Modul (3964R, ASCII, Drucker)
+[1315531]
+KatEntryName=CP 441-1
+InfoText=PtP-Kommunikationsprozessor für ein IF963-Modul (3964R, ASCII, Drucker); Multicomputingfähig
+[1322008]
+KatEntryName=CP 441-1
+InfoText=PtP-Kommunikationsprozessor für ein IF963-Modul (3964R, ASCII, Drucker); Multicomputingfähig
+SHORTNAME=CP 441-1
+[1314898]
+KatEntryName=CP 441-2
+InfoText=PtP-Kommunikationsprozessor für zwei IF963-Module (RK512, 3964R)
+SHORTNAME=CP 441-2
+[1315508]
+KatEntryName=CP 441-2
+InfoText=PtP-Kommunikationsprozessor für zwei IF963-Module (RK512, 3964R, ASCII, Drucker)
+[1315532]
+KatEntryName=CP 441-2
+InfoText=PtP-Kommunikation für zwei IF963-Module (RK512, 3964R, ASCII, Drucker, Sondertreiber); Multicomputingfähig
+[1322009]
+KatEntryName=CP 441-2
+InfoText=PtP-Kommunikation für zwei IF963-Module (RK512, 3964R, ASCII, Drucker, Sondertreiber); Multicomputingfähig
+SHORTNAME=CP 441-2
+[1314899]
+KatEntryName=FM 450-1 COUNTER MODULE
+InfoText=Zählerbaugruppe, 2 Kanäle
+SHORTNAME=FM450-1 COUNTER
+[1314900]
+KatEntryName=FM 451 FIXED SPEED POS.
+InfoText=Positionierbaugr. für Antriebe mit Eil-/Schleichgang, 3 Achsen
+SHORTNAME=FM 451 FIX. SPEED
+[1314901]
+KatEntryName=FM 452 CAM MODULE
+InfoText=Baugr. mit elektronischem Nockensteuerwerk, 128 Nocken
+SHORTNAME=FM 452 CAM
+[1314903]
+KatEntryName=FM 453
+InfoText=Positionierbaugruppe für Servo-/Schrittantriebe, 3 Achsen
+SHORTNAME=FM 453
+[1315098]
+KatEntryName=FM 455 S PID Control
+InfoText=Regelungsbaugr. 16 Kanäle (Schritt u.Impuls) 16AI+16DI+32DO
+SHORTNAME=FM 455 S PID Control
+[1315097]
+KatEntryName=FM 455 C PID Control
+InfoText=Regelungsbaugr. 16 Kanäle (kontinuierlich) 16AI+16DI+16AO
+SHORTNAME=FM 455 C PID Control
+[1314930]
+KatEntryName=IF 961-CT1
+InfoText=M7-Schnittstellenmodul Zähler bis 500 kHz/5V oder 200 kHz/24V
+SHORTNAME=IF961-CT1
+[1315000]
+KatEntryName=CP 340 RS232C 
+InfoText=Kommunikationsprozessor mit Anschluß: RS232C (ASCII, 3964R)
+SHORTNAME=CP 340-RS232C
+[1315506]
+KatEntryName=CP 340 RS232C 
+InfoText=Kommunikationsprozessor mit Anschluß: RS232C (ASCII, 3964R, Drucker); auch als SIPLUS-Baugruppe mit der Bestellnummer 6AG1 340-1AH01-2AE0 erhältlich
+[1315001]
+KatEntryName=CP 340 20mA TTY 
+InfoText=Kommunikationsprozessor mit Anschluß: 20mA TTY (ASCII, 3964R, Drucker)
+SHORTNAME=CP 340-20mA TTY
+[1315002]
+KatEntryName=CP 340 RS422/485 
+InfoText=Kommunikationsprozessor mit Anschluß: RS422/485 (ASCII, 3964R, Drucker); auch als SIPLUS-Baugruppe mit der Bestellnummer 6AG1 340-1CH00-2AE0 erhältlich
+SHORTNAME=CP 340-RS422/485
+[1322002]
+KatEntryName = CP 341 RS232C
+InfoText = Kommunikationsprozessor mit Anschluß: RS232C (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-RS232C
+[1322003]
+KatEntryName = CP 341 20mA TTY 
+InfoText = Kommunikationsprozessor mit Anschluß: 20mA TTY (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-20mA TTY
+[1322004]
+KatEntryName = CP 341 RS422/485
+InfoText = Kommunikationsprozessor mit Anschluß: RS422/485 (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-RS422/485
+[1322005]
+KatEntryName = CP 341 RS232C
+InfoText = Kommunikationsprozessor mit Anschluß: RS232C (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-RS232C
+[1322006]
+KatEntryName = CP 341 20mA TTY
+InfoText = Kommunikationsprozessor mit Anschluß: 20mA TTY (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-20mA TTY
+[1322007]
+KatEntryName = CP 341 RS422/485
+InfoText = Kommunikationsprozessor mit Anschluß: RS422/485 (RK512, ASCII, 3964(R), ladbare Treiber) 
+SHORTNAME=CP 341-RS422/485
+[1315004]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Zählerbaugruppe, 1 Kanal
+SHORTNAME=FM350 COUNTER
+[1315164]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Zählerbaugruppe, 1 Kanal, auch für Aufbau mit aktiven Busmodulen
+[1322011]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Zählerbaugruppe, 1 Kanal, auch für Aufbau mit aktiven Busmodulen
+[1322038]
+KatEntryName=FM 350-1 COUNTER MODULE
+InfoText=Zählerbaugruppe, 1 Kanal, auch für Aufbau mit aktiven Busmodulen, unterstützt Taktsynchronität
+[1322001]
+KatEntryName = FM 350-2 COUNTER MODULE
+InfoText = Zählerbaugruppe, 8 Kanäle
+SHORTNAME=FM350-2 COUNTER
+[1315005]
+KatEntryName=FM 351 FIXED SPEED POS.
+InfoText=Positionierbaugruppe, Eil-/Schleichgang
+SHORTNAME=FM 351 FIX. SPEED
+[1315165]
+KatEntryName=FM 351 FIXED SPEED POS.
+InfoText=Positionierbaugruppe, Eil-/Schleichgang, auch für Aufbau mit aktiven Busmodulen
+[1315006]
+KatEntryName=FM 352 CAM MODULE
+InfoText=Elektronische Nockensteuerung, 1 Kanal
+SHORTNAME=FM 352 CAM
+[1315166]
+KatEntryName=FM 352 CAM MODULE
+InfoText=Elektronische Nockensteuerung, 1 Kanal, auch für Aufbau mit aktiven Busmodulen
+[1315007]
+KatEntryName=FM 353 F.STEPPER MOTOR
+InfoText=Positionierbaugruppe für Schrittmotor, 1 Kanal, 4DI+4DO
+SHORTNAME=FM 353 STEPPER
+[1315510]
+KatEntryName=FM 353 F.STEPPER MOTOR
+InfoText=Positionierbaugruppe für Schrittmotor, 1 Kanal, 4DI+4DO, auch für Aufbau mit aktiven Busmodulen
+[1315008]
+KatEntryName=FM 354 F.SERVO MOTOR
+InfoText=Positionierbaugruppe für Servomotor, 1 Kanal, 4DI+4DO
+SHORTNAME=FM 354 SERVO
+[1315511]
+KatEntryName=FM 354 F.SERVO MOTOR
+InfoText=Positionierbaugruppe für Servomotor, 1 Kanal, 4DI+4DO, auch für Aufbau mit aktiven Busmodulen
+[1315096]
+KatEntryName=6ES7 355-1VH00-0AE0
+InfoText=Regelungsbaugr. 4 Kanäle (Schritt u.Impuls) 4AI+8DI+8DO, kein B+B im Backup-Betrieb
+SHORTNAME=FM 355 S PID Control
+[1315095]
+KatEntryName=6ES7 355-0VH00-0AE0
+InfoText=Regelungsbaugr. 4 Kanäle (kontinuierlich) 4AI+8DI+4AO, kein B+B im Backup-Betrieb
+SHORTNAME=FM 355 C PID Control
+[1315517]
+KatEntryName=6ES7 355-1VH10-0AE0
+InfoText=Regelungsbaugr. 4 Kanäle (Schritt u.Impuls) 4AI+8DI+8DO
+SHORTNAME=FM 355 S PID Control
+[1315516]
+KatEntryName=6ES7 355-0VH10-0AE0
+InfoText=Regelungsbaugr. 4 Kanäle (kontinuierlich) 4AI+8DI+4AO
+SHORTNAME=FM 355 C PID Control
+[1322027]
+KatEntryName=6ES7 355-2CH00-0AE0
+InfoText=Temperatur-Regelungsbaugr. 4 Kanäle (kontinuierlich) 4AI+8DI+4AO
+SHORTNAME=FM 355-2 C Temp. Control
+[1322028]
+KatEntryName=6ES7 355-2SH00-0AE0
+InfoText=Temperatur-Regelungsbaugr. 4 Kanäle (Schritt u.Impuls) 4AI+8DI+8DO
+SHORTNAME=FM 355-2 S Temp. Control
+[1315009]
+KatEntryName=NCU 570 FM-NC
+InfoText=SINUMERIK  4-Achs-NC
+SHORTNAME=NCU 570
+[1315010]
+KatEntryName=NCU 570 FM-NC
+InfoText=SINUMERIK  4-Achs-NC
+SHORTNAME=NCU 570
+[1315019]
+KatEntryName=FM-300
+InfoText=Funktionsbaugruppen der S7-300 und M7-300
+SHORTNAME=S7 FM-300
+[1315020]
+KatEntryName=FM-400
+InfoText=Funktionsbaugruppen der S7-400 und M7-400
+SHORTNAME=S7 FM-400
+[1315021]
+KatEntryName=CP-300
+InfoText=Kommunikationsprozessoren der S7-300
+SHORTNAME=CP-300
+[1315022]
+KatEntryName=CP-400
+InfoText=Kommunikationsprozessoren der S7-400
+SHORTNAME=CP-400
+[1315085]
+SHORTNAME=S7 FM-CNT
+KatEntryName =
+InfoText =
+[1315086]
+SHORTNAME=S7 FM-POS
+KatEntryName =
+InfoText =
+[1315087]
+SHORTNAME=S7 FM-REG
+KatEntryName =
+InfoText =
+[1315088]
+SHORTNAME=S7 FM-NCU
+KatEntryName =
+InfoText =
+[1315089]
+SHORTNAME=S7 FM-CNT
+KatEntryName =
+InfoText =
+[1315090]
+SHORTNAME=S7 FM-POS
+KatEntryName =
+InfoText =
+[1315091]
+SHORTNAME=S7 FM-REG
+KatEntryName =
+InfoText =
+[1315092]
+KatEntryName =
+InfoText =
+
+; -- DO NOT ALTER THIS LINE -----

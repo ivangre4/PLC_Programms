@@ -1,0 +1,121 @@
+;---------------------------------------------
+;----------- Device
+;---------------------------------------------
+
+;---------------------------------------------
+; IWLAN/PB Link Katalog
+;---------------------------------------------
+; [_IWLAN_PB_LINK_PNIO_KAT_HSP]
+; wird bereits in HSP 1009 angelegt
+
+;---------------------------------------------
+; IWLAN/PB Link 
+;---------------------------------------------
+
+[_IWLAN_PB_LINK_6GK1_411_5AB01_PN_KAT_HSP]
+abstract=true
+basetype=_IWLAN_PB_LINK_6GK1_411_5AB00_PN_KAT_HSP	
+prefix=OM
+ObjType=2367421
+CatalogParent=2367397
+IsCatEntry=1
+IsInKatVisible=1
+
+
+;---------------------------------------------
+; IWLAN/PB Link IO Device V1.1
+;---------------------------------------------
+
+[_S7H_6GK1_417_5AB01_V11_CT_HSP]
+basetype=_S7H_6GK1_417_5AB00_V11_CT_HSP
+ObjType=2367422
+prefix=OM
+server=S7WBPROX.DLL
+FW_VERSION=V1.1
+MLFB=6GK1 417-5AB01
+MLFB_PREFIX=PN_DPV1
+CatalogParent=2367421
+IsCatEntry=1
+
+
+;---------------------------------------------
+; IWLAN/PB Link Kopfbaugruppe (IE Anschluß)
+;---------------------------------------------
+
+[_S7H_6GK1_417_5AB01_IO_V11_CT_HSP]
+basetype=_S7H_6GK1_417_5AB00_IO_V11_CT_HSP
+ObjType=2367423
+prefix=OM
+server=S7WBPROX.DLL
+ALTERNATIVE_MLFB=6GK1 417-5AB01
+
+
+; ---------------------- IE/PB Link DP Master S7/DPV1-Slaveable
+; wird bereits in HSP 1009 angelegt
+
+
+
+;---------------------------------------------
+;----------- Netzübergang
+;---------------------------------------------
+
+;------------------------------ IWLAN/PB Link Katalog
+;[_S7H_IWLAN_PB_LINK_PN_KAT_AT_HSP]
+; wird bereits in HSP 1009 angelegt
+
+;--------------------------------
+
+;---------------------------------------------
+;----------- IWLAN/PB Link Katalog 5AB00 Netzübergang
+;---------------------------------------------
+[_S7H_IWLAN_PB_LINK_5AB01_KAT_AT_HSP]
+ABSTRACT=true
+basetype=_S7H_IWLAN_PB_LINK_5AB00_KAT_AT_HSP
+prefix=OM
+ObjType=2367424
+CatalogParent=2367400
+IsCatEntry=1
+IsInKatVisible=1
+nKatChilds=0
+;--------------------------------
+
+; ----------------------------- S7-300 Rack für IWLAN/PB Link Basic V1.1
+[_S7H_6ES7_RACK_IWLAN_PB_LINK_5AB01_V11_CT_HSP]
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=2367425
+MLFB=6GK1 417-5AB01
+FW_VERSION=V1.1
+CatalogParent=2367424
+basetype=_S7H_6ES7_RACK_IWLAN_PB_LINK_5AB00_V11_CT_HSP
+AutoCreatedChild1=2367426, 2, FIXED
+
+
+; ----------------------------- IWLAN/PB Link PNIO V1.1
+[_S7H_CBA_IWLAN_PB_LINK_5AB01_V11_CT_HSP] 
+server=s7wblnkx.dll 
+prefix=OM
+ObjType=2367426
+basetype=_S7H_CBA_IWLAN_PB_LINK_5AB00_V11_CT_HSP 
+FW_VERSION=V1.1
+MLFB=6GK1 417-5AB01 
+ALTERNATIVE_MLFB=6GK1 417-5AB01
+AutoCreatedChild1=1335510, 1,FIXED 
+AutoCreatedChild2=2367427, 2, FIXED
+
+
+
+; ----------------------------- DP-Master-Submodul für Link BASIC V1.1
+[_S7H_WLAN_PB_LINK_DPMASTER_SUBMODUL_FW11_5AB01_CT_HSP]
+basetype=_S7H_WLAN_PB_LINK_DPMASTER_SUBMODUL_FW11_CT_HSP
+ObjType=2367427
+prefix=OM
+server=S7HKDMAX.DLL
+CLASS_PROPERTIES=0
+nKatChilds=0
+MLFB=6GK1 417-5AB01
+
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.3.2.1
+HSP_NAME=IWLAN/PB Link DPV1 US/Kan
+HSP_ID=1010

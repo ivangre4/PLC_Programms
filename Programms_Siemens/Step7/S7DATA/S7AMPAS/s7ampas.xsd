@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) Siemens AG 2002. All Rights Reserved. Confidential. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Step">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Resource" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="Position">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Tree"/>
+									<xs:enumeration value="Title"/>
+									<xs:enumeration value="Description"/>
+									<xs:enumeration value="Error"/>
+									<xs:enumeration value="Success"/>
+									<xs:enumeration value="NothingToDo"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="ResourcePath" type="xs:string"/>
+						<xs:attribute name="ID" type="xs:long"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Relation" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="SourceType" type="xs:long"/>
+						<xs:attribute name="RelID" type="xs:long"/>
+						<xs:attribute name="TargetType" type="xs:long"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:long" use="required"/>
+			<xs:attribute name="ParentID" type="xs:long" use="optional" default="0"/>
+			<xs:attribute name="ObjType" type="xs:long" use="optional" default="0"/>
+			<xs:attribute name="TypeVerb" type="xs:long" use="optional" default="0"/>
+			<xs:attribute name="ResourcePath" type="xs:string use="optional"/>
+			<xs:attribute name="HelpPath" type="xs:string use="optional"/>
+			<xs:attribute name="HelpID" type="xs:long" use="optional" default="0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Steps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Step" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ResourcePath" type="xs:string" use="optional"/>
+			<xs:attribute name="HelpPath" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+<!-- Copyright (C) Siemens AG 2002. All Rights Reserved. Confidential. -->

@@ -1,0 +1,41 @@
+; ===============================================================================
+; !! Basiseinträge, um ProTool als Station im Step7-Projekt einfügen zu können !!
+; ===============================================================================
+; (Objekt-Typ: OP-Station=0x01131002=18026498)
+
+[_AUT_HWKOMP_AT]
+SubType=_S7W_PROTOOL_CT
+
+; Dummy-OM for ProTool to WinCC flexible migration:
+; avoid creation of ProTool objects within SIMATIC Manager
+[_AUT_NOCREATE_AT]
+Subtype=_S7W_PROTOOL_CT
+
+;---TD/OP ProTool
+[_S7W_PROTOOL_CT]
+server=S7tdopox.dll
+ObjType=0x01131002
+prefix=OM
+
+[_AUT_DELETE_AT]
+Subtype=_S7W_PROTOOL_CT
+
+; Dummy-OM for ProTool to WinCC flexible migration:
+; avoid moving/opying of ProTool objects within SIMATIC Manager
+; deletion will be supported!!!
+; [_AUT_MOVE_AT]
+; Subtype=_S7W_PROTOOL_CT
+; 
+; [_AUT_COPY_AT]
+; Subtype=_S7W_PROTOOL_CT
+
+; =====================
+;;; Neu ab ProTool V6.0
+; =====================
+[_S7W_PROTOOL_CT]
+; Definition der Relationen für die in ProTool V6.0
+; eingeführten Links zum Kommunikationspartner
+relation=0x011313E7,_AUT_RESOURCE_OFFLINE_AT
+relation=0x011313E7,_S7H_HWEXTAPI_AT
+relation=0x011313E7,_P7SDH_CAPABLE_PROTOOL_AT
+relation=0x011313E7,_S7H_CLASS_FM_NCU_400_CT

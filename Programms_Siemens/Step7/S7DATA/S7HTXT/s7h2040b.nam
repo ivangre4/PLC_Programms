@@ -1,0 +1,34 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2040
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Counter modules 24V V2.0 for ET 200S; Zählbetrieb, Messbetrieb, position encoding, Fast Mode
+
+;---------- 1 COUNT 24V C,   6ES7 138-4DA04-0AB0 C
+[2367053]
+KatEntryName=1 COUNT 24V counter operation V2.0
+InfoText=Counter module, 24V for once-only, endless and periodic counting, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 24V C V2.0
+
+
+;---------- 1 COUNT 24V M,   6ES7 138-4DA04-0AB0 M
+[2367056]
+KatEntryName=1 COUNT 24V measurement operation V2.0
+InfoText=Counter module, 24V for measurement of rotational speed, frequency and period measuring, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 24V M V2.0
+
+
+;---------- 1 COUNT 24V W,   6ES7 138-4DA04-0AB0 W
+[2367057]
+KatEntryName=1 COUNT 24V position feedback V2.0
+InfoText=Counter module, 24V for position feedback, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 24V W V2.0
+
+
+;---------- 1 COUNT 24V F,   6ES7 138-4DA04-0AB0 F
+[2367069]
+KatEntryName=1 COUNT 24V Fast Mode V2.0
+InfoText=Counter module, 24V for fast counting, supports isochrone mode, V2.0
+SHORTNAME=1 COUNT 24V F V2.0
+

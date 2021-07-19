@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Time of Day Interrupt 3"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB13_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB13_STRT_INFO : BYTE ;	//16#14 (OB 13 has started)
+  OB13_PRIORITY : BYTE ;	//2 (Priority of 1 is lowest)
+  OB13_OB_NUMBR : BYTE ;	//13 (Organization block 13, OB13)
+  OB13_RESERVED_1 : BYTE ;	//Reserved for system
+  OB13_RESERVED_2 : BYTE ;	//Reserved for system
+  OB13_PERIOD_EXE : WORD ;	//Period of execution (once, per minute/hour/day/week/month/year)
+  OB13_RESERVED_3 : INT ;	//Reserved for system
+  OB13_RESERVED_4 : INT ;	//Reserved for system
+  OB13_DATE_TIME : DATE_AND_TIME ;	//Date and time OB13 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

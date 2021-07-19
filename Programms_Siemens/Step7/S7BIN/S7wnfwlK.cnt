@@ -1,0 +1,18 @@
+:Base S7WNFWLk.hlp
+:Title 固件装载程序 - 帮助
+1 应用范围=HDD_S0
+1 启动固化程序装载程序=Firmware_laden
+1 对话框/步骤
+1 对话框/步骤 - PROFIBUS模块
+2 第1步 - 打开下载文件=HDD_S1
+2 第2步 - 选择接口=HDD_S2
+2 第3步 - 建立与模块的连接=HDD_S3_PB
+2 第4步 - 下载=HDD_S4_PB
+1 对话框/步骤 - 以太网模块
+2 第1步 - 打开下载文件=HDD_S1
+2 第2步 - 选择接口=HDD_S2
+2 第3步 - 使用MAC地址直接下载(所选的MAC地址)=HDD_S3_IE
+2 第3步 - 获取MAC地址/检查兼容性(所选的IP地址)=HID_S3_IEIP
+2 第4步 - 下载(带PROFINET的CP)=HDD_S4_PN
+2 第4步 - 下载(不带PROFINET的CP)=HID_S4_IEIP
+

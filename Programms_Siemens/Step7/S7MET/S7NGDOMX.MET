@@ -1,0 +1,8 @@
+[_S7N_MPI_SUBNET_CT]
+relation=0x0000009a,_S7L_GD_SDB210_CT{1}[0x0000009b];deep,autocreate
+
+[_S7L_GD_SDB210_CT]
+server=s7ngdomx.dll
+prefix=OMGD
+ObjType=0x00167012
+relation=0x0000009b,_S7N_MPI_SUBNET_CT{1}[0x0000009a]

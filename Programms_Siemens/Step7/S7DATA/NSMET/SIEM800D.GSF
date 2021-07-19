@@ -1,0 +1,230 @@
+;=================================================================
+; GSD-File for ET 200C  Analog Output Module AO4 x 12Bit
+; MLFB    : 6ES7 145-0HF00-0XB0
+;
+; Date    : 12.01.99 V1.3  SX   entspr. TD V1.2 v. 06.06.97
+;        27.02.02  V 2.0
+; File    : SIEM800D.GSF
+;=================================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+PrmText=1
+Text(0)="inhiber                       "
+Text(1)="valider                       "
+EndPrmText
+; PrmText-Block: Converted from HI002 of TD-Param. 34
+PrmText=2
+Text(0)="Valeur de rempl.: parametrable"
+Text(1)="Valeur de rempl.: derniere    "
+EndPrmText
+; PrmText-Block: Converted from HI003 of TD-Param. 34
+PrmText=3
+Text(23)="Tension              1 ... 5 V"
+Text(24)="Tension             0 ... 10 V"
+Text(25)="Tension               +/- 10 V"
+Text(34)="Intensite          0 ... 20 mA"
+Text(35)="Intensite          4 ... 20 mA"
+Text(36)="Intensite            +/- 20 mA"
+EndPrmText
+; PrmText-Block: Converted from HI004 of TD-Param. 34
+PrmText=4
+Text(0)="SIMATIC S5                    "
+Text(1)="SIMATIC S7                    "
+EndPrmText
+; PrmText-Block: Converted from HI005 of TD-Param. 34
+PrmText=5
+Text(0)="inhiber                       "
+Text(1)="valider (val. alarme diag.!)  "
+EndPrmText
+; <Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=1 "Validation diagnostic CH0     "
+Bit(0) 0 0-1
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=2 "Validation diagnostic CH1     "
+Bit(1) 0 0-1
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=3 "Validation diagnostic CH2     "
+Bit(2) 0 0-1
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=4 "Validation diagnostic CH3     "
+Bit(3) 0 0-1
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=5 "Validation alarme de diag.    "
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "Type valeur de rempl. CH0     "
+Bit(0) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=7 "Type valeur de rempl. CH1     "
+Bit(1) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=8 "Type valeur de rempl. CH2     "
+Bit(2) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=9 "Type valeur de rempl. CH3     "
+Bit(3) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=10 "Type / etendue de sortie CH0  "
+Unsigned8 25 23-36
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=11 "Type / etendue de sortie CH1  "
+Unsigned8 25 23-36
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=12 "Type / etendue de sortie CH2  "
+Unsigned8 25 23-36
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=13 "Type / etendue de sortie CH3  "
+Unsigned8 25 23-36
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=14 "Valeur de remplacement CH0    "
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=15 "Valeur de remplacement CH1    "
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=16 "Valeur de remplacement CH2    "
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=17 "Valeur de remplacement CH3    "
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=18 "Representation val. de mesure "
+Bit(2) 0 0-1
+Prm_Text_Ref=4
+EndExtUserPrmData
+; <Unit-Definition-List>
+GSD_Revision = 4
+Info_Text = "4 sorties analogiques,+/-10 V, +/-20 mA, 0(4)-20 mA;"
+Vendor_Name="SIEMENS                       "
+Model_Name="C-4AO          DP             "
+Revision="V 2.0"
+Ident_Number=0x800D
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0                          "
+Software_Release="Z1.0                          "
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+Bitmap_Device="ET_200CN"
+Bitmap_SF="ET_200CS"
+; Slave-Specification:
+OrderNumber="6ES7 145-0HF00-0XB0           "
+;OffsetFirstMPDBlock=0
+Sync_Mode_supp=1
+Auto_Baud_supp=1
+Set_Slave_Add_supp=1
+Min_Slave_Intervall=20
+Max_Diag_Data_Len=28
+Modul_Offset=0
+Slave_Family=3@ET200C
+Modular_Station = 1
+Max_Module=4
+Max_Input_Len=0
+Max_Output_Len=8
+Max_Data_Len=8
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=36
+User_Prm_Data = 0x00,0x00,0x00,0x07,0x81,0x04,0x00,0x00,0x00,0x00,0x13,0x81,\
+0x04,0x01,0x00,0x00,0x00,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x07,0x81,0x02,0x00,0x00,0x08,0x00
+Max_User_Prm_Data_Len=36
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x00,0x07,0x81,0x04,0x00,0x00,0x00,0x00,\
+0x13,0x81,0x04,0x01,0x00,0x00,0x00,0x19,0x19,0x19,0x19,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00,0x07,0x81,0x02,0x00,0x00,0x08,0x00
+Ext_User_Prm_Data_Ref(8)=1
+Ext_User_Prm_Data_Ref(8)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(8)=4
+Ext_User_Prm_Data_Ref(15)=5
+Ext_User_Prm_Data_Ref(16)=6
+Ext_User_Prm_Data_Ref(16)=7
+Ext_User_Prm_Data_Ref(16)=8
+Ext_User_Prm_Data_Ref(16)=9
+Ext_User_Prm_Data_Ref(17)=10
+Ext_User_Prm_Data_Ref(18)=11
+Ext_User_Prm_Data_Ref(19)=12
+Ext_User_Prm_Data_Ref(20)=13
+Ext_User_Prm_Data_Ref(21)=14
+Ext_User_Prm_Data_Ref(23)=15
+Ext_User_Prm_Data_Ref(25)=16
+Ext_User_Prm_Data_Ref(27)=17
+Ext_User_Prm_Data_Ref(34)=18
+; Unit-Diagnostics:
+Unit_Diag_Bit(0025)="Erreur interne                "
+Unit_Diag_Bit(0026)="Erreur externe (rupt. de fil) "
+Unit_Diag_Bit(0027)="Erreur de voie                "
+Unit_Diag_Bit(0030)="Module non parametre          "
+Unit_Diag_Bit(0031)="Erreur de parametrage module  "
+Unit_Diag_Bit(0024)="Erreur module                 "
+Unit_Diag_Bit(0052)="Erreur DAU                    "
+Unit_Diag_Bit(0088)="Erreur de parametrage   CH0   "
+Unit_Diag_Bit(0089)="Erreur mode commun      CH0   "
+Unit_Diag_Bit(0090)="Court-circuit pour P    CH0   "
+Unit_Diag_Bit(0091)="Court-circuit pour M    CH0   "
+Unit_Diag_Bit(0092)="Rupture de fil          CH0   "
+Unit_Diag_Bit(0094)="Absence tension de charge  CH0"
+Unit_Diag_Bit(0096)="Erreur de parametrage   CH1   "
+Unit_Diag_Bit(0097)="Erreur mode commun      CH1   "
+Unit_Diag_Bit(0098)="Court-circuit pour P    CH1   "
+Unit_Diag_Bit(0099)="Court-circuit pour M    CH1   "
+Unit_Diag_Bit(0100)="Rupture de fil          CH1   "
+Unit_Diag_Bit(0102)="Absence tension de charge  CH1"
+Unit_Diag_Bit(0104)="Erreur de parametrage   CH2   "
+Unit_Diag_Bit(0105)="Erreur mode commun      CH2   "
+Unit_Diag_Bit(0106)="Court-circuit pour P    CH2   "
+Unit_Diag_Bit(0107)="Court-circuit pour M    CH2   "
+Unit_Diag_Bit(0108)="Rupture de fil          CH2   "
+Unit_Diag_Bit(0110)="Absence tension de charge  CH2"
+Unit_Diag_Bit(0112)="Erreur de parametrage   CH3   "
+Unit_Diag_Bit(0113)="Erreur mode commun      CH3   "
+Unit_Diag_Bit(0114)="Court-circuit pour P    CH3   "
+Unit_Diag_Bit(0115)="Court-circuit pour M    CH3   "
+Unit_Diag_Bit(0116)="Rupture de fil          CH3   "
+Unit_Diag_Bit(0118)="Absence tension de charge  CH3"
+; <Module-Definition-List>
+; It is necessary to configure the 4 modules in the following order:
+; 0. slot: PS / 1. slot: ET-ER / 2. slot: IM / 3. slot: 
+;
+; Bei dieser Kompaktbaugruppe muessen die nachfolgenden 4 Module 
+; in dieser Reihenfolge parametriert:
+; 0. Steckplatz: PS / 1. Steckplatz: ET-ER / 2. Steckplatz: IM / 3. Steckplatz: 
+;
+Module = "slot0: Preset Module for PS   " 0x04,0x00,0x00,0x8F,0xC0
+Preset=1
+1
+EndModule
+Module = "slot1: Preset Module for ET-ER" 0x04,0x00,0x00,0x9B,0x40
+Preset=1
+2
+EndModule
+Module = "slot2: Preset Module for IM   " 0x04,0x00,0x00,0x8F,0xC0
+Preset=1
+3
+EndModule
+Module = "slot3: Preset Module 4AO/Kons." 0x83,0x43,0x00,0x25,0xE0
+Preset=1
+4
+EndModule

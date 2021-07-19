@@ -1,0 +1,29 @@
+[2363692]
+KatEntryName=V2.4
+InfoText=Work memory 1400KB; 0.01ms/1000 instructions; PROFINET connection; S7 communication (loadable FBs/FCs);  PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; TCP/IP transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multiline structure up to 32 modules; constant DP bus cycle time; routing; firmware V2.4
+SHORTNAME=CPU 319-3 PN/DP
+Comment=Central module of type CPU319-3 PN/DP; Work memory 1400KB; PROFINET connection; firmware V2.4
+
+[2363836]
+KatEntryName=V2.4-WEB
+InfoText=Work memory 1400KB; 0.01ms/1000 instructions; PROFINET connection; S7 communication (loadable FBs/FCs);  PROFINET IO-Controller; PROFINET CBA; PROFINET CBA-Proxy; TCP/IP transport protocol; combined MPI/DP connection (MPI or DP master or DP slave); multiline structure up to 32 modules; constant DP bus cycle time; routing; firmware V2.4-WEB
+SHORTNAME=CPU 319-3 PN/DP
+
+[2363693]
+SHORTNAME=MPI/DP
+
+[2363694]
+SHORTNAME=DP
+
+[2363695]
+InfoText=PROFINET IO-Controller of CPU 319-3 PN/DP
+SHORTNAME=PN-IO
+
+[2363696]
+KatEntryName=CPU 319-3 PN/DP
+InfoText=Central modules of type CPU319-3 PN/DP
+
+[2363697]
+KatEntryName=6ES7 318-3EL00-0AB0
+SHORTNAME=CPU 319-3 PN/DP
+InfoText=

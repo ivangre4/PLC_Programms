@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Time of Day Interrupt 6"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB16_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB16_STRT_INFO : BYTE ;	//16#17 (OB 16 has started)
+  OB16_PRIORITY : BYTE ;	//2 (Priority of 1 is lowest)
+  OB16_OB_NUMBR : BYTE ;	//16 (Organization block 16, OB16)
+  OB16_RESERVED_1 : BYTE ;	//Reserved for system
+  OB16_RESERVED_2 : BYTE ;	//Reserved for system
+  OB16_PERIOD_EXE : WORD ;	//Period of execution (once, per minute/hour/day/week/month/year)
+  OB16_RESERVED_3 : INT ;	//Reserved for system
+  OB16_RESERVED_4 : INT ;	//Reserved for system
+  OB16_DATE_TIME : DATE_AND_TIME ;	//Date and time OB16 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

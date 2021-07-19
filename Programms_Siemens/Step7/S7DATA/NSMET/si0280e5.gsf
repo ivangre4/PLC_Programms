@@ -1,0 +1,194 @@
+; (c) 2002, 2003   Siemens AG A&D
+;
+; Profibus-DP     Device Description File for SINAMICS S
+;                 
+;                 MLFB:             6SL3..
+;
+; Author:            Ulrich Rother
+; Date of Creation:  05.07.2002
+; Changes:
+;   30.09.2005  HW-Release, SW-Release adjusted V2.3
+;   02.09.2005  HW-Release, SW-Release adjusted V2.2
+;   28.06.2005  C2_Max_Count_Channels increased
+;   04.05.2005  C1/C2_Timeout increased
+;   29.07.2004  OrderNumber, Info_Text (Da)
+;   27.11.2003  telegram 352
+;   08.10.2003  stripped 120 from model-name; software-release updated
+;   18.03.2003  here SINAMICS S only; G with own PNO-ID
+;   19.02.2003  corrections cause of certification
+;               additional telegrams: 20, 370
+;   15.01.2003  ready for certification
+;   08.10.2002  additional telegrams: 5, 6, 105, 106
+;
+;=====================================================================================
+;
+#Profibus_DP
+OrderNumber         = "6SL3040-0xA00-0xxx"
+
+;--- general ---
+GSD_Revision        = 4
+Vendor_Name         = "Siemens AG"
+Model_Name          = "SINAMICS S"
+Revision            = "E"
+Ident_Number        = 0x80e5
+Protocol_Ident      = 0
+Station_Type        = 0
+FMS_supp            = 0 
+Hardware_Release    = "E"
+Software_Release    = "V2.3.x"
+;
+9.6_supp            = 1
+19.2_supp           = 1
+45.45_supp          = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 1
+12M_supp            = 1
+;
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_45.45       = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+MaxTsdr_3M          = 50
+MaxTsdr_6M          = 100
+MaxTsdr_12M         = 200
+;
+Redundancy          = 0
+Repeater_Ctrl_Sig   = 2
+24V_Pins            = 2
+;
+Implementation_Type = "IBC16/32"
+Bitmap_Device       = "si80e5_n"
+;Bitmap_Diag         = ""
+;Bitmap_SF           = ""
+;
+;--- slave basic ---
+Freeze_Mode_supp    = 1
+Sync_Mode_supp      = 1
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+Min_Slave_Intervall = 1
+Modular_Station     = 1
+Max_Module          = 50
+Max_Input_Len       = 244
+Max_Output_Len      = 244
+Max_Data_Len        = 488
+Fail_Safe           = 1
+Max_Diag_Data_Len   = 6
+Modul_Offset        = 1
+Slave_Family        = 1@SINAMICS
+
+;--- GSD R3 slave extensions ---
+Info_Text                = "Esclave DP SINAMICS S avec interface DP V2 (communication cyclique et acyclique, isochronisme)"
+DPV1_Slave               = 1
+C1_Read_Write_supp       = 1
+C2_Read_Write_supp       = 1
+C1_Max_Data_Len          = 240
+C2_Max_Data_Len          = 240
+C1_Response_Timeout      = 100
+C2_Response_Timeout      = 100
+C1_Read_Write_required   = 0
+C2_Read_Write_required   = 0
+C2_Max_Count_Channels    = 4
+Max_Initiate_PDU_Length  = 52
+DPV1_Data_Types          = 0
+WD_Base_1ms_supp         = 1
+Check_Cfg_Mode           = 0
+Publisher_supp           = 1
+
+;--- GSD R4 slave extensions ---
+Prm_Block_Structure_supp = 1
+Prm_Block_Structure_req  = 0
+; isochron mode
+Isochron_Mode_supp       = 1
+Isochron_Mode_required   = 0
+TBASE_DP                 = 1500  ; * 1/12 µs    =  125 µs
+TDP_MIN	                  = 8     ; * TBASE_DP   = 1000 µs
+TDP_MAX                  = 256   ; * TBASE_DP   =   32 ms
+T_PLL_W_MAX              = 12    ; * 1/12 µs    =    1 µs
+TBASE_IO                 = 1500  ; * 1/12 µs    =  125 µs
+TI_MIN                   = 1     ; * TBASE_IO
+TO_MIN                   = 1     ; * TBASE_IO
+; DXB
+Subscriber_supp          = 0
+;DXB_Max_Link_Count       = 16
+;DXB_Max_Data_Length      = 244
+
+;--- UsrPrmData Definitions ----------------------------------------
+Max_User_Prm_Data_Len      = 31
+Ext_User_Prm_Data_Const(0) = 0,0,0
+
+
+;====================================================================================
+;---  Modules ---
+; text32 "01234567890123456789012345678901"
+
+; télégrammes standard avec séparateur d'axe à la fin
+
+Module = "entraînement/axe sans PZD" 0x01,0xFE
+0
+EndModule
+
+Module = "télégramme std. 1:   2/2  PZD" 0xE1,0xD1,0x01,0xFE
+1
+EndModule
+
+Module = "télégramme std. 2:   4/4  PZD" 0xE3,0xD3,0x01,0xFE
+2
+EndModule
+
+Module = "télégramme std. 3:   5/9  PZD" 0xE4,0xD8,0x01,0xFE
+3
+EndModule
+
+Module = "télégramme std. 4:   6/14 PZD" 0xE5,0xDD,0x01,0xFE
+4
+EndModule
+
+Module = "télégramme std. 5:   9/9  PZD" 0xE8,0xD8,0x01,0xFE
+5
+EndModule
+
+Module = "télégramme std. 6:  10/14 PZD" 0xE9,0xDD,0x01,0xFE
+6
+EndModule
+
+Module = "télégramme std. 20:  2/6  PZD" 0xE1,0xD5,0x01,0xFE
+20
+EndModule
+
+Module = "télégramme 102:  6/10 PZD" 0xE5,0xD9,0x01,0xFE
+102
+EndModule
+
+Module = "télégramme 103:  7/15 PZD" 0xE6,0xDE,0x01,0xFE
+103
+EndModule
+
+Module = "télégramme 105: 10/10 PZD" 0xE9,0xD9,0x01,0xFE
+105
+EndModule
+
+Module = "télégramme 106: 11/15 PZD" 0xEA,0xDE,0x01,0xFE
+106
+EndModule
+
+Module = "télégramme 352:  6/6  PZD" 0xE5,0xD5,0x01,0xFE
+352
+EndModule
+
+Module = "télégramme 370:  1/1  PZD" 0xE0,0xD0,0x01,0xFE
+370
+EndModule
+
+Module = "télégramme MAX: 16/16 PZD" 0xEF,0xDF,0x01,0xFE
+9999
+EndModule
+
+;====================================================================================

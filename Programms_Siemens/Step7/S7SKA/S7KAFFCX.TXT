@@ -1,0 +1,78 @@
+
+FUNCTION FC1: VOID	
+
+TITLE =    <interner Baustein-Titel/ Internal block title>
+
+//   <Baustein-Kommentar/ Block comment>
+//   Hier können Sie Informationen zu Ihrem Baustein hinterlegen
+//   You can store information about your block here
+//
+//   statt FC<Baustein-Nr> kann auch <Name aus Symboltabelle> angegeben werden;
+//   In place of FC<block no.>, <symbolic name> can also be entered;
+//   statt VOID (kein Funktionswert) kann der Typ des Funktionswerts angegeben werden
+//   In place of VOID (no function value), the type of the function value can also be entered
+
+
+
+AUTHOR:   Andy     //  max. 8 Zeichen / max. 8 characters
+FAMILY:   plant1   //  max. 8 Zeichen / max. 8 characters
+NAME:     fc_mota  //  max. 8 Zeichen / max. 8 characters 
+VERSION:  00.00    //  max. 15.15
+//KNOW_HOW_PROTECT 
+// (falls angegeben, kann im generierten Block keine Änderungen mehr vorgenommen werden)
+// (If specified, no more changes can be made once the block is generated)
+
+
+VAR_INPUT            
+  IN1: INT;    
+END_VAR
+
+VAR_OUTPUT            
+  OUT1: INT;
+END_VAR
+
+VAR_IN_OUT            
+  IN_OUT1: INT;
+END_VAR
+
+VAR_TEMP             
+  TEMP1: INT;
+END_VAR
+
+BEGIN
+NETWORK
+TITLE =   <Überschrift von 1. Netzwerk/ Title of first network>
+//
+//  <Netzwerk-Kommentar/ Network comment>
+//  Hier können Sie Informationen zu Ihrem Netzwerk hinterlegen 
+//  You can store information about your network here
+
+//  Anweisungen des Netzwerks
+
+//  z.B. FC-Aufruf:    
+//  CALL FC32
+//    ( <Parameter-Name>:=<Aktualparameter>   ; weitere Parameterübergaben
+//     );
+//   Parameterübergaben sind zwingend; alle Parameter müssen versorgt werden. Beim  
+//   Aufruf kann statt FC<Baustein-Nr> ein Name aus der Symboltabelle angegeben werden.
+    
+//  Instructions in the network
+//  for example, FC call:    
+//  CALL FC32
+//    ( <parameter name>:=<actual parameter>   ; additional parameters
+//     );
+//   Parameter passing is obligatory, all parameters must have a value passed. 
+//   For the block call, you can also specify a symbolic name from the symbol table 
+//   instead of the FC<block no.>.
+
+
+//   Folge-Netzwerke/ Other networks
+END_FUNCTION
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+:Base S7wnfwle.hlp
+1 FWLADX
+2 Campo d'impiego=HDD_S0
+2 Caricamento del firmware=Firmware_laden
+1 PROFIBUS
+2 1° passo - Aprire il file di caricamento=HDD_S1
+2 2° passo - Selezione dell'interfaccia=HDD_S2
+2 3° passo - Realizzazione del collegamento con l'unità (unità PROFIBUS)=HDD_S3_PB
+2 4° passo - Eseguire l'operazione di caricamento (unità PROFIBUS)=HDD_S4_PB
+1 Ethernet
+2 1° passo - Aprire il file di caricamento=HDD_S1
+2 2° passo - Selezione dell'interfaccia=HDD_S2
+2 3° passo (unità Ethernet / indirizzo IP)=HID_S3_IEIP
+2 3° passo - Eseguire l'operazione di caricamento (unità Ethernet / indirizzo MAC)=HDD_S3_IE
+2 4° passo - Eseguire l'operazione di caricamento (Unità Ethernet - CP con PROFINET)=HDD_S4_PN
+2 4° passo - Eseguire l'operazione di caricamento  (unità Ethernet)=HID_S4_IEIP

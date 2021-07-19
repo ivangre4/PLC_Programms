@@ -1,0 +1,21 @@
+S7HPROFX V0.1
+
+// AP00208040
+// 32-Byte-Module dürfen nicht zentral in CPU steckbar sein und werden aus Katalog entfernt:
+//------------------------------------------------------------------------------------------
+// 
+
+[PROFIBUS-DP\ET 200S\IM151-7 CPU::6ES7 151-7AA13-0AB0\CP\1 SI Modbus Master (32 Byte)::6ES7 138-4DF11-0AB0]
+@DELETE
+
+[PROFIBUS-DP\ET 200S\IM151-7 CPU::6ES7 151-7AA13-0AB0\CP\1 SI Modbus Slave (32 Byte)::6ES7 138-4DF11-0AB0]
+@DELETE
+
+[PROFIBUS-DP\ET 200S\IM151-7 CPU::6ES7 151-7AA13-0AB0\CP\1 SI USS Master (32 Byte)::6ES7 138-4DF11-0AB0]
+@DELETE
+
+[PROFIBUS-DP\ET 200S\IM151-7 CPU::6ES7 151-7AA13-0AB0\CP\1 SI  3964(R)  (32 Byte)::6ES7 138-4DF01-0AB0]
+@DELETE
+
+[PROFIBUS-DP\ET 200S\IM151-7 CPU::6ES7 151-7AA13-0AB0\CP\1 SI  ASCII  (32 Byte)::6ES7 138-4DF01-0AB0]
+@DELETE

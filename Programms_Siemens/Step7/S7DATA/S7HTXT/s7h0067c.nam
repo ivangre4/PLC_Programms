@@ -1,0 +1,18 @@
+;----------------------------------------------------------------
+; Namfile für ET200Pro 4 AO U/I
+;----------------------------------------------------------------
+
+
+
+; ----------------------------- 4 AO U
+[2363645]
+KatEntryName = 4 AO U
+InfoText = Module de sorties analogiques 4 AO U  +/-10V, 1...5V, 0...10V
+SHORTNAME=4 AO U
+Comment=Modules de sorties TOR pour ET 200pro
+
+; ----------------------------- 4 AO I
+[2363646]
+KatEntryName = 4 AO I
+InfoText = Module de sorties analogiques 4 AO I  +/-20mA, 0...20mA, 4...20mA
+SHORTNAME=4 AO I

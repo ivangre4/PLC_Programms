@@ -1,0 +1,126 @@
+;==========================================================
+; GSD-File  for SIMATIC Vision Sensor VS130-2 SIEMENS AG 
+; MLFB  : 6GF1 018-3BA
+; Saenger, A&D SC FS RD3
+; Stand   : 08.11.06 
+; File    : SIEM8111.GSS
+;==========================================================
+#Profibus_DP
+;
+GSD_Revision=3
+
+; Device identification
+Vendor_Name="SIEMENS AG"
+Model_Name="VS130-2"
+Revision="V2.0"
+Ident_Number=0x8111
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V1.0"
+Software_Release="V1.5"
+OrderNumber="6GF1 018-3BA"
+Info_Text="VS130-2 (Lector código matriz de datos)"
+
+; Supported baudrates
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+
+; Maximum responder time for supported baudrates 
+MaxTsdr_9.6	=   15
+MaxTsdr_19.2	=   15
+MaxTsdr_45.45	=   15
+MaxTsdr_93.75	=   15
+MaxTsdr_187.5	=   15
+MaxTsdr_500	=   15
+MaxTsdr_1.5M	=   25
+MaxTsdr_3M	=   50
+MaxTsdr_6M	= 100
+MaxTsdr_12M	= 200
+
+; Supported hardware features
+24V_Pins=2				; Signal M24V and P24V connected
+
+; Supported DP features
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+Auto_Baud_supp=1
+Set_Slave_Add_supp=0
+
+; Maximum polling frequency
+Min_Slave_Intervall=1
+
+; Maximum supported sizes
+;Modular_Station=1
+;Max_Module=244
+;Max_Input_Len=244
+;Max_Output_Len=244
+;Max_Data_Len=488
+
+Fail_Safe=1
+
+Implementation_Type="DPC31"
+Bitmap_Device="VS1X0__N"
+Slave_Family=0@Machine Vision              ;0 = General
+Family_Name = "SIMATIC"
+
+Max_Diag_Data_Len=244
+;Plain-text display of the station diagnosis	(O)
+;Bit position in the station diagnosis unsigned 16
+;Plain-text display max. 32 characters
+Unit_Diag_Bit( 0) = "Sensor no válido"
+Unit_Diag_Bit( 1) = "No se ha encontrado sensor"
+Unit_Diag_Bit( 2) = "Bit de diagnóstico 2"
+Unit_Diag_Bit( 3) = "Error en el cambio de señal DISA"
+Unit_Diag_Bit( 4) = "Error en el orden de las etapas"
+Unit_Diag_Bit( 5) = "Código corrupto"
+Unit_Diag_Bit( 6) = "Diagnóstico bit 6"
+Unit_Diag_Bit( 7) = "Error de transferencia"
+Unit_Diag_Bit( 8) = "Paráme. PROFIBUS DP no válidos"
+Unit_Diag_Bit( 9) = "Tiempo de ciclo demasiado breve"
+Unit_Diag_Bit(10) = "Error de código Training"
+Unit_Diag_Bit(11) = "Error de comparación"
+Unit_Diag_Bit(12) = "No hay código ECC200"
+Unit_Diag_Bit(13) = "Error PROFIBUS/DP"
+Unit_Diag_Bit(14) = "Error de comunicación RS232-Box"
+Unit_Diag_Bit(15) = "Lámpara sobrecargada"
+Unit_Diag_Bit(16) = "Número de código reservado"
+Unit_Diag_Bit(17) = "Diagnóstico bit 17"
+Unit_Diag_Bit(18) = "Diagnóstico bit 18"
+Unit_Diag_Bit(19) = "Diagnóstico bit 19"
+Unit_Diag_Bit(20) = "Diagnóstico bit 20"
+Unit_Diag_Bit(21) = "Diagnóstico bit 21"
+Unit_Diag_Bit(22) = "Diagnóstico bit 22"
+Unit_Diag_Bit(23) = "Diagnóstico bit 23"
+Unit_Diag_Bit(24) = "Diagnóstico bit 24"
+Unit_Diag_Bit(25) = "Diagnóstico bit 25"
+Unit_Diag_Bit(26) = "Diagnóstico bit 26"
+Unit_Diag_Bit(27) = "Diagnóstico bit 27"
+Unit_Diag_Bit(28) = "Diagnóstico bit 28"
+Unit_Diag_Bit(29) = "Diagnóstico bit 29"
+Unit_Diag_Bit(30) = "Diagnóstico bit 30"
+Unit_Diag_Bit(31) = "Diagnóstico bit 31"
+
+; Definition of modules
+Module = "VS130-2 1 byte + 16 word I/O" 0x30,0xFF
+1
+Info_Text="VS130-2 (Lector código matriz de datos)"
+EndModule
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+Comment=ET 200S HF Motor starter DS1e-x, RS1e-x, DSS1e-x, F-DS1e-x, F-RS1e-x
+
+; --- ET 200S HF-Motorstarter
+[2366904]
+KatEntryName = DS1e-x 0.3-3A HF
+InfoText = Direct starter; switch mechanically; electronic overload protection; unfused; up to 1.1 KW/400 V; 0.30 A up to 3.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DS1e-x 0.3-3A HF
+[2366905]
+KatEntryName = DS1e-x 2.4-8A HF
+InfoText = Direct starter; switch mechanically; electronic overload protection; unfused; up to 3.0 KW/400 V; 2.40 A up to 8.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DS1e-x 2.4-8A HF
+[2366906]
+KatEntryName = DS1e-x 2.4-16A HF
+InfoText = Direct starter; switch mechanically; electronic overload protection; unfused; up to 7.5 KW/400 V; 2.40 A up to 16 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DS1e-x 2.4-16A HF
+[2366907]
+KatEntryName = RS1e-x 0.3-3A HF
+InfoText = Reverse starter; switch mechanically; electronic overload protection; unfused; up to 1.1 KW/400 V; 0.30 A up to 3.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=RS1e-x 0.3-3A HF
+[2366908]
+KatEntryName = RS1e-x 2.4-8A HF
+InfoText = Reverse starter; switch mechanically; electronic overload protection; unfused; up to 3.0 KW/400 V; 2.40 A up to 8.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=RS1e-x 2.4-8A HF
+[2366909]
+KatEntryName = RS1e-x 2.4-16A HF
+InfoText = Reverse starter; switch mechanically; electronic overload protection; unfused; up to 7.5 KW/400 V; 2.40 A up to 16 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=RS1e-x 2.4-16A HF
+[2366910]
+KatEntryName = DSS1e-x 0.3-3A HF
+InfoText = Direct soft starter; switch electronically; electronic overload protection; unfused; up to 1.1 KW/400 V; 0.30 A up to 3.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 0.3-3A HF
+[2366911]
+KatEntryName = DSS1e-x 2.4-8A HF
+InfoText = Direct soft starter; switch electronically; electronic overload protection; unfused; up to 3.0 KW/400 V; 2.40 A up to 8.00 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2.4-8A HF
+[2366912]
+KatEntryName = DSS1e-x 2.4-16A HF
+InfoText = Direct soft starter; switch electronically; electronic overload protection; unfused; up to 7.5 KW/400 V; 2.40 A up to 16 A; Option: brake control module, control module; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2.4-16A HF
+
+; --- ET 200S F-Motorstarter
+[2366913]
+KatEntryName = F-DS1e-x 0.3-3A HF
+SHORTNAME    = F-DS1e-x 0.3-3A HF
+InfoText     = safe direct starter; switch mechanically; electronic overload protection; unfused; up to 1.1 KW/400 V; 0.30 A to 3.00 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe
+[2366914]
+KatEntryName = F-DS1e-x 2.4-8A HF
+SHORTNAME    = F-DS1e-x 2.4-8A HF
+InfoText     = safe direct starter; switch mechanically; electronic overload protection; unfused; up to 3.0 KW/400 V; 2.40 A to 8.00 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe
+[2366915]
+KatEntryName = F-DS1e-x 2.4-16A HF
+SHORTNAME    = F-DS1e-x 2.4-16A HF
+InfoText     = safe direct starter; switch mechanically; electronic overload protection; unfused; up to 7.5 KW/400 V; 2.40 A to 16 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe
+[2366916]
+KatEntryName = F-RS1e-x 0.3-3A HF
+SHORTNAME    = F-RS1e-x 0.3-3A HF
+InfoText     = safe reversing starter; switch mechanically; electronic overload protection; unfused; up to 1.1 KW/400 V; 0.30 A to 3.00 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe
+[2366917]
+KatEntryName = F-RS1e-x 2.4-8A HF
+SHORTNAME    = F-RS1e-x 2.4-8A HF
+InfoText     = safe reversing starter; switch mechanically; electronic overload protection; unfused; up to 3.0 KW/400 V; 2.40 A to 8.00 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe
+[2366918]
+KatEntryName = F-RS1e-x 2.4-16A HF
+SHORTNAME    = F-RS1e-x 2.4-16A HF
+InfoText     = safe reversing starter; switch mechanically; electronic overload protection; unfused; up to 7.5 KW/400 V; 2.40 A to 16 A; Option: Brake Control Module, Control Module; High Feature; for PM-D F PROFIsafe

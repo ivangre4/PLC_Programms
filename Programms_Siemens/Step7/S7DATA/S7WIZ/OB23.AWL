@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Time Delay Interrupt 3"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB23_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB23_STRT_INF : BYTE ;	//16#24 (OB 23 has started)
+  OB23_PRIORITY : BYTE ;	//6 (Priority of 1 is lowest)
+  OB23_OB_NUMBR : BYTE ;	//23 (Organization block 23, OB23)
+  OB23_RESERVED_1 : BYTE ;	//Reserved for system
+  OB23_RESERVED_2 : BYTE ;	//Reserved for system
+  OB23_SIGN : WORD ;	//Identifier input (SIGN) attached to SRT_DINT
+  OB23_DTIME : TIME ;	//Delay time (DTIME) input to SRT_DINT instruction
+  OB23_DATE_TIME : DATE_AND_TIME ;	//Date and time OB23 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

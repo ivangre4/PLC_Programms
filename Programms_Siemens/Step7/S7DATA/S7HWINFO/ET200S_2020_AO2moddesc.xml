@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--ET200S Module Description ET200S_2020_AO2moddesc.xml -->
+<prim:Document xmlns:prim="http://www.siemens.com/Industry/2002/07/Automation/Primitives" xmlns:gen="http://www.siemens.com/Industry/2002/07/Automation/Generics" xmlns:base="http://www.siemens.com/Industry/2002/07/Automation/Base" xmlns:hwk="http://www.siemens.com/Industry/2002/07/Automation/HWKonfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+             http://www.siemens.com/Industry/2002/07/Automation/Base                ADBaseV1.xsd
+             http://www.siemens.com/Industry/2002/07/Automation/HWKonfig            HWKV1.xsd
+             " DefaultLanguage="de">
+    <prim:FileInfo Version="1.0">
+        <prim:Created Timestamp="2007-04-01T08:49:00Z" Tool="STEP7 Version V5.4SP2" User="BH9668"/>
+        <prim:LastModified Timestamp="2007-04-01T08:49:00Z" Tool="Textpad" User="BH9668"/>
+     </prim:FileInfo>
+    <base:Project ID="{0A03A8AA-68A1-403b-B3E0-C7B170312771}" Name="ModuleDesc for ET200S 2 AO I">
+        <base:StructuralFeature>
+            <base:Device ID="1" OType="Module">
+                <base:SettingsFeature>
+                    <hwk:DatasetList>
+                        <hwk:Dataset Name="Dataset0" DSNr="0" DSLen="7">
+
+                            <!-- Bereichseinstellungen -->
+                            <hwk:Par Name="AO_Type" PNr="5">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Ausgabeart/-bereich Kanal 0"/>
+                                </base:DisplayNameFeature>
+                                <hwk:datatype>FIELD4</hwk:datatype>
+                                <hwk:defStep7>0</hwk:defStep7>
+                                <hwk:defPcs7>0</hwk:defPcs7>
+                                <hwk:instances>1</hwk:instances>
+                            </hwk:Par>
+
+                            <hwk:Par Name="AO_Type" PNr="6">
+                                <base:DisplayNameFeature>
+                                    <base:Text xml:lang="de" Value="Ausgabeart/-bereich Kanal 1"/>
+                                </base:DisplayNameFeature>
+                                <hwk:datatype>FIELD4</hwk:datatype>
+                                <hwk:defStep7>0</hwk:defStep7>
+                                <hwk:defPcs7>0</hwk:defPcs7>
+                                <hwk:instances>1</hwk:instances>
+                            </hwk:Par>
+
+                        </hwk:Dataset>
+                    </hwk:DatasetList>
+                </base:SettingsFeature>
+            </base:Device>
+        </base:StructuralFeature>
+    </base:Project>
+</prim:Document>

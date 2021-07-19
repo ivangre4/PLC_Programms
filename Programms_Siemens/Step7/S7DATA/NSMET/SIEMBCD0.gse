@@ -1,0 +1,583 @@
+;=============================================================
+; GSD file for the Simatic PPX:505/500-6870 Profibus-DP RBCs, 
+; Siemens Energy and Automation
+; Status : Version 3  Release 06.19.97 changed numbering of I/O devices 
+; L2-DP Slave Functionality, with Freeze_Mode_supp, 
+; Sync_mode_supp.
+; Version 4 - update GSD Revision 1 - 6/19/97
+; Version 5 - update Modules        - 7/31/98
+; Version 6 - changed config 2556/7 - 9/02/98
+; Version 6.1 - changed Bitmaps - 21/01/99 SX  V1.1
+; Version 7   - Added info to also support new 500-6870 RBC
+;               27.02.02  V 2.0                                 
+;=============================================================
+#Profibus_DP
+; Unit-Definition-List:
+GSD_Revision = 4
+Info_Text = "Remote-based controller 6870 as DP slave"
+Vendor_Name="SIEMENS"
+Model_Name="505/500-6870 RBC"
+Revision="V 2.0"
+Ident_Number=0xBCD0
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release = "Rev -"
+Software_Release = "1.1"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6 = 60
+MaxTsdr_19.2 = 60
+MaxTsdr_45.45 = 60
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500 = 100
+MaxTsdr_1.5M = 150
+MaxTsdr_3M = 250
+MaxTsdr_6M = 450
+MaxTsdr_12M = 800
+Repeater_Ctrl_Sig = 2
+Bitmap_Device="505BCD0N"
+Bitmap_SF="505BCD0S"
+;
+;--Slave-specific values-----
+;
+OrderNumber="PPX: 505/500-6870"
+;
+Freeze_Mode_supp = 1
+Sync_Mode_supp = 1
+Auto_Baud_supp = 1
+Set_Slave_Add_supp = 0
+Fail_Safe=1
+Min_Slave_Intervall=10
+Max_Diag_Data_Len=15
+Modul_Offset=0
+Slave_Family=3@SIMATIC
+;
+; PrmText-Block: 
+PrmText=1
+Text(0)="Disable"
+Text(1)="Enable"
+EndPrmText
+; ExtUserPrmData-Block: 
+ExtUserPrmData=1 "Discrete I/O Interval msec"
+Unsigned8 001 001-255
+EndExtUserPrmData
+; ExtUserPrmData-Block: 
+ExtUserPrmData=2 "Word I/O Update Factor"
+Unsigned8 002 001-255
+EndExtUserPrmData
+; ExtUserPrmData-Block: 
+ExtUserPrmData=3 "50X Ignore Mismatch Mode"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+; ExtUserPrmData-Block: 
+ExtUserPrmData=4 "50X RS232 Comm Port"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=3
+User_Prm_Data = 0x01,0x02,0x00
+Ext_User_Prm_Data_Const(0)= \
+0x01,0x02,0x00
+Ext_User_Prm_Data_Ref(0)=1
+Ext_User_Prm_Data_Ref(1)=2
+Ext_User_Prm_Data_Ref(2)=3
+Ext_User_Prm_Data_Ref(2)=4
+;
+Modular_Station=1
+Max_Module=16
+Max_Input_Len=244
+Max_Output_Len=244
+Max_Data_Len=488
+;
+;--- Module-Definitions ---
+;
+Module="**" 0x00
+1
+EndModule
+Module="** Begin 505-modules" 0x00
+2
+EndModule
+Module="** (See Below for 500-modules)" 0x00
+3
+EndModule
+Module="**" 0x00
+4
+EndModule
+Module="505 empty slot" 0x00
+5
+EndModule
+Module="505-2555-STD 16AI Diff 14 bit" 0x5F
+6
+EndModule
+Module="505-2556-STD 16 AI thermocoupl" 0x5F
+7
+EndModule
+Module="505-2557-STD 16 AI RTD thermo" 0x5F
+8
+EndModule
+Module="505-2580 16 DI Iso 120 VAC" 0x11
+9
+EndModule
+Module="505-2590 16 DO Iso 120 VAC" 0x21
+10
+EndModule
+Module="505-2590-A-STD 16DO iso 120 VAC" 0x21
+11
+EndModule
+Module="505-2590-A-BFR 16DI/O iso 120VAC" 0x31
+12
+EndModule
+Module="505-3508  8 DO 4.5-34 VDC 0.5A" 0x20
+13
+EndModule
+Module="505-3516 16 DO 4.5-34 VDC 0.5A" 0x21
+14
+EndModule
+Module="505-3532 32 DO 4.5-34 VDC 0.5A" 0x23
+15
+EndModule
+Module="505-3708  8 DO 4.5-34 VDC 2A" 0x20
+16
+EndModule
+Module="505-3716 16 DO 4.5-34 VDC 2A" 0x21
+17
+EndModule
+Module="505-3732 32 DO 4.5-34 VDC 2A" 0x23
+18
+EndModule
+Module="505-4008-A 8 DI 20-56 VAC" 0x10
+19
+EndModule
+Module="505-4016-A 16 DI 20-56 VAC" 0x11
+20
+EndModule
+Module="505-4032-A 32 DI 20-56 VAC" 0x13
+21
+EndModule
+Module="505-4108  8 DI 4-15 VDC" 0x10
+22
+EndModule
+Module="505-4116 16 DI 4-15 VDC" 0x11
+23
+EndModule
+Module="505-4132 32 DI 4-15 VDC" 0x13
+24
+EndModule
+Module="505-4208-A 8 DI 79-132 VAC" 0x10
+25
+EndModule
+Module="505-4216-A 16 DI 79-132 VAC" 0x11
+26
+EndModule
+Module="505-4232-A 32 DI 79-132 VAC" 0x13
+27
+EndModule
+Module="505-4308 8 DI 14-30 VDC" 0x10
+28
+EndModule
+Module="505-4316-A 16 DI 14-30&42-56V" 0x11
+29
+EndModule
+Module="505-4317    16 DI 10-33VDC" 0x11
+30
+EndModule
+Module="505-4318    16 DI 48VDC" 0x11
+31
+EndModule
+Module="505-4319    16 DI 125VDC" 0x11
+32
+EndModule
+Module="505-4332 32 DI 14-30 VDC" 0x13
+33
+EndModule
+Module="505-4408-A  8 DI 164-265 VAC" 0x10
+34
+EndModule
+Module="505-4416-A 16 DI 164-265 VAC" 0x11
+35
+EndModule
+Module="505-4432-A 32 DI 164-265 VAC" 0x13
+36
+EndModule
+Module="505-4508  8 DO 4.5-34 VDC" 0x20
+37
+EndModule
+Module="505-4516 16 DO 4.5-34 VDC" 0x21
+38
+EndModule
+Module="505-4532 32 DO 4.5-34 VDC" 0x23
+39
+EndModule
+Module="505-4608  8 DO 20-132 VAC" 0x20
+40
+EndModule
+Module="505-4616 16 DO 20-132 VAC" 0x21
+41
+EndModule
+Module="505-4632 32 DO 20-132 VAC" 0x23
+42
+EndModule
+Module="505-4708  8 DO 4.5-34 VDC" 0x20
+43
+EndModule
+Module="505-4716 16 DO 4.5-34 VDC" 0x21
+44
+EndModule
+Module="505-4732 32 DO 4.5-34 VDC" 0x23
+45
+EndModule
+Module="505-4808  8 DO 85-265 VAC" 0x20
+46
+EndModule
+Module="505-4816 16 DO 85-265 VAC" 0x21
+47
+EndModule
+Module="505-4832 32 DO 85-265 VAC" 0x23
+48
+EndModule
+Module="505-4908  8 DO Form C" 0x20
+49
+EndModule
+Module="505-4916 16 DO NO" 0x21
+50
+EndModule
+Module="505-4932 32 DO NO" 0x23
+51
+EndModule
+Module="505-5417 16 DO Form C 120 VDC" 0x21
+52
+EndModule
+Module="505-5518 16 DO Form C 120 VAC" 0x21
+53
+EndModule
+Module="505-6010 32 Input Simulator" 0x13
+54
+EndModule
+Module="505-6011 32 Output Simulator" 0x23
+55
+EndModule
+Module="505-6108-A/B 8 AI 12 bit" 0x57
+56
+EndModule
+Module="505-6202   8 AO 10 bit" 0x67
+57
+EndModule
+Module="505-6204   8 AO 10 bit" 0x67
+58
+EndModule
+Module="505-6208-A/B 8 AO 12 bit" 0x67
+59
+EndModule
+Module="505-6308 8 Input BCD Word" 0x57
+60
+EndModule
+Module="505-6408 8 Output BCD Word" 0x67
+61
+EndModule
+Module="505-7002 High Speed Counter" 0xC0,0x44,0x42
+62
+EndModule
+Module="505-7003 High Speed Ctr 100KHz" 0xC0,0xCD,0xD1
+63
+EndModule
+Module="505-7012 as 4AI/4AO" 0x73
+64
+EndModule
+Module="505-7012 as 8AI" 0x57
+65
+EndModule
+Module="505-7012 as 6AI/2AO" 0xC0,0x41,0x45
+66
+EndModule
+Module="505-7012 as 12AI/4AO" 0xC0,0x43,0x4B
+67
+EndModule
+Module="505-7016 as 12AI/4AO" 0xC0,0x43,0x4B
+68
+EndModule
+Module="505-7016 as 20AI/4AO" 0xC0,0x43,0x53
+69
+EndModule
+Module="505-7016 as 4AI/4AO" 0x73
+70
+EndModule
+Module="505-7016 as 8AI" 0x57
+71
+EndModule
+Module="505-7028 8 AI Thermocouple" 0x57
+72
+EndModule
+Module="505-7038 8 AI RTD" 0x57
+73
+EndModule
+;
+;--- CTI-Modules update ----(7/31/98)----
+;
+Module="CTI-2530 8DO Hi Current,Relay" 0x20
+74
+EndModule
+Module="CTI-2550-A  8AI Iso Analog" 0x57
+75
+EndModule
+Module="CTI-2551  8AI Iso T/C Input" 0x57
+76
+EndModule
+Module="CTI-2552  8AI Iso RTD Input" 0x57
+77
+EndModule
+Module="CTI-2553 2CH Iso Mag Meter Inp" 0x57
+78
+EndModule
+Module="CTI-2554-A 4CH Hi Speed Count" 0x73
+79
+EndModule
+Module="CTI-2560-A  8AO Isolated" 0x67
+80
+EndModule
+Module="CTI-2564 4CH Pulse Train Out" 0x67
+81
+EndModule
+Module="CTI-2581 16DI  48VDC,Isolated" 0x11
+82
+EndModule
+Module="CTI-2582 16DI 125VDC,Isolated" 0x11
+83
+EndModule
+Module="CTI-2585-STD 16DI TTL,Isolated" 0x11
+84
+EndModule
+Module="CTI-2585-WORD 16DI TTL,Iso" 0x57
+85
+EndModule
+Module="CTI-2590-EF-STD 16DO 120VAC" 0x21
+86
+EndModule
+Module="CTI-2590-EF-STD (cfg part2)" 0x00
+87
+EndModule
+Module="CTI-2590-EF-BFR 16DO/I 120VAC" 0x31
+88
+EndModule
+Module="CTI-2590-EF-BFR (cfg part2)" 0x00
+89
+EndModule
+Module="CTI-2591-A-STD 16DO 125VDC,Iso" 0x21
+90
+EndModule
+Module="CTI-2591-A-BFR 16DO/I 125VDC Iso" 0x31
+91
+EndModule
+Module="CTI-2591-EF-STD 16DO 125VDC" 0x21
+92
+EndModule
+Module="CTI-2591-EF-STD (cfg part2)" 0x00
+93
+EndModule
+Module="CTI-2591-EF-BFR 16DO/I 125VDC" 0x31
+94
+EndModule
+Module="CTI-2591-EF-BFR (cfg part2)" 0x00
+95
+EndModule
+Module="CTI-2595-STD 16DO TTL,Isolated" 0x21
+96
+EndModule
+Module="CTI-2595-WORD 16D0 TTL,Iso" 0x67
+97
+EndModule
+Module="**" 0x00
+98
+EndModule
+Module="** Begin 500-modules" 0x00
+99
+EndModule
+Module="**" 0x00
+100
+EndModule
+Module="500 empty slot" 0x00
+101
+EndModule
+Module="500-5001  8 DI 85-132 VAC" 0x10
+102
+EndModule
+Module="500-5002  8 DI 170-260 VAC" 0x10
+103
+EndModule
+Module="500-5005 8DI 20-36 VAC,20-40DC" 0x10
+104
+EndModule
+Module="500-5006 8DI 40-56 VAC,36-70DC" 0x10
+105
+EndModule
+Module="500-5007  8 DI 5-15 VDC (TTL)" 0x10
+106
+EndModule
+Module="500-5008  8 DI 9-30 VDC" 0x10
+107
+EndModule
+Module="500-5009  4AI 12Bit Isolated" 0x53
+108
+EndModule
+Module="500-5010  8 DO 20-56 VAC" 0x20
+109
+EndModule
+Module="500-5011  8 DO 85-132 VAC" 0x20
+110
+EndModule
+Module="500-5012  8 DO 170-260 VAC" 0x20
+111
+EndModule
+Module="500-5013  8 DO 11-56 VDC" 0x20
+112
+EndModule
+Module="500-5016  2AO 12Bit Isolated" 0x61
+113
+EndModule
+Module="500-5018  8 Word In (BCD)" 0x57
+114
+EndModule
+Module="500-5019  8 Word Out (BCD)" 0x67
+115
+EndModule
+Module="500-5020  8 DI Simulator" 0x10
+116
+EndModule
+Module="500-5021  8 DO Simulator" 0x20
+117
+EndModule
+Module="500-5023 HI Spd Pulse-Slt-1of2" 0x67
+118
+EndModule
+Module="500-5023 HI Spd Pulse-Slt-2of2" 0xC0,0x00,0x44
+119
+EndModule
+Module="500-5026 2DI/6DO RapRes,24VDC" 0xC0,0x00,0x00
+120
+EndModule
+Module="500-5027 2DI/6DO RapRes,110VAC" 0xC0,0x00,0x00
+121
+EndModule
+Module="500-5028 2DI/6DO RapRes,120VDC" 0xC0,0x00,0x00
+122
+EndModule
+Module="500-5030  32 DI 15-30 VDC" 0x13
+123
+EndModule
+Module="500-5031  32 DO 20-30 VDC" 0x23
+124
+EndModule
+Module="500-5032 6DI 85-132VAC,Isolated" 0x10
+125
+EndModule
+Module="500-5033 4DO 85-132VAC,Isolated" 0x20
+126
+EndModule
+Module="500-5041 5DO/3DI Redund-110AC" 0xC0,0x00,0x00
+127
+EndModule
+Module="500-5037A 8AI 12Bit Single-ended" 0x57
+128
+EndModule
+Module="500-5047A 8AO 12Bit Single-ended" 0x67
+129
+EndModule
+Module="500-5048  6DI 6-30 VDC,Isolated" 0x10
+130
+EndModule
+Module="500-5049  4DO 6-30 VDC,Isolated" 0x20
+131
+EndModule
+Module="500-5051 Thermocpl,Slot-1of2" 0x57
+132
+EndModule
+Module="500-5051 Thermocpl,Slot-2of2" 0x00
+133
+EndModule
+Module="500-5052 RTD 14Bit, Slt-1of2" 0x5F
+134
+EndModule
+Module="500-5052 RTD 14Bit, Slt-2of2" 0x00
+135
+EndModule
+Module="500-5055  32 DI 79-132 VAC" 0x13
+136
+EndModule
+Module="500-5056  32 DO 20-132 VAC" 0x23
+137
+EndModule
+Module="500-5061  8DO Relay Hi-Current" 0x20
+138
+EndModule
+Module="500-5062  8DO Relay Lo-Current" 0x20
+139
+EndModule
+;
+;--- CTI-Modules for 500 I/O
+;
+Module="CTI-2017  8DO TTL OUTPUTS" 0x20
+140
+EndModule
+Module="CTI-2020  8DO RELAY (240 VAC)" 0x20
+141
+EndModule
+Module="CTI-2020  8DO RELAY (115 VAC)" 0x20
+142
+EndModule
+Module="CTI-2032-L 8DO RELAY (TTL)" 0x20
+143
+EndModule
+Module="CTI-2032  8DO RELAY (125 VDC)" 0x20
+144
+EndModule
+Module="CTI-2050  8AI Analog Input" 0x57
+145
+EndModule
+Module="CTI-2060  8AO Analog Output" 0x67
+146
+EndModule
+Module="CTI-2080 16DI Inputs(115-VAC)" 0x11
+147
+EndModule
+Module="CTI-2081  16DI Inputs(24-VDC)" 0x11
+148
+EndModule
+Module="CTI-2082 16DI Inputs(125-VDC)" 0x11
+149
+EndModule
+Module="CTI-2090 16DO Output(115-VAC)" 0x21
+150
+EndModule
+Module="CTI-2090  16DO Output(24-VAC)" 0x21
+151
+EndModule
+;
+;--- User specific Diagnostic ---
+;
+Unit_Diag_Bit(0x0024) = "Slot 1 Config Mismatch"
+Unit_Diag_Bit(0x0025) = "Slot 2 Config Mismatch"
+Unit_Diag_Bit(0x0026) = "Slot 3 Config Mismatch"
+Unit_Diag_Bit(0x0027) = "Slot 4 Config Mismatch"
+Unit_Diag_Bit(0x0028) = "Slot 5 Config Mismatch"
+Unit_Diag_Bit(0x0029) = "Slot 6 Config Mismatch"
+Unit_Diag_Bit(0x0030) = "Slot 7 Config Mismatch"
+Unit_Diag_Bit(0x0031) = "Slot 8 Config Mismatch"
+Unit_Diag_Bit(0x0032) = "Slot 9 Config Mismatch"
+Unit_Diag_Bit(0x0033) = "Slot 10 Config Mismatch"
+Unit_Diag_Bit(0x0034) = "Slot 11 Config Mismatch"
+Unit_Diag_Bit(0x0035) = "Slot 12 Config Mismatch"
+Unit_Diag_Bit(0x0036) = "Slot 13 Config Mismatch"
+Unit_Diag_Bit(0x0037) = "Slot 14 Config Mismatch"
+Unit_Diag_Bit(0x0038) = "Slot 15 Config Mismatch"
+Unit_Diag_Bit(0x0039) = "Slot 16 Config Mismatch"
+;

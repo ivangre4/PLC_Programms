@@ -1,0 +1,2236 @@
+; --------
+; Metafile Erweiterungen für PC Baugruppen und Applikationen
+; Gerhard Schawe
+; Historie:
+; 09.02.98  GS : Ersterstellung
+; 12.02.98  CB : SYTEM_TYPE ergänzt durch Claudia
+;                Autocreate der PC Applikation auf Steckplatz 1
+; 13.02.98  GS : Erweiterungen für die PB und IE Baugruppen
+; 23.02.98  GS : Funktionsfähiges Metafile für CP 5412
+; 03.03.98  GS : SDB 3100 für die PC Applikation aufgenommen
+; 25.03.98  GS : Zusammenführung mit dem Stations Metafile
+; 27.03.98  GS : Freischaltung aller Baugruppentypen
+; 28.04.98  GS : spezielles Regelfile für H1 PC Baugruppen eingeführt
+; 20.08.98  GS : spezielle Type für H-Firmware CP1413-H und CP 5412-H eingeführt
+; 21.08.98  GS : SYSTEM_TYPE auf 0x10 (PC-Station) geändert
+; 25.08.98  GS : RED_COMPATIBILITY für die H Firmwarestände eingebaut
+; 10.09.98  RO : FMS für den allgemeinen CP/PB
+; 26.04.99  GS : Stationsmanager aufgenommen
+; 26.04.99  GS : CP 5613 aufgenommen
+; 09.06.99  GS : CP 1413 256K aufgenommen
+; 23.06.99  GS : HW Config Katalogeinträge ergänzt
+; 01.07.99  GS : PC ISlave eingebracht
+; 12.07.99  GS : 1413 H nur auf ISO Protokoll beschränkt
+; 15.07.99  GS : DISABLE_DOWNLOAD aufgenommen
+; 16.08.99  GS : DP Attribute für den allgemeinen Profibus CP aufgenommen
+; 03.09.99  KT : CASING_FORMAT=8 aufgenommen für PC_RACK, PC_APPL und PC_CP
+; 13.09.99  GS : eindeutige MLFB Nummern zum Import / Export vergeben
+; 14.03.00  MR : FO Varianten der PC-Baugruppen aufgenommen
+; 21.07.03  GS : CP 5613 A2, CP 5614 A2, CP 7515 eingebaut
+; 11.09.03  GS : CP 7515 wieder ausgebaut
+; 17.09.03  GS : LDB Generierung für alle 5613/4 Typen freigeschaltet
+; 09.02.04  DB : Softnet-IO Baugruppen eingefügt
+; 17.06.04  GS : Mengengerüst Einschränkungen bei CP 5611,5511, 5512 für S7 Verbindungen entfernt
+; 26.09.04  DB : Neue Versionen für (OPC) Applikationen
+; --------
+
+; ----------------------------- PC_STATION_CT
+[_S7H_PC_STATION_CT]
+basetype=_S7H_STATION_AT
+server=S7HSTATX.DLL
+prefix=OM
+ObjType=1315651
+SHORTNAME=SIMATIC PC-Station
+relation=1315818,_S7H_PC_RACK_CT[1315819];deep
+
+CLASS_PROPERTIES=0
+AdditionalKatalogInfo=0x02
+SYSTEM_TYPE=0x10
+
+MAX_NUM_OF_CHILDS=1
+ICON_TYPE=12
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1315657, 0, FIXED
+relation=1315838,_AUT_CAPABLE_S7RESOFF_AT[1315839]
+
+; Katalog Ansicht
+nKatChilds=5
+					; Controller
+KatChild1=1315948
+					; Katalogklasse PC CP PROFIBUS
+KatChild2=1335349
+					; Katalogklasse PC CP Industrial Ethernet
+KatChild3=1335387
+					; Katalogklasse HMI
+KatChild4=1335389
+					; Applikationen
+KatChild5=1335388
+HWCNFX_VER=5.0.0.0|0
+
+; ----------------------------- StartObjekt PC-Konfig
+[_S7H_HWSTARTER_PC_CT]
+basetype=_S7H_HWSTARTER_AT
+server=S7HSTATX.DLL
+prefix=OM
+ObjType=1315655
+HWCNFX_VER=5.0.0.0|0
+
+; ----------------------------- PC IO-Controller Basis
+[_S7H_IO_CONTROLLER_PC_AT]
+basetype=_S7H_IO_CONTROLLER_BASE_AT
+ObjType=1335491
+abstract=true
+
+CAN_SDB1XXX_HEADER_0D=1
+MUST_SHOW_BUSSYSTEM_ADR=1
+CAN_DO_PN_IO=1
+;EXTERNAL_MASTER=1
+
+PN_VENDOR_ID=0x002A
+PN_DEVICE_ID=0x0202
+
+PN_CAPABILITY_SEND=1536
+PN_CAPABILITY_RECEIVE=1536
+PN_MAX_STATION_NO=125
+PN_MAX_DEVICES=125
+
+
+MAX_INPUT_DATA_LEN=32768
+MAX_OUTPUT_DATA_LEN=32768
+MAX_INPUT_LOG_ADR=32768
+MAX_OUTPUT_LOG_ADR=32768
+MAX_STATION_SIZE_A_KONSIST=4096
+MAX_STATION_SIZE_E=4096
+MAX_STATION_SIZE_A=4096
+MAX_INPUT_P_DATA_LEN=32768
+MAX_OUTPUT_P_DATA_LEN=32768
+MAX_KONSIST_DATA_LEN=4096
+SUM_BUFFER_LEN=4096
+
+; RQ 175787 PCs > 8msec
+PN_SUPP_REDUCTIONS=8,16,32,64,128,256,512
+PN_BANDWIDTH=32768
+;wird eigentlich nicht abgefragt
+PN_MIN_DEVICE_INT=1
+PN_MAX_FRAMES_PER_CYCLE=14
+;PN_MAX_FRAMES_PER_CYCLE=32768
+;PN_INCREMENT=
+;PN_BASIC_CLOCK=
+
+
+; ----------------------------- PC_RACK,125 Steckpl.,homogen
+
+[_S7H_PC_RACK_CT]
+basetype=_S7H_SUBSTATION_AT
+server=S7HSS30X.DLL
+prefix=OM
+ObjType=1315657
+SHORTNAME=PC
+;SYSTEM_TYPE=0x8
+SYSTEM_TYPE=0x10
+FIRST_VISIBLE_CHILD_NO=1
+MAX_NUM_OF_CHILDS=125
+ICON_TYPE=12
+
+relation=1315826,_S7H_MODULE_PC_AT[1315827];deep
+VISIBLESLOTS="1111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1335378, 125, FIXED
+CASING_FORMAT=8
+; für online gehen bei WinLC
+KBUS=1
+HWCNFX_VER=5.0.0.0|0
+
+
+; keine Applikationen oder OPC_Anwendung mit CP 1616 stecken
+Rule_00100100= MAXC(1), CONF (0x04000100)
+Rule_08000100= CONF (0x04000100), MAXC( 22)
+; maximal 22 Applikationen steckbar, wird sonst erst im KoKo geprüft
+
+; keine anderen CPs zusammen mmit CP 1616 stecken
+; Softnet Profibus-Bgr (0x00200100)
+;Rule_00200100=MAXC(1), CONF (0x04000100)
+Rule_00200100=CONF (0x04000100)
+
+; VORSICHT: Diese Regeln sind alle schon in S7NBR_02\release\s7hpcstx.met 
+; oder S7NBR_02\release\s7hstrax.met drin
+; Sie dürfen hier nicht einfach überschrieben werden
+; keine WinLC oder Slot CPUs mit CP 1616 stecken
+;Rule_00080002= INCL (2,2), CONF(0x00400002, 0x00800002, 0x00100002, 0x01000002, 0x04000100)
+;Rule_00100002= INCL (3,3), CONF(0x00080002, 0x00400002, 0x00800002, 0x01000002, 0x04000100)
+;Rule_00200002= CONF (0x00080020, 0x04000100)
+;Rule_00400002= INCL (2,18), MAXC(1), CONF(0x00080002, 0x00800002, 0x00100002, 0x01000002, 0x04000100)
+;Rule_00800002= INCL (2,2), CONF(0x00400002, 0x00800002, 0x00100002, 0x01000002, 0x04000100)
+;Rule_01000002= INCL (2,18), MAXC(4), CONF(0x00080002, 0x00400002, 0x04000100)
+
+; die Rule zum Stecken des CP 1616 nur einmal auf 1 ist in HSP 1004
+; diese ist standardmaessig in V5.3.3 drin
+
+
+; --------
+; abstrakte Baugruppen Basisklasse erweitern um die Ableitung der PC Baugruppen Basisklasse
+; --------
+
+[_S7H_MODULE_AT]
+;server=S7HMDX.DLL
+;basetype=_S7H_HWMODULE_AT
+subtype=_S7H_MODULE_PC_AT
+
+; --------
+; abstrakte PC Baugruppen und Applikation Basisklasse
+; --------
+[_S7H_MODULE_PC_AT]
+;server=????.DLL
+;prefix=OM
+ObjType=1335350
+abstract=true
+subtype=_S7H_CLASS_PC_CP_AT
+subtype=_S7H_CLASS_PC_APPL_NAV_AT
+subtype=_S7H_CLASS_PC_STATION_MGR_CT
+;SYSTEM_TYPE=0x8
+SYSTEM_TYPE=0x10
+ONLINE_FUNCTIONS=0x00001A07
+ADD_TO_XDB_WITH_ID=1
+HWCNFX_VER=5.0.0.0|0
+
+; --------
+; PC Station Manager
+; --------
+[_S7H_CLASS_PC_STATION_MGR_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335378
+basetype=_AUT_CAPABLE_GENRESOFF_AT
+CLASS_PROPERTIES=0
+S7_TYPE_CODE=0xAC11
+nKatChilds=0
+MLFB=Station_Manager
+;FILTER_NET_SEARCH="S7-PC"
+SHORTNAME=Stationmanager
+MAX_CONN_CNT=0
+MAX_CONN_CNT_MPI=0
+CAPABLE_PBK=0
+CAPABLE_PTP=0
+CAPABLE_OBK=0
+PBK_TYPE_MIN=0
+PBK_TYPE_MAX=0
+PBK_TYPE_DEF=0
+PBK_ESTABLISH_MIN=0
+PBK_ESTABLISH_MAX=0
+PBK_ESTABLISH_DEF=0
+PBK_MESSAGE_MIN=0
+PBK_MESSAGE_MAX=0
+PBK_MESSAGE_DEF=0
+
+SDB_CARRIER=1
+SDB_CAUSED_LIST=9
+SDB_CARRIER_LIST=9
+
+ADD_TO_XDB_WITH_ID=3
+RAM_TO_ROM_COPY=1
+AUTO_STOP_RUN=3
+D_UPL=1
+HWCNFX_VER=5.0.3.0|0
+
+
+; -------- -------------------------------------------------------------------------------
+; abstrakte PC Applikation Basisklasse Katalog
+; --------
+[_S7H_CLASS_PC_HMI_KAT_AT]
+ObjType=1335389
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+IsCatEntry=1
+HWCNFX_VER=5.0.3.0|0
+
+; -------- -------------------------------------------------------------------------------
+; abstrakte PC Applikation Basisklasse Katalog
+; --------
+[_S7H_CLASS_PC_APPL_KAT_AT]
+ObjType=1335388
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+IsCatEntry=1
+nKatChilds=2
+					; Standard Applikation
+KatChild1=1335507
+KatChild2=1335444
+HWCNFX_VER=5.0.3.0|0
+
+; -------- -------------------------------------------------------------------------------
+; unsichtbare PC Applikation Basisklasse für UTAH-Applikation
+; --------
+[_S7H_CLASS_PC_APPL_NAV_AT]
+ObjType=1335447
+abstract=true
+basetype=_AUT_CAPABLE_GENRESOFF_AT
+subtype=_S7H_CLASS_PC_APPL_AT
+relation=1315874,_S7H_PC_PB_CP_CT[1315875];
+relation=1315885,_S7H_PC_IE_CP_CT[1315884];
+CASING_FORMAT=8
+CLASS_PROPERTIES=0
+
+MAX_CONN_CNT=32000
+MAX_CONN_CNT_MPI=32000
+CAPABLE_PBK=1
+CAPABLE_PTP=0
+CAPABLE_OBK=0
+PBK_TYPE_MIN=0
+PBK_TYPE_MAX=0
+PBK_TYPE_DEF=0
+PBK_ESTABLISH_MIN=0
+PBK_ESTABLISH_MAX=1
+PBK_ESTABLISH_DEF=1
+PBK_MESSAGE_MIN=0
+PBK_MESSAGE_MAX=0
+PBK_MESSAGE_DEF=0
+
+; DP specific
+DP_SUPPORT=1
+ASSIGN_MULTIPLE_CONTROLLERS=1
+
+NR_DEFAULT_ADDRESS_ALGO=10
+MAX_INPUT_DATA_LEN=32768
+MAX_OUTPUT_DATA_LEN=32768
+MAX_INPUT_LOG_ADR=32768
+MAX_OUTPUT_LOG_ADR=32768
+PARTYLINE_BUS=0
+
+RAM_TO_ROM_COPY=1
+
+
+
+MAX_VFD_NUMBER=5
+AUTO_STOP_RUN=4
+HWCNFX_VER=5.0.0.0|0
+
+; ---------------------------------------------------------------------------------------
+; abstrakte PC Applikation Basisklasse
+; --------
+[_S7H_CLASS_PC_APPL_AT]
+ObjType=1335351
+abstract=true
+CAN_LOAD_SEL_CONN = 0
+subtype=_S7H_CLASS_PC_STD_APPL_CT
+subtype=_S7H_CLASS_PC_OPC_APPL_CT
+
+
+; ---------------------------------------------------------------------------------------
+; PC Applikation IE-Allgemein Katalog
+; --------
+[_S7H_CLASS_PC_STD_APPL_KAT_AT]
+ObjType=1335507
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+IsCatEntry=1
+nKatChilds=2
+					; Standard Applikation
+KatChild1=1335366
+KatChild2=1335508
+HWCNFX_VER=5.3.2.0|0
+
+
+; --------
+; PC Standard Applikation
+; --------
+[_S7H_CLASS_PC_STD_APPL_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335366
+SHORTNAME=Application
+IsInKatVisible=1
+nKatChilds=0
+MLFB=Application
+S7_TYPE_CODE=0xAC00
+
+SDB_CARRIER=1
+SDB_CAUSED_LIST=3100
+SDB_CARRIER_LIST=700|3100
+H_LAYER=1
+ALL_BGR_PBLK=1
+PNIO_SUPPORT=1
+
+; notwendig fuer CP 1616
+PLUG_CLASS=0x08000100
+
+FMS=1
+CAN_NCM_CONNS=0
+HWCNFX_VER=5.0.3.0|0
+
+
+
+; --------
+; PC Standard Applikation
+; --------
+[_S7H_CLASS_PC_STD_APPL_CT_V63]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335508
+basetype=_S7H_CLASS_PC_STD_APPL_CT
+nKatChilds=0
+
+FW_VERSION=V6.3
+S7CONN_NO_SLOT_OFFSET=1
+HWCNFX_VER=5.3.2.0|0
+
+
+; -------- -------------------------------------------------------------------------------
+; OPC Applikation Katalog Klasse
+; --------
+[S7H_PC_OPC_APPLICATION_KAT_AT]
+
+ObjType=1335444
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=6
+					
+; OPC Server bis CD 05/02
+KatChild1=1335412
+
+; OPC Server ab V6.0 SP5
+KatChild2=1335451
+
+; OPC Server ab V6.1
+KatChild3=1335445
+
+; OPC Server ab V6.2
+KatChild4=1335450
+
+; OPC Server ab V6.3
+KatChild5=1335509
+
+; OPC Server ab V6.4
+KatChild6=1335518
+
+; --------
+; OPC Applikation
+; --------
+[_S7H_CLASS_PC_OPC_APPL_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+SHORTNAME=OPC Server
+ObjType=1335412
+IsInKatVisible=1
+nKatChilds=0
+MLFB=OPC Server
+S7_TYPE_CODE=0xAC00
+
+SDB_CARRIER=1
+SDB_CAUSED_LIST=3100|3121|3122|3123|3125|3126
+SDB_CARRIER_LIST=700|3100|3121|3122|3123|3125|3126
+H_LAYER=1
+
+MAX_INPUT_DATA_LEN=32768
+MAX_OUTPUT_DATA_LEN=32768
+MAX_INPUT_LOG_ADR=32768
+MAX_OUTPUT_LOG_ADR=32768
+
+CAN_NCM_CONNS=1
+MAX_CONN_CNT_KBUS = 207
+OPC=1
+FMS=1
+ASSIGN_MULTIPLE_MASTERS=1
+PLUG_CLASS=0x00100100
+MAX_TSAP_LEN=8
+HWCNFX_VER=5.1.2.0|0
+
+; --------
+; OPC Applikation ab SIMATIC NET CD 7/02 (V6.0 SP5 zu Simatic Net CD)
+; --------
+[S7H_PC_OPC_APPLICATION_V605_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335451
+basetype=_S7H_CLASS_PC_OPC_APPL_CT
+MLFB=OPC Server
+ALL_BGR_PBLK=1
+SNMP=1
+DPC2=1
+S7V_TARGET_RESOURCE=0x03
+S7V_ROUTED_VERB_SOURCE_POSSIBLE=1
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+HWCNFX_VER=5.2.0.0|0
+
+; --------
+; OPC Applikation ab SIMATIC NET CD 11/02  (V6.1)
+; --------
+[S7H_PC_OPC_APPLICATION_V61_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335445
+basetype=_S7H_CLASS_PC_OPC_APPL_CT
+
+SDB_CAUSED_LIST=3100|3121|3122|3123|3125|3126|3127
+SDB_CARRIER_LIST=700|3100|3121|3122|3123|3125|3126|3127
+
+MLFB=OPC Server
+PROFINET=1
+ALL_BGR_PBLK=1
+DPC2=1
+FMS=1
+SNMP=1
+OPC_SYMBOLS=1
+S7V_TARGET_RESOURCE=0x03
+S7V_ROUTED_VERB_SOURCE_POSSIBLE=1
+FW_VERSION=V6.1.0
+CHECK_FW_VERSION_DIGITS=3
+
+HWCNFX_VER=5.2.0.0|0
+
+
+; --------
+; OPC Applikation ab SIMATIC NET CD 06/04  (V6.2.1)
+; --------
+[S7H_PC_OPC_APPLICATION_V62_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335450
+basetype=_S7H_CLASS_PC_OPC_APPL_CT
+
+SDB_CAUSED_LIST=3100|3121|3122|3123|3125|3126|3127
+SDB_CARRIER_LIST=700|3100|3121|3122|3123|3125|3126|3127
+
+MLFB=OPC Server
+PROFINET=1
+ALL_BGR_PBLK=1
+DPC2=1
+FMS=1
+SNMP=1
+OPC_PNIO=1
+OPC_SYMBOLS=1
+PNIO_SUPPORT=1
+S7V_TARGET_RESOURCE=0x03
+S7V_ROUTED_VERB_SOURCE_POSSIBLE=1
+FW_VERSION=V6.2.1
+CHECK_FW_VERSION_DIGITS=3
+
+HWCNFX_VER=5.3.1.0|0
+
+
+; --------
+; OPC Applikation ab SIMATIC NET CD 2005  (V6.3)
+; --------
+[S7H_PC_OPC_APPLICATION_V63_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335509
+basetype=S7H_PC_OPC_APPLICATION_V62_CT
+FW_VERSION=V6.3
+S7CONN_NO_SLOT_OFFSET=1
+HWCNFX_VER=5.3.2.0|0
+
+; --------
+; OPC Applikation ab SIMATIC NET CD 2006  (V6.4)
+; --------
+[S7H_PC_OPC_APPLICATION_V64_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335518
+basetype=S7H_PC_OPC_APPLICATION_V63_CT
+FW_VERSION=V6.4
+HWCNFX_VER=5.4.1.0|0
+CAN_DO_EULOHI=1
+SUPP_OPC_FAST_CONNSTATE_RETURN=1
+
+; -------- -------------------------------------------------------------------------------
+; abstrakte PC CP PROFIBUS Katalog Klasse
+; --------
+[_S7H_CLASS_PC_CP_PB_KAT_AT]
+ObjType=1335349
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.1.0.0|0
+
+; Katalog Ansicht
+nKatChilds=11
+					; PB CP 5411
+KatChild1=1335512
+					; PB CP 5412 A2
+KatChild2=1335513
+					; PB CP 5511
+KatChild3=1335441
+					; PB CP 5512
+KatChild4=1335511
+					; PB CP 5611
+KatChild5=1335443
+					; PB CP 5613
+KatChild6=1335437
+					; PB CP 5613 FO
+KatChild7=1335438
+					; PB CP 5613 A2
+KatChild8=1335464
+					; PB CP 5614
+KatChild9=1335439
+					; PB CP 5614 FO
+KatChild10=1335440
+					; PB CP 5614 A2
+KatChild11=1335465
+					; PB CP 5611 A2 storniert
+
+					
+
+; -------- -------------------------------------------------------------------------------
+; abstrakte PC CP Industrial Ethernet Katalog Klasse
+; --------
+[_S7H_CLASS_PC_CP_IE_KAT_AT]
+ObjType=1335387
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.1.0.0|0
+
+; Katalog Ansicht
+nKatChilds=7
+					; IE CP 1413 Kat
+KatChild1=1335404
+					; IE CP 1411 Kat
+KatChild2=1335479
+					; IE CP 1511 Kat
+KatChild3=1335480
+					; IE CP 1512 Kat
+KatChild4=1335481
+					; IE CP 1613 Kat
+KatChild5=1335345
+					; IE CP 1613 A2 Kat
+;KatChild6=1335492
+					; IE CP 1612 Kat
+KatChild6=1336008
+					; IE CP 1616 RT Kat
+;KatChild8=1335483
+					; IE Allgemein Kat
+KatChild7=1336007
+					; IE CP 7515 Kat
+;KatChild9=1335468
+
+
+
+; -------- -------------------------------------------------------------------------------
+; abstrakte PC CP Basisklasse
+; --------
+[_S7H_CLASS_PC_CP_AT]
+;server=????.DLL
+;prefix=OM
+ObjType=1335352
+abstract=true
+
+ICON_TYPE=3
+
+;basetype=_S7H_MODULE_PC_AT
+basetype=_AUT_CP_BOARD_AT
+
+AUTOCREATE_OBJECTS=_S7O_PROGF_OFFLINE_CT
+CLASS_PROPERTIES=0
+
+subtype=_S7H_PC_IE_CP_CT
+subtype=_S7H_PC_PB_CP_CT
+
+SDB_CARRIER=1
+SDB_CAUSED_LIST=3100
+SDB_CARRIER_LIST=3100
+GenPcBgrParam=yes
+RegValSdbTrace=AsciiSdbFilePcBgr
+IO_TYPE=0
+CASING_FORMAT=8
+ADD_TO_XDB_WITH_ID=2
+RAM_TO_ROM_COPY=1
+DO_LINK_NET_CREA=1
+MAX_TPDU_SIZE=100
+
+PLUG_CLASS=0x00200100
+
+; RQ AP00243773 Routing war nicht mehr möglich
+PARTYLINE_BUS=0
+
+; keine Prüfung d. Adressen bei Import
+REGISTER_ADR_IMPORT_VERB=0
+AUTO_STOP_RUN=1
+HWCNFX_VER=5.0.0.0|0
+
+; -------- -------------------------------------------------------------------------------
+; industrial Ethernet PC CP Basisklasse
+; --------
+[_S7H_PC_IE_CP_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335353
+MLFB= IE_CP_BASE
+SHORTNAME=CP Industrial Ethernet
+S7_TYPE_CODE=0xAC01
+
+SDB3100=SDB3100_H1PC_CONVERT
+COMMUNICATION_TYPES=0x00145203,1
+
+;  ----------------------------
+;    Anzahl bei Verbindungen
+;  ----------------------------
+MAX_FDL_CON=0
+MAX_FMS_CON=0
+MAX_TF_CON=0
+MAX_MAP_CON=0
+MAX_PROJ_L2_CON=0
+;--------------------------------
+CP_MAX_CONN_CNT=64
+MAX_PROJ_H1_CON=255
+MAX_ISOTRANSPORT_CON=255
+MAX_IP_CON=255
+MAX_SOCKET_TCP=255
+MAX_S7_CON=255
+;--------------------------------
+
+
+; Als Server quasi beliebig viele Verbindungen
+MAX_EMAIL_CON=1000
+
+FETCH_WRITE_ACTIVE=1
+CAN_FETCH_MODE_S5=1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119
+SDB_CARRIER_LIST=3100|3107|3108|3111|3119
+
+ETHERNET_KEEP_ALIVE=7200
+CAN_DO_ETHERNET_KEEP_ALIVE=2
+CAN_DO_CN_RQ_TIMEOUT=1
+HWCNFX_VER=5.0.0.0|0
+
+
+; ---------------------------------------------------------------------------------------
+; abstrakte allgemeiner IE CP Katalog Klasse
+; --------
+[_S7H_CLASS_PC_ALLG_IE_CP_KAT_AT]
+ObjType=1336007 
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.1.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+
+					; allgemeiner IE CP
+KatChild1=1335367
+					; allgemeiner IE CP PN IO
+KatChild2=1335471
+
+
+; --------
+; allgemeiner IE CP
+; --------
+[_S7H_PC_ALLG_IE_CP_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335367
+basetype=_S7H_PC_IE_CP_CT
+MLFB= IE_CP
+SHORTNAME=CP/IE
+S7_TYPE_CODE=0xAC01
+NET_PROTOCOLS=IP,ISO
+NET_PROTOCOLS_SELECT=IP,ISO
+RED_COMPATIBILITY=0
+ROUTING_CAPABILITY=17
+SOFTNET_IE=1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002
+SDB_CARRIER_LIST=3100|3107|3108|3111|3119|3002
+HWCNFX_VER=5.0.3.0|0
+PARAM_DLG=0
+
+; --------
+; allgemeiner PN-IO IE CP
+; --------
+[_S7H_PC_ALLG_IE_CP_PN_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335471
+basetype=_S7H_PC_ALLG_IE_CP_CT
+basetype=_S7H_IO_CONTROLLER_PC_AT
+SHORTNAME=CP/IE
+S7_TYPE_CODE=0xAC01
+FW_VERSION=V6.2.1
+IO_TYPE=0x0041
+ETHERNET_KEEP_ALIVE=30
+
+FILTER_NET_SEARCH="S7-PC"
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002|2003|2004|2005
+SDB_CARRIER_LIST=2000,4|3100|3107|3108|3111|3113|3118|3119|3002|2003|2004|2005
+
+HWCNFX_VER=5.3.1.0|0
+
+; -------- -------------------------------------------------------------------------------
+; CP 1413 Katalog Klasse
+; --------
+[S7H_PC_CP_1413_KAT_AT]
+
+ObjType=1335404
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.1.0.0|0
+
+; Katalog Ansicht
+nKatChilds=4
+					; CP 1413
+KatChild1=1335356
+					; CP 1413 (256k)
+KatChild2=1335405
+					; CP 1413 H
+KatChild3=1335380
+					; CP 1413 H (256k)
+KatChild4=1335371
+
+; --------
+; CP 1413
+; --------
+[S7H_PC_CP_1413_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335356
+basetype=_S7H_PC_IE_CP_CT
+MLFB= 6GK1 141-3AS00
+SHORTNAME=CP 1413
+S7_TYPE_CODE=0xAC04
+NET_PROTOCOLS=IP,ISO
+RED_COMPATIBILITY=0
+CP_MAX_CONN_CNT=255
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> CP1413"
+SS_ISO_NAME2="ISO Ind. Ethernet -> CP1413<Board [2-4]>"
+SS_ISO_NAME3="ISO Ind. Ethernet -> CP1413#[2-4]"
+SS_TCP_NAME1="TCP/IP -> CP1413"
+SS_TCP_NAME2="TCP/IP -> CP1413<Board [2-4]>"
+SS_TCP_NAME3="TCP/IP -> CP1413#[2-4]"
+IS_SS_BS_DEPENDENT=yes
+D_DOW=1
+D_UPL=1
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 1413 (256 K)
+; --------
+[S7H_PC_CP_1413_256K_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335405
+basetype=S7H_PC_CP_1413_CT
+MLFB= 6GK1 141-3AS00 256K
+
+					; wegen Metawissen-Vererbung muß 3. String "genullt" werden
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> CP1413(256K)"
+SS_ISO_NAME2="ISO Ind. Ethernet -> CP1413(256K)<Board [2-4]>"
+SS_ISO_NAME3=""
+SS_TCP_NAME1="TCP/IP -> CP1413(256K)"
+SS_TCP_NAME2="TCP/IP -> CP1413(256K)<Board [2-4]>"
+SS_TCP_NAME3=""
+IS_SS_BS_DEPENDENT=no
+D_DOW=1
+D_UPL=1
+HWCNFX_VER=5.1.0.0|0
+
+; --------
+; CP 1413 H
+; --------
+[S7H_PC_CP_1413_H_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335380
+basetype=_S7H_PC_IE_CP_CT
+MLFB= 6GK1 141-3AS00 (64K)
+SHORTNAME=CP 1413 H
+S7_TYPE_CODE=0xAC10
+RED_COMPATIBILITY=230
+SINGLE_CP_RED_ONLY=1
+NET_PROTOCOLS=ISO
+CP_MAX_CONN_CNT=255
+PARAM_DLG=1
+SS_ISO_NAME1="CP1413H"
+SS_ISO_NAME2="CP1413H<Board [2-4]>"
+SS_TCP_NAME1=""
+SS_TCP_NAME2=""
+IS_SS_BS_DEPENDENT=no
+D_DOW=1
+D_UPL=1
+CAN_DO_ETHERNET_KEEP_ALIVE=0
+CAN_DO_CN_RQ_TIMEOUT=0
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 1413 H (256 K)
+; --------
+[S7H_PC_CP_1413_H_256K_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335371
+basetype=S7H_PC_CP_1413_H_CT
+MLFB= 6GK1 141-3AS00 (256K)
+S7_TYPE_CODE=0xAC13
+
+PARAM_DLG=1
+SS_ISO_NAME1="CP1413H(256K)"
+SS_ISO_NAME2="CP1413H(256K)<Board [2-4]>"
+SS_TCP_NAME1=""
+SS_TCP_NAME2=""
+IS_SS_BS_DEPENDENT=no
+D_DOW=1
+D_UPL=1
+HWCNFX_VER=5.0.3.0|0
+
+MAX_S7_CON=255
+
+
+; ---------------------------------------------------------------------------------------
+; abstrakte PC CP 1411 CP Katalog Klasse
+; --------
+[_S7H_CLASS_PC_CP1411_KAT_AT]
+ObjType=1335479 
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.1.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+
+					; CP 1411
+KatChild1=1335357
+
+
+; --------
+; CP 1411
+; --------
+[_S7H_PC_CP1411_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335357
+basetype=_S7H_PC_IE_CP_CT
+MLFB= 6GK1 141-1AA00
+SHORTNAME=CP 1411
+S7_TYPE_CODE=0xAC05
+NET_PROTOCOLS=IP,ISO
+RED_COMPATIBILITY=0
+CP_MAX_CONN_CNT=255
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> CP1411"
+SS_ISO_NAME2="ISO Ind. Ethernet -> CP1411<Board [2-4]>"
+SS_TCP_NAME1="TCP/IP -> CP1411"
+SS_TCP_NAME2="TCP/IP -> CP1411<Board [2-4]>"
+IS_SS_BS_DEPENDENT=no
+SOFTNET_IE=1
+D_DOW=1
+D_UPL=1
+HWCNFX_VER=5.0.3.0|0
+
+
+
+; ---------------------------------------------------------------------------------------
+; abstrakte  CP 1612 Katalog Klasse
+; --------
+[_S7H_CLASS_PC_IE_CP1612_KAT_AT]
+ObjType=1336008
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.1.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+
+					; IE CP 1612
+KatChild1=1336003
+					; IE CP 1612 PN IO
+KatChild2=1336006
+
+
+
+; --------
+; CP 1612
+; --------
+[_S7H_PC_IE_CP1612_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1336003
+basetype=_S7H_PC_CP1411_CT
+MLFB= 6GK1 161-2AA00
+SHORTNAME=CP 1612
+S7_TYPE_CODE=0xAC05
+CP_MAX_CONN_CNT=64
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> Siemens CP1612"
+SS_ISO_NAME2="ISO Ind. Ethernet -> Siemens CP1612<Board [2-4]>"
+SS_TCP_NAME1="TCP/IP -> Siemens CP1612"
+SS_TCP_NAME2="TCP/IP -> Siemens CP1612<Board [2-4]>"
+ROUTING_CAPABILITY=17
+NET_PROTOCOLS=IP,ISO
+NET_PROTOCOLS_SELECT=IP,ISO
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002
+SDB_CARRIER_LIST=3100|3107|3108|3111|3119|3002
+D_DOW=0
+D_UPL=0
+HWCNFX_VER=5.1.2.0|0
+
+; --------
+; CP 1612 PN-IO
+; --------
+[_S7H_PC_IE_CP1612_PN_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1336006
+basetype=_S7H_PC_IE_CP1612_CT
+basetype=_S7H_IO_CONTROLLER_PC_AT
+SHORTNAME=CP 1612
+S7_TYPE_CODE=0xAC05
+FW_VERSION=V6.2.1
+IO_TYPE=0x0041
+ETHERNET_KEEP_ALIVE=30
+
+FILTER_NET_SEARCH="S7-PC"
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002|2003|2004|2005
+SDB_CARRIER_LIST=2000,4|3100|3107|3108|3111|3113|3118|3119|3002|2003|2004|2005
+
+HWCNFX_VER=5.3.1.0|0
+
+; ---------------------------------------------------------------------------------------
+; abstrakte  CP 1511 Katalog Klasse
+; --------
+[_S7H_CLASS_PC_IE_CP1511_KAT_AT]
+ObjType=1335480 
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.1.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+
+					; IE CP 1511
+KatChild1=1335359
+
+
+; --------
+; CP 1511
+; --------
+[_S7H_PC_CP1511_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335359
+basetype=_S7H_PC_IE_CP_CT
+MLFB= 6GK1 151-1AA00
+SHORTNAME=CP 1511
+S7_TYPE_CODE=0xAC07
+NET_PROTOCOLS=IP,ISO
+NET_PROTOCOLS_SELECT=IP,ISO
+RED_COMPATIBILITY=0
+ROUTING_CAPABILITY=17
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> CP1511"
+SS_ISO_NAME2="ISO Ind. Ethernet -> CP1511<Board [2-4]>"
+SS_TCP_NAME1="TCP/IP -> CP1511"
+SS_TCP_NAME2="TCP/IP -> CP1511<Board [2-4]>"
+IS_SS_BS_DEPENDENT=no
+SOFTNET_IE=1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002
+SDB_CARRIER_LIST=3100|3107|3108|3111|3119|3002
+HWCNFX_VER=5.0.3.0|0
+
+D_DOW=1
+D_UPL=1
+
+
+; ---------------------------------------------------------------------------------------
+; abstrakte  CP 1512 Katalog Klasse
+; --------
+[_S7H_CLASS_PC_IE_CP1512_KAT_AT]
+ObjType=1335481 
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.1.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+
+					; IE CP 1512
+KatChild1=1336004
+					; IE CP 1512 PN IO
+KatChild2=1336005
+
+; --------
+; CP 1512
+; --------
+[_S7H_PC_IE_CP1512_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1336004
+basetype=_S7H_PC_CP1511_CT
+MLFB= 6GK1 151-2AA00
+SHORTNAME=CP 1512
+S7_TYPE_CODE=0xAC07
+PARAM_DLG=1
+SS_ISO_NAME1="ISO Ind. Ethernet -> Siemens CP1512"
+SS_ISO_NAME2="ISO Ind. Ethernet -> Siemens CP1512<Board [2-4]>"
+SS_TCP_NAME1="TCP/IP -> Siemens CP1512"
+SS_TCP_NAME2="TCP/IP -> Siemens CP1512<Board [2-4]>"
+D_DOW=0
+D_UPL=0
+HWCNFX_VER=5.1.2.0|0
+
+; --------
+; CP 1512 PN-IO
+; --------
+[_S7H_PC_IE_CP1512_PN_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1336005
+basetype=_S7H_PC_IE_CP1512_CT
+basetype=_S7H_IO_CONTROLLER_PC_AT
+SHORTNAME=CP 1512
+S7_TYPE_CODE=0xAC07
+FW_VERSION=V6.2.1
+IO_TYPE=0x0041
+ETHERNET_KEEP_ALIVE=30
+
+FILTER_NET_SEARCH="S7-PC"
+SOFTNET_IE=1
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002|2003|2004|2005
+SDB_CARRIER_LIST=2000,4|3100|3107|3108|3111|3113|3118|3119|3002|2003|2004|2005
+
+HWCNFX_VER=5.3.1.0|0
+
+; --------
+; CP 1515
+; --------
+;[_S7H_PC_IE_CP1515_CT]
+;server=S7WBPCHX.DLL
+;prefix=OM
+;ObjType=1335421
+;basetype=_S7H_PC_IE_CP1512_CT
+;MLFB= 6GK1 151-5AA00
+;SHORTNAME=CP 1515
+;S7_TYPE_CODE=0xAC07
+;SS_ISO_NAME1="ISO Ind. Ethernet -> Siemens CP1515"
+;SS_ISO_NAME2="ISO Ind. Ethernet -> Siemens CP1515<Board [2-4]>"
+;SS_TCP_NAME1="TCP/IP -> Siemens CP1515"
+;SS_TCP_NAME2="TCP/IP -> Siemens CP1515<Board [2-4]>"
+;IO_TYPE=0x0041
+;D_DOW=0
+;D_UPL=0
+;HWCNFX_VER=5.2.0.0|0
+;FW_VERSION=V6.0.5
+;CHECK_FW_VERSION_DIGITS=3
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 1613 Katalog Klasse
+; --------
+[S7H_PC_CP_1613_KAT_AT]
+
+ObjType=1335345
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 1613 bis V6.0 (7/01)
+KatChild1=1335402
+					; CP 1631 ab V6.1 (11/02)
+KatChild2=1335446
+
+; --------
+; CP 1613 V6.0 SP5 ab SIMATIC NET Software  11/02
+; --------
+[_S7H_PC_CP1613_V605_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335446
+basetype=_S7H_PC_CP1613_CT
+
+MAX_SOCKET_TCP=120
+CP_MAX_CONN_CNT=120
+SECOND_IP=1
+KEEP_ALIVE_FIXED_VALUE=30
+
+FW_VERSION=V6.0.5
+CP_FW_VERSION=
+CHECK_FW_VERSION_DIGITS=3
+
+HWCNFX_VER=5.2.0.0|0
+PARAM_DLG=1
+
+
+; --------
+; CP 1613 V2.1
+; --------
+[_S7H_PC_CP1613_V21_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335402
+basetype=_S7H_PC_CP1613_CT
+
+MAX_SOCKET_TCP=0
+KEEP_ALIVE_FIXED_VALUE=0
+
+FW_VERSION=201
+CP_FW_VERSION=201
+
+HWCNFX_VER=5.1.0.0|0
+PARAM_DLG=1
+
+; --------
+; CP 1613
+; --------
+[_S7H_PC_CP1613_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=1335358
+basetype=_S7H_PC_IE_CP_CT
+
+MAX_SOCKET_TCP=0
+CP_MAX_CONN_CNT=120
+KEEP_ALIVE_FIXED_VALUE=0
+
+FW_VERSION=100
+CP_FW_VERSION=100
+
+MLFB= 6GK1 161-3AA00
+SHORTNAME=CP 1613
+S7_TYPE_CODE=0xAC06
+NET_PROTOCOLS=IP,ISO
+NET_PROTOCOLS_SELECT=IP,ISO
+RED_COMPATIBILITY=230
+ROUTING_CAPABILITY=17
+
+PARAM_DLG=1
+SS_ISO_NAME1="CP1613(ISO)"
+SS_ISO_NAME2="CP1613(ISO)<Board [2-4]>"
+SS_TCP_NAME1="CP1613(RFC1006)"
+SS_TCP_NAME2="CP1613(RFC1006)<Board [2-4]>"
+IS_SS_BS_DEPENDENT=no
+
+SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002
+SDB_CARRIER_LIST=3100|3107|3108|3111|3119|3002
+
+CAN_DO_UHRZEIT=1
+CAN_DO_UHRZEIT_MASTER=0
+CAN_DO_CN_RQ_TIMEOUT=0
+
+HWCNFX_VER=5.0.3.0|0
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 1613 A2 Katalog Klasse
+; --------
+;[S7H_PC_CP_1613_A2_KAT_AT]
+
+;ObjType=1335492
+;abstract=true
+;basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+;nKatChilds=1
+					; CP 1613 A2 ab V6.3 (11/04)
+;KatChild1=1335493
+
+
+; --------
+; CP 1613 A2
+; --------
+;[_S7H_PC_CP1613_A2_V63_CT]
+;server=S7WBPCHX.DLL
+;prefix=OM
+;ObjType=1335493
+;basetype=_S7H_PC_CP1613_V605_CT
+
+;FW_VERSION=100
+;CP_FW_VERSION=100
+
+;MLFB= 6GK1 161-3AA01
+;SHORTNAME=CP 1613 A2
+
+;SS_ISO_NAME1="CP1613A2(ISO)"
+;SS_ISO_NAME2="CP1613A2(ISO)<Board [2-4]>"
+;SS_TCP_NAME1="CP1613A2(RFC1006)"
+;SS_TCP_NAME2="CP1613A2(RFC1006)<Board [2-4]>"
+;HWCNFX_VER=5.3.2.0|0
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 1616 RT Katalog Klasse
+; --------
+;[S7H_PC_CP_1616_KAT_AT]
+
+;ObjType=1335483
+;abstract=true
+;basetype=_S7H_KATALOGFOLDDER_AT
+
+; Katalog Ansicht
+;nKatChilds=1
+					; CP 1616 RT ab V6.3 (11/04)
+;KatChild1=1335487
+
+
+; --------
+; CP 1616 RT
+; --------
+;[S7H_PC_CP1616_V63_CT]
+;server=S7WBPCHX.DLL
+;prefix=OM
+;ObjType=1335487
+;basetype=_S7H_PC_CP1613_CT
+
+;FW_VERSION=100
+;CP_FW_VERSION=100
+
+;MLFB= 6GK1 161-6AA00
+;SHORTNAME=CP 1616 RT
+
+;SS_ISO_NAME1="CP1616RT(ISO)"
+;SS_ISO_NAME2="CP1616RT(ISO)<Board [2-4]>"
+;SS_TCP_NAME1="CP1616RT(RFC1006)"
+;SS_TCP_NAME2="CP1616RT(RFC1006)<Board [2-4]>"
+;HWCNFX_VER=5.3.2.0|0
+
+; -------- -------------------------------------------------------------------------------
+; CP 7515 Katalog Klasse
+; --------
+;[_S7H_PC_CP7515_KAT_AT]
+;
+;ObjType=1335468
+;abstract=true
+;basetype=_S7H_KATALOGFOLDDER_AT
+;
+; Katalog Ansicht
+;nKatChilds=1
+
+					; CP 7515 
+;KatChild1=1335469
+
+; --------
+; CP 7515 ab SIMATIC NET CD V6.2
+; --------
+;[_S7H_PC_CP7515_V620_CT]
+;server=S7WBPCHX.DLL
+;prefix=OM
+;ObjType=1335469
+;basetype=_S7H_PC_ALLG_IE_CP_CT
+;basetype=_S7H_IO_CONTROLLER_PC_AT
+;SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002|2003|2004|2005
+;SDB_CARRIER_LIST=2000,4|3100|3107|3108|3111|3113|3119|3002|2003|2004|2005
+;MLFB= 6GK1 751-5AA00
+;SHORTNAME=CP 7515
+;S7_TYPE_CODE=0xAC07
+;SS_ISO_NAME1="ISO Ind. Ethernet -> Siemens CP7515"
+;SS_ISO_NAME2="ISO Ind. Ethernet -> Siemens CP7515<Board [2-4]>"
+;SS_TCP_NAME1="TCP/IP -> Siemens CP7515"
+;SS_TCP_NAME2="TCP/IP -> Siemens CP7515<Board [2-4]>"
+;D_DOW=0
+;D_UPL=0
+;HWCNFX_VER=5.3.1.0|0
+;FW_VERSION=V6.2.0
+;CHECK_FW_VERSION_DIGITS=3
+
+
+;--------------------------------
+; -------- -------------------------------------------------------------------------------
+; Profibus PC CP Basisklasse
+; --------
+
+[_S7H_PC_PB_CP_CT]
+server=S7WBPCAX.DLL
+prefix=OM
+ObjType=1335354
+MLFB= CP_PB_BASE
+SHORTNAME=Profibus CP
+S7_TYPE_CODE=0xAC02
+MAX_SYNC_FREEZE_GROUPS=8
+MANY_SYNCFREEZE=1
+ASIC_TYPE_MASTER=3
+
+COMMUNICATION_TYPES=0x00145202,1
+SUPPORTED_BAUDRATES=0,1,2,3,4,6,7,8,9,11
+SUPPORTED_BAUDRATES_L2=0,1,2,3,4,6,7,8,9,11
+SUPPORTED_BAUDRATES_MPI=1,3,6,7,8,9
+
+SDB3100=SDB3100_L2_PC_CONVERT
+S7SLAVE_ABLE=0
+MIN_HSA=2
+CAPABLE_BUSPAR_PROPAGATION=0
+MPI_DP_KOEXISTENZ=1
+GENERATE_MPI_SDB2XXX=0
+MIN_DATA_CONTROL_TIME=4
+
+;--------------------------------
+MAX_ISOTRANSPORT_CON=0
+MAX_FDL_CON=255
+MAX_FMS_CON=0
+MAX_TF_CON=0
+MAX_MAP_CON=0
+MAX_S7_CON=50
+
+MAX_PROJ_H1_CON=0
+MAX_PROJ_L2_CON=255
+CP_MAX_CONN_CNT=120
+;--------------------------------
+
+FDL_FREE_LAYER2=0
+FDL_BC_POSSIBLE=1
+FDL_LSAP_MEHRFACH_VERWENDBAR=1
+CAN_DO_LSAP=yes
+
+MaxSap=50
+
+LocFdlLsapMin=1
+LocFdlLsapMax=50
+RemFdlLsapMin=1
+RemFdlLsapMax=62
+MAXFdlBroadcLSAP=50
+LsapSearchFms=2
+LsapSearchFdl=2
+ForbiddenLsaps=0,50
+ForbiddenLsapsDpMaster=51,54,62,255
+ForbiddenLsapsDpMasterCl2Cyc=51,54,62
+ForbiddenLsapsDpMasterCl2Acyc=51
+ForbiddenLsapsDpSlave=51,54,56,57,58,59,60,61,62,255
+AdditionalLsapsFdl=63,255
+AdditionalRemLsapsFdl=255
+AdditionalLsapsFms=128
+
+
+DP_SUPPORT=1
+SDB_CAUSED_LIST=3100|2000,4|120|3109
+SDB_CARRIER_LIST=3100|2000,4|120|3109
+
+MAX_STATION_SIZE_A_KONSIST=4096
+MAX_STATION_SIZE_E=4096
+MAX_STATION_SIZE_A=4096
+MAX_OUTPUT_LOG_ADR=32768
+MAX_INPUT_LOG_ADR=32768
+MAX_OUTPUT_DATA_LEN=32768
+MAX_INPUT_DATA_LEN=32768
+MAX_INPUT_P_DATA_LEN=32768
+MAX_OUTPUT_P_DATA_LEN=32768
+MAX_KONSIST_DATA_LEN=4096
+SUM_BUFFER_LEN=4096
+
+ActiveStation=1
+PassiveStation=0
+FMSFeaturesSupported=FF.FF.FF.FF.FF.FF
+FMA7FeaturesSupported=00.00.00.00.00.00
+ConnectionType_MMAZ=1
+ConnectionType_MSAZ=1
+ConnectionType_MSAZ_SI=1
+ConnectionType_MSZY=1
+ConnectionType_MSZY_SI=1
+ConnectionType_MULT=1
+ConnectionType_BRCT=1
+ConnectionAttribute_D=1
+ConnectionAttribute_I=0
+ConnectionAttribute_O=0
+ControlIntervalMin=0
+ControlIntervalMax=99999
+LLIAttribute_FMS=1
+LLIAttribute_FMA7=0
+MultiplierMin=1
+MultiplierMax=48
+MultiplierDef=1
+MinMaxSCC=0
+MinMaxRCC=0
+MinMaxSAC=0
+MinMaxRAC=0
+MaxMaxSCC=32
+MaxMaxRCC=32
+MaxMaxSAC=32
+MaxMaxRAC=32
+MaxSummeCounter=99999
+MaxMaxPduSendingHighPrio=241
+MaxMaxPduSendingLowPrio=241
+MaxMaxPduReceivingHighPrio=241
+MaxMaxPduReceivingLowPrio=241
+MinMaxPduSendingHighPrio=0
+MinMaxPduSendingLowPrio=0
+MinMaxPduReceivingHighPrio=0
+MinMaxPduReceivingLowPrio=0
+PollListSap=51
+
+MIN_FMS_CONN_NR=3
+MAX_FMS_CONN_NR=127
+CREATE_LDB=1
+
+MAX_SLAVES=125
+MAX_SLAVE_SLOTS=32767
+KBUS=1
+MAX_RETRY_LIMIT_PROFIBUS=7
+NEED_DPV1_FUNCTIONALITY_SL_FLAG=1
+
+HWCNFX_VER=5.0.0.0|0
+
+
+; --------
+; allgemeiner Profibus CP
+; --------
+[_S7H_PC_ALLG_PB_CP_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335368
+basetype=_S7H_PC_PB_CP_CT
+MLFB= CP_PB
+SHORTNAME=CP/PB
+S7_TYPE_CODE=0xAC02
+MaxSap=62
+
+FMS_PROFIL_NAME=CP_Profibus
+KoordinierungPossible=0
+MAX_FMS_CON=50
+CAN_DO_ISLAVE=1
+PNO_IDENT_NO=0x8000
+ROUTING_CAPABILITY=25
+S7SLAVE_ABLE=1
+MAX_SLAVES=64
+ALARM_MODE=0
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3002
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3002
+HWCNFX_VER=5.0.3.0|0
+
+MAX_S7_CON=255
+MAX_PROJ_H1_CON=0
+MAX_PROJ_L2_CON=255
+CP_MAX_CONN_CNT=255
+
+; --------
+; CP 5412 A2
+; --------
+[_S7H_PC_CP5412_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335355
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 541-2BA00
+SHORTNAME=CP 5412 A2
+S7_TYPE_CODE=0xAC03
+
+SS_NAME1=CP5412A2(PROFIBUS)
+SS_NAME2="CP5412A2(PROFIBUS)<Board [2-4]>"
+SS_NAME3="CP5412A2#[2-4](PROFIBUS)"
+IS_SS_BS_DEPENDENT=yes
+D_DOW=1
+D_UPL=1
+
+FMS_PROFIL_NAME=CP5412
+
+KoordinierungPossible=0
+MAX_FDL_CON=0
+MAX_PROJ_L2_CON=255
+CP_MAX_CONN_CNT=255
+GenLsapSperrListe=1
+
+CYCL_MASTER_TEL=1
+PNO_IDENT_NO=0x8000
+MAX_S7_CON=59
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3103|3124
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3103|3124
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 5412 A2 H
+; --------
+[_S7H_PC_PB_CP_5412A2_H_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335370
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 541-2BA00 (H)
+SHORTNAME=CP 5412 A2 H
+S7_TYPE_CODE=0xAC0F
+RED_COMPATIBILITY=120
+SINGLE_CP_RED_ONLY=1
+MAX_S7_CON=255
+DP_SUPPORT=0
+SS_NAME1=CP5412H(PROFIBUS)
+SS_NAME2="CP5412H(PROFIBUS)<Board [2-4]>"
+CAN_DO_LSAP=no
+D_DOW=1
+D_UPL=1
+KBUS=0
+FMS_PROFIL_NAME=CP5412
+
+KoordinierungPossible=0
+MAX_FDL_CON=0
+MAX_PROJ_L2_CON=255
+CP_MAX_CONN_CNT=255
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3103|3124
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3103|3124
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 5411
+; --------
+[_S7H_PC_CP5411_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335360
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 541-1AA00
+SHORTNAME=CP 5411
+S7_TYPE_CODE=0xAC08
+CAN_DO_ISLAVE=1
+PNO_IDENT_NO=0x8000
+SS_NAME1=CP5411(PROFIBUS)
+SS_NAME2="CP5411(PROFIBUS)<Board [2-4]>"
+MAX_SLAVES=64
+MAX_S7_CON=255
+MAX_FDL_CON=0
+D_DOW=1
+D_UPL=1
+HWCNFX_VER=5.0.3.0|0
+
+; -------- -------------------------------------------------------------------------------
+; CP 5511 Katalog Klasse
+; --------
+[S7H_PC_CP_5511_KAT_AT]
+
+ObjType=1335441
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5511
+KatChild1=1335361
+					; CP 5511 ab SIMATIC NET CD V6.0 SP5
+KatChild2=1335433
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 5512 Katalog Klasse
+; --------
+[S7H_PC_CP5512_KAT_AT]
+
+ObjType=1335511
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+					; CP 5512
+KatChild1=1335436
+					
+
+; -------- -------------------------------------------------------------------------------
+; CP 5411 Katalog Klasse
+; --------
+[S7H_PC_CP5411_KAT_AT]
+
+ObjType=1335512
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+					; CP 5411
+KatChild1=1335360
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 5412 A2 Katalog Klasse
+; --------
+[S7H_PC_CP5412_A2_KAT_AT]
+
+ObjType=1335513
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5412 A2
+KatChild1=1335355
+					; CP 5412 A2 H
+KatChild2=1335370
+
+
+; --------
+; CP 5511
+; --------
+[_S7H_PC_CP5511_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335361
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 551-1AA00
+SHORTNAME=CP 5511
+S7_TYPE_CODE=0xAC09
+;PLUG_CLASS=0x00200100
+MAX_SLAVES=64
+SOFTNET_PB=1
+CAN_DO_ISLAVE=1
+PNO_IDENT_NO=0x8000
+SS_NAME1=CP5511(PROFIBUS)
+MAX_S7_CON=255
+ROUTING_CAPABILITY=25
+S7SLAVE_ABLE=1
+ALARM_MODE=0
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3002
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3002
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 5511 ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5511_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335433
+basetype=_S7H_PC_CP5511_CT
+MLFB= 6GK1 551-1AA00
+S7SLAVE_ABLE=0
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+CAN_DO_DPC2=1
+CREATE_LDB=0
+CAPABLE_BUSPAR_PROPAGATION=1
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; --------
+; CP 5512
+; --------
+[_S7H_PC_CP5512_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335436
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 551-2AA00
+SHORTNAME=CP 5512
+S7_TYPE_CODE=0xAC09
+;PLUG_CLASS=0x00200100
+SOFTNET_PB=1
+CAN_DO_ISLAVE=1
+PNO_IDENT_NO=0x8000
+SS_NAME1=CP5512(PROFIBUS)
+MAX_S7_CON=255
+ROUTING_CAPABILITY=25
+MAX_SLAVES=64
+ALARM_MODE=0
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+CAN_DO_DPC2=1
+CREATE_LDB=0
+CAPABLE_BUSPAR_PROPAGATION=1
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3002
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3002
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.1.0
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5611 Katalog Klasse
+; --------
+[S7H_PC_CP_5611_KAT_AT]
+
+ObjType=1335443
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5611
+KatChild1=1335362
+					; CP 5611 ab SIMATIC NET CD V6.0 SP5
+KatChild2=1335435
+
+; --------
+; CP 5611
+; --------
+[_S7H_PC_CP5611_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335362
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 561-1AA00
+SHORTNAME=CP 5611
+S7_TYPE_CODE=0xAC0A
+;PLUG_CLASS=0x00200100
+SOFTNET_PB=1
+CAN_DO_ISLAVE=1
+PNO_IDENT_NO=0x8000
+SS_NAME1=CP5611(PROFIBUS)
+SS_NAME2="CP5611(PROFIBUS)<Board [2-4]>"
+MAX_S7_CON=255
+ROUTING_CAPABILITY=25
+S7SLAVE_ABLE=1
+ALARM_MODE=0
+MAX_SLAVES=64
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3002
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3002
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 5611 ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5611_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335435
+basetype=_S7H_PC_CP5611_CT
+MLFB= 6GK1 561-1AA00
+S7SLAVE_ABLE=1
+
+CAN_DO_DPC2=1
+CREATE_LDB=0
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5611 A2 Katalog Klasse
+; --------
+[S7H_PC_CP_5611_A2_KAT_AT]
+
+ObjType=1335514
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.4.0.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+					; CP 5611 A2 ab SIMATIC NET CD 2006
+KatChild1=1335515
+
+
+; --------
+; CP 5611 A2 ab SIMATIC NET CD 2006
+; --------
+[_S7H_PC_CP5611_A2_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335515
+basetype=_S7H_PC_CP5611_V605_CT
+MLFB= 6GK1 561-1AA01
+
+HWCNFX_VER=5.4.0.0|0
+FW_VERSION=200
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 5613 Katalog Klasse
+; --------
+[S7H_PC_CP_5613_KAT_AT]
+
+ObjType=1335437
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5613
+KatChild1=1335363
+					; CP 5613 ab SIMATIC NET CD V6.0 SP5
+KatChild2=1335452
+
+; --------
+; CP 5613
+; --------
+[_S7H_PC_CP5613_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335363
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 561-3AA00
+SHORTNAME=CP 5613
+S7_TYPE_CODE=0xAC0B
+PNO_IDENT_NO=0x8000
+MAX_S7_CON=255
+MAX_FMS_CON=50
+SS_NAME1=CP5613_5614(PROFIBUS)
+SS_NAME2="CP5613_5614(PROFIBUS)<Board [2-4]>"
+CAPABLE_AEQU=1
+CAN_GENERATE_DDB_REQUEST=1
+ForbiddenLsaps=0,50,61,62
+ASIC_TYPE_MASTER=5
+
+FMS_PROFIL_NAME=CP 5613/CP 5614
+CAN_DP_BASE=1
+CAN_DO_UHRZEIT=1
+ROUTING_CAPABILITY=25
+IS_HARDNET=1
+S7SLAVE_ABLE=1
+CREATE_LDB=1
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3103|3002|3124
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3103|3002|3124
+
+HWCNFX_VER=5.0.3.0|0
+
+; --------
+; CP 5613 ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5613_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335452
+basetype=_S7H_PC_CP5613_CT
+MLFB= 6GK1 561-3AA00
+S7SLAVE_ABLE=1
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5613 FO Katalog Klasse
+; --------
+[S7H_PC_CP_5613_FO_KAT_AT]
+
+ObjType=1335438
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5613 FO
+KatChild1=1335400
+					; CP 5613 FO ab SIMATIC NET CD V6.0 SP5
+KatChild2=1335453
+
+; --------
+; CP 5613 FO
+; --------
+[_S7H_PC_CP5613_FO_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335400
+basetype=_S7H_PC_CP5613_CT
+MLFB= 6GK1 561-3FA00
+SHORTNAME=CP 5613 FO
+HWCNFX_VER=5.1.0.0|0
+S7SLAVE_ABLE=1
+
+; --------
+; CP 5613 FO ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5613_FO_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335453
+basetype=_S7H_PC_CP5613_FO_CT
+MLFB= 6GK1 561-3FA00
+S7SLAVE_ABLE=1
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5613 A2 Katalog Klasse
+; --------
+[S7H_PC_CP5613A2_KAT_AT]
+
+ObjType=1335464
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.0.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+		; CP 5613 A2 SIMATIC NET CD V6.2
+KatChild1=1335466
+
+; --------
+; CP 5613 A2 SIMATIC NET CD V6.2
+; --------
+[_S7H_PC_CP5613A2_V620_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335466
+basetype=_S7H_PC_CP5613_CT
+MLFB= 6GK1 561-3AA01
+S7SLAVE_ABLE=1
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.3.0.0|0
+FW_VERSION=V6.2.0
+CHECK_FW_VERSION_DIGITS=3
+
+SS_NAME1=CP5613A2(PROFIBUS)
+SS_NAME2="CP5613A2(PROFIBUS)<Board [2-4]>"
+
+
+; -------- -------------------------------------------------------------------------------
+; CP 5614 Katalog Klasse
+; --------
+[S7H_PC_CP_5614_KAT_AT]
+
+ObjType=1335439
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5614
+KatChild1=1335379
+					; CP 5614 ab SIMATIC NET CD V6.1
+KatChild2=1335454
+
+; --------
+; CP 5614
+; --------
+[_S7H_PC_CP5614_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335379
+basetype=_S7H_PC_PB_CP_CT
+MLFB= 6GK1 561-4AA00
+SHORTNAME=CP 5614
+S7_TYPE_CODE=0xAC12
+PNO_IDENT_NO=0x8000
+MAX_S7_CON=255
+MAX_FMS_CON=50
+SS_NAME1=CP5613_5614(PROFIBUS)
+SS_NAME2="CP5613_5614(PROFIBUS)<Board [2-4]>"
+CAPABLE_AEQU=1
+CAN_GENERATE_DDB_REQUEST=1
+CAN_DO_UHRZEIT=1
+S7SLAVE_ABLE=1
+ASIC_TYPE_MASTER=5
+CREATE_LDB=1
+
+FMS_PROFIL_NAME=CP 5613/CP 5614
+ForbiddenLsaps=0,50,61,62
+CAN_DP_BASE=1
+ROUTING_CAPABILITY=25
+IS_HARDNET=1
+
+SDB_CAUSED_LIST=3100|2000,4|120|3109|3103|3002|3124
+SDB_CARRIER_LIST=3100|2000,4|120|3109|3103|3002|3124
+
+HWCNFX_VER=5.0.3.0|0
+
+
+; --------
+; CP 5614 ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5614_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335454
+basetype=_S7H_PC_CP5614_CT
+MLFB= 6GK1 561-4AA00
+S7SLAVE_ABLE=0
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5614 FO Katalog Klasse
+; --------
+[S7H_PC_CP_5614_FO_KAT_AT]
+
+ObjType=1335440
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.2.0.0|0
+
+; Katalog Ansicht
+nKatChilds=2
+					; CP 5614 FO
+KatChild1=1335401
+					; CP 5614 FO ab SIMATIC NET CD V6.0 SP5
+KatChild2=1335455
+
+; --------
+; CP 5614 FO
+; --------
+[_S7H_PC_CP5614_FO_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335401
+basetype=_S7H_PC_CP5614_CT
+MLFB= 6GK1 561-4FA00
+S7SLAVE_ABLE=1
+CREATE_LDB=1
+
+SHORTNAME=CP 5614 FO
+CAN_DO_FO=1
+HWCNFX_VER=5.1.0.0|0
+
+; --------
+; CP 5614 FO ab SIMATIC NET CD V6.0 SP5
+; --------
+[_S7H_PC_CP5614_FO_V605_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335455
+basetype=_S7H_PC_CP5614_FO_CT
+MLFB= 6GK1 561-4FA00
+S7SLAVE_ABLE=0
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.2.0.0|0
+FW_VERSION=V6.0.5
+CHECK_FW_VERSION_DIGITS=3
+
+; -------- -------------------------------------------------------------------------------
+; CP 5614 A2 Katalog Klasse
+; --------
+[S7H_PC_CP5614A2_KAT_AT]
+
+ObjType=1335465
+abstract=true
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.3.0.0|0
+
+; Katalog Ansicht
+nKatChilds=1
+					; CP 5614 A2 ab SIMATIC NET CD V6.2
+KatChild1=1335467
+
+; --------
+; CP 5614 A2 ab SIMATIC NET CD V6.2
+; --------
+
+[_S7H_PC_CP5614A2_V620_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=1335467
+basetype=_S7H_PC_CP5614_CT
+MLFB= 6GK1 561-4AA01
+S7SLAVE_ABLE=0
+
+CAN_DO_DPC2=1
+CREATE_LDB=1
+CAPABLE_BUSPAR_PROPAGATION=1
+
+DP_VERSION_SUPPORT=0x0F
+SLOT_VERSION_SUPPORT=0x03
+
+HWCNFX_VER=5.3.0.0|0
+FW_VERSION=V6.2.0
+CHECK_FW_VERSION_DIGITS=2
+
+SS_NAME1=CP5614A2(PROFIBUS)
+SS_NAME2="CP5614A2(PROFIBUS)<Board [2-4]>"
+
+
+; --------
+; MPI onboard
+; --------
+;[_S7H_PC_MPI_ONBOARD_CT]
+;server=S7WBPCLX.DLL
+;prefix=OM
+;ObjType=1335364
+;basetype=_S7H_PC_PB_CP_CT
+;MLFB= ----
+;SHORTNAME=MPI onboard
+;S7_TYPE_CODE=0xAC0C
+
+; --------
+; MPI ISA-Card
+; --------
+;[_S7H_PC_MPI_ISA_CARD_CT]
+;server=S7WBPCLX.DLL
+;prefix=OM
+;ObjType=1335365
+;basetype=_S7H_PC_PB_CP_CT
+;MLFB= ----
+;SHORTNAME=MPI ISA-card
+;S7_TYPE_CODE=0xAC0D
+
+; ----------------------------- Abstrakter I-Slave
+; s7hwapix.met
+[_S7H_ISLAVE_AT]
+SubType=_S7H_PC_NORM_ISLAVE_CT
+
+; ----------------------------- PC-Station Norm I-Slave
+
+; s7hwapix.met
+[_S7H_PC_NORM_ISLAVE_CT]
+server=S7HSLNTX.DLL
+prefix=OM
+ObjType=1335390
+
+;s7nnapix.met
+[_S7H_PC_NORM_ISLAVE_CT]
+IsInKatVisible=1
+IsCatEntry=1
+CatalogParent=1315365
+ICON_TYPE=12
+
+;s7hattrx.met
+[_S7H_PC_NORM_ISLAVE_CT]
+CLASS_PROPERTIES=0
+nKatChilds=0
+EXT_OTYP=1
+CAN_HAVE_PRIVATE_CHILDREN=1
+FIRST_VISIBLE_CHILD_NO=4
+MAX_NUM_OF_CHILDS=32
+SHORTNAME=SIMATIC NET PC-Station CP
+MLFB=...
+EXT_OBJ_NAME=META\SI9001PX.200
+IAMA_ISLAVE=1
+HWCNFX_VER=5.0.3.0|0
+
+

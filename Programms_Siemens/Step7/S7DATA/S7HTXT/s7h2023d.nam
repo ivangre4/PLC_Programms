@@ -1,0 +1,19 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2023
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=Convertidor de frecuencia ET 200S ICU24, ICU24F
+
+;---------- ET 200S ICU24, Standard-Telegramm 1,   6SL3 244-0SA00-1AA1 ST
+[2366954]
+KatEntryName=ICU24; telegrama estándar 1
+InfoText=Módulo de regulación ET 200S FC, control mediante PROFIdrive, herramienta de arranque IBN-Tool Starter vía bus de campo. En combinación con etapa de potencia IPM25 o PM2xx externo; la etapa de potencia no se configura en HW Config; Opcional: Brake Control Module (sólo con IPM25)
+SHORTNAME=ICU24; telegrama estándar 1
+
+
+;---------- ET 200S ICU24F, Standard-Telegramm 1,   6SL3 244-0SA01-1AA1 ST
+[2366956]
+KatEntryName=ICU24F; telegrama estándar 1
+InfoText=Módulo de regulación ET 200S FC con funciones de seguridad integradas, control mediante PROFIdrive, IBN-Tool Starter vía bus de campo. En combinación con etapa de potencia IPM25 o PM2xx externo; la etapa de potencia no se configura en HW Config; Opcional: Brake Control Module (sólo con IPM25)
+SHORTNAME=ICU24F; telegrama estándar 1

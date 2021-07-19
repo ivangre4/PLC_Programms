@@ -1,0 +1,81 @@
+; =======================================
+; !! Erweiterung ProTool in PC-Station !!
+; =======================================
+; (Objekt-Typ: OP-Software=0x01131004=18026500)
+
+[_S7H_CLASS_PC_APPL_AT]
+subtype=_S7H_CLASS_PC_PROTOOL_APPL_CT
+
+; ProTool/Pro RT als Child für HMI-Eintrag im HW-Katalog definieren
+; -----------------------------------------------------------------
+[_S7H_CLASS_PC_PROTOOL_APPL_CT]
+server=S7tdpcox.DLL
+prefix=OM
+ObjType=0x01131004
+relation=0x01131056,_S7W_PROTOOL_CT[0x01131057];deep
+CLASS_PROPERTIES=0
+nKatChilds=0
+; Dummy-OM for ProTool to WinCC flexible migration:
+; avoid listening ProTool objects in HW catalog
+; IsInKatVisible=1
+;MLFB=----
+MLFB=
+S7_TYPE_CODE=0xAC0E
+;SHORTNAME=ProTool/Pro Applikation
+MAX_CONN_CNT=100
+MAX_CONN_CNT_MPI=100
+CAPABLE_PBK=1
+CAPABLE_PTP=0
+CAPABLE_OBK=0
+PBK_TYPE_MIN=0 
+PBK_TYPE_MAX=0
+PBK_TYPE_DEF=0 
+PBK_ESTABLISH_MIN=1 
+PBK_ESTABLISH_MAX=1 
+PBK_ESTABLISH_DEF=1 
+PBK_MESSAGE_MIN=0 
+PBK_MESSAGE_MAX=1 
+PBK_MESSAGE_DEF=0
+PLUG_CLASS=0x0x01000200
+
+;IS_PARAMETRIZEABLE=1 
+;SDB_CARRIER=1 
+;SDB_CAUSED_LIST=3100
+;SDB_CARRIER_LIST=700|3100
+H_LAYER=1
+
+;MAX_INPUT_LOG_ADR=2047
+;MAX_OUTPUT_LOG_ADR=2047
+;GLOBAL_DATA_CAPABLE=1 
+;GD_DEF_VAL_UNTS=22
+;GD_MIN_RCV_UF=1 
+;GD_MIN_SND_UF=1
+;GD_MAX_CYC=8
+;GD_MAX_SND_GBZ_ONE_CYC=1
+;GD_MAX_REC_GBZ_ONE_CYC=2 
+;GD_MAX_SND_GBZ_ALL_CYC=8
+;GD_MAX_REC_GBZ_ALL_CYC=16
+;GD_MAX_LNG_GBZ=64 
+;GD_LNG_GBZ_HEAD=8 
+;GD_LNG_OBJ_HEAD=2 
+;MAX_FC_CNT=256
+;MAX_FB_CNT=256
+;MAX_DB_CNT=511
+;MAX_MB_CNT=512
+;MAX_T_CNT=256
+;MAX_C_CNT=256
+;OB_LIST=1,10-11,20-21,32,35,40-41,60,80-87,90,100-101,121-122
+
+[_S7W_PROTOOL_CT]
+relation=0x01131057,_S7H_CLASS_PC_PROTOOL_APPL_CT[0x01131056]
+
+[_S7H_PC_STATION_CT]
+Rule_01000200=MAXC(1)
+
+;-----------------------------------
+;
+; Dummy-OM for ProTool to WinCC flexible migration:
+; avoid creation of ProTool objects within SIMATIC Manager
+; [_S7H_CLASS_PC_PROTOOL_APPL_CT]
+; CatalogParent = 1335389
+; IsCatEntry = 1

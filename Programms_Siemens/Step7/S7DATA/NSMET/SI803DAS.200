@@ -1,0 +1,99 @@
+Typdatei DP-Slave ET 200X BM 141 8DI, V1.2 (16.07.97) MLFB<6ES7 141-1BF00-0XB0>
+V5.x;
+ET 200X 8DI    DP;
+SIEMENS   ;
+ET 200X   ;
+ET 200    ;
+DPS/CLASS1     ;
+32829;
+J;
+1;
+N;
+J;
+J;
+N;
+J;
+N;
+N;
+N;
+2;
+J;
+J;
+S;
+00003;
+1111011111;
+032;
+032;
+011;
+017;
+010;
+PV000;
+PSL001;
+PS008"Alarma de diagnostico         "BIT5 "1"0"1"HI001";
+HTT002;
+HI001;
+L2;
+"bloquear                      "00000";
+"liberar                       "00001";
+HI002;
+L2;
+"longitud máx. 32 bytes        "00000";
+"longitud máx. 244 bytes       "00001";
+KY004;
+004"000"000"173"196";
+004"000"000"139"064";
+004"000"000"143"192";
+067"000"000"159"201";
+SY;
+DKM003;
+DBO004"0"Módulo defectuoso             "1";
+DBO004"3"Error de canal presente       "1";
+DBO004"4"falta tensión auxilliar ext.  "1";
+DKK000;
+ET200X1;
+ISNONAME;
+SO001;
+032;
+MLFB005;
+"6ES7 141-1BD30-0XA0        4DE"067"000"000"143"201"SP000";
+"6ES7 141-1BD30-0XA0        4DE"067"000"000"159"201"SP000";
+"6ES7 142-1BD40-0XA0        4DA"131"000"000"143"200"SP000";
+"3RK1 300-**S00-0AA0        4DX"194"000"000"207"201"SP000";
+"3RK1 300-**S00-1AA0        4DX"194"000"000"223"201"SP000";
+LSK000;
+000;
+SPT000;
+HTT000;
+ETER200;
+MRD000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

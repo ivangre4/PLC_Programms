@@ -1,0 +1,9 @@
+[DP/AS-i Basic Module]
+[PARAMETERS]
+001;000;000.0;001;000;0001;  ;000;Diagnostics
+002;000;000.4;001;000;0001;  ;000;Missing_Load_Voltage_LP
+003;000;000.5;001;000;0001;  ;000;Configuration_Error
+004;000;000.7;001;000;0001;  ;000;Enable_Auto_Adressing
+005;000;001.0;001;000;0001;  ;000;Startup
+
+[CONSISTENCY_CRITERIA=5|0|0]

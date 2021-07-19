@@ -1,0 +1,100 @@
+ET 200C 8DE DC 24V <6ES7 141-0BF00-0XB0>
+V5.x;
+C-8DI          DP;
+SIEMENS   ;
+ET 200C   ;
+ET 200    ;
+ET200C/24V/DP  ;
+32784;
+J;
+J;
+J;
+N;
+J;
+N;
+N;
+N;
+N;
+N;
+1;
+N;
+N;
+N;
+00000;
+1111011111;
+001;
+000;
+002;
+013;
+012;
+PV005;
+00;
+00;
+00;
+00;
+00;
+PSL008;
+PS008"Abil. diagnostica       K 0   "BIT0 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 1   "BIT1 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 2   "BIT2 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 3   "BIT3 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 4   "BIT4 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 5   "BIT5 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 6   "BIT6 "0"0"1"HI001";
+PS008"Abil. diagnostica       K 7   "BIT7 "0"0"1"HI001";
+HTT001;
+HI001;
+L2;
+"Inibire diagnostica           "00001";
+"Abilitare diagnostica         "00000";
+KV002;
+000;
+016;
+SY;
+DKM000;
+DKK000;
+ET_200C;
+ISNONAME;
+SO000;
+001;
+MLFB000;
+LSK000;
+000;
+SPT000;
+HTT000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

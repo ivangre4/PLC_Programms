@@ -1,0 +1,274 @@
+;==========================================================
+; GSD File  for SINEC CP 342-5       SIEMENS AG
+; MLFB  : 6GK7 342-5DA02-0XE0
+;
+; Dated   : 03.01.2003 V1.0 SX
+; File    : SIEM80D6.GSE
+;===========================================================
+#Profibus_DP
+GSD_Revision=4                         ; Version ID of the GSD file format
+Vendor_Name="SIEMENS"                  ; Manufacturer's name
+Model_Name="CP 342-5"                  ; Manufacturer's designation of DP device
+Revision="V1.0"                        ; Revision version of the DP device
+Ident_Number=0x80D6                    ; Device type of the DP device
+Protocol_Ident=0                       ; Protocol ID of the DP device
+                                       ; 0 : PROFIBUS DP
+Station_Type=0                         ; DP device type
+                                       ; 0 : DP Slave
+Hardware_Release="V 1.0"               ; Hardware release of the DP device
+Software_Release="V 5.0"               ; Software release of the DP device
+;
+;
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+;
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_45.45=250
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+;
+;
+Implementation_Type="ASPC_2"           ; String (32)
+Bitmap_Device="SI9001TN"               ; (*.DIB) (70x40 pixels 16 colors)
+;
+; Slave-Specification:
+OrderNumber="6GK7 342-5DA02-0XE0"      ; Spec?
+;
+; Basic DP-Slave Related Key Words
+Auto_Baud_supp=0                       ; DP device supports automatic baudrate
+User_Prm_Data_Len=3                    ; Length of User_Param_Data
+User_Prm_Data = 0x40,0x00,0x00         ; Default value of User_Param_Data
+Min_Slave_Intervall=6                  ; Min interval between two slave list
+                                       ; cycles
+;
+Modular_Station=1                      ; DP device is a modular station
+Max_Module=63                          ; Max modules of a modular station
+Max_Input_Len=240                      ; Max length of input data
+Max_Output_Len=240                     ; Max length of output data
+Max_Data_Len=480                       ; Max length of input and output data
+;
+Fail_Safe=1                            ; DP device with fail safe workaround
+Max_Diag_Data_Len=6                    ; Max length of diagnostic information
+Modul_Offset=1                         ; First slot number to configuring
+Slave_Family=3@TdF@SIMATIC             ; Function class an family
+;
+Info_Text="CP 342-5 as PROFIBUS DP Slave, \
+ MLFB: 6GK7 342-5DA02-0XE0, \
+ Firmware: V5.0"                        ; String (256) max length of line : 80
+;
+;<Module Definition List>
+;****************************************************************************
+;                    BYTE MODULES  (special identification formats)
+;****************************************************************************
+;**************************** I N P U T *************************************
+;****************************************************************************
+; Input * Byte Consistentcy* Bytes of Data  * 1..64 bytes
+;**********************************************************
+Module = " 1 byte DI / Consistency 1 byte " 0x40,0x00
+1
+EndModule
+Module = " 2 bytes DI / Consistency 1 byte" 0x40,0x01
+2
+EndModule
+Module = " 4 bytes DI / Consistency 1 byte" 0x40,0x03
+3
+EndModule
+Module = " 8 bytes DI / Consistency 1 byte" 0x40,0x07
+4
+EndModule
+Module = "16 bytes DI / Consistency 1 byte" 0x40,0x0F
+5
+EndModule
+Module = "32 bytes DI / Consistency 1 byte" 0x40,0x1F
+6
+EndModule
+Module = "64 bytes DI / Consistency 1 byte" 0x40,0x3F
+7
+EndModule
+;**********************************************************
+; Input * Total Consistency * Bytes of Daten * 1..64 bytes
+;**********************************************************
+Module = " 1 byte DI / Total consistency  " 0x40,0x80
+11
+EndModule
+Module = " 2 bytes DI / Total consistency " 0x40,0x81
+12
+EndModule
+Module = " 4 bytes DI / Total consistency " 0x40,0x83
+13
+EndModule
+Module = " 8 bytes DI / Total consistency " 0x40,0x87
+14
+EndModule
+Module = "16 bytes DI / Total consistency " 0x40,0x8F
+15
+EndModule
+Module = "32 bytes DI / Total consistency " 0x40,0x9F
+16
+EndModule
+Module = "64 bytes DI / Total consistency " 0x40,0xBF
+17
+EndModule
+;**********************************************************
+; Input * Word Consistency * Words of Data * 1..64 words
+;**********************************************************
+Module = " 1 word AI / Consistency 1 word " 0x40,0x40
+21
+EndModule
+Module = " 2 words AI / Consistency 1 word" 0x40,0x41
+22
+EndModule
+Module = " 4 words AI / Consistency 1 word" 0x40,0x43
+23
+EndModule
+Module = " 8 words AI / Consistency 1 word" 0x40,0x47
+24
+EndModule
+Module = "16 words AI / Consistency 1 word" 0x40,0x4F
+25
+EndModule
+Module = "32 words AI / Consistency 1 word" 0x40,0x5F
+26
+EndModule
+Module = "64 words AI / Consistency 1 word" 0x40,0x7F
+27
+EndModule
+;**********************************************************
+; Input * Total Consistency * Words of Data * 1..64 words
+;**********************************************************
+Module = " 1 word AI / Total consistency  " 0x40,0xC0
+31
+EndModule
+Module = " 2 words AI / Total consistency " 0x40,0xC1
+32
+EndModule
+Module = " 4 words AI / Total consistency " 0x40,0xC3
+33
+EndModule
+Module = " 8 words AI / Total consistency " 0x40,0xC7
+34
+EndModule
+Module = "16 words AI / Total consistency " 0x40,0xCf
+35
+EndModule
+Module = "32 words AI / Total consistency " 0x40,0xDF
+36
+EndModule
+Module = "64 words AI / Total consistency " 0x40,0xFF
+37
+EndModule
+;****************************************************************************
+;**************************** O U T P U T ***********************************
+;****************************************************************************
+; Output * Byte Consistency * Bytes of Data * 1..64 bytes
+;**********************************************************
+Module = " 1 byte DO / Consistency 1 byte " 0x80,0x00
+41
+EndModule
+Module = " 2 bytes DO / Consistency 1 byte" 0x80,0x01
+42
+EndModule
+Module = " 4 bytes DO / Consistency 1 byte" 0x80,0x03
+43
+EndModule
+Module = " 8 bytes DO / Consistency 1 byte" 0x80,0x07
+44
+EndModule
+Module = "16 bytes DO / Consistency 1 byte" 0x80,0x0F
+45
+EndModule
+Module = "32 bytes DO / Consistency 1 byte" 0x80,0x1F
+46
+EndModule
+Module = "64 bytes DO / Consistency 1 byte" 0x80,0x3F
+47
+EndModule
+;**********************************************************
+; Output * Total Consistency * Bytes of Data * 1..64 bytes
+;**********************************************************
+Module = " 1 byte DO / Total consistency  " 0x80,0x80
+51
+EndModule
+Module = " 2 bytes DO / Total consistency " 0x80,0x81
+52
+EndModule
+Module = " 4 bytes DO / Total consistency " 0x80,0x83
+53
+EndModule
+Module = " 8 bytes DO / Total consistency " 0x80,0x87
+54
+EndModule
+Module = "16 bytes DO / Total consistency " 0x80,0x8F
+55
+EndModule
+Module = "32 bytes DO / Total consistency " 0x80,0x9F
+56
+EndModule
+Module = "64 bytes DO / Total consistency " 0x80,0xBF
+57
+EndModule
+;**********************************************************
+; Output * Word Consistency * Words of Data * 1..64 words
+;**********************************************************
+Module = " 1 word AO / Consistency 1 word " 0x80,0x40
+61
+EndModule
+Module = " 2 words AO / Consistency 1 word" 0x80,0x41
+62
+EndModule
+Module = " 4 words AO / Consistency 1 word" 0x80,0x43
+63
+EndModule
+Module = " 8 words AO / Consistency 1 word" 0x80,0x47
+64
+EndModule
+Module = "16 words AO / Consistency 1 word" 0x80,0x4F
+65
+EndModule
+Module = "32 words AO / Consistency 1 word" 0x80,0x5F
+66
+EndModule
+Module = "64 words AO / Consistency 1 word" 0x80,0x7F
+67
+EndModule
+;**********************************************************
+; Output * Total Consistency * Words of Data * 1..64 words
+;**********************************************************
+Module = " 1 word AO / Total consistency  " 0x80,0xC0
+71
+EndModule
+Module = " 2 words AO / Total consistency " 0x80,0xC1
+72
+EndModule
+Module = " 4 words AO / Total consistency " 0x80,0xC3
+73
+EndModule
+Module = " 8 words AO / Total consistency " 0x80,0xC7
+74
+EndModule
+Module = "16 words AO / Total consistency " 0x80,0xCf
+75
+EndModule
+Module = "32 words AO / Total consistency " 0x80,0xDF
+76
+EndModule
+Module = "64 words AO / Total consistency " 0x80,0xFF
+77
+EndModule
+
+
+

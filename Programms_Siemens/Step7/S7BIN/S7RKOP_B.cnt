@@ -1,0 +1,221 @@
+:Base S7rkop_b.HLP
+:Title Help on Ladder Logic
+1 Overview of All LAD Instructions
+2 LAD Instructions Sorted According to English Mnemonics (International)=KOP_Operationen_sortiert_nach_Internationaler_Mnemonik
+2 LAD Instructions Sorted According to German Mnemonics (SIMATIC)=KOP_Operationen_sortiert_nach_SIMATIC_Mnemonik
+1 Bit Logic Instructions
+2 Overview of Bit Logic Instructions=Overview_of_Bit_Logic_Instructions
+2 ---|   |--- Normally Open Contact (Address)=IDH_Normally_Open_Contact
+2 ---| / |--- Normally Closed Contact (Address)=IDH_Normally_Closed_Contact
+2 XOR  Bit Exclusive OR=IDH_XOR
+2 --|NOT|--  Invert Power Flow=IDH_Invert_Power_Flow
+2 ---(   )    Output Coil=IDH_Output
+2 ---( # )--- Midline Output=IDH_Midline_Output
+2 ---( R )    Reset Coil=IDH_Reset_Output
+2 ---( S )    Set Coil=IDH_Set_Output
+2 RS   Reset Flip Flop=IDH_Reset_Flip_Flop
+2 SR   Set Flip Flop=IDH_Set_Flip_Flop
+2 ---( N )---   Negative RLO Edge Detection=IDH_Negative_RLO_Edge_Detection
+2 ---( P )---   Positive RLO Edge Detection=IDH_Positive_RLO_Edge_Detection
+2 ---(SAVE)  Save RLO into BR Memory=IDH_Save_RLO_into_BR_Memory
+2 NEG  Address Negative Edge Detection=IDH_Negative_Edge_Detection
+2 POS  Address Positive Edge Detection=IDH_Positive_Edge_Detection
+2 Immediate Read=IDH_IMD_READ
+2 Immediate Write=IDH_IMD_WRIT
+1 Comparison Instructions
+2 Overview of Comparison Instructions=Overview_of_Comparison_Instructions
+2 CMP ? I   Compare Integer=IDH_Compare_Integer
+2 CMP ? D  Compare Double Integer=IDH_Compare_Double_Integer
+2 CMP ? R  Compare Real=IDH_Compare_Real
+1 Conversion Instructions
+2 Overview of Conversion Instructions=Overview_of_Conversion_Instructions
+2 BCD_I   BCD to Integer=IDH_BCD_I_BCD_to_INT_Converter
+2 I_BCD   Integer to BCD=IDH_I_BCD_INT_to_BCD_Converter
+2 I_DINT  Integer to Double Integer=IDH_I_DINT_INT_to_DINT
+2 BCD_DI  BCD to Double Integer=IDH_BCD_DI_BCD_to_DINT_Converter
+2 DI_BCD   Double Integer to BCD=IDH_DI_BCD_DINT_to_BCD_Converter
+2 DI_REAL   Double Integer to Real=IDH_DI_REAL_DINT_to_REAL
+2 INV_I    Ones Component Integer=IDH_INV_I_One_Compliment_INT
+2 INV_DI    Ones Component Double Integer=IDH_INV_DI_One_Compliment_DINT
+2 NEG_I    Twos Component Integer=IDH_NEG_I_Two_Compliment_INT
+2 NEG_DI    Twos Component Double Integer=IDH_NEG_DI_Two_Compliment_DINT
+2 NEG_R   Negate Floating-Point=IDH_NEG_R_Two_Compliment_REAL
+2 ROUND  Round to Double Integer=IDH_ROUND_Round_to_Double_Integer
+2 TRUNC  Truncate Double Integer Part=IDH_TRUNC_Truncate_Double_Integer_Part
+2 CEIL   Ceiling=IDH_CEIL
+2 FLOOR   Floor=IDH_FLOOR
+1 Counter Instructions
+2 Overview of Counter Instructions=Overview_of_Counter_Instructions
+2 S_CUD     Up-Down Counter=IDH_Up_Down_Counter
+2 S_CU     Up Counter=IDH_Up_Counter
+2 S_CD    Down Counter=IDH_Down_Counter
+2 ---( SC )   Set Counter Value=IDH__SC_Set_Counter_Value
+2 ---( CU )   Up Counter Coil=IDH_Up_Counter_Coil
+2 ---( CD )   Down Counter Coil=IDH_Down_Counter_Coil
+1 Data Block Instructions
+2 ---(OPN)     Open Data Block: DB or DI=IDH_Open_Data_Block
+1 Logic Control Instructions
+2 Overview of Logic Control Instructions=Overview_of_Logic_Control_Instructions
+2 ---(JMP)---  Unconditional Jump=IDH_JMP_Absoluter_Sprung
+2 ---(JMP)---  Conditional Jump=IDH_JMP_Bedingter_Sprung
+2 ---( JMPN )    Jump-If-Not=IDH_Jump_IFNOT_Within_a_FB
+2 LABEL   Label=IDH_LABEL
+1 Integer Math Instructions
+2 Overview of Integer Math Instructions=Overview_of_Integer_Math_Instructions
+2 Evaluating the Bits of the Status Word with Integer Math Instructions=Auswerten_der_Bits_im_Statuswort_bei_Festpunktoperationen
+2 ADD_I    Add Integer=IDH_ADD_I
+2 SUB_I     Subtract Integer=IDH_SUB_I_Subtract_Integer
+2 MUL_I     Multiply Integer=IDH_MUL_I_Multiply_Integer
+2 DIV_I     Divide Integer=IDH_DIV_I_Divide_Integer
+2 ADD_DI    Add Double Integer=IDH_ADD_DI_Add_Double_Integer
+2 SUB_DI     Subtract Double Integer=IDH_SUB_DI_Subtract_Double_Integer
+2 MUL_DI     Multiply Double Integer=IDH_MUL_DI_Multiply_Double_Integer
+2 DIV_DI     Divide Double Integer=IDH_DIV_DI_Divide_Double_Integer
+2 MOD_DI     Return Fraction Double Integer=IDH_MOD_DI_Return_Fraction_Double_Integer
+1 Floating Point Math Instructions
+2 Overview of Floating-Point Math Instructions=Overview_of_Floating_Point_Math_Instructions
+2 Evaluating the Bits of the Status Word with Floating-Point Math Instructions=IDH_STATUSBITS_REAL
+2 Basic Instructions
+3 ADD_R   Add Real=IDH_ADD_R
+3 SUB_R   Subtract Real=IDH_SUB_R_Subtract_Real
+3 MUL_R   Multiply Real=IDH_MUL_R_Multiply_Real
+3 DIV_R   Divide Real=IDH_DIV_R_Divide_Real
+3 ABS   Establish the Absolute Value of a Floating-Point Number=IDH_ABS
+2 Extended Instructions
+3 SQR     Establish the Square=IDH_SQR_SQUARE
+3 SQRT     Establish the Square Root=IDH_SQRT_SQUARE_ROOT
+3 EXP     Establish the Exponential Value=IDH_EXP_EXPONENTIAL
+3 LN     Establish the Natural Logarithm=IDH_LN_LOGN
+3 SIN     Establish the Sine Value=IDH_SIN_SINUS
+3 COS     Establish the Cosine Value=IDH_COS_COSINUS
+3 TAN     Establish the Tangent Value=IDH_TAN_TANGENS
+3 ASIN     Establish the Arc Sine Value=IDH_ASIN_ARCUSSINUS
+3 ACOS     Establish the Arc Cosine Value=IDH_ACOS_ARCUSCOSINUS
+3 ATAN     Establish the Arc Tangent Value=IDH_ATAN_ARCUSTANGENS
+1 Move Instructions
+2 MOVE   Assign a Value=IDH_MOVE_Assign_a_Value
+1 Program Control Instructions
+2 Overview of Program Control Instructions=Overview_of_Program_Control_Instructions
+2 ---(Call)    Call FC SFC from Coil (without Parameters)=IDH_CALL_Call_FC_SFC_form_Coil
+2 CALL_FB    Call FB from Box=IDH_CALL_FB
+2 CALL_FC    Call FC from Box=IDH_Call_FC_from_Box
+2 CALL_SFB    Call System FB from Box=IDH_CALL_SFB
+2 CALL_SFC    Call System FC from Box=IDH_CALL_SFC
+2 Call Multiple Instance=IDH_CALL_Multiinstanzen
+2 Call Block from a Library=IDH_CALL_Bibiliotheken
+2 Important Notes on Using MCR Functions=Wichtige_Hinweise_zu_MCR
+2 ---(MCR<)     Master Control Relay On=IDH_MCRONMaster_Control_Relay_ON
+2 ---(MCR>)      Master Control Relay Off=IDH_MCROFFMaster_Control_Relay_OFF
+2 ---(MCRA)      Master Control Relay Activate=IDH_MCRAMaster_Control_Relay_A
+2 ---(MCRD)      Master Control Relay Deactivate=IDH_MCRDMaster_Control_Relay_D
+2 ---(RET)     Return=IDH_Return
+1 Shift and Rotate Instructions
+2 Shift Instructions
+3 Overview of Shift Instructions=Overview_of_Shift_Instructions
+3 SHR_I     Shift Right Integer=IDH_SHR_I_Shift_Right_Integer
+3 SHR_DI    Shift Right Double Integer=IDH_SHR_DI_Shift_Right_Double_Integer
+3 SHL_W    Shift Left Word=IDH_SHL_W_Shift_Left_Word
+3 SHR_W    Shift Right Word=IDH_SHR_W_Shift_Right_Word
+3 SHL_DW    Shift Left Double Word=IDH_SHL_DW_Shift_Left_Double_Word
+3 SHR_DW   Shift Right Double Word=IDH_SHR_DW_Shift_Right_Double_Word
+2 Rotate Instructions
+3 Overview of Rotate Instructions=Overview_of_Rotate_Instructions
+3 ROL_DW    Rotate Left Double Word=IDH_ROL_DW_Rotate_Left_Double_Word
+3 ROR_DW    Rotate Right Double Word=ROR_DW_Rotate_Right_Double_Word
+1 Status Bit Instructions
+2 Overview of Statusbit Instructions=IDH_Status_Bits
+2 OV ---|   |---    Exception Bit Overflow=IDH_OV
+2 OS ---|   |---    Exception Bit Overflow Stored=IDH_OS
+2 UO ---|   |---    Exception Bit Unordered=IDH_UO
+2 BR ---|   |---    Exception Bit Binary Result=IDH_BR
+2 ---|   |---  Result Bit Equal 0=IDH_EQ
+2 ---|   |---    Result Bit Not Equal 0=IDH_NE
+2 ---|   |---    Result Bit Greater Than 0=IDH_GT
+2 ---|   |---   Result Bit Less Than 0=IDH_LT
+2 ---|   |--- Result Bit Greater Equal 0=IDH_GE
+2 ---|   |---  Result Bit Less Equal 0=IDH_LE
+2 Evaluating the Bits of the Status Word with Integer Math Instructions=Auswerten_der_Bits_im_Statuswort_bei_Festpunktoperationen
+2 Evaluating the Bits of the Status Word with Floating-Point Math Instructions=IDH_STATUSBITS_REAL
+1 Timer Instructions
+2 Overview of Timer Instructions=Overview_of_Timer_Instructions
+2 Location of a Timer in Memory and Components of a Timer=Speicherbereiche_und_Komponenten_einer_Zeit
+2 S_PULSE    Pulse S5 Timer=IDH_Pulse_S5_Timer
+2 S_PEXT    Extended Pulse S5 Timer=IDH_Extended_Pulse_S5_Timer
+2 S_ODT     On-Delay S5 Timer=IDH_On_Delay_S5_Timer
+2 S_ODTS     Retentive On-Delay S5 Timer=IDH_Retentive_On_Delay_S5_Timer
+2 S_OFFDT     Off-Delay S5 Timer=IDH_Off_Delay_S5_Timer
+2 ---( SP )   Pulse Timer Coil=IDH_Pulse_Timer_Coil
+2 ---( SE )   Extended Pulse Timer (SV)=IDH_Extended_Pulse_Timer_Coil
+2 ---( SD )   On-Delay Timer Coil=IDH_On_Delay_Timer_Coil
+2 ---( SS )   Retentive On-Delay Timer Coil=IDH_On_Delay_Saved_Timer_Coil
+2 ---( SE )   Off-Delay Timer Coil=IDH_Off_Delay_Timer_Coil
+1 Word Logic Instructions
+2 Overview of Word Logic Instructions=Overview_of_Word_Logic_Instructions
+2 WAND_W    (Word) AND Word=IDH_WAND_W_WAND_Word
+2 WOR_W    (Word) OR Word=IDH_WOR_W_WOR_Word
+2 WAND_DW    (Word) AND Double Word=IDH_WAND_DW_WAND_Double_Word
+2 WOR_DW    (Word) OR Double Word=IDH_WOR_DW_WOR_Double_Word
+2 WXOR_W    (Word) Exclusive OR Word=IDH_WXOR_W_WXOR_Word
+2 WXOR_DW    (Word) Exclusive OR Double Word=IDH_WXOR_DW_WXOR_Double_Word
+1 Programming Examples
+2 Overview of Programming Examples=Programmierbsp_bersicht
+2 Examples: Bit Logic Instructions=Bitverkn_pfungen_Beispiel
+2 Example: Timer Instructions=Zeitoperationen_Beispiel
+2 Example: Counter and Comparison Instructions=Z_hl_und_Vergleichsoperationen_Beispiel
+2 Example: Integer Math Instructions=Arithmetische_Operationen_mit_Ganzzahlen_Beispiel
+2 Example: Word Logic Instructions=Wortverkn_pfungsoperationen_Beispiel
+1 Working with Ladder Logic
+2 Types of Blocks=IDH_Types_of_Blocks
+2 EN/ENO Mechanism=EN_ENO_Mechanismus
+2 Parameter Transfer=Parameteruebergabe
+2 Addressing
+3 Absolute and Symbolic Addressing=IDH_Absolute_and_Symbolic_Addressing
+3 Direct Addressing=IDH_Direct_Addressing
+3 Immediate Addressing=IDH_Immediate_Addressing
+3 Process Image (I and Q Memory Areas)=IDH_Process_Image_Memory_Area
+3 Direct Access to the Peripheral I/Os (PI and PQ Memory Areas)=IDH_P_Memory_Area_Direct_Peripheral_Addresses
+3 Entering and Displaying Constants=IDH_Entering_and_Viewing_Constant_Data
+3 Summary of Bit, Byte, Word, and Double Word Identifiers=IDH_Bit_Byte_Wort_Doppelwortkennungen
+3 Identifiers of Elements and Blocks=IDH_Kennungen_von_Elementen_und_Bausteinen
+2 Status Word
+3 Status Word=IDH_Status_Word
+3 /FC           First Check Bit (Status Word, Bit 0)=IDH__FC_Status_Word_Bit
+3 RLO           Result of Logic Operation (Status Word, Bit 1)=IDH_RLO_Status_Word_Bit
+3 STA             Status Bit (Status Word, Bit 2)=IDH_STA_Status_Word_Bit
+3 OR            (Status Word, Bit 3)=IDH_OR_Status_Word_Bit
+3 OS            Overflow Stored    (Status Word, Bit 4)=IDH_OS_Overflow_Stored_Status_Word_Bit
+3 OV            Overflow   (Status Word, Bit 5)=IDH_OV_OVerflow_Status_Word_Bit
+3 CC1, CC0      Conditions Codes (Status Word, Bits 6 and 7)=IDH_CC0_CC1_Condition_Codes_Status_Word_Bits_6_7
+3 CC1 and CC0 Results from Math Instructions=IDH_CC1_and_CC0_results_from_math
+3 CC1 and CC0 Results from Compare Instructions=IDH_CC1_and_CC0_results_from_Compare
+3 CC1 and CC0 Results from Shift and Rotate Instructions=IDH_CC1_and_CC0_results_from_Shift_and_Rotate
+3 CC1 and CC0 Results from Word Logic Instructions=IDH_CC1_and_CC0_results_from_Word_Logic
+3 BR               Binary Result (Status Word, Bit 8)=IDH_BR_Binary_Result_Status_Word_Bit_8
+2 Data Types
+3 Data Types=IDH_Data_Types
+3 Elementary Data Types=IDH_Elementary_Data_Types
+3 Complex Data Types=IDH_Complex_Data_Types
+3 Parameter Types=IDH_Parameter_Data_Types
+3 ARRAY Data Type=IDH_ARRAY_1_X_1_Y_Data_Type
+3 BOOL Data Type=IDH_BOOL_Data_Type
+3 BYTE Data Type=IDH_BYTE_Data_Type
+3 CHAR Data Type=IDH_CHAR_Data_Type
+3 DATE Data Type=IDH_DATE_Data_Type
+3 DATE_AND_TIME Data Type=IDH_DATE_AND_TIME_Data_Type
+3 DINT Data Type=IDH_DINT_Data_Type
+3 DWORD Data Type=IDH_DWORD_Data_Type
+3 INT Data Type=IDH_INT_Data_Type
+3 REAL Data Type=IDH_REAL_Data_Type
+3 S5TIME Data Type=IDH_S5TIME_Data_Type
+3 STRING Data Type=IDH_STRING_X_Data_Type
+3 STRUCT Data Type=IDH_STRUCT_Data_Type
+3 TIME Data Type=IDH_TIME_Data_Type
+3 TIME_OF_DAY Data Type=IDH_TIME_OF_DAY_Data_Type
+3 UDT Data Type=IDH_UDT
+3 WORD Data Type=IDH_WORD_Data_Type
+1 CPU Information
+2 Addresses: CPU-Specific Address Areas=IDH_Operand_Parameters_CPU_Specific_Address_Ranges
+2 CPU Registers=IDH_CPU_Registers
+2 Accumulators=IDH_Accumulators_Accu1_and_Accu2
+2 CPU Resources=IDH_CPU___PLC_Resources
+2 Integrated System Functions (SFB, SFC)=IDH_LAD_SFB_SFC

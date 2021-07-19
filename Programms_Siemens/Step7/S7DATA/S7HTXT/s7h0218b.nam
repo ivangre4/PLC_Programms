@@ -1,0 +1,48 @@
+[2364933]
+KatEntryName=V3.3
+InfoText=Work memory 32 KB; 0.1 ms/1000 instructions; MPI connection; single-tier configuration up to 8 modules; S7 communication (loadable FBs/FCs); firmware V3.3
+SHORTNAME=CPU 312
+Comment=6ES7 312-1AE14-0AB0 V3.3, 6ES7 314-1AG14-0AB0 V3.3, 6ES7 315-2AH14-0AB0 V3.3, 6ES7 315-6FF04-0AB0 V3.3
+
+[2364507]
+KatEntryName = 6ES7 312-1AE14-0AB0
+InfoText = 
+SHORTNAME=CPU 312
+
+[2364934]
+KatEntryName=V3.3
+InfoText=Work memory 128 KB; 0.06ms/1000 instructions; MPI connection; multi-tier configuration up to 32 modules; S7 Communication (loadable FBs/FCs); firmware V3.3
+SHORTNAME=CPU 314
+
+[2364505]
+KatEntryName = 6ES7 314-1AG14-0AB0
+InfoText = 
+SHORTNAME=CPU 314
+
+[2364935]
+KatEntryName=V3.3
+InfoText = Work memory 256KB; 0.05ms/1000 instructions; MPI+ DP connection (DP master or DP slave); multi-tier configuration up to 32 modules; Send and receive capability for direct data exchange, constant bus cycle time, routing, S7 Communikation (loadable FBs/FCs), firmware V3.3
+SHORTNAME=CPU 315-2 DP
+
+[2364936]		
+SHORTNAME=DP
+InfoText=
+
+[2364510]
+KatEntryName = 6ES7 315-2AH14-0AB0
+InfoText = 
+SHORTNAME=CPU 315-2 DP
+
+[2364937]
+KatEntryName=V3.3
+InfoText = Work memory 384KB; 0.05ms/1000 instructions; MPI+ DP connection (DP master or DP slave); multi-tier configuration up to 32 modules, send and receive capability for direct data exchange, constant bus cycle time, routing, S7 Communication (loadable FBs/FCs), firmware V3.3, can be used for security applications; supports PROFIsafe V2
+SHORTNAME=CPU 315F-2 DP
+
+[2364938]		
+SHORTNAME=DP
+InfoText=
+
+[2364513]
+KatEntryName = 6ES7 315-6FF04-0AB0
+InfoText = 
+SHORTNAME=CPU 315F-2 DP

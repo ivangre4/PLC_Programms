@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tpf="http://www.profibus.com/TCI/2006/03/TPF" xmlns:prim="http://www.profibus.com/TCI/2006/03/Primitives" targetNamespace="http://www.profibus.com/TCI/2006/03/TPF" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.profibus.com/TCI/2006/03/Primitives" schemaLocation="TCI-Primitives-v1.0.xsd"/>
+	<xsd:element name="InvocationInterface">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="prim:DocumentT">
+					<xsd:sequence>
+						<xsd:element name="ConformanceClass">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="OptionalFeature" type="prim:ParameterT" minOccurs="0" maxOccurs="unbounded"/>
+								</xsd:sequence>
+								<xsd:attribute name="Name" type="prim:ConformanceClassEnumT" use="required"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="General">
+							<xsd:complexType>
+								<xsd:attribute name="CurrentLanguage" type="xsd:string" use="required"/>
+								<xsd:attribute name="SelectedEntryPoint" type="xsd:string" use="optional"/>
+								<xsd:attribute name="CommServer-ProgID" type="xsd:string" use="optional"/>
+								<xsd:attribute name="ProjectRelatedPath" type="xsd:string" use="required"/>
+								<xsd:attribute name="BusCategory" type="xsd:string" use="required"/>
+								<xsd:attribute name="PlcID" type="xsd:string" use="required"/>
+								<xsd:attribute name="PlcName" type="xsd:string" use="required"/>
+								<xsd:attribute name="SchemaPath" type="xsd:string" use="required"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="SubsystemList">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="SubsystemItem" maxOccurs="unbounded">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="DeviceList">
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element name="DeviceItem" maxOccurs="unbounded">
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:extension base="tpf:DeviceObjectT">
+																			<xsd:sequence>
+																				<xsd:element name="ModuleList" minOccurs="0">
+																					<xsd:complexType>
+																						<xsd:sequence>
+																							<xsd:element name="ModuleItem" maxOccurs="unbounded">
+																								<xsd:complexType>
+																									<xsd:complexContent>
+																										<xsd:extension base="tpf:DeviceObjectT">
+																											<xsd:sequence>
+																												<xsd:element name="SubmoduleList" minOccurs="0">
+																													<xsd:complexType>
+																														<xsd:sequence>
+																															<xsd:element name="SubmoduleItem" type="tpf:DeviceObjectT" maxOccurs="unbounded"/>
+																														</xsd:sequence>
+																													</xsd:complexType>
+																												</xsd:element>
+																											</xsd:sequence>
+																										</xsd:extension>
+																									</xsd:complexContent>
+																								</xsd:complexType>
+																							</xsd:element>
+																						</xsd:sequence>
+																					</xsd:complexType>
+																				</xsd:element>
+																			</xsd:sequence>
+																			<xsd:attribute name="DeviceReference" type="xsd:string" use="required"/>
+																		</xsd:extension>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+											<xsd:attribute name="ID" type="xsd:string" use="required"/>
+											<xsd:attribute name="Name" type="xsd:string" use="required"/>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ParameterList">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ParameterItem" type="prim:StringParameterT" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="DeviceObjectT">
+		<xsd:complexContent>
+			<xsd:extension base="prim:ObjectT">
+				<xsd:sequence>
+					<xsd:element ref="tpf:ParameterList" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="Name" type="xsd:string" use="required"/>
+				<xsd:attribute name="IsSelected" type="xsd:boolean" use="optional" default="false"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

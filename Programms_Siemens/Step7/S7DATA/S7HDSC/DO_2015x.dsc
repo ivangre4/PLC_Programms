@@ -1,0 +1,6 @@
+[16 DO DC24V CPV10]
+[16 DO DC24V CPV14]
+
+[PARAMETERS]
+001;000;001.0;008;000;0001;  ;000;Identification
+002;000;002.0;001;000;0001;  ;000;Diagnostics_no_load_voltage

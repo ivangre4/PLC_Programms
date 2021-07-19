@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Hardware Interrupt 0"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB40_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB40_STRT_INF : BYTE ;	//16#41 (OB 40 has started)
+  OB40_PRIORITY : BYTE ;	//16 (Priority of 1 is lowest)
+  OB40_OB_NUMBR : BYTE ;	//40 (Organization block 40, OB40)
+  OB40_RESERVED_1 : BYTE ;	//Reserved for system
+  OB40_RESERVED_2 : BYTE ;	//Reserved for system
+  OB40_MDL_ADDR : WORD ;	//Base address of module initiating interrupt
+  OB40_POINT_ADDR : DWORD ;	//Address of interrupt point on module
+  OB40_DATE_TIME : DATE_AND_TIME ;	//Date and time OB40 started  
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

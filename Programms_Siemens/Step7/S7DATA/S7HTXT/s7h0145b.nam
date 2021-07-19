@@ -1,0 +1,133 @@
+[2364158]
+KatEntryName=V5.1
+SHORTNAME=CPU 412-1
+InfoText=Work memory 144KB code and 144KB of data; 0.075 ms/1000 instructions; 4KB DI/O; 32 connections 1*DP/MPI; send and receive capability for direct data exchange; DP constant bus cycle time and clocking editing; routing; data record routing; multi-computing capable; firmware V5.1
+Comment=6ES7 412-1XJ05-0AB0 V5.1, 6ES7 412-2XJ05-0AB0 V5.1, 6ES7 414-2XK05-0AB0 V5.1, 6ES7 414-3XM05-0AB0 V5.1, 6ES7 416-2XN05-0AB0 V5.1, 6ES7 416-2FN05-0AB0 V5.1, 6ES7 416-3XR05-0AB0 V5.1, 6ES7 417-4XT05-0AB0 V5.1
+
+[2364159]
+SHORTNAME=MPI/DP
+
+
+[2364160]
+KatEntryName=V5.1
+SHORTNAME=CPU 412-2 DP
+InfoText=Work memory 256KB code and 256KB of data; 0.075 ms/1000 instructions; 4KB DI/O; 32 connections 1*DP/MPI and 1*DP; send and receive capability for direct data exchange; constant bus cycle time and clocking editing; routing; data record routing; multi-computing capable; firmware V5.1
+
+[2364161]
+SHORTNAME=DP
+
+[2364162]
+SHORTNAME=MPI/DP
+
+
+[2364163]
+KatEntryName=V5.1
+SHORTNAME=CPU 414-2 DP
+InfoText=Work memory 512KB code and 512KB data 0.045 ms/1000 instructions; 8KB DI/O; 32 connections 1*DP/MPI and 1*DP; send receive capability for direct data exchange; constant bus cycle time and clocking editing; routing; data record routing; multi-computing capable; firmware V5.1
+
+[2364164]
+SHORTNAME=DP
+
+[2364165]
+SHORTNAME=MPI/DP
+
+
+[2364166]
+KatEntryName=V5.1
+SHORTNAME=CPU 414-3 DP
+InfoText=Work memory 1.4MB code and 1.4MB of data 0.045 ms/1000 instructions 8KB DI/O; 32 connections 1*DP/MPI, 1*DP and 1 receptacle for IF modules; send and receive capability for direct data exchange; constant bus cycle time and clocking editing, routing, data record routing; mulitcomputing capable; firmware V5.1
+
+[2364167]
+SHORTNAME=DP
+
+[2364168]
+SHORTNAME=MPI/DP
+
+
+[2364169]
+KatEntryName=V5.1
+SHORTNAME=CPU 416-2 DP
+InfoText=Work memory 2.8MB code and 2.8MB data 0.030 ms/1000 instructions; 16KB DI/O; 64 connections 1*DP/MPI and 1*DP; send and receive capability for direct data exchange; constant bus cycle time and clocking editing; routing; data record routing; multicomputing capability; firmware V5.1
+
+[2364170]
+SHORTNAME=DP
+
+[2364171]
+SHORTNAME=MPI/DP
+
+
+[2364172]
+KatEntryName=V5.1
+SHORTNAME=CPU 416F-2
+InfoText=Work memory 2.8MB code and 2.8MB data 0.030 ms/1000 instructions; 16KB DI/O; 64 connections; 1*DP/MPI and 1*DP; send and receive capability for direct data exchange; constant bus cycle time and clocking editing; routing; data record routing; multicomputing; firmware V5.1; can be used for safety applications; supports PROFIsafe V2
+
+[2364173]
+SHORTNAME=DP
+
+[2364174]
+SHORTNAME=MPI/DP
+
+
+[2364175]
+KatEntryName=V5.1
+SHORTNAME=CPU 416-3 DP
+InfoText=Work memory 5.6MB code and 5.6MB of data 0.030 ms/1000 instructions; 16KB DI/O; 64 connections; 1*DP/MPI, 1*DP and 1 receptacle for IF modules; send and receive capability for direct data exchange; constant bus cycle time and clocking editing; routing; data record routing; multicomputing capable; firmware V5.1
+
+[2364176]
+SHORTNAME=DP
+
+[2364177]
+SHORTNAME=MPI/DP
+
+
+[2364178]
+KatEntryName=V5.1
+SHORTNAME=CPU 417-4
+InfoText=Work memory 15MB code and 15MB of data; 0.018 ms/1000 instructions; 16KB DI/O; 64 connections; 1*DP/MPI, 1*DP and 2 receptacles for IF modules; multi-computing computable, send and receive capable for direct data exchange, constant bus cycle time and clocking editing, routing, data record routing; firmware V5.1
+
+[2364179]
+SHORTNAME=DP
+
+[2364180]
+SHORTNAME=MPI/DP
+
+
+[2363956]
+KatEntryName=6ES7 412-1XJ05-0AB0
+SHORTNAME=CPU 412-1
+InfoText=
+
+[2363960]
+KatEntryName=6ES7 412-2XJ05-0AB0
+SHORTNAME=CPU 412-2 DP
+InfoText=
+
+[2363964]
+KatEntryName=6ES7 414-2XK05-0AB0
+SHORTNAME=CPU 414-2 DP
+InfoText=
+
+[2363968]
+KatEntryName=6ES7 414-3XM05-0AB0
+SHORTNAME=CPU 414-3 DP
+InfoText=
+
+[2363972]
+KatEntryName=6ES7 416-2XN05-0AB0
+SHORTNAME=CPU 416-2 DP
+InfoText=
+
+[2363976]
+KatEntryName=6ES7 416-2FN05-0AB0
+SHORTNAME=CPU 416F-2
+InfoText=
+
+[2363980]
+KatEntryName=6ES7 416-3XR05-0AB0
+SHORTNAME=CPU 416-3 DP
+InfoText=
+
+[2363984]
+KatEntryName=6ES7 417-4XT05-0AB0
+SHORTNAME=CPU 417-4
+InfoText=

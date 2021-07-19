@@ -1,0 +1,27 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2019
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=SM321 DI64, SM322 DO64
+
+;---------- SM 321 DI64xDC24V,   6ES7 321-1BP00-0AA0
+[2366981]
+KatEntryName=SM 321 DI64xDC24V
+InfoText=Module de 64 entrées TOR, 24V, par groupes de 16, de type P ou M
+SHORTNAME=DI64xDC24V
+
+
+;---------- SM 322 DO64xDC24V/0.3A; P-schaltend,   6ES7 322-1BP00-0AA0
+[2366982]
+KatEntryName=SM 322 DO64xDC24V/0.3A; de type P
+InfoText=Module de 64 sorties TOR, 24V/0.3A, par groupes de 16, de type P
+SHORTNAME=DO64xDC24V/0.3A, P
+
+
+;---------- SM 322 DO64xDC24V/0.3A; M-schaltend,   6ES7 322-1BP50-0AA0
+[2366983]
+KatEntryName=SM 322 DO64xDC24V/0.3A; de type M
+InfoText=Module de 64 sorties TOR, 24V/0.3A, par groupes de 16, de type M
+SHORTNAME=DO64xDC24V/0.3A, M
+

@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Cyclic Interrupt 7"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB37_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB37_STRT_INF : BYTE ;	//16#38 (OB 37 has started)
+  OB37_PRIORITY : BYTE ;	//14 (Priority of 1 is lowest)
+  OB37_OB_NUMBR : BYTE ;	//37 (Organization block 37, OB37)
+  OB37_RESERVED_1 : BYTE ;	//Reserved for system
+  OB37_RESERVED_2 : BYTE ;	//Reserved for system
+  OB37_PHASE_OFFSET : WORD ;	//Phase offset (msec)
+  OB37_RESERVED_3 : INT ;	//Reserved for system
+  OB37_EXC_FREQ : INT ;	//Frequency of execution (msec)
+  OB37_DATE_TIME : DATE_AND_TIME ;	//Date and time OB37 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

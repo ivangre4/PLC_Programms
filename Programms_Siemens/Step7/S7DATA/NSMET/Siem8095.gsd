@@ -1,0 +1,196 @@
+;==========================================================
+; GSD-File  for SINEC CP 3425 DP       SIEMENS AG
+; MLFB  : 6GK7 342-5DF00-0XE0
+;
+; Stand   : 28.03.01 V1.2 SX
+; File    : SIEM8095.GSD
+;===========================================================
+#Profibus_DP
+GSD_Revision=1
+Vendor_Name="SIEMENS"
+Model_Name="S7-300 CP342-5 DP"
+Revision="V1.2"
+Ident_Number=0x8095
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V 1.0"
+Software_Release="V 4.0.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+45.45_supp=1
+1.5M_supp=1
+3M_supp=0
+6M_supp=0
+12M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_45.45=250
+MaxTsdr_1.5M=150
+MaxTsdr_12M=800
+Implementation_Type="ASPC_2+LIKO"
+Bitmap_Device="SI9001TN"
+; Slave-Specification:
+OrderNumber="6GK7 342-5DF00-0XE0"
+Auto_Baud_supp=0
+Min_Slave_Intervall=20
+Max_Diag_Data_Len=6
+Modul_Offset=1
+Slave_Family=3@TdF@SIMATIC
+Modular_Station=1
+Max_Module=63
+Max_Input_Len=240
+Max_Output_Len=240
+Max_Data_Len=480
+Fail_Safe=0
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=3
+User_Prm_Data = 0x00,0x00,0x00
+;<Modul-Definition-List>
+;****************************************************************************
+;                    BYTE MODULES  (spezielle Kennungsformate)
+;****************************************************************************
+;**************************** I N P U T *************************************
+;****************************************************************************
+; input * byte constcy * byte data * 1..64 byte
+;**********************************************************
+Module = " 1byte DI/constcy 1byte   " 0x40,0x00
+EndModule
+Module = " 2byte DI/constcy 1byte   " 0x40,0x01
+EndModule
+Module = " 4byte DI/constcy 1byte   " 0x40,0x03
+EndModule
+Module = " 8byte DI/constcy 1byte   " 0x40,0x07
+EndModule
+Module = "16byte DI/constcy 1byte   " 0x40,0x0F
+EndModule
+Module = "32byte DI/constcy 1byte   " 0x40,0x1F
+EndModule
+Module = "64byte DI/constcy 1byte   " 0x40,0x3F
+EndModule
+;**********************************************************
+; input * complete constcy * byte data * 1..64 byte
+;**********************************************************
+Module = " 1byte DI/constcy complete" 0x40,0x80
+EndModule
+Module = " 2byte DI/constcy complete" 0x40,0x81
+EndModule
+Module = " 4byte DI/constcy complete" 0x40,0x83
+EndModule
+Module = " 8byte DI/constcy complete" 0x40,0x87
+EndModule
+Module = "16byte DI/constcy complete" 0x40,0x8F
+EndModule
+Module = "32byte DI/constcy complete" 0x40,0x9F
+EndModule
+Module = "64byte DI/constcy complete" 0x40,0xBF
+EndModule
+;**********************************************************
+; input * word constcy * word data * 1..64 byte
+;**********************************************************
+Module = " 1word AI/constcy 1word   " 0x40,0x40
+EndModule
+Module = " 2word AI/constcy 1word   " 0x40,0x41
+EndModule
+Module = " 4word AI/constcy 1word   " 0x40,0x43
+EndModule
+Module = " 8word AI/constcy 1word   " 0x40,0x47
+EndModule
+Module = "16word AI/constcy 1word   " 0x40,0x4F
+EndModule
+Module = "32word AI/constcy 1word   " 0x40,0x5F
+EndModule
+Module = "64word AI/constcy 1word   " 0x40,0x7F
+EndModule
+;**********************************************************
+; input * complete constcy * word data * 1..64 byte
+;**********************************************************
+Module = " 1word AI/constcy complete" 0x40,0xC0
+EndModule
+Module = " 2word AI/constcy complete" 0x40,0xC1
+EndModule
+Module = " 4word AI/constcy complete" 0x40,0xC3
+EndModule
+Module = " 8word AI/constcy complete" 0x40,0xC7
+EndModule
+Module = "16word AI/constcy complete" 0x40,0xCf
+EndModule
+Module = "32word AI/constcy complete" 0x40,0xDF
+EndModule
+Module = "64word AI/constcy complete" 0x40,0xFF
+EndModule
+;****************************************************************************
+;**************************** O U T P U T ***********************************
+;****************************************************************************
+; output * byte constcy * byte data * 1..64 byte
+;**********************************************************
+Module = " 1byte DO/constcy 1byte   " 0x80,0x00
+EndModule
+Module = " 2byte DO/constcy 1byte   " 0x80,0x01
+EndModule
+Module = " 4byte DO/constcy 1byte   " 0x80,0x03
+EndModule
+Module = " 8byte DO/constcy 1byte   " 0x80,0x07
+EndModule
+Module = "16byte DO/constcy 1byte   " 0x80,0x0F
+EndModule
+Module = "32byte DO/constcy 1byte   " 0x80,0x1F
+EndModule
+Module = "64byte DO/constcy 1byte   " 0x80,0x3F
+EndModule
+;**********************************************************
+; output * complete constcy * byte data * 1..64 byte
+;**********************************************************
+Module = " 1byte DO/constcy complete" 0x80,0x80
+EndModule
+Module = " 2byte DO/constcy complete" 0x80,0x81
+EndModule
+Module = " 4byte DO/constcy complete" 0x80,0x83
+EndModule
+Module = " 8byte DO/constcy complete" 0x80,0x87
+EndModule
+Module = "16byte DO/constcy complete" 0x80,0x8F
+EndModule
+Module = "32byte DO/constcy complete" 0x80,0x9F
+EndModule
+Module = "64byte DO/constcy complete" 0x80,0xBF
+EndModule
+;**********************************************************
+; output * word constcy * word data * 1..64 byte
+;**********************************************************
+Module = " 1word AO/constcy 1word   " 0x80,0x40
+EndModule
+Module = " 2word AO/constcy 1word   " 0x80,0x41
+EndModule
+Module = " 4word AO/constcy 1word   " 0x80,0x43
+EndModule
+Module = " 8word AO/constcy 1word   " 0x80,0x47
+EndModule
+Module = "16word AO/constcy 1word   " 0x80,0x4F
+EndModule
+Module = "32word AO/constcy 1word   " 0x80,0x5F
+EndModule
+Module = "64word AO/constcy 1word   " 0x80,0x7F
+EndModule
+;**********************************************************
+; output * complete constcy * word data * 1..64 byte
+;**********************************************************
+Module = " 1word AO/constcy complete" 0x80,0xC0
+EndModule
+Module = " 2word AO/constcy complete" 0x80,0xC1
+EndModule
+Module = " 4word AO/constcy complete" 0x80,0xC3
+EndModule
+Module = " 8word AO/constcy complete" 0x80,0xC7
+EndModule
+Module = "16word AO/constcy complete" 0x80,0xCf
+EndModule
+Module = "32word AO/constcy complete" 0x80,0xDF
+EndModule
+Module = "64word AO/constcy complete" 0x80,0xFF
+EndModule

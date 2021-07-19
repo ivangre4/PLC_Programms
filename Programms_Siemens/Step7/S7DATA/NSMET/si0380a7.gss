@@ -1,0 +1,1089 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; GSD-Datei Version "03" für die Stufe 2 (FW: V2.0.0) des Diagnose-Repeater
+;
+; ============================
+;
+; Stand: 3.7.2006
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#Profibus_DP
+; <Unit-Definition-List>
+GSD_Revision=5
+Vendor_Name="SIEMENS AG"
+Model_Name="Diagnostic Repeater"
+Revision="2.0"          	;******* DR Stufe 2
+Ident_Number=0x80a7
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="hardware release 1.0"
+Software_Release="software release 2.0"
+Info_Text="Repetidor para diagnostico de linea en el PROFIBUS-DP (RS485), IP20, hasta 12 MBit/s. Soporta medicion del tiempo de ciclo DP, sincronisacion de relojes."
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+45.45_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=15
+MaxTsdr_19.2=15
+MaxTsdr_93.75=15
+MaxTsdr_187.5=15
+MaxTsdr_500=15
+MaxTsdr_45.45=15
+MaxTsdr_1.5M=25
+MaxTsdr_3M=50
+MaxTsdr_6M=100
+MaxTsdr_12M=200
+Implementation_Type="DPC31"			
+Bitmap_Device="Si80A7_N"
+Bitmap_SF="Si80A7_S"
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Slave-Specification:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+OrderNumber="6ES7 972-0AB01-0XA0"
+Set_Slave_Add_supp=0
+Freeze_Mode_supp=0
+Sync_Mode_supp=0
+Auto_Baud_supp=1
+Fail_Safe=1	
+Min_Slave_Intervall=1 
+;
+;***************************************************
+; Max_Diag_Data_Len=84 ;***** ohne ISOM
+Max_Diag_Data_Len=91 ;***** mit ISOM
+;***************************************************
+;
+Modular_Station=1
+Max_Module=1
+Modul_Offset=1
+Slave_Family=0@Netzkomponenten
+SI_ControlProgId="DiagRepeaterCtl.DiagRepeaterCtl"
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; DPV1 Keys
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+DPV1_Slave=1
+WD_Base_1ms_supp=1
+Publisher_supp=1		;
+Prm_Block_Structure_supp=1	; Blockstruktur wird unterstützt
+;
+;
+C1_Read_Write_supp=1		;******* C1-Kanal wird unterstützt
+C1_Max_Data_Len=240		;******* volle Länge
+C1_Response_Timeout=10000	;******* = 10sec
+;
+;
+;
+C2_Read_Write_supp=1		;******* C2-Kanal wird unterstützt
+C2_Max_Data_Len=240		;******* volle Länge
+C2_Response_Timeout=10000	;******* = 10sec
+C2_Max_Count_Channels=3		;******* 3 C2-Kanäle werden untestützt
+Max_Initiate_PDU_Length=52	;******* Default-Länge
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; IsoM-Keywords
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+; Slave related keywords for Isochron Mode
+Isochron_Mode_supp = 1
+Isochron_Mode_required = 0
+TBASE_DP = 1500 ; equal to 125µs
+TDP_MAX = 256 ; equal to 32ms
+TDP_MIN = 8 ; equal to 1ms
+TBASE_IO = 1500 ; equal to 125µs
+TI_MIN = 1
+TO_MIN = 1
+T_PLL_W_MAX = 12 ; equal 12*1/12 µs = 1µs
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FW_Update-Keywords
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+Firmware_Download_supp=1
+Version_Firmware_Download
+Version_Name="Siemens_FWUPD_V1.0.0"   
+End_Version_Firmware_Download
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; I&M (I&A)-Funktion-Keywords
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+DS248_Fct=0xF111
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; UnitDiag-Area fuer Leitungsfehlerstatus
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+;
+; Segment
+Unit_Diag_Bit(28)="====== Segmento DP3 ======"
+Unit_Diag_Bit(29)="====== Segmento DP2 ======"
+Unit_Diag_Bit(30)="====== Segmento DP1 ======"
+Unit_Diag_Bit(31)="====== Interface PG ======"
+;
+; Segment ON/OFF
+Unit_Diag_Bit(33)="Segmento desconectado"
+;
+;
+; Topologieermittlung ON/OFF
+Unit_Diag_Bit(34)="Determ. topologia desactiv."
+;
+;
+; Reflexionsfehlerrate Bit 7 = 0
+;
+Unit_Diag_Area=40-47
+Value(0)  ="Tasa errores reflex.: 0%"
+Value(1)  ="Tasa errores reflex.: 1%"
+Value(2)  ="Tasa errores reflex.: 2%"
+Value(3)  ="Tasa errores reflex.: 3%"
+Value(4)  ="Tasa errores reflex.: 4%"
+Value(5)  ="Tasa errores reflex.: 5%"
+Value(6)  ="Tasa errores reflex.: 6%"
+Value(7)  ="Tasa errores reflex.: 7%"
+Value(8)  ="Tasa errores reflex.: 8%"
+Value(9)  ="Tasa errores reflex.: 9%"
+Value(10) ="Tasa errores reflex.: 10%"
+Value(11) ="Tasa errores reflex.: 11%"
+Value(12) ="Tasa errores reflex.: 12%"
+Value(13) ="Tasa errores reflex.: 13%"
+Value(14) ="Tasa errores reflex.: 14%"
+Value(15) ="Tasa errores reflex.: 15%"
+Value(16) ="Tasa errores reflex.: 16%"
+Value(17) ="Tasa errores reflex.: 17%"
+Value(18) ="Tasa errores reflex.: 18%"
+Value(19) ="Tasa errores reflex.: 19%"
+Value(20) ="Tasa errores reflex.: 20%"
+Value(21) ="Tasa errores reflex.: 21%"
+Value(22) ="Tasa errores reflex.: 22%"
+Value(23) ="Tasa errores reflex.: 23%"
+Value(24) ="Tasa errores reflex.: 24%"
+Value(25) ="Tasa errores reflex.: 25%"
+Value(26) ="Tasa errores reflex.: 26%"
+Value(27) ="Tasa errores reflex.: 27%"
+Value(28) ="Tasa errores reflex.: 28%"
+Value(29) ="Tasa errores reflex.: 29%"
+Value(30) ="Tasa errores reflex.: 30%"
+Value(31) ="Tasa errores reflex.: 31%"
+Value(32) ="Tasa errores reflex.: 32%"
+Value(33) ="Tasa errores reflex.: 33%"
+Value(34) ="Tasa errores reflex.: 34%"
+Value(35) ="Tasa errores reflex.: 35%"
+Value(36) ="Tasa errores reflex.: 36%"
+Value(37) ="Tasa errores reflex.: 37%"
+Value(38) ="Tasa errores reflex.: 38%"
+Value(39) ="Tasa errores reflex.: 39%"
+Value(40) ="Tasa errores reflex.: 40%"
+Value(41) ="Tasa errores reflex.: 41%"
+Value(42) ="Tasa errores reflex.: 42%"
+Value(43) ="Tasa errores reflex.: 43%"
+Value(44) ="Tasa errores reflex.: 44%"
+Value(45) ="Tasa errores reflex.: 45%"
+Value(46) ="Tasa errores reflex.: 46%"
+Value(47) ="Tasa errores reflex.: 47%"
+Value(48) ="Tasa errores reflex.: 48%"
+Value(49) ="Tasa errores reflex.: 49%"
+Value(50) ="Tasa errores reflex.: 50%"
+Value(51) ="Tasa errores reflex.: 51%"
+Value(52) ="Tasa errores reflex.: 52%"
+Value(53) ="Tasa errores reflex.: 53%"
+Value(54) ="Tasa errores reflex.: 54%"
+Value(55) ="Tasa errores reflex.: 55%"
+Value(56) ="Tasa errores reflex.: 56%"
+Value(57) ="Tasa errores reflex.: 57%"
+Value(58) ="Tasa errores reflex.: 58%"
+Value(59) ="Tasa errores reflex.: 59%"
+Value(60) ="Tasa errores reflex.: 60%"
+Value(61) ="Tasa errores reflex.: 61%"
+Value(62) ="Tasa errores reflex.: 62%"
+Value(63) ="Tasa errores reflex.: 63%"
+Value(64) ="Tasa errores reflex.: 64%"
+Value(65) ="Tasa errores reflex.: 65%"
+Value(66) ="Tasa errores reflex.: 66%"
+Value(67) ="Tasa errores reflex.: 67%"
+Value(68) ="Tasa errores reflex.: 68%"
+Value(69) ="Tasa errores reflex.: 69%"
+Value(70) ="Tasa errores reflex.: 70%"
+Value(71) ="Tasa errores reflex.: 71%"
+Value(72) ="Tasa errores reflex.: 72%"
+Value(73) ="Tasa errores reflex.: 73%"
+Value(74) ="Tasa errores reflex.: 74%"
+Value(75) ="Tasa errores reflex.: 75%"
+Value(76) ="Tasa errores reflex.: 76%"
+Value(77) ="Tasa errores reflex.: 77%"
+Value(78) ="Tasa errores reflex.: 78%"
+Value(79) ="Tasa errores reflex.: 79%"
+Value(80) ="Tasa errores reflex.: 80%"
+Value(81) ="Tasa errores reflex.: 81%"
+Value(82) ="Tasa errores reflex.: 82%"
+Value(83) ="Tasa errores reflex.: 83%"
+Value(84) ="Tasa errores reflex.: 84%"
+Value(85) ="Tasa errores reflex.: 85%"
+Value(86) ="Tasa errores reflex.: 86%"
+Value(87) ="Tasa errores reflex.: 87%"
+Value(88) ="Tasa errores reflex.: 88%"
+Value(89) ="Tasa errores reflex.: 89%"
+Value(90) ="Tasa errores reflex.: 90%"
+Value(91) ="Tasa errores reflex.: 91%"
+Value(92) ="Tasa errores reflex.: 92%"
+Value(93) ="Tasa errores reflex.: 93%"
+Value(94) ="Tasa errores reflex.: 94%"
+Value(95) ="Tasa errores reflex.: 95%"
+Value(96) ="Tasa errores reflex.: 96%"
+Value(97) ="Tasa errores reflex.: 97%"
+Value(98) ="Tasa errores reflex.: 98%"
+Value(99) ="Tasa errores reflex.: 99%"
+Value(100) ="Tasa errores reflex.: 100%"
+;
+;
+;Telegrammfehlerrate Bit 7 = 1
+;
+;
+Value(128)="Tasa errores telegrama: 0%"
+Value(129)="Tasa errores telegrama: 1%"
+Value(130)="Tasa errores telegrama: 2%"
+Value(131)="Tasa errores telegrama: 3%"
+Value(132)="Tasa errores telegrama: 4%"
+Value(133)="Tasa errores telegrama: 5%"
+Value(134)="Tasa errores telegrama: 6%"
+Value(135)="Tasa errores telegrama: 7%"
+Value(136)="Tasa errores telegrama: 8%"
+Value(137)="Tasa errores telegrama: 9%"
+Value(138)="Tasa errores telegrama: 10%"
+Value(139)="Tasa errores telegrama: 11%"
+Value(140)="Tasa errores telegrama: 12%"
+Value(141)="Tasa errores telegrama: 13%"
+Value(142)="Tasa errores telegrama: 14%"
+Value(143)="Tasa errores telegrama: 15%"
+Value(144)="Tasa errores telegrama: 16%"
+Value(145)="Tasa errores telegrama: 17%"
+Value(146)="Tasa errores telegrama: 18%"
+Value(147)="Tasa errores telegrama: 19%"
+Value(148)="Tasa errores telegrama: 20%"
+Value(149)="Tasa errores telegrama: 21%"
+Value(150)="Tasa errores telegrama: 22%"
+Value(151)="Tasa errores telegrama: 23%"
+Value(152)="Tasa errores telegrama: 24%"
+Value(153)="Tasa errores telegrama: 25%"
+Value(154)="Tasa errores telegrama: 26%"
+Value(155)="Tasa errores telegrama: 27%"
+Value(156)="Tasa errores telegrama: 28%"
+Value(157)="Tasa errores telegrama: 29%"
+Value(158)="Tasa errores telegrama: 30%"
+Value(159)="Tasa errores telegrama: 31%"
+Value(160)="Tasa errores telegrama: 32%"
+Value(161)="Tasa errores telegrama: 33%"
+Value(162)="Tasa errores telegrama: 34%"
+Value(163)="Tasa errores telegrama: 35%"
+Value(164)="Tasa errores telegrama: 36%"
+Value(165)="Tasa errores telegrama: 37%"
+Value(166)="Tasa errores telegrama: 38%"
+Value(167)="Tasa errores telegrama: 39%"
+Value(168)="Tasa errores telegrama: 40%"
+Value(169)="Tasa errores telegrama: 41%"
+Value(170)="Tasa errores telegrama: 42%"
+Value(171)="Tasa errores telegrama: 43%"
+Value(172)="Tasa errores telegrama: 44%"
+Value(173)="Tasa errores telegrama: 45%"
+Value(174)="Tasa errores telegrama: 46%"
+Value(175)="Tasa errores telegrama: 47%"
+Value(176)="Tasa errores telegrama: 48%"
+Value(177)="Tasa errores telegrama: 49%"
+Value(178)="Tasa errores telegrama: 50%"
+Value(179)="Tasa errores telegrama: 51%"
+Value(180)="Tasa errores telegrama: 52%"
+Value(181)="Tasa errores telegrama: 53%"
+Value(182)="Tasa errores telegrama: 54%"
+Value(183)="Tasa errores telegrama: 55%"
+Value(184)="Tasa errores telegrama: 56%"
+Value(185)="Tasa errores telegrama: 57%"
+Value(186)="Tasa errores telegrama: 58%"
+Value(187)="Tasa errores telegrama: 59%"
+Value(188)="Tasa errores telegrama: 60%"
+Value(189)="Tasa errores telegrama: 61%"
+Value(190)="Tasa errores telegrama: 62%"
+Value(191)="Tasa errores telegrama: 63%"
+Value(192)="Tasa errores telegrama: 64%"
+Value(193)="Tasa errores telegrama: 65%"
+Value(194)="Tasa errores telegrama: 66%"
+Value(195)="Tasa errores telegrama: 67%"
+Value(196)="Tasa errores telegrama: 68%"
+Value(197)="Tasa errores telegrama: 69%"
+Value(198)="Tasa errores telegrama: 70%"
+Value(199)="Tasa errores telegrama: 71%"
+Value(200)="Tasa errores telegrama: 72%"
+Value(201)="Tasa errores telegrama: 73%"
+Value(202)="Tasa errores telegrama: 74%"
+Value(203)="Tasa errores telegrama: 75%"
+Value(204)="Tasa errores telegrama: 76%"
+Value(205)="Tasa errores telegrama: 77%"
+Value(206)="Tasa errores telegrama: 78%"
+Value(207)="Tasa errores telegrama: 79%"
+Value(208)="Tasa errores telegrama: 80%"
+Value(209)="Tasa errores telegrama: 81%"
+Value(210)="Tasa errores telegrama: 82%"
+Value(211)="Tasa errores telegrama: 83%"
+Value(212)="Tasa errores telegrama: 84%"
+Value(213)="Tasa errores telegrama: 85%"
+Value(214)="Tasa errores telegrama: 86%"
+Value(215)="Tasa errores telegrama: 87%"
+Value(216)="Tasa errores telegrama: 88%"
+Value(217)="Tasa errores telegrama: 89%"
+Value(218)="Tasa errores telegrama: 90%"
+Value(219)="Tasa errores telegrama: 91%"
+Value(220)="Tasa errores telegrama: 92%"
+Value(221)="Tasa errores telegrama: 93%"
+Value(222)="Tasa errores telegrama: 94%"
+Value(223)="Tasa errores telegrama: 95%"
+Value(224)="Tasa errores telegrama: 96%"
+Value(225)="Tasa errores telegrama: 97%"
+Value(226)="Tasa errores telegrama: 98%"
+Value(227)="Tasa errores telegrama: 99%"
+Value(228)="Tasa errores telegrama: 100%"
+Unit_Diag_Area_End
+;
+; Station x
+Unit_Diag_Area=48-55
+Value(0)  ="Equipo x: 0!"
+Value(1)  ="Equipo x: 1!"
+Value(2)  ="Equipo x: 2!"
+Value(3)  ="Equipo x: 3!"
+Value(4)  ="Equipo x: 4!"
+Value(5)  ="Equipo x: 5!"
+Value(6)  ="Equipo x: 6!"
+Value(7)  ="Equipo x: 7!"
+Value(8)  ="Equipo x: 8!"
+Value(9)  ="Equipo x: 9!"
+Value(10) ="Equipo x: 10!"
+Value(11) ="Equipo x: 11!"
+Value(12) ="Equipo x: 12!"
+Value(13) ="Equipo x: 13!"
+Value(14) ="Equipo x: 14!"
+Value(15) ="Equipo x: 15!"
+Value(16) ="Equipo x: 16!"
+Value(17) ="Equipo x: 17!"
+Value(18) ="Equipo x: 18!"
+Value(19) ="Equipo x: 19!"
+Value(20) ="Equipo x: 20!"
+Value(21) ="Equipo x: 21!"
+Value(22) ="Equipo x: 22!"
+Value(23) ="Equipo x: 23!"
+Value(24) ="Equipo x: 24!"
+Value(25) ="Equipo x: 25!"
+Value(26) ="Equipo x: 26!"
+Value(27) ="Equipo x: 27!"
+Value(28) ="Equipo x: 28!"
+Value(29) ="Equipo x: 29!"
+Value(30) ="Equipo x: 30!"
+Value(31) ="Equipo x: 31!"
+Value(32) ="Equipo x: 32!"
+Value(33) ="Equipo x: 33!"
+Value(34) ="Equipo x: 34!"
+Value(35) ="Equipo x: 35!"
+Value(36) ="Equipo x: 36!"
+Value(37) ="Equipo x: 37!"
+Value(38) ="Equipo x: 38!"
+Value(39) ="Equipo x: 39!"
+Value(40) ="Equipo x: 40!"
+Value(41) ="Equipo x: 41!"
+Value(42) ="Equipo x: 42!"
+Value(43) ="Equipo x: 43!"
+Value(44) ="Equipo x: 44!"
+Value(45) ="Equipo x: 45!"
+Value(46) ="Equipo x: 46!"
+Value(47) ="Equipo x: 47!"
+Value(48) ="Equipo x: 48!"
+Value(49) ="Equipo x: 49!"
+Value(50) ="Equipo x: 50!"
+Value(51) ="Equipo x: 51!"
+Value(52) ="Equipo x: 52!"
+Value(53) ="Equipo x: 53!"
+Value(54) ="Equipo x: 54!"
+Value(55) ="Equipo x: 55!"
+Value(56) ="Equipo x: 56!"
+Value(57) ="Equipo x: 57!"
+Value(58) ="Equipo x: 58!"
+Value(59) ="Equipo x: 59!"
+Value(60) ="Equipo x: 60!"
+Value(61) ="Equipo x: 61!"
+Value(62) ="Equipo x: 62!"
+Value(63) ="Equipo x: 63!"
+Value(64) ="Equipo x: 64!"
+Value(65) ="Equipo x: 65!"
+Value(66) ="Equipo x: 66!"
+Value(67) ="Equipo x: 67!"
+Value(68) ="Equipo x: 68!"
+Value(69) ="Equipo x: 69!"
+Value(70) ="Equipo x: 70!"
+Value(71) ="Equipo x: 71!"
+Value(72) ="Equipo x: 72!"
+Value(73) ="Equipo x: 73!"
+Value(74) ="Equipo x: 74!"
+Value(75) ="Equipo x: 75!"
+Value(76) ="Equipo x: 76!"
+Value(77) ="Equipo x: 77!"
+Value(78) ="Equipo x: 78!"
+Value(79) ="Equipo x: 79!"
+Value(80) ="Equipo x: 80!"
+Value(81) ="Equipo x: 81!"
+Value(82) ="Equipo x: 82!"
+Value(83) ="Equipo x: 83!"
+Value(84) ="Equipo x: 84!"
+Value(85) ="Equipo x: 85!"
+Value(86) ="Equipo x: 86!"
+Value(87) ="Equipo x: 87!"
+Value(88) ="Equipo x: 88!"
+Value(89) ="Equipo x: 89!"
+Value(90) ="Equipo x: 90!"
+Value(91) ="Equipo x: 91!"
+Value(92) ="Equipo x: 92!"
+Value(93) ="Equipo x: 93!"
+Value(94) ="Equipo x: 94!"
+Value(95) ="Equipo x: 95!"
+Value(96) ="Equipo x: 96!"
+Value(97) ="Equipo x: 97!"
+Value(98) ="Equipo x: 98!"
+Value(99) ="Equipo x: 99!"
+Value(100)="Equipo x: 100!"
+Value(101)="Equipo x: 101!"
+Value(102)="Equipo x: 102!"
+Value(103)="Equipo x: 103!"
+Value(104)="Equipo x: 104!"
+Value(105)="Equipo x: 105!"
+Value(106)="Equipo x: 106!"
+Value(107)="Equipo x: 107!"
+Value(108)="Equipo x: 108!"
+Value(109)="Equipo x: 109!"
+Value(110)="Equipo x: 110!"
+Value(111)="Equipo x: 111!"
+Value(112)="Equipo x: 112!"
+Value(113)="Equipo x: 113!"
+Value(114)="Equipo x: 114!"
+Value(115)="Equipo x: 115!"
+Value(116)="Equipo x: 116!"
+Value(117)="Equipo x: 117!"
+Value(118)="Equipo x: 118!"
+Value(119)="Equipo x: 119!"
+Value(120)="Equipo x: 120!"
+Value(121)="Equipo x: 121!"
+Value(122)="Equipo x: 122!"
+Value(123)="Equipo x: 123!"
+Value(124)="Equipo x: 124!"
+Value(125)="Equipo x: 125!"
+Value(126)="Equipo x: 126!"
+;
+;
+Value(128)="Equipo x: 0"
+Value(129)="Equipo x: 1"
+Value(130)="Equipo x: 2"
+Value(131)="Equipo x: 3"
+Value(132)="Equipo x: 4"
+Value(133)="Equipo x: 5"
+Value(134)="Equipo x: 6"
+Value(135)="Equipo x: 7"
+Value(136)="Equipo x: 8"
+Value(137)="Equipo x: 9"
+Value(138)="Equipo x: 10"
+Value(139)="Equipo x: 11"
+Value(140)="Equipo x: 12"
+Value(141)="Equipo x: 13"
+Value(142)="Equipo x: 14"
+Value(143)="Equipo x: 15"
+Value(144)="Equipo x: 16"
+Value(145)="Equipo x: 17"
+Value(146)="Equipo x: 18"
+Value(147)="Equipo x: 19"
+Value(148)="Equipo x: 20"
+Value(149)="Equipo x: 21"
+Value(150)="Equipo x: 22"
+Value(151)="Equipo x: 23"
+Value(152)="Equipo x: 24"
+Value(153)="Equipo x: 25"
+Value(154)="Equipo x: 26"
+Value(155)="Equipo x: 27"
+Value(156)="Equipo x: 28"
+Value(157)="Equipo x: 29"
+Value(158)="Equipo x: 30"
+Value(159)="Equipo x: 31"
+Value(160)="Equipo x: 32"
+Value(161)="Equipo x: 33"
+Value(162)="Equipo x: 34"
+Value(163)="Equipo x: 35"
+Value(164)="Equipo x: 36"
+Value(165)="Equipo x: 37"
+Value(166)="Equipo x: 38"
+Value(167)="Equipo x: 39"
+Value(168)="Equipo x: 40"
+Value(169)="Equipo x: 41"
+Value(170)="Equipo x: 42"
+Value(171)="Equipo x: 43"
+Value(172)="Equipo x: 44"
+Value(173)="Equipo x: 45"
+Value(174)="Equipo x: 46"
+Value(175)="Equipo x: 47"
+Value(176)="Equipo x: 48"
+Value(177)="Equipo x: 49"
+Value(178)="Equipo x: 50"
+Value(179)="Equipo x: 51"
+Value(180)="Equipo x: 52"
+Value(181)="Equipo x: 53"
+Value(182)="Equipo x: 54"
+Value(183)="Equipo x: 55"
+Value(184)="Equipo x: 56"
+Value(185)="Equipo x: 57"
+Value(186)="Equipo x: 58"
+Value(187)="Equipo x: 59"
+Value(188)="Equipo x: 60"
+Value(189)="Equipo x: 61"
+Value(190)="Equipo x: 62"
+Value(191)="Equipo x: 63"
+Value(192)="Equipo x: 64"
+Value(193)="Equipo x: 65"
+Value(194)="Equipo x: 66"
+Value(195)="Equipo x: 67"
+Value(196)="Equipo x: 68"
+Value(197)="Equipo x: 69"
+Value(198)="Equipo x: 70"
+Value(199)="Equipo x: 71"
+Value(200)="Equipo x: 72"
+Value(201)="Equipo x: 73"
+Value(202)="Equipo x: 74"
+Value(203)="Equipo x: 75"
+Value(204)="Equipo x: 76"
+Value(205)="Equipo x: 77"
+Value(206)="Equipo x: 78"
+Value(207)="Equipo x: 79"
+Value(208)="Equipo x: 80"
+Value(209)="Equipo x: 81"
+Value(210)="Equipo x: 82"
+Value(211)="Equipo x: 83"
+Value(212)="Equipo x: 84"
+Value(213)="Equipo x: 85"
+Value(214)="Equipo x: 86"
+Value(215)="Equipo x: 87"
+Value(216)="Equipo x: 88"
+Value(217)="Equipo x: 89"
+Value(218)="Equipo x: 90"
+Value(219)="Equipo x: 91"
+Value(220)="Equipo x: 92"
+Value(221)="Equipo x: 93"
+Value(222)="Equipo x: 94"
+Value(223)="Equipo x: 95"
+Value(224)="Equipo x: 96"
+Value(225)="Equipo x: 97"
+Value(226)="Equipo x: 98"
+Value(227)="Equipo x: 99"
+Value(228)="Equipo x: 100"
+Value(229)="Equipo x: 101"
+Value(230)="Equipo x: 102"
+Value(231)="Equipo x: 103"
+Value(232)="Equipo x: 104"
+Value(233)="Equipo x: 105"
+Value(234)="Equipo x: 106"
+Value(235)="Equipo x: 107"
+Value(236)="Equipo x: 108"
+Value(237)="Equipo x: 109"
+Value(238)="Equipo x: 110"
+Value(239)="Equipo x: 111"
+Value(240)="Equipo x: 112"
+Value(241)="Equipo x: 113"
+Value(242)="Equipo x: 114"
+Value(243)="Equipo x: 115"
+Value(244)="Equipo x: 116"
+Value(245)="Equipo x: 117"
+Value(246)="Equipo x: 118"
+Value(247)="Equipo x: 119"
+Value(248)="Equipo x: 120"
+Value(249)="Equipo x: 121"
+Value(250)="Equipo x: 122"
+Value(251)="Equipo x: 123"
+Value(252)="Equipo x: 124"
+Value(253)="Equipo x: 125"
+Value(254)="Equipo x: 126"
+Unit_Diag_Area_End
+;
+; Station y
+Unit_Diag_Area=56-63
+Value(0)  ="Equipo y: 0!"
+Value(1)  ="Equipo y: 1!"
+Value(2)  ="Equipo y: 2!"
+Value(3)  ="Equipo y: 3!"
+Value(4)  ="Equipo y: 4!"
+Value(5)  ="Equipo y: 5!"
+Value(6)  ="Equipo y: 6!"
+Value(7)  ="Equipo y: 7!"
+Value(8)  ="Equipo y: 8!"
+Value(9)  ="Equipo y: 9!"
+Value(10) ="Equipo y: 10!"
+Value(11) ="Equipo y: 11!"
+Value(12) ="Equipo y: 12!"
+Value(13) ="Equipo y: 13!"
+Value(14) ="Equipo y: 14!"
+Value(15) ="Equipo y: 15!"
+Value(16) ="Equipo y: 16!"
+Value(17) ="Equipo y: 17!"
+Value(18) ="Equipo y: 18!"
+Value(19) ="Equipo y: 19!"
+Value(20) ="Equipo y: 20!"
+Value(21) ="Equipo y: 21!"
+Value(22) ="Equipo y: 22!"
+Value(23) ="Equipo y: 23!"
+Value(24) ="Equipo y: 24!"
+Value(25) ="Equipo y: 25!"
+Value(26) ="Equipo y: 26!"
+Value(27) ="Equipo y: 27!"
+Value(28) ="Equipo y: 28!"
+Value(29) ="Equipo y: 29!"
+Value(30) ="Equipo y: 30!"
+Value(31) ="Equipo y: 31!"
+Value(32) ="Equipo y: 32!"
+Value(33) ="Equipo y: 33!"
+Value(34) ="Equipo y: 34!"
+Value(35) ="Equipo y: 35!"
+Value(36) ="Equipo y: 36!"
+Value(37) ="Equipo y: 37!"
+Value(38) ="Equipo y: 38!"
+Value(39) ="Equipo y: 39!"
+Value(40) ="Equipo y: 40!"
+Value(41) ="Equipo y: 41!"
+Value(42) ="Equipo y: 42!"
+Value(43) ="Equipo y: 43!"
+Value(44) ="Equipo y: 44!"
+Value(45) ="Equipo y: 45!"
+Value(46) ="Equipo y: 46!"
+Value(47) ="Equipo y: 47!"
+Value(48) ="Equipo y: 48!"
+Value(49) ="Equipo y: 49!"
+Value(50) ="Equipo y: 50!"
+Value(51) ="Equipo y: 51!"
+Value(52) ="Equipo y: 52!"
+Value(53) ="Equipo y: 53!"
+Value(54) ="Equipo y: 54!"
+Value(55) ="Equipo y: 55!"
+Value(56) ="Equipo y: 56!"
+Value(57) ="Equipo y: 57!"
+Value(58) ="Equipo y: 58!"
+Value(59) ="Equipo y: 59!"
+Value(60) ="Equipo y: 60!"
+Value(61) ="Equipo y: 61!"
+Value(62) ="Equipo y: 62!"
+Value(63) ="Equipo y: 63!"
+Value(64) ="Equipo y: 64!"
+Value(65) ="Equipo y: 65!"
+Value(66) ="Equipo y: 66!"
+Value(67) ="Equipo y: 67!"
+Value(68) ="Equipo y: 68!"
+Value(69) ="Equipo y: 69!"
+Value(70) ="Equipo y: 70!"
+Value(71) ="Equipo y: 71!"
+Value(72) ="Equipo y: 72!"
+Value(73) ="Equipo y: 73!"
+Value(74) ="Equipo y: 74!"
+Value(75) ="Equipo y: 75!"
+Value(76) ="Equipo y: 76!"
+Value(77) ="Equipo y: 77!"
+Value(78) ="Equipo y: 78!"
+Value(79) ="Equipo y: 79!"
+Value(80) ="Equipo y: 80!"
+Value(81) ="Equipo y: 81!"
+Value(82) ="Equipo y: 82!"
+Value(83) ="Equipo y: 83!"
+Value(84) ="Equipo y: 84!"
+Value(85) ="Equipo y: 85!"
+Value(86) ="Equipo y: 86!"
+Value(87) ="Equipo y: 87!"
+Value(88) ="Equipo y: 88!"
+Value(89) ="Equipo y: 89!"
+Value(90) ="Equipo y: 90!"
+Value(91) ="Equipo y: 91!"
+Value(92) ="Equipo y: 92!"
+Value(93) ="Equipo y: 93!"
+Value(94) ="Equipo y: 94!"
+Value(95) ="Equipo y: 95!"
+Value(96) ="Equipo y: 96!"
+Value(97) ="Equipo y: 97!"
+Value(98) ="Equipo y: 98!"
+Value(99) ="Equipo y: 99!"
+Value(100)="Equipo y: 100!"
+Value(101)="Equipo y: 101!"
+Value(102)="Equipo y: 102!"
+Value(103)="Equipo y: 103!"
+Value(104)="Equipo y: 104!"
+Value(105)="Equipo y: 105!"
+Value(106)="Equipo y: 106!"
+Value(107)="Equipo y: 107!"
+Value(108)="Equipo y: 108!"
+Value(109)="Equipo y: 109!"
+Value(110)="Equipo y: 110!"
+Value(111)="Equipo y: 111!"
+Value(112)="Equipo y: 112!"
+Value(113)="Equipo y: 113!"
+Value(114)="Equipo y: 114!"
+Value(115)="Equipo y: 115!"
+Value(116)="Equipo y: 116!"
+Value(117)="Equipo y: 117!"
+Value(118)="Equipo y: 118!"
+Value(119)="Equipo y: 119!"
+Value(120)="Equipo y: 120!"
+Value(121)="Equipo y: 121!"
+Value(122)="Equipo y: 122!"
+Value(123)="Equipo y: 123!"
+Value(124)="Equipo y: 124!"
+Value(125)="Equipo y: 125!"
+Value(126)="Equipo y: 126!"
+Value(127)="Ubicacion tras ultimo equipo"
+Value(128)="Equipo y: 0"
+Value(129)="Equipo y: 1"
+Value(130)="Equipo y: 2"
+Value(131)="Equipo y: 3"
+Value(132)="Equipo y: 4"
+Value(133)="Equipo y: 5"
+Value(134)="Equipo y: 6"
+Value(135)="Equipo y: 7"
+Value(136)="Equipo y: 8"
+Value(137)="Equipo y: 9"
+Value(138)="Equipo y: 10"
+Value(139)="Equipo y: 11"
+Value(140)="Equipo y: 12"
+Value(141)="Equipo y: 13"
+Value(142)="Equipo y: 14"
+Value(143)="Equipo y: 15"
+Value(144)="Equipo y: 16"
+Value(145)="Equipo y: 17"
+Value(146)="Equipo y: 18"
+Value(147)="Equipo y: 19"
+Value(148)="Equipo y: 20"
+Value(149)="Equipo y: 21"
+Value(150)="Equipo y: 22"
+Value(151)="Equipo y: 23"
+Value(152)="Equipo y: 24"
+Value(153)="Equipo y: 25"
+Value(154)="Equipo y: 26"
+Value(155)="Equipo y: 27"
+Value(156)="Equipo y: 28"
+Value(157)="Equipo y: 29"
+Value(158)="Equipo y: 30"
+Value(159)="Equipo y: 31"
+Value(160)="Equipo y: 32"
+Value(161)="Equipo y: 33"
+Value(162)="Equipo y: 34"
+Value(163)="Equipo y: 35"
+Value(164)="Equipo y: 36"
+Value(165)="Equipo y: 37"
+Value(166)="Equipo y: 38"
+Value(167)="Equipo y: 39"
+Value(168)="Equipo y: 40"
+Value(169)="Equipo y: 41"
+Value(170)="Equipo y: 42"
+Value(171)="Equipo y: 43"
+Value(172)="Equipo y: 44"
+Value(173)="Equipo y: 45"
+Value(174)="Equipo y: 46"
+Value(175)="Equipo y: 47"
+Value(176)="Equipo y: 48"
+Value(177)="Equipo y: 49"
+Value(178)="Equipo y: 50"
+Value(179)="Equipo y: 51"
+Value(180)="Equipo y: 52"
+Value(181)="Equipo y: 53"
+Value(182)="Equipo y: 54"
+Value(183)="Equipo y: 55"
+Value(184)="Equipo y: 56"
+Value(185)="Equipo y: 57"
+Value(186)="Equipo y: 58"
+Value(187)="Equipo y: 59"
+Value(188)="Equipo y: 60"
+Value(189)="Equipo y: 61"
+Value(190)="Equipo y: 62"
+Value(191)="Equipo y: 63"
+Value(192)="Equipo y: 64"
+Value(193)="Equipo y: 65"
+Value(194)="Equipo y: 66"
+Value(195)="Equipo y: 67"
+Value(196)="Equipo y: 68"
+Value(197)="Equipo y: 69"
+Value(198)="Equipo y: 70"
+Value(199)="Equipo y: 71"
+Value(200)="Equipo y: 72"
+Value(201)="Equipo y: 73"
+Value(202)="Equipo y: 74"
+Value(203)="Equipo y: 75"
+Value(204)="Equipo y: 76"
+Value(205)="Equipo y: 77"
+Value(206)="Equipo y: 78"
+Value(207)="Equipo y: 79"
+Value(208)="Equipo y: 80"
+Value(209)="Equipo y: 81"
+Value(210)="Equipo y: 82"
+Value(211)="Equipo y: 83"
+Value(212)="Equipo y: 84"
+Value(213)="Equipo y: 85"
+Value(214)="Equipo y: 86"
+Value(215)="Equipo y: 87"
+Value(216)="Equipo y: 88"
+Value(217)="Equipo y: 89"
+Value(218)="Equipo y: 90"
+Value(219)="Equipo y: 91"
+Value(220)="Equipo y: 92"
+Value(221)="Equipo y: 93"
+Value(222)="Equipo y: 94"
+Value(223)="Equipo y: 95"
+Value(224)="Equipo y: 96"
+Value(225)="Equipo y: 97"
+Value(226)="Equipo y: 98"
+Value(227)="Equipo y: 99"
+Value(228)="Equipo y: 100"
+Value(229)="Equipo y: 101"
+Value(230)="Equipo y: 102"
+Value(231)="Equipo y: 103"
+Value(232)="Equipo y: 104"
+Value(233)="Equipo y: 105"
+Value(234)="Equipo y: 106"
+Value(235)="Equipo y: 107"
+Value(236)="Equipo y: 108"
+Value(237)="Equipo y: 109"
+Value(238)="Equipo y: 110"
+Value(239)="Equipo y: 111"
+Value(240)="Equipo y: 112"
+Value(241)="Equipo y: 113"
+Value(242)="Equipo y: 114"
+Value(243)="Equipo y: 115"
+Value(244)="Equipo y: 116"
+Value(245)="Equipo y: 117"
+Value(246)="Equipo y: 118"
+Value(247)="Equipo y: 119"
+Value(248)="Equipo y: 120"
+Value(249)="Equipo y: 121"
+Value(250)="Equipo y: 122"
+Value(251)="Equipo y: 123"
+Value(252)="Equipo y: 124"
+Value(253)="Equipo y: 125"
+Value(254)="Equipo y: 126"
+Unit_Diag_Area_End
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Fehlerursache
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Bit A.0
+Unit_Diag_Bit(112)="Ubicacion y causa desconocidas"
+;
+; Bit A.1
+Unit_Diag_Bit(113)="Error desconocido (error A.1)"
+;
+; Bit A.2
+Unit_Diag_Bit(114)="Error desconocido (error A.2)"
+;
+; Bit A.3
+Unit_Diag_Bit(115)="Otro DR cableado con DP2"
+;
+; Bit A.4
+Unit_Diag_Bit(116)="Otro DR cableado con DP3"
+;
+; Bit A.5
+Unit_Diag_Bit(117)="Error desconocido (error A.5)"
+;
+; Bit A.6
+Unit_Diag_Bit(118)="Causa error no identificable"
+;
+; Bit A.7
+Unit_Diag_Bit(119)="Tasa critica errores telegrama"
+;
+; Bit B.0
+Unit_Diag_Bit(120)="Rotura de linea de senales A"
+;
+; Bit B.1
+Unit_Diag_Bit(121)="Cortocircuito B a pantalla"
+;
+; Bit B.2
+Unit_Diag_Bit(122)="Error desconocido (error B.2)"
+;
+; Bit B.3
+Unit_Diag_Bit(123)="Cortocircuito A a pantalla"
+;
+; Bit B.4
+Unit_Diag_Bit(124)="Rotura de linea de senales B"
+;
+; Bit B.5
+Unit_Diag_Bit(125)="Error desconocido (error B.5)"
+;
+; Bit B.6
+Unit_Diag_Bit(126)="Rotura A/B, falta resist."
+;
+; Bit B.7
+Unit_Diag_Bit(127)="Cortoc. A/B, resist. excesiva"
+;
+; Bit C.0
+Unit_Diag_Bit(128)="Segm. desactivado.: cero cont."
+;
+; Bit C.1
+Unit_Diag_Bit(129)="Segm. desactivado: inestabl"
+;
+; Bit C.2
+Unit_Diag_Bit(130)="Error desconocido (error C.2)"
+;
+; Bit C.3
+Unit_Diag_Bit(131)="Error desconocido (error C.3)"
+;
+; Bit C.4
+Unit_Diag_Bit(132)="Mas de 32 estaciones en segm."
+;
+; Bit C.5
+Unit_Diag_Bit(133)="Estacion demasiado distante"
+;
+; Bit C.6
+Unit_Diag_Bit(134)="Profundidad cascada excedida"
+;
+; Bit C.7
+Unit_Diag_Bit(135)="Se detectaron otros errores"
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; TSYNC-Diagnose
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;
+UnitDiagType = 161
+X_Unit_Diag_Bit(40) = "TDP_Violacion"
+X_Unit_Diag_Bit(41) = "TDX_Violacion"
+X_Unit_Diag_Bit(42) = "TSYNC_Prm_Fault" 
+EndUnitDiagType
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Prm-Text-Def-List
+PrmText=1
+Text(0)= "ON"
+Text(1)= "OFF"
+EndPrmText
+;
+PrmText=2
+Text(0x1b)= "Segmento DP2"
+Text(0x2e)= "Segmento DP2,DP3"
+Text(0x41)= "Segmento DP2,DP3,DP1"
+Text(0x54)= "Segmento DP2,DP3,DP1,PG"
+Text(0x5b)= "Segmento DP2,DP3,DP1,PG,TSYNC" 
+EndPrmText
+;
+;
+ExtUserPrmData=1 "Determ. topologia DP2"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=2 "Determ. topologia DP3"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=3 "Telegrama diagnostico para"
+BitArea(0-7) 0x54 0x5b,0x54,0x41,0x2e,0x1b
+Prm_Text_Ref=2
+EndExtUserPrmData
+;
+ExtUserPrmData=4 "TDP_Vigilancia"
+Bit(0) 1 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+ExtUserPrmData=5 "TDX_Vigilancia"
+Bit(1) 1 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+;
+;
+;
+; UserPrmData: Length and Preset
+;
+; DPV1_Status_1 = 0x80, => DPV1_Enable = 1
+; DPV1_Status_2 = 0x00, 
+; DPV1_Status_3 = 0x08, => Prm_Structure = 1
+;
+;*********************************************************
+;Max_User_Prm_Data_Len=10 ;**** ohne ISOM-Parameter
+;Max_User_Prm_Data_Len=39 ;**** mit ISOM-Parameter
+;
+Max_User_Prm_Data_Len=60 ;**** mit Time AR Block
+;
+;*********************************************************
+;
+Ext_User_Prm_Data_Const(0)=0x80,0x00,0x08,0x08,0x81,0x00,0x00,0x54,0x00,0x00,0x00
+;
+;
+; Einstellung der Diagnoselaenge
+;
+Ext_User_Prm_Data_Ref(7)=3
+;
+;
+; Einstellung Topologieermittlung DP2 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=1
+;
+;
+; Einstellung Topologieermittlung DP3 ON/OFF
+;
+Ext_User_Prm_Data_Ref(9)=2
+;
+;
+; Einstellung TDP_Überwachung ON/OFF
+;
+Ext_User_Prm_Data_Ref(10)=4
+;
+;
+; Einstellung TDX_Überwachung ON/OFF
+;
+Ext_User_Prm_Data_Ref(10)=5
+;
+; ============================
+; ============================
+;
+;
+Time_Sync_supp = 1 
+Ident_Maintenance_supp = 1
+;
+;
+; ============================
+; ============================
+;
+;
+; <Module-Definition-List>
+; 1 Byte A, 0 Byte E
+Module="DR-CfgData" 0x20
+1
+EndModule
+;
+;
+;
+; 1Byte A, 3Byte E; fuer die Überwachung der Taktsynchronität
+Module="TSYNC-Diag-Modulo" 0xC0, 0x00, 0x82 
+2
+EndModule
+;
+;
+SlotDefinition
+Slot(1) = "Slot 1" 1 1-2
+EndSlotDefinition
+;
+;
+;
+Max_Input_Len=3
+Max_Output_Len=1
+Max_Data_Len=4
+;
+;; Ende GSD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

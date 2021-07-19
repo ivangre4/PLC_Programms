@@ -1,0 +1,108 @@
+; Metafile-Erweiterungen fuer Utah
+
+; ----------------------------- HMI_STATION_CT
+[_S7H_HMI_STATION_CT]
+basetype=_S7H_STATION_AT
+server=Wcf_StaX.DLL
+prefix=OM
+ObjType=19798113
+SHORTNAME=SIMATIC HMI-Station
+relation=1315818,_S7H_HMI_RACK_CT[1315819];deep
+
+CLASS_PROPERTIES=0
+AdditionalKatalogInfo=0x02
+SYSTEM_TYPE=0x10
+
+MAX_NUM_OF_CHILDS=1
+ICON_TYPE=17
+
+CountAutoCreatedChilds=1
+; _S7H_HMI_RACK_CT
+AutoCreatedChild1=19798117, 0, FIXED
+
+relation=1315838,_AUT_CAPABLE_S7RESOFF_AT[1315839]
+
+Rule_01000200=MAXC(1)
+
+CatalogParent=1315536,1879048201
+
+; Katalog Ansicht
+nKatChilds=5
+					; Controller
+KatChild1=1315948
+					; Katalogklasse PC CP PROFIBUS
+KatChild2=1335349
+					; Katalogklasse PC CP Industrial Ethernet
+KatChild3=1335387
+					; Katalogklasse HMI
+KatChild4=1335389
+					; Applikationen
+KatChild5=1335388
+
+; --------
+; HMI MPI/DP CP
+; --------
+[_S7H_HMI_PB_CP_CT]
+server=S7WBPCLX.DLL
+prefix=OM
+ObjType=0x012E1866
+basetype=_S7H_PC_ALLG_PB_CP_CT
+CatalogParent=1335349
+IsCatEntry=1
+;MLFB= 
+;071122: changed to IF1B for all panels
+;correction for HMI-PC-stations to HMI MPI/DP at PrivateTest() 
+;SHORTNAME=HMI MPI/DP
+SHORTNAME=IF1B MPI/DP
+;S7_TYPE_CODE=0xAC02
+;MaxSap=62
+
+;FMS_PROFIL_NAME=CP_Profibus
+;KoordinierungPossible=0
+;MAX_FMS_CON=32
+;CAN_DO_ISLAVE=1
+;PNO_IDENT_NO=0x8000
+;ROUTING_CAPABILITY=25
+;S7SLAVE_ABLE=1
+;MAX_SLAVES=64
+;ALARM_MODE=0
+DP_SUPPORT=0
+
+;SDB_CAUSED_LIST=3100|2000,4|120|3109|3002
+;SDB_CARRIER_LIST=3100|2000,4|120|3109|3002
+
+;MAX_S7_CON=255
+;MAX_PROJ_H1_CON=0
+;MAX_PROJ_L2_CON=255
+;CP_MAX_CONN_CNT=255
+
+
+; --------
+; HMI IE CP
+; --------
+[_S7H_HMI_IE_CP_CT]
+server=S7WBPCHX.DLL
+prefix=OM
+ObjType=0x012E1867
+
+basetype=_S7H_PC_ALLG_IE_CP_CT
+
+NET_PROTOCOLS=IP
+NET_PROTOCOLS_SELECT=IP
+
+HIDE_PARAM_DLG=1
+
+CatalogParent=1335387
+IsCatEntry=1
+
+;basetype=_S7H_PC_IE_CP_CT
+;MLFB=
+SHORTNAME=HMI IE
+;S7_TYPE_CODE=0xAC01
+
+;RED_COMPATIBILITY=0
+;ROUTING_CAPABILITY=17
+
+;SDB_CAUSED_LIST=3100|3107|3108|3111|3119|3002
+;SDB_CARRIER_LIST=3100|3107|3108|3111|3119|3002
+

@@ -1,0 +1,509 @@
+@DB_TYP SDB_SYS_PC_APP	V1.0  DOS
+@CONVERTER				V1.0
+@LANGUAGE				SYSTEM
+
+
+# ---------------------------------------------------------------
+# Definition des PC Applikation System SDB
+#
+# beinhaltet:	- Applikationsname
+#
+# Ersteller: Gerhard Schawe A&D PT2
+#
+# Historie :
+#
+#	20.01.98	GS	Ersterstellung
+#	25.02.98	GS	Einarbeitung der entgültigen SDB Spezifikation
+#
+# ---------------------------------------------------------------
+
+ALL
+{
+ 	SDB$LNG	DM||||	# für lokale Zwecke
+	SDB
+	{
+		SDBIdentblock$NAM					_M||||
+		SDBIdentblock
+		{
+			# ---------------------------------------------------
+			# Header
+			# ---------------------------------------------------
+
+			# Länge SDB Identblock
+			SDBIdentblock$LNG				BM||||
+
+			# Parameterblockkennung ID SDB Kennung
+			SDBIdentblock_ID				BC|0x01|||
+
+			# ---------------------------------------------------
+			# decodierungsrelevante Information	( Upload )
+			# ---------------------------------------------------
+
+			# Baugruppentyp
+			Baugruppentyp			SM||||
+
+			# Inhalt des Registry Eintrages "ContentPattern"
+			SDB_Inhalt				SM|0|||
+
+			# ---------------------------------------------------
+			# Übertragungsrelevante Information
+			# ---------------------------------------------------
+
+			# Übertragungsattribut
+			Uebertragungsattribut	BM|3|||
+
+			# reserviert
+			SDB_KENNUNG_RESV		BM|0|||
+
+			# K-Bus/Partyline
+			TSAP_ID_TYP				BM|0|||
+
+			# K-Bus, ohne Bedeutung
+			DEVICE_ID				BM|0|||
+
+			# PG-Verbindung
+			TSAP_ID1				BM|0xfe|||
+
+			# reserviert
+			TSAP_ID2				BM|0|||
+
+			# reserviert
+			NEXT_STADDR				BM|0|||
+
+			# Rack/Steckplatz
+			REM_STADDR				BM|0|||
+		}
+
+		PBL_APP_NAME$NAM			_M||||
+		PBL_APP_NAME
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader Applikationsname
+			# ---------------------------------------------------
+
+			# Parameterblock ID
+			PBL_APP_NAME_ID			BC|2|||
+
+			# Version
+			PBL_APP_NAME_VERSION	BC|0|||
+
+			# Länge
+			PBL_APP_NAME$LNG		WM||||
+
+			# ---------------------------------------------------
+			# die Applikationsinformation
+			# ---------------------------------------------------
+
+			# Länge des Applikationsnamens
+			ApplName$LNG			BM||||
+
+			# Applikationsname ( maximale Länge 255 Zeichen )
+			ApplName				AM|""|0|255|0
+		}
+
+		PBL_STATION_NAME$NAM		_O||||
+		PBL_STATION_NAME
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader Stationsinfo
+			# ---------------------------------------------------
+
+			# Parameterblock ID
+			PBL_STATION_NAME_ID		BC|4|||
+
+			# Version
+			PBL_STATION_NAME_VERSION BC|0|||
+
+			# Länge
+			PBL_STATION_NAME$LNG	WM||||
+
+			# ---------------------------------------------------
+			# die Stationsinformation
+			# ---------------------------------------------------
+
+			# Länge des Stationsnamens
+			StationName$LNG			BM||||
+
+			# Symbolname ( maximale Länge 255 Zeichen )
+			StationName				AM|""|0|255|0
+		}
+
+		PBL_DP_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_DP_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader DP Master Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_DP_BGR_ZUORDNUNG_ID		BC|5|||
+
+			PBL_DP_BGR_ZUORDNUNG_VERSION	BC|1|||
+			PBL_DP_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID				DM||||
+			}
+
+		}
+
+		PBL_DP_SLV_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_DP_SLV_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader DP Slave Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_DP_SLV_BGR_ZUORDNUNG_ID		BC|6|||
+			PBL_DP_SLV_BGR_ZUORDNUNG_VERSION	BC|0|||
+			PBL_DP_SLV_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID						DM||||
+			}
+		}
+
+		PBL_DP_ALL_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_DP_ALL_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader DP Slave Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_DP_ALL_BGR_ZUORDNUNG_ID		BC|7|||
+			PBL_DP_ALL_BGR_ZUORDNUNG_VERSION	BC|0|||
+			PBL_DP_ALL_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID						DM||||
+			}
+		}
+		
+		PBL_PNIO_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_PNIO_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader PNIO Controller Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_PNIO_BGR_ZUORDNUNG_ID		BC|0x55|||
+
+			PBL_PNIO_BGR_ZUORDNUNG_VERSION	BC|1|||
+			PBL_PNIO_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID				DM||||
+			}
+
+		}
+
+		PBL_PNIO_DEV_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_PNIO_DEV_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader PNIO Device Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_PNIO_DEV_BGR_ZUORDNUNG_ID		BC|0x56|||
+			PBL_PNIO_DEV_BGR_ZUORDNUNG_VERSION	BC|0|||
+			PBL_PNIO_DEV_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID						DM||||
+			}
+		}
+
+		PBL_PNIO_ALL_BGR_ZUORDNUNG$NAM		_O||||
+		PBL_PNIO_ALL_BGR_ZUORDNUNG
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader PNIO Device Baugruppen Zuordnung
+			# ---------------------------------------------------
+
+			PBL_PNIO_ALL_BGR_ZUORDNUNG_ID		BC|0x57|||
+			PBL_PNIO_ALL_BGR_ZUORDNUNG_VERSION	BC|0|||
+			PBL_PNIO_ALL_BGR_ZUORDNUNG$LNG	WM||||
+
+			VMD_IDS$CNT			BM||||
+			VMD_IDS$NAM			_A||||
+			VMD_IDS
+			{
+				VMD_ID						DM||||
+			}
+		}
+
+		PBL_OPC_FMS_VFD$NAM		_O||||
+		PBL_OPC_FMS_VFD
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für VFD Liste
+			# ---------------------------------------------------
+
+			PBL_OPC_FMS_VFD_ID		BC|64|||
+			PBL_OPC_FMS_VFD_VERSION		BC|0|||
+			PBL_OPC_FMS_VFD$LNG		WM||||
+
+			PBL_OPC_FMS_VFD_ENTRY$CNT	WM||||
+			PBL_OPC_FMS_VFD_ENTRY$NAM	_A||||
+			PBL_OPC_FMS_VFD_ENTRY
+			{
+				PBL_OPC_FMS_VFD_ENTRY_ID		BC|65|||
+				PBL_OPC_FMS_VFD_ENTRY_VERSION		BC|0|||
+				PBL_OPC_FMS_VFD_ENTRY$LNG		WM||||
+
+				VFD_NUMBER				DM||||
+				PROFILE_NUMBER				WM|0|||
+
+				VFD_NAME$LNG				BM||||
+				VFD_NAME				AM||||
+
+				VENDOR_NAME$LNG				BM||||
+				VENDOR_NAME				AM||||
+
+				REVISION$LNG				BM||||
+				REVISION				AM||||
+			}
+		}
+
+		PBL_OPC_CORE_DP$NAM		_O||||
+		PBL_OPC_CORE_DP
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für DP - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_DP_ID		BC|9|||
+			PBL_OPC_CORE_DP_VERSION		BC|0|||
+			PBL_OPC_CORE_DP$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_SR$NAM		_O||||
+		PBL_OPC_CORE_SR
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für SR - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_SR_ID		BC|10|||
+			PBL_OPC_CORE_SR_VERSION		BC|0|||
+			PBL_OPC_CORE_SR$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			BUFFER_LENGTH			WM||||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_FDL$NAM		_O||||
+		PBL_OPC_CORE_FDL
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für FDL - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_FDL_ID		BC|11|||
+			PBL_OPC_CORE_FDL_VERSION	BC|0|||
+			PBL_OPC_CORE_FDL$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_S7$NAM		_O||||
+		PBL_OPC_CORE_S7
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für S7 - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_S7_ID		BC|12|||
+			PBL_OPC_CORE_S7_VERSION		BC|0|||
+			PBL_OPC_CORE_S7$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			S7_MINI_DB_PERSISTANCE_COUNT	WC|5|||
+			S7_MINI_DB_ABORT_TIME_OUT	WC|300|||
+			STORE_EVENTS_TIME		DM||||
+			STORE_EVENTS_COUNT		WM||||
+
+			VFD$CNT				WM||||
+			VFD$NAM				_A||||
+			VFD
+			{
+				VFD_NAME$LNG		BM||||
+				VFD_NAME		AM||||
+			}
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_FMS$NAM		_O||||
+		PBL_OPC_CORE_FMS
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für FMS - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_FMS_ID		BC|13|||
+			PBL_OPC_CORE_FMS_VERSION	BC|0|||
+			PBL_OPC_CORE_FMS$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_SNMP$NAM		_O||||
+		PBL_OPC_CORE_SNMP
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für SNMP - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_SNMP_ID		BC|16|||
+			PBL_OPC_CORE_SNMP_VERSION	BC|0|||
+			PBL_OPC_CORE_SNMP$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE		BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS	BM|0|0|3|1
+			ACC_SPEC_RIGHTS		BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK	DM|0|||
+			STORE_EVENTS_TIME		DM|60000|||
+			STORE_EVENTS_COUNT		DM|0|||
+		}
+
+		PBL_OPC_CORE_PN$NAM		_O||||
+		PBL_OPC_CORE_PN
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für ProfiNET - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_PN_ID		BC|14|||
+			PBL_OPC_CORE_PN_VERSION	BC|0|||
+			PBL_OPC_CORE_PN$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+		
+		PBL_OPC_CORE_PNIO$NAM		_O||||
+		PBL_OPC_CORE_PNIO
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für PROFINET-IO - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_PNIO_ID		BC|18|||
+			PBL_OPC_CORE_PNIO_VERSION	BC|0|||
+			PBL_OPC_CORE_PNIO$LNG		WM||||
+
+			CYCLE_TIME			WM|0|||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+		}
+
+		PBL_OPC_CORE_DPC2$NAM		_O||||
+		PBL_OPC_CORE_DPC2
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für ProfiNET - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_DPC2_ID		BC|15|||
+			PBL_OPC_CORE_DPC2_VERSION	BC|0|||
+			PBL_OPC_CORE_DPC2$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_OPC_CORE_DPC2PD$NAM		_O||||
+		PBL_OPC_CORE_DPC2PD
+		{
+			# ---------------------------------------------------
+			# Parameterblockheader für ProfiNET - Coreserver
+			# ---------------------------------------------------
+
+			PBL_OPC_CORE_DPC2PD_ID		BC|17|||
+			PBL_OPC_CORE_DPC2PD_VERSION	BC|0|||
+			PBL_OPC_CORE_DPC2PD$LNG		WM||||
+
+			CYCLE_TIME			WM||||
+			RESERVED			WM|0|||
+			ACC_PROT_ACTIVE			BM|0|0|1|1
+			ACC_DEFAULT_RIGHTS		BM|0|0|3|1
+			ACC_SPEC_RIGHTS			BM|0|0|1|1
+
+			TIMEOUT_FIRST_CALLBACK			DM|0|||
+		}
+
+		PBL_BGR_NAME$NAM			_O||||			# Name und Object-ID der Baugruppe
+		PBL_BGR_NAME
+		{
+			PBL_ID								BC|0x15|||
+			PBL_ID_VERSION						BC|0|||
+			PBL_BGR_NAME$LNG					WM||||
+			
+			OBJ_ID								DM||||
+			BGR_NAME$LNG						BM||||
+			BGR_NAME							AO||0|255|0
+		}
+
+	}
+}
+

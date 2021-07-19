@@ -1,0 +1,241 @@
+;===============================================================
+; GSD-Datei für Artikel 6FX2001-xxxxx, SIEMENS
+; Version : (V1.4)-(Ansprechpartner Hr. Rechinger +49(0)9131/98-3955)
+; Copyright (C) SIEMENS AG 2003
+; All Rights Reserved. 
+;=============================================================== 
+; Dateiname:         SIEM80F9.gsg
+; Datum:      			  07.01.2003	         
+;========================================================================================
+; Änderungen:			  11.02.03: 
+;                    Infotext hinzugefügt
+;
+; 								  03.03.04: 
+;                    	- Revision -> 1.1 / DJ
+;								 	- Softwareversion -> 4.2 / DJ
+;									- Hardwareversion -> 5.0 / DJ
+;								  	- Maximum number of steps adapted to OCD 
+;									   requirements (13 + 14 Bit max.) / DJ		                 
+;
+; 								  05.10.04: 
+;                    	- Revision -> 1.2 / DJ
+;                     - Filename (comment) corrected
+;
+;									29.10.04:
+;									-	Revision -> 1.3 / DJ
+;									- default-values "steps per revolution" and
+;										"Total resolution" set to physical resolution 
+;
+;									10.11.04:
+;									-	Revision -> 1.4 / DJ
+;									- default-values "steps per revolution" set to 8192 
+;										and "Total resolution" set to 8192 x 4096
+;========================================================================================
+
+
+#Profibus_DP
+;
+
+;--- Parameter text -----------------------------------------------------
+
+PrmText=1
+Text(0)="Steigend im Uhrzeigersinn (0)"
+Text(1)="Fallend im Uhrzeigersinn (1)"
+EndPrmText
+
+PrmText=2
+Text(0)="Ausgeschaltet"
+Text(1)="Eingeschaltet"
+EndPrmText
+
+ExtUserPrmData=1 "Zählrichtung"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+
+ExtUserPrmData=2 "Messschritte pro Umdrehung"
+Unsigned16 8192 0-8192
+EndExtUserPrmData
+
+ExtUserPrmData=3 "Gesamtauflösung (high)"
+Unsigned16  512 0-2048
+EndExtUserPrmData
+
+ExtUserPrmData=4 "Gesamtauflösung (low)"
+Unsigned16  0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData=5 "Skalierung/Preset/Drehrichtung"
+Bit(1) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+
+ExtUserPrmData=6 "Maximale zulässige Ausfälle MLZ"
+Unsigned8 1 0-255
+EndExtUserPrmData
+
+;--- general: -----------------------------------------------------
+
+GSD_Revision        =  4
+Vendor_Name         = "SIEMENS AG"
+Model_Name          = "SIMODRIVE sensor isochron"
+Revision            = "1.4"
+Ident_Number        = 0x80F9
+Protocol_Ident      = 0 ; 0 = PROFIBUS DP
+Station_Type        = 0 ; 0 = DP Slave
+FMS_supp            = 0 ; 0 = FMS not supported
+Hardware_Release    = "V5.0"
+Software_Release    = "V4.2"
+DP_Encoder_class = 3
+DP_Encoder_profile_version = 1.08
+DP_Encoder_manufacturer_specific_functions = 1
+
+;
+9.6_supp            = 1
+19.2_supp           = 1
+45.45_supp          = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 1
+12M_supp            = 1
+;
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_45.45       = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+MaxTsdr_3M          = 50
+MaxTsdr_6M          = 100
+MaxTsdr_12M         = 200
+;
+Redundancy          = 0
+Repeater_Ctrl_Sig   = 0
+24V_Pins            = 0
+Implementation_Type = "DPC31"
+Bitmap_Device       = "AWG0024n"
+
+;--- user-defined -------------------------------------------------
+OrderNumber="6FX2001-5xPxx"
+;
+;--- slave basic -------------------------------------------------------
+Freeze_Mode_supp    = 1
+Sync_Mode_supp      = 1
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+;
+;--- User Parameter -------------------------------------------------------
+
+Max_User_Prm_Data_Len= 52
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08,0x15,0x81,0x00,0x00,0x08,0x00,0x00,0x20,0x00,0x02,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(7)=1			; Zählrichtung
+Ext_User_Prm_Data_Ref(7)=5			; Skalierung, Preset und Drehrichtung ausgeschaltet
+Ext_User_Prm_Data_Ref(10)= 2   	; Auflösung pro Umdrehung
+Ext_User_Prm_Data_Ref(12)=3   	; Gesamtauflösung (high)
+Ext_User_Prm_Data_Ref(14)=4   	; Gesamtauflösung (low)
+Ext_User_Prm_Data_Ref(16)=6		; Maximal tolerierte Masterlebenszeichenausfälle
+
+Min_Slave_Intervall = 1
+Modular_Station     = 1
+Max_Module          = 1   			; max. 
+Max_Input_Len       = 12  			; max. 12 Byte (LZ + Status + actual value 1 + actaul value 2)
+Max_Output_Len      = 4   			; max. 8 Byte  (LZ + Control) 
+Max_Data_Len        = 16  			; total of max input and max output
+Modul_Offset        = 1    		; slot 0 references whole device
+;Unit_Diag_Bit         = 0
+;Unit_Diag_Not_Bit     = 0
+;Unit_Diag_Area        = 0
+;Unit_Diag_Value       = 0
+;Unit_Diag_Value_Ref   = 0
+;Unit_Diag_Type        = 0
+
+;Channel_Diag          = 0
+Fail_Safe             = 1
+Max_Diag_Data_Len     = 6
+Slave_Family          = 7
+;Diag_Update_Delay     = 0
+;Fail_Safe_required    = 0
+Info_Text					   = "Absolutwertgeber SIMODRIVE sensor - 13/27 Bit - DPV1/DPV2 - Taktsynchronität und Querverkehr"
+
+
+
+;--- Slave related keywords for DP extensions ---------------------
+DPV1_Slave						= 1
+C1_Read_Write_supp			= 1
+;C2_Read_Write_supp			= 1
+C1_Max_Data_Len				= 240 	; maximale Datenlänge ohne Header
+;C2_Max_Data_Len				= 240
+C1_Response_Timeout     = 1000 	; Zeitbasis 10 ms
+;C2_Response_Timeout     = 1000
+;C1_Read_Write_required	= 0
+;C2_Read_Write_required	= 0
+;C2_Max_Count_Channels		= 2
+;Max_Initate_PDU_Length	= 244
+;Diagnostic_Alarm_supp		= 0
+;Process_Alarm_supp			= 0
+;Pull_Plug_Alarm_supp		= 0
+;Status_Alarm_supp			= 0
+;Update_Alarm_supp			= 0
+;Manufacturer_Specific_Alarm_supp	= 0
+;Extra_Alarm_SAP_supp			= 0
+;Alarm_Sequence_Mode_Count	= 0
+;Alarm_Type_Mode_supp			= 0
+;Diagnostic_Alarm_required	= 0
+;Process_Alarm_required		= 0
+;Pull_Plug_Alarm_required	= 0
+;Status_Alarm_required			= 0
+;Update_Alarm_required			= 0
+;Manufacturer_Specific_Alarm_required	= 0
+;DPV1_Data_Types					= 0
+WD_Base_1ms_supp					= 1
+;Check_Cfg_Mode						= 0
+
+;--- Slave related keywords for DXB -------------------------------
+Publisher_supp				= 1
+;Subscriber_supp				= 0
+;DXB_Max_Link_Count			= (used for Subscribers)
+;DXB_Max_Data_Length		= (used for Subscribers)
+Prm_Block_Structure_supp = 1
+Prm_Block_Structure_req  = 1
+;
+;---  Slave related keywords for Isochron Mode --------------------
+Isochron_Mode_supp     = 1
+Isochron_Mode_required = 0
+TBASE_DP               = 1500 	; entspricht 125us
+TDP_MIN								= 4   	; entspricht 500µs
+TDP_MAX	                = 256 	; entspricht 32ms
+T_PLL_W_MAX            = 240		; entspricht 20us
+TBASE_IO               = 1500	; entspricht 125us
+TI_MIN                 = 1		  	; entspricht 125 us
+TO_MIN                 = 1			; entspricht 125 µs
+
+
+
+;---  Module ------------------------------------------------------
+
+Module= "Telegramm 81" 0xC3,0xC1,0xC5,0xFD,0x00,0x51 ; Telegram 81: 2 words output, 6 words input
+01
+EndModule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

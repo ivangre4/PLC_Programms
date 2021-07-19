@@ -1,0 +1,43 @@
+:Base S7RFBL2B.HLP
+:Title Standard Function Help
+:Index Standard Function Help=S7RFBL2B.HLP
+
+1 FC80-FC89
+2 Software Timer On Delay - Retentive: FC80=Software_Timer_On_Delay_Retentive_FC80 
+2 Indirect Block Move: FC81=Indirect_Block_Move_FC81 
+2 Reset Range of Bits: FC82=Reset_Range_of_Outputs_FC82 
+2 Set Range of Bits: FC83=Set_Range_of_Outputs_FC83 
+2 Add to Table: FC84=Add_to_Table_FC84 
+2 First In / First Out Unload Table: FC85=First_In_First_Out_Unload_Table_FC85 
+2 Table Find: FC86=Table_Find_FC86 
+2 Last In / First Out Unload Table: FC87=Last_In_First_Out_Unload_Table_FC87 
+2 Table: FC88=Table_FC88 
+2 Move Table to Word: FC89=Move_Table_to_Word_FC89 
+1 FC90-FC99
+2 Word Shift Register: FC90=Word_Shift_Register_FC90 
+2 Word to Table: FC91=Word_to_Table_FC91 
+2 Bit Shift Register: FC92=Bit_Shift_Register_FC92 
+2 Seven Segment Decoder: FC93=Seven_Segment_Decoder_FC93 
+2 ASCII to HEX: FC94=ASCII_to_HEX_FC94 
+2 HEX to ASCII: FC95=HEX_to_ASCII_FC95 
+2 Encode Binary Position: FC96=Encode_Binary_Position_FC96 
+2 Decode Binary Position: FC97=Decode_Binary_Position_FC97 
+2 Tens Complement: FC98=Tens_Complement_FC98 
+2 Sum Number of Bits: FC99=Sum_Number_of_Bits_FC99 
+1 FC100-FC106
+2 Reset Range of Immediate Outputs: FC100=Reset_Range_of_Immediate_Outputs_FC100 
+2 Set Range of Immediate Outputs: FC101=Set_Range_of_Immediate_Outputs_FC101 
+2 Standard Deviation: FC102=Standard_Deviation_FC102
+2 Correlated Data Table: FC103=Correlated_Data_Table_FC103
+2 Table to Table: FC104=Table_to_Table_FC104
+2 Scaling Values: FC105=Scaling_Values_FC105
+2 Unscaling Values: FC106=Unscaling_Values_FC106
+1 FB80-FB86
+2 Lead/Lag Algorithm: FB80=Lead_Lag_Algorithm_FB80
+2 Discrete Control Alarm Timer: FB81=Discrete_Control_Alarm_Timer_FB81
+2 Motor Control Alarm Timer: FB82=Motor_Control_Alarm_Timer_FB82
+2 Index Matrix Compare: FB83=Index_Matrix_Compare_FB83
+2 Scan Matrix Compare: FB84=Scan_Matrix_Compare_FB84
+2 Event Maskable Drum: FB85=Event_Maskable_Drum_FB85
+2 Pack Data: FB86=Pack_Data_FB86
+

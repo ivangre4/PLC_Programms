@@ -1,0 +1,117 @@
+
+; ========================================================================================
+; ---------------------- Objekt PN-Device IM 151-3BB22 V50
+[_S7H_HSP_151_3BB22_V50_DEVICE_CT]
+basetype=_S7H_HSP_151_3BB21_V40_DEVICE_CT
+MLFB=6ES7 151-3BB22-0AB0
+ObjType=2364212
+
+HSP_ID=0148
+HSP_NAME=ET 200S IM151 3BB22 V50
+HWCNFX_FOR_HWU=5.4.2.0
+HWCNFX_VER=5.4.2.0|0
+
+prefix=OM
+server=s7h0148x.dll
+
+PN_DEVICE_ID=769
+IRT_ISOCHRONE_MODE_SUPPORTED=1
+FW_VERSION=V5.0
+
+IRT_SCHEMA_2=1
+PN_IRTTOP_DEVICE_WITH_PROFIBUS_MODULES=1
+
+INFO_SECTION3_COUNT=2
+INFO_SECTION3_1=111504,3
+INFO_SECTION3_2=111779,2
+
+GSDML_DEVICE_NAME=ET200S
+
+; ========================================================================================
+; ---------------------- Objekt Kopfbaugruppe
+[_S7H_HSP_IO_ET200S_ETER_151_3BB22_V50_CT]
+basetype=_S7H_HSP_IO_ET200S_ETER_151_3BB21_V40_CT
+ObjType=2364213
+
+HSP_ID=0148
+HSP_NAME=ET 200S IM151 3BB22 V50
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+
+server=s7h0148x.dll
+prefix=OM
+
+IS_PARAMETRIZEABLE=1
+PN_MODULE_IDENTNUMBER=0x0364
+
+CountAutoCreatedChilds=1
+AutoCreatedChild1=2364214, 1, FIXED
+SHORTNAME = IM151-3PN
+
+
+
+; ========================================================================================
+;---------------------------------- Interface für Kopf
+[_S7H_HSP_151_3BB22_V50_PNIO_INTERFACE_CBE20_2_PORTS_CT]
+basetype=_S7H_HSP_151_3BB21_V40_PNIO_INTERFACE_CBE20_2_PORTS_CT
+ObjType=2364214
+
+HSP_ID=0148
+HSP_NAME=ET 200S IM151 3BB22 V50
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+
+server=s7h0148x.dll
+prefix=OM
+
+CountAutoCreatedPorts=2
+AutoCreatedPort0=2364215
+AutoCreatedPort1=2364216
+
+
+;**hier Einstellungen IRTflex/top
+IRT_SUPPORTED_RT_CLASS=2
+IRT_SUPPORTED_RT_CLASSES=3
+IRT_SYNC_ABILITY=3
+
+SUPPORT_SYNC_BOUNDARY=1
+
+
+
+; =================================================================================
+; ----------------------------- Port 1
+[_S7H_HSP_151_3BB22_V50_PNIO_PORT_8001_CT]
+basetype=_S7H_HSP_151_3BB21_V40_PNIO_PORT_8001_CT
+ObjType=2364215
+
+HSP_ID=0148
+HSP_NAME=ET 200S IM151 3BB22 V50
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+
+server=s7h0148x.dll
+prefix=OM
+PORT_SUPPORT_DEACTIVATE=1
+
+IRT_MAU_TYPES=
+SUPPRESS_DEFAULT_MAUTYPE=54
+
+
+; ========================================================================================
+; ----------------------------- Port 2
+[_S7H_HSP_151_3BB22_V50_PNIO_PORT_8002_CT]
+basetype=_S7H_HSP_151_3BB21_V40_PNIO_PORT_8002_CT
+ObjType=2364216
+
+HSP_ID=0148
+HSP_NAME=ET 200S IM151 3BB22 V50
+HWCNFX_VER=5.4.2.0|0
+HWCNFX_FOR_HWU=5.4.2.0
+
+server=s7h0148x.dll
+prefix=OM
+PORT_SUPPORT_DEACTIVATE=1
+
+IRT_MAU_TYPES=
+SUPPRESS_DEFAULT_MAUTYPE=54
+

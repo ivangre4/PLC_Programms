@@ -1,0 +1,491 @@
+@DB_TYP INTERNET_CP_SDB V1.0 DOS
+@CONVERTER          V1.0
+@LANGUAGE           SYSTEM
+
+#
+#------------------------------------------------------------------------
+# Beschreibung:
+# Regelfile für den Internet CP SDB ( Typ 3117 )
+#
+# Historie:
+# 25.06.98 GS: Ersterstellung
+# 06.07.98 GS: SDB Gesamtlänge außerhalb des SDB
+# 
+#------------------------------------------------------------------------
+#
+
+SDB_Buffer
+{
+	#--------------------------------------------------------------------
+	# TCP SDB 
+	#--------------------------------------------------------------------
+
+	# die Gesamtlänge ( für den LongBinary Buffer )
+	INTERNET_CP_SDB$LNG								DM||||
+
+	INTERNET_CP_SDB$NAM								_M||||
+	INTERNET_CP_SDB
+	{
+
+		#----------------------------------------------------------------
+		# Der SDB Identifikationsblock
+		#----------------------------------------------------------------
+	
+		SDBIdentblock$NAM							_O||||
+		SDBIdentblock
+		{
+			SDBIdentblock$LNG						BM||||
+			Parameterblock_ID						BC|0x01|||
+
+			# Typ der Baugruppe
+			Baugruppentyp							SM||||
+
+			# SDB Inhalt :
+			SDB_Inhalt								WM||||
+
+			# 2: Übertragung nach Start/Stop
+			# 3: Übertragung beim Stecken der Baugruppe
+			Uebertragungsattribut					BM|0x03|0x00|0x04|1
+
+			Reserved								BM|0x00|||
+		 
+			# K-Bus/Partyline
+			TSAP_ID_TYP								BM|0|||		
+
+			# K-Bus/Partyline
+			DEVICE_ID								BM|0|||		
+			
+			# PG-Verbindung
+			TSAP_ID1								BM|254|||					
+
+			# Rack/Steckplatz bei AS400, ohne Bedeutung
+			TSAP_ID2								BM|0|||		
+
+			# ohne Bedeutung
+			NEXT_STADDR								BM|0|||	
+
+			# Steckplatz				
+			REM_STADDR								BM|0|||		
+		}
+
+
+		#----------------------------------------------------------------
+		# SDB Parameterbereich
+		#----------------------------------------------------------------
+
+		SDB_ParameterArea$NAM						_M||||
+		SDB_ParameterArea
+		{
+
+			#------------------------------------------------------------
+			# Organisations- Parameterblock
+			#------------------------------------------------------------
+
+			# -- Parameterblock Header
+			PBL_ORG_PblkId								BC|0|||			
+			PBL_ORG_Version								BC|0|||
+			PBL_ORG_PblkLen								WC|6|||
+			# -- 
+
+			# Anzahl der Parameterblöcke mit Passwort Einträgen
+			PBL_PWD$CNT									BM||||
+
+			# Anzahl der Parameterblöcke mit Systemdateien
+			PBL_SYSFILE$CNT								BM||||
+
+
+			# -- Ende Organisations- Parameterblock
+		
+			#------------------------------------------------------------
+			# Passwort Parameterblock
+			#------------------------------------------------------------
+
+			PBL_PWD$NAM									_A||||
+			PBL_PWD
+			{
+				# -- Parameterblock Header
+				PblkId							BC|1|||			
+				Version							BC|0|||
+				PBL_PWD$LNG						WM||||
+				# -- 
+
+				# Länge des Benutzernamens
+				UserName$LNG					BM||0|255|1
+	
+				# Benutzername
+				UserName						AM||0|255|0
+
+				# Länge des DES verschlüsselten und als ASCII Binärstring abgelegten Passwortes
+				Passwort$LNG					BM||0|255|1
+	
+				# DES verschlüsseltes und als ASCII Binärstring abgelegten Passwortes
+				Passwort						AM||0|255|0
+
+				# Die Privilege Maske
+				PrivilegeMask					WM||0|0xFFFF|1
+			}
+
+			# -- Ende Passwort Parameterblock
+
+			#------------------------------------------------------------
+			# Systemfile Parameterblock
+			#------------------------------------------------------------
+
+			PBL_SYSFILE_HTML$NAM		_O||||
+			PBL_SYSFILE_HTML
+			{
+				# -- Parameterblock Header
+				PblkId							BC|2|||			
+				Version							BC|0|||
+				PBL_SYSFILE_HTML$LNG			WM||||
+				# -- 
+
+				# Länge des Systemdatei Dateinamens
+				FileName$LNG					BM||||
+	
+				# Der Name der Systemdatei
+				FileName						AC|"RACK.HTM"|||
+
+				# das File Attribut
+				FileAttribut					WM|0x0014|||
+
+				# Länge des Datumseintrages
+				FileDate$LNG					BM||||
+
+				# Datumseintrag ( ASCII String nach RFC 822 und RFC 1123 )
+				FileDate						AM|"00:00:00 Jan-01-98"||255|
+
+				# Länge des Files
+				FILEDATA$LNG	DM||||
+
+				FILEDATA
+				{
+					HEADER01		AC|"<html>"||| 
+					HEADER02		HC|0h0D.0A|||
+					HEADER03		AC|"<body bgcolor="|||
+					HEADER04		HC|0h22|||
+					BGCOLOR			AM|"#FFFFFF"|7|7|
+					HEADER05		HC|0h22|||
+					HEADER06		AC|">"|||
+					HEADER07		HC|0h0D.0A|||
+					HEADER08		AC|"<h1 align="|||
+					HEADER09		HC|0h22|||
+					HEADER10		AC|"center"|||
+					HEADER11		HC|0h22|||
+					HEADER12		AC|">"|||
+					Stationname		AM|"Internet Station                "|32|32|
+					HEADER13		AC|"</h1>"|||
+					HEADER14		HC|0h0D.0A|||
+					HEADER15		AC|"<div align="|||
+					HEADER16		HC|0h22|||
+					HEADER17		AC|"center"|||
+					HEADER18		HC|0h22|||
+					HEADER19		AC|"><center>"|||
+					HEADER20		AC|"<table border="|||
+					HEADER21		HC|0h22|||
+					Border			AC|"0"|||
+					HEADER22		HC|0h22|||
+					HEADER23		AC|" cellspacing="|||
+					HEADER24		HC|0h22|||
+					HEADER25		AC|"7"|||
+					HEADER26		HC|0h22|||
+					HEADER27		AC|"  width="|||
+					HEADER28		HC|0h22|||
+					HEADER29		AC|"80%"|||
+					HEADER30		HC|0h22|||
+					HEADER31		AC|">"|||
+					HEADER32		HC|0h0D.0A|||
+
+					TableHeader01	AC|"<tr>"|||
+
+					TableHeader02	AC|"<td align="|||
+					TableHeader03	HC|0h22|||
+					TableHeader04	AC|"center"|||
+					TableHeader05	HC|0h22|||
+					TableHeader06	AC|" valign="|||
+					TableHeader07	HC|0h22|||
+					TableHeader08	AC|"top"|||
+					TableHeader09	HC|0h22|||
+					TableHeader10	AC|" bgcolor="|||
+					TableHeader11	HC|0h22|||
+					BGCOLOR1		AM|"#C0C0C0"|7|7|
+					TableHeader12	HC|0h22|||
+					TableHeader13	AC|">"|||
+					TableHeader14	AC|"Slot"|||
+					TableHeader15	AC|"</td>"|||
+					TableHeader16	HC|0h0D.0A|||
+
+					TableHeader17	AC|"<td align="|||
+					TableHeader18	HC|0h22|||
+					TableHeader19	AC|"center"|||
+					TableHeader20	HC|0h22|||
+					TableHeader21	AC|" valign="|||
+					TableHeader22	HC|0h22|||
+					TableHeader23	AC|"top"|||
+					TableHeader24	HC|0h22|||
+					TableHeader25	AC|" bgcolor="|||
+					TableHeader26	HC|0h22|||
+					BGCOLOR2		AM|"#C0C0C0"|7|7|
+					TableHeader27	HC|0h22|||
+					TableHeader28	AC|">"|||
+					TableHeader29	AC|"Name"|||
+					TableHeader30	AC|"</td>"|||
+					TableHeader31	HC|0h0D.0A|||
+
+					TableHeader32	AC|"<td align="|||
+					TableHeader33	HC|0h22|||
+					TableHeader34	AC|"center"|||
+					TableHeader35	HC|0h22|||
+					TableHeader36	AC|" valign="|||
+					TableHeader37	HC|0h22|||
+					TableHeader38	AC|"top"|||
+					TableHeader39	HC|0h22|||
+					TableHeader40	AC|" bgcolor="|||
+					TableHeader41	HC|0h22|||
+					BGCOLOR3		AM|"#C0C0C0"|7|7|
+					TableHeader42	HC|0h22|||
+					TableHeader43	AC|">"|||
+					TableHeader44	AC|"State"|||
+					TableHeader45	AC|"</td>"|||
+					TableHeader46	HC|0h0D.0A|||
+
+					TableHeader47	AC|"</tr>"|||
+					TableHeader48	HC|0h0D.0A|||
+
+					Slot$NAM	_A||||
+					Slot
+					{
+						TableRowBegin	AC|"<tr>"|||
+						SlotNumber
+						{
+							TableRow02	AC|"<td align="|||
+							TableRow03	HC|0h22|||
+							TableRow04	AC|"center"|||
+							TableRow05	HC|0h22|||
+							TableRow06	AC|" valign="|||
+							TableRow07	HC|0h22|||
+							TableRow08	AC|"top"|||
+							TableRow09	HC|0h22|||
+							TableRow10	AC|" bgcolor="|||
+							TableRow11	HC|0h22|||
+							BGCOLOR		AM|"#C0C0C0"|7|7|
+							TableRow12	HC|0h22|||
+							TableRow13	AC|">"|||
+							Number		AM||2|2|
+							TableRow14	AC|"</td>"|||
+							TableRow15	HC|0h0D.0A|||
+						}
+						SlotName$NAM	_O||||
+						SlotName
+						{
+							TableRow02	AC|"<td align="|||
+							TableRow03	HC|0h22|||
+							TableRow04	AC|"center"|||
+							TableRow05	HC|0h22|||
+							TableRow06	AC|" valign="|||
+							TableRow07	HC|0h22|||
+							TableRow08	AC|"top"|||
+							TableRow09	HC|0h22|||
+							TableRow10	AC|" rowspan="|||
+							TableRow11	HC|0h22|||
+							ModuleSize	AM|"01"|2|2|
+							TableRow12	HC|0h22|||
+							TableRow13	AC|" bgcolor="|||
+							TableRow14	HC|0h22|||
+							BGCOLOR		AM|"#C0C0C0"|7|7|
+							TableRow15	HC|0h22|||
+							TableRow16	AC|">"|||
+							ModuleName	AM||32|32|
+							TableRow17	AC|"</td>"|||
+							TableRow18	HC|0h0D.0A|||
+						}
+						SlotState$NAM	_O||||
+						SlotState
+						{
+							TableRow02	AC|"<td align="|||
+							TableRow03	HC|0h22|||
+							TableRow04	AC|"center"|||
+							TableRow05	HC|0h22|||
+							TableRow06	AC|" valign="|||
+							TableRow07	HC|0h22|||
+							TableRow08	AC|"top"|||
+							TableRow09	HC|0h22|||
+							TableRow10	AC|" bgcolor="|||
+							TableRow11	HC|0h22|||
+							BGCOLOR		AM|"#C0C0C0"|7|7|
+							TableRow12	HC|0h22|||
+							TableRow13	AC|">"|||
+							TableRow14	HC|0h0D.0A|||
+							
+							Applet1		AC|"<applet code="|||
+							Applet2		HC|0h22|||
+							Applet3		AC|"S7Pkg.S7StatusApplet.class"|||
+							Applet4		HC|0h22|||
+
+							Applet5		AC|" codebase="|||
+							Applet6		HC|0h22|||
+							Applet7		AC|"/applets"|||
+							Applet8		HC|0h22|||
+
+							Applet9		AC|" archive="|||
+							Applet10	HC|0h22|||
+							Applet11	AC|"s7sign.jar"|||
+							Applet12	HC|0h22|||
+
+							Applet13	AC|" Name="|||
+							Applet14	HC|0h22|||
+							Applet15	AC|"s7_status_5"|||
+							Applet16	HC|0h22|||
+
+							Applet17	AC|" width=80 height=20>"|||
+							Applet18	HC|0h0D.0A|||
+							
+							Applet19	AC|"<PARAM name="|||
+							Applet20	HC|0h22|||
+							Applet21	AC|"Rack"|||
+							Applet22	HC|0h22|||
+							Applet23	AC|" value="|||
+							Rack		AM||2|2|
+							Applet24	AC|">"|||
+							Applet25	HC|0h0D.0A|||
+
+							Applet26	AC|"<PARAM name="|||
+							Applet27	HC|0h22|||
+							Applet28	AC|"Slot"|||
+							Applet29	HC|0h22|||
+							Applet30	AC|" value="|||
+							Slot		AM||2|2|
+							Applet31	AC|">"|||
+							Applet32	HC|0h0D.0A|||
+
+#							Applet33	AC|"<PARAM name="|||
+#							Applet34	HC|0h22|||
+#							Applet35	AC|"IP"|||
+#							Applet36	HC|0h22|||
+#							Applet37	AC|" value="|||
+#							IP			AM||15|15|
+#							Applet38	AC|">"|||
+#							Applet39	HC|0h0D.0A|||
+
+							Applet40	AC|"<PARAM name="|||
+							Applet41	HC|0h22|||
+							Applet42	AC|"CYCLETIME"|||
+							Applet43	HC|0h22|||
+							Applet44	AC|" value="|||
+							Cycletime	AM|"5000"|4|4|
+							Applet45	AC|">"|||
+							Applet46	HC|0h0D.0A|||
+
+							Applet47	AC|"<PARAM name="|||
+							Applet48	HC|0h22|||
+							Applet49	AC|"BACKGROUNDCOLOR"|||
+							Applet50	HC|0h22|||
+							Applet51	AC|" value="|||
+							Backgroundcolor	AM|"0xC0C0C0"|8|8|
+							Applet52	AC|">"|||
+							Applet53	HC|0h0D.0A|||
+
+							Applet54	AC|"</applet>"|||
+							Applet55	HC|0h0D.0A|||
+							
+							TableRow15	AC|"</td>"|||
+							TableRow16	HC|0h0D.0A|||
+						}
+						TableRowEnd1	AC|"</tr>"|||
+						TableRowEnd2	HC|0h0D.0A|||
+					}
+					
+
+					END01			HC|0h0D.0A|||
+					END02			AC|"</table></center></div>"|||
+					END03			HC|0h0D.0A|||
+					END04			AC|"</body>"|||
+					END05			HC|0h0D.0A|||
+					END06			AC|"</html>"|||
+				}			
+				
+			}
+
+			PBL_SYSFILE$NAM						_A||||
+			PBL_SYSFILE
+			{
+				# -- Parameterblock Header
+				PblkId							BC|2|||			
+				Version							BC|0|||
+				PBL_SYSFILE$LNG					WM||||
+				# -- 
+
+				# Länge des Systemdatei Dateinamens
+				FileName$LNG					BM||0|255|1
+	
+				# Der Name der Systemdatei
+				FileName						AM|||255|
+
+				# das File Attribut
+				FileAttribut					WM|0x0014|||
+
+				# Länge des Datumseintrages
+				FileDate$LNG					BM||||
+
+				# Datumseintrag ( ASCII String nach RFC 822 und RFC 1123 )
+				FileDate						AM|"00:00:00 Jan-01-98"|0|255|
+
+				# Länge des Files
+				FileContent$LNG					DM||0|0xFFFF|
+
+				# File Inhalt
+				FileContent						HM||0|0xFFFF|
+
+			}
+
+			PBL_SYSFILE_ASCII$NAM		_O||||
+			PBL_SYSFILE_ASCII
+			{
+				# -- Parameterblock Header
+				PblkId					BC|3|||
+				Version					BC|0|||
+    			PBL_SYSFILE_ASCII$LNG	WM||||
+
+				AsciiData$LNG			DM||0|0xFFFF|
+	            AsciiData               AM||0|0xFFFF|
+			}
+
+			# Parameterblock fuer ftp-datenzugriff
+            PBL_FTPCFG$NAM						_A||||
+            PBL_FTPCFG 
+            {
+                # Parameterblock Header
+            	PblkId					BC|4|||	
+            	Version					BC|0|||
+            	PBL_FTPCFG$LNG			WM||||
+                # Länge des Content
+            	FtpFileContent$LNG		DM||0|0xFFFF|
+                # Content
+            	FtpFileContent			AM||0|0xFFFF|
+            }
+
+			#------------------------------------------------------------
+			# SDB Rucksack Bereich
+			#------------------------------------------------------------
+
+			SdbRucksack$NAM							_O||||
+			SdbRucksack
+			{
+				
+				# -- Parameterblock SDB Rucksack
+				PblkId								BC|0xFE||| 
+				Version								BC|0x00|||
+				SdbRucksack$LNG						WM||0x0000|0xffff|1
+				# -- 
+
+				Alignment							BC|0|||
+
+			} # Ende SDB Rucksack
+
+		} # Ende SDB_ParameterArea
+
+	} # Ende INTERNET_CP_SDB
+
+} # Ende SDB_Buffer
+
+

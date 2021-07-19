@@ -1,0 +1,332 @@
+; ------------------------------------- 4DI DC24V ST 
+[_S7H_HSP_6ES7_131_4BD01_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363789
+basetype=_S7H_6ES7_131_4BD00_0AA0_CT
+CatalogParent=1315852
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 131-4BD01-0AA0
+SHORTNAME=4DI DC24V ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 4DI DC24V HF
+[_S7H_HSP_6ES7_131_4BD01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363790
+basetype=_S7H_6ES7_131_4BD00_0AB0_CT
+CatalogParent=1315852
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 131-4BD01-0AB0
+SHORTNAME=4DI DC24V HF
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 4DI DC24V/SRC ST 
+[_S7H_HSP_6ES7_131_4BD51_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363791
+basetype=_S7H_6ES7_131_4BD50_0AA0_CT
+CatalogParent=1315852
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 131-4BD51-0AA0
+SHORTNAME=4DI DC24V/SRC ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2DO DC24V/0,5A ST 
+[_S7H_HSP_6ES7_132_4BB01_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363792
+basetype=_S7H_6ES7_132_4BB00_0AA0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BB01-0AA0
+SHORTNAME=2DO DC24V/0,5A ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2DO DC24V/0,5A HF
+[_S7H_HSP_6ES7_132_4BB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363793
+basetype=_S7H_6ES7_132_4BB00_0AB0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BB01-0AB0
+SHORTNAME=2DO DC24V/0,5A HF
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2DO DC24V/2A ST
+[_S7H_HSP_6ES7_132_4BB31_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363794
+basetype=_S7H_6ES7_132_4BB30_0AA0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BB31-0AA0
+SHORTNAME=2DO DC24V/2A ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2DO DC24V/2A HF 
+[_S7H_HSP_6ES7_132_4BB31_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363795
+basetype=_S7H_6ES7_132_4BB30_0AB0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BB31-0AB0
+SHORTNAME=2DO DC24V/2A HF
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 4DO DC24V/0,5A ST
+[_S7H_HSP_6ES7_132_4BD01_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363796
+basetype=_S7H_6ES7_132_4BD00_0AA0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BD01-0AA0
+SHORTNAME=4DO DC24V/0,5A ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 4DO DC24V/2A ST 
+[_S7H_HSP_6ES7_132_4BD31_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363797
+basetype=_S7H_6ES7_132_4BD30_0AA0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4BD31-0AA0
+SHORTNAME=4DO DC24V/2A ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2RO NO 24..230V/5A
+[_S7H_HSP_6ES7_132_4HB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363798
+basetype=_S7H_6ES7_132_4HB00_0AB0_CT
+CatalogParent=1315853
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 132-4HB01-0AB0
+SHORTNAME=2RO NO 24..230V/5A
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2AI U ST 
+[_S7H_HSP_6ES7_134_4FB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363799
+basetype=_S7H_6ES7_134_4FB00_0AB0_CT
+CatalogParent=1315854
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 134-4FB01-0AB0
+SHORTNAME=2AI U ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2AI I 2WIRE ST 
+[_S7H_HSP_6ES7_134_4GB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363800
+basetype=_S7H_6ES7_134_4GB00_0AB0_CT
+CatalogParent=1315854
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 134-4GB01-0AB0
+SHORTNAME=2AI I 2WIRE ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2AI I 4WIRE ST
+[_S7H_HSP_6ES7_134_4GB11_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363801
+basetype=_S7H_6ES7_134_4GB10_0AB0_CT
+CatalogParent=1315854
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 134-4GB11-0AB0
+SHORTNAME=2AI I 4WIRE ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2AO U ST 
+[_S7H_HSP_6ES7_135_4FB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363802
+basetype=_S7H_6ES7_135_4FB00_0AB0_CT
+CatalogParent=1315855
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 135-4FB01-0AB0
+SHORTNAME=2AO U ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+
+; ------------------------------------- 2AO I ST 
+[_S7H_HSP_6ES7_135_4GB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363803
+basetype=_S7H_6ES7_135_4GB00_0AB0_CT
+CatalogParent=1315855
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 135-4GB01-0AB0
+SHORTNAME=2AO I ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+; ----------------------------- 2DI DC24V, Standard
+[_S7H_HSP_6ES7_131_4BB01_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363834
+basetype=_S7H_6ES7_131_4BB00_0AA0_CT
+CatalogParent=1315852
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 131-4BB01-0AA0
+SHORTNAME=2DI DC24V ST
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+; ----------------------------- 2DI DC24V, High Feature
+[_S7H_HSP_6ES7_131_4BB01_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363835
+basetype=_S7H_6ES7_131_4BB00_0AB0_CT
+CatalogParent=1315852
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 131-4BB01-0AB0
+SHORTNAME=2DI DC24V HF
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+; ----------------------------- PM-E DC24V 
+[_S7H_HSP_6ES7_138_4CA01_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=2363864
+basetype=_S7H_6ES7_138_4CA00_0AA0_CT
+CatalogParent=1315856
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 138-4CA01-0AA0
+SHORTNAME=PM-E DC24V 
+HSP_NAME=ET200S SM
+HSP_ID=0093
+HWCNFX_VER=5.3.3.0|0
+HWCNFX_FOR_HWU=5.2.0.0
+
+; ---- MLFB-Nr aus 5.2. sind in diesem HSP vorhanden.
+; ---- Sie wurden im alten 5.2 durch catentry= 0 disabled.
+; ---- Da die MLFB beim Import dann doppelt vorhanden war,
+; ---- kam immer wieder die Fehlermeldung "MLFB-schreibweise überprüfen...". 
+; ---- Bitte diese Prefixe nicht löschen,
+; ---- da sie die alten MLFBs ungültig machen. 
+
+[_S7H_6ES7_132_4BB31_0AA0_CT]
+;MLFB=6ES7 132-4BB31-0AA0
+MLFB_PREFIX=OBSOLETE
+
+[_S7H_6ES7_132_4BB31_0AB0_CT]
+;MLFB=6ES7 132-4BB31-0AB0
+MLFB_PREFIX=OBSOLETE
+
+[_S7H_6ES7_132_4BB01_0AA0_CT]
+;MLFB=6ES7 132-4BB01-0AA0
+MLFB_PREFIX=OBSOLETE
+
+[_S7H_6ES7_132_4BB01_0AB0_CT]
+;MLFB=6ES7 132-4BB01-0AB0
+MLFB_PREFIX=OBSOLETE
+
+[_S7H_6ES7_132_4BD01_0AA0_CT]
+;MLFB=6ES7 132-4BD01-0AA0
+MLFB_PREFIX=OBSOLETE
+
+[_S7H_6ES7_132_4BD31_0AA0_CT]
+;MLFB=6ES7 132-4BD31-0AA0
+MLFB_PREFIX=OBSOLETE

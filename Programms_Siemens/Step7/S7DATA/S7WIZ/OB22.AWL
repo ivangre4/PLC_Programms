@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Time Delay Interrupt 2"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB22_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB22_STRT_INF : BYTE ;	//16#23 (OB 22 has started)
+  OB22_PRIORITY : BYTE ;	//5 (Priority of 1 is lowest)
+  OB22_OB_NUMBR : BYTE ;	//22 (Organization block 22, OB22)
+  OB22_RESERVED_1 : BYTE ;	//Reserved for system
+  OB22_RESERVED_2 : BYTE ;	//Reserved for system
+  OB22_SIGN : WORD ;	//Identifier input (SIGN) attached to SRT_DINT
+  OB22_DTIME : TIME ;	//Delay time (DTIME) input to SRT_DINT instruction
+  OB22_DATE_TIME : DATE_AND_TIME ;	//Date and time OB22 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

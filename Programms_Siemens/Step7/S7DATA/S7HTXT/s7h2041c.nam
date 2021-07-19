@@ -1,0 +1,20 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2041
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=FM 350-2, module de comptage, 8 voies, avec ou sans données utiles étendues
+
+;---------- FM 350-2 COUNTER MODULE,   6ES7 350-2AH01-0AE0
+[2367070]
+KatEntryName=FM 350-2 COUNTER MODULE
+InfoText=Module de comptage, 8 voies
+SHORTNAME=FM350-2 COUNTER
+
+
+;---------- FM 350-2 COUNTER MODULE E,   6ES7 350-2AH01-0AE0
+[2367071]
+KatEntryName=FM 350-2 COUNTER MODULE E
+InfoText=Module de comptage, 8 voies, données utiles étendues
+SHORTNAME=FM350-2 COUNTER E
+

@@ -1,0 +1,13 @@
+:Base s7w1021b.hlp
+:Title Hilfe zu den Eigenschaften IE/AS-INTERFACE LINK PN IO
+1 "General" Tab=IDD_ALLG_PNIO_ASILINK_DEVICE
+1 "Identification" Tab=IDD_DLG_SLAVE_IDENTIFICATION
+1 Module
+2 "General" Tab=IDD_DLG_HEAD_BASE
+2 "Addresses" / "Diagnostic Address" Tab=IDD_DIAGADDRESS
+2 "Pack" Tab=IDD_SC_ADR
+2 "Parameters" Tab=IDD_DLG_HEAD_PARAMS
+2 "AS-i Slave Options" Tab=IDD_DLG_UPLOAD
+1 PROFINET IO
+2 "General" Tab=IDD_DIALOG_ALLGEMEIN_INTERFACE_PORT
+2 "IO Cycle" Tab=IDD_DLG_SLV_IO_CYCLE

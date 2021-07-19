@@ -1,0 +1,46 @@
+:Base S7rwnfcb.hlp
+1 FCs for DP (Distributed Peripheral I/Os) for an S7-300
+2 Overview=FC-Bausteine_für_die_DP-Betriebsart_bei_S7-300
+2 FC DP_SEND (FC1)=HIDD_DPSEND
+2 FC DP_RECV (FC2)=HIDD_DPRECV
+2 FC DP_DIAG (FC3)=HIDD_DPDIAG
+2 FC DP_CTRL (FC4)=HIDD_DPCTRL
+1 FCs for S5-compatible Communication (SEND/RECEIVE Interface)
+2 Overview - Using FCs for PROFIBUS=FC-Bausteine_für_FDL-Verbindungen_(SEND/RECEIVE-Schnittstelle_für_PROFIBUS)
+2 Overview - Using FCs for Industrial Ethernet=FC-Bausteine_für_projektierte_Verbindungen
+2 FC AG_SEND / AG_LSEND / AG_SSEND (FC5 / FC50 / FC53)=HIDD_AGSEND
+2 FC AG_RECV / AG_LRECV / AG_SSRECV(FC6 / FC60 / FC63)=HIDD_AGRECV
+1 FCs for Access Coordination in FETCH/WRITE (for Industrial Ethernet)
+2 Overview=FC_Baustein_zur_Zugriffskoordinierung_bei_FETCH_WRITE
+2 FC AG_LOCK (FC7)=HIDD_AGLOCK
+2 FC AG_UNLOCK (FC8)=HIDD_AGUNLOCK
+1 FCs for connection diagnose
+2 AG_CNTRL (FC10)=HIDD_PNIO_fc10
+1 FBs (Function Blocks) for FMS Connections
+2 Overview=Funktionsbausteine_für_FMS
+2 Function Block IDENTIFY (FB2)=HIDD_FMSIDEN
+2 Function Block READ (FB3)=HIDD_FMSREAD
+2 Function Block REPORT (FB4)=HIDD_FMSREPT
+2 Function Block STATUS (FB5)=HIDD_FMSSTAT
+2 Function Block WRITE (FB6)=HIDD_FMSWRIT
+1 FCs for FTP Services
+2 Overview=FC_Bausteine_FTP_Dienste
+2 FC FTP_CONNECT (FC40)=HIDD_FTP_CONNECT
+2 FC FTP_STORE (FC41)=HIDD_FTP_STORE
+2 FC FTP_RETRIEVE (FC42)=HIDD_FTP_RETRIEVE
+2 FC FTP_DELETE (FC43)=HIDD_FTP_DELETE
+2 FC FTP_QUIT (FC44)=HIDD_FTP_QUIT
+2 UDT1 Data Type for FILE_DB_Header=HIDD_FTP_UDT1
+1 FBs for PROFINET CBA
+2 Blocks for PROFINET CBA - Overview=Bausteine_PROFInet
+2 PN_InOut Function Block (FB88)=fb88
+2 PN_InOut_Fast Function Block (FB90)=fb90
+1 FCs for PROFINET IO
+2 PNIO_SEND (FC11)=HIDD_PNIO_fc11
+2 PNIO_RECV (FC12)=HIDD_PNIO_fc12
+2 PNIO_RW_REC (FB52)=HIDD_PNIO_fb52
+2 PNIO_ALARM (FB54)=HIDD_PNIO_fb54
+1 FBs for Programmed Connections
+2 IP_CONFIG Function Block (FB..)=HIDD_IP_CONFIG
+1 Important Notes
+2 Note on SIMATIC S7-300=ID_Hinweis_SIMATIC_S7_300

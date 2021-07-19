@@ -1,0 +1,100 @@
+ET200C 8DA DC 24V/0,5A <6ES7 142-0BF0.-0XB0> V1.1 v. 11.12.96
+V5.x;
+C-8DO/0,5A     DP;
+SIEMENS   ;
+ET 200C   ;
+ET 200    ;
+ET200C/24V/DP  ;
+32785;
+J;
+J;
+J;
+J;
+N;
+N;
+N;
+N;
+N;
+N;
+1;
+N;
+N;
+N;
+00000;
+1111011111;
+000;
+001;
+002;
+013;
+012;
+PV005;
+00;
+00;
+00;
+00;
+00;
+PSL008;
+PS008"Liberación diagnosis    K 0   "BIT0 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 1   "BIT1 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 2   "BIT2 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 3   "BIT3 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 4   "BIT4 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 5   "BIT5 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 6   "BIT6 "0"0"1"HI001";
+PS008"Liberación diagnosis    K 7   "BIT7 "0"0"1"HI001";
+HTT001;
+HI001;
+L2;
+"Bloquear diagnosis            "00001";
+"Liberar diagnosis             "00000";
+KV002;
+032;
+000;
+SY;
+DKM000;
+DKK000;
+ET_200C;
+ISNONAME;
+SO000;
+001;
+MLFB000;
+LSK000;
+000;
+SPT000;
+HTT000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

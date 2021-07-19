@@ -1,0 +1,645 @@
+
+; -- DO NOT ALTER THIS LINE -----
+[1315851]		
+KatEntryName = ET 200S
+InfoText = Station périphérique décentralisée à modularité granulaire avec degré de protection IP 20 comme esclave DP
+SHORTNAME=ET 200S
+;e.t.  Pfade/Knoten für Motorstarter
+[1315979]
+KatEntryName = PM
+InfoText = Modules de puissance pour démarreurs de moteurs de l'ET 200S
+[1315980]
+KatEntryName = Démarreur direct
+InfoText = Modules de puissance pour un sens de rotation pour ET 200S
+[1315981]
+KatEntryName = Démarreur inverseur
+InfoText = Modules de puissance pour deux sens de rotation pour ET 200S
+;--------------e.t. finish
+[1315852]
+KatEntryName = DI
+InfoText = Modules d'entrées TOR pour ET 200S
+[1315853]
+KatEntryName = DO
+InfoText = Modules de sorties TOR pour ET 200S
+[1315854]
+KatEntryName = AI
+InfoText = Modules d'entrées analogiques pour ET 200S
+[1315855]
+KatEntryName = AO
+InfoText = Modules de sorties analogiques pour ET 200S
+[1315856]
+KatEntryName = PM
+InfoText = Modules de puissance pour modules électroniques de l'ET 200S
+[1315857]
+KatEntryName = FM
+InfoText = Modules de fonction pour mesure de déplacement, comptage, positionnement pour ET 200S
+[1315858]
+KatEntryName = Démarreurs de moteurs
+InfoText = Modules démarreurs de moteurs pour ET 200S
+[1315896]
+KatEntryName = PM-E DC24V
+InfoText = Module de puissance PM-E pour modules électroniques, DC24V, avec diagnostic;également vendu comme module SIPLUS sous le numéro de référence 6AG1 138-4CA00-2AA0
+SHORTNAME=PM-E DC24V
+[1315898]
+KatEntryName = 1 SSI
+InfoText = Module SSI pour connexion directe de codeurs absolus avec fonctions de verrouillage et de comparaison, à partir de la version 3
+SHORTNAME=1 SSI
+;---------------------------------------
+[1315902]
+KatEntryName = 2 PULSE
+InfoText = Module générateur d'impulsions 2 voies pour la transmission d'impulsion et modulation de largeur d'impulsion
+SHORTNAME=2 PULSE
+
+; ----------------------------- DS
+[1315927]
+KatEntryName = DS
+InfoText = Démarreur de moteur direct, électromécanique, sans fusible
+SHORTNAME=DS
+
+; ----------------------------- DSx
+[1315928]
+KatEntryName = DS-x
+InfoText = Démarreur direct, électromécanique, sans fusible, extensible
+SHORTNAME=DS-x
+
+; ----------------------------- RS
+[1315929]
+KatEntryName = RS
+InfoText = Démarreur inverseur, électromécanique, sans fusible
+SHORTNAME=RS
+
+; ----------------------------- RSx
+[1315930]
+KatEntryName = RS-x
+InfoText = Démarreur inverseur, électromécanique, sans fusible, extensible
+SHORTNAME=RS-x
+
+; ----------------------------- PM-D  DC24V
+[1315931]
+KatEntryName = PM-D DC24V
+InfoText = Modules de puissance PM-D pour démarreurs de moteurs; 2xDC24V
+SHORTNAME=PM-D DC24V
+
+; ----------------------------- PM-D F1  SIGUARD
+[1315932]
+KatEntryName = PM-D F1 SIGUARD
+InfoText = Modules de puissance; arrêt d'urgence; démarrage surveillé; 2 voies
+SHORTNAME=PM-D F1 SIGUARD
+
+; ----------------------------- PM-D F2 SIGUARD
+[1315933]
+KatEntryName = PM-D F2 SIGUARD
+InfoText = Modules de puissance; porte de sécurité; autodémarrage; 2 voies
+SHORTNAME=PM-D F2 SIGUARD
+
+; ----------------------------- PM-D F3  SIGUARD
+[1315934]
+KatEntryName = PM-D F3 SIGUARD
+InfoText = Modules de puissance; extension de F1/2 pour autre groupe d'alimentation; temporisé
+SHORTNAME=PM-D F3 SIGUARD
+
+; ----------------------------- PM-D F4  SIGUARD
+[1315935]
+KatEntryName = PM-D F4 SIGUARD
+InfoText = Modules de puissance; extension de F1/2 pour autre groupe d'alimentation
+SHORTNAME=PM-D F4 SIGUARD
+
+; ----------------------------- PM-X SIGUARD
+[1315936]
+KatEntryName = PM-X SIGUARD
+InfoText = Module de connexion pour un contacteur d'arrivée/ circuits de sécurité externes
+SHORTNAME=PM-X SIGUARD
+[1315905]
+KatEntryName = 1 SSI Fast-Mode
+InfoText = Module SSI pour connexion directe  de codeurs absolus avec optimisation du temps de transmission valeur de codeur, à partir de la version 3
+SHORTNAME=1 SSI Fast-Mode
+;------------------------------ SI-Module ASCII- und 3964(R)-Protokoll-Treiber
+[1316065]
+KatEntryName = CP
+InfoText = Processeurs de communication pour ET 200S
+[1316066]
+KatEntryName = 1 SI  ASCII  (8 Byte)
+InfoText =Processeur de communication avec interface RS232/RS422/RS485 et protocole ASCII avec interface I/O 8 octets.
+SHORTNAME=1 SI  ASCII  (8 Byte)
+[1316067]
+KatEntryName = 1 SI  ASCII  (4 Byte)
+InfoText =Processeur de communication avec interface RS232/RS422/RS485 et protocole ASCII avec interface I/O 4 octets.
+SHORTNAME=1 SI  ASCII  (4 Byte)
+[1316068]
+KatEntryName = 1 SI  3964(R)  (8 Byte)
+InfoText =Processeur de communication avec interface RS232/RS422/RS485 et protocole 3964(R) avec interface I/O 8 octets.
+SHORTNAME=1 SI  3964(R)  (8 Byte)
+[1316069]
+KatEntryName = 1 SI  3964(R)  (4 Byte)
+InfoText =Processeur de communication avec interface RS232/RS422/RS485 et protocole 3964(R) avec interface I/O 4 octets.
+SHORTNAME=1 SI  3964(R)  (4 Byte)
+
+; ----------------------------- Kataloghierarchieobjekt VA EM
+[1316072]
+KatEntryName = Modules d'extension
+InfoText = Modules d'extension pour démarreur de moteur du ET 200S
+
+; ----------------------------- RS1-x
+[1316075]
+KatEntryName = RS1-x
+InfoText = Démarreur inverseur, électromécanique, sans fusible, extensible (frein, Local Control) 
+SHORTNAME=RS1-x
+
+; ----------------------------- xB3 DC24V/4A
+[1316073]
+KatEntryName = xB3 DC24V/4A
+InfoText = Brake Control Modul DC 24V/4A; DI 2xDC24V Local Control
+SHORTNAME=xB3 DC24V/4A
+
+; ----------------------------- xB4 DC500V/0,7A
+[1316074]
+KatEntryName = xB4 DC500V/0,7A
+InfoText = Brake Control Modul DC 500V/0,7A; DI 2xDC24V Local Control
+SHORTNAME=xB4 DC500V/0,7A
+;
+;
+;
+;
+;
+;
+[1316216]
+KatEntryName = DS1-x
+InfoText = Démarreur direct, électromécanique, sans fusible, extensible (frein, Local Control) 
+SHORTNAME=DS1-x
+[1316217]
+KatEntryName = PM-D F5 SIGUARD
+InfoText = Module de puissance; extensible de PM-D F1 de PM-D F4, multiplicateur de branchements
+SHORTNAME=PM-D F5 SIGUARD
+;
+;
+;
+[1315859]
+KatEntryName =ET200S Module standard
+InfoText =ET200S Module standard
+SHORTNAME=ET200S Module standard
+;
+;
+;
+[1316477]
+KatEntryName=1 Pos Inc / Digital
+InfoText = Module de positionnement pour positionnement contrôlé, codeur incrémental signaux différentiels 5V, entraînement contrôlé via les sorties TOR déplacement sens + et -, petite/grande vitesse 
+SHORTNAME=1 Pos Inc / Digital
+[1316478]
+KatEntryName=1 Pos SSI / Digital
+InfoText = Module de positionnement pour positionnement contrôlé, codeur SSI, entraînement contrôlé via les sorties TOR déplacement sens + et -, 
+SHORTNAME=1 Pos SSI / Digital
+[1316479]
+KatEntryName=1 Pos Inc / Analog
+InfoText = Module de positionnement pour positionnement contrôlé, codeur incrémental signaux différentiels 5V, entraînement contrôlé via la sortie analogique +/-10V
+SHORTNAME=1 Pos Inc / Analog
+[1316480]
+KatEntryName=1 Pos SSI / Analog
+InfoText = Module de positionnement pour positionnement contrôlé, codeur SSI, entraînement contrôlé via la sortie analogique +/-10V
+SHORTNAME=1 Pos SSI / Analog
+;RQ 28756 : geändert zu V5.1 SP2
+[1316490]
+KatEntryName = Démarreur direct progressif
+InfoText = Démarreur pour démarrage/arrêt progressif de moteur à un sens de rotation pour ET 200S
+;RQ 28756 : neu zu V5.1 SP2
+[1316543]
+KatEntryName = Démarreur inverseur progressif
+InfoText = Démarreur pour démarrage/arrêt progressif de moteur à deux sens de rotation pour ET 200S
+[1316481]
+KatEntryName = DS1e-x 0,3-3A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DS1e-x 0,3-3A HF
+[1316482]
+KatEntryName = DS1e-x 2,4-8A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DS1e-x 2,4-8A HF
+[1316483]
+KatEntryName = DS1e-x 2,4-16A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DS1e-x 2,4-16A HF
+[1316484]
+KatEntryName = RS1e-x 0,3-3A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A jusqu'à 3,00 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=RS1e-x 0,3-3A HF
+[1316485]
+KatEntryName = RS1e-x 2,4-8A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=RS1e-x 2,4-8A HF
+[1316486]
+KatEntryName = RS1e-x 2,4-16A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=RS1e-x 2,4-16A HF
+[1316487]
+KatEntryName = DSS1e-x 0,3-3A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DSS1e-x 0,3-3A HF
+[1316488]
+KatEntryName = DSS1e-x 2,4-8A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DSS1e-x 2,4-8A HF
+[1316489]
+KatEntryName = DSS1e-x 2,4-16A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; High Feature
+SHORTNAME=DSS1e-x 2,4-16A HF
+[1316500]
+KatEntryName = 2 DO DC24V/0.5A
+InfoText = Module de sorties TOR DO 2xDC24V/0.5A, standard
+SHORTNAME=2 DO DC24V/0.5A
+[1316501]
+KatEntryName = 2 DO DC24V/0.5A HF
+InfoText = Module de sorties TOR DO 2xDC24V/0.5A, High Feature, avec diagnostic
+SHORTNAME=2 DO DC24V/0.5A HF
+[1316502]
+KatEntryName = 2 DO DC24V/2A
+InfoText = Module de sorties TOR DO 2xDC24V/2A, standard
+SHORTNAME=2 DO DC24V/2A
+[1316503]
+KatEntryName = 2 DO DC24V/2A HF
+InfoText = Module de sorties TOR DO 2xDC24V/2A, High Feature, avec diagnostic
+SHORTNAME=2 DO DC24V/2A HF
+[1316504]
+KatEntryName = 4 DO DC24V/0.5A
+InfoText = Module de sorties TOR DO 4xDC24V/0.5A, standard
+SHORTNAME=4 DO DC24V/0.5A
+[1316505]
+KatEntryName = 4 DO DC24V/2A
+InfoText = Module de sorties TOR DO 4xDC24V/2A, standard
+SHORTNAME=4 DO DC24V/2A
+[1316507]
+KatEntryName = 2 AI I RTD HF
+InfoText = Module d'entrées analogiques AI 2xRTD / 15 bits+signe, standard, R: 150 ohms, 300 ohms, 600 ohms; RTD: Pt100, Ni100 ; High Feature
+SHORTNAME=2 AI I RTD HF
+[1316521]
+KatEntryName = 1 SI Modbus Master (4 Byte)
+InfoText = Module de communication avec interface série (RS232, RS422 ou RS485) et protocole Modbus Master avec interface I/O 4 Byte
+SHORTNAME = 1 SI Modbus Master (4 B)
+[1316520]
+KatEntryName = 1 SI Modbus Master (8 Byte)
+InfoText = Module de communication avec interface série (RS232, RS422 ou RS485) et protocole Modbus Master avec interface I/O 8 Byte
+SHORTNAME = 1 SI Modbus Master (8 B)
+[1316523]
+KatEntryName = 1 SI Modbus Slave (4 Byte)
+InfoText = Module de communication avec interface série (RS232, RS422 ou RS485) et protocole Modbus Slave avec interface I/O 4 Byte
+SHORTNAME = 1 SI Modbus Slave (4 B)
+[1316522]
+KatEntryName = 1 SI Modbus Slave (8 Byte)
+InfoText = Module de communication avec interface série (RS232, RS422 ou RS485) et protocole Modbus Slave avec interface I/O 8 Byte
+SHORTNAME = 1 SI Modbus Slave (8 B)
+[1316525]
+KatEntryName = 1 SI USS Master (4 Byte)
+InfoText = Module de communication avec interface série (RS485) et protocole USS Master avec interface I/O 4 Byte
+SHORTNAME = 1 SI USS Master (4 Byte)
+[1316524]
+KatEntryName = 1 SI USS Master (8 Byte)
+InfoText = Module de communication avec interface série (RS485) et protocole USS Master avec interface I/O 8 Byte
+SHORTNAME = 1 SI USS Master (8 Byte)
+;
+;
+;
+[1316551]
+KatEntryName = F-DS1e-x 0,3-3A HF
+SHORTNAME    = F-DS1e-x 0,3-3A HF
+InfoText     = Démarreur direct de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316552]
+KatEntryName = F-DS1e-x 2,4-8A HF
+SHORTNAME    = F-DS1e-x 2,4-8A HF
+InfoText     = Démarreur direct de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316553]
+KatEntryName = F-DS1e-x 2,4-16A HF
+SHORTNAME    = F-DS1e-x 2,4-16A HF
+InfoText     = Démarreur direct de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316554]
+KatEntryName = F-RS1e-x 0,3-3A HF
+SHORTNAME    = F-RS1e-x 0,3-3A HF
+InfoText     = Démarreur inverseur de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316555]
+KatEntryName = F-RS1e-x 2,4-8A HF
+SHORTNAME    = F-RS1e-x 2,4-8A HF
+InfoText     = Démarreur inverseur de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316556]
+KatEntryName = F-RS1e-x 2,4-16A HF
+SHORTNAME    = F-RS1e-x 2,4-16A HF
+InfoText     = Démarreur inverseur de sécurité; commutation mécanique; protection UE électronique; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; High Feature; pour PM-D F PROFIsafe
+[1316557]
+KatEntryName = F-CM
+SHORTNAME    = F-CM
+InfoText     = Contact Multiplier F-CM; extension de  PM-D F PROFIsafe;  multiplicateur de contact
+[1316558]
+KatEntryName = 4 IQ-SENSE Opto E
+InfoText = Module d'entrées 4_IQ-SENSE pour la connexion d'optocapteurs IQ-SENSE; avec diagnostic, fonction d'apprentissage intelligente et transmission de valeurs seuils de l'automate
+SHORTNAME=4 IQ-SENSE Opto E
+[1316559]
+KatEntryName = 4 IQ-SENSE Opto S
+InfoText = Module d'entrées 4_IQ-SENSE pour la connexion d'optocapteurs IQ-SENSE; avec diagnostic, fonction d'apprentissage intelligente
+SHORTNAME=4 IQ-SENSE Opto S
+[1316560]
+KatEntryName = IQ-SENSE
+InfoText = Module capteur avec interface IQ pour ET 200S
+;
+;
+;
+[1316649]
+KatEntryName = PM-D F X1
+InfoText = Module de puissance/d'extension PM-D F X1; protection contre les surtensions; pour alimentation de signaux d'ARRET D'URGENCE externes; pour 6 catégories d'arrêt
+SHORTNAME=PM-D F X1
+;
+;
+;
+[1316561]
+KatEntryName = IM151-1 HF
+InfoText = Module interface IM151-1 pour modules électroniques ET 200S, échange de données direct possible, supporte le synchronisme d'horloge
+SHORTNAME=IM151-1 HF
+[1316633]
+KatEntryName = 1 SSI
+InfoText = Module SSI pour connexion directe de codeurs absolus avec fonctions de verrouillage et de comparaison, supporte le synchronisme d'horloge
+SHORTNAME=1 SSI
+[1316634]
+KatEntryName = 1 SSI Fast-Mode
+InfoText = Module SSI pour connexion directe de codeurs absolus avec optimisation du temps de transmission valeur de codeur, supporte le synchronisme d'horloge
+SHORTNAME=1 SSI Fast-Mode
+;
+;
+;
+[1316709]
+KatEntryName = IM151-1 Basic
+InfoText = Module interface IM151-1 pour modules électroniques ET 200S, échange de données direct possible
+SHORTNAME=IM151-1 Basic
+[1316724]
+KatEntryName = DS1e-x 0,3-3A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DS1e-x 0,3-3A HF
+[1316725]
+KatEntryName = DS1e-x 2,4-8A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DS1e-x 2,4-8A HF
+[1316726]
+KatEntryName = DS1e-x 2,4-16A HF
+InfoText = Démarreur direct; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DS1e-x 2,4-16A HF
+[1316727]
+KatEntryName = RS1e-x 0,3-3A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A jusqu'à 3,00 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=RS1e-x 0,3-3A HF
+[1316728]
+KatEntryName = RS1e-x 2,4-8A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=RS1e-x 2,4-8A HF
+[1316729]
+KatEntryName = RS1e-x 2,4-16A HF
+InfoText = Démarreur inverseur; commutation mécanique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=RS1e-x 2,4-16A HF
+[1316730]
+KatEntryName = DSS1e-x 0,3-3A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 1,1 KW/400 V; 0,30 A à 3,00 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DSS1e-x 0,3-3A HF
+[1316731]
+KatEntryName = DSS1e-x 2,4-8A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 3,0 KW/400 V; 2,40 A à 8,00 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2,4-8A HF
+[1316732]
+KatEntryName = DSS1e-x 2,4-16A HF
+InfoText = Démarreur direct progressif; commutation électronique; protection électronique UE; sans fusible; jusqu'à 7,5 KW/400 V; 2,40 A à 16 A; Option: Brake Control Modul, Control Modul; Switch ES; High Feature
+SHORTNAME=DSS1e-x 2,4-16A HF
+[1316737]
+KatEntryName = 4 DI NAMUR
+InfoText = Module d'entrées TOR DI 4xNAMUR, avec alarme de diagnostic
+SHORTNAME=4 DI NAMUR
+;
+;
+;
+[1316733]
+KatEntryName = 2AO U HF
+InfoText = Module de sorties analogiques AO 2xU  (1..5V /15 bits, +/-10V /15 bits+S), High Feature, à partir de la version 2, supporte le synchronisme d'horloge
+SHORTNAME=2AO U HF
+[1315904]
+KatEntryName = IM151-1 Standard
+InfoText = Coupleur IM151-1 pour modules électroniques ET 200S, échange de données direct possible côté émetteur
+SHORTNAME=IM151-1 Standard
+[1316106]
+KatEntryName = IM151-1 Standard
+InfoText = Module interface IM151-1 pour modules électroniques ET 200S, échange de données direct possible
+SHORTNAME=IM151-1 Standard
+[1316009]
+KatEntryName = IM151-1 FO Standard
+InfoText = Coupleur IM151-1 avec câbles fibres optiques pour modules électroniques ET 200S, échange de données direct possible 
+SHORTNAME=IM151-1 FO Standard
+[1316309]
+KatEntryName = IM151-1 FO Standard
+InfoText = Coupleur IM151-1 avec connexion câbles fibres optiques pour modules électroniques ET 200S, échange de données direct possible (émetteur)
+SHORTNAME=IM151-1 FO Standard
+[1315897]
+KatEntryName = PM-E DC24..48V/ AC24..230V
+InfoText = Module de puissance PM-E DC24..48V/ AC24..230V, avec diagnostic et fusible
+SHORTNAME=PM-E DC24/48V/ AC24/230V
+[1316115]
+KatEntryName = PM-E DC24..48V/ AC24..230V
+InfoText = Module de puissance PM-E DC24..48V/ AC24..230V, avec diagnostic et fusible
+SHORTNAME=PM-E DC24/48V/ AC24/230V
+[1315864]
+KatEntryName = 4DI DC24V ST
+InfoText = Module d'entrées TOR DI 4xDC24V, Standard; également vendu comme module SIPLUS sous le numéro de référence 6AG1 131-4BD00-2AA0
+SHORTNAME=4DI DC24V ST
+[1316750]
+KatEntryName = 4DI DC24V/SRC ST
+InfoText = Module d'entrées TOR 4 DI DC24V, SOURCE INPUT; de type M
+SHORTNAME=4DI DC24V/SRC ST
+[1315861]
+KatEntryName = 2DI DC24V HF
+InfoText = Module d'entrées TOR DI 2xDC24V, High Feature; diagnostic, supporte le synchronisme d'horloge
+SHORTNAME=2DI DC24V HF
+[1315865]
+KatEntryName = 4DI DC24V HF
+InfoText = Module d'entrées TOR 4 DI DC24V, High Feature; diagnostic, supporte le synchronisme d'horloge
+SHORTNAME=4DI DC24V HF
+[1315862]
+;e.t. die mir bekannte MLFB lautet: 6ES7 131-4EB00-0AB0
+KatEntryName = 2DI AC120V ST
+InfoText = Module d'entrées TOR DI 2xAC120V
+SHORTNAME=2DI AC120V ST
+[1315863]
+;e.t. die mir bekannte MLFB lautet: 6ES7 131-4FB00-0AB0
+KatEntryName = 2DI AC230V ST
+InfoText = Module d'entrées TOR DI 2xAC230V
+SHORTNAME=2DI AC230V ST
+[1316637]
+KatEntryName = 4 DI UC24..48V
+InfoText = Module d'entrées TOR DI 4xUC 24-48V, High Feature; diagnostic, supporte le synchronisme d'horloge
+SHORTNAME=4 DI UC24..48V
+[1315867]
+KatEntryName = 2DO DC24V/0,5A ST
+InfoText = Module de sorties TOR DO 2xDC24V/0.5A, standard
+SHORTNAME=2DO DC24V/0,5A ST
+[1315873]
+KatEntryName = 4DO DC24V/0,5A ST
+InfoText = Module de sorties TOR DO 4xDC24V/0.5A, standard, supporte le synchronisme d'horloge; est également vendu comme module SIPLUS sous le numéro de référence 6AG1 132-4BD00-2AA0
+SHORTNAME=4DO DC24V/0,5A ST
+[1315868]
+KatEntryName = 2DO DC24V/0,5A HF
+InfoText = Module de sorties TOR DO 2xDC24V/0.5A, High Feature, diagnostic, supporte le synchronisme d'horloge
+SHORTNAME=2DO DC24V/0,5A HF
+[1315869]
+KatEntryName = 2DO DC24V/2A ST
+InfoText = Module de sorties TOR DO 2xDC24V/2A, standard
+SHORTNAME=2DO DC24V/2A ST
+[1315874]
+KatEntryName = 4DO DC24V/2A ST
+InfoText = Module de sorties TOR DO 4xDC24V/2A, standard, supporte le synchronisme d'horloge
+SHORTNAME=4DO DC24V/2A ST
+[1315870]
+KatEntryName = 2DO DC24V/2A HF
+InfoText = Module de sorties TOR DO 2xDC24V/2A, High Feature, diagnostic, supporte le synchronisme d'horloge
+SHORTNAME=2DO DC24V/2A HF
+[1315872]
+KatEntryName = 2DO AC24..230V/1A
+InfoText = Module de sorties TOR DO 2xAC120/230 V, 1A
+SHORTNAME=2DO AC24..230V/1A
+[1315871]
+KatEntryName = 2RO NO DC24..120V/5A AC24..230V/5A
+InfoText = Module de sorties TOR 2xrelais UC 24..230V/5A
+SHORTNAME=2RO NO 24..230V/5A
+[1316640]
+KatEntryName = 2RO NO/NC DC24..120V/5A AC24..230V/5A
+InfoText = Module de sorties TOR 2xRelais Form C UC 24..230V/5A
+SHORTNAME=2RO NO/NC 24..230V/5A
+[1315876]
+KatEntryName = 2AI U ST
+InfoText = Module d'entrées analogiques AI 2xU (+/-5V /13 bits+S, 1..5V/13 bits, +/-10V /13 bit+S), standard
+SHORTNAME=2AI U ST
+[1315884]
+KatEntryName = 2AI U HF
+InfoText = Module d'entrées analogiques AI 2xU (1..5V /15 bits, +/-5V /15 bits+S, +/-10V /15 bits+S), High Feature
+SHORTNAME=2AI U HF
+[1315877]
+KatEntryName = 2AI U HS
+InfoText = Module d'entrées analogiques AI 2xU, (+/-10V) / 11 bits+S, High Speed
+SHORTNAME=2AI U HS
+[1316628]
+KatEntryName = 2AI U HS
+InfoText = Module d'entrées analogiques AI 2xU, (+/-10V) / 14 Bit, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI U HS
+[1315878]
+KatEntryName = 2AI I 2WIRE ST
+InfoText = Module d'entrées analogiques AI 2xI, standard pour transducteur de mesure 2 fils (4..20mA) / 13 bits, standard
+SHORTNAME=2AI I 2WIRE ST
+[1315885]
+;RQ_201568
+KatEntryName = 2AI I 2/4WIRE HF
+InfoText = Module d'entrées analogiques AI 2xI, transducteur de mesure 2/4 fils (+/-20mA /15 bits+S, 4..20mA /15 bits), High Feature
+SHORTNAME=2AI I 2/4WIRE HF
+[1315880]
+KatEntryName = 2AI I 2WIRE HS
+InfoText = Module d'entrées analogiques AI 2xI,  standard pour transducteur de mesure 2 fils (4..20mA) / 12 bits, High Speed
+SHORTNAME=2AI I 2WIRE HS
+[1316626]
+KatEntryName = 2AI I 2WIRE HS
+InfoText = Module d'entrées analogiques AI 2xI,  TM 2F (4..20mA) / 14 Bit, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI I 2WIRE HS
+[1315879]
+KatEntryName = 2AI I 4WIRE ST
+InfoText = Module d'entrées analogiques AI 2xI, standard pour transducteur de mesure 4 fils (+/-20mA /13 bits+S, 4..20mA/13 bits), standard
+SHORTNAME=2AI I 4WIRE ST
+[1315881]
+KatEntryName = 2AI I 4WIRE HS
+InfoText = Module d'entrées analogiques AI 2xI,  standard pour transducteur de mesure 4 fils (4..20mA) / 12 bits, High Speed
+SHORTNAME=2AI I 4WIRE HS
+[1316627]
+KatEntryName = 2AI I 4WIRE HS
+InfoText = Module d'entrées analogiques AI 2xI,  TM 4F (4..20mA) / 14 Bit, High Speed, supporte le synchronisme d'horloge
+SHORTNAME=2AI I 4WIRE HS
+[1315883]
+KatEntryName = 2AI RTD ST
+InfoText = Module d'entrées analogiques AI 2xRTD / 15 bits+S, standard, R: 150 ohms, 300 ohms, 600 ohms; RTD: Pt100, Ni100
+SHORTNAME=2AI RTD ST
+[1316641]
+KatEntryName = 2AI RTD HF
+InfoText = Module d'entrées analogiques AI 2xRTD / 15 bits+S, High Feature, R: 150, 300, 600, 3000 ohms, PTC ; RTD: Pt100, 200, 500, 1000, Ni100, 120, 200, 500, 1000, Cu10
+SHORTNAME=2AI RTD HF
+[1315882]
+KatEntryName = 2AI TC ST
+InfoText = Module d'entrées analogiques AI 2xTC / 15 bits+S, standard, thermocouples : E, N, J, K, L, S, R, B, T 
+SHORTNAME=2AI TC ST
+[1316506]
+KatEntryName = 2AI TC HF
+InfoText = Module d'entrées analogiques AI 2xTC / 15 bits+signe, thermocouples : E, N, J, K, L, S, R, B, T, C ; High Feature
+SHORTNAME=2AI TC HF
+[1315889]
+KatEntryName = 2AO U ST
+InfoText = Module de sorties analogiques AO 2xU (1..5V /13 bits, +/-10V /13 bits+S), standard, à partir de la version 3
+SHORTNAME=2AO U ST
+[1315891]
+KatEntryName = 2AO U HF
+InfoText = Module de sorties analogiques AO 2xU  (1..5V /15 bits, +/-10V /15 bits+S), High Feature, à partir de la version 2
+SHORTNAME=2AO U HF
+[1315890]
+KatEntryName = 2AO I ST
+InfoText = Module de sorties analogiques AO 2xI (+/-20mA /13 bits+S, 4..20mA /13 bits), standard, à partir de la version 3
+SHORTNAME=2AO I ST
+[1315892]
+KatEntryName = 2AO I HF
+InfoText = Module de sorties analogiques AO 2xI (+/-20mA /15 bits+S, 4..20mA /15 bits), High Feature, à partir de la version 2
+SHORTNAME=2AO I HF
+[1316734]
+KatEntryName = 2AO I HF
+InfoText = Module de sorties analogiques AO 2xI (+/-20mA /15 bits+S, 4..20mA /15 bits), High Feature, à partir de la version 2, supporte le synchronisme d'horloge
+SHORTNAME=2AO I HF
+[1315899]
+KatEntryName = 1STEP 5V/204kHz
+InfoText = Carte d'axes pour moteur pas à pas, 1 voie, 5V/204KHz, à partir de la version 2
+SHORTNAME=1STEP 5V/204kHz
+[1315900]
+KatEntryName = 1 COUNT 24V/100 kHz Mode comptage
+InfoText = Module de comptage, 24 V/100 kHz pour comptage monocoup, continu ou périodique, à partir de la version 3
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1315901]
+KatEntryName = 1 COUNT 24V/100 kHz Mode mesure
+InfoText = Module de comptage, 24 V/100 kHz pour la mesure de vitesse de rotation, de fréquence et de la période, à partir de la version 3
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316103]
+KatEntryName = 1 COUNT 24V/100 kHz Mode comptage
+InfoText = Module de comptage, 24 V/100 kHz pour comptage monocoup, continu et périodique
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316137]
+KatEntryName = 1 COUNT 24V/100 kHz Mode mesure
+InfoText = Module de comptage, 24 V/100 kHz pour mesure de vitesse, fréquence et durée de période
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316219]
+KatEntryName = 1 COUNT 5V/500 kHz Mode comptage
+InfoText = Module de puissance, 5 V/500 kHz pour comptage monocoup, continu et périodique
+SHORTNAME=1 COUNT 5V/500 kHz C
+[1316220]
+KatEntryName = 1 COUNT 5V/500 kHz Mode mesure
+InfoText = Module de comptage, 5 V/500 kHz pour mesure de vitesse, fréquence et durée de période
+SHORTNAME=1 COUNT 5V/500 kHz M
+[1316535]
+KatEntryName = 1 COUNT 24V/100 kHz Mode comptage
+InfoText = Module de comptage, 24 V/100 kHz pour comptage monocoup, continu et périodique
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316536]
+KatEntryName = 1 COUNT 24V/100 kHz Mode mesure
+InfoText = Module de comptage, 24 V/100 kHz pour mesure de vitesse, fréquence et durée de période
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1316629]
+KatEntryName = 1 COUNT 5V/500 kHz Mode comptage
+InfoText = Module de comptage, 5 V/500 kHz, comptage monocoup, continu et périodique, supporte le synchronisme d'horloge
+SHORTNAME=1 COUNT 5V/500 kHz C
+[1316630]
+KatEntryName = 1 COUNT 5V/500 kHz Mode mesure
+InfoText = Module de comptage, 5 V/500 kHz, mesure de vitesse, de fréquence et de durée de période, supporte le synchronisme d'horloge
+SHORTNAME=1 COUNT 5V/500 kHz M
+[1316631]
+KatEntryName = 1 COUNT 24V/100 kHz Mode comptage
+InfoText = Module de comptage, 24 V/100 kHz comptage monocoup, continu et périodique, supporte le synchronisme d'horloge
+SHORTNAME=1 COUNT 24V/100 kHz C
+[1316632]
+KatEntryName = 1 COUNT 24V/100 kHz Mode mesure
+InfoText = Module de comptage, 24 V/100 kHz, mesure de vitesse, de fréquence et de durée de période, supporte le synchronisme d'horloge
+SHORTNAME=1 COUNT 24V/100 kHz M
+[1315860]
+KatEntryName = 2DI DC24V ST
+InfoText = Module d'entrées TOR DI 2xDC24V, standard
+SHORTNAME=2DI DC24V ST
+[1316849]
+KatEntryName = ET 200S
+InfoText = Station périphérique décentralisée à modularité granulaire avec degré de protection IP 20 comme esclave DP
+SHORTNAME=ET 200S
+
+; -- DO NOT ALTER THIS LINE -----

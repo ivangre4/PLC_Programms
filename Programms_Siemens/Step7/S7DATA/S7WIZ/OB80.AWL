@@ -1,0 +1,22 @@
+ORGANIZATION_BLOCK "Cycle Time Fault"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB80_EV_CLASS : BYTE ;	//16#35, Event class 3, Entering event state, Internal fault event
+  OB80_FLT_ID : BYTE ;	//16#XX, Fault identifcation code
+  OB80_PRIORITY : BYTE ;	//26 (Priority of 1 is lowest)
+  OB80_OB_NUMBR : BYTE ;	//80 (Organization block 80, OB80)
+  OB80_RESERVED_1 : BYTE ;	//Reserved for system
+  OB80_RESERVED_2 : BYTE ;	//Reserved for system
+  OB80_ERROR_INFO : WORD ;	//Error information on event
+  OB80_ERR_EV_CLASS : BYTE ;	//Class of event causing error
+  OB80_ERR_EV_NUM : BYTE ;	//Number of event causing error
+  OB80_OB_PRIORITY : BYTE ;	//Priority of OB causing error
+  OB80_OB_NUM : BYTE ;	//Number of OB causing error
+  OB80_DATE_TIME : DATE_AND_TIME ;	//Date and time OB80 started   
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

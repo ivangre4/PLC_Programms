@@ -1,0 +1,111 @@
+;------------------------------ CP343-1 CXXX Katalog
+[_S7H_6GK7_343_1CX10_0XEO_KAT_AT]
+ABSTRACT=true
+basetype=_S7H_KATALOGFOLDDER_NCM_AT
+prefix=OM
+ObjType=2367430
+CatalogParent=2367389
+IsCatEntry=1
+nKatChilds=0
+
+;--------------------------------
+
+
+;------------------------------ CP300-MP (343-1CX10, V1.0, Lean ERTEC 200)
+[_S7H_6GK7_343_1CX10_0XEO_CT]
+server=S7WB53AX.DLL
+basetype=_S7H_6GK7_343_1CX00_0XEO_CT
+prefix=OM
+ObjType=2367429
+CLASS_PROPERTIES=0
+CatalogParent=2367430
+IsCatEntry=1
+nKatChilds=0
+
+Profile_File=MIB-II_V10.txt
+
+MLFB=6GK7 343-1CX10-0XE0
+SHORTNAME=CP 343-1 Lean ERTEC
+CP_FW_VERSION=
+FW_VERSION=V1.0
+FILTER_NET_SEARCH="S7-300 CP"
+PNO_IDENT_NO=0
+PNO_IDENT_NO_SLAVE=0
+
+; identisch zu CP343-1 EX21 etc
+PN_DEVICE_ID=0x0203
+
+; keine Port-Optionen auf CP selbst, da als Modul hinter Interface gesteckt
+ITP_PORT_CNT=2
+; Ports abschaltbar
+CAN_TURN_OFF_PORTS=1
+
+; Ablage der Projektierung nur auf CPU
+SDB_CARRIER=0
+SDB_CARRIER_LIST=3100|3107|3108|3111|3002|3118|3119|3128|3003|2003
+SDB_CAUSED_LIST=1|5|3100|3107|3108|3111|3002|3118|3119|3128|3003|2003
+
+; DP-SDB Sektion3 wird abgeschnitten (kein Controller, daher nicht aktiviert)
+;TRANSFER_SECTION3=N
+
+; Keine Altbaugruppe -> bei SDB 3118 Generierung in Header reinschauen
+SMART_SDB3118_CREATION=1
+
+
+; CP hat eigenes Bussystem als Carrier für SDB 2000, der eigentlich für den Link generiert wird
+; Es darf aber kein MPI SDB erzeugt werden
+GENERATE_MPI_SDB2XXX=0
+
+; Neuer Header fuer SDB 2003, 2004, 2005...
+CAN_SDB1XXX_HEADER_0D=1
+RESERVED_PORTS=102,135,161,34964,65532,65533,65534,65535
+
+; dieser CP kann allerdings nur Device-Betrieb aber nicht Controller-Betrieb
+; Einstellung wird hier trotzdem für PROFINET-Lasche gebraucht
+CAN_DO_PN_IO=1
+
+; Kann Device sein
+CAN_DO_PN_IO_DEVICE=1
+
+; Notwendig, um Controller-Betrieb abzuklemmen
+CAN_DO_PN_IO_DEVICE_ONLY=1
+
+; Pruefung ob Rueckwandbusadresse des CP ungleich alle IO-Module adressen
+NO_IOMODULE_EQUAL_TO_CP_ADDRESS=1
+
+; wird ab V5.3.2 HF1 in AddAttribute ausgelesen
+; in s7hbomx.dll SDBcopy.cpp wird auf neuen Werte abgefragt
+DYNAMIC_PROPERTIES=1
+BUSMASTER_AT_P_ADR_BUS=1
+
+; Für PW-PBL in SDB 3117 bräuchten wir die Benutzer
+;INTERNET_SERVICES=PW_SYM
+
+; AP00212539
+PRAL_NOT_SUPPORTED=1
+
+; IT-CP-SDB
+CAN_DO_SYSFILE_ASCII=1 
+CAN_DO_SYSFILE_HTML=0
+
+; IP-Config wie schon der CX00
+IP_CONFIG_LEVEL=1
+
+; AP00190821
+CAN_SUPPRESS_CLOCK_FORWARD=1
+
+; AP00238738
+SUBNETMASK_UNRESTRICTED=1
+
+HWCNFX_VER=5.4.1.0|0
+HWCNFX_FOR_HWU=5.4.0.0
+HSP_NAME=CP 343-1 Lean ERTEC 200
+HSP_ID=1011
+
+CAN_DO_CLOCK_DIR=1
+CLOCK_DIR_ABILITY=3
+
+CHECK_IS_SAME_OBJECT=1
+ALLOW_DISABLE_DEVICE_IPADRESS=1
+
+REQUIRED_DEVICE_SWVERSION=V1.0

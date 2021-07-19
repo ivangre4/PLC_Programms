@@ -1,0 +1,132 @@
+<Schema name="FDTProfinetIOCommunicationSchema"
+		xmlns="urn:schemas-microsoft-com:xml-data"
+		xmlns:dt="urn:schemas-microsoft-com:datatypes"
+		xmlns:fdt="x-schema:FDTDataTypesSchema.xml">
+	<!--Definition of Attributes-->
+	<AttributeType name="schemaVersion" dt:type="number" default="1.00"/>
+	<AttributeType name="api" dt:type="ui4"/>
+	<AttributeType name="nameOfStation" dt:type="string"/>
+	<AttributeType name="localIndex" dt:type="ui2"/>
+	<AttributeType name="errorDecode" dt:type="ui1"/>
+	<AttributeType name="errorCode1" dt:type="ui2"/>
+	<AttributeType name="errorCode2" dt:type="ui1"/>
+	<AttributeType name="index" dt:type="ui2"/>
+	<AttributeType name="communicationReference" dt:type="uuid"/>
+	<AttributeType name="slot" dt:type="ui2"/>
+	<AttributeType name="subSlot" dt:type="ui2"/>
+	<AttributeType name="addData1" dt:type="ui2" default="0"/>
+	<AttributeType name="addData2" dt:type="ui2" default="0"/>
+	<AttributeType name="length" dt:type="ui4"  default="0"/>
+	<AttributeType name="readOnly" dt:type="boolean" default="0"/>
+	<AttributeType name="sequenceTime" dt:type="ui4"/>
+	<AttributeType name="delayTime" dt:type="ui4"/>
+	<AttributeType name="systemTag" dt:type="string"/>
+
+	<!--Definition of Elements-->
+	<ElementType name="ResponseError" content="empty" model="closed">
+		<attribute type="errorDecode" required="yes"/>
+		<attribute type="errorCode1" required="yes"/>
+		<attribute type="errorCode2" required="yes"/>
+	</ElementType>
+
+	<ElementType name="ConnectRequest" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="nameOfStation" required="yes"/>
+		<attribute type="fdt:manufacturerId" required="yes"/>
+		<attribute type="fdt:deviceTypeId" required="yes"/>
+		<attribute type="localIndex" required="yes"/>
+		<attribute type="systemTag" required="yes"/>
+		<attribute type="readOnly" required="no"/>
+	</ElementType>
+	<ElementType name="ConnectResponse" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="addData1" required="no"/>
+		<attribute type="addData2" required="no"/>
+		<element type="ResponseError" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="DisconnectRequest" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+	<ElementType name="DisconnectResponse" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="addData1" required="no"/>
+		<attribute type="addData2" required="no"/>
+		<element type="ResponseError" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="ReadRequest" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="api" required="yes"/>
+		<attribute type="slot" required="yes"/>
+		<attribute type="subSlot" required="yes"/>
+		<attribute type="index" required="yes"/>
+		<attribute type="length" required="no"/> <!--  needed  for partial access -->
+	</ElementType>
+	<ElementType name="ReadResponse" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="addData1" required="no"/>
+		<attribute type="addData2" required="no"/>
+		<element type="ResponseError" minOccurs="0" maxOccurs="1"/>
+		<element type="fdt:CommunicationData" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="WriteRequest" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="api" required="yes"/>
+		<attribute type="slot" required="yes"/>
+		<attribute type="subSlot" required="yes"/>
+		<attribute type="index" required="yes"/>
+		<element type="fdt:CommunicationData" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="WriteResponse" content="eltOnly" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+		<attribute type="addData1" required="no"/>
+		<attribute type="addData2" required="no"/>
+		<element type="ResponseError" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+
+	<ElementType name="CancelTransaction" content="empty" model="closed">
+		<attribute type="fdt:nodeId" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+
+	<ElementType name="SequenceBegin" content="empty" model="closed">
+		<attribute type="sequenceTime" required="no"/>
+		<attribute type="delayTime" required="no"/>
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+	<ElementType name="SequenceEnd" content="empty" model="closed">
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+	<ElementType name="SequenceStart" content="empty" model="closed">
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+	<ElementType name="Abort" content="empty" model="closed">
+		<attribute type="communicationReference" required="yes"/>
+	</ElementType>
+	<ElementType name="FDT" content="eltOnly" model="closed">
+		<attribute type="schemaVersion" required="no"/>
+		<attribute type="fdt:nodeId" required="no"/>
+		<group order="one">
+			<element type="ConnectRequest"/>
+			<element type="ConnectResponse"/>
+			<element type="DisconnectRequest"/>
+			<element type="DisconnectResponse"/>
+			<element type="ReadRequest"/>
+			<element type="ReadResponse"/>
+			<element type="WriteRequest"/>
+			<element type="WriteResponse"/>
+			<element type="CancelTransaction"/>
+			<element type="SequenceBegin"/>
+			<element type="SequenceEnd"/>
+			<element type="SequenceStart"/>
+			<element type="Abort"/>
+			<element type="fdt:CommunicationError"/>
+		</group>
+	</ElementType>
+</Schema>

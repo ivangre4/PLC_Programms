@@ -1,0 +1,23 @@
+[_AUT_CONNECTION_AT]
+subtype=_S7V_CONN_AGAG_L2_CT
+
+ 
+[_S7V_CONN_AGAG_L2_CT]
+server= s7wnfdox.dll
+objtype=0x00145404
+prefix=LANVERB
+zweiseitig=1
+spezifiziert=0
+LoadViaCPUPossible=1
+BroadCastPossible=1 
+MINFdlBroadcLSAP=1
+MAXFdlBroadcLSAP=56
+MaxBroadcast=1
+Fetch_Write=0
+Fast=0
+OPC=1
+BROADCAST=1
+MULTICAST=1
+
+[_S7H_CPU_AT]
+SDB3109_CARRIER=1

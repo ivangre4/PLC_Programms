@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "CPU Fault"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB84_EV_CLASS : BYTE ;	//16#38/39, Event class 3, module inserted/removed (8/9)
+  OB84_FLT_ID : BYTE ;	//16#81, Fault identifcation code
+  OB84_PRIORITY : BYTE ;	//26/28 (Priority of 1 is lowest)
+  OB84_OB_NUMBR : BYTE ;	//84 (Organization block 84, OB84)
+  OB84_RESERVED_1 : BYTE ;	//Reserved for system
+  OB84_RESERVED_2 : BYTE ;	//Reserved for system
+  OB84_RESERVED_3 : WORD ;	//Reserved for system
+  OB84_RESERVED_4 : DWORD ;	//Reserved for system
+  OB84_DATE_TIME : DATE_AND_TIME ;	//Date and time OB84 started   
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

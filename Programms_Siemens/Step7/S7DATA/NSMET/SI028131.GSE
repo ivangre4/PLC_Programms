@@ -1,0 +1,217 @@
+;==========================================================
+; GSD-File  for red. PA-Koppler                  SIEMENS AG
+; MLFB    : 6ES7 157-0AC83-0XA0
+;
+; Version : V0.0.10, 10.04.06 SeRi
+; File    : "SI028131.GSD"
+;===========================================================
+#Profibus_DP
+GSD_Revision        = 5
+;--------------------------------------
+; <Unit-Definition-List>
+;--------------------------------------
+Vendor_Name         = "SIEMENS"
+Model_Name          = "FDC 157-0"
+Info_Text           = "DP/PA-Coupler with Diagnosisfunction"
+Revision            = "V0.0"
+Ident_Number        = 0x8131
+Protocol_Ident      = 0
+Station_Type        = 0
+FMS_supp            = 0
+Hardware_Release    = "A1.0"
+Software_Release    = "Z1.0"
+9.6_supp            = 0
+19.2_supp           = 0
+31.25_supp          = 1
+45.45_supp          = 1
+93.75_supp          = 0
+187.5_supp          = 0
+500_supp            = 0
+1.5M_supp           = 0
+3M_supp             = 0
+6M_supp             = 0
+12M_supp            = 0
+MaxTsdr_45.45       = 15
+Redundancy          = 0                         ; no redundant transmission
+Repeater_Ctrl_Sig   = 2                         ; Signal CNTR-P connected
+24V_Pins            = 0                         ; Signal M24V and P24V not connected
+Implementation_Type = "DPC31"
+Bitmap_Device       = "SI8131_N"
+;Bitmap_Diag         =
+Bitmap_SF           = "SI8131_S"
+Freeze_Mode_supp    = 1
+Sync_Mode_supp      = 1
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+Min_Slave_Intervall = 1
+Modular_Station     = 1
+Max_Module          = 2
+Max_Input_Len       = 10
+Max_Output_Len      = 0
+Max_Data_Len        = 10
+Modul_Offset        = 1
+Fail_Safe           = 1
+Slave_Family        = 12@DP/PA-Link
+Max_Diag_Data_Len   = 96
+;--------------------------------------
+; <Slave-Specification>
+;--------------------------------------
+OrderNumber="6ES7 157-0AC83-0XA0"
+Diag_Update_Delay=0
+Fail_safe_required=0
+DPV1_Slave=1
+;I&M
+DS248_FCT=0xF111
+Ident_Maintenance_supp=1
+C1_Read_Write_supp=1
+C1_Max_Data_Len=240
+C1_Response_Timeout=100
+C1_Read_Write_required=0
+C2_Read_Write_supp=1
+C2_Max_Data_Len=240
+C2_Response_Timeout=100
+C2_Read_Write_required=0
+C2_Max_Count_Channels=2
+Max_Initiate_PDU_Length=52
+Diagnostic_Alarm_supp=0
+Process_Alarm_supp=0
+Pull_Plug_Alarm_supp=0
+Status_Alarm_supp=0
+Update_Alarm_supp=0
+Manufacturer_Specific_Alarm_supp=0
+Extra_Alarm_SAP_supp=0
+Alarm_Sequence_Mode_Count=0
+Alarm_Type_Mode_supp=0
+Diagnostic_Alarm_required=0
+Process_Alarm_required=0
+Pull_Plug_Alarm_required=0
+Status_Alarm_required=0
+Update_Alarm_required=0
+Manufacturer_Specific_Alarm_required=0
+WD_Base_1ms_supp=1
+;Check_Cfg_Mode=1
+Publisher_supp=1
+;Revision 4 keywords
+Prm_Block_Structure_supp=1
+;Redundancy
+PrmCmd_supp=1
+Slave_Max_Switch_Over_Time=50
+Slave_Redundancy_supp=1
+;--------------------------------------
+; <Prm-Text-Def-List>
+;--------------------------------------
+PrmText=1
+Text(0)="enable"
+Text(1)="disable"
+EndPrmText
+PrmText=2
+Text(0)="coupler redundancy"
+Text(1)="ring redundancy"
+EndPrmText
+;--------------------------------------
+; <Ext-User-Prm-Data-Def-List>
+;--------------------------------------
+ExtUserPrmData=1 "module status"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "status lifelist"
+Bit(2) 1 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "channel-specific diagnostics"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=4 "diagnosis coupler"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=5 "signal level monitoring"
+Bit(2) 1 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "redundancy mode"
+Bit(0) 0 0-1
+Prm_Text_Ref=2
+EndExtUserPrmData
+;--------------------------------------
+; <User-Prm-Data>
+;--------------------------------------
+Max_User_Prm_Data_Len = 19
+; DPV1-Status
+Ext_User_Prm_Data_Const(0)=0x00,0x00,0x08
+; User_Prm_Structure: Device Related Prm Data 8 bytes
+Ext_User_Prm_Data_Const(3)=0x08,0x81,0x00,0x00,0x60,0x04,0x04,0x00
+;<Ext-User-Prm-Data-Def-List>
+;"Abwahl von Diagnosebloecken"
+;"Modulstatus, Bit 1"
+Ext_User_Prm_Data_Ref(8)=1
+;"Status Lifelist, Bit 2"
+Ext_User_Prm_Data_Ref(8)=2
+;"Kanalbezogene Diagnose, Bit 6"
+Ext_User_Prm_Data_Ref(8)=3
+;"Abwahl von Diagnosefunktionen"
+;"Diagnose Koppler, Bit 0"
+Ext_User_Prm_Data_Ref(9)=4
+;"Signalpegelueberwachung, Bit 2"
+Ext_User_Prm_Data_Ref(9)=5
+;"Redundanzmode"
+;"Redundanzmode, Bit 0"
+Ext_User_Prm_Data_Ref(10)=6
+;--------------------------------------
+; Diagnosetexte fuer Modulstatus
+;--------------------------------------
+UnitDiagType = 130
+X_Unit_Diag_Area = 24-25
+X_Value(1) = "Slot 1: module fault"
+X_Value(2) = "Slot 1: incorrect module"
+X_Value(3) = "Slot 1: no module"
+X_Unit_Diag_Area_End
+EndUnitDiagType
+;--------------------------------------
+; Diagnosetexte fuer Kanaldiagnose
+;--------------------------------------
+;Channel_Diag(9) = "Coupler damaged"
+Channel_Diag(16) = "parameterization error"
+Channel_Diag(17) = "missing process voltage"
+Channel_Diag(24) = "PA redundancy fault"
+Channel_Diag(26) = "redundancy mode partner"
+Channel_Diag(27) = "signal level bad"
+;--------------------------------------
+; Modulkennungen
+;--------------------------------------
+FixPresetModules=1
+Module = "current" 0x94
+0x0001
+;First Data_Area
+Data_Area_Beg
+Area_Name			    ="Inputs"
+Related_CFG_Identifier	= 1
+IO_Direction			= 0 ; Input
+Length					= 5
+Consistency				= 1
+Publisher_Allowed		= 0 ;
+DP_Master_Allowed		= 1 ;
+Data_Type				= 8 ; Float
+Data_Type				= 5 ; U8
+Data_Area_End
+;  End Data_Area
+PRESET=1
+EndModule
+Module = "voltage" 0x94
+0x0002
+;First Data_Area
+Data_Area_Beg
+Area_Name			    ="Inputs"
+Related_CFG_Identifier	= 1
+IO_Direction			= 0 ; Input
+Length					= 5
+Consistency				= 1
+Publisher_Allowed		= 0 ;
+DP_Master_Allowed		= 1 ;
+Data_Type				= 8 ; Float
+Data_Type				= 5 ; U8
+Data_Area_End
+;  End Data_Area
+EndModule

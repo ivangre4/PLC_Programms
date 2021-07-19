@@ -1,0 +1,118 @@
+;---------------------------------------------------------------------------
+;   ACHTUNG:
+;   ========
+;   Wegen einer PDM-Spezialität MUSS man als Parent-Objekt-Typ den Typ einer
+;   Baugruppe mit ACHT Kanaelen verwenden.
+;   Insbesondere sind deshalb die frueheren (zwei-kanaligen) HART-Baugruppen
+;   NICHT ERLAUBT.
+;   Siehe dazu AP224861.
+;---------------------------------------------------------------------------
+
+; ----------------------------- HART-AI300-Baugruppe fuer ET200M-Slave
+[_S7H_HSP_6ES7_331_7TF00_CT]
+server=s7h0078x.dll
+prefix=OM
+ObjType=2363678
+basetype=_S7H_6ES7_331_7NF00_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=1314946
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x3CC1
+MLFB=6ES7 331-7TF00-0AB0
+IS_PARAMETRIZEABLE=1
+
+; Bgr-Tausch unabhaengig von STEP7-Version ermoeglichen
+OM_VERSION_INDEPENDENT=1
+
+IO_TYPE=4
+IN_ADDRESS_RANGE=16 
+OUT_ADDRESS_RANGE=16 
+COUNT_INPUT_CHANNELS_ANALOG=8 
+COUNT_INPUT_GROUPS_ANALOG=8 
+MAX_NUM_OF_CHILDS=8
+FIRST_VISIBLE_CHILD_NO=1 
+REDUNDANZ=0
+IUA_SUPPORT=1
+RED_PAR_TYPE=0x41
+DATA_CHECK_ARWB=1 
+D_USE=1
+IO_ADDRESS_EQUAL=1
+HART_VISIBLE_SLOTOFFSET=-1
+
+PLUG_CLASS=0x00200010
+HSP_ID=0078
+HSP_NAME=AI/AO 8x16Bit HART
+SHORTNAME=AI8xHART
+paramDescr=tfi0078x.dsc
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+MODULEDESC = ET200M_AI8moddesc.xml
+
+; Beim Tausch hin zu dieser Baugruppe werden die eventuell vorhandenen
+; Childs der vorherigen Baugruppe automatisch durch Instanzen der
+; folgenden Objekte ersetzt. Siehe AP00760271.
+;
+; Basis-Objekttyp (von dem beide Childs Derivate sein müssen),
+; Neuer, automatisch zu erzeugender Objekttyp
+AutoExchangeChild=1315575,2363680
+
+; ----------------------------- HART-AO300-Baugruppe fuer ET200M-Slave
+[_S7H_HSP_6ES7_332_8TF00_CT]
+server=s7h0078x.dll
+prefix=OM
+ObjType=2363679
+basetype=_S7H_6ES7_332_5HF00_0AB0_CT
+CLASS_PROPERTIES=0
+CatalogParent=1314949
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x4CC1
+MLFB=6ES7 332-8TF00-0AB0
+IS_PARAMETRIZEABLE=1
+
+; Bgr-Tausch unabhaengig von STEP7-Version ermoeglichen
+OM_VERSION_INDEPENDENT=1
+
+IO_TYPE=4
+IN_ADDRESS_RANGE=16 
+OUT_ADDRESS_RANGE=16 
+COUNT_OUTPUT_CHANNELS_ANALOG=8 
+COUNT_OUTPUT_GROUPS_ANALOG=8 
+MAX_NUM_OF_CHILDS=8
+FIRST_VISIBLE_CHILD_NO=1 
+REDUNDANZ=0
+IUA_SUPPORT=1
+RED_PAR_TYPE=0xC1
+DATA_CHECK_ARWB=1
+D_USE=1
+IO_ADDRESS_EQUAL=1
+HART_VISIBLE_SLOTOFFSET=-1
+
+PLUG_CLASS=0x00200010
+HSP_ID=0078
+HSP_NAME=AI/AO 8x16Bit HART
+SHORTNAME=AO8xHART
+paramDescr=tfo0078x.dsc
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+
+; Beim Tausch hin zu dieser Baugruppe werden die eventuell vorhandenen
+; Childs der vorherigen Baugruppe automatisch durch Instanzen der
+; folgenden Objekte ersetzt. Siehe AP00760271.
+;
+; Basis-Objekttyp (von dem beide Childs Derivate sein müssen),
+; Neuer, automatisch zu erzeugender Objekttyp
+AutoExchangeChild=1315575,2363680
+
+;----------------------------- HART SUBMODUL für HSP
+[_S7H_HSP_SUBMODUL_HART__TF00_CT]
+server=s7hk33ax.dll
+prefix=OM
+ObjType=2363680
+basetype=_S7H_HART_SUBMODUL_CT
+CatalogParent=2363678,2363679
+HWCNFX_VER=5.4.0.0|0
+HWCNFX_FOR_HWU=5.3.2.0
+HSP_NAME=AI/AO 8x16Bit HART
+HSP_ID=0078

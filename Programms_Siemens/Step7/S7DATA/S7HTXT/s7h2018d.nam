@@ -1,0 +1,19 @@
+;------------------------------------------------------------------------
+; Nam-Datei für HSP 2018
+;------------------------------------------------------------------------
+;------------------- Created with assistance of HDC ---------------------
+
+Comment=ET 200S 8DI / 8DO / 2DO AC
+
+;---------- 8xDC24V,   6ES7 131-4BF00-0AA0
+[2366979]
+KatEntryName=8DI DC24V
+InfoText=Módulo de entradas digitales DI 8xDC24V, soporta modo isócrono
+SHORTNAME=8DI DC24V
+
+;---------- DO 8xDC24V/0,5A,   6ES7 132-4BF00-0AA0
+[2366980]
+KatEntryName=8DO DC24V/0,5A
+InfoText=Módulo de salidas digitales DO 8xDC24V/0,5A, soporta modo isócrono
+SHORTNAME=8DO DC24V/0,5A
+

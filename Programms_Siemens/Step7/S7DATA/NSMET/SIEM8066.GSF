@@ -1,0 +1,492 @@
+;===========================================================
+; DDB File for  Push Button Panel PP 17-II
+; SYNC/FREEZE and Auto_Baud not supported, 12Mbit/s
+; MLFB  : 6AV3 688-3ED13-0AX0
+; Copyright (C) Siemens AG 1998  All Rights Reserved. Confidential
+;
+; Date  : 08.12.99 
+; File  : SIEM8066.GSF
+;===========================================================
+#Profibus_DP
+;  User-Parameter-Definition
+PrmText=1
+Text(0)="Bouton-poussoir"
+Text(1)="Interrupteur"
+EndPrmText
+PrmText=2
+Text(0)="Clignotant vert"
+Text(1)="Jaune"
+Text(2)=" Clignotant rouge"
+Text(3)="Clignotant jaune"
+EndPrmText
+;
+ExtUserPrmData=7 "Allong. d'impulsions n * 20 ms"
+Unsigned8 0 0-50
+EndExtUserPrmData
+ExtUserPrmData=8 "Touche pour test de lampes"
+Unsigned8 1 0-32
+EndExtUserPrmData
+ExtUserPrmData=9 "Fonction touche 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=10 "Fonction touche 2"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=11 "Fonction touche 3"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=12 "Fonction touche 4"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=13 "Fonction touche 5"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=14 "Fonction touche 6"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=15 "Fonction touche 7"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=16 "Fonction touche 8"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=17 "Fonction touche 9"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=18 "Fonction touche 10"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=19 "Fonction touche 11"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=20 "Fonction touche 12"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=21 "Fonction touche 13"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=22 "Fonction touche 14"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=23 "Fonction touche 15"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=24 "Fonction touche 16"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=25 "Fonction touche 17"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=26 "Fonction touche 18"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=27 "Fonction touche 19"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=28 "Fonction touche 20"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=29 "Fonction touche 21"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=30 "Fonction touche 22"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=31 "Fonction touche 23"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=32 "Fonction touche 24"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=33 "Fonction touche 25"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=34 "Fonction touche 26"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=35 "Fonction touche 27"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=36 "Fonction touche 28"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=37 "Fonction touche 29"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=38 "Fonction touche 30"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=39 "Fonction touche 31"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=40 "Fonction touche 32"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=41 "Fonction entrée digitale 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=42 " Fonction entrée digitale 2"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=43 "Fonction entrée digitale 3"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=44 "Fonction entrée digitale 4"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=45 "Fonction entrée digitale 5"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=46 "Fonction entrée digitale 6"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=47 "Fonction entrée digitale 7"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=48 "Fonction entrée digitale 8"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=49 "Fonction entrée digitale 9"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=50 "Fonction entrée digitale 10"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=51 "Fonction entrée digitale 11"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=52 "Fonction entrée digitale 12"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=53 "Fonction entrée digitale 13"
+Bit(4) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=54 "Fonction entrée digitale 14"
+Bit(5) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=55 "Fonction entrée digitale 15"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=56 "Fonction entrée digitale 16"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=57 "Mode LED 1"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=58 "Mode LED 2"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=59 "Mode LED 3"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=60 "Mode LED 4"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=61 "Mode LED 5"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=62 "Mode LED 6"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=63 "Mode LED 7"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=64 "Mode LED 8"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=65 "Mode LED 9"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=66 "Mode LED 10"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=67 "Mode LED 11"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=68 "Mode LED 12"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=69 "Mode LED 13"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=70 "Mode LED 14"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=71 "Mode LED 15"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=72 "Mode LED 16"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=73 "Mode LED 17"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=74 "Mode LED 18"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=75 "Mode LED 19"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=76 "Mode LED 20"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=77 "Mode LED 21"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=78 "Mode LED 22"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=79 "Mode LED 23"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=80 "Mode LED 24"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=81 "Mode LED 25"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=82 "Mode LED 26"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=83 "Mode LED 27"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=84 "Mode LED 28"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=85 "Mode LED 29"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=86 "Mode LED 30"
+BitArea(2-3) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=87 "Mode LED 31"
+BitArea(4-5) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=88 "Mode LED 32"
+BitArea(6-7) 0 0-3
+Prm_Text_Ref=2
+EndExtUserPrmData
+;
+; Unit-Definition-List:
+GSD_Revision=1
+Vendor_Name="SIEMENS AG"
+Model_Name="PP 17-II"
+Revision="V1.1"
+Ident_Number=0x8066
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="V2.0"
+Software_Release="V1.0"
+9.6_supp=1
+19.2_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=60
+MaxTsdr_19.2=60
+MaxTsdr_93.75=60
+MaxTsdr_187.5=60
+MaxTsdr_500=100
+MaxTsdr_1.5M=150
+MaxTsdr_3M=250
+MaxTsdr_6M=450
+MaxTsdr_12M=800
+Implementation_Type="ASPC2"
+Bitmap_Device="BEBOPP7N"
+Bitmap_SF="BEBOPP7S"
+;
+; Slave-Specification:
+OrderNumber="6AV3 688-3ED13-0AX0"
+Periphery="SIMATIC PP"
+OffsetFirstMPDBlock=0
+ETERDelay=0
+MaxResponseDelay=0
+Auto_Baud_supp=0
+Sync_Mode_supp=0
+Freeze_Mode_supp=0
+Min_Slave_Intervall=6
+Max_Diag_Data_Len=10
+Modul_Offset=0
+Slave_Family=3@SIMATIC
+Max_Module=2
+Max_Input_Len=6
+Max_Output_Len=12
+Max_Data_Len=18
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=23
+User_Prm_Data = 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Const(0)= 0x00,0x04,0x08,0x02,0x04,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(7)=7
+Ext_User_Prm_Data_Ref(8)=8
+Ext_User_Prm_Data_Ref(9)=9
+Ext_User_Prm_Data_Ref(9)=10
+Ext_User_Prm_Data_Ref(9)=11
+Ext_User_Prm_Data_Ref(9)=12
+Ext_User_Prm_Data_Ref(9)=13
+Ext_User_Prm_Data_Ref(9)=14
+Ext_User_Prm_Data_Ref(9)=15
+Ext_User_Prm_Data_Ref(9)=16
+Ext_User_Prm_Data_Ref(10)=17
+Ext_User_Prm_Data_Ref(10)=18
+Ext_User_Prm_Data_Ref(10)=19
+Ext_User_Prm_Data_Ref(10)=20
+Ext_User_Prm_Data_Ref(10)=21
+Ext_User_Prm_Data_Ref(10)=22
+Ext_User_Prm_Data_Ref(10)=23
+Ext_User_Prm_Data_Ref(10)=24
+Ext_User_Prm_Data_Ref(11)=25
+Ext_User_Prm_Data_Ref(11)=26
+Ext_User_Prm_Data_Ref(11)=27
+Ext_User_Prm_Data_Ref(11)=28
+Ext_User_Prm_Data_Ref(11)=29
+Ext_User_Prm_Data_Ref(11)=30
+Ext_User_Prm_Data_Ref(11)=31
+Ext_User_Prm_Data_Ref(11)=32
+Ext_User_Prm_Data_Ref(12)=33
+Ext_User_Prm_Data_Ref(12)=34
+Ext_User_Prm_Data_Ref(12)=35
+Ext_User_Prm_Data_Ref(12)=36
+Ext_User_Prm_Data_Ref(12)=37
+Ext_User_Prm_Data_Ref(12)=38
+Ext_User_Prm_Data_Ref(12)=39
+Ext_User_Prm_Data_Ref(12)=40
+Ext_User_Prm_Data_Ref(13)=41
+Ext_User_Prm_Data_Ref(13)=42
+Ext_User_Prm_Data_Ref(13)=43
+Ext_User_Prm_Data_Ref(13)=44
+Ext_User_Prm_Data_Ref(13)=45
+Ext_User_Prm_Data_Ref(13)=46
+Ext_User_Prm_Data_Ref(13)=47
+Ext_User_Prm_Data_Ref(13)=48
+Ext_User_Prm_Data_Ref(14)=49
+Ext_User_Prm_Data_Ref(14)=50
+Ext_User_Prm_Data_Ref(14)=51
+Ext_User_Prm_Data_Ref(14)=52
+Ext_User_Prm_Data_Ref(14)=53
+Ext_User_Prm_Data_Ref(14)=54
+Ext_User_Prm_Data_Ref(14)=55
+Ext_User_Prm_Data_Ref(14)=56
+Ext_User_Prm_Data_Ref(15)=57
+Ext_User_Prm_Data_Ref(15)=58
+Ext_User_Prm_Data_Ref(15)=59
+Ext_User_Prm_Data_Ref(15)=60
+Ext_User_Prm_Data_Ref(16)=61
+Ext_User_Prm_Data_Ref(16)=62
+Ext_User_Prm_Data_Ref(16)=63
+Ext_User_Prm_Data_Ref(16)=64
+Ext_User_Prm_Data_Ref(17)=65
+Ext_User_Prm_Data_Ref(17)=66
+Ext_User_Prm_Data_Ref(17)=67
+Ext_User_Prm_Data_Ref(17)=68
+Ext_User_Prm_Data_Ref(18)=69
+Ext_User_Prm_Data_Ref(18)=70
+Ext_User_Prm_Data_Ref(18)=71
+Ext_User_Prm_Data_Ref(18)=72
+Ext_User_Prm_Data_Ref(19)=73
+Ext_User_Prm_Data_Ref(19)=74
+Ext_User_Prm_Data_Ref(19)=75
+Ext_User_Prm_Data_Ref(19)=76
+Ext_User_Prm_Data_Ref(20)=77
+Ext_User_Prm_Data_Ref(20)=78
+Ext_User_Prm_Data_Ref(20)=79
+Ext_User_Prm_Data_Ref(20)=80
+Ext_User_Prm_Data_Ref(21)=81
+Ext_User_Prm_Data_Ref(21)=82
+Ext_User_Prm_Data_Ref(21)=83
+Ext_User_Prm_Data_Ref(21)=84
+Ext_User_Prm_Data_Ref(22)=85
+Ext_User_Prm_Data_Ref(22)=86
+Ext_User_Prm_Data_Ref(22)=87
+Ext_User_Prm_Data_Ref(22)=88
+;
+; Module-Definitions:
+;
+Module = "PP17-II" 0x15,0x2B
+EndModule
+;
+; Diagnosedaten
+Unit_Diag_Bit(0000) = "Court circuit sortie digitale"

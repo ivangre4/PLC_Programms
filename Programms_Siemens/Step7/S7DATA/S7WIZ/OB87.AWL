@@ -1,0 +1,19 @@
+ORGANIZATION_BLOCK "Communication Fault"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB87_EV_CLASS : BYTE ;	//16#35 Event class 3
+  OB87_FLT_ID : BYTE ;	//16#XX, Fault identifcation code
+  OB87_PRIORITY : BYTE ;	//26 (Priority of 1 is lowest)
+  OB87_OB_NUMBR : BYTE ;	//87 (Organization block 87, OB87)
+  OB87_RESERVED_1 : BYTE ;	//Reserved for system
+  OB87_RESERVED_2 : BYTE ;	//Reserved for system
+  OB87_RESERVED_3 : WORD ;	//Reserved for system
+  OB87_RESERVED_4 : DWORD ;	//Reserved for system
+  OB87_DATE_TIME : DATE_AND_TIME ;	//Date and time OB87 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

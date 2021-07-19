@@ -1,0 +1,1112 @@
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Senem Beken (PSE AS IL) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Hr. Reich (Siemens AG) -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v2.1.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x002A" DeviceID="0x0402">
+			<InfoText TextId="HMI Panels"/>
+			<VendorName Value="SIEMENS"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="HMI" ProductFamily="SIMATIC HMI"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DAP 1" PhysicalSlots="0..1" ModuleIdentNumber="0x00000001" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="tp177b" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP177">
+						<Name TextId="TP177B"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 642-0BA01-1AX0"/>
+						<HardwareRelease Value="A1.0"/>
+						<SoftwareRelease Value="V5.2 SP3"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_1" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 1" SubmoduleIdentNumber="0x00000001">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 2" PhysicalSlots="0..1" ModuleIdentNumber="0x00000002" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mobile177" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP177">
+						<Name TextId="MobilePanel 177"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 645-0BC01-0AX0"/>
+						<HardwareRelease Value="A1.0"/>
+						<SoftwareRelease Value="V5.2 SP3"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_2" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 2" SubmoduleIdentNumber="0x00000002">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 3" PhysicalSlots="0..1" ModuleIdentNumber="0x00000003" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="op177b" ExtendedAddressAssignmentSupported="true" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP177">
+						<Name TextId="OP177B"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 642-0DA01-1AX0"/>
+						<HardwareRelease Value="A1.0"/>
+						<SoftwareRelease Value="V5.2 SP3"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_3" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 3" SubmoduleIdentNumber="0x00000003">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 4" PhysicalSlots="0..1" ModuleIdentNumber="0x00000004" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="op277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="OP277-6"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0AA01-1AX0"/>
+						<HardwareRelease Value="A1.0"/>
+						<SoftwareRelease Value="V5.2 SP3"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_4" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 4" SubmoduleIdentNumber="0x00000004" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 5" PhysicalSlots="0..1" ModuleIdentNumber="0x00000005" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="tp277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="TP277-6"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0BA01-1AX0"/>
+						<HardwareRelease Value="A1.0"/>
+						<SoftwareRelease Value="V5.2 SP3"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_5" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 5" SubmoduleIdentNumber="0x00000005" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 6" PhysicalSlots="0..1" ModuleIdentNumber="0x00000006" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mp277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="OP277-10"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0DD01-1AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>					
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_6" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 6" SubmoduleIdentNumber="0x00000006" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>					
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 7" PhysicalSlots="0..1" ModuleIdentNumber="0x00000007" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mp277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="TP277-10"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0CD01-1AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>					
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_7" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 7" SubmoduleIdentNumber="0x00000007" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>						
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 8" PhysicalSlots="0..1" ModuleIdentNumber="0x00000008" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mp277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="MP277-Key"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0DB01-1AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>					
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_9" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 8" SubmoduleIdentNumber="0x00000008" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>						
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 9" PhysicalSlots="0..1" ModuleIdentNumber="0x00000009" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mp277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="MP277-Touch"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 643-0CB01-1AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>					
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_10" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 9" SubmoduleIdentNumber="0x00000009" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>					
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 11" PhysicalSlots="0..1" ModuleIdentNumber="0x0000000B" MinDeviceInterval="128" ImplementationType="software" DNS_CompatibleName="mp377" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP377">
+						<Name TextId="MP377-12-Key"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 644-0BA01-2AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.02"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_12" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 11" SubmoduleIdentNumber="0x0000000B" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+						<PortSubmoduleItem SubslotNumber="32770" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port2" SubmoduleIdentNumber="0x00000003"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 12" PhysicalSlots="0..1" ModuleIdentNumber="0x0000000C" MinDeviceInterval="128" ImplementationType="software" DNS_CompatibleName="mp377" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP377">
+						<Name TextId="MP377-12-Touch"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 644-0AA01-2AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.02"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_13" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 12" SubmoduleIdentNumber="0x0000000C" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+						<PortSubmoduleItem SubslotNumber="32770" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port2" SubmoduleIdentNumber="0x00000003"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 13" PhysicalSlots="0..1" ModuleIdentNumber="0x0000000D" MinDeviceInterval="128" ImplementationType="software" DNS_CompatibleName="mp377" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP377">
+						<Name TextId="MP377-15-Touch"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 644-0AB01-2AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.02"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_13" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 13" SubmoduleIdentNumber="0x0000000D" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+						<PortSubmoduleItem SubslotNumber="32770" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port2" SubmoduleIdentNumber="0x00000003"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 14" PhysicalSlots="0..1" ModuleIdentNumber="0x0000000E" MinDeviceInterval="128" ImplementationType="software" DNS_CompatibleName="mp377" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP377">
+						<Name TextId="MP377-19-Touch"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 644-0AC01-2AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.02"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_13" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 14" SubmoduleIdentNumber="0x0000000E" Writeable_IM_Records="1">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+						<PortSubmoduleItem SubslotNumber="32770" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port2" SubmoduleIdentNumber="0x00000003"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 15" PhysicalSlots="0..1" ModuleIdentNumber="0x0000000F" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="Mobile277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="Mobile Panel 277"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 645-0CC01-0AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>					
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_8" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 15" SubmoduleIdentNumber="0x0000000F">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" MAUType="100BASETXFD" MaxPortRxDelay="378" MaxPortTxDelay="1212" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>					
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 16" PhysicalSlots="0..1" ModuleIdentNumber="0x00000010" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="tp177b" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP177">
+						<Name TextId="TP177B 4 color PN/DP"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 642-0BD01-3AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.00"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>							
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_5_I" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 16" SubmoduleIdentNumber="0x00000010">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>				
+				<DeviceAccessPointItem ID="DAP 17" PhysicalSlots="0..1" ModuleIdentNumber="0x00000011" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="mp177" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP177">
+						<Name TextId="MP177 6 Touch"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 642-0EA01-3AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.00.00"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>							
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_4_I" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 17" SubmoduleIdentNumber="0x00000011">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>				
+				<DeviceAccessPointItem ID="DAP 18" PhysicalSlots="0..1" ModuleIdentNumber="0x00000012" MinDeviceInterval="2048" ImplementationType="software" DNS_CompatibleName="Mobile277" ExtendedAddressAssignmentSupported="false" AddressAssignment="LOCAL;DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo CategoryRef="xP277">
+						<Name TextId="Mobile Panel 277 10"/>
+						<InfoText TextId="SIMATIC HMI Panel"/>
+						<VendorName Value="SIEMENS"/>
+						<OrderNumber Value="6AV6 645-0BE02-0AX0"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="V01.01.01"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+					</SubslotList>							
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_5_I" FixedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 18" SubmoduleIdentNumber="0x00000012">
+							<IOData/>
+							<RecordDataList/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem SupportedRT_Class="Class1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" TextId="IDT_Interface1" SubmoduleIdentNumber="0x00000001"/>
+						<PortSubmoduleItem SubslotNumber="32769" TextId="Port1" SubmoduleIdentNumber="0x00000002"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>				
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ID="ID_Mod_1" ModuleIdentNumber="0x00002001">
+					<ModuleInfo>
+						<Name TextId="4_I"/>
+						<InfoText TextId="SIMATIC HMI TP177"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00003001">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_2" ModuleIdentNumber="0x00002002">
+					<ModuleInfo>
+						<Name TextId="9_I/2_O"/>
+						<InfoText TextId="SIMATIC HMI Mobile Panel 177"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00003002">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 5"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 6"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 7"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 8"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_3" ModuleIdentNumber="0x00002003">
+					<ModuleInfo>
+						<Name TextId="9_I/4_ O"/>
+						<InfoText TextId="SIMATIC HMI OP 177B"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00003003">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 5"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 6"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 7"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 8"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_4" ModuleIdentNumber="0x00002004">
+					<ModuleInfo>
+						<Name TextId="4_I/4_ O"/>
+						<InfoText TextId="SIMATIC HMI OP270-6"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00003004" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_5" ModuleIdentNumber="0x00002005">
+					<ModuleInfo>
+						<Name TextId="4_I/0_ O"/>
+						<InfoText TextId="SIMATIC HMI TP270-6"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00003005" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_6" ModuleIdentNumber="0x00002006">
+					<ModuleInfo>
+						<Name TextId="5_I/5_ O"/>
+						<InfoText TextId="SIMATIC HMI OP270-10"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00003006" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 4"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_7" ModuleIdentNumber="0x00002007">
+					<ModuleInfo>
+						<Name TextId="5_I/0_ O"/>
+						<InfoText TextId="SIMATIC HMI TP270-10"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00003007" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_8" ModuleIdentNumber="0x00002008">
+					<ModuleInfo>
+						<Name TextId="10_I/4_O"/>
+						<InfoText TextId="10_I/4_O"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00003008" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 5"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 6"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 7"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 8"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 9"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_9" ModuleIdentNumber="0x00002009">
+					<ModuleInfo>
+						<Name TextId="MP277-Key"/>
+						<InfoText TextId="MP277-Key"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00003009" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_10" ModuleIdentNumber="0x0000200A">
+					<ModuleInfo>
+						<Name TextId="MP277-Touch"/>
+						<InfoText TextId="MP277-Touch"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x0000300A" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_11" ModuleIdentNumber="0x0000200B">
+					<ModuleInfo>
+						<Name TextId="MP277-STN"/>
+						<InfoText TextId="MP277-STN"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="11" SubmoduleIdentNumber="0x0000300B" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+				<ModuleItem ID="ID_Mod_12" ModuleIdentNumber="0x0000200C">
+					<ModuleInfo>
+						<Name TextId="MP377-Key"/>
+						<InfoText TextId="MP377-Key"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="12" SubmoduleIdentNumber="0x0000300C" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 4"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_13" ModuleIdentNumber="0x0000200D">
+					<ModuleInfo>
+						<Name TextId="MP377-Touch"/>
+						<InfoText TextId="MP377-Touch"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="13" SubmoduleIdentNumber="0x0000300D" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+				<ModuleItem ID="ID_Mod_4_I" ModuleIdentNumber="0x0000200E">
+					<ModuleInfo>
+						<Name TextId="4_I"/>
+						<InfoText TextId="4_I"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="14" SubmoduleIdentNumber="0x0000300E">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_5_I" ModuleIdentNumber="0x0000200F">
+					<ModuleInfo>
+						<Name TextId="5_I"/>
+						<InfoText TextId="5_I"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="15" SubmoduleIdentNumber="0x0000300F">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+								</Input>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_10I_4O" ModuleIdentNumber="0x00002010">
+					<ModuleInfo>
+						<Name TextId="10_I/4_O"/>
+						<InfoText TextId="10_I/4_O"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="16" SubmoduleIdentNumber="0x00003010" Writeable_IM_Records="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 3"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 4"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 5"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 6"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 7"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 8"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="I-channel 9"/>
+								</Input>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 0"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 1"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 2"/>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="O-channel 3"/>
+								</Output>
+							</IOData>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+			</ModuleList>			
+			<ValueList>
+				<ValueItem ID="REF_Var1">
+					<Assignments>
+						<Assign TextId="REF_Var1_0" Content="0"/>
+						<Assign TextId="REF_Var1_1" Content="1"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<GraphicsList>
+				<GraphicItem ID="ID_Graph_1" GraphicFile="BEBO567N"/>
+				<GraphicItem ID="ID_Graph_3" GraphicFile="BEBO567S"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="xP177" TextId="177"/>
+				<CategoryItem ID="xP277" TextId="277"/>
+				<CategoryItem ID="xP377" TextId="377"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!--Input-Output Channels-->
+					<Text TextId="O-channel 0" Value="O-channel 0"/>
+					<Text TextId="O-channel 1" Value="O-channel 1"/>
+					<Text TextId="O-channel 2" Value="O-channel 2"/>
+					<Text TextId="O-channel 3" Value="O-channel 3"/>
+					<Text TextId="O-channel 4" Value="O-channel 4"/>
+					<Text TextId="O-channel 5" Value="O-channel 5"/>
+					<Text TextId="O-channel 6" Value="O-channel 6"/>
+					<Text TextId="O-channel 7" Value="O-channel 7"/>
+					<Text TextId="I-channel 0" Value="I-channel 0"/>
+					<Text TextId="I-channel 1" Value="I-channel 1"/>
+					<Text TextId="I-channel 2" Value="I-channel 2"/>
+					<Text TextId="I-channel 3" Value="I-channel 3"/>
+					<Text TextId="I-channel 4" Value="I-channel 4"/>
+					<Text TextId="I-channel 5" Value="I-channel 5"/>
+					<Text TextId="I-channel 6" Value="I-channel 6"/>
+					<Text TextId="I-channel 7" Value="I-channel 7"/>
+					<Text TextId="I-channel 8" Value="I-channel 8"/>
+					<Text TextId="I-channel 9" Value="I-channel 9"/>
+					<!--General information-->
+					<Text TextId="SIMATIC HMI Panel" Value="SIMATIC HMI Panel"/>
+					<Text TextId="HMI Panels" Value="HMI Panels"/>
+					<Text TextId="SIEMENS" Value="SIEMENS"/>
+					<!--HMI devices-->
+					<Text TextId="TP177B" Value="TP177B"/>
+					<Text TextId="OP177B" Value="OP177B"/>
+					<Text TextId="MobilePanel 177" Value="Mobile Panel 177"/>
+					<Text TextId="Mobile177" Value="Mobile177"/>
+					<Text TextId="Mobile277" Value="Mobile277"/>
+					<Text TextId="MP277-Key" Value="MP277 8 Key"/>
+					<Text TextId="MP277-Touch" Value="MP277 8 Touch"/>
+					<Text TextId="MP277-STN" Value="MP277 8 Touch STN"/>
+					<Text TextId="OP277-6" Value="OP277"/>
+					<Text TextId="TP277-6" Value="TP277"/>
+					<Text TextId="OP277-10" Value="MP277 10 Key"/>
+					<Text TextId="TP277-10" Value="MP277 10 Touch"/>
+					<Text TextId="xP277" Value="xP277"/>
+					<Text TextId="xP177" Value="xP177"/>
+					<Text TextId="177" Value="177"/>
+					<Text TextId="277" Value="277"/>
+					<Text TextId="377" Value="377"/>
+					<Text TextId="xP377" Value="xP377"/>
+					<Text TextId="MP377" Value="MP377"/>
+					<Text TextId="MP377-12-Key" Value="MP377 12 Key"/>
+					<Text TextId="MP377-12-Touch" Value="MP377 12 Touch"/>
+					<Text TextId="MP377-15-Touch" Value="MP377 15 Touch"/>
+					<Text TextId="MP377-19-Touch" Value="MP377 19 Touch"/>
+					<Text TextId="Mobile Panel 277" Value="Mobile Panel 277"/>
+					<Text TextId="IDT_Interface1" Value="Interface"/>					
+					<Text TextId="IDT_SS_Interface" Value="X1"/>
+					<Text TextId="IDT_SS_Port1" Value="P1"/>
+					<Text TextId="IDT_SS_Port2" Value="P2"/>					
+					<Text TextId="Port1" Value="Port 1"/>
+					<Text TextId="Port2" Value="Port 2"/>				
+					<!--Modulelist Name description-->
+					<Text TextId="9_I/4_ O" Value="OP177B"/>
+					<Text TextId="4_I" Value="4 Input"/>
+					<Text TextId="5_I" Value="5 Input"/>
+					<Text TextId="9_I/2_O" Value="Mobile Panel 177B"/>
+					<Text TextId="4_I/4_ O" Value="OP277"/>
+					<Text TextId="4_I/0_ O" Value="TP277"/>
+					<Text TextId="5_I/5_ O" Value="MP277-10-Key"/>
+					<Text TextId="5_I/0_ O" Value="MP277-10-Touch"/>
+					<Text TextId="10_I/4_O" Value="10 Input / 4 Output"/>
+					<Text TextId="MP377-Key" Value="MP377-Key"/>
+					<Text TextId="MP377-Touch" Value="MP377-Touch"/>
+					<Text TextId="REF_Var1" Value="REF_Var1"/>
+					<Text TextId="REF_Var1_0" Value="REF_Var1_0"/>
+					<Text TextId="REF_Var1_1" Value="REF_Var1_1"/>
+					<!--Modulelist InfoText description-->
+					<Text TextId="SIMATIC HMI OP 177B" Value="SIMATIC HMI OP 177B"/>
+					<Text TextId="SIMATIC HMI TP177" Value="SIMATIC HMI TP177"/>
+					<Text TextId="TP177B 4 color PN/DP" Value="TP177B 4 color PN/DP"/>
+					<Text TextId="MP177 6 Touch" Value="MP177 6 Touch"/>
+					<Text TextId="Mobile Panel 277 10" Value="Mobile Panel 277 10"/>
+					<Text TextId="SIMATIC HMI Mobile Panel 177" Value="SIMATIC HMI Mobile Panel 177"/>
+					<Text TextId="SIMATIC HMI OP270-6" Value="SIMATIC HMI OP277-6,MP277-8-Key"/>
+					<Text TextId="SIMATIC HMI TP270-6" Value="SIMATIC HMI TP277-6,MP277-8-Touch"/>
+					<Text TextId="SIMATIC HMI OP270-10" Value="SIMATIC HMI MP277-10-Key"/>
+					<Text TextId="SIMATIC HMI TP270-10" Value="SIMATIC HMI MP277-10-Touch"/>
+					<Text TextId="SIMATIC HMI Mobile Panel 277B" Value="SIMATIC HMI Mobile Panel 277B"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!--Eingang-Ausgang Kanäle-->
+					<Text TextId="O-channel 0" Value="O-channel 0"/>
+					<Text TextId="O-channel 1" Value="O-channel 1"/>
+					<Text TextId="O-channel 2" Value="O-channel 2"/>
+					<Text TextId="O-channel 3" Value="O-channel 3"/>
+					<Text TextId="O-channel 4" Value="O-channel 4"/>
+					<Text TextId="O-channel 5" Value="O-channel 5"/>
+					<Text TextId="O-channel 6" Value="O-channel 6"/>
+					<Text TextId="O-channel 7" Value="O-channel 7"/>
+					<Text TextId="I-channel 0" Value="I-channel 0"/>
+					<Text TextId="I-channel 1" Value="I-channel 1"/>
+					<Text TextId="I-channel 2" Value="I-channel 2"/>
+					<Text TextId="I-channel 3" Value="I-channel 3"/>
+					<Text TextId="I-channel 4" Value="I-channel 4"/>
+					<Text TextId="I-channel 5" Value="I-channel 5"/>
+					<Text TextId="I-channel 6" Value="I-channel 6"/>
+					<Text TextId="I-channel 7" Value="I-channel 7"/>
+					<Text TextId="I-channel 8" Value="I-channel 8"/>
+					<Text TextId="I-channel 9" Value="I-channel 9"/>
+					<!--Allgemeine Information-->
+					<Text TextId="HMI Panels" Value="SIMATIC HMI Panels  von Siemens AG"/>
+					<Text TextId="SIEMENS" Value="SIEMENS"/>
+					<Text TextId="SIMATIC HMI Panel" Value="SIMATIC HMI Panel"/>
+					<!--HMI Geräte-->
+					<Text TextId="TP177B" Value="TP177B"/>
+					<Text TextId="OP177B" Value="OP177B"/>
+					<Text TextId="MobilePanel 177" Value="Mobile Panel 177"/>
+					<Text TextId="Mobile177" Value="Mobile177"/>
+					<Text TextId="Mobile277" Value="Mobile277"/>
+					<Text TextId="MP277-Key" Value="MP277 8 Key"/>
+					<Text TextId="MP277-Touch" Value="MP277 8 Touch"/>
+					<Text TextId="MP277-STN" Value="MP277 8 Touch STN"/>
+					<Text TextId="OP277-6" Value="OP277"/>
+					<Text TextId="TP277-6" Value="TP277"/>
+					<Text TextId="OP277-10" Value="MP277 10 Key"/>
+					<Text TextId="TP277-10" Value="MP277 10 Touch"/>
+					<Text TextId="xP277" Value="xP277"/>
+					<Text TextId="xP177" Value="xP177"/>
+					<Text TextId="177" Value="177"/>
+					<Text TextId="277" Value="277"/>
+					<Text TextId="377" Value="377"/>
+					<Text TextId="xP377" Value="xP377"/>
+					<Text TextId="MP377" Value="MP377"/>
+					<Text TextId="MP377-12-Key" Value="MP377 12 Key"/>
+					<Text TextId="MP377-12-Touch" Value="MP377 12 Touch"/>
+					<Text TextId="MP377-15-Touch" Value="MP377 15 Touch"/>
+					<Text TextId="MP377-19-Touch" Value="MP377 19 Touch"/>
+					<Text TextId="Mobile Panel 277" Value="Mobile Panel 277"/>
+					<Text TextId="IDT_Interface1" Value="Interface"/>					
+					<Text TextId="IDT_SS_Interface" Value="X1"/>
+					<Text TextId="IDT_SS_Port1" Value="P1"/>
+					<Text TextId="IDT_SS_Port2" Value="P2"/>					
+					<Text TextId="Port1" Value="Port 1"/>
+					<Text TextId="Port2" Value="Port 2"/>				
+					<!--Modulelist Name Beschreibung-->
+					<Text TextId="9_I/4_ O" Value="OP177B"/>
+					<Text TextId="4_I" Value="4 Input"/>
+					<Text TextId="5_I" Value="5 Input"/>
+					<Text TextId="9_I/2_O" Value="Mobile Panel 177B"/>
+					<Text TextId="4_I/4_ O" Value="OP277"/>
+					<Text TextId="4_I/0_ O" Value="TP277"/>
+					<Text TextId="5_I/5_ O" Value="MP277-10-Key"/>
+					<Text TextId="5_I/0_ O" Value="MP277-10-Touch"/>
+					<Text TextId="10_I/4_O" Value="10I/4O"/>
+					<Text TextId="MP377-Key" Value="MP377-Key"/>
+					<Text TextId="MP377-Touch" Value="MP377-Touch"/>
+					<Text TextId="REF_Var1" Value="REF_Var1"/>
+					<Text TextId="REF_Var1_0" Value="REF_Var1_0"/>
+					<Text TextId="REF_Var1_1" Value="REF_Var1_1"/>
+					<!--Modulelist InfoText Beschreibung-->
+					<Text TextId="SIMATIC HMI OP 177B" Value="SIMATIC HMI OP 177B"/>
+					<Text TextId="SIMATIC HMI TP177" Value="SIMATIC HMI TP177"/>
+					<Text TextId="TP177B 4 color PN/DP" Value="TP177B 4 color PN/DP"/>
+					<Text TextId="MP177 6 Touch" Value="MP177 6 Touch"/>
+					<Text TextId="Mobile Panel 277 10" Value="Mobile Panel 277 10"/>				
+					<Text TextId="SIMATIC HMI Mobile Panel 177" Value="SIMATIC HMI Mobile Panel 177"/>
+					<Text TextId="SIMATIC HMI OP270-6" Value="SIMATIC HMI OP277-6,MP277-8-Key"/>
+					<Text TextId="SIMATIC HMI TP270-6" Value="SIMATIC HMI TP277-6,MP277-8-Touch"/>
+					<Text TextId="SIMATIC HMI OP270-10" Value="SIMATIC HMI MP277-10-Key"/>
+					<Text TextId="SIMATIC HMI TP270-10" Value="SIMATIC HMI MP277-10-Touch"/>
+					<Text TextId="SIMATIC HMI Mobile Panel 277B" Value="SIMATIC HMI Mobile Panel 277B"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

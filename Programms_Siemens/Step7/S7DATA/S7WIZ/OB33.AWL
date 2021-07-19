@@ -1,0 +1,20 @@
+ORGANIZATION_BLOCK "Cyclic Interrupt 3"
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  OB33_EV_CLASS : BYTE ;	//Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+  OB33_STRT_INF : BYTE ;	//16#34 (OB 33 has started)
+  OB33_PRIORITY : BYTE ;	//10 (Priority of 1 is lowest)
+  OB33_OB_NUMBR : BYTE ;	//33 (Organization block 33, OB33)
+  OB33_RESERVED_1 : BYTE ;	//Reserved for system
+  OB33_RESERVED_2 : BYTE ;	//Reserved for system
+  OB33_PHASE_OFFSET : WORD ;	//Phase offset (msec)
+  OB33_RESERVED_3 : INT ;	//Reserved for system
+  OB33_EXC_FREQ : INT ;	//Frequency of execution (msec)
+  OB33_DATE_TIME : DATE_AND_TIME ;	//Date and time OB33 started
+END_VAR
+BEGIN
+END_ORGANIZATION_BLOCK
+

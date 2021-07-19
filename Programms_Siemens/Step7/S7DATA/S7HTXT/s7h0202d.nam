@@ -1,0 +1,32 @@
+[2364900]
+KatEntryName=V3.3
+SHORTNAME=CPU 317-2 DP
+InfoText=Memoria de trabajo 1024KB; 0,025 ms/1000 instr., conexión MPI+ DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32 módulos; emisor y receptor para comunicación directa; equidistancia; routing; comunicación S7 (FBs/FCs cargables); firmware V3.3
+Comment=6ES7 317-2AK14-0AB0 V3.3, 6ES7 317-6FF04-0AB0 V3.3
+
+[2364901]
+SHORTNAME=MPI/DP
+
+[2364902]
+SHORTNAME=DP
+
+[2364903]
+KatEntryName=6ES7 317-2AK14-0AB0
+SHORTNAME=CPU 317-2 DP
+InfoText=
+
+[2364904]
+KatEntryName=V3.3
+SHORTNAME=CPU 317F-2 DP
+InfoText=Memoria de trabajo 1536KB; 0,025 ms/1000 instr., conexión MPI+ DP (maestro DP o esclavo DP); configuración en varias filas de hasta 32 módulos; emisor y receptor para comunicación directa; equidistancia; routing; comunicación S7 (FBs/FCs cargables); firmware V3.3, para aplicaciones de seguridad; soporta PROFIsafe V2
+
+[2364905]
+SHORTNAME=MPI/DP
+
+[2364906]
+SHORTNAME=DP
+
+[2364907]
+KatEntryName=6ES7 317-6FF04-0AB0
+SHORTNAME=CPU 317F-2 DP
+InfoText=

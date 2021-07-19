@@ -1,0 +1,76 @@
+
+FUNCTION_BLOCK FB21
+
+TITLE =   <interner Baustein-Titel/ Internal block title>
+//
+//   <Baustein-Kommentar/ Block comment>
+//   Hier können Sie Informationen zu Ihrem Baustein hinterlegen
+//   You can store information about your block here
+//
+//   statt FB<Baustein-Nr> kann auch <Name aus Symboltabelle> angegeben werden;
+//   In place of FB<block no.>, <symbolic name> can also be entered;
+
+AUTHOR:   Andy     //  max. 8 Zeichen / max. 8 characters
+FAMILY:   plant1   //  max. 8 Zeichen / max. 8 characters
+NAME:     fb_mot21 //  max. 8 Zeichen / max. 8 characters 
+VERSION:  01.01    //  max. 15.15
+// KNOW_HOW_PROTECT
+//   (falls angegeben, kann im generierten Baustein keine Änderungen mehr vorgenommen werden)
+//   (If specified, no more changes can be made once the block is generated)
+//
+//   Die Vorbelegung von Variablen ist nur für INPUT-, OUTPUT-, IN_OUT- 
+//   und VAR- Variable möglich; nicht für VAR_TEMP.
+//   Assigning variables is only possible for INPUT, OUTPUT, IN_OUT, 
+//   and VAR variables; not for VAR_TEMP
+
+VAR_INPUT            
+  IN1: INT:=123;
+END_VAR
+
+VAR_OUTPUT            
+  OUT1: INT:=123;
+END_VAR
+
+VAR_IN_OUT            
+  IN_OUT1: INT:=123;
+END_VAR
+
+VAR                  
+  VAR1: INT:=123;
+END_VAR
+
+VAR_TEMP 
+  TEMP1: INT;
+END_VAR
+
+BEGIN
+NETWORK
+TITLE =   <Überschrift von 1. Netzwerk/ Title of first network>
+//
+//  <Netzwerk-Kommentar/ Network comment>
+//  Hier können Sie Informationen zu Ihrem Netzwerk hinterlegen 
+//  You can store information about your network here
+
+//  Anweisungen des Netzwerks
+//  z.B. FB-Aufruf:    
+//  CALL FB1, DB1
+//    ( <Parameter-Name>:=<Aktualparameter>   ; weitere Parameter
+//     );
+//   Parameterübergaben sind beim FB optional, sie können einzeln oder gesamt
+//   (incl. () ) weggelassen werden. Auch beim Aufruf kann statt FB bzw. 
+//   DB<Baustein-Nr> ein Name aus der Symboltabelle angegeben werden.
+
+//  Instructions in the network
+//  for example, FB call:    
+//  CALL FB1, DB1
+//    ( <parameter name>:=<actual parameter>   ; additional parameters
+//     );
+//   Parameter passing is optional in the FB, individual parameters or the whole
+//   parameter (including () ) can be left out. For the block call, you can also specify 
+//   a symbolic name from the symbol table instead of the FB or DB<block no.>.
+
+//   Folge-Netzwerke/ Other networks
+
+
+END_FUNCTION_BLOCK
+

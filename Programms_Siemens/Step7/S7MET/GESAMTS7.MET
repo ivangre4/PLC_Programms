@@ -1,0 +1,316 @@
+    ;--------------------------------------------------------------------
+    ;gesamt14 = [_AUT_DELETE_AT]		        12.10.95 KA
+    ;gesamt14 = Korrektur CFC                     	12.10.95 NE
+    ;gesamt15 = Relation 0x54 0x55 Robitzkat      	17.10.95 KA/NE
+    ;gesamt15 = Kommetare doppelte RELID entfernt 	17.10.95 NE
+    ;gesamt15 = WINCC Objtyp u. Relation neu      	17.10.95 KA/NE
+    ;gesamt15 = Meldungsliste Objtyp u. Rel neu   	17.10.95 KA/NE
+    ;gesamt15 = Progf_Memcard                     	17.10.95 NE
+    ;gesamt15 = Alles mit PtP-Node/SUbnet auskom. 	18.10.95 NE
+    ;gesamt15 = Ergaenzung Ohio                   	18.10.95 KA
+    ;gesamt16 = _AUT_RESOURCE_OFFLINE_AT neu       	19.10.95 KA
+    ;gesamt16 = autocreate entfernt               	19.10.95 TH 
+    ;gesamt16 = [_S7V_STATION_FOREIGN_CT]         	23.10.95 NE
+    ;gesamt17 = Zustandsgraph, _AUT_EDIT_BLOCK_AT	07.11.95 AK
+    ;gesamt17 = _AUT_LIBRARY_AT verbessert,		    07.11.95 AK
+    ;gesamt17 = _AUT_S7SW_AT, _AUT_CONTAINER_AT	    07.11.95 AK
+    ;gesamt17 = _S7O_BLOCK_SDBH_CT 			        07.11.95 AK
+    ;gesamt18 = Foreign_Station mit eigener Meta	13.11.95 AK
+    ;gesamt18 = C-Programme mit neuem Link		    13.11.95 AK
+    ;gesamt18 = entfernen _S7V_CONN_XX              14.11.95 NE
+    ;gesamt19 = Verschiedene Relationen fuer Netze  17.11.95 AK
+    ;gesamt19 = Test-OM entfernt					17.11.95 AK
+    ;gesamt19 = Löschbare Objekte überarbeitet		17.11.95 AK
+    ;gesamt19 = C für M7 entfernt.					17.11.95 AK
+    ;gesamt20 = Neue Relationen ECPLAN, Source_Cont	21.11.95 AK
+    ;gesamt20 = Autocreate							21.11.95 AK
+    ;gesamt21 = Löschbare Objekte erweitert			24.11.95 AK
+    ;gesamt22 = Autocreate für H1, L2 Subnetz raus	27.11.95 AK
+    ;gesamt23 = Block-OM Korrektur lt. Andreas S.	14.12.95 AK
+    ;gesamt23 = Symli als löschbar markieren        14.12.95 AK
+    ;gesamt23 = CFC hat ein eigenes .met            14.12.95 AK
+    ;gesamt24 = autocreate Anwenderprog bei M7      18.12.95 AK
+    ;gesamt24 = autocreate Anwenderprog-online      18.12.95 AK
+    ;gesamt25 = MABs werden nicht benötigt          18.12.95 AK
+    ;gesamt26 = Leichter Einstieg                   19.12.95 AK
+    ;gesamt27 = Kardinalität M7-Progfile-Resource	20.12.95 AK
+    ;gesamt28 = SCL und Graph7 sind draußen			28.12.95 AK
+    ;gesamt29 = SFC's löschbar                      02.01.96 AK
+    ;gesamt29 = Lifelist+PLC sind keine Resourcen   02.01.96 AK
+    ;gesamt30 = M7-Resourcen verknüpfen             03.01.96 AK
+    ;gesamt31 = Fehler in S7_SW_AT beseitigt        08.01.96 AK
+    ;gesamt31 = Zustandsgraph aus Metafile entfernt 08.01.96 AK
+    ;gesamt32 = Projekt mit Delete nicht löschbar   09.01.96 AK
+    ;gesamt32 = Link zwischen Lib und M7/Online-Res 09.01.96 AK
+    ;gesamt33 = Änderungen für HW-Konfig            15.01.96 AK
+    ;gesamt34 = Online-Res. nicht lösch/erzeugbar   17.01.96 AK
+    ;gesamt35 = Abstrakte Typen für Bausteine       31.01.96 AK
+    ;gesamt36 = _AUT_PACK_TABLE_AT                  02.02.96 AK
+    ;gesamt37 = Kardinalität für Rel-ID 39          06.02.96 AK
+    ;gesamt38 = AP online nicht löschbar            09.02.96 AK
+    ;gesamt39 = _AUT_COPY_AT und _AUT_MOVE_AT		16.02.96 GW
+    ;gesamt40 = Relation Node-Connection eingefügt  23.02.96 AK
+    ;
+    ;gesamt50 = UBAUSTEINLIST und UBAUSTEINITEM eingefuegt 19.06.96 LS
+  
+    ;gesamt60 = neuer SDB OM			07.08.96 LS
+    ;gesamt70 = _AUT_CAPABLE_RESOFF_AT eingeführt	10.08.98 GW
+	;gesamt80 = gesamt.met aufgeteilt in gesamt.met (auch für OEM) und gesamts7.met (Rest BASIS)
+    ;--------------------------------------------------------------------
+    
+    [_AUT_DELETE_AT]
+    Subtype=_AUT_SUBNET_AT
+    Subtype=_S7H_STATION_AT
+    Subtype=_S7V_STATION_FOREIGN_CT
+    Subtype=_S7V_STATION_PG_CT
+    Subtype=_S7V_STATION_S5_CT
+	Subtype=_S7O_BLOCK_FILESDB_CT
+	Subtype=_S7O_BLOCK_FILESDB_CONT_CT
+    
+    [_AUT_MOVE_AT]
+    Subtype=_AUT_SUBNET_AT
+    Subtype=_S7H_STATION_AT
+    Subtype=_S7V_STATION_FOREIGN_CT
+    Subtype=_S7V_STATION_PG_CT
+    Subtype=_S7V_STATION_S5_CT
+    
+    [_AUT_COPY_AT]
+    Subtype=_AUT_SUBNET_AT
+    Subtype=_S7H_STATION_AT
+    Subtype=_S7V_STATION_FOREIGN_CT
+    Subtype=_S7V_STATION_PG_CT
+    Subtype=_S7V_STATION_S5_CT    
+    
+    [_AUT_GLOBAL_COPY_HANDLER_AT]
+    Subtype=_S7V_CONN_LIST_CT
+  
+    [_S7_LIFE_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_MEMC_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_PRO_OFF_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_PRO_ONL_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7_LIB_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_M7_PRO_OFF_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT    
+    
+    [_M7_PRO_ONL_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_M7_LIB_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_AUT_SWCONTAINER_OFFLINE_AT]
+    Subtype=_S7J_ECPLAN_CONT_CT
+    
+    [_AUT_SOURCE_AT]
+    Subtype=_S7A_SRC_SCL_CT
+    Subtype=_S7A_SRC_GR7_CT
+    Subtype=_S7A_MAK_SCL_CT
+    Subtype=_S7A_SRC_GG_CT
+    Subtype=_S7A_SRC_ZG_CT
+
+    [_AUT_PLAN_AT]
+    Subtype=_S7J_ECPLAN_CT
+    Subtype=_S7J_ESPLAN_CT
+       
+    [_AUT_CAPABLE_CHANGELOG_AT]
+    relation=0x000000de,_S7A_CHANGELOG_CT{1}[0x000000df];deep
+    Subtype=_S7H_STATION_AT
+    Subtype=_S7A_PROJECT_CT
+    Subtype=_S7A_LIBRARY_CT
+
+    [_S7A_CHANGELOG_CT]
+    ObjType=0x00112020
+    server=s7aclomx.dll
+    prefix=S7CLOM
+    relation=0x000000df,_AUT_CAPABLE_CHANGELOG_AT{1}[0x000000de]
+
+    ;---Projekt-OMEnde
+    
+    ;---HWkompAnfang
+    [_AUT_HWKOMP_AT]
+	basetype=_AUT_CAPABLE_EXT_REF_SOURCE_AT
+    basetype=_AUT_CAPABLE_EXT_REF_TARGET_AT
+    relation=0x00000039,_AUT_CONNECTION_AT[0x00000038]
+    Subtype=_S7H_STATION_AT
+    
+    [_S7R_S7RESOFF_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7R_M7RESOFF_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT[0x00000059];deep
+    relation=0x000000B0,_S7WM_ALARM_NUMBERS_CT
+    
+    [_S7Y_SYMBOL_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    ;---Symbol-OMEnde
+    
+    ;---ProgrammfileAnfang
+    [_S7O_PROGF_ONLINE_CT]
+    relation=0x0000001C,_S7O_BLOCK_SDBH_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FILESDB_CT[0x0000001D];deep
+    relation=0x000000d2,_S7O_BLOCK_FILESDB_CONT_CT[0x000000d3];deep
+    
+    [_S7O_PROGF_OFFLINE_CT]
+    relation=0x0000001C,_S7O_BLOCK_SDBH_CT[0x0000001D];deep
+    
+    [_S7O_PROGF_DIREKT_PLC_CT]
+    relation=0x0000001C,_S7O_BLOCK_SDBH_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FILESDB_CT[0x0000001D];deep  
+    relation=0x000000d2,_S7O_BLOCK_FILESDB_CONT_CT[0x000000d3];deep
+	
+    [_S7O_PROGF_MEMCARD_CT]
+    relation=0x0000001C,_S7O_BLOCK_SDBH_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FILESDB_CT[0x0000001D];deep
+    relation=0x000000d2,_S7O_BLOCK_FILESDB_CONT_CT[0x000000d3];deep
+	
+    [_S7O_PROGF_FILEEPROM_CT]
+    relation=0x0000001C,_S7O_BLOCK_SDBH_CT[0x0000001D];deep
+    relation=0x0000001C,_S7O_BLOCK_FILESDB_CT[0x0000001D];deep
+    relation=0x000000d2,_S7O_BLOCK_FILESDB_CONT_CT[0x000000d3];deep
+
+
+    [_AUT_BLOCK_AT]
+    Subtype=_S7O_BLOCK_SDBH_CT
+    
+    [_S7O_BLOCK_FB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    [_S7O_BLOCK_DB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+        
+    [_S7O_BLOCK_SDBH_CT]
+    server=s7hbom0x.dll
+    ObjType=0x0011610B
+    prefix=OM
+    relation=0x0000007E,_S7O_BLOCK_SDBV30_CT[0x0000007F];deep
+
+    [_S7O_BLOCK_SDBV30_CT]
+    server=s7hbom0x.dll
+    ObjType=0x0011610C
+    prefix=OM
+    
+    [_S7O_BLOCK_FILESDB_CT]
+    server=s7ombstx.dll
+    ObjType=0x0011610D
+    prefix=S7B
+    
+    [_S7O_BLOCK_FILESDB_CONT_CT]
+    server=s7ombstx.dll
+    ObjType=0x0011610E
+    prefix=S7B
+    relation=0x000000d4,_S7O_BLOCK_FILESDB_CT[0x000000d5];deep
+    
+    [_S7O_BLOCK_SFB_CT]
+    relation=0x00000058,_S7WM_ALARM_HEADER_CT{1}[0x00000059];deep
+    
+    ;---ProgrammfileEnde
+    
+    ;---VerbproAnfang
+    [_AUT_CONN_LIST_AT]
+    abstract=true
+    server=s7nlvblx.dll
+    objtype=0x0000001A
+    subtype=_S7V_CONN_LIST_CT
+    prefix=VLIST
+    relation=0x00000035,_S7H_HWMODULE_AT{1}[0x00000034]
+    relation=0x00000036,_AUT_CONNECTION_AT[0x00000037];deep
+    
+    [_S7V_CONN_LIST_CT]
+    server=s7nlvblx.dll
+    objtype=0x00145301
+    prefix=VLIST
+    
+    [_AUT_CONNECTION_AT]
+    abstract=true
+    server=s7nhhomx.dll
+    objtype=0x0000000C
+    basetype=_AUT_CAPABLE_EXT_REF_SOURCE_AT
+    basetype=_AUT_CAPABLE_EXT_REF_TARGET_AT
+    subtype=_S7V_CONN_HOMO_CT
+    relation=0x000000cc,_S7A_ER_PROXY_CT{1}[0x000000cd]
+    relation=0x00000037,_AUT_CONN_LIST_AT{1}[0x00000036]
+    relation=0x00000038,_AUT_HWKOMP_AT{1}[0x00000039]
+    relation=0x0000003A,_S7H_HWMODULE_AT{1}[0x0000003B]
+    relation=0x0000003E,_AUT_CONNECTION_AT
+    relation=0x00000054,_S7H_HWMODULE_AT{1}[0x00000055]
+    relation=0x0000003C,_AUT_CONNECTION_AT[0x0000003D]
+    relation=0x0000006C,_AUT_NODE_AT[0x0000006D]
+    relation=0x000000bc,_AUT_NODE_AT[0x000000bd]
+    
+    
+    [_S7V_CONN_HOMO_CT]
+    objtype=0x00145401
+    server=s7nhhomx.dll
+    prefix=HOMO
+    zweiseitig=3
+    spezifiziert=0
+    MUST_REINIT_CONNWAY=1
+    
+    ;--- S7 Meldungsliste Anfang
+	[_AUT_CAPABLE_MELDNR_AT]
+    Abstract=true
+    ObjType=0x00000046
+	subtype=_S7R_S7RESOFF_CT
+	subtype=_S7R_M7RESOFF_CT
+
+    [_S7WM_ALARM_HEADER_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121001
+    relation=0x00000059,_S7R_S7RESOFF_CT{1}[0x00000058]
+    relation=0x00000059,_S7R_M7RESOFF_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_FB_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_DB_CT{1}[0x00000058]
+    relation=0x00000059,_S7O_BLOCK_SFB_CT{1}[0x00000058]
+    relation=0x00000059,_S7Y_SYMBOL_CT{1}[0x00000058]
+    relation=0x0000006A,_S7WM_ALARM_OBJ_CT[0x0000006B];deep
+    relation=0x000000A8,_S7UT_TEXTLIST_CT{1}[0x000000A9];deep
+    
+    [_S7WM_ALARM_OBJ_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121002
+    relation=0x0000006B,_S7WM_ALARM_HEADER_CT{1}[0x0000006A]
+    relation=0x000000AA,_S7WM_ALARM_SUB_CT[0x000000AB];deep
+    
+    [_S7WM_ALARM_SUB_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121003
+    relation=0x000000AB,_S7WM_ALARM_OBJ_CT{1}[0x000000AA]
+    relation=0x000000AC,_S7WM_ALARM_VIEW_WINCC_CT[0x000000AD];deep
+    relation=0x000000AC,_S7WM_ALARM_VIEW_PROTOOL_CT[0x000000AD];deep
+    
+    [_S7WM_ALARM_VIEW_WINCC_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121004
+    relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+    
+    [_S7WM_ALARM_VIEW_PROTOOL_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121005
+    relation=0x000000AD,_S7WM_ALARM_SUB_CT{1}[0x000000AC]
+    
+    [_S7WM_ALARM_NUMBERS_CT]
+    server=s7wmomxx.dll
+    prefix=OM
+    ObjType=0x01121006
+    
+    [_S7UT_TEXTLIST_CT]
+    ObjType=0x00164001
+    relation=0x000000A9,_S7WM_ALARM_HEADER_CT{1}[0x000000A8]
+    
+    ;---S7 Meldungsliste Ende

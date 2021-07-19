@@ -1,0 +1,15 @@
+:Base s7wrfb_b.hlp
+1 FB58 "TCONT_CP"
+2 Continuous Temperature Control with FB58 "TCONT_CP"=FB_58
+2 Setting Parameters for Temperature Controller FB58 "TCONT_CP"=IDD_S7WRIC_FORM
+2 Commissioning Temperature Controller FB58 "TCONT_CP"=IDD_S7WRIC_IBS
+1 FB59 "TCONT_S"
+2 Temperature Step Control with FB59 "TCONT_S"=FB_59
+2 Setting Parameters for Temperature Controller FB59 "TCONT_S"=IDD_S7WRIS_FORM
+2 Commissioning Temperature Controller FB59 "TCONT_S"=IDD_WRIS_IBS
+1 Temperature Control Wizard
+2 Temperature Control Wizard: Introduction=IDD_WIZARD_PID_OPTIMAX1
+2 Temperature Control Wizard: Selecting the Controller Type=IDD_WIZARD_PID_OPTIMAX2
+2 Temperature Control Wizard: Selecting the Type of Process Excitation=IDD_WIZARD_PID_OPTIMAX3
+2 Temperature Control Wizard: Controller Tuning=IDD_WIZARD_PID_OPTIMAX4
+2 Temperature Control Wizard: Status and Result of the Tuning=IDD_WIZARD_PID_OPTIMAX5

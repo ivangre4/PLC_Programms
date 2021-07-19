@@ -1,0 +1,317 @@
+;=================================================================
+; GSD-Datei fuer ET200B - 4/8AI -2 /SPC3    SIEMENS AG
+; MLFB    : 6ES7 134-0KH01-0XB0
+;
+; Date    : 12.09.02 V3.1 SX,GW
+; File    : SIEM801A.GSG
+;=================================================================
+#Profibus_DP
+; <Prm-Text-Def-List>
+PrmText=1
+Text(0)="sperren"
+Text(1)="freigeben"
+EndPrmText
+PrmText=2
+Text(0)="Kanal nicht aktiviert"
+Text(20)="Spannung               +/- 1 V"
+Text(19)="Spannung             +/- 0,5 V"
+Text(18)="Spannung            +/- 0,25 V"
+Text(17)="Spannung             +/- 80 mV"
+Text(130)="Thermowiderstand   Pt 100 Std."
+Text(131)="Thermowiderstand   Ni 100 Std."
+Text(225)="Thermoelement Typ N"
+Text(226)="Thermoelement Typ E"
+Text(229)="Thermoelement Typ J"
+Text(230)="Thermoelement Typ L"
+Text(231)="Thermoelement Typ T"
+Text(232)="Thermoelement Typ K"
+Text(233)="Thermoelement Typ U"
+Text(65)="Widerstandsmessung  48 Ohm"
+Text(66)="Widerstandsmessung 150 Ohm"
+Text(68)="Widerstandsmessung 300 Ohm"
+Text(70)="Widerstandsmessung 600 Ohm"
+EndPrmText
+PrmText=3
+Text(0)="Zweierkomplement"
+Text(1)="Betrag m. Vorzeichen"
+EndPrmText
+PrmText=4
+Text(0)="2,5  ms"
+Text(1)="16,7 ms fuer 60Hz"
+Text(2)="20   ms fuer 50Hz"
+Text(3)="100  ms"
+EndPrmText
+PrmText=5
+Text(1)="SIMATIC S5"
+Text(0)="SIMATIC S7"
+EndPrmText
+; <Ext-User-Prm-Data-Def-List>
+ExtUserPrmData=1 "Diagnosealarm"
+Bit(6) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=2 "Zyklusendealarm"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=3 "Grenzwertalarm"
+Bit(7) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=4 "Diagnosefreigabe        K 0- 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=5 "Diagnosefreigabe        K 2- 3"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=6 "Diagnosefreigabe        K 4- 5"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=7 "Diagnosefreigabe        K 6- 7"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=8 "Freigabe Drahtbruch     K 0- 1"
+Bit(0) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=9 "Freigabe Drahtbruch     K 2- 3"
+Bit(1) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=10 "Freigabe Drahtbruch     K 4- 5"
+Bit(2) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=11 "Freigabe Drahtbruch     K 6- 7"
+Bit(3) 0 0-1
+Prm_Text_Ref=1
+EndExtUserPrmData
+ExtUserPrmData=12 "Integrationszeit        K 0- 1"
+BitArea(0-1) 2 0-3
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=13 "Integrationszeit        K 2- 3"
+BitArea(2-3) 2 0-3
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=14 "Integrationszeit        K 4- 5"
+BitArea(4-5) 2 0-3
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=15 "Integrationszeit        K 6- 7"
+BitArea(6-7) 2 0-3
+Prm_Text_Ref=4
+EndExtUserPrmData
+ExtUserPrmData=16 "Messart / Messbereich     K 0- 1"
+Unsigned8 020 000-232
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=17 "Messart / Messbereich     K 2- 3"
+Unsigned8 020 000-232
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=18 "Messart / Messbereich     K 4- 5"
+Unsigned8 020 000-232
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=19 "Messart / Messbereich     K 6- 7"
+Unsigned8 020 000-232
+Prm_Text_Ref=2
+EndExtUserPrmData
+ExtUserPrmData=20 "Darstellung Messwert"
+Bit(2) 1 0-1
+Prm_Text_Ref=5
+EndExtUserPrmData
+ExtUserPrmData=21 "Messwertdarstellung bei S5"
+Bit(4) 0 0-1
+Prm_Text_Ref=3
+EndExtUserPrmData
+ExtUserPrmData=22 "Oberer Grenzwert        K 0"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=23 "Unterer Grenzwert       K 0"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=24 "Oberer Grenzwert        K 2"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+ExtUserPrmData=25 "Unterer Grenzwert       K 2"
+Signed16 0 -32768-32767
+EndExtUserPrmData
+; <Unit-Definition-List>
+GSD_Revision = 3
+Info_Text = "Analogeingabe 4/8 AI, PT100,Thermoelemente"
+Vendor_Name="SIEMENS"
+Model_Name="B-4/8AI-2      DP"
+Revision="V 3.1"
+Ident_Number=0x801A
+Protocol_Ident=0
+Station_Type=0
+Hardware_Release="A1.0"
+Software_Release="Z1.0"
+9.6_supp=1
+19.2_supp=1
+45.45_supp=1
+93.75_supp=1
+187.5_supp=1
+500_supp=1
+1.5M_supp=1
+3M_supp=1
+6M_supp=1
+12M_supp=1
+MaxTsdr_9.6=20
+MaxTsdr_19.2=20
+MaxTsdr_45.45=20
+MaxTsdr_93.75=20
+MaxTsdr_187.5=20
+MaxTsdr_500=20
+MaxTsdr_1.5M=25
+MaxTsdr_3M=50
+MaxTsdr_6M=100
+MaxTsdr_12M=200
+Implementation_Type="SPC3"
+Bitmap_Device="ET200B_N"
+Bitmap_SF="ET200B_S"
+; Slave-Specification:
+OrderNumber="6ES7 134-0KH01-0XB0"
+Freeze_Mode_supp=1
+Auto_Baud_supp=1
+Min_Slave_Intervall=10
+Max_Diag_Data_Len=29
+Modul_Offset=1
+Slave_Family=3@ET200B
+Modular_Station=1
+Max_Module=1
+Max_Input_Len=16
+Max_Output_Len=0
+Max_Data_Len=16
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len=29
+User_Prm_Data = 0x00,0x60,0x0D,0x07,0x5F,0x04,0x00,0x02,0x00,0x00,0x13,0x5F,\
+0x04,0x01,0x0E,0x00,0xAA,0x14,0x14,0x14,0x14,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+Max_User_Prm_Data_Len=29
+Ext_User_Prm_Data_Const(0)=0x00,0x60,0x0D,0x07,0x5F,0x04,0x00,0x02,0x00,0x00,\
+0x13,0x5F,0x04,0x01,0x0E,0x00,0xAA,0x14,0x14,0x14,0x14,0x00,0x00,0x00,0x00,\
+0x00,0x00,0x00,0x00
+Ext_User_Prm_Data_Ref(15)=1
+Ext_User_Prm_Data_Ref(15)=2
+Ext_User_Prm_Data_Ref(15)=3
+Ext_User_Prm_Data_Ref(8)=4
+Ext_User_Prm_Data_Ref(8)=5
+Ext_User_Prm_Data_Ref(8)=6
+Ext_User_Prm_Data_Ref(8)=7
+Ext_User_Prm_Data_Ref(9)=8
+Ext_User_Prm_Data_Ref(9)=9
+Ext_User_Prm_Data_Ref(9)=10
+Ext_User_Prm_Data_Ref(9)=11
+Ext_User_Prm_Data_Ref(16)=12
+Ext_User_Prm_Data_Ref(16)=13
+Ext_User_Prm_Data_Ref(16)=14
+Ext_User_Prm_Data_Ref(16)=15
+Ext_User_Prm_Data_Ref(17)=16
+Ext_User_Prm_Data_Ref(18)=17
+Ext_User_Prm_Data_Ref(19)=18
+Ext_User_Prm_Data_Ref(20)=19
+Ext_User_Prm_Data_Ref(2)=20
+Ext_User_Prm_Data_Ref(2)=21
+Ext_User_Prm_Data_Ref(21)=22
+Ext_User_Prm_Data_Ref(23)=23
+Ext_User_Prm_Data_Ref(25)=24
+Ext_User_Prm_Data_Ref(27)=25
+; Unit-Diagnostics:
+Unit_Diag_Bit(0031)="Parametrierfehler Baugruppe"
+Unit_Diag_Bit(0040)="Baugruppenfehler"
+Unit_Diag_Bit(0054)="Prozessalarm verloren"
+Unit_Diag_Bit(0088)="Parametrierfehler       K 0"
+Unit_Diag_Bit(0089)="Gleichtaktfehler        K 0"
+Unit_Diag_Bit(0092)="            Drahtbruch  K 0"
+Unit_Diag_Bit(0094)="Bereichsunterschreitung K 0"
+Unit_Diag_Bit(0095)="Bereichsueberschreitung  K 0"
+Unit_Diag_Bit(0096)="Parametrierfehler       K 1"
+Unit_Diag_Bit(0097)="Gleichtaktfehler        K 1"
+Unit_Diag_Bit(0100)="            Drahtbruch  K 1"
+Unit_Diag_Bit(0102)="Bereichsunterschreitung K 1"
+Unit_Diag_Bit(0103)="Bereichsueberschreitung  K 1"
+Unit_Diag_Bit(0104)="Parametrierfehler       K 2"
+Unit_Diag_Bit(0105)="Gleichtaktfehler        K 2"
+Unit_Diag_Bit(0108)="            Drahtbruch  K 2"
+Unit_Diag_Bit(0110)="Bereichsunterschreitung K 2"
+Unit_Diag_Bit(0111)="Bereichsueberschreitung  K 2"
+Unit_Diag_Bit(0112)="Parametrierfehler       K 3"
+Unit_Diag_Bit(0113)="Gleichtaktfehler        K 3"
+Unit_Diag_Bit(0116)="            Drahtbruch  K 3"
+Unit_Diag_Bit(0118)="Bereichsunterschreitung K 3"
+Unit_Diag_Bit(0119)="Bereichsueberschreitung  K 3"
+Unit_Diag_Bit(0120)="Parametrierfehler       K 4"
+Unit_Diag_Bit(0121)="Gleichtaktfehler        K 4"
+Unit_Diag_Bit(0124)="            Drahtbruch  K 4"
+Unit_Diag_Bit(0126)="Bereichsunterschreitung K 4"
+Unit_Diag_Bit(0127)="Bereichsueberschreitung  K 4"
+Unit_Diag_Bit(0128)="Parametrierfehler       K 5"
+Unit_Diag_Bit(0129)="Gleichtaktfehler        K 5"
+Unit_Diag_Bit(0132)="            Drahtbruch  K 5"
+Unit_Diag_Bit(0134)="Bereichsunterschreitung K 5"
+Unit_Diag_Bit(0135)="Bereichsueberschreitung  K 5"
+Unit_Diag_Bit(0136)="Parametrierfehler       K 6"
+Unit_Diag_Bit(0137)="Gleichtaktfehler        K 6"
+Unit_Diag_Bit(0140)="            Drahtbruch  K 6"
+Unit_Diag_Bit(0142)="Bereichsunterschreitung K 6"
+Unit_Diag_Bit(0143)="Bereichsueberschreitung  K 6"
+Unit_Diag_Bit(0144)="Parametrierfehler       K 7"
+Unit_Diag_Bit(0145)="Gleichtaktfehler        K 7"
+Unit_Diag_Bit(0148)="            Drahtbruch  K 7"
+Unit_Diag_Bit(0150)="Bereichsunterschreitung K 7"
+Unit_Diag_Bit(0151)="Bereichsueberschreitung  K 7"
+; <Module-Definition-List>
+Module="Konfiguration 1:     8AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x47,0x00,0x15,0xC5
+1
+EndModule
+Module="Konfiguration 2: 8 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,\
+0x95,0xC2
+2
+EndModule
+Module="Konfiguration 3: 7 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2
+3
+EndModule
+Module="Konfiguration 4: 6 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2
+4
+EndModule
+Module="Konfiguration 5: 5 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,\
+0x95,0xC2
+5
+EndModule
+Module="Konfiguration 6: 4 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2,0x43,0x40,0x00,0x95,0xC2
+6
+EndModule
+Module="Konfiguration 7: 3 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2,0x43,0x40,0x00,0x95,0xC2
+7
+EndModule
+Module="Konfiguration 8: 2 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2,0x43,0x40,0x00,\
+0x95,0xC2
+8
+EndModule
+Module="Konfiguration 9: 1 x 1AI" 0x04,0x00,0x00,0xAD,0xC4,0x04,0x00,0x00,\
+0x9B,0x40,0x04,0x00,0x00,0x8F,0xC0,0x43,0x40,0x00,0x15,0xC2
+9
+EndModule

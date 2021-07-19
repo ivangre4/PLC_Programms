@@ -1,0 +1,499 @@
+
+; -- DO NOT ALTER THIS LINE -----
+
+;; --------------------------
+;; Metafile für ET200iS
+
+;; --------------------------
+;----------------------------------------------------------------
+; Kataloghierarchieobjekte ET200iS
+;----------------------------------------------------------------
+
+; ----------------------------- Kataloghierarchieobjekt ET200iS Wurzel
+[_S7H_6ES7_ET200IS_KAT_ROOT_AT]
+abstract=true
+ObjType=1316315
+basetype=_S7H_KATALOGFOLDDER_AT
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt DI
+[_S7H_6ES7_ET200IS_KAT_DI_AT]
+abstract=true
+ObjType=1316316
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt DO
+[_S7H_6ES7_ET200IS_KAT_DO_AT]
+abstract=true
+ObjType=1316317
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt DIO
+[_S7H_6ES7_ET200IS_KAT_DIO_AT]
+abstract=true
+ObjType=1316318
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=0
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt AI
+[_S7H_6ES7_ET200IS_KAT_AI_AT]
+abstract=true
+ObjType=1316319
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt AO
+[_S7H_6ES7_ET200IS_KAT_AO_AT]
+abstract=true
+prefix=OM
+ObjType=1316320
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- Kataloghierarchieobjekt PS
+[_S7H_6ES7_ET200IS_KAT_PS_AT]
+abstract=true
+ObjType=1316321
+basetype=_S7H_6ES7_ET200IS_KAT_ROOT_AT
+CatalogParent=1316393
+IsCatEntry=1
+nKatChilds=0
+ICON_TYPE=10
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------- Abstrakte Slave-Basisklasse
+[_S7H_ET200IS_AT]
+abstract=true
+basetype=_S7H_DP_S7SLAVE300_AT
+ObjType=1316326
+CatalogParent=1314971
+IsCatEntry=1
+nKatChilds=0
+PUB_SUB_FUNCTION=4
+relation=1315826,_S7H_ET200IS_MODULE_AT[1315827];deep
+CASING_FORMAT=9
+FIRST_VISIBLE_CHILD_NO=1
+HWCNFX_VER=5.1.2.0|0
+
+; ------------------------------------ ET200iS Slave
+[_S7H_ET200IS_151_2AA00_CT]
+server=s7hsl7ax.dll
+prefix=OM
+ObjType=1316393
+basetype=_S7H_ET200IS_AT
+CatalogParent=1316326
+IsCatEntry=1
+nKatChilds=0
+MLFB=6ES7 151-2AA00-0AB0
+SHORTNAME=IM151-2
+CLASS_PROPERTIES=0
+ALARM_MODE=2
+TIME_SYNC_CAPABLE=1
+CountAutoCreatedChilds=1
+AutoCreatedChild1=1316394,2,FIXED
+MAX_NUM_OF_CHILDS=35
+IAM_THIS_SLAVE=1
+IAMA_ISLAVE=0
+IAMA_S7SLAVE=1
+DP_STATION_TYPE=ET200iS
+SLAVE_FAMILY=ET200iS
+DP_VERSION_SUPPORT=3
+; Icon_Type und Bmp-File... 
+SLAVE_BMP_FILE=ET200IS_S
+MAX_INPUT_DATA_LEN=128
+MAX_OUTPUT_DATA_LEN=128
+; Export
+IS_PARAMETRIZEABLE=1
+; ARTS CR 93024; Aufruf von PDM auch über Slave (Doppelklick)
+OPENVERB=EDIT_TOOL
+SIPROM_PARAM=1
+OPEN_OBJTYPE=0x01201100
+OPEN_OSET=2
+;PS (0x00000004)
+Rule_00000004= INCL (1,1)
+;SM (0x00000010)
+Rule_00000010= INCL (4,35)
+HWCNFX_VER=5.1.2.0|0
+RESET_PRM_STRUCTURE_BIT=1
+;------------------------------------- ET200iS Kopfbaugruppe
+[_S7H_ET200IS_ETER_151_2AA00_CT]
+server=s7hsl7ax.dll
+prefix=OM
+ObjType=1316394
+basetype=_S7H_DP_ETER_AT
+basetype=_AUT_GENCOMM_AT
+HAS_NO_LINK_TO_STATION=1
+MLFB=6ES7 151-2AA00-0AB0
+S7_TYPE_CODE=0x0BC0
+CLASS_PROPERTIES=0
+nKatChilds=0
+SHORTNAME=IM151-2
+PNO_IDENT_NO=0x806E
+LSPM_ASIC_TYPE=0
+ASIC_TYPE_SLAVE=2
+SUPPORTED_BAUDRATES_L2=0,1,2,3,4,6,11
+SYNC_ABLE=1
+FREEZE_ABLE=1
+MIN_SLAVE_INTERVAL=1 
+ER_DELAY=0
+FAIL_SAVE_ABLE=1 
+LOCK_REQUEST=0 
+UNLOCKREQUEST=0 
+WD_BASE_1MS=0
+MAX_DIAG_RESP_LEN=96
+MAX_DIAG_DATA_LEN=96
+DAL_ENABLE=1
+PRAL_ENABLE=1
+RUN_ON_CONFIG_FAULT=1
+POSS_ACTIVE_BACK=1 
+KBUS_ENABLE=0
+KBUS_MOD_NUM=0
+IO_TYPE=0x0041 
+SIGNAL_TYPE=1 
+MODULE_TYPE=0x0080
+IS_PARAMETRIZEABLE=1
+ZS_ENABLE=1
+OPENVERB=EDIT_TOOL
+SIPROM_PARAM=1
+OPEN_OBJTYPE=0x01201100
+OPEN_OSET=2
+C1_C2_READ_WRITE_SUPP = 0x11
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+;  ET200iS Module Basis
+;----------------------------------------------------------------
+[_S7H_ET200IS_MODULE_AT]
+abstract=true
+ObjType=1316327
+basetype=_S7H_MODULE_AT
+CLASS_PROPERTIES=0
+nKatChilds=0
+ICON_TYPE=0
+CPU_ZUORDNUNG=1
+SDB_CARRIER_LIST=
+SDB_CARRIER=0
+SDB_CAUSED_LIST=
+MODULE_TYPE=32
+IN_ADDRESS_RANGE=
+OUT_ADDRESS_RANGE= 
+COUNT_OUTPUT_CHANNELS_ANALOG=
+COUNT_INPUT_CHANNELS_ANALOG=
+COUNT_INPUT_CHANNELS_DIGITAL=
+COUNT_OUTPUT_CHANNELS_DIGITAL=
+SIGNAL_TYPE=
+IO_TYPE=
+CASING_FORMAT=9
+IS_PARAMETRIZEABLE=0
+OPENVERB=EDIT_TOOL
+SIPROM_PARAM=1
+OPEN_OBJTYPE=0x01201100
+OPEN_OSET=2
+DATA_CHECK_ARWB=1
+CLSID={ABD7E1E1-CAA9-11D4-9D05-00105A55EB7C}
+USER_DIALOG_1=STANDARD
+S7_TYPE_CODE=
+paramDescr=
+REGISTER_ADR_IMPORT_VERB=1
+
+; --- SM ----
+PLUG_CLASS=0x00000010
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt DI-Module
+[_S7H_CLASS_ET200IS_MODULE_DI_AT]
+abstract=true
+ObjType=1316328
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=1
+SIGNAL_TYPE=1
+VALUE_STATE=1
+CAPABLE_ALARM=0
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt DO-Module
+[_S7H_CLASS_ET200IS_MODULE_DO_AT]
+abstract=true
+ObjType=1316329
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=2
+SIGNAL_TYPE=1
+CAPABLE_ALARM=0
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt DIO-Module
+[_S7H_CLASS_ET200IS_MODULE_DIO_AT]
+abstract=true
+ObjType=1316330
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=4
+SIGNAL_TYPE=1
+VALUE_STATE=1
+CAPABLE_ALARM=0
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt AI-Module
+[_S7H_CLASS_ET200IS_MODULE_AI_AT]
+abstract=true
+ObjType=1316331
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=1
+SIGNAL_TYPE=2 
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt AO-Module
+[_S7H_CLASS_ET200IS_MODULE_AO_AT]
+abstract=true
+ObjType=1316332
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=2
+SIGNAL_TYPE=2 
+CAPABLE_ALARM=0
+HWCNFX_VER=5.1.2.0|0
+;------------------------------------ Klassenobjekt PM-Module
+[_S7H_CLASS_ET200IS_MODULE_PS_AT]
+abstract=true
+ObjType=1316333
+basetype=_S7H_ET200IS_MODULE_AT
+IO_TYPE=8
+SIGNAL_TYPE=0
+CAPABLE_ALARM=0
+
+; --- PS ----
+PLUG_CLASS=0x00000004
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; DI-Module
+;----------------------------------------------------------------
+
+; ----------------------------- 4 DI NAMUR
+[_S7H_6ES7_131_5RD00_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316338
+basetype=_S7H_CLASS_ET200IS_MODULE_DI_AT
+CatalogParent=1316316
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x08E0	
+MLFB=6ES7 131-5RD00-0AB0
+IN_ADDRESS_RANGE=1
+COUNT_INPUT_CHANNELS_DIGITAL=4
+paramDescr=TH32170x.dsc 
+IS_PARAMETRIZEABLE=1
+CLSID={D521ED31-CF69-11D4-9D09-00105A55EB7C}
+USER_DIALOG_1=STANDARD
+MODUL_MAX_CURRENT=140
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; DO-Module
+;----------------------------------------------------------------
+
+; ----------------------------- 2 DO DC25V/25mA
+[_S7H_6ES7_132_5SB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316345
+basetype=_S7H_CLASS_ET200IS_MODULE_DO_AT
+CatalogParent=1316317
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x08E0
+MLFB=6ES7 132-5SB00-0AB0
+OUT_ADDRESS_RANGE=1
+COUNT_OUTPUT_CHANNELS_DIGITAL=2
+MODUL_MAX_CURRENT=280
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; DIO-Module
+;----------------------------------------------------------------
+
+; ----------------------------- Ventilmodul 4xNAMUR, 2xDO DC
+[_S7H_6ES7_133_5RE00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316352
+basetype=_S7H_CLASS_ET200IS_MODULE_DIO_AT
+CatalogParent=1316318
+IsCatEntry=0
+nKatChilds=0
+S7_TYPE_CODE=0x08E0	
+MLFB=6ES7 133-5RE00-0AA0
+IN_ADDRESS_RANGE=1
+COUNT_INPUT_CHANNELS_DIGITAL=4
+OUT_ADDRESS_RANGE=1
+COUNT_OUTPUT_CHANNELS_DIGITAL=2
+paramDescr=
+IS_PARAMETRIZEABLE=1
+CLSID={D521ED31-CF69-11D4-9D09-00105A55EB7C}
+USER_DIALOG_1=STANDARD
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; AI-Module
+;----------------------------------------------------------------
+
+; ----------------------------- 2AI 4-20mA
+[_S7H_6ES7_134_5RB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316359
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5RB00-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=280
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2AI 0/4-20mA
+[_S7H_6ES7_134_5RB50_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316360
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5RB50-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=70
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2AI HART
+[_S7H_6ES7_134_5TB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316361
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5TB00-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=280
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2AI HART
+[_S7H_6ES7_134_5TB50_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316362
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5TB50-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=70
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2AI Tc
+[_S7H_6ES7_134_5SB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316363
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5SB00-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=70
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2AI RTD
+[_S7H_6ES7_134_5SB50_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316364
+basetype=_S7H_CLASS_ET200IS_MODULE_AI_AT
+CatalogParent=1316319
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x15C3	
+MLFB=6ES7 134-5SB50-0AB0
+IN_ADDRESS_RANGE=4
+COUNT_INPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=70
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; AO-Module
+;----------------------------------------------------------------
+
+; ----------------------------- 2 AO 0/4-20mA 
+[_S7H_6ES7_135_5RB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316371
+basetype=_S7H_CLASS_ET200IS_MODULE_AO_AT
+CatalogParent=1316320
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x25D8	
+MLFB=6ES7 135-5RB00-0AB0
+OUT_ADDRESS_RANGE=4
+COUNT_OUTPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=280
+HWCNFX_VER=5.1.2.0|0
+
+; ----------------------------- 2 AO HART 
+[_S7H_6ES7_135_5TB00_0AB0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316372
+basetype=_S7H_CLASS_ET200IS_MODULE_AO_AT
+CatalogParent=1316320
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0x25D8	
+MLFB=6ES7 135-5TB00-0AB0
+OUT_ADDRESS_RANGE=4
+COUNT_OUTPUT_CHANNELS_ANALOG=2
+MODUL_MAX_CURRENT=280
+HWCNFX_VER=5.1.2.0|0
+;----------------------------------------------------------------
+; PS-Module (Stromversorgung)
+;----------------------------------------------------------------
+
+; ----------------------------- PS; EX-Stromversorgung
+[_S7H_6ES7_138_5EA00_0AA0_CT]
+server=s7hkcomx.dll
+prefix=OM
+ObjType=1316379
+basetype=_S7H_CLASS_ET200IS_MODULE_PS_AT
+CatalogParent=1316321
+IsCatEntry=1
+nKatChilds=0
+S7_TYPE_CODE=0xADC4	
+MLFB=6ES7 138-5EA00-0AA0
+PS_MAX_CURRENT=4300
+USER_DIALOG_1=
+HWCNFX_VER=5.1.2.0|0
+
+; -- DO NOT ALTER THIS LINE -----

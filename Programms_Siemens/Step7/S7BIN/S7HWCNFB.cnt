@@ -1,0 +1,49 @@
+:Base S7hwcnfb.HLP
+:Title Help on Configuring Hardware
+:Index Help on CPU Parameters =s7hkcpub.hlp
+:Index Help on Station Properties =s7hstatb.hlp
+:Index Help on Configuring the Hardware =s7hl2stb.hlp
+:Index Help on Configuring the Hardware =s7hss30b.hlp
+:Index Help on Subnets =s7noohpb.hlp
+:Index Help on Object Properties =s7hssiob.hlp
+:Link s7hkcpub.hlp
+:Link s7hstatb.hlp
+:Link s7hl2stb.hlp
+:Link s7hss30b.hlp
+:Link s7noohpb.hlp
+:Link s7hssiob.hlp
+1 Introduction=HIDH_Einfuehrung
+1 What's New?=Was_ist_neu
+1 Help on Help=Info_zur_Hilfe
+1 Getting Started=HIDH_Erste_Schritte
+1 Buttons
+2 Buttons in the Toolbar (Configuring Hardware)=Symbole_der_Funktionsleiste
+2 Buttons in the Toolbar (Editing Catalog Profiles)=Symbole_Funktionsleiste_Katalogprofile_bearbeiten
+1 Menu Commands (Configuring Hardware)
+2 Station Menu=HID_MENU_SYSTEM
+2 Edit Menu=HID_MENU_EDIT
+2 Insert Menu=HID_Menue_Einfuegen
+2 PLC Menu=HID_MENU_ZIELSYSTEM
+2 View Menu=HID_VIEW
+2 Options Menu=HID_EXTRAS
+2 Window Menu=HID_WINDOW
+2 Help Menu=HID_HELP_MENU
+1 Menu Commands (Editing Catalog Profiles)
+2 Profile Menu=Menue_Datei_Kprf
+2 Edit Menu=Menue_Bearbeiten_Kprf
+2 Insert Menu=Menue_Einfuegen_Kprf
+2 View Menu=Menue_Ansicht_Kprf
+2 Window Menu=Menue_Fenster_Kprf
+2 Help Menu=Menue_Hilfe_Kprf
+1 Keyboard
+2 Keyboard=KEYBOARD
+2 Shortcuts for Menu Commands (Configuring Hardware)=Shortcuts_fuer_Menuebefehle
+2 Shortcuts for Menu Commands (Editing Catalog Profiles)=Shortcuts_Menuebefehle_Katalogprofile_bearbeiten
+2 Moving the Cursor in Dialog Boxes for SIMATIC 400 Modules=Bew_Cursors_SIMATIC_400_BG
+2 Toggling between Active Objects during Configuration=Markieren_von_Stationsobjekten_durch_Tastaturbedienung
+1 Hardware Configuration Application Windows
+2 "Hardware Catalog" Window=HIDH_KATALOG
+2 "Station" Window (Configuring Hardware)=Stationsfenster
+2 "Online" Window (Diagnosing Hardware)=Online_Fenster
+2 Editing Window for Catalog Profiles=HPIDR_MAINFRAME
+:include p7sdhwxb.cnt

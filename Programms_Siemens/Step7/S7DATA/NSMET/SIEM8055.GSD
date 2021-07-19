@@ -1,0 +1,122 @@
+; ============================================ 
+; GSD-Datei fuer SIMODRIVE 611 Universal
+; DATE: 28.12.99
+; FILE: SIEM8055.gsd
+; Revision : 1.2   SX
+; ============================================
+;
+#Profibus_DP
+GSD_Revision        = 1
+Vendor_Name         = "SIEMENS"
+Model_Name          = "SIMODRIVE 611U"
+Revision            = "V1.2"
+Ident_Number        = 0x8055
+Protocol_Ident      = 0
+OrderNumber         = "6SN1114-0NB00-0AA0" 
+Station_Type        = 0
+FMS_supp            = 0 
+Hardware_Release    = "02.00"
+Software_Release    = "01.01.04" 
+;
+; Baud-Rate, TSDR
+9.6_supp   = 1
+19.2_supp  = 1
+93.75_supp = 1
+187.5_supp = 1
+500_supp   = 1
+1.5M_supp  = 1
+3M_supp    = 1
+6M_supp    = 1
+12M_supp   = 1
+;
+MaxTsdr_9.6   = 60
+MaxTsdr_19.2  = 60
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500   =100
+MaxTsdr_1.5M  =150
+MaxTsdr_3M    =250
+MaxTsdr_6M    =450
+MaxTsdr_12M   =800
+;
+Redundancy = 0                         
+Repeater_Ctrl_Sig = 1                  
+24V_Pins = 0              
+;
+Implementation_Type ="SPC3"
+Bitmap_Device       ="si8055_n" 
+;
+OffsetFirstMPDBlock = 0         
+ETERDelay           = 0
+MaxResponseDelay    = 0
+;
+Freeze_Mode_supp    = 0   
+Sync_Mode_supp      = 0
+Auto_Baud_supp      = 1
+Set_Slave_Add_supp  = 0
+;
+; UserPrmData: Length and Preset:
+User_Prm_Data_Len   =  0
+Min_Slave_Intervall =  1
+Modular_Station     =  1
+Max_Module          =  1
+Max_Input_Len       = 56
+Max_Output_Len      = 56
+Max_Data_Len        =112
+;
+Fail_Safe           =  1
+Max_Diag_Data_Len   =  6
+Modul_Offset        =  1             
+Slave_Family        = 1@TdF@SIMODRIVE
+;
+; Moduldefinitionen
+;==========================================
+; Modul  1:       1 Achse,  PPO-Typ 1
+;==========================================
+Module="1 Achse, PPO-Typ 1, PKW+PZD -2" 0xF3,0xF1
+EndModule
+;==========================================
+; Modul  2:       1 Achse,  PPO-Typ 2
+;==========================================
+Module="1 Achse, PPO-Typ 2, PKW+PZD -6" 0xF3,0xF5
+EndModule
+;==========================================
+; Modul  3:       1 Achse,  PPO-Typ 3
+;==========================================
+Module="1 Achse, PPO-Typ 3,     PZD -2" 0xF1
+EndModule
+;==========================================
+; Modul  4:       1 Achse,  PPO-Typ 4
+;==========================================
+Module="1 Achse, PPO-Typ 4,     PZD -6" 0xF5
+EndModule
+;==========================================
+; Modul  5:       1 Achse,  PPO-Typ 5
+;==========================================
+Module="1 Achse, PPO-Typ 5, PKW+PZD-10" 0xF3,0xF9
+EndModule
+;==========================================
+; Modul  6:       2 Achsen, PPO-Typ 1
+;==========================================
+Module="2 Achsen, PPO-Typ 1, PKW+PZD-2" 0xF3,0xF1,0xF3,0xF1
+EndModule
+;==========================================
+; Modul  7:       2 Achsen, PPO-Typ 2
+;==========================================
+Module="2 Achsen, PPO-Typ 2, PKW+PZD-6" 0xF3,0xF5,0xF3,0xF5
+EndModule
+;==========================================
+; Modul  8:       2 Achsen, PPO-Typ 3
+;==========================================
+Module="2 Achsen, PPO-Typ 3,     PZD-2" 0xF1,0xF1
+EndModule
+;==========================================
+; Modul  9:       2 Achsen, PPO-Typ 4
+;==========================================
+Module="2 Achsen, PPO-Typ 4,     PZD-6" 0xF5,0xF5
+EndModule
+;==========================================
+; Modul 10:       2 Achsen, PPO-Typ 5
+;==========================================
+Module="2 Achsen, PPO-Typ 5,PKW+PZD-10" 0xF3,0xF9,0xF3,0xF9
+EndModule

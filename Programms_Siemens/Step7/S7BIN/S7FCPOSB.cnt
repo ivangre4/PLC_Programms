@@ -1,0 +1,39 @@
+:Base 2826849291.hlp>main
+:Title Help on Positioning
+
+1 Help on Positioning
+2 Positioning
+3 Properties of Positioning=HIDD_Eigenschaften
+3 Controlled positioning with analog output (servo-drive motor control)
+4 Positioning with analog output=Analogausgang
+4 "General" tab=HIDD_Allgemein
+4 "Addresses" tab=HIDD_Adressen
+4 "Basic Parameters" tab=HIDD_Grundparameter
+4 "Encoder" tab=HIDD_Geber
+4 "Diagnostics" tab=HIDD_Diagnose
+4 Drive
+5 "Drive" tab (analog)=HIDD_Antrieb_Analog
+5 Target approach (analog)=Zieleinlauf_Analog
+5 Enable power section=Antriebsfreigabe_Analog
+5 Monitoring (analog)=Ueberwachung_analog
+4 Axis
+5 "Axis" tab=HIDD_Achse
+5 Axis type=Achsart
+5 Length measurement=Laengenmessung
+5 Reference point=Referenzpunkt
+5 Axis monitoring=Ueberwachung_Achse
+3 Controlled positioning with digital outputs (rapid / creep speed gear)
+4 Positioning with digital outputs=Digitalausgaenge
+4 Drive
+5 "Drive" tab (digital)=HIDD_Antrieb_Digital
+5 Control mode=Ansteuerart
+5 Target approach (digital)=Zieleinlauf_Digital
+5 Monitoring (digital)=Ueberwachung_Digital
+2 Linear axis
+3 Linear axis=Linearachse
+2 Control mode
+3 Control mode=Ansteuerart_analog
+2 Max. frequency
+3 Max. frequency=Max_Z_hlfrequenz_digital
+2 Rotary axis
+3 Rotary axis=2827179019

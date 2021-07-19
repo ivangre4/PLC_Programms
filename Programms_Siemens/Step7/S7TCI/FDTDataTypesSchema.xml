@@ -1,0 +1,510 @@
+<Schema name="FDTDataTypesSchema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<!--Definition of Attributes-->
+	<AttributeType name="alarmType" dt:type="enumeration" dt:values="highHighAlarm highAlarm lowLowAlarm lowAlarm"/>
+	<AttributeType name="binData" dt:type="bin.hex"/>
+	<AttributeType name="bitLength" dt:type="ui4"/>
+	<AttributeType name="byteArray" dt:type="bin.hex"/>
+	<AttributeType name="byteLength" dt:type="ui4"/>
+	<AttributeType name="classificationId" dt:type="enumeration" dt:values="flow level pressure temperature valve positioner actuator nc_rc encoder speedDrive hmi analogInput analogOutput digitalInput digitalOutput electrochemicalAnalyser dtmSpecific universal analyser remoteIO analogCombinedIO digitalCombinedIO recorder controller angle limitSwitch converter motor  switchboard circuitBreaker powerMonitoring distributionPanel contactor protectionStarter softStarter drive axisControl motorControlCenter controlValve electrical density quality speedOrRotaryFrequency radiation weightMass distanceOrPositionPresence pushButton joystick keypad pilotLight stackLight display combinedButtonsAndLights operatorStation generalInput generalOutput combinedInputOutput relay timer scanner programmableController"/>               
+	<AttributeType name="communicationError" dt:type="enumeration" dt:values="abort busy invalidCommunicationReference noConnection noParallelServices noPendingRequest unknownError timeout dtmSpecific notSupportedFeature sequenceTimeExpired"/>   
+	<AttributeType name="dataSetState" dt:type="enumeration" dt:values="default validModified invalidModified allDataLoaded"/>
+	<AttributeType name="dataType" dt:type="enumeration" dt:values="byte float double int unsigned enumerator bitEnumerator index ascii packedAscii password bitString hexString date time dateAndTime duration binary structured dtmSpecific"/>
+	<AttributeType name="dataTypeDescriptor" dt:type="string"/>
+	<AttributeType name="date" dt:type="date"/>
+	<AttributeType name="descriptor" dt:type="string"/>
+	<AttributeType name="display" dt:type="string"/>
+	<AttributeType name="displayFormat" dt:type="string"/>
+	<AttributeType name="errorCode" dt:type="bin.hex"/>
+	<AttributeType name="id" dt:type="string"/>
+	<AttributeType name="idref" dt:type="string"/>
+	<AttributeType name="index" dt:type="ui4"/>
+	<AttributeType name="name" dt:type="string"/>
+	<AttributeType name="number" dt:type="number"/>
+	<AttributeType name="reference" dt:type="string"/>
+	<AttributeType name="signalType" dt:type="enumeration" dt:values="input output "/>
+	<AttributeType name="staticValue" dt:type="number"/>
+	<AttributeType name="statusFlag" dt:type="enumeration" dt:values="ok warning error invalid"/>
+	<AttributeType name="storageState" dt:type="enumeration" dt:values="persistent transient"/>
+	<AttributeType name="string" dt:type="string"/>
+	<AttributeType name="tag" dt:type="string"/>
+	<AttributeType name="time" dt:type="dateTime"/>
+	<AttributeType name="vendor" dt:type="string"/>
+	<AttributeType name="version" dt:type="string"/>
+	<AttributeType name="nodeId" dt:type="id"/>
+	<AttributeType name="readAccess" dt:type="boolean" default="1"/>
+	<AttributeType name="writeAccess" dt:type="boolean" default="0"/>
+	<AttributeType name="deviceTypeId" dt:type="ui4"/>
+	<AttributeType name="subDeviceType" dt:type="string"/>
+	<AttributeType name="deviceTypeInformation" dt:type="string"/>
+	<AttributeType name="languageId" dt:type="ui4"/>
+	<AttributeType name="manufacturerId" dt:type="ui4"/>
+	<AttributeType name="busCategory" dt:type="uuid"/>
+	<AttributeType name="substituteType" dt:type="enumeration" dt:values="lastValue lastValidValue upperRange lowerRange"/>
+	<AttributeType name="path" dt:type="uri"/>
+	<AttributeType name="communicationType" dt:type="enumeration" dt:values="supported required"/>
+	<AttributeType name="busCategoryName" dt:type="string"/>
+	<AttributeType name="help" dt:type="string"/>
+	<AttributeType name="label" dt:type="string"/>
+	<AttributeType name="file" dt:type="uri"/>
+	<AttributeType name="url" dt:type="uri"/>
+	<AttributeType name="parameters" dt:type="string"/>
+      	<AttributeType name="documentLanguageId" dt:type="ui4"/>
+      	<AttributeType name="documentClassification" dt:type="enumeration" dt:values="help technicalDocumentation orderingInformation miscellaneous"/>
+	<AttributeType name="deviceGraphicState" dt:type="enumeration" dt:values="device diagnosis oem"/>      
+	<AttributeType name="deviceTypeInformationPath" dt:type="uri"/>      
+	<AttributeType name="systemGuiLabel" dt:type="string"/>    
+	<AttributeType name="busAddress" dt:type="string"/>        
+	<AttributeType name="systemTag" dt:type="string"/>     
+        <AttributeType name="channelMode" dt:type="enumeration" dt:values="communication moduleSlot processValue"/>     
+        <AttributeType name="physicalLayerName" dt:type="string"/>     
+        <AttributeType name="physicalLayer" dt:type="uuid"/>                  
+	<AttributeType name="busRedundancy" dt:type="ui4"/>       
+    	<AttributeType name="modifiedInDevice" dt:type="boolean" default="0"/>            
+	<AttributeType name="dtmStateMachine" dt:type="enumeration" dt:values="communicationSet goingOnline goingOffline online"/>   
+        <AttributeType name="orderCode" dt:type="string"/>     
+        <AttributeType name="deviceTypeVariant" dt:type="string"/>          
+        <AttributeType name="deviceTypeVariantInfo" dt:type="string"/>   
+        <AttributeType name="bitPosition" dt:type="ui4"/>             
+        <AttributeType name="boolValue" dt:type="boolean"/>           
+        <AttributeType name="classificationDomainId" dt:type="enumeration" dt:values="powerDistribution motionControl measurement operatorInterface modulesAndControllers"/>    
+   	<AttributeType name="dataSetID" dt:type="uuid"/>         
+ 	  <AttributeType name="description" dt:type="string"/>          
+   	<AttributeType name="levelOfSupport" dt:type="enumeration" dt:values="full partial" />        
+	<AttributeType name="semanticId" dt:type="string"/>                                
+	<AttributeType name="address" dt:type="string"/>                                
+	<AttributeType name="applicationDomain" dt:type="string"/>
+	<AttributeType name="dtmDevTypeID" dt:type="uuid"/>         
+	<AttributeType name="dtmDevTypeIDVersion" dt:type="ui4"/>
+
+
+	<!--Definition of Elements-->
+       <ElementType name="SemanticInformation" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="applicationDomain" required="yes"/>
+		<attribute type="semanticId" required="yes"/>
+		<attribute type="address" required="no"/>
+        </ElementType>
+	<ElementType name="LowerRawValue" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="number" required="yes"/>
+	</ElementType>
+	<ElementType name="UpperRawValue" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="number" required="yes"/>
+	</ElementType>
+    <ElementType name="Current" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="dataSetID" required="yes"/>
+	<attribute type="description" required="no"/>
+   </ElementType>
+   <ElementType name="Supported" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="dataSetID" required="yes"/>
+	<attribute type="levelOfSupport" required="no" default="partial"/>
+	<attribute type="description" required="no"/>
+   </ElementType>
+   <ElementType name="DataSetFormats" content="eltOnly" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<element type="Current" minOccurs="1" maxOccurs="1"/>
+	<element type="Supported" minOccurs="0" maxOccurs="*"/>
+   </ElementType>
+   <ElementType name="ClassificationId" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="classificationId" required="yes"/>
+   </ElementType>
+    <ElementType name="ClassificationIds" content="eltOnly" model="closed">
+         <attribute type="nodeId" required="no"/>
+	<attribute type="classificationDomainId" required="no"/>
+	<element type="ClassificationId" minOccurs="1" maxOccurs="*"/>
+    </ElementType>
+    <ElementType name="BoolValue" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="boolValue" required="no"/>
+    </ElementType>
+    <ElementType name="Deadband" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="number" required="yes"/>		
+    </ElementType>
+    <ElementType name="AlarmEnumerationEntry" content="empty" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<attribute type="bitPosition" required="yes"/>
+	<attribute type="name" required="yes"/>
+	<attribute type="boolValue" required="yes"/>
+	<attribute type="descriptor" required="no"/>
+    </ElementType>
+    <ElementType name="AlarmEnumerationEntries" content="eltOnly" model="closed">
+	<attribute type="nodeId" required="no"/>
+	<element type="AlarmEnumerationEntry" minOccurs="1" maxOccurs="*"/>
+    </ElementType>
+	<ElementType name="DeviceTypeVariant" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="deviceTypeVariant" required="yes"/>
+ 		<attribute type="deviceTypeVariantInfo" required="no"/>
+		<attribute type="orderCode" required="no"/>
+	</ElementType>
+	<ElementType name="DeviceTypeVariants" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="DeviceTypeVariant" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+  <ElementType name="BusRedundancy" content="empty" model="closed">
+	<attribute type="busRedundancy" required="yes"/>
+  </ElementType>
+    <ElementType name="ChannelMode" content="empty" model="closed" >
+		<attribute required="no" type="nodeId"/>
+		<attribute required="yes" type="channelMode"/>
+     </ElementType>
+     <ElementType name="ChannelModes" content="eltOnly" model="closed" >
+		<attribute required="no" type="nodeId"/>
+		<element type="ChannelMode" minOccurs="1" maxOccurs="*"/>
+      </ElementType>
+      <ElementType name="ChannelInformation" content="eltOnly" model="closed" >
+		<attribute required="no" type="nodeId"/>
+		<element type="BusCategories" minOccurs="1" maxOccurs="1"/>
+		<element maxOccurs="1" minOccurs="1" type="ChannelModes"/>
+      </ElementType>
+	<ElementType name="CommunicationTypeEntry" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="communicationType" required="yes"/>
+	</ElementType>
+	<ElementType name="DeviceIcon" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="deviceGraphicState" required="no"/>  
+		<attribute type="path" required="yes"/>
+	</ElementType>
+	<ElementType name="DeviceBitmap" content="empty" model="closed">
+			<attribute type="nodeId" required="no"/>
+			<attribute type="deviceGraphicState" required="yes"/>
+			<attribute type="path" required="yes"/>
+	</ElementType>
+	<ElementType name="SubstituteType" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="substituteType" required="yes"/>
+	</ElementType>
+	<ElementType name="LanguageId" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="languageId" required="yes"/>
+	</ElementType>
+	<ElementType name="SupportedLanguages" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="LanguageId" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PhysicalLayer" content="empty" model="closed">
+			<attribute type="physicalLayer" required="yes"/>
+			<attribute type="physicalLayerName" required="no"/>
+	</ElementType>
+	<ElementType name="BusCategory" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="busCategory" required="yes"/>
+		<attribute type="busCategoryName" required="no"/>
+		<element type="CommunicationTypeEntry" minOccurs="0" maxOccurs="*"/>
+		<element type="PhysicalLayer" minOccurs="0" maxOccurs="*"/>     
+	</ElementType>
+	<ElementType name="BusCategories" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="BusCategory" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+      <!--Definition of a document entry, which specifies a path to a DTM provided document-->
+	<ElementType name="DocumentFile" content="empty" model="closed">
+		<attribute type="file" required="yes"/>
+	</ElementType>
+	<ElementType name="DocumentUrl" content="empty" model="closed">
+		<attribute type="url" required="yes"/>
+	</ElementType>
+	<ElementType name="DocumentExe" content="empty" model="closed">
+		<attribute type="file" required="yes"/>
+		<attribute type="parameters" required="no"/>
+	</ElementType>
+	<ElementType name="DtmDocument" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="label" required="yes"/>
+		<attribute type="help" required="no"/>
+             <attribute type="documentClassification" required="yes"/>
+		<attribute type="documentLanguageId" required="no"/>
+		<group order="one" minOccurs="1" maxOccurs="1">
+			<element type="DocumentFile" minOccurs="0" maxOccurs="1"/>
+			<element type="DocumentUrl" minOccurs="0" maxOccurs="1"/>
+			<element type="DocumentExe" minOccurs="0" maxOccurs="1"/>
+		</group>
+	</ElementType>
+
+	<ElementType name="DtmDocuments" content="mixed" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<group order="many">
+			<element type="DtmDocument" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+
+	<ElementType name="DtmDeviceType" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<attribute type="manufacturerId" required="no"/>
+		<attribute type="deviceTypeId" required="no"/>
+		<attribute type="subDeviceType" required="no"/>
+		<attribute type="deviceTypeInformation" required="no"/>
+		<attribute type="deviceTypeInformationPath" required="no"/>   
+		<attribute type="classificationId" required="no"/>
+		<attribute type="dtmDevTypeID" required="no"/>
+		<attribute type="dtmDevTypeIDVersion" required="no"/>	
+		<element type="VersionInformation" minOccurs="1" maxOccurs="1"/>
+		<element type="SupportedLanguages" minOccurs="1" maxOccurs="1"/>
+		<element type="BusCategories" minOccurs="0" maxOccurs="1"/>	
+		<element type="DeviceIcon" minOccurs="0" maxOccurs="*"/>					
+		<element type="DtmDocuments" minOccurs="0" maxOccurs="1"/>      
+		<element type="DeviceBitmap" minOccurs="0" maxOccurs="*"/>      
+                 <element type="ClassificationIds" minOccurs="0" maxOccurs="1"/>   
+     		 <element type="DataSetFormats" minOccurs="0" maxOccurs="1"/>   
+   		  <group order="one" minOccurs="0" maxOccurs="1">
+			<element type="DeviceTypeVariants"/>
+			<element type="DeviceTypeVariant"/>
+		  </group>
+	</ElementType>
+	<!-- Definition of Version Information -->
+	<ElementType name="VersionInformation" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<attribute type="name" required="yes"/>
+		<attribute type="vendor" required="no"/>
+		<attribute type="version" required="no"/>
+		<attribute type="date" required="no"/>
+		<attribute type="descriptor" required="no"/>
+	</ElementType>
+	<ElementType name="NumberData" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="number" required="yes"/>
+	</ElementType>
+	<ElementType name="StringData" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="string" required="yes"/>
+	</ElementType>
+	<ElementType name="TimeData" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="time" required="yes"/>
+	</ElementType>
+	<!-- Definition of Binary Variable -->
+	<ElementType name="BinaryVariable" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="binData" required="yes"/>
+	</ElementType>
+	<!-- Definition of Enumerator Variable -->
+	<ElementType name="EnumeratorEntry" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="index" required="yes"/>
+		<attribute type="name" required="yes"/>
+		<attribute type="descriptor" required="no"/>
+	</ElementType>
+	<ElementType name="Variable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="EnumeratorEntry" minOccurs="1" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="EnumeratorEntries" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="EnumeratorEntry" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BitEnumeratorEntries" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="EnumeratorEntry" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="EnumeratorVariable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="Variable" minOccurs="1" maxOccurs="1"/>
+		<element type="EnumeratorEntries" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<!-- Definition of Bit Enumerator Variable -->
+	<ElementType name="BitVariable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="EnumeratorEntry" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BitEnumeratorVariable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="BitVariable" minOccurs="1" maxOccurs="1"/>
+		<element type="BitEnumeratorEntries" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<!-- Definition of Unit -->
+	<ElementType name="Unit" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<group order="one" minOccurs="0" maxOccurs="1">
+			<element type="EnumeratorVariable"/>
+			<element type="ChannelReference"/>
+		</group>
+	</ElementType>
+	<!-- Definition of LowerRange -->
+	<ElementType name="LowerRange" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<group order="one" minOccurs="0" maxOccurs="1">
+			<element type="NumberData"/>
+			<element type="StringData"/>				
+			<element type="TimeData"/>					
+			<element type="ChannelReference"/>
+		</group>
+	</ElementType>
+	<!-- Definition of UpperRange -->
+	<ElementType name="UpperRange" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<group order="one" minOccurs="0" maxOccurs="1">
+			<element type="NumberData"/>
+			<element type="StringData"/>				
+			<element type="TimeData"/>					
+			<element type="ChannelReference"/>
+		</group>
+	</ElementType>
+	<!-- Definition of Ranges -->
+	<ElementType name="Range" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="LowerRange" minOccurs="1" maxOccurs="1"/>
+		<element type="UpperRange" minOccurs="1" maxOccurs="1"/>
+		<element type="Unit" minOccurs="0" maxOccurs="1"/>
+		<element type="LowerRawValue" minOccurs="0" maxOccurs="1"/>                              
+		<element type="UpperRawValue" minOccurs="0" maxOccurs="1"/>                          
+	</ElementType>
+	<ElementType name="Ranges" content="eltOnly" model="closed">
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<attribute type="nodeId" required="no"/>
+		<element type="Range" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<!-- Definition of Channel References -->
+	<ElementType name="ChannelReference" content="eltOnly" model="closed">        
+		<attribute type="nodeId" required="no"/>
+		<attribute type="idref" required="yes"/>
+      		<element type="ChannelInformation" maxOccurs="1" minOccurs="0" />          
+	</ElementType>
+	<ElementType name="ChannelReferences" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="ChannelReference" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<!-- Definition of Alarms -->
+	<ElementType name="StaticValue" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="staticValue" required="yes"/>
+	</ElementType>
+	<ElementType name="Alarm" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="alarmType" required="yes"/>
+		<element type="Unit" minOccurs="0" maxOccurs="1"/>
+		<group order="one" minOccurs="0" maxOccurs="1">
+			<element type="StaticValue"/>
+	  <element type="NumberData"/>                         
+	  <element type="AlarmEnumerationEntries"/>           
+			<element type="ChannelReferences"/>
+		</group>
+	</ElementType>
+	<ElementType name="Alarms" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="Alarm" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<!-- DtmVariable -->
+	<ElementType name="Display" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="string" required="yes"/>
+	</ElementType>
+	<ElementType name="DtmVariableReference" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="reference" required="yes"/>
+	</ElementType>
+	<!-- StructuredVariable -->
+	<ElementType name="StructuredElement" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="bitLength" required="yes"/>
+		<group order="one" minOccurs="1" maxOccurs="1">
+			<element type="Display"/>
+			<element type="DtmVariableReference"/>
+		</group>
+	</ElementType>
+	<ElementType name="StructuredElements" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="StructuredElement" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StructuredVariable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="BinaryVariable" minOccurs="1" maxOccurs="1"/>
+		<element type="StructuredElements" minOccurs="1" maxOccurs="1"/>
+		<attribute type="dataTypeDescriptor" required="no"/>
+	</ElementType>
+	<ElementType name="Variant" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="dataType" required="yes"/>
+		<attribute type="byteLength" required="no"/>
+		<attribute type="displayFormat" required="no"/>
+		<group order="one" minOccurs="1" maxOccurs="1">
+			<element type="StringData"/>
+			<!-- for types: ascii, packedAscii, password, bitString, hexString -->
+			<element type="NumberData"/>
+			<!-- for types: float, double, int, unsigned, index -->
+			<element type="TimeData"/>
+			<!-- for types: date, time, dateAndTime, duration -->
+			<element type="EnumeratorVariable"/>
+			<!-- for type: enumerator -->
+			<element type="BitEnumeratorVariable"/>
+			<!-- for type: bitEnumerator -->
+			<element type="BinaryVariable"/>
+			<!-- for types: binary, dtmSpecific -->
+			<element type="StructuredVariable"/>
+			<!-- for type: structured -->
+		</group>
+	</ElementType>
+	<!-- SubstituteValue -->
+	<ElementType name="SubstituteValue" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<group order="one" minOccurs="1" maxOccurs="1">
+			<element type="SubstituteType"/>
+			<element type="Variant"/>	
+		</group>	
+	</ElementType>
+	<!-- Value -->
+	<ElementType name="Value" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<group order="one" minOccurs="1" maxOccurs="1">
+			<element type="Display"/>
+			<element type="Variant"/>
+		</group>
+	</ElementType>
+	<!-- DTMVariableStatus -->
+	<ElementType name="StatusInformation" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="readAccess" required="no"/>
+		<attribute type="writeAccess" required="no"/>
+		<element type="EnumeratorEntry" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<!-- DtmVariable -->
+	<ElementType name="DtmVariable" content="eltOnly" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="SemanticInformation" minOccurs="0" maxOccurs="*"/>
+		<attribute type="name" required="yes"/>
+		<attribute type="descriptor" required="no"/>
+		<element type="Value" minOccurs="1" maxOccurs="1"/>
+		<element type="Unit" minOccurs="0" maxOccurs="1"/>
+		<element type="Ranges" minOccurs="0" maxOccurs="1"/>
+		<attribute type="statusFlag" required="no"/>
+		<element type="StatusInformation" minOccurs="0" maxOccurs="1"/>
+	</ElementType>
+	<ElementType name="DtmVariables" content="mixed" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<element type="SemanticInformation" minOccurs="0" maxOccurs="*"/>
+		<attribute type="name" required="yes"/>
+		<attribute type="descriptor" required="no"/>
+		<group order="many">
+			<element type="DtmVariables" minOccurs="0" maxOccurs="*"/>
+			<element type="DtmVariable" minOccurs="0" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<!-- Communication Data -->
+	<ElementType name="CommunicationData" content="empty" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="byteArray" required="yes"/>
+	</ElementType>
+	<!-- Definition of FDT specic communication errors for nested communication-->
+	<ElementType name="CommunicationError" content="mixed" model="closed">
+		<attribute type="nodeId" required="no"/>
+		<attribute type="communicationError" required="yes"/>
+		<attribute type="tag" required="yes"/>
+		<attribute type="errorCode" required="no"/>
+		<attribute type="descriptor" required="no"/>
+	</ElementType>
+</Schema>
+

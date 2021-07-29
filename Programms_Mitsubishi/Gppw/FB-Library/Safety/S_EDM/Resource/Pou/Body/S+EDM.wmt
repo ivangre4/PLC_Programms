@@ -1,0 +1,34 @@
+FUNCTION_BLOCK S+EDM (*SF_EDM_V1_01*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_OutControl:BOOL:;(*control signal of the preceeding safety FB*)
+  S_EDM1:BOOL:;(*feedback signal of the first connected actuator.*)
+  S_EDM2:BOOL:;(*feedback signal of the second connected actuator.*)
+  MonitoringTime:DINT:;(*max. response time of the connected and monitored in 10ms Steps*)
+  S_StartReset:BOOL:;(*actuators.*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_EDM_Out:BOOL:;(*controls the actuator.*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  Q_R_Trig_EDM1:BOOL:;(*trigger at EDM1*)
+  Q_R_Trig_EDM2:BOOL:;(*trigger at EDM2*)
+  Q_R_Trig_Reset:BOOL:;(*trigger at Reset*)
+  Q_R_Trig_OutCont:BOOL:;(*trigger at OutControl*)
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  TimeValue8000:DINT:;(*time value for timer in state 8000*)
+  TimeValue8010:DINT:;(*time value for timer in state 8010*)
+  TimeExpired8000:BOOL:;(*indicates if the time limit in state 8000 is expired*)
+  TimeExpired8010:BOOL:;(*indicates if the time limit in state 8010 is expired*)
+  Work:INT:;(*error mask*)
+  TParamOutOfRange:BOOL:;(*indicates that the input 'MonitoringTime' is out of range*)
+  NormMonTime:DINT(2):;(*max. response time of the connected and monitored in 10us steps*)
+  WorkTime1:DINT:;(*cycle time part 1*)
+  WorkTime2:DINT:;(*cycle time part 2*)
+ END_VAR
+END_FUNCTION_BLOCK

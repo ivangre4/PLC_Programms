@@ -1,0 +1,21 @@
+FUNCTION_BLOCK S+ESPE (*SF_ESPE_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_ESPE_In:BOOL:;(*safety demand input*)
+  S_StartReset:BOOL:;(*manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_ESPE_Out:BOOL:;(*output for the safety-related response*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  Q_R_TRIG_Reset:BOOL:;(*trigger on Reset*)
+  Work:INT:;(*error mask*)
+ END_VAR
+END_FUNCTION_BLOCK

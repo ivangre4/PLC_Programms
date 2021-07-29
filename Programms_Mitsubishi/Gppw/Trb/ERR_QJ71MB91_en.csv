@@ -1,0 +1,565 @@
+<GROUP>,,,
+03E8-4FFF,Error detected by the programmable controller CPU,Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.),********.csv
+B000-BFFF,Error detected by the CC-Link module,Take measure referring to the troubleshooting section of the CC-Link System Master/Local Module User's Manual,ERR_QJ61BT11.csv
+C000-CFFF,Error detected by the Ethernet module,Take measure referring to the troubleshooting section of the Ethernet Interface Module User's Manual,ERR_QJ71E71.csv
+F000-FFFF,Error detected by the MELSECNET/H or MELSECNET/10 module,Take measure referring to the troubleshooting section of the MELSECNET/H or MELSECNET/10 network system reference Manual,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+7301,"Switch 1 error 
+* The setting of the intelligent function module switch 1 (CH1 mode setting) is incorrect.",Review the setting of the intelligent function module switch 1.,
+7302,"Switch 2 error 
+* The setting of the intelligent function module switch 2 (CH1 communication speed setting / transmission setting) is incorrect.",Review the setting of the intelligent function module switch 2.,
+7303,"Switch 3 error 
+* The setting of the intelligent function module switch 3 (CH2 mode setting) is incorrect.",Review the setting of the intelligent function module switch 3.,
+7304,"Switch 4 error 
+* The setting of the intelligent function module switch 4 (CH2 communication speed / transmission setting) is incorrect.",Review the setting of the intelligent function module switch 4.,
+7305,"Switch 5 error 
+* The setting of the intelligent function module switch 5 (CH1, 2 station No. setting) is incorrect.",Review the setting of the intelligent function module switch 5.,
+7307,"RAM check error 
+* An error was detected by the RAM check made at power-on.","Any of the QJ71MB91, programmable controller CPU or base unit may be faulty.Perform unit tests.",
+730A,"Parameter starting method error 
+* Parameter setting using GX Configurator-MB was applied to the programmable controller CPU while the MODBUS(R) device assignment parameter starting method specified by the intelligent function module switch was set to ""Start with the default parameters"".","* When using the default parameter setting, delete the QJ71MB91 parameters entered to the programmable controller CPU. 
+* When starting the QJ71MB91 with parameters set from GX Configurator-MB or the sequence program, turn ON the MODBUS(R) device assignment parameter starting method of the intelligent function module switch.",
+7327,"CPU response monitoring timer setting error 
+* The CPU response monitoring timer value in the buffer memory (address: 000DH) is incorrect.",Review the CPU response monitoring timer value.,
+7330,"Device code error 
+* The device code value specified as a MODBUS(R) device assignment parameter is incorrect.",Review the device code value.,
+7331,"MODBUS(R) device upper limit value over error 
+* The head MODBUS(R) device number + assigned points in the MODBUS(R) device assignment parameter exceeds the maximum value (65535) allowed for the MODBUS(R) device.",Review the head MODBUS(R) device number and the number of assigned points.
+7332,"MODBUS(R) device assigned range overlap error 
+* MODBUS(R) device ranges set with the MODBUS(R) device assignment parameters are overlapped.",Review the head MODBUS(R) device number and the number of assigned points.
+7333,"Buffer memory assigned range error 
+* The assigned range of the QJ71MB91 buffer memory set with the MODBUS(R) device assignment parameter exceeds the range of the user free area.",Review the head device number and the number of assigned points.
+7334,"Device upper limit value over error 
+* The head device number + assigned points in the MODBUS(R) device assignment parameter exceeds the maximum value (65535) allowed for the CPU device.",Review the head device number and the number of assigned points.
+7335,"Error status read device setting error 
+* The specification of the error status read device is incorrect.",Review the setting of the error status read device.
+7336,"MELSECNET/H remote access target value error 
+* The access target specification value is other than 0 and 1 when the QJ71MB91 is mounted on the MELSECNET/H remote I/O station. ",MSet the access target specification value to 0 or 1 when the QJ71MB91 is mounted on the MELSECNET/H remote I/O station. 
+7337,"MELSECNET/H remote access target error 
+* The access target (when mounted to MELSECNET/H remote I/O station) (address: 000EH) was set when the QJ71MB91 is not mounted on the MELSECNET/H remote I/O station. ",Review the access target station or the specified access target value (when mounted to MELSECNET/H remote I/O station). 
+7338,"Buffer memory setting error 
+* Data were written to the system area (use prohibited) in the buffer memory.",Check whether or not writing to the system area (use prohibited) in the buffer memory was executed by the sequence program. 
+7340,"Target MODBUS(R) device type specification error 
+* The set value of the target MODBUS(R) device type specification in the automatic communication parameter is incorrect.",Review the target MODBUS(R) device type specification value.
+7342,"Request interval timer value setting error 
+* The set value of the request interval timer in the automatic communication parameter is incorrect.",Review the request interval timer value.
+7343,"Response monitoring timer setting error 
+* The set value of the response monitoring timer in the automatic communication parameter is outside the allowable range.",Correct the response monitoring timer value so that it falls within the allowable range.
+7345,"Buffer memory address overlap error 
+* The buffer memory setting ranges overlap between several automatic communication parameters.",Review the overlapping buffer memory settings and correct them.
+7346,"Buffer memory address range error 
+* The buffer memory setting range in the automatic communication parameter is outside the range for the automatic communication function buffer input/output area.",Correct the invalid buffer memory setting.
+7347,"Automatic communication setting range error 
+* Other than 0 and 1 is set in the automatic communication parameter setting existence.",Review the setting of the automatic communication parameter setting existence.
+7348,"MODBUS(R) device number setting range error 
+* The MODBUS(R) device range for the read/write target set in the automatic communication parameter or dedicated instruction's control data exceeds the maximum value (65536).",Review the setting range of the MODBUS(R) device.
+7349,"MODBUS(R) device points setting error 
+* The MODBUS(R) device range of the read/write target set as an automatic communication parameter or in dedicated instruction's control data exceeds the allowable range.",Review the setting range of the MODBUS(R) device.
+734A,"Target station number setting error 
+* The target station number set as an automatic communication parameter or in dedicated instruction's control data is incorrect.",Review the target station number.
+734C,"Response monitoring timer setting error 
+* The set value of the response monitoring timer in the dedicated instruction's control data is outside the allowable range.",Correct the response monitoring timer setting so that it falls within the allowable range.
+734E,"Write data storage size setting error 
+* The set value of the write data storage size in the dedicated instruction's control data is incorrect.",Review the write data storage size value.
+734F,"Request message size setting error 
+* The request message size specified as an argument ((S2)+0) of the MBREQ instruction is incorrect.",Review the request message size value.
+7350,"Automatic communication function start interruption 
+* Failed to activate the automatic communication function because the GX Configurator-MB parameters were being entered at power-on. ","* Wait for the automatic communication parameters to be activated by GX Configurator-MB, and start the automatic communication function after stopping automatic communication. 
+* Wait for MODBUS(R) device assignment parameter setting existence (XA) to turn ON, and start the automatic communication function. 
+* Retry after a little while."
+7353,"Operation mode error 
+* Any slave function was attempted during master operation.Or, any master function was attempted during slave operation.",Check the mode or the operation
+7355,"Channel No. error 
+* The channel No. specification is wrong. ",Review the channel No. specification
+7360,"Exception message reception 
+* When the automatic communication function or dedicated instruction was used, the target slave device returned an exception code in reply to the request message sent by the QJ71MB91.","Refer to the exception code returned from the target slave device, and solve the problem."
+7361,"Byte count error 
+* In the automatic communication function or dedicated instruction, the number of bytes in the received response message is too small or large.","On the target slave device, check if the contents of the returned response message are correct or not. "
+7362,"Reference number error 
+* The reference number value in the response message received by the dedicated instruction is incorrect.","On the target slave device, check if the contents of the returned response message are correct or not. "
+7365,"Station No. mismatch error 
+* In the automatic communication function or dedicated instruction, the station number in the received response message does not match the one in the corresponding request message.","On the target slave device, check if the contents of the returned response message are correct or not. "
+7366,"Function code mismatch error 
+* In the automatic communication function or dedicated instruction, the function code in the received response message does not match the one in the corresponding request message.","On the target slave device, check if the contents of the returned response message are correct or not. "
+7367,"Response message contents mismatch error 
+* In the automatic communication function or dedicated instruction, the contents of the received response message are not consistent with those of the corresponding request message.(FC: 15, FC: 16, FC: 21)","On the target slave device, check if the contents of the returned response message are correct or not. "
+7370,"Automatic communication function stop request error 
+* The automatic communication stop request (Y6, YE) was made with the automatic communication function stopped.","Prevent the automatic communication stop request (Y6, YE) from being issued with the automatic communication function stopped."
+7371,"Automatic communication parameter setting request error 
+* The automatic communication parameter setting request (Y4, YC) was made with the automatic communication function active.","Stop the automatic communication function before making the automatic communication parameter setting request (Y4, YC)."
+7372,"Switch change error
+* In the control data of the UINI instruction, an out-of-range or invalid value is set.",Review the control data of the UINI instruction.
+7373,"Automatic communication parameters set during switch setting change
+* Automatic communication parameters were set during execution of the UINI instruction.
+* Or, the UINI instruction was executed while automatic communication parameters were being set.",Prevent concurrent execution of the UINI instruction and auto communication parameter setting.
+7374,"MODBUS(R) device assignment parameters set during switch setting change
+* MODBUS(R) device assignment parameters were set during execution of the UINI instruction.
+* Or, the UINI instruction was executed while MODBUS(R) device assignment parameters were being set.",Prevent concurrent execution of the UINI instruction and MODBUS(R) device assignment parameter setting.
+7378,"Response monitoring timer timeout error 
+* The response monitoring timer timed out in the automatic communication function.
+* In the case of broadcast, the broadcast delay has expired before completion of the request message transmission.
+* When broadcast was performed beforehand, response is not possible because the slave is currently executing the processing requested by the broadcast.","* Check if the target device is operating normally.
+* If an error has occurred in the target device, remove the error.
+* Confirm the line connections (cables, wiring, etc.) with the target device.
+* Check the processing time of the target device. (Is the set value too small? Does the timeout error occur before response of the target device or before completion of the request message transmission?)
+* Set a larger value.
+* When the automatic communication function and the MBRW or MBREQ instruction are used on the same channel, set appropriate automatic communication parameters and create a proper sequence program so that the MBRW or MBREQ instruction can be executed in the right timing.
+* When broadcast delay was performed beforehand, check if the broadcast delay value is sufficient.
+* If this error occurs when a request message, for which no response is expected, is sent to a slave by the MBREQ instruction, this error may be regarded as a normal completion. "
+7379,"Response monitoring timer timeout error 
+* The response monitoring timer timed out when using the dedicated instruction.
+* In the case of broadcast, the broadcast delay has expired before completion of the request message transmission.
+* When broadcast was performed beforehand, response is not possible because the slave is currently executing the processing requested by the broadcast.
+* A request message, for which no response is expected, was sent to a slave by the MBREQ instruction. (excluding the case of broadcast)","* Check if the target device is operating normally.
+* If an error has occurred in the target device, remove the error.
+* Confirm the line connections (cables, wiring, etc.) with the target device.
+* Check the processing time of the target device. (Is the set value too small? Does the timeout error occur before response of the target device or before completion of the request message transmission?)
+* Set a larger value.
+* When the automatic communication function and the MBRW or MBREQ instruction are used on the same channel, set appropriate automatic communication parameters and create a proper sequence program so that the MBRW or MBREQ instruction can be executed in the right timing.
+* When broadcast delay was performed beforehand, check if the broadcast delay value is sufficient.
+* If this error occurs when a request message, for which no response is expected, is sent to a slave by the MBREQ instruction, this error may be regarded as a normal completion. "
+737B,"Request interval timer timeout error 
+* The time for issuing the next request was reached before the current request is completed.","* Check if the target device is operating normally.
+* If an error has occurred in the target device, remove the error.
+* Confirm the line connections (cables, wiring, etc.) with the target device.
+* Check the processing time of the target device. (Is the set value too small? Does the timeout error occur before response of the target device or before completion of the request message transmission?)
+* Set a larger value.
+* When the automatic communication function and the MBRW or MBREQ instruction are used on the same channel, set appropriate automatic communication parameters and create a proper sequence program so that the MBRW or MBREQ instruction can be executed in the right timing.
+* When broadcast delay was performed beforehand, check if the broadcast delay value is sufficient.
+* If this error occurs when a request message, for which no response is expected, is sent to a slave by the MBREQ instruction, this error may be regarded as a normal completion. "
+737C,"Simultaneous execution error 
+* Two kinds of dedicated instructions were executed simultaneously on the same channel. ",Execute the next instruction after completion of the currently executing instruction.
+7380,"CPU response monitoring timer timeout 
+* The CPU response monitoring timer timed out in the slave function.","* If an error has occurred in the programmable controller CPU, remove the error.
+* Set a larger value for the CPU response monitoring timer."
+7381,"Function code error 
+* A request message with a function code that is not supported by the QJ71MB91 slave function was received.","Confirm the function codes supported by the QJ71MB91 slave function, and review the request message to be sent."
+7382,"Sub-code error 
+* The request message with a sub-code that is not supported by the QJ71MB91 slave function was received.","Confirm the sub-codes supported by the QJ71MB91 slave function, and review the request message to be sent."
+7383,"MODBUS(R) device specification error 
+* The MODBUS(R) device assignment parameters have not been set for the MODBUS(R) device specified in the received request message.The MODBUS(R) device assignment parameter setting is in process.","* Set the MODBUS(R) device assignment parameters for the MODBUS(R) device specified in the request message.
+* Adjust the timing for the request message transmission on the master side so that communication is started after the MODBUS(R) device assignment parameter setting existence (XA) turns ON."
+7384,"MODBUS(R) device specification error 
+* The range of the MODBUS(R) device specified in the received request message exceeds the valid range of the MODBUS(R) device assignment parameter.",Set an adequate MODBUS(R) device assignment parameter so that it will satisfy the MODBUS(R) device range specified in the received request message.
+7385,"MODBUS(R) device specification error 
+* The range of the MODBUS(R) device specified in the received request message exceeds the maximum value(*) for the MODBUS(R) device.
+(*): The maximum value for the extension file register is ""10000"", and that for any other MODBUS(R) device is ""65536"".",Check the specification of the MODBUS(R) device on the master side from which the request message was sent.
+7386,"MODBUS(R) device specification error 
+* The number of access points for the MODBUS(R) device specified in the received request message exceeds the maximum access points allowed for the relevant function.",Check the specification of the MODBUS(R) device on the master side from which the request message was sent.
+7388,"No setting for error status read device 
+* No error status read device was set for read exception status (FC: 07).",Set an error status read device.
+7390,"Byte count specification error 
+* The number of write points in the received request message does not match the specified number of bytes.",Review the number of write points and the number of bytes on the master side from which the request message was sent.
+7391,"Received data size error 
+* The write device data size in the received request message is not consistent with the specified number of bytes.",Review the specified contents of the write device data size and number of bytes on the master side that sent the request message.
+7392,"Reference type error 
+* The reference number value specified in the received request message (FC: 20, FC: 21) is incorrect.",Review the specification of the reference number on the master side from which the request message was sent.
+7393,"Data unit error 
+* The contents of the data unit in the received request message are incorrect.
+* The size of the received request message is smaller than the minimum size or greater than the maximum size required for the relevant function code.",Review the contents of the request message on the master side from which the request message was sent.
+7394,"Online change error 
+* A write request message was received with online change disabled.","* Do not issue a write request message while online change is disabled.
+* Turn ON the online change with the intelligent function module switch to enable the online change."
+7397,"Non-reception monitoring timeout 
+* No reception for a 1.5 character time or 1 second or more was detected during message reception, and the message was discarded.","* Review the setting of the device from which the relevant message was sent.
+* Check the relevant device.
+* Disconnect an erroneous device if any."
+7398,"Short frame error 
+* The received message size (excluding the start character in the ASCII mode) was less than 4 or 8 bytes. ","Review the contents of the message issued by the station that sent the relevant message.
+* Check the relevant device.
+* Disconnect an erroneous device if any."
+7399,"Character overrun error 
+* The received message size (excluding the start character in the ASCII mode) exceeded 256 or 512 bytes. ","* Review the contents of the message issued by the station that sent the relevant message.
+* Check the relevant device.
+* Disconnect an erroneous device if any."
+739A,"ASCII-binary conversion error 
+* An ASCII code that cannot be converted to binary was received.","* Review the contents of the message issued by the station that sent the relevant message.
+* Check the relevant device.
+* Disconnect an erroneous device if any."
+739B,"End code error 
+* An illegal character was received after the end code CR.","* Review the contents of the message issued by the station that sent the relevant message.
+* Check the relevant device.
+* Disconnect an erroneous device if any."
+739C,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* It can be a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace a module or a unit to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+739D,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* It can be a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace a module or a unit to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+739E,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* It can be a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace a module or a unit to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+73C0,"RAM error
+* An error was detected in the RAM test.","Take the following steps:
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* Perform the test again.
+* If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+73C1,"ROM error 
+* An error was detected in the ROM test.","Take the following steps:
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* Perform the test again.
+* If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+73C2,"Self-loopback test error 
+* An error was detected in the self-loopback test.","Take the following steps:
+* Check if the loopback connector is attached and if the wiring is correct.
+* Check that the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* Perform the test again.
+* If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+7400,"Framing error 
+* The stop bit position is incorrect.
+* The stop bit setting is incorrect.
+* The transmission setting is inconsistent.
+* Turning ON/OFF the equipment produced a disturbance on the line.
+* Electric noise was generated on the line.
+* There are two or more masters.
+* Data transmission occurred simultaneously.","* Match the stop bit setting on the QJ71MB91 with that on the target device.
+* Match the transmission setting on the QJ71MB91 with that on the target device.
+* Take preventive measures against noise.
+* Use one master in the system.
+* Adjust the transmission timing to prevent simultaneous data transmission."
+7401,"Parity error 
+* The parity bit check ended in error.
+* The parity bit setting is incorrect.
+* The transmission setting is inconsistent.
+* There is fluctuation on the line caused by a device turning on and off.
+* Electric noise was generated on the line.
+* There are two or more masters.
+* Data transmission occurred simultaneously.","* Match the parity bit setting on the QJ71MB91 with that on the target device.
+* Match the transmission setting on the QJ71MB91 with that on the target device.
+* Take preventive measures against noise.
+* Use one master in the system.
+* Adjust the transmission timing to prevent simultaneous data transmission."
+7402,"Overrun error 
+* The next data was received before completion of the current reception processing.
+* The transmission speed exceeds the limit of the QJ71MB91. 
+* An instantaneous power failure occurred.","* Check if the transmission speed is within the limit of the QJ71MB91.
+* Check if no instantaneous power failure is occurring on the station. (This can be checked with special register SD1005 of the programmable controller CPU.)Remove the cause of the instantaneous power failure if it is occurring.
+* Reduce the transmission speed."
+7403,"CS signal OFF 
+* The CS signal was OFF at the time of request or response message transmission, resulting in failure of the transmission. 
+* A cable is disconnected.
+* A cable is faulty.","* Confirm that the cables are not disconnected.
+* Check the cable connection and correct the wiring so that the CS signal on the CH1 (RS-232) side will be always ON."
+7404,"Buffer full error 
+* The OS buffer (the buffer provided inside the module) is full.","* If the programmable controller CPU has any problem, remove it.
+* Check if the transmission speed is within the limit of the QJ71MB91.
+* Check if no instantaneous power failure is occurring on the station. (This can be checked with special register SD1005 of the programmable controller CPU.)Remove the cause of the instantaneous power failure if it is occurring.
+* Reduce the transmission speed.
+* Reduce the frequency of requests from the target device."
+7411,"CRC/LRC error 
+* The CRC/LRC in the received message does not match the CRC/LRC calculated by the QJ71MB91.","* Do not turn OFF or disconnect the device from the network while it is sending a message. (If this is the cause of the error, no action is required as long as there is no particular problem.)
+* Review the contents of the message issued by the relevant station.
+* Check the relevant device.
+* Disconnect the erroneous device if any.
+* Review the line status.
+* Take preventive measures against noise."
+7412,"Transmission monitoring timer timeout 
+* The transmission monitoring timer timed out.","* Confirm that the cables are not disconnected.
+* Check the cable connection and correct the wiring so that the CS signal on the CH1 (RS-232) side will be always ON."
+7500,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7501,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7502,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7503,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7504,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7505,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7506,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7507,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7508,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7509,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750A,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750B,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750C,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750D,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750E,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+750F,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7510,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7511,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7512,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7513,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7514,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7515,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7516,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7517,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7518,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7523,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+752A,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+752B,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7540,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7541,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7542,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7543,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7544,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7545,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7546,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7550,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7551,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+7552,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+75FD,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+75FE,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+75FF,"System error 
+* The OS of the QJ71MB91 detected a fault.","Take the following steps:
+* Check if the power supply module, programmable controller CPU and QJ71MB91 are correctly mounted on the base unit.
+* Confirm that the system is operated within the general specifications of the programmable controller CPU.
+* Check if the power capacity is sufficient. 
+* A probable cause is a hardware error.Check if the programmable controller CPU, base unit and QJ71MB91 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+* If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+</ERRCODE>,,

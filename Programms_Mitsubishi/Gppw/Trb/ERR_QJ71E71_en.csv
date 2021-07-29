@@ -1,0 +1,728 @@
+<GROUP>,,,
+4000-4FFF,Error detected by PLC CPU,Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.),********.csv
+7000-7FFF,"Error detected by the serial communication module,etc.",Take measure referring to the troubleshooting section of the Serial Communication Module User's Manual,ERR_QJ71C24.csv
+B000-BFFF,Error detected by the CC-Link module,Take measure referring to the troubleshooting section of the CC-Link System Master/Local Module User's Manual,ERR_QJ61BT11.csv
+E000-EFFF,Error detected by the CC IE Control module,Take measure referring to the troubleshooting section of the CC IE Control network system reference Manual,ERR_QJ71GP21.csv
+F000-FFFF,Error detected by the MELSECNET/H or MELSECNET/10 module,Take measure referring to the troubleshooting section of the MELSECNET/H or MELSECNET/10 network system reference Manual,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+C001,"* At initial processing, the IP address setting value of the Ethernet module is incorrect.
+* When using the router relay function, the setting value of the sub-net mask field is incorrect.","* Correct the IP address.
+Set the class to A/B/C.
+* Correct the sub-net mask.",
+C002,"At initial setting, some of the various timer setting values are outside the allowable range. ",* Review and correct the necessary timer values at initial processing.,
+C003,"At initial setting, the setting value of the automatic open UDP port number is outside the allowable range.",* Correct the automatic open UDP port number.,
+C004,The setting value of the sub-net mask field is incorrect.,* Correct the sub-net mask and execute the initial processing again.,
+C005,"* The setting value of the default router IP address for the router relay function is incorrect.
+* Network ID (network ID after sub-net mask) of the default router IP address is different from the network ID of the local station's Ethernet module IP address.","* Correct the default router IP address and execute the initial processing again.
+* Set the network ID to the same network ID as the local station's Ethernet module IP address.",
+C006,The setting value of the sub-net address for the router relay function is incorrect.,* Correct the sub-net address and execute the initial processing again.,
+C007,"* The setting value of the router IP address for the router relay function is incorrect.
+* Network ID (network ID after sub-net mask) of router IP address is different from the network ID of the local station's Ethernet module IP address.","* Correct the router IP address and execute the initial processing again.
+* Set the network ID to the same network ID as the local station's Ethernet module IP address.",
+C010,"At open processing, the setting value of the Ethernet module port number is incorrect.",* Correct the port number.,
+C011,"At open processing, the setting value of an external device's port number is incorrect.",* Correct the port number.,
+C012,The port number set is used in a connection already opened by TCP/IP.,* Review and correct the port numbers of the Ethernet module and external device.
+C013,The port number used in a connection already opened is set in UDP/IP open processing.,* Review and correct the port number of the Ethernet module. 
+C014,Initial processing and open processing of the Ethernet module is not completed.,* Execute the initial processing and open processing.
+C015,"At open processing, the setting value of an external device's IP address is incorrect.","* Correct the IP address.
+Set the class to A/B/C."
+C016,The pairing open processing of the connection (or the next connection) designated for pairing open has already been completed.,"* Check that the open processing of both of the target connections for pairing open is not executed. 
+* Review the combination for pairing open."
+C017,A connection could not be established during the open processing of a TCP connection.,"* Check the operation of the external device.
+* Check the open processing of the external device.
+* Correct the open settings of the communication parameters.
+* Review the Ethernet module's port number and the IP address/port number and open system of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty."
+C018,"The setting value of an external device's IP address is incorrect.
+* When TCP is used, FFFFFFFFH
+cannot be set as an IP address.",* Correct the IP address.
+C020,Data length exceeds the allowable range.,"* Correct the data length.
+* If the data transmitted is larger than the allowable size, divide and then send it."
+C021,An abnormal end response was received after a transmission using fixed buffers.,"* Read the end code of the response from the connection end code/error log area, and handle as needed."
+C022,A response could not be received within the response monitoring timer value.,"* Check the operation of the external device.
+* Review and correct the response monitoring timer value."
+C023,The open processing for the applicable connection is not completed.,* Execute the open processing of the applicable connection.
+C030,A sending error occurred.,"* Check the operation of the transceiver and external device.
+* Use a transceiver that allows the SQE test.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty."
+C031,A sending error occurred.,* Conduct a self-diagnosis test to see whether or not the Ethernet module is faulty.
+C032,"A TCP ULP timeout error occurred in the TCP/IP communication.
+(An external device does not return ACK.)","* Check the operation of the external device.
+* Correct the TCP ULP timeout value and execute the initial processing again.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C033,An external device side with the set IP address does not exist.,"* Review and correct the external device's IP address and the Ethernet address.
+* If the external device has the ARP function, set the default value. If not, set the Ethernet address of the external device.
+* Check the operation of the external device.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C035,The existence of an external device could not be confirmed within the response monitoring timer value.,"* Check the operation of the external device. 
+* Review and correct each setting value for the existence confirmation.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty."
+C036,Send processing cannot be executed because a cable is not yet connected or disconnected.,"* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty.
+* Conduct a loopback test to see that the line is not faulty.
+* Conduct a self-diagnosis test to see that the Ethernet module is not faulty. "
+C040,"* Not all the data could be received within the response monitoring timer value.
+* Sufficient data for the data length could not be received.
+* The remaining part of a message divided at the TCP/IP level could not be received within the response monitoring timer value.","* Review and correct the data length of the communication data.
+* Review and correct each setting value at the initial processing because the packets may be congested on the line.
+* Send the same data from the external device again."
+C041,"When TCP is used, the checksum of the receive data is incorrect.","* Review the checksum on the external device side and send the correct value.
+* Investigate the conditions of the line (noise, distance between the line and power line, contact of each device, etc.)"
+C042,"When UDP is used, the checksum of the receive data is incorrect.","* Review the checksum on the external device side and send the correct value.
+* Investigate the conditions of the line (noise, distance between the line and power line, contact of each device, etc.)"
+C043,The checksum in header of IP packet received is incorrect.,"* Review the checksum on the external device side and send the correct value.
+* Investigate the conditions of the line (noise, distance between the line and power line, contact of each device, etc.)"
+C044,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C045,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C046,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C047,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C048,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty. "
+C049,An error packet of ICMP was received.,"* Check the operation of the external device.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty.
+* Correct the IP assembly timer value of the external device existence timer timeout."
+C04A,"An error packet of ICMP was received.
+(An IP assembly timeout error occurred in an external device.)","* Check the operation of the external device.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty.
+* Correct the IP assembly timer value of the external device existence timer timeout."
+C04B,"An IP assembly timeout error occurred.
+(The remaining part of divided data could not be received and a timeout occurred.)","* Check the operation of the external device.
+* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty.
+* Correct the IP assembly timer value and execute the initial processing again."
+C04C,"Cannot send because there is no space in the internal buffer, e.g. the IP header buffer.",* Send the same data again and check that the response is received.
+C04D,"* In a message the Ethernet module received through automatic open UDP port communication or non procedure fixed buffer communication, the data length designated in the application data field is incorrect.
+* Not all the receive data can be stored.","* Review the data length.
+* Review the text size length so that the text data becomes less than the receive buffer memory size."
+C050,ASCII code data that cannot be converted to binary code is received when ASCII code communication is set in the operational settings of the Ethernet module.,"* Select binary code communication in the operational settings, and restart the Ethernet module.
+* Correct the data sent from the external side and send again."
+C051,The number of read/write points is outside the allowable range.,* Correct the number of read/write points and send to the Ethernet module again.
+C052,The number of read/write points is outside the allowable range.,* Correct the number of read/write points and send to the Ethernet module again.
+C053,The number of read/write points is outside the allowable range.,* Correct the number of read/write points and send to the Ethernet module again.
+C054,The number of read/write points is outside the allowable range.,* Correct the number of read/write points and send to the Ethernet module again.
+C055,The number of file data read/write points is outside the allowable range.,* Correct the number of read/write points (or byte points) and send to the Ethernet module again.
+C056,"* Read/write request exceeds the maximum address.
+* Address is 0.","* Correct the head address or the number of read/write points and send to the Ethernet module again.
+(The maximum address must not be exceeded.)"
+C057,Request data length does not match with data count in character area (part of text).,"* Review and correct the content of the text area or the request data length of Qn header, and send to the Ethernet module again."
+C058,Request data length after ASCII-binary conversion does not match with data count in character area (part of text).,"* Review and correct the content of the text area or the request data length of Qn header, and send to the Ethernet module again."
+C059,Incorrect designation of command and subcommand.,* Review the content of the request.
+C05A,The Ethernet module cannot read from/write to the designated device.,* Examine the device to be read/written.
+C05B,The Ethernet module cannot read from/write to the designated device.,* Examine the device to be read/written.
+C05C,"The content of a request is incorrect.
+(Requesting read/write in bit units to word devices.)","* Correct the content of the request and send to the Ethernet module again.
+(Correction of subcommand, etc.)"
+C05D,Monitor registration is not performed.,* Monitor after performing monitor registration.
+C05E,Communication time between the Ethernet module and PLC CPU exceeded the CPU monitoring timer.,"* Increase the CPU monitoring timer value.
+* Check whether or not the PLC CPU operates normally.
+* Check whether the network number and PC number are correct.
+* Check and correct the routing parameter setting when the target is on another network.
+* Check for duplication of the network number when the target is on another network."
+C05F,The request could not be executed on the target PLC.,"* Correct the network number and PC number.
+* Correct the content of the read/write request."
+C060,"The content of a request is incorrect.
+(Incorrect data was designated for bit devices, etc.)","* Correct the content of the request and send to the Ethernet module again.
+(Correction of data, etc.)"
+C061,Request data length does not match with the number of data in character area (part of text).,"* Review and correct the content of the text area or the request data length of the Qn header, and send it to the Ethernet module again."
+C062,"When online correction was inhibited, write operation via MC protocol (QnA-compatible 3E frame or 4E frame) was performed for the remote I/O station.","* When performing write operation to the remote I/O station via the MC protocol (QnA-compatible 3E frame or 4E frame), ""enable"" the online correction setting of the operation setting."
+C070,Extension of device memory cannot be designated for the target station.,"* Read/write without designating extension.
+Device memory extension can be designated only for stations with Ethernet modules installed and Q/QnACPUs that connect via the CC IE Control, MELSECNET/H, MELSECNET/10."
+C071,Too many devices points to read/write for other than the Q/QnACPU.,* Correct the number of device points to read/write and send it to the Ethernet module again.
+C072,"The content of a request is incorrect.
+(Requested read/write in bit units to word devices.)","* Check whether the content can be requested to the target PLC CPU.
+* Correct the content of the request and send it to the Ethernet module again.
+(Correction of subcommand, etc.)"
+C073,"Request was not supported by the Ethernet module of the target PLC CPU.
+(Double word address points was designated for other than Q/QnACPU, etc.)",* Review the content of the request.
+C074,Request could not be executed on the target PLC.,"* Correct the network number and PC number.
+* Correct the content of the read/write request."
+C080,"The IP address of an external device could not be obtained during CC IE Control, MELSECNET/H, MELSECNET/10 relay communication or data link instruction communication.","* Set the Station No. <-> IP information for the Ethernet module.
+* Change the parameter conversion method for the CC IE Control, MELSECNET/H, MELSECNET/10."
+C081,The end processing for the Ethernet module has been completed and data link instruction communication cannot be checked.,* Execute the end processing of the Ethernet module after all communication is over.
+C082,"Communication processing was abnormally completed in following communication.
+* Communication with GX Developer (UDP/IP)
+* CC IE Control, MELSECNET/H, MELSECNET/10 relay.","*  Check that the relay station/external station operates normally. 
+(If communication is continuing, it is not necessary to take actions for the error.)
+* Check whether or not the cable connection between the local station and external station is faulty.
+* If some load is applied to the line, reduce the load."
+C083,Communication processing was abnormally completed in data link instruction communication.,"*  Check that the relay station/external station operates normally. 
+(If communication is continuing, it is not necessary to take actions for the error.)
+* Check whether or not the cable connection between the local station and external station is faulty.
+* If some load is applied to the line, reduce the load."
+C084,Communication processing was abnormally completed in data link instruction communication,"* Check that the local station/relay station and external station operate normally.
+* Check whether or not the cable connection between the local station and external station is faulty.
+* Increase TCP resend timer value."
+C085,The local station's channel designated by another station in data link instruction communication is currently in use.,* Execute the request from the other station again.
+C086,A message exceeding the receive message size was received.,* Correct the send message size from the requesting source.
+C087,"There is an error in the IP address for the Station No. <-> IP information setting for CC IE Control, MELSECNET/H, MELSECNET/10 relay communication.","* In the Station No. <-> IP information setting, set the IP address of the target device for CC IE Control, MELSECNET/H, MELSECNET/10 relay communication."
+C0B2,"Insufficient free space in receive buffer of the relay station for MELSOFT connection or data link instruction, or the communication requested station. (Receive buffer full error)","* Provide sufficient time between request intervals
+* Reduce the number of request nodes.
+* Wait for a response to the request and issue the next request after receiving the response.
+* Review the time-out value."
+C0B3,A request that could not be processed from the PLC CPU was made.,"* Review the content of the request.
+* Correct the network number and PC number."
+C0B5,Data that could not be processed by the PLC CPU/Ethernet module was designated.,"* Review the content of the request.
+* Cancel the current request."
+C0B6,A channel number is outside the allowable range.,* Designate the channel number in the range from 1 to 8.
+C0B7,A channel number currently in use was designated.,"* Change the channel number.
+* Execute after the current communication is completed."
+C0B8,"Network number and PC number are outside the allowable range.
+A response from the PLC CPU is faulty.","* Correct the network number and PC number.
+* Check the operation of the PLC CPU."
+C0B9,The open processing of the TCP connection has not been completed.,"* Execute the open processing.
+* Check the operation of the external device."
+C0BA,Cannot acknowledge sending request since the close processing is being executed via the CLOSE instruction.,* Execute the open processing and make a sending request.
+C0BB,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0BC,Designated communication line is closed.,"* Open the communication line.
+* Review the target connection number."
+C0BD,Cannot send by acknowledging continuous requests.,* Check whether or not requests are made continuously without waiting for responses.
+C0BE,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0BF,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0C0,The open processing of the UDP connection has not been completed.,"* Execute the open processing.
+* Check the operation of the external device."
+C0C1,The transmission interval of UDP is too short.,"* Check whether or not sending requests are repeated.
+* Make the sending interval longer."
+C0C2,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0C3,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0C4,The UINI instruction has been executed during communication.,* Close all connections before executing the UINI instruction.
+C0C5,"* A sending request was made to an external device whose class/network ID are different from those of the local station when the router relay function is not used.
+* The setting of the router relay parameter is incorrect.","* Execute the initial processing by setting that the router relay function should be used.
+* Set the correct data for the router relay parameter.
+* Correct the IP address of the external device and execute the open processing.
+* Check that the network ID is correct.
+When it is changed, execute the initial processing again."
+C0C6,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0C7,An Ethernet module system error occurred.,"* Execute the initial processing again.
+* Execute the processing by referring Section 11.4 POINT (3)."
+C0C8,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0C9,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0CA,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0CB,Another sending request was made when the sending processing has not been completed.,* Make the next sending request after the previous sending is completed.
+C0CC,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0CF,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0D0,Incorrect data length was designated.,* Review the designated value of the data length.
+C0D1,Incorrect resent count was designated.,* Review the designation of the resent count.
+C0D2,Incorrect watchdog time was designated.,* Review the designated value of the watchdog timer.
+C0D3,"The number of relay stations in CC IE Control, MELSECNET/H, MELSECNET/10 exceeded the allowable count.","* Check the designated value of the destination.
+* Review the Station No. <-> IP information between the local station and destination.
+* Review the system specifications."
+C0D4,"The number of relay stations in CC IE Control, MELSECNET/H, MELSECNET/10 exceeded the allowable count.","* Check the designated value of the destination.
+* Review the Station No. <-> IP information between the local station and destination.
+* Review the system specifications."
+C0D5,Incorrect retry count was designated.,* Review the retry count.
+C0D6,The designations of network number or station number were incorrect.,"* Review the content of the destination designation.
+* Review the designated values of the destination."
+C0D7,Data were sent without the initial processing completed.,"* Set the parameters on GX Developer, and write them to the CPU module before communication with the external device.
+* Start communication with the external device after completing the initial processing."
+C0D8,The number of blocks exceeded the range.,* Correct the designation value for the number of blocks.
+C0D9,Incorrect subcommand value was designated.,* Correct the designated value for the subcommand.
+C0DA,A response to the PING test could not be received within the time of the communication time check.,"* Review the IP address/host name of the Ethernet module for the PING test.
+* Change the status of the Ethernet module for the PING to allow communication (to the status after the initial processing is completed)."
+C0DB,There is an error in the IP address/host name of the Ethernet module for the PING test.,* Review the IP address/host name of the Ethernet module for the PING test.
+C0DC,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0DD,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0DE,Data could not be received within the designated watchdog time.,"* Review the designated value of the watchdog timer.
+* Review the designated value of the channel number.
+* Check the status of the sending source station and relay station."
+C0DF,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0E0,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E1,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E2,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E3,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E4,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E5,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E6,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E7,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E8,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0E9,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0EA,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0EB,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0EC,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0ED,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0EE,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0EF,An error was detected in the PLC CPU.,"* Check if the PLC CPU and intelligent function modules are correctly mounted to the base or not.
+* Check that the PLC CPU does not remain in the reset status.
+* Check that no error has occurred in the PLC CPU.  If an error is found, take corrective actions according to error description of the PLC CPU.
+* Replace the power supply module, PLC CPU and/or intelligent function module."
+C0F0,An Ethernet module RAM abnormality was detected in the hardware test.,"* Conduct a hardware test again. If an abnormality is detected again, the Ethernet module hardware may be faulty.
+Consult your nearest branch office or dealer with the details of the errors."
+C0F1,An Ethernet module ROM abnormality was detected in the hardware test.,"* Conduct a hardware test again. If an abnormality is detected again, the Ethernet module hardware may be faulty.
+Consult your nearest branch office or dealer with the details of the errors."
+C0F3,A module system error (serious abnormality) was detected in the CPU.,* Correct the causes of error in the local station CPU.
+C0F4,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0F5,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0F6,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C0F7,An error occurs in the self refrain test,"* Send after an arbitrarily selected time has elapsed because packets may be congested on the line.
+* Check that the connection cable is not dislocated.
+* Check that connections to the transceiver and terminator are not faulty.
+* When other than above, the Ethernet module hardware may be faulty.
+Consult your nearest dealer with the details of the errors."
+C100,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C101,A response could not be received from the DNS client.,"* Check the address of the DNS server.
+* Check whether or not it is possible to communicate with the DNS server using the Ping command.
+* Check that the IP addresses of the local station and DNS server are in the same class. (If the class is different, check the router setting.)"
+C102,A response from the SMTP layer could not be received.,"* Check that the SMTP server name is registered in DNS.
+* Delete the SMTP server name, change to the IP address setting, and check the operation.
+* Check whether or not it is possible to communicate with the SMTP server using the Ping command."
+C103,DNS settings incorrect.,"* Check the DNS mail address.
+* Check the content of the DNS setting."
+C104,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C105,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C106,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C110,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C111,A response could not be received from the DNS client.,"* Check cable, hub, etc.
+* Check whether or not it is possible to communicate with the DNS server using the Ping command."
+C112,A response from the POP3 layer could not be received.,"* Check that the POP3 server name is registered in DNS.
+* Delete the POP3 server name, change to the IP address setting, and check the operation.
+* Check whether or not it is possible to communicate with the POP3 server using the Ping command."
+C113,"An e-mail was received that did not have an attached file.
+(It will generate when the attached file is not read normally.)","* Designate an attached file on the sending side.
+* Check the program on the sending side.
+* When the sending source is the mail server, sending with the previous MSEND instruction failed.
+Check the destination of the MSEND instruction, etc.
+* Check that the sending side has the same e-mail specifications as the Ethernet module. (encode/decode, file format, etc.)
+* A server with unknown destination was received from the SMTP server."
+C114,An e-mail was received whose attached file name was invalid.,"* Check on the sending side whether the extension of the attached file is ''bin'' or ''asc''.
+* Check whether or not the mail is compressed or encrypted.
+* Check the destination of the MSEND instruction, etc.
+* A server with unknown destination was received from the SMTP server."
+C115,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C116,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C117,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C118,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C119,There is no received mail.,"* Check that the sending side has the same e-mail specifications as the Ethernet module. (encode/decode, file format, etc.)
+* Check the mail information storage area of the buffer memory (address: 2682H), then read any received mail that is in the server."
+C11A,Failed to convert an e-mail to be received.,"* Check whether or not the mail is compressed or encrypted.
+* Check that the sending side has the same e-mail specifications as the Ethernet module. (encode/decode, file format, etc.)
+* Check whether or not the file was divided on the sending side."
+C11B,An e-mail was sent and an error mail was received from the mail server of the destination.,"* A server with unknown destination was received from the SMTP server. (Received mail is stored in the mail buffer.)
+* Check that the part before ""@"" is correct in the mail address setting of the parameter settings.
+* Check that the part before ""@"" is registered to the destination mail server."
+C11C,A mail address is not found.,"* Check whether the mail setting of the parameter setting is correct or not.
+* When the mail server and Ethernet module are connected via the router,check whether the router setting is correct or not.
+* Test-send a mail to the address where it will be received without fail. When the test is normally completed, recheck whether the domain name after ""@"" is correct or not."
+C11D,The size of the attached file exceeded the allowable size.,"* Check that the attached file is less than 6 k word.
+* Check that the sending side did not divide the file."
+C120,Could not open the SMTP server.,"* Check that the port number of the SMTP server = 25.
+* Check whether or not it is possible to communicate with the SMTP server using the Ping command."
+C121,"Cannot communicate with the SMTP server.
+(Error response)",* Check if the SMTP server is busy.
+C122,"Cannot communicate with the SMTP server.
+(Abort)",* Check if the SMTP server is busy.
+C123,"Cannot communicate with the SMTP server.
+(Reset response)",* Check if the SMTP server is busy.
+C124,A response from the SMTP server timed out.,"* Check whether or not the SMTP server is faulty.
+* Check whether or not there is too much load on the network."
+C125,Forcefully disconnected from the SMTP server.,* Check whether or not the SMTP server is faulty.
+C126,Could not close the SMTP server.,"* Check whether or not the SMTP server is faulty.
+ Check whether or not there is too much load on the network."
+C127,Closing the SMTP server gave an error response.,* Check whether or not the SMTP server is faulty.
+C130,Communication channel is closed because the service is not available.,* Check the status of the SMTP server.
+C131,The SMTP server was performing processing and an error response was received.,"* Check if a user name not registered in the server was designated.
+* Send again after arbitrary set time has passed."
+C132,"The SMTP server was performing processing and an error response was received.
+(Local error)",* Check the status of the SMTP server.
+C133,"The SMTP server was performing processing and an error response was received.
+(Insufficient memory area)",* Check the status of the SMTP server.
+C134,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C135,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C136,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C137,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C138,"The SMTP server was performing processing and an error response was received.
+(Mailbox not found)",* Check that the Ethernet module's mail address is set correctly.
+C139,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C13A,The SMTP server was performing processing and an error response was received. (Exceeded the allocation of memory area),* Check the status of the SMTP server.
+C13B,"The SMTP server was performing processing and an error response was received.
+(Illegal mail box name)",* Check that the Ethernet module's mail address is set correctly.
+C13C,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C140,Could not open the POP3 server.,"* Check that the port number of the POP3 server = 110. (For the Ethernet module, this is fixed to 110.)
+* Check whether or not it is possible to communicate with the POP3 server using the Ping command."
+C141,"Cannot communicate with the POP3 server.
+(Error response)",* Check if the POP3 server is busy.
+C142,"Cannot communicate with the POP3 server.
+(Abort)",* Check if the POP3 server is busy.
+C143,"Cannot communicate with the POP3 server.
+(Reset response)",* Check if the POP3 server is busy.
+C144,Could not receive a response from the POP3 server.,"* Check whether or not the POP3 server is faulty.
+* Check whether or not there is too much load on the network."
+C145,Forcefully disconnected from the POP3 server.,* Check whether or not the POP3 server is faulty.
+C146,Could not close the POP3 server.,"* Check whether or not the POP3 server is faulty.
+* Check whether or not there is too much load on the network."
+C147,Closing the POP3 server gave an error response.,* Check whether or not the POP3 server is faulty.
+C150,POP3 server verification error.,* Check the status of the POP3 server.
+C151,The Ethernet module's mail address (e-mail address setting parameter) is different from the account name in the mailbox on the server side. ,* Check the account name in the mailbox on the server side and correct the mailbox account set for the Ethernet module.
+C152,The Ethernet module's password (e-mail setting parameter) is different from the password on the server side.,* Check the password on the server side and correct the password set for the Ethernet module.
+C153,"An error occurred when getting the received mail list.
+(Failed to obtain the list of mail arrived at the POP3 server.)",* Reset the server inquiry time to the default value and reset the local station's PLC CPU.
+C154,"An error occurred when receiving a mail.
+(Cannot read e-mail from the POP3 server.)","* Check whether or not the mail is compressed or encrypted.
+ Check that the sending side has the same e-mail specifications as the Ethernet module. (encode/decode, file format, etc.) "
+C160,Received a response from the DNS server after timeout.,"* Check whether or not there is too much load on the network.
+* Check the status of the DNS server."
+C161,Could not receive a response from the DNS server.,"* Check whether or not there is too much load on the network.
+* Check the status of the DNS server."
+C162,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C163,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C171,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C172,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C173,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C174,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C175,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C176,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C177,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C178,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C179,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17A,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17B,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17C,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17D,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17E,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C17F,An error is returned from DNS server.,"* Check if the DNS server's IP address setting is correct or not.
+* Check if the mail server name setting (SMTP server name, POP server name) is correct or not.
+* It checks to the administrator of a network. that the DNS function of the server set up by ''DNS setup'' is operating."
+C1A0,An illegal request was made.,"* Execute again.
+If the same error occurs, the Ethernet module's hardware may be faulty. 
+Consult your nearest dealer with the details of the error."
+C1A2,A response to a request could not be received.,* Review and correct the response wait time.
+C1A4,A request or subrequest was incorrect.,* Correct the request or subrequest. 
+C1A5,The designation of the target station or clear target were incorrect.,* Correct the designated value of the target station or clear target.
+C1A6,Incorrect connection number was designated.,* Designate the connection number within the range of 1 to 16.
+C1A7,Incorrect network number was designated.,* Correct the designated value of the network number.
+C1A8,Incorrect station number was designated.,* Correct the designated value of the station number.
+C1A9,Incorrect device number was designated.,* Correct the designated device value of the device number.
+C1AA,Incorrect device name was designated.,* Correct the designated value of the device number.
+C1AC,Incorrect resent count was designated.,* Correct the designated value of the resent count.
+C1AD,Incorrect data length was designated.,* Correct the designated value of the data length.
+C1AE,Incorrect mail sending/receiving data length and header length were designated.,"* Correct the designated values of sending/receiving data length and header length.
+* Sending/receiving data length should be equal or longer than the header length."
+C1AF,Incorrect port number was designated.,* Correct the designated value of the port number.
+C1B0,The open processing of the designated connection is already completed.,* Execute the open processing after executing the close processing.
+C1B1,The open processing of the designated connection has not been completed.,* Execute the open processing.
+C1B2,The OPEN/CLOSE instruction is being executed in the designated connection.,* Execute after the OPEN/CLOSE instruction is completed.
+C1B3,Another sending/receiving instruction is being executed on the designated channel.,"* Change the channel number.
+* Execute after the sending/receiving instruction is completed."
+C1B4,Incorrect arrival time was designated.,* Set the watchdog timer within the proper range.
+C1B5,Data could not be received within the designated watchdog time.,* Review the designated value of the watchdog timer.
+C1B6,Incorrect mail destination number was designated.,"* Review the designated value of the mail designation number.
+* Review the sending mail address setting parameter."
+C1B7,A reading operation was executed while no receiving e-mail was stored in the mail buffer data area.,* Execute the MRECV instruction when the mail receiving flag of the mail information is ''yes''.
+C1B8,The RECV instruction was executed to the channel which has not received data.,"* The execution conditions of a RECV instruction are improved.
+* Correct the designated value of the connection number."
+C1B9,The OPEN instruction cannot be executed to the specified connection.,* Correct the designated value of the connection number.
+C1BA,A dedicated instruction was executed while in the initialization uncompleted status,* Do not execute any dedicated instructions until after the initial processing is completed.
+C1BB,An error is in the classification of the target CPU.,* Correct the designated value of the target CPU number.
+C200,There is an error in the remote password.,"* Review the remote password, then perform the remote password unlock/lock processing again."
+C201,The remote password status of the port used for communication is in the lock status.,"* Unlock the remote password, then perform communication."
+C202,"When another station was accessed, the remote password could not be unlocked.","* When accessing another station, do not set a remote password in the relay station or station to be accessed, or set so they are not subject to the remote password check."
+C203,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C204,The device is different from the one requesting the remote password unlock.,* Request the remote password lock processing from the opposite device that has requested the remote password unlock processing.
+C205,"When another station was accessed, the remote password could not be unlocked.","* When accessing another station, do not set a remote password in the relay station or station to be accessed, or set so they are not subject to the remote password check."
+C206,"System error
+* The OS detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Ethernet module, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Ethernet module is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Ethernet module, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+C207,The number of characters of a file name is too long.,* The number of characters of a file name is made into 255 or less characters.
+C300,A response could not be received within the response monitoring timer value.,"* Check the operation of the external device.
+* Review and correct the response monitoring timer value."
+</ERRCODE>,,

@@ -1,0 +1,277 @@
+<GROUP>,,,
+4000-4FFF,Errors detected by the programmable controller CPU.,"Take corrective actions, referring to the troubleshooting section of the CPU User's Manual (Hardware Design, Maintenance and Inspection).",********.csv
+7000-7FFF,"Errors detected by serial communication module, etc.","Take corrective actions, referring to the troubleshooting section of the Serial Communication Module User's Manual.",ERR_QJ71C24.csv
+C000-CFFF,Errors detected by the Ethernet module.,"Take corrective actions, referring to the troubleshooting section of the Ethernet Interface Module User's Manual.",ERR_QJ71E71.csv
+D000-DFFF,Errors detected by the CC-Link IE field network module.,"Take corrective actions, referring to the troubleshooting section of the CC-Link IE Field Network Module User's Manual.",ERR_QJ71GF11-T2.csv
+E000-EFFF,Errors detected by the CC-Link IE controller network module.,"Take corrective actions, referring to the troubleshooting section of the CC-Link IE Controller Network Reference Manual.",ERR_QJ71GP21.csv
+F000-FFFF,"Errors detected by the MELSECENT/H, MELSECNET10 network system","Take corrective actions, referring to the troubleshooting section of the MELSECNET/H, MELSECNET/10 Network System Reference Manual.",ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+B10C,Message transmission function unsupported. The message transmission function was executed for the remote device station that does not support the function.,"Check the station No. of the target station. 
+Or, check if the target station supports the message transmission function."
+B110,Transient data can not be received. A line error has occurred.,Check the line.
+B111,Transient data receiving order error. A line error has occurred.,Check the line.
+B112,Transient data length error. A line error has occurred.,Check the line.
+B113,Transient data ID error. A line error has occurred or an instantaneous power failure has occurred at the send station.,"Check the line, or check the supply power and power supply module of the send station."
+B115,Link error. A line error has occurred.,Check the line.
+B116,Packet error. A line error has occurred.,Check the line.,
+B120,"Forced termination of the remote device station initialize procedure registration function. In the remote device station initialize procedure registration function, the specification of the remote device station initialize procedure registration was turned off before all procedures were completed.",Do not turn the specification of the remote device station initialize procedure registration off until all procedures are completed.
+B124,Error at a station on which the remote device station initialize procedure registration function was executed. Error at a station on which the remote device station initialize procedure registration function was executed.,Turn on the remote device station initialization procedure registration instruction on the master station (station No.0).
+B125,"Parameter not set error of the remote device station initialize procedure registration function. 
+The specification of the remote device station initialize procedure registration function was turned on without setting the remote device station initialize procedure registration.
+Bits corresponding to other than the head station number were turned ON in the Specification of remote device station to be initialized (SW0014 to SW0017) to instruct remote device station initialization procedure registration.","Turn on the specification of the remote device station initialize procedure registration function after setting the remote device station initialize procedure registration.
+Turn ON only the bit corresponding to the head station number in the Specification of remote device station to be initialized (SW0014 to SW0017)."
+B201,Corresponding station error during sending. A data link error occurred at the corresponding station during transient transmission.,"Check the communication status of other stations, whether or not a temporary error invalid station is specified, or if the corresponding station is stopped."
+B205,Transient target station error. A transient request was issued to other than the intelligent device station.,Check the target station.
+B301,Processing request error during link stop. Line test request was issued while the link was stopped.,Perform a line test while the link is being established
+B302,Specified station number setting error. The specified station number exceeded the highest communication station number during temporary error invalid request/temporary error invalid cancel request.,Specify a station number that is no greater than the highest communication station number.
+B303,Specified station number not set error. The station number was not specified during temporary error invalid request/temporary error invalid cancel request.,"Set a specified station number (SW0003, SW0004 to SW0007)."
+B304,"Line test error station detected. An error was detected in a remote station, intelligent device station or standby master station when a line test was performed.","Check that the remote station, intelligent device station or standby master station is operational and that the cable is not disconnected."
+B306,Specified station number setting error. A station number other than the head station number was specified during temporary error invalid request/temporary error invalid cancel request.,Specify a head station when temporary error invalid request/temporary error invalid cancel request is requested.
+B307,"All stations data link error. All stations were in data link error status when one of the following requests was made: 
+1.SB0000 (data link restart) 
+2.SB0002 (data link stop)",Request again after the data link becomes normal.
+B308,"Station number setting error (installation status). The station number of the slave station is outside of the range between ""1 and 64"".","Set the station number of the slave station within the range between ""1 and 64""."
+B309,"Station number overlap error. The station number of the connected module was duplicated (including number of occupied stations). 
+However, this excludes the duplicate head station number.",Check the module station number.
+B30A,"Loading/parameter compatibility error. 
+The station types of the module are different from parameter settings.
+The mode is inconsistent between the master station and a local or standby master station.
+*The mode of the master station is different from that of the standby master station.","Set the correct parameters.
+After correcting the parameters of the master station, or the local or standby master station, reset the programmable controller CPU."
+B30B,Loading/parameter compatibility error. The contents of the installation status and network parameters do not match.,Set the contents of the installation status and network parameters to match.
+B30C,Standby master station specification error. Master station switching was instructed to a station other than the standby master station.,Specify the station number that corresponds to the standby master station.
+B30D,"Initial status. Temporary error invalid station specification, line test request, or data link stop/restart request, etc. was issued before starting the link.",Issue the request after the data link is started.
+B30E,"Unsupported error.In the function started by SB/SW, an attempt was made to execute the function, which is supported by only the master station, at the local station.",Execute the corresponding function from the master station.
+B30F,Temporary error invalid station specification error. A temporary error invalid station was specified while the data link is being performed upon automatic CC-Link startup.,Specify a temporary error invalid station while the data link is performed with parameters set using GX Works2 or the dedicated instruction.
+B310,Data link restart error. Data link restart (SB0000) was executed for the station that was performing a data link.,Execute Data link restart (SB0000) for the station that has stopped a data link with Data link stop (SB0002).
+B311,Data link stop error. Data link stop (SB0002) was executed for the station that had stopped a data link.,Execute Data link stop (SB0002) for the station that is performing a data link.
+B312,Standby master station absence error. Forced master to standby master switching (SB000C) was executed in the system where no standby master station exists or in the system where the standby master station had become faulty.,"After starting the data link of the standby master station, execute Forced master to standby master switching (SB000C)."
+B313,All station fault error. Forced master to standby master switching (SB000C) was executed in the system where all stations had become faulty.,"After starting the data link of the standby master station, execute Forced master to standby master switching (SB000C)."
+B314,Switching target error. Forced master to standby master switching (SB000C) was executed for any station other than the master station.,Execute Forced master to standby master switching (SB000C) for the master station.
+B315,Forced master station switching error. Forced master switching (SB000C) was instructed again while the master station was being switched to the standby master station.,Check ON/OFF of Forced master switching (SB000C).
+B317,"Network startup setting mode error. The G(P).RLPASET instruction was executed for a module whose parameters have been set by GX Works2.
+The parameter setting was changed without turning the power supply to the programmable controller system off and back on, or resetting the programmable controller CPU.","Use the G(P).RLPASET instruction according to the procedure below.
+1. Clear the settings of the network parameters and refresh parameters of the target module using GX Works2. 
+2. Set the type of I/O assignment setting in GX Works2 to ""intelli."" 
+3. Set switch 4 of the intelligent function module switch setting in GX Works2 to 0100 H. 
+4. Turn the power supply to the programmable controller system off and back on, or reset the programmable controller CPU."
+B31A,Data linking. Data link has already been started when the master station duplication error cancelling is instructed.,Do not instruct the master station duplication error cancelling during data linking.
+B31B,Transmission speed test execution error. The transmission speed test was executed during data link.,Stop Data link and then execute the transmission speed test.
+B31C,System error.,Please consult your local Mitsubishi representative.
+B31D,System error.,Please consult your local Mitsubishi representative.
+B31E,Status logging start error.Logging started while the log was being deleted.,Execute logging after deleting the logs.
+B31F,Status logging clear error.Log was deleted while logging.,Stop logging and then delete the logs.
+B320,Status logging mode invalid.The logging or log deletion was executed In the remote I/O net mode.,"Set to the remote net mode, and then start the logging or log deletion."
+B321,System error.,Please consult your local Mitsubishi representative.
+B322,"Status logging flash ROM deletion invalid.During data link, the logs were deleted with ""RAM + FlashROM"" checked.",Stop the data link and then delete the logs.
+B323,"Status logging flash ROM deletion incomplete.Deletion of the logs was attempted with ""RAM + FlashROM"" checked, but logging started even though the deletion was incomplete.","Delete the logs again with ""RAM + FlashROM"" checked."
+B324,Status logging flash ROM storage error.The logs were attempted to be stored in the flash ROM even though the logs could not be stored in flash ROM.,"After deleting the logs with ""RAM + FlashROM"" checked, start logging.
+Or, start the logging with ""RAM"" checked."
+B325,"Status logging flash ROM error.The total number of storing the logs in the flash ROM exceeded 100,000 times.","Start logging with ""RAM"" checked.
+For ""RAM + FlashROM"", replace the module."
+B384,"Station number setting error (parameter). The station number (including the number of occupied stations) of the station information parameters was set to ""other than 1 H to 40H"".","Set within the range of ""1H to 40H""."
+B385,Total number of stations error (parameter). The total number of occupied stations set with the station information parameter exceeded 64.,Set a parameter value of 64 or less.
+B386,"Number of occupied stations setting error (parameter). The number of all occupied stations in the station information parameter was set to ""0"".","Set the occupied station number to a value between ""1 and 4""."
+B387,Delay time setting error (parameter). The delay time setting in the master station network parameters is out of the setting range.,Set a value within the setting range.
+B388,"Station type setting error (parameter). When the remote net ver.1 mode is used, a value other than 0 to 3 was set to the station type in the station information parameter.","When the remote net ver.1 mode is used, set a value within the range from Åg0 to 3Åh."
+B38B,"Remote device station setting error (parameter). The number of remote device stations was set to ""43 stations or more"" with the station information parameter.","Set the remote device station to ""42 stations or less"" with the station information parameter."
+B38C,"Intelligent device station setting error (parameter). The number of intelligent device stations (including local stations) was set to ""27 stations or more"" with the station information parameter.","Set the intelligent device station to ""26 stations or less"" with the station information parameter."
+B38D,"Invalid station specified error (parameter). ""Other than module head station number"" or ""station number not specified in the parameter"" was set with the invalid station specification parameter. <Example of other than head station number> A bit other than that for station number 5 was ON for a module occupies 4 stations (station numbers 5 to 8).","Set the ""Head station number of the module"". 
+Do not specify any of the stations not specified with the parameter."
+B38E,Communication buffer assignment error (parameter). The total size of the communication buffers in the station information parameter exceeded 4 K words.,Set the total size of the communication buffers to 4 K words or less.
+B38F,Automatic update buffer assignment error (parameter). The total size of the automatic update buffer in the station information parameter exceeded 4 K words.,Set the total size of the automatic update buffer to 4 K words or less.
+B390,"Standby master station specification error (parameter). The standby master station parameter was set to a value other than ""1 to 64"".","Specify the standby master station to a value within the range from ""1 to 64""."
+B391,"Retry count setting error (parameter). The retry count parameter was set to a value other than ""1 to 7"".","Set a value within the range from ""1 to 7""."
+B392,"Operation when CPU is down specified error (parameter). The operation when the CPU is down specification parameter was set to a value other than ""0 or 1"".","Set ""0 or 1""."
+B393,"Scan mode specification error (parameter). The scan mode parameter was set to a value other than ""0 or 1"".","Set ""0 or 1""."
+B394,"Number of automatic return stations setting error (parameter). The number of automatic return stations parameter was set to a value other than ""1 to 10"".","Set a value within the range from ""1 to 10""."
+B396,Station number overlap error (parameter). A duplicate station number was specified with the station information parameter.,Set so that station numbers are not duplicated.
+B397,"Station information setting error (parameter). The station information parameter setting does not meet the following condition:
+(16 x A) + (54 x B) + (88 x C) <= 2304 
+A: Number of remote I/O stations 
+B: Number of remote device stations 
+C: Number of intelligent device stations (including local stations)",Set the parameter so that it meets the condition shown on left.
+B398,"Number of occupied stations setting error (parameter). The number of occupied stations in the station information parameter was set to a value other than ""1 to 4"".","Set a value within the range from ""1 to 4""."
+B399,"Number of connected modules setting error (parameter). The number of connected modules parameter was set to a value other than ""1 to 64"".","Set a value within the range from ""1 to 64""."
+B39A,"Standby master station specification error (loading status). The station number set with the station number setting switches of the standby master station differs from that set in the ""standby master station No."" network parameter of the master station, or the station set in the ""standby master station No."" network parameter of the master station is a local station.","Change the parameter setting of the master station, or change the station number setting of the local/standby master station, and then reset the programmable controller CPU of the local/standby master station."
+B39B,Reserved station setting error. All stations were set as reserved stations.,Check the reserved station settings.
+B39C,"Standby master station setting error. Any other than Intelligent device station has been set to the station type for the ""Standby master station No."" specified in the master station network parameter.
+The mode setting is different between the master and standby master stations.","Specify the standby master station as an intelligent device station.
+Make the same setting to the master and standby master stations."
+B39D,"Reserved station 0 points setting error. 
+(1)Reserved station 0 points setting has been made in the remote net additional mode.
+(2)Reserved station 0 points setting has been made for the station that is not a reserved station.","(1)Change the mode to the remote net ver. 2 mode.
+(2)Set the station of reserved 0 points setting as a reserved station."
+B39E,"8/16-point remote I/O station setting error. 
+(1)Remote I/O station points setting is 8/16 points in the remote net additional mode.
+(2)8/16 points setting has been made for the station other than the remote I/O station.
+(3)Make 8/16 points setting for the same remote I/O station.","(1)Change the mode to the remote net ver. 2 mode.
+(2)8 points setting and 16 points setting have been made for the same remote I/O station.
+(3)Make either 8 points setting or 16 points setting for the remote I/O station."
+B39F,"Remote net additional mode station number invalid. In the remote net additional mode, the ""maximum station number of ver. 1 compatible slave stations"" is greater than the ""minimum station number of ver. 2 compatible slave stations"" in the network parameter setting.","In the remote net additional mode, make network parameter setting so that the ""maximum station number of ver. 1 compatible slave stations"" is less than the ""minimum station number of ver. 2 compatible slave stations""."
+B3A0,"Mode invalid (between master and local/standby master stations). Model invalid has occurred between the master and local/standby master stations.
+1.The mode differs between the master and standby master stations.
+2.The local station is set to the remote net additional mode, and the master station is set to other than the remote net additional mode.
+3.The local station is in the remote net ver. 2 mode or remote net additional mode, and the master station is in the remote net ver. 1 mode.","After correcting the mismatch of modes between the master and local/standby master stations, reset the programmable controller CPU."
+B3A1,"Standby master setting invalid. At the time of parameter setting with dedicated instruction, an invalid value has been set to switch 5 of the intelligent function module switch setting.",Set a correct value to switch 5 of the intelligent function module switch setting.
+B3A2,"Remote I/O net mode station type invalid. At the time of parameter setting with dedicated instruction, the station type of other than the remote I/O station has been set in the remote I/O net mode.",Set all station types to the remote I/O station.
+B3A3,"Assignment error. In the remote net Ver.2 mode or remote net additional mode, total points for remote stations set in the station information have exceeded the maximum of 8192.",Check the points for remote stations in the station information setting.
+B3A4,"Parameter mismatch. When the standby master station was operating as the master station with the master station duplex function, the network parameter setting of the faulty master station was changed.",Return the network parameter setting of the master station to the original value.
+B3A5,Mode invalid (parameter). The mode set in the control data of the G(P).RLPASET instruction differs from the mode set with switch 3 of the intelligent module switch setting.,Check the control data of the G(P).RLPASET instruction and the switch 3 setting of the intelligent module switch setting.
+B401,Parameter change error. Parameter change was executed during transient request.,Change the parameter after all transient requests are completed or before any are requested.
+B404,Response error. A response from the requested station was not returned within the watchdog time period.,"Set a longer watchdog time. If an error persists, check the requested module and cables."
+B405,Transient applicable station error. A transient request was made to a remote I/O station or a remote device station.,Set the corresponding station to a local station or an intelligent device station.
+B410,Receive buffer size error. The receive buffer size of the dedicated instruction is less than the response data size.,Check the receive buffer size.
+B411,Data length outside of range. The number of read/write points in the control data of the dedicated instruction is outside the setting range.,Change the number of read/write points to within the setting range.
+B412,Station number outside of range. The station number in the control data of the dedicated instruction is outside the setting range.,Change the station number to within the setting range.
+B413,Request error. Multiple dedicated instructions were executed for the same station.,Check the sequence program.
+B414,Interlock signal data outside of range. The setting of the interlock signal storage device of the G(P).RIRCV or G(P).RISEND instruction is outside the setting range.,Change the setting of the interlock signal storage device to within the setting range.
+B418,Received data size error. Data exceeding the receivable data size were received with the message transmission function.,Set a value of the received data size or more for the receivable data size.
+B601,Request type error. An unsupported request was received.,"Check the contents of the request, as well as the target station number."
+B602,Transient request overload error. There are too many transient requests to the corresponding station.,Wait a while and then send the requests (transient overload status).
+B603,Transient request overload error. There are too many transient requests to the corresponding station.,Wait a while and then send the requests (transient overload status).
+B604,Line test in processing. Transient transmission was sent when a line test was in progress.,Wait a while and then retransmit.
+B605,Transient storage buffer could not be obtained. Transient storage buffer could not be obtained.,Wait a while and then retransmit.
+B607,Target station CPU error. There is an error in the target station's CPU.,Check the target CPU.
+B771,Transient request overload error. There are too many transient requests to the corresponding station.,Wait a while and then retransmit (transient overloaded status).
+B774,Transient request error. The target station was not an intelligent device station.,Check if the target station is an intelligent device station.
+B778,Response time out. A response was not received from the requested station.,Check the requested module and cables.
+B780,Module mode setting error. A transient transmission was executed even though the target station was set to the I/O mode.,Set to the remote net mode.
+B782,Station number specification error. The transmission destination and source stations were the same when other station connection was specified.,"Check the transmission destination station number, or change to host connection."
+B783,Transient storage buffer error. An error occurred in the transient storage buffer when a transient transmission of greater than 1 k was being performed.,Wait a while and then retransmit.
+B801,Access code setting error. A non-existing access code/attribute was set.,Set a correct access code/attribute.
+B802,Access code error. An access code that does not exist was used.,Use the correct access code.
+B803,Data points error. The number of data points were out of range.,Set the number of data points to within 1 to 960 bytes.
+B804,"Attribute definition error Transient transmission unsupported station specification error. The attribute definition was invalid. 
+Alternatively, transient transmission was performed even though the target station does not support transient transmission.","Review the attribute definition. 
+Check the designation of the target station number, as well as the function version and software version of the target local station."
+B805,Data points error. The number of data was out of range.,"Set the range to within 1 to 100 when writing, and 1 to 160 when reading."
+B807,"Device No. error. The start device No. is out of range.
+Or, the address was not a multiple of 16 when the bit device was accessed.","Correct the start device No.
+Or, set the address to a multiple of 16 when accessing the bit device."
+B80D,Setting range error. The specified combination (addresses and points) exceeded the valid processing range.,Set so that the number of processing points does not exceed the device range .
+B814,File register capacity setting error. The file register capacity was not specified.,Specify the file register capacity.
+B815,Module mode setting error. A transient transmission was executed when the target station was set to the I/O mode.,Set to the intelli mode.
+B823,Remote control mode error. The mode setting of the remote control was incorrect.,Check the mode specification.
+B903,Transient request error. A transient request was issued to a station that has not secured a communication buffer area.,Secure a communication buffer area with a parameter.
+B904,Communication buffer size setting error. The communication buffer size of the corresponding station was out of range when a dedicated instruction was executed.,Set the communication buffer size of the corresponding station within the range.
+B905,"Transient data length error. When the dedicated instruction is executed, the transient data length is greater than the communication buffer size of the corresponding station.",Make the communication buffer size of the corresponding station greater than the transient data length.
+B982,"Check sum parameter error. Incorrect check sum value is stored as a parameter in the QCPU.
+Block guarantee of cyclic data per station not supported. The QJ61BT11N currently mounted does not support the block guarantee of cyclic data per station.","Replace the CPU.
+Replace the QJ61BT11N with the one that supports the function."
+B987,Block guarantee of cyclic data per station incorrectly set. The PLC CPU currently mounted does not support the block guarantee of cyclic data per station.,Replace the PLC CPU with the one that supports the function.
+BA19,Corresponding station error. The corresponding station that is being tested stopped communication during line test 1.,Check the cable and the corresponding station.
+BA1B,All stations error. All stations stopped communications during line test 1.,Check the cables.
+BA1E,"MFP send buffer switching error. During RAM diagnostics, MFP send buffer switching fails.","Deal in the following procedure.
+(1)Check if the module is mounted correctly.
+(2)Check if the module usage environment is in the range of the CPU module general specification.
+(3)Check if the power supply capacity is enough.
+(4)Check if the module operates normally by itself.
+(5)Please consult your local Mitsubishi representative."
+BA1F,RAM diagnostics error. The value written to the object RAM during RAM diagnostics and the readout value are different.,"Deal in the following procedure.
+(1)Check if the module is mounted correctly.
+(2)Check if the module usage environment is in the range of the CPU module general specification.
+(3)Check if the power supply capacity is enough.
+(4)Check if the module operates normally by itself.
+(5)Please consult your local Mitsubishi representative."
+BB01,"Concurrent execution error. Any of the following were attempted to be executed to the same station. (Including the same requests)
+*  Message transmission function
+*  Remote device station initialization procedure registration function
+*  G(P).RISEND or G(P).RIRCV instruction
+*  Remote device station access from a peripheral.",Execute a request after completion of another processing.
+BBC2,"Station number setting error. TThe station number setting of the module is other than ""0 to 64"".
+Alternatively, the last station number is greater than 64.",Check the station number and the number of occupied stations of the module.
+BBC5,"Master station duplication error. Multiple master stations exist on the same line.
+Alternatively, line noise was detected at power on.","Reduce the number of master stations on the same line to one.
+Alternatively, if data link starts when turning on the SB007 (Master station duplication error canceling request), check the line status."
+BBCA,Standby master station duplication error. Multiple standby master stations exist on the same line.,"Reduce the number of standby master stations on the same line to one.
+Alternatively, check the line status."
+BC01,All stations data link error (Message transmission function). A data link error occurred on all stations during a message transmission.,"After the data link status is recovered, perform the message transmission again."
+BC03,"Message transmission target station failure. The target station specified for the message transmission function is in any of the following status. 
+*  No network parameter is set.
+*  The specified station No. is not the head station number.
+*  The station is set as a reserved station.
+*  A data link error (including All stations data link error) has occurred.",Check network parameters or remote device stationsÅf operations.
+BC04,Message transmission target station error. The message transmission was performed for any other than remote device stations.,Check the target station.
+BC05,Station No. out of range (Message transmission function). The station No. specified for the message transmission function is outside of the range between Åg1 and 64Åh.,Check the specified station No.
+BC06,Message transmission function executing station invalid. Execution of the message transmission function was attempted from other than the master station.,Execute the message transmission function on the master station.
+BC07,"Send data size out of range. In the message transmission function, the send data size is outside the range.",Change the send data size so that it will be within the range.
+BC50,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Check the sequence program to see if any prohibited remote output (RY) has not been accessed.
+If the same error persists after checking the above, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC51,"Message transmission handshake failure. 
+(1)During execution of message transmission, a data link error occurred on the station.
+(2)During execution of message transmission, some parameters were changed.
+(3)With the message transmission function, abnormal data were received.","(1)Check the operation of the target remote device station.
+(2)Stop the data link, and then change parameters.
+(3)Check the sequence program to see if any prohibited remote output (RY) has not been accessed.
+If the same error persists after checking the above, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC52,"Message transmission handshake timeout.
+(1)In the message transmission function, a communication timeout has occurred.
+(2)Data link stop (SB0002) was executed during the message transmission.","(1)Increase the value for Monitoring time setting (SW0009).
+If the error occurs again, check the target module and cables.
+(2)Stop data link after completion of message transmission."
+BC53,"Message transmission handshake timeout
+(1)In the message transmission function, a communication timeout has occurred.
+(2)Data link stop (SB0002) was executed during the message transmission.","(1)Increase the value for Monitoring time setting (SW0009).If the error occurs again, check the target module and cables.
+(2)Stop data link after completion of message transmission."
+BC54,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC55,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC57,Requests overlapped error. Executions of multiple requests for message transmission or remote device station access from a peripheral were attempted to the same station.,Execute a request after completion of another processing.
+BC58,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC59,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC5B,"Abnormal response received. With the message transmission function, an abnormal response was received.",Check the operation of the target remote device station.
+BC5C,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC5D,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC5E,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC5F,"Message transmission handshake failure. With the message transmission function, abnormal data were received.","Execute the message transmission function again.
+If the same error persists, the master module or remote device station may be faulty. Please consult your local Mitsubishi representative."
+BC60,Invalid number of simultaneously executed message transmissions. The message transmission function was executed simultaneously for 5 or more remote device stations.,Simultaneously execute the function for 4 stations or less.
+BC70,No. of concurrent execution error(Remote device station access). Too many remote device station accesses were requested from peripherals.,Execute four requests or less at the same time.
+BC71,Unsupported function error(Remote device station access). Execution of the remote device station access function was attempted from other than the master station.,Execute the function from the master station.
+BC72,"Target station error(Remote device station access). The target of remote device station access from the peripheral is any of the following.
+*  Not exist among network parameters.
+*  Not have the start station No.
+*  Set as a reserved station.
+*  Has a data link error (including errors on all stations).",Check the parameters or operation of the target station.
+BC73,Target station specification error (Remote device station access). The target of the remote device station access from the peripheral is a remote I/O station.,Check the specified target station No. and station type.
+BC74,"Device No. error (Remote device station access). Device No. for ""RX"", ""RY"", ""RWw"", or ""RWr"" is outside the valid range for the target station.",Check the parameters and valid device No. of the target station.
+BC75,All-stations data link error (Remote device station access). An all-stations data link error occurred during execution of the remote device station access from the peripheral.,Issue the request after starting data link.
+BC76,Timeout (Remote device station access). Timeout occurred during the remote device station access from the peripheral.,"Set a longer timeout time in the application on the request source, or check the operation of the target slave station."
+BD85,Hardware error detection.  A hardware error was detected.,"There is most likely a hardware error in either the QJ61BT11N, the CPU module, the base unit or other modules. Please consult your local Mitsubishi representative."
+BF11,System error.,Please consult your local Mitsubishi representative.
+BF12,System error.,Please consult your local Mitsubishi representative.
+BF13,System error.,Please consult your local Mitsubishi representative.
+BF14,System error.,Please consult your local Mitsubishi representative.
+BF15,System error.,Please consult your local Mitsubishi representative.
+BF16,System error.,Please consult your local Mitsubishi representative.
+BF17,System error.,Please consult your local Mitsubishi representative.
+BF18,System error.,Please consult your local Mitsubishi representative.
+BF19,System error.,Please consult your local Mitsubishi representative.
+BF1A,System error.,Please consult your local Mitsubishi representative.
+BF1B,System error.,Please consult your local Mitsubishi representative.
+BF1C,System error.,Please consult your local Mitsubishi representative.
+BF20,System error.,Please consult your local Mitsubishi representative.
+BF30,System error.,Please consult your local Mitsubishi representative.
+BF31,System error.,Please consult your local Mitsubishi representative.
+BF32,System error.,Please consult your local Mitsubishi representative.
+BF33,System error.,Please consult your local Mitsubishi representative.
+BF34,System error.,Please consult your local Mitsubishi representative.
+BF35,System error.,Please consult your local Mitsubishi representative.
+BF36,System error.,Please consult your local Mitsubishi representative.
+BF37,System error.,Please consult your local Mitsubishi representative.
+BF38,Execution result read error (Remote device station access). An error is detected in the process of reading the execution result of the remote device station access from the peripheral.,"*  Check the application of the request source.
+*  Check for remote device station access from another peripheral."
+BF39,Request procedure error (Remote device station access). An error in the request procedure is detected during the remote device station access from the peripheral.,"*  Check the application of the request source.
+*  Check for remote device station accesses from multiple peripherals.
+*  Check if any value is written in the system area."
+BFFB,Transient request overload error. There are too many transient requests to the corresponding station.,Wait for a while before transmitting again (transient overload status).
+BFFE,CPU monitoring timer time out. The CPU monitoring timer timed out.,Check the operation of the target station.
+</ERRCODE>,,

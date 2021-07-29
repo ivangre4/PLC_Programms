@@ -1,0 +1,25 @@
+FUNCTION_BLOCK S+OUTC (*SF_OutControl_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_SafeControl:BOOL:;(*control signal of the preceding safety FB.*)
+  ProcessControl:BOOL:;(*control signal from the functional application*)
+  StaticControl:BOOL:;(*optional conditions for process control.*)
+  S_StartReset:BOOL:;(*manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_OutControl:BOOL:;(*controls connected actuators*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  Q_R_TRIG_ProcCtl:BOOL:;(*trigger at ProcessControl*)
+  Q_R_TRIG_Reset:BOOL:;(*trigger at Reset*)
+  Q_R_TRIG_SafCtrl:BOOL:;(*trigger as SafeControl*)
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  Work:INT:;(*error mask*)
+ END_VAR
+END_FUNCTION_BLOCK

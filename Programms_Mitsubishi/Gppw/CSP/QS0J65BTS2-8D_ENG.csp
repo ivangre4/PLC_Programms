@@ -1,0 +1,302 @@
+#
+
+[File_Info]
+SafetyCSPVersion	= 1.0 ;
+CreateDate			= "2011/10/25" ;
+ModificationDate	= "2011/10/25" ;
+Language			= "ENG" ;
+FileVersion			= 2 ;
+
+[Device_Info]
+VenderName			= "Mitsubishi Electric Corp." ;
+VenderCode			= 0x0000 ;
+StationType			= 1 ;
+ModuleTypeName		= "CC-Link Safety SafetyRemote I/O" ;
+ModuleType			= 0x03 ;
+ModuleName			= "QS0J65BTS2-8D" ;
+ModuleCode			= 0x0002 ;
+OccupiedStationsInfo	= 1 ;
+ModuleTechnicalVersionInfo	= A, B ;
+
+[Parameter_Info]
+
+	#
+
+#
+[Param.Occupy_Com] #
+[Param.Occupy_Com.Ver_A]
+[Param.Occupy_Com.Ver_A.RAM_Param]
+Number_of_Entry		= 25 ;				#
+
+#
+#
+Entry0x0001 = "Time of noise removal filter X0,1"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0002 = "Time of noise removal filter X2,3"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0003 = "Time of noise removal filter X4,5"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0004 = "Time of noise removal filter X6,7"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0005 = "Time of noise removal filter X8,9"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0006 = "Time of noise removal filter XA,B"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0007 = "Time of noise removal filter XC,D"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0008 = "Time of noise removal filter XE,F"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+#
+Entry0x0009 = "Double input discrepancy detection time X0,1"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000A = "Double input discrepancy detection time X2,3"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000B = "Double input discrepancy detection time X4,5"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000C = "Double input discrepancy detection time X6,7"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000D = "Double input discrepancy detection time X8,9"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000E = "Double input discrepancy detection time XA,B"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000F = "Double input discrepancy detection time XC,D"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x0010 = "Double input discrepancy detection time XE,F"     , 100 ,     1 ,     1~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+#
+Entry0x0011 = "Input dark test selection X0,1"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0012 = "Input dark test selection X2,3"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0013 = "Input dark test selection X4,5"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0014 = "Input dark test selection X6,7"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0015 = "Input dark test selection X8,9"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0016 = "Input dark test selection XA,B"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0017 = "Input dark test selection XC,D"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+Entry0x0018 = "Input dark test selection XE,F"     , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Input dark test execution" ;
+#
+Entry0x0019 = "Input dark test pulse OFF time"    , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width that T0, T1 terminal outputs" ;
+
+[Param.Occupy_Com.Ver_A.RAM_Combo]
+#
+ParamNumber = 0x0001 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0002 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0003 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0004 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0005 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0006 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0007 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0008 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+#
+ParamNumber = 0x0009 ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000A ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000B ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000C ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000D ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000E ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x000F ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+ParamNumber = 0x0010 ;
+	CEntry		= 32, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" ;
+#
+ParamNumber = 0x0011 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0012 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0013 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0014 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0015 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0016 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0017 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0018 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+#
+ParamNumber = 0x0019 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+
+[Param.Occupy_Com.Ver_A.Association]
+Number_of_Entry = 8 ;
+
+	AEntry1= (Entry0x0011==0) & (Entry0x0001==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X0,1'.";
+	AEntry2= (Entry0x0012==0) & (Entry0x0002==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X2,3'.";
+	AEntry3= (Entry0x0013==0) & (Entry0x0003==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X4,5'.";
+	AEntry4= (Entry0x0014==0) & (Entry0x0004==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X6,7'.";
+	AEntry5= (Entry0x0015==0) & (Entry0x0005==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X8,9'.";
+	AEntry6= (Entry0x0016==0) & (Entry0x0006==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XA,B'.";
+	AEntry7= (Entry0x0017==0) & (Entry0x0007==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XC,D'.";
+	AEntry8= (Entry0x0018==0) & (Entry0x0008==0), Entry0x0019==0 , "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XE,F'.";
+
+
+[Param.Occupy_Com.Ver_B]
+[Param.Occupy_Com.Ver_B.RAM_Param]
+Number_of_Entry		= 34 ;				#
+
+#
+#
+Entry0x0001 = "Time of noise removal filter X0,1"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0002 = "Time of noise removal filter X2,3"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0003 = "Time of noise removal filter X4,5"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0004 = "Time of noise removal filter X6,7"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0005 = "Time of noise removal filter X8,9"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0006 = "Time of noise removal filter XA,B"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0007 = "Time of noise removal filter XC,D"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+Entry0x0008 = "Time of noise removal filter XE,F"       , 100 ,     0 ,      0~4 , ""     , "Out of Range [0-4]" , "Default:'1ms'  set Sensitivity that reacts to input signal" ;
+#
+Entry0x0009 = "Double input discrepancy detection time X0,1"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000A = "Double input discrepancy detection time X2,3"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000B = "Double input discrepancy detection time X4,5"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000C = "Double input discrepancy detection time X6,7"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000D = "Double input discrepancy detection time X8,9"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000E = "Double input discrepancy detection time XA,B"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x000F = "Double input discrepancy detection time XC,D"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+Entry0x0010 = "Double input discrepancy detection time XE,F"     , 100 ,     1 ,     0~32 , ""   , "Out of Range " , "Default:'20ms'  set ON/OFF Transition time when Double wired" ;
+#
+Entry0x0011 = "Input dark test selection X0,1"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'X0:Executed,X1:Not executed'/X0:Not executed,X1:Executed'" ;
+Entry0x0012 = "Input dark test selection X2,3"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'X2:Executed,X3:Not executed'/X2:Not executed,X3:Executed'" ;
+Entry0x0013 = "Input dark test selection X4,5"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'X4:Executed,X5:Not executed'/X4:Not executed,X5:Executed'" ;
+Entry0x0014 = "Input dark test selection X6,7"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'X6:Executed,X7:Not executed'/X6:Not executed,X7:Executed'" ;
+Entry0x0015 = "Input dark test selection X8,9"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'X8:Executed,X9:Not executed'/X8:Not executed,X9:Executed'" ;
+Entry0x0016 = "Input dark test selection XA,B"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'XA:Executed,XB:Not executed'/XA:Not executed,XB:Executed'" ;
+Entry0x0017 = "Input dark test selection XC,D"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'XC:Executed,XD:Not executed'/XC:Not executed,XD:Executed'" ;
+Entry0x0018 = "Input dark test selection XE,F"     , 100 ,     0 ,      0~3 , ""     , "Out of Range [0-1]" , "Default:'Execute'\n Set Input dark test 'Execute'/'Not execute'/'XE:Executed,XF:Not executed'/XE:Not executed,XF:Executed'" ;
+#
+Entry0x0019 = "Input dark test pulse OFF time"    , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width that T0, T1 terminal outputs" ;
+#
+Entry0x0026 = "Double input/single input selection X0,1"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x0027 = "Double input/single input selection X2,3"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x0028 = "Double input/single input selection X4,5"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x0029 = "Double input/single input selection X6,7"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x002A = "Double input/single input selection X8,9"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x002B = "Double input/single input selection XA,B"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x002C = "Double input/single input selection XC,D"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+Entry0x002D = "Double input/single input selection XE,F"       , 100 ,     1 ,      0~4 , ""     , "The 'Double input/single input selection' is outside the range. " , "Default:'Double input'  set method of wiring of input signal." ;
+#
+Entry0x002E = "Auto RTN Func to detect double input mismatch"       , 100 ,     0 ,      0~1 , ""     , "The setting of the automatic return function when the double input disagreement detection is abnormal is outside the range. "  , "Default:'invalid' The automatic return function when the double input disagreement detection is abnormal is set. " ;
+
+
+[Param.Occupy_Com.Ver_B.RAM_Combo]
+#
+ParamNumber = 0x0001 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0002 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0003 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0004 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0005 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0006 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0007 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+ParamNumber = 0x0008 ;
+	CEntry		= 5, 0:"1ms" , 1:"5ms" , 2:"10ms" , 3:"20ms" , 4:"50ms"  ;
+#
+ParamNumber = 0x0009 ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s" , 0:"Do not detect" ;
+ParamNumber = 0x000A ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x000B ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x000C ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x000D ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x000E ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x000F ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+ParamNumber = 0x0010 ;
+	CEntry		= 33, 1: "20ms" , 2: "40ms" , 3: "60ms" , 4: "80ms" , 5:"100ms" , 6:"120ms" , 7:"140ms" , 8:"160ms" , 9:"180ms" ,10:"200ms" ,11:"220ms" ,12:"240ms" ,13:"260ms" ,14:"280ms" ,15:"300ms" ,16:"320ms" ,17:"340ms" ,18:"360ms" ,19:"380ms" ,20:"400ms" ,21:"420ms" ,22:"440ms" ,23:"460ms" ,24:"480ms" ,25:"500ms" ,26:"1s" , 27:"2s" , 28:"5s" , 29:"10s" , 30:"20s" , 31:"30s" , 32:"60s",  0:"Do not detect"  ;
+#
+ParamNumber = 0x0011 ;
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"X0:Execute,X1:Not execute" , 3:"X0:Not execute,X1:Execute" ;
+ParamNumber = 0x0012 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"X2:Execute,X3:Not execute" , 3:"X2:Not execute,X3:Execute" ;
+ParamNumber = 0x0013 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"X4:Execute,X5:Not execute" , 3:"X4:Not execute,X5:Execute" ;
+ParamNumber = 0x0014 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"X6:Execute,X7:Not execute" , 3:"X6:Not execute,X7:Execute" ;
+ParamNumber = 0x0015 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"X8:Execute,X9:Not execute" , 3:"X8:Not execute,X9:Execute" ;
+ParamNumber = 0x0016 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"XA:Execute,XB:Not execute" , 3:"XA:Not execute,XB:Execute" ;
+ParamNumber = 0x0017 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"XC:Execute,XD:Not execute" , 3:"XC:Not execute,XD:Execute" ;
+ParamNumber = 0x0018 ;                                                                                           
+	CEntry		= 4, 0:"Execute" , 1:"Not execute" , 2:"XE:Execute,XF:Not execute" , 3:"XE:Not execute,XF:Execute" ;
+#
+ParamNumber = 0x0019 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+#
+ParamNumber = 0x0026 ;
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"X0,X1:Single input" , 3:"X0:Single input,X1:No Use" , 4:"X0:No Use,X1:Single input" ;
+ParamNumber = 0x0027 ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"X2,X3:Single input" , 3:"X2:Single input,X3:No Use" , 4:"X2:No Use,X3:Single input" ;
+ParamNumber = 0x0028 ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"X4,X5:Single input" , 3:"X4:Single input,X5:No Use" , 4:"X4:No Use,X5:Single input" ;
+ParamNumber = 0x0029 ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"X6,X7:Single input" , 3:"X6:Single input,X7:No Use" , 4:"X6:No Use,X7:Single input" ;
+ParamNumber = 0x002A ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"X8,X9:Single input" , 3:"X8:Single input,X9:No Use" , 4:"X8:No Use,X9:Single input" ;
+ParamNumber = 0x002B ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"XA,XB:Single input" , 3:"XA:Single input,XB:No Use" , 4:"XA:No Use,XB:Single input" ;
+ParamNumber = 0x002C ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"XC,XD:Single input" , 3:"XC:Single input,XD:No Use" , 4:"XC:No Use,XD:Single input" ;
+ParamNumber = 0x002D ;                                                                                            
+	CEntry		= 5, 0:"No Use" , 1:"Double input" , 2:"XE,XF:Single input" , 3:"XE:Single input,XF:No Use" , 4:"XE:No Use,XF:Single input" ;
+#
+ParamNumber = 0x002E ;
+	CEntry		= 2, 0:"invalid" , 1:"valid" ;
+
+[Param.Occupy_Com.Ver_B.Association]
+Number_of_Entry = 40 ;
+
+	AEntry17= Entry0x0011 == 2 , (Entry0x0026 == 0)|(Entry0x0026 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X0,1', the setting of 'Input dark test selection X0,1' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X0,1' .";
+	AEntry18= Entry0x0011 == 3 , (Entry0x0026 == 0)|(Entry0x0026 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X0,1', the setting of 'Input dark test selection X0,1' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X0,1' .";
+	AEntry19= Entry0x0012 == 2 , (Entry0x0027 == 0)|(Entry0x0027 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X2,3', the setting of 'Input dark test selection X2,3' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X2,3' .";
+	AEntry20= Entry0x0012 == 3 , (Entry0x0027 == 0)|(Entry0x0027 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X2,3', the setting of 'Input dark test selection X2,3' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X2,3' .";
+	AEntry21= Entry0x0013 == 2 , (Entry0x0028 == 0)|(Entry0x0028 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X4,5', the setting of 'Input dark test selection X4,5' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X4,5' .";
+	AEntry22= Entry0x0013 == 3 , (Entry0x0028 == 0)|(Entry0x0028 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X4,5', the setting of 'Input dark test selection X4,5' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X4,5' .";
+	AEntry23= Entry0x0014 == 2 , (Entry0x0029 == 0)|(Entry0x0029 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X6,7', the setting of 'Input dark test selection X6,7' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X6,7' .";
+	AEntry24= Entry0x0014 == 3 , (Entry0x0029 == 0)|(Entry0x0029 == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X6,7', the setting of 'Input dark test selection X6,7' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X6,7' .";
+	AEntry25= Entry0x0015 == 2 , (Entry0x002A == 0)|(Entry0x002A == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X8,9', the setting of 'Input dark test selection X8,9' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X8,9' .";
+	AEntry26= Entry0x0015 == 3 , (Entry0x002A == 0)|(Entry0x002A == 2~4) , "When 'Double input' is selected in 'Double input/single input selection X8,9', the setting of 'Input dark test selection X8,9' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection X8,9' .";
+	AEntry27= Entry0x0016 == 2 , (Entry0x002B == 0)|(Entry0x002B == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XA,B', the setting of 'Input dark test selection XA,B' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XA,B' .";
+	AEntry28= Entry0x0016 == 3 , (Entry0x002B == 0)|(Entry0x002B == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XA,B', the setting of 'Input dark test selection XA,B' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XA,B' .";
+	AEntry29= Entry0x0017 == 2 , (Entry0x002C == 0)|(Entry0x002C == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XC,D', the setting of 'Input dark test selection XC,D' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XC,D' .";
+	AEntry30= Entry0x0017 == 3 , (Entry0x002C == 0)|(Entry0x002C == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XC,D', the setting of 'Input dark test selection XC,D' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XC,D' .";
+	AEntry31= Entry0x0018 == 2 , (Entry0x002D == 0)|(Entry0x002D == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XE,F', the setting of 'Input dark test selection XE,F' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XE,F' .";
+	AEntry32= Entry0x0018 == 3 , (Entry0x002D == 0)|(Entry0x002D == 2~4) , "When 'Double input' is selected in 'Double input/single input selection XE,F', the setting of 'Input dark test selection XE,F' is not correct.\n Please select either of 'Execute'/'Not execute' in setting of Input dark test selection XE,F' .";
+
+	AEntry33= (Entry0x0001==0) & (Entry0x0011==0) & (Entry0x0026 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X0,1'.";
+	AEntry34= (Entry0x0002==0) & (Entry0x0012==0) & (Entry0x0027 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X2,3'.";
+	AEntry35= (Entry0x0003==0) & (Entry0x0013==0) & (Entry0x0028 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X4,5'.";
+	AEntry36= (Entry0x0004==0) & (Entry0x0014==0) & (Entry0x0029 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X6,7'.";
+	AEntry37= (Entry0x0005==0) & (Entry0x0015==0) & (Entry0x002A != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X8,9'.";
+	AEntry38= (Entry0x0006==0) & (Entry0x0016==0) & (Entry0x002B != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XA,B'.";
+	AEntry39= (Entry0x0007==0) & (Entry0x0017==0) & (Entry0x002C != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XC,D'.";
+	AEntry40= (Entry0x0008==0) & (Entry0x0018==0) & (Entry0x002D != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XE,F'.";
+
+	AEntry41= (Entry0x0001==0) & (Entry0x0011==2) & (Entry0x0026 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X0,1'.";
+	AEntry42= (Entry0x0002==0) & (Entry0x0012==2) & (Entry0x0027 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X2,3'.";
+	AEntry43= (Entry0x0003==0) & (Entry0x0013==2) & (Entry0x0028 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X4,5'.";
+	AEntry44= (Entry0x0004==0) & (Entry0x0014==2) & (Entry0x0029 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X6,7'.";
+	AEntry45= (Entry0x0005==0) & (Entry0x0015==2) & (Entry0x002A != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X8,9'.";
+	AEntry46= (Entry0x0006==0) & (Entry0x0016==2) & (Entry0x002B != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XA,B'.";
+	AEntry47= (Entry0x0007==0) & (Entry0x0017==2) & (Entry0x002C != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XC,D'.";
+	AEntry48= (Entry0x0008==0) & (Entry0x0018==2) & (Entry0x002D != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XE,F'.";
+
+	AEntry49= (Entry0x0001==0) & (Entry0x0011==3) & (Entry0x0026 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X0,1'.";
+	AEntry50= (Entry0x0002==0) & (Entry0x0012==3) & (Entry0x0027 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X2,3'.";
+	AEntry51= (Entry0x0003==0) & (Entry0x0013==3) & (Entry0x0028 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X4,5'.";
+	AEntry52= (Entry0x0004==0) & (Entry0x0014==3) & (Entry0x0029 != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X6,7'.";
+	AEntry53= (Entry0x0005==0) & (Entry0x0015==3) & (Entry0x002A != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter X8,9'.";
+	AEntry54= (Entry0x0006==0) & (Entry0x0016==3) & (Entry0x002B != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XA,B'.";
+	AEntry55= (Entry0x0007==0) & (Entry0x0017==3) & (Entry0x002C != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XC,D'.";
+	AEntry56= (Entry0x0008==0) & (Entry0x0018==3) & (Entry0x002D != 0), Entry0x0019==0, "'Input dark test pulse OFF time' is greater than 'Time of noise removal filter XE,F'.";
+
+#
+[V10_End]

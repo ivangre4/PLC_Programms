@@ -1,0 +1,24 @@
+FUNCTION_BLOCK F+GMON (*SF_GuardMonitoring_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_GuardSwitch1:BOOL:;(*Guard switch 1 input*)
+  S_GuardSwitch2:BOOL:;(*Guard switch 2 input*)
+  DiscrepancyTime:DINT:;(*Synchronous time between switch 1 and switch 2 in 10ms steps*)
+  S_StartReset:BOOL:;(*Manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*Manual reset*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_GuardMon:BOOL:;(*Indicating the status of the guard*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredTime:DINT:;(*Time value for timer*)
+  State:INT:;(*State register*)
+ END_VAR
+END_FUNCTION_BLOCK

@@ -1,0 +1,26 @@
+FUNCTION_BLOCK S+GLOCK (*SF_GuardLocking_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_GuardMon:BOOL:;(*monitors the guard interlocking*)
+  S_SafetyActive:BOOL:;(*status of the hazardous area*)
+  S_GuardLock:BOOL:;(*status of the mechanical guard locking.*)
+  UnlockRequest:BOOL:;(*request to unlock the guard.*)
+  S_StartReset:BOOL:;(*manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_GuardLocked:BOOL:;(*Interface to hazardous area which must be stopped*)
+  S_UnlockGuard:BOOL:;(*Signal to unlock the guard*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  Q_R_TRIG_Reset:BOOL:;(*trigger on Reset*)
+  Q_R_TRIG_UnlReq:BOOL:;(*trigger on UnlockRequest*)
+  Work:INT:;(*error mask*)
+ END_VAR
+END_FUNCTION_BLOCK

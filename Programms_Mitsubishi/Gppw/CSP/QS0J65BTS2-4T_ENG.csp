@@ -1,0 +1,158 @@
+#
+
+[File_Info]
+SafetyCSPVersion	= 1.0 ;
+CreateDate			= "2011/10/25" ;
+ModificationDate	= "2011/10/25" ;
+Language			= "ENG" ;
+FileVersion			= 2 ;
+
+[Device_Info]
+VenderName			= "Mitsubishi Electric Corp." ;
+VenderCode			= 0x0000 ;
+StationType			= 1 ;
+ModuleTypeName		= "CC-Link Safety SafetyRemote I/O" ;
+ModuleType			= 0x03 ;
+ModuleName			= "QS0J65BTS2-4T" ;
+ModuleCode			= 0x0003 ;
+OccupiedStationsInfo	= 1 ;
+ModuleTechnicalVersionInfo	= A, B ;
+
+[Parameter_Info]
+
+	#
+
+#
+[Param.Occupy_Com] #
+[Param.Occupy_Com.Ver_A]
+[Param.Occupy_Com.Ver_A.RAM_Param]
+#
+Number_of_Entry		= 12 ;				#
+
+#
+#
+Entry0x001A = "Method of wiring of output Y0"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001B = "Method of wiring of output Y1"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001C = "Method of wiring of output Y2"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001D = "Method of wiring of output Y3"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+#
+Entry0x001E = "Output dark test selection Y0"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x001F = "Output dark test selection Y1"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x0020 = "Output dark test selection Y2"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x0021 = "Output dark test selection Y3"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+#
+Entry0x0022 = "Output dark test pulse OFF time Y0"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0023 = "Output dark test pulse OFF time Y1"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0024 = "Output dark test pulse OFF time Y2"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0025 = "Output dark test pulse OFF time Y3"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+
+[Param.Occupy_Com.Ver_A.RAM_Combo]
+#
+ParamNumber = 0x001A ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001B ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001C ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001D ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+#
+ParamNumber = 0x001E ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x001F ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0020 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0021 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+#
+ParamNumber = 0x0022 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0023 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0024 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0025 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+
+[Param.Occupy_Com.Ver_A.Association] #
+#
+Number_of_Entry = 8 ;
+
+	AEntry9= Entry0x001A == 2, Entry0x001A == Entry0x001B , "'Method of wiring of output Y0' is not the same as 'Method of wiring of output Y1'.";
+	AEntry10= Entry0x001B == 2, Entry0x001A == Entry0x001B , "'Method of wiring of output Y0' is not the same as 'Method of wiring of output Y1'.";
+	AEntry11= Entry0x001C == 2, Entry0x001C == Entry0x001D , "'Method of wiring of output Y2' is not the same as 'Method of wiring of output Y3'.";
+	AEntry12= Entry0x001D == 2, Entry0x001C == Entry0x001D , "'Method of wiring of output Y2' is not the same as 'Method of wiring of output Y3'.";
+
+	AEntry13= Entry0x001A == 2, Entry0x001E == Entry0x001F , "The setting is not corresponding 'Output dark test selection Y0' and 'Output dark test selection Y1'.";
+	AEntry14= Entry0x001B == 2, Entry0x001E == Entry0x001F , "The setting is not corresponding 'Output dark test selection Y0' and 'Output dark test selection Y1'.";
+	AEntry15= Entry0x001C == 2, Entry0x0020 == Entry0x0021 , "The setting is not corresponding 'Output dark test selection Y2' and 'Output dark test selection Y3'.";
+	AEntry16= Entry0x001D == 2, Entry0x0020 == Entry0x0021 , "The setting is not corresponding 'Output dark test selection Y2' and 'Output dark test selection Y3'.";
+
+[Param.Occupy_Com.Ver_B]
+[Param.Occupy_Com.Ver_B.RAM_Param]
+#
+Number_of_Entry		= 12 ;				#
+
+#
+#
+Entry0x001A = "Method of wiring of output Y0"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001B = "Method of wiring of output Y1"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001C = "Method of wiring of output Y2"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+Entry0x001D = "Method of wiring of output Y3"                   , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'No Use'  set method of wiring of output" ;
+#
+Entry0x001E = "Output dark test selection Y0"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x001F = "Output dark test selection Y1"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x0020 = "Output dark test selection Y2"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+Entry0x0021 = "Output dark test selection Y3"       , 100 ,     0 ,      0~1 , ""     , "Out of Range [0-1]" , "Default:'Execute'  set Output dark test execution" ;
+#
+Entry0x0022 = "Output dark test pulse OFF time Y0"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0023 = "Output dark test pulse OFF time Y1"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0024 = "Output dark test pulse OFF time Y2"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+Entry0x0025 = "Output dark test pulse OFF time Y3"  , 100 ,     0 ,      0~2 , ""     , "Out of Range [0-2]" , "Default:'400 micro sec'  set OFF Pulse width used in output darkness test" ;
+
+[Param.Occupy_Com.Ver_B.RAM_Combo]
+#
+ParamNumber = 0x001A ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001B ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001C ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+ParamNumber = 0x001D ;
+	CEntry		= 3, 0:"No Use" , 1:"Double wiring(Source+Sink)" , 2:"Double wiring(Source+Source)" ;
+#
+ParamNumber = 0x001E ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x001F ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0020 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+ParamNumber = 0x0021 ;
+	CEntry		= 2, 0:"Execute" , 1:"Not execute" ;
+#
+ParamNumber = 0x0022 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0023 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0024 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+ParamNumber = 0x0025 ;
+	CEntry		= 3, 0:"400 micro sec" , 1:"1ms" , 2:"2ms" ;
+
+[Param.Occupy_Com.Ver_B.Association] #
+#
+Number_of_Entry = 8 ;
+
+	AEntry9= Entry0x001A == 2, Entry0x001A == Entry0x001B , "'Method of wiring of output Y0' is not the same as 'Method of wiring of output Y1'.";
+	AEntry10= Entry0x001B == 2, Entry0x001A == Entry0x001B , "'Method of wiring of output Y0' is not the same as 'Method of wiring of output Y1'.";
+	AEntry11= Entry0x001C == 2, Entry0x001C == Entry0x001D , "'Method of wiring of output Y2' is not the same as 'Method of wiring of output Y3'.";
+	AEntry12= Entry0x001D == 2, Entry0x001C == Entry0x001D , "'Method of wiring of output Y2' is not the same as 'Method of wiring of output Y3'.";
+
+	AEntry13= Entry0x001A == 2, Entry0x001E == Entry0x001F , "The setting is not corresponding 'Output dark test selection Y0' and 'Output dark test selection Y1'.";
+	AEntry14= Entry0x001B == 2, Entry0x001E == Entry0x001F , "The setting is not corresponding 'Output dark test selection Y0' and 'Output dark test selection Y1'.";
+	AEntry15= Entry0x001C == 2, Entry0x0020 == Entry0x0021 , "The setting is not corresponding 'Output dark test selection Y2' and 'Output dark test selection Y3'.";
+	AEntry16= Entry0x001D == 2, Entry0x0020 == Entry0x0021 , "The setting is not corresponding 'Output dark test selection Y2' and 'Output dark test selection Y3'.";
+
+#
+[V10_End]

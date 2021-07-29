@@ -1,0 +1,230 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0065,"An invalid value is set in the CH1 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0066,"An invalid value is set in the CH2 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0067,"An invalid value is set in the CH3 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0068,"An invalid value is set in the CH4 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0069,"An invalid value is set in the CH5 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006A,"An invalid value is set in the CH6 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006B,"An invalid value is set in the CH7 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006C,"An invalid value is set in the CH8 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006F,"Hardware error of the module.","Turn the power OFF and ON again. If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+0070,"The setting of the intelligent function module switch 5 is other than 0.","Set a correct parameter value in the parameter setting of MELSOFT application."
+0078,"An invalid value is set in the offset/gain setting. The number of the error channel is not identified","Perform the offset/gain setting again for all of the channels that use the user range settings.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+0079,"An invalid value is set in the CH1 offset/gain setting.","Perform the offset/gain setting again for CH1.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007A,"An invalid value is set in the CH2 offset/gain setting.","Perform the offset/gain setting again for CH2.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007B,"An invalid value is set in the CH3 offset/gain setting.","Perform the offset/gain setting again for CH3.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007C,"An invalid value is set in the CH4 offset/gain setting.","Perform the offset/gain setting again for CH4.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007D,"An invalid value is set in the CH5 offset/gain setting.","Perform the offset/gain setting again for CH5.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007E,"An invalid value is set in the CH6 offset/gain setting.","Perform the offset/gain setting again for CH6.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007F,"An invalid value is set in the CH7 offset/gain setting.","Perform the offset/gain setting again for CH7.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+0080,"An invalid value is set in the CH8 offset/gain setting.","Perform the offset/gain setting again for CH8.
+If the error occurs again, the module may be malfunctioning. Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+00A1,"The G(P).OGSTOR instruction was executed in the offset/gain setting mode.","Do not execute the G(P).OGSTOR instruction in the offset/gain setting mode."
+00A2,"* The G(P).OGSTOR instruction was executed consecutively.
+* At the time of offset/gain setting, a set value was written to the E2PROM 26 or more times.","* Execute the G(P).OGSTOR instruction only once for one module.
+* At the time of offset/gain setting, write a set value only once at one time."
+00A3,"The G(P).OGSTOR instruction was executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed.","Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model."
+00C9,"The CH1 averaging time set in Un\G1 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CA,"The CH2 averaging time set in Un\G2 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CB,"The CH3 averaging time set in Un\G3 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CC,"The CH4 averaging time set in Un\G4 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CD,"The CH5 averaging time set in Un\G5 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CE,"The CH6 averaging time set in Un\G6 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00CF,"The CH7 averaging time set in Un\G7 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+00D0,"The CH8 averaging time set in Un\G8 is outside the range of 40 to 5000ms.","Re-set the averaging time setting to within 40 to 5000ms.
+Also, the set value must be '4 x 10 x No. of channels used' or greater."
+012D,"The CH1 averaging count set in Un\G1 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+012E,"The CH2 averaging count set in Un\G2 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+012F,"The CH3 averaging count set in Un\G3 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0130,"The CH4 averaging count set in Un\G4 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0131,"The CH5 averaging count set in Un\G5 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0132,"The CH6 averaging count set in Un\G6 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0133,"The CH7 averaging count set in Un\G7 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0134,"The CH8 averaging count set in Un\G8 is outside the range of 4 to 500 times.","Re-set the averaging count setting to within 4 to 500 times."
+0137,"The CH1 moving average count set in Un\G1 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+0138,"The CH2 moving average count set in Un\G2 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+0139,"The CH3 moving average count set in Un\G3 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+013A,"The CH4 moving average count set in Un\G4 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+013B,"The CH5 moving average count set in Un\G5 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+013C,"The CH6 moving average count set in Un\G6 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+013D,"The CH7 moving average count set in Un\G7 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+013E,"The CH8 moving average count set in Un\G8 is outside the range of 2 to 60 times.","Re-set the moving average count setting to within 2 to 60 times."
+0141,"The time constant for the CH1 primary delay filter set in Un\G1 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0142,"The time constant for the CH2 primary delay filter set in Un\G2 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0143,"The time constant for the CH3 primary delay filter set in Un\G3 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0144,"The time constant for the CH4 primary delay filter set in Un\G4 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0145,"The time constant for the CH5 primary delay filter set in Un\G5 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0146,"The time constant for the CH6 primary delay filter set in Un\G6 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0147,"The time constant for the CH7 primary delay filter set in Un\G7 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0148,"The time constant for the CH8 primary delay filter set in Un\G8 is outside the range of 10 to 5000.","Re-set the time constant setting to within 10 to 5000.
+Also, the set value must be '10 x No. of channels used' or greater"
+0155,"In the CH1 rate alarm upper/lower limit value (Un\G126 and Un\G127) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH1 rate alarm upper/lower limit value (Un\G126 and Un\G127) so that the lower limit value is smaller than the upper limit value."
+0156,"In the CH2 rate alarm upper/lower limit value (Un\G128 and Un\G129) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH2 rate alarm upper/lower limit value (Un\G128 and Un\G129) so that the lower limit value is smaller than the upper limit value."
+0157,"In the CH3 rate alarm upper/lower limit value (Un\G130 and Un\G131) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH3 rate alarm upper/lower limit value (Un\G130 and Un\G131) so that the lower limit value is smaller than the upper limit value."
+0158,"In the CH4 rate alarm upper/lower limit value (Un\G132 and Un\G133) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH4 rate alarm upper/lower limit value (Un\G132 and Un\G133) so that the lower limit value is smaller than the upper limit value."
+0159,"In the CH5 rate alarm upper/lower limit value (Un\G134 and Un\G135) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH5 rate alarm upper/lower limit value (Un\G134 and Un\G135) so that the lower limit value is smaller than the upper limit value."
+015A,"In the CH6 rate alarm upper/lower limit value (Un\G136 and Un\G137) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH6 rate alarm upper/lower limit value (Un\G136 and Un\G137) so that the lower limit value is smaller than the upper limit value."
+015B,"In the CH7 rate alarm upper/lower limit value (Un\G138 and Un\G139) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH7 rate alarm upper/lower limit value (Un\G138 and Un\G139) so that the lower limit value is smaller than the upper limit value."
+015C,"In the CH8 rate alarm upper/lower limit value (Un\G140 and Un\G141) setting, the lower limit is equal to or greater than the upper limit.","Re-set the CH8 rate alarm upper/lower limit value (Un\G140 and Un\G141) so that the lower limit value is smaller than the upper limit value."
+0191,"The CH1 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0192,"The CH2 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0193,"The CH3 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0194,"The CH4 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0195,"The CH5 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0196,"The CH6 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0197,"The CH7 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0198,"The CH8 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+01F4,"The offset/gain channels were set at the same time during offset and gain value settings, or both were set to 0.","Reset the contents of buffer memory addresses 22 and 23 (Un\G22 and Un\G23)."
+026D,"The CH1 process alarm upper/lower limit value (Un\G86 to Un\G89) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G86 to Un\G89)."
+026E,"The CH2 process alarm upper/lower limit value (Un\G90 to Un\G93) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G90 to Un\G93)."
+026F,"The CH3 process alarm upper/lower limit value (Un\G94 to Un\G97) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+0270,"The CH4 process alarm upper/lower limit value (Un\G98 to Un\G101) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+0271,"The CH5 process alarm upper/lower limit value (Un\G102 to Un\G105) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+0272,"The CH6 process alarm upper/lower limit value (Un\G106 to Un\G109) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+0273,"The CH7 process alarm upper/lower limit value (Un\G110 to Un\G113) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+0274,"The CH8 process alarm upper/lower limit value (Un\G114 to Un\G117) are set contradictorily.
+(Lower lower limit value > lower upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+0277,"The CH1 process alarm upper/lower limit value (Un\G86 to Un\G89) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G86 to Un\G89)."
+0278,"The CH2 process alarm upper/lower limit value (Un\G90 to Un\G93) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G90 to Un\G93)."
+0279,"The CH3 process alarm upper/lower limit value (Un\G94 to Un\G97) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+027A,"The CH4 process alarm upper/lower limit value (Un\G98 to Un\G101) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+027B,"The CH5 process alarm upper/lower limit value (Un\G102 to Un\G105) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+027C,"The CH6 process alarm upper/lower limit value (Un\G106 to Un\G109) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+027D,"The CH7 process alarm upper/lower limit value (Un\G110 to Un\G113) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+027E,"The CH8 process alarm upper/lower limit value (Un\G114 to Un\G117) are set contradictorily.
+(Lower upper limit value > upper lower limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+0281,"The CH1 process alarm upper/lower limit value (Un\G86 to Un\G89) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G86 to Un\G89)."
+0282,"The CH2 process alarm upper/lower limit value (Un\G90 to Un\G93) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G90 to Un\G93)."
+0283,"The CH3 process alarm upper/lower limit value (Un\G94 to Un\G97) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+0284,"The CH4 process alarm upper/lower limit value (Un\G98 to Un\G101) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+0285,"The CH5 process alarm upper/lower limit value (Un\G102 to Un\G105) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+0286,"The CH6 process alarm upper/lower limit value (Un\G106 to Un\G109) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+0287,"The CH7 process alarm upper/lower limit value (Un\G110 to Un\G113) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+0288,"The CH8 process alarm upper/lower limit value (Un\G114 to Un\G117) are set contradictorily.
+(Upper lower limit value > upper upper limit value)","Re-set the contents of the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+02BD,"The CH1 rate alarm warning detection period (Un\G118) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G118) to within 10 to 5000ms."
+02BE,"The CH2 rate alarm warning detection period (Un\G119) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G119) to within 10 to 5000ms."
+02BF,"The CH3 rate alarm warning detection period (Un\G120) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G120) to within 10 to 5000ms."
+02C0,"The CH4 rate alarm warning detection period (Un\G121) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G121) to within 10 to 5000ms."
+02C1,"The CH5 rate alarm warning detection period (Un\G122) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G122) to within 10 to 5000ms."
+02C2,"The CH6 rate alarm warning detection period (Un\G123) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G123) to within 10 to 5000ms."
+02C3,"The CH7 rate alarm warning detection period (Un\G124) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G124) to within 10 to 5000ms."
+02C4,"The CH8 rate alarm warning detection period (Un\G125) is outside the range of 10 to 5000ms.","Re-set the rate alarm warning detection period (Un\G125) to within 10 to 5000ms."
+02C7,"The CH1 rate alarm warning detection period (Un\G118) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02C8,"The CH2 rate alarm warning detection period (Un\G119) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02C9,"The CH3 rate alarm warning detection period (Un\G120) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02CA,"The CH4 rate alarm warning detection period (Un\G121) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02CB,"The CH5 rate alarm warning detection period (Un\G122) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02CC,"The CH6 rate alarm warning detection period (Un\G123) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02CD,"The CH7 rate alarm warning detection period (Un\G124) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02CE,"The CH8 rate alarm warning detection period (Un\G125) is not:
+* A multiple of the sampling cycle or
+* A multiple of the time or count averaging conversion cycle.","Change the value of the rate alarm warning detection period as follows:
+* For sampling processing: A multiple of conversion cycle (10ms x No. of conversion-enabled channels)
+* For averaging processing: A multiple of time or count averaging conversion cycle"
+02D1,"When the CH1 time or count averaging setting in Un\G1 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D2,"When the CH2 time or count averaging setting in Un\G2 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D3,"When the CH3 time or count averaging setting in Un\G3 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D4,"When the CH4 time or count averaging setting in Un\G4 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D5,"When the CH5 time or count averaging setting in Un\G5 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D6,"When the CH6 time or count averaging setting in Un\G6 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D7,"When the CH7 time or count averaging setting in Un\G7 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+02D8,"When the CH8 time or count averaging setting in Un\G8 is changed, the rate alarm warning detection period is not a multiple of the corresponding new time or count averaging conversion period.","Re-set the time averaging or count averaging setting so that the corresponding rate alarm warning detection period is a multiple of the time or count averaging conversion period."
+0321,"CH1 input signal error detection setting value (Un\G142) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0322,"CH2 input signal error detection setting value (Un\G143) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0323,"CH3 input signal error detection setting value (Un\G144) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0324,"CH4 input signal error detection setting value (Un\G145) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0325,"CH5 input signal error detection setting value (Un\G146) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0326,"CH6 input signal error detection setting value (Un\G147) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0327,"CH7 input signal error detection setting value (Un\G148) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0328,"CH8 input signal error detection setting value (Un\G149) is outside the range of 0 to 250.","Re-set the input signal error detection setting value to within 0 to 250."
+0385,"The CH1 scaling upper/lower limit value (Un\G62 and Un\G63) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+0386,"The CH2 scaling upper/lower limit value (Un\G64 and Un\G65) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+0387,"The CH3 scaling upper/lower limit value (Un\G66 and Un\G67) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+0388,"The CH4 scaling upper/lower limit value (Un\G68 and Un\G69) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+0389,"The CH5 scaling upper/lower limit value (Un\G70 and Un\G71) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+038A,"The CH6 scaling upper/lower limit value (Un\G72 and Un\G73) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+038B,"The CH7 scaling upper/lower limit value (Un\G74 and Un\G75) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+038C,"The CH8 scaling upper/lower limit value (Un\G76 and Un\G77) is set outside the range of -32000 to 32000.","Correct the scaling upper/lower limit value within the range of -32000 to 32000."
+038F,"In the CH1 scaling upper/lower limit value setting (Un\G62 and Un\G63), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0390,"In the CH2 scaling upper/lower limit value setting (Un\G64 and Un\G65), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0391,"In the CH3 scaling upper/lower limit value setting (Un\G66 and Un\G67), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0392,"In the CH4 scaling upper/lower limit value setting (Un\G68 and Un\G69), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0393,"In the CH5 scaling upper/lower limit value setting (Un\G70 and Un\G71), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0394,"In the CH6 scaling upper/lower limit value setting (Un\G72 and Un\G73), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0395,"In the CH7 scaling upper/lower limit value setting (Un\G74 and Un\G75), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+0396,"In the CH8 scaling upper/lower limit value setting (Un\G76 and Un\G77), the lower limit is equal to or greater than the upper limit.","Set them again so that the scaling upper limit value is greater than the scaling lower limit value."
+</ERRCODE>,,

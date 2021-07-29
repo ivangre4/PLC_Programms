@@ -1,0 +1,3883 @@
+*GW01
+ ┏━━━━━━━━┓
+ ┃Multiple CPU Set┃
+ ┗━━━━━━━━┛
+0
+e
+*GW02
+ ┌─┬────────────────────┐┌─┬────────────────────────┐
+ │ 1│Timer limit setting                     ││ 9│System interruption                             │
+ │  │┌───────────┬───────┤│  │┌───────────────┬───────┤
+ │  ││Slow                  │              ││  ││Int count setting No          │              │
+ │  │├───────────┼───────┤│  │├───────────────┼───────┤
+ │  ││Fast                  │              ││  ││I28 intval                    │              │
+ ├─┼┴───────────┴───────┤│  │├───────────────┼───────┤
+ │ 2│RUN-PAUSE connect                       ││  ││I29 intval                    │              │
+ │  │┌───────────┬───────┤│  │├───────────────┼───────┤
+ │  ││RUN                   │              ││  ││I30 intval                    │              │
+ │  │├───────────┼───────┤│  │├───────────────┼───────┤
+ │  ││PAUSE                 │              ││  ││I31 intval                    │              │
+ ├─┼┴───────────┼───────┤├─┼┴───────────────┼───────┤
+ │ 3│Latch data backup valid │              ││10│Interrupt Program Setting       │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 4│Remote reset            │              ││11│Mdl. Synchronization            │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 5│STOP->RUN Output mode   │              ││12│Compatibility with A PLC        │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 6│Floating Pt.Arithmatic  │              ││13│Intelligent Functional Module   │Not Used      │
+ ├─┼────────────┼───────┤├─┼────────────────┴───────┤
+ │ 7│Common pointer No.      │              ││14│Service processing setting                      │
+ ├─┼────────────┼───────┤│  │┌───────────────┬───────┤
+ │ 8│No.of empty slots       │              ││  ││                              │              │
+ └─┴────────────┴───────┘├─┼┴───────────────┼───────┤
+                                                 │15│PLC module change setting       │              │
+                                                 └─┴────────────────┴───────┘
+0
+e
+*GW03
+ ┌─┬────────────────────┐┌─┬────────────────────────┐
+ │ 1│Timer limit setting                     ││ 9│System interruption                             │
+ │  │┌───────────┬───────┤│  │┌───────────────┬───────┤
+ │  ││Slow                  │              ││  ││Int count setting No          │              │
+ │  │├───────────┼───────┤│  │├───────────────┼───────┤
+ │  ││Fast                  │              ││  ││I28 intval                    │              │
+ ├─┼┴───────────┴───────┤│  │├───────────────┼───────┤
+ │ 2│RUN-PAUSE connect                       ││  ││I29 intval                    │              │
+ │  │┌───────────┬───────┤│  │├───────────────┼───────┤
+ │  ││RUN                   │              ││  ││I30 intval                    │              │
+ │  │├───────────┼───────┤│  │├───────────────┼───────┤
+ │  ││PAUSE                 │              ││  ││I31 intval                    │              │
+ ├─┼┴───────────┼───────┤├─┼┴───────────────┼───────┤
+ │ 3│Latch data backup valid │              ││10│Interrupt Program Setting       │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 4│Remote reset            │              ││11│Mdl. Synchronization            │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 5│STOP->RUN Output mode   │              ││12│Compatibility with A PLC        │              │
+ ├─┼────────────┼───────┤├─┼────────────────┼───────┤
+ │ 6│Floating Pt.Arithmatic  │              ││13│Intelligent Functional Module   │Used          │
+ ├─┼────────────┼───────┤├─┼────────────────┴───────┤
+ │ 7│Common pointer No.      │              ││14│Service processing setting                      │
+ ├─┼────────────┼───────┤│  │┌───────────────┬───────┤
+ │ 8│No.of empty slots       │              ││  ││                              │              │
+ └─┴────────────┴───────┘├─┼┴───────────────┼───────┤
+                                                 │15│PLC module change setting       │              │
+                                                 └─┴────────────────┴───────┘
+0
+e
+*GW04
+ ┌─┬─────────────────────┐                                                      
+ │16│Intelligent Functional Module             │                                                      
+ │  │┌─────────┬──────────┤                                                      
+ │  ││PLC side          │Intelli mdl. side   │                                                      
+ │  │├────┬────┼─────┬────┤                                                      
+ │  ││Interru.│No.of   │Starting  │Starting│                                                      
+ │  ││Pointer │Interru.│I/O No.   │SI No.  │                                                      
+ │  ││Start.No│Pointers│          │        │                                                      
+ │  │├────┼────┼─────┼────┤                                                      
+0
+e
+*GW05
+ │  ││        │        │          │        │                                                      
+0
+e
+*GW06
+ │  │├────┼────┼─────┼────┤                                                      
+0
+e
+*GW07
+ └─┴┴────┴────┴─────┴────┘                                                      
+0
+e
+*GW08
+ ┌─┬───────────────┬─────────────────┐                          
+ │ 1│File register                 │                                  │                          
+ │  │┌──────────────┼─────────────────┤                          
+ │  ││Drive                       │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││File name                   │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││Capacity                    │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││Latch data backup operation │                                  │                          
+ ├─┼┴──────────────┼─────────────────┤                          
+ │ 2│Comment file used by ins      │                                  │                          
+ │  │┌──────────────┼─────────────────┤                          
+ │  ││Drive                       │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││File name                   │                                  │                          
+ ├─┼┴──────────────┼─────────────────┤                          
+ │ 3│Device initial value          │                                  │                          
+ │  │┌──────────────┼─────────────────┤                          
+ │  ││Drive                       │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││File name                   │                                  │                          
+ ├─┼┴──────────────┼─────────────────┤                          
+ │ 4│File for local devices        │                                  │                          
+ │  │┌──────────────┼─────────────────┤                          
+ │  ││Drive                       │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││File name                   │                                  │                          
+ ├─┼┴──────────────┼─────────────────┤                          
+ │ 5│File used for SP.DEVST/S.DEVLD│                                  │                          
+ │  │┌──────────────┼─────────────────┤                          
+ │  ││Drive                       │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││File name                   │                                  │                          
+ │  │├──────────────┼─────────────────┤                          
+ │  ││Capacity                    │                                  │                          
+ └─┴┴──────────────┴─────────────────┘                          
+0
+e
+*GW09
+ ┌─┬─────────────────────┐┌─┬────────────────────────┐
+ │ 1│WDT setting                               ││ 3│Error check                                     │
+ │  │┌──────────────┬─────┤│  │┌─────────┬─────────────┤
+ │  ││WDT setting                 │          ││  ││Battery check     │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Init execution WDT          │          ││  ││Fuse blown check  │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Slow execution WDT          │          ││  ││I/O mdl. compare  │                          │
+ ├─┼┴──────────────┴─────┤├─┼┴─────────┼─────────────┤
+ │ 2│Operation mode at error                   ││ 4│Constant scan       │                          │
+ │  │┌──────────────┬─────┤├─┼──────────┴─────────────┤
+ │  ││Calculation error           │          ││ 5│Slow program execution time                     │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Ext ins error               │          ││  ││Execution time    │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┼─────────────┤
+ │  ││Fuse blown                  │          ││ 6│Fault record        │                          │
+ │  │├──────────────┼─────┤│  │┌─────────┼─────────────┤
+ │  ││I/O mdl. comp err           │          ││  ││Drive             │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Intelligent module exec err │          ││  ││File name         │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Mem crd access err          │          ││  ││No.of records     │                          │
+ │  │├──────────────┼─────┤└─┴┴─────────┴─────────────┘
+ │  ││Mem crd ope err             │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││External power supply OFF   │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││CPU内蔵機能異常             │          │                                                        
+ └─┴┴──────────────┴─────┘                                                        
+0
+e
+*GW10
+ ┌──┬──────┬────┬────┬───────────────────────┬───────────────────────┐
+ │    │            │        │        │                I/O refresh                   │                File Usability                │
+ │    │            │        │        ├───────────┬───────────┼─────┬─────┬─────┬─────┤
+ │    │            │        │        │          X           │          Y           │          │  Device  │          │  Local   │
+ │    │            │        │Fix Scan├───┬───┬───┼───┬───┬───┤  File R  │  Initial │ Comment  │  Device  │
+ │No. │Program name│Execute │interval│Points│Start │End   │Points│Start │End   │          │  Value   │          │          │
+ ├──┼──────┼────┼────┼───┼───┼───┼───┼───┼───┼─────┼─────┼─────┼─────┤
+0
+e
+*GW11
+ │    │            │        │  ----  │      │      │      │      │      │      │          │          │          │          │
+0
+e
+*GW12
+ ├──┼──────┼────┼────┼───┼───┼───┼───┼───┼───┼─────┼─────┼─────┼─────┤
+0
+e
+*GW13
+ └──┴──────┴────┴────┴───┴───┴───┴───┴───┴───┴─────┴─────┴─────┴─────┘
+0
+e
+*GW14
+ ┏━━━━━━━┓
+ ┃program set   ┃
+ ┗━━━━━━━┛
+0
+e
+*GW15
+ ┏━━━━━┓
+ ┃Boot set  ┃
+ ┗━━━━━┛
+0
+e
+*GW16
+ ┌──────────┬─────────────────────────────────┐
+ │Boot option setting │Clear program memory                                              │
+ │                    │System area assured steps                               K steps   │
+ │                    │System domain for writing at RUN                                  │
+ │                    ├─────────────────────────────────┤
+ │                    │                                                                  │
+ ├──┬──────┬┴───────────┬──────────┬──────────┤
+ │No. │ File name  │          Type          │Source Drive        │Target Drive        │
+ ├──┼──────┼────────────┼──────────┼──────────┤
+0
+e
+*GW17
+ │    │            │                        │                    │                    │
+0
+e
+*GW18
+ ├──┼──────┼────────────┼──────────┼──────────┤
+0
+e
+*GW19
+ └──┴──────┴────────────┴──────────┴──────────┘
+0
+e
+*GW20
+ ┌──┬──────┬────────────┬──────────┬──────────┐
+ │No. │ File name  │          Type          │Source Drive        │Target Drive        │
+ ├──┼──────┼────────────┼──────────┼──────────┤
+0
+e
+*GW21
+ ┌──────────┬─────────────────────────────────┐
+ │Boot option setting │No clear program memory                                           │
+ │                    ├─────────────────────────────────┤
+ │                    │                                                                  │
+ ├──┬──────┬┴───────────┬──────────┬──────────┤
+ │No. │ File name  │          Type          │Source Drive        │Target Drive        │
+ ├──┼──────┼────────────┼──────────┼──────────┤
+0
+e
+*GW22
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │        │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │     Primary Basis    │              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  ┌────────┐├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │  │                ││              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  └────────┘│              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌────┤              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Output  │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Operat. │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │I/O Resp Time │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             2│        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             3│        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             4│        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             5│        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Control PLC   │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │
+ │            │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Control PLC   │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │
+ │            │ └────────┘                                                                                                                                         │
+ │            │                                                                                                                                                              │
+ └──────┴───────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW23
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │        │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │     Primary Basis    │              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  ┌────────┐├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │  │                ││              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  └────────┘│              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌────┤              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │XYNo          │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Output  │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Operat. │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │I/O Resp Time │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Switch set   1│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             2│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             3│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             4│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             5│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │
+ │            │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │
+ │            │ └────────┘                                                                                                                                         │
+ │            │                                                                                                                                                              │
+ └──────┴───────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW24
+ ┌──────┬───────────────────────────────────────────────────────────────────────────────
+ │            │                                  ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Control PLC   │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  
+0
+e
+*GW25
+ ┌──────┬───────────────────────────────────────────────────────────────────────────────
+ │            │                                  ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  
+0
+e
+*GW26
+ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐                                            ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │        │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │                                            │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤                            ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │        │  ┌────────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │     Primary Basis    │              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │      Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  ┌────────┐├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │  │                ││              │        │        │        │        │        │        │        │        │        │        │        │        │        │  ││                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  └────────┘│              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │└────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌────┤              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │    ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Output  │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Operat. │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │I/O Resp Time │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             2│        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             3│        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             4│        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             5│        │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Control PLC   │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Control PLC   │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │    │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │    │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │    │ │                │                                                                                                                                         │
+ │            │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │    │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │    │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │    └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │      Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  ││                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │└────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │    ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Control PLC   │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Control PLC   │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │    │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │    │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │    │ │                │                                                                                                                                         │
+ │            │ └────────┘                                                                                                                                         │    │ └────────┘                                                                                                                                         │
+ │            └───────────────────────────────────────────────────────────────────────────────┘    │                                                                                                                                                              │
+ └─────────────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW27
+ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐                                            ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │        │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │                                            │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤                            ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │        │  ┌────────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │     Primary Basis    │              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │      Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  ┌────────┐├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │  │                ││              │        │        │        │        │        │        │        │        │        │        │        │        │        │  ││                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │  └────────┘│              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │└────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌────┤              │        │        │        │        │        │        │        │        │        │        │        │        │        │  │    ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │XYNo          │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Output  │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Error Operat. │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │I/O Resp Time │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │        │Switch set   1│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             2│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             3│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             4│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        │             5│  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │        └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │    │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │    │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │    │ │                │                                                                                                                                         │
+ │            │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │    │ └────────┘             ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │            │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │    │                                  │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │   11   │  │
+ │            │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │    └─────────┤     Pwr      │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │              Add-Base          │              │        │        │        │        │        │        │        │        │        │        │        │        │  │     Add-Base           │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        ┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │┌────────┐    ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │        │                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  ││                │    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │        └────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │└────────┘    │              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │    ┌─────────┤              │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │XYNo          │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Output  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Error Operat. │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │I/O Resp Time │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │    │                  ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │            │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │Switch set   1│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             2│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             3│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             4│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │    │                  │             5│        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │            │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │    │                  └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ │            │ ┌────────┐                                                                                                                                         │    │ ┌────────┐                                                                                                                                         │
+ │            │ │                │                                                                                                                                         │    │ │                │                                                                                                                                         │
+ │            │ └────────┘                                                                                                                                         │    │ └────────┘                                                                                                                                         │
+ │            └───────────────────────────────────────────────────────────────────────────────┘    │                                                                                                                                                              │
+ └─────────────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW28
+ ┌─┬─────────────┬──────────────────┐          
+ │ 1│No.of PLC modules         │                                    │          
+0
+e
+*GW29
+ ┏━━━━━━━┓
+ ┃X/Y alloc     ┃
+ ┗━━━━━━━┛
+0
+e
+*GW30
+ ┌──┬────────────┬─────┬────┬───┬────────┬──────────┐
+ │X/Y │                        │          │  Mdl.  │      │                │     Duplicated     │
+ │ No.│          Type          │   Slot   │  type  │  No. │    Model name  │        error       │
+ ├──┼────────────┼─────┼────┼───┼────────┼──────────┤
+0
+e
+*GW31
+ │    │                        │          │        │      │                │                    │
+0
+e
+*GW32
+ ├──┼────────────┼─────┼────┼───┼────────┼──────────┤
+0
+e
+*GW33
+ └──┴────────────┴─────┴────┴───┴────────┴──────────┘
+0
+e
+*GW34
+ └─┴─────────────┴──────────────────┘          
+0
+e
+*GW35
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW36
+ │ 7│Communication area setting (refresh setting)                    │          
+ │  ├────────┬───────────┬───────────┤          
+ │  │    Setting 1   │CPU send range        │   PLC side device    │          
+ │  │                ├───────────┼─────┬─────┤          
+ │  │    PLC         │Auto refresh area     │Start Dev.│          │          
+ │  │                ├───┬───┬───┼─────┼─────┤          
+ │  │                │Points│Start │End   │   Start  │   End    │          
+ │  │┌───────┼───┼───┼───┼─────┼─────┤          
+0
+e
+*GW37
+ │  ││              │      │      │      │          │          │          
+0
+e
+*GW38
+ │  │├───────┼───┼───┼───┼─────┼─────┤          
+0
+e
+*GW39
+ └─┴┴───────┴───┴───┴───┴─────┴─────┘          
+0
+e
+*GW40
+ │ 5│Out of group input set    │                                    │          
+ │  ├─────────────┼──────────────────┤          
+ │  │Out of group output set   │                                    │          
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW41
+ │ 6│PLC Synchronous start up  │                                    │          
+0
+e
+*GW42
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW43
+ │  │┌────────────┼──────────────────┤          
+0
+e
+*GW44
+ │  ││                        │                                    │          
+0
+e
+*GW45
+ │  │├────────────┼──────────────────┤          
+0
+e
+*GW46
+ │ 3│Operational mode          │Error ope. mode at the stop of PLC  │          
+0
+e
+*GW47
+ ├─┼┴────────────┼──────────────────┤          
+0
+e
+*GW48
+ │ 3│Synchronous/Asynchronous  │Asynchronous                        │          
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW49
+ ┏━━━━━━━━━━┓
+ ┃Operational settings┃
+ ┗━━━━━━━━━━┛
+0
+e
+*GW50
+ ┌─┬────────────────────────────────┐          
+ │1 │ Remote I/O switch setting                                      │          
+ │  │┌────────────────────┬──────────┤          
+ │  ││Cyclic transfer error output hold       │                    │          
+ │  │├────────────────────┼──────────┤          
+ │  ││Output hold specification enabled       │                    │          
+ └─┴┴────────────────────┴──────────┘          
+0
+e
+*GW51
+ ┌─┬─────────────────────────────────┐        
+ │2 │ Forwarding parameter between devices                             │        
+ │  │┌───────┬───────────┬────────────┤        
+ │  ││              │transmission source   │transmission destination│        
+ │  ││              ├───┬───┬───┼───┬───┬────┤        
+ │  ││              │Points│Start │End   │Points│Start │End     │        
+ │  │├───────┼───┼───┼───┼───┼───┼────┤        
+0
+e
+*GW52
+ │  ││              │      │      │      │      │      │        │        
+0
+e
+*GW53
+ │  │├───────┼───┼───┼───┼───┼───┼────┤        
+0
+e
+*GW54
+ └─┴┴───────┴───┴───┴───┴───┴───┴────┘        
+0
+e
+*GW55
+ ┌─┬─────────────┬───────┐          
+ │1 │No.of empty slots         │              │          
+ ├─┼─────────────┼───────┤          
+ │2 │Mdl. Synchronization      │              │          
+ └─┴─────────────┴───────┘          
+0
+e
+*GW56
+ ┌─┬─────────────────────┐          
+ │1 │Operation mode at error                   │          
+ │  │┌──────────────┬─────┤          
+ │  ││Operation error             │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││Extended instruction error  │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││Fuse blown                  │          │          
+ │  │├──────────────┼─────┤          
+ │  ││Module verification error   │          │          
+ │  │├──────────────┼─────┤          
+ │  ││Intelligent mod. Access err │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││File access error           │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││Memory card operation error │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││External power supply OFF   │--------  │          
+ ├─┼┴──────────────┴─────┤          
+ │2 │Error check                               │          
+ │  │┌──────────────┬─────┤          
+ │  ││Battery check               │--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││Fuse blown check            │          │          
+ │  │├──────────────┼─────┤          
+ │  ││Module verify               │          │          
+ │  │├──────────────┼─────┤          
+ │  ││Dev. range for Index setting│--------  │          
+ │  │├──────────────┼─────┤          
+ │  ││Redundant power system diag.│--------  │          
+ └─┴┴──────────────┴─────┘          
+0
+e
+*GW58
+ │ 7│Communication area setting (refresh setting)                    │          
+ │  ├────────┬───────────┬───────────┤          
+0
+e
+*GW59
+ │  │                │CPU send range        │   PLC side device    │          
+ │  │                ├───────────┼─────┬─────┤          
+ │  │    PLC         │Auto refresh area     │Start Dev.│          │          
+ │  │                ├───┬───┬───┼─────┼─────┤          
+ │  │                │Points│Start │End   │   Start  │   End    │          
+ │  │┌───────┼───┼───┼───┼─────┼─────┤          
+0
+e
+*GW60
+ │  ├┴───────┼───┴───┴───┼─────┴─────┤          
+0
+e
+*GW61
+ ┌────────────────────────────────────────────┐
+ │Do not boot from standard ROM.                                                          │
+ └────────────────────────────────────────────┘
+0
+e
+*GW62
+ ┏━━━━━━━━━━━━━━━━┓
+ ┃ Serial communication setting   ┃
+ ┗━━━━━━━━━━━━━━━━┛
+0
+e
+*GW63
+ ┌──────────────────────────────┐          
+ │Not used serial communication                               │          
+ └──────────────────────────────┘          
+0
+e
+*GW64
+ ┌──────────────────────────────┐          
+ │Use serial communication                                    │          
+ │  ┌─┬─────────────┬────────────┤          
+ │  │1 │Baud rate                 │                        │          
+ │  ├─┼─────────────┼────────────┤          
+ │  │2 │Sum check                 │                        │          
+ │  ├─┼─────────────┼────────────┤          
+ │  │3 │Transmission weight time  │                        │          
+ │  ├─┼─────────────┼────────────┤          
+ │  │4 │RUN write setting         │                        │          
+ └─┴─┴─────────────┴────────────┘          
+0
+e
+*GW65
+ │ 4│Online module change      │                                    │          
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW66
+ ┌─┬───────────────────────────────────────────────┐
+ │16│High speed interrupt setting                                                                  │
+ │  ├──────────────────────────┬────────────────────┤
+ │  │  High speed interrupt                              │                                        │
+ │  │  I49 fixed scan interval                           │                                        │
+ │  ├──────────────────────────┴────────────────────┤
+ │  │  High speed I/O refresh setting                                                              │
+ │  │┌─────────────────────────┬──────┬──────┬──────┤
+ │  ││  Type                                            │  Points    │   Start    │    End     │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  ├┴─────────────────────────┴──────┴──────┴──────┤
+ │  │  High speed buffer transfer setting                                                          │
+ │  │┌──────┬─────┬────┬──────┬──────┬──┬─────┬─────┤
+ │  ││            │ Start    │        │Buffer mem. │Buffer mem. │    │ PLC side │ PLC side │
+ │  ││  Type      │ I/O No.  │ Points │   Start    │    End     │    │  Start   │   End    │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ └─┴┴──────┴─────┴────┴──────┴──────┴──┴─────┴─────┘
+0
+e
+*GW67
+ ┌─┬───────────────────────────────────────────────┐
+ │16│High speed interrupt setting                                                                  │
+ │  ├──────────────────────────┬────────────────────┤
+ │  │  High speed interrupt                              │                                        │
+ │  │  I49 fixed scan interval                           │                                        │
+ │  ├──────────────────────────┴────────────────────┤
+ │  │  High speed I/O refresh setting                                                              │
+ │  │┌─────────────────────────┬──────┬──────┬──────┤
+ │  ││  Type                                            │  Points    │   Start    │    End     │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ X input                                          │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ │  │├─────────────────────────┼──────┼──────┼──────┤
+ │  ││ Y output                                         │            │            │            │
+ └─┴┴─────────────────────────┴──────┴──────┴──────┘
+0
+e
+*GW68
+ ┌─┬───────────────────────────────────────────────┐
+ │  │  High speed buffer transfer setting                                                          │
+ │  │┌──────┬─────┬────┬──────┬──────┬──┬─────┬─────┤
+ │  ││            │ Start    │        │Buffer mem. │Buffer mem. │    │ PLC side │ PLC side │
+ │  ││  Type      │ I/O No.  │ Points │   Start    │    End     │    │  Start   │   End    │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer read │          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ │  │├──────┼─────┼────┼──────┼──────┼──┼─────┼─────┤
+ │  ││Buffer Write│          │        │            │            │<-->│          │          │
+ └─┴┴──────┴─────┴────┴──────┴──────┴──┴─────┴─────┘
+0
+e
+*GW80
+ ┏━━━━━━━━┓
+ ┃内蔵機能設定    ┃
+ ┗━━━━━━━━┛
+0
+e
+*GW81
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃簡単位置決め機能設定          ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW82
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃位置決めﾃﾞｰﾀ設定              ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW83
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃高速ｶｳﾝﾀ機能設定              ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW84
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃CC-Link/LT機能設定            ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW85
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃無手順ﾌﾟﾛﾄｺﾙ機能設定          ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW86
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃FUNC.LED表示設定              ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW87
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━┓
+ ┃内蔵機能設定    ┃┃入出力端子割付設定            ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW88
+ ┌─┬────────────┬─────────┐
+ │ 1│簡単位置決め機能        │                  │
+ ├─┼────────────┼─────────┤
+ │ 2│高速ｶｳﾝﾀ機能            │                  │
+ ├─┼────────────┼─────────┤
+ │ 3│CC-Link/LT機能          │                  │
+ ├─┼────────────┼─────────┤
+ │ 4│汎用入出力機能          │                  │
+ ├─┼────────────┼─────────┤
+ │ 5│高速割込み機能          │                  │
+ ├─┼────────────┼─────────┤
+ │ 6│ﾊﾟﾙｽｷｬｯﾁ機能            │                  │
+ ├─┼────────────┼─────────┤
+ │ 7│無手順ﾌﾟﾛﾄｺﾙ通信機能    │                  │
+ └─┴────────────┴─────────┘
+0
+e
+*GW89
+ ┌─────────────────┬──────────────────┐                                              
+ │完了ﾃﾞﾊﾞｲｽ制御方式                │                                    │                                              
+ └─────────────────┴──────────────────┘                                              
+ ┌─────────────────┬──────────────────┬──────────────────┐        
+ │                                  │                1軸                 │                2軸                 │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │ﾊﾟﾙｽ出力方式                      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │ｾｯﾄｱｯﾌﾟ/ﾎｰﾙﾄﾞ時間                 │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │回転方向設定  正転ﾊﾟﾙｽ出力時      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │速度制御時の送り現在値            │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │S/Wｽﾄﾛｰｸﾘﾐｯﾄ                      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │S/Wｽﾄﾛｰｸﾘﾐｯﾄ上限値(pulse)         │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │S/Wｽﾄﾛｰｸﾘﾐｯﾄ下限値(pulse)         │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │速度制限値(pulse/s)               │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │始動時ﾊﾞｲｱｽ速度(pulse/s)          │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │偏差ｶｳﾝﾀｸﾘｱ信号出力時間(ms)       │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │近点ﾄﾞｸﾞ信号論理                  │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │零点信号論理                      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │偏差ｶｳﾝﾀｸﾘｱ信号論理               │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点復帰方向                      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点復帰方式                      │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点ｱﾄﾞﾚｽ(pulse)                  │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点復帰加減速時間(ms)            │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点復帰速度(pulse/s)             │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │ｸﾘｰﾌﾟ速度(pulse/s)                │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │近点ﾄﾞｸﾞON後の移動量(pulse)       │                                    │                                    │        
+ ├─────────────────┼──────────────────┼──────────────────┤        
+ │原点復帰ﾄﾞｩｴﾙﾀｲﾑ(ms)              │                                    │                                    │        
+ └─────────────────┴──────────────────┴──────────────────┘        
+0
+e
+*GW90
+ ┌──┬────────┬───────────┬─────────────┬──────────┬──────────┐
+ │No. │軸番号          │制御方式              │位置決めｱﾄﾞﾚｽ/移動量      │指令速度            │加減速時間          │
+ │    │                │                      │(pulse)                   │(pulse/s)           │(ms)                │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  1 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  2 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  3 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  4 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  5 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  6 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  7 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  8 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │  9 │                │                      │                          │                    │                    │
+ ├──┼────────┼───────────┼─────────────┼──────────┼──────────┤
+ │ 10 │                │                      │                          │                    │                    │
+ └──┴────────┴───────────┴─────────────┴──────────┴──────────┘
+0
+e
+*GW91
+ ┌─────────────────┬──────────────────┬──────────────────┐
+ │                                  │                CH.1                │                CH.2                │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │ﾊﾟﾙｽ入力ﾓｰﾄﾞ                      │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │計数速度                          │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │ｶｳﾝﾀ形式                          │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │ｴﾗｰ時の一致出力出力ﾓｰﾄﾞ           │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │一致検出割込み                    │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │ﾗｯﾁｶｳﾝﾀ割込み                     │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │ｶｳﾝﾀ機能選択                      │                                    │                                    │
+ ├─────────────────┼──────────────────┼──────────────────┤
+ │周期時間設定(*10ms)               │                                    │                                    │
+ └─────────────────┴──────────────────┴──────────────────┘
+0
+e
+*GW92
+ ┌─────────────────┬──────────────────┐
+ │                                  │           CC-Link/LT               │
+ ├─────────────────┼──────────────────┤
+ │動作ﾓｰﾄﾞ                          │                                    │
+ ├─────────────────┼──────────────────┤
+ │伝送速度                          │                                    │
+ ├─────────────────┼──────────────────┤
+ │ﾘﾓｰﾄ局異常時の入力指定            │                                    │
+ ├─────────────────┼──────────────────┤
+ │局ﾓｰﾄﾞ                            │                                    │
+ ├─────────────────┼──────────────────┤
+ │最終局番                          │                                    │
+ ├─────────────────┼──────────────────┤
+ │入出力占有点数                    │                                    │
+ ├─────────────────┼──────────────────┤
+ │RXﾘﾌﾚｯｼｭﾃﾞﾊﾞｲｽ                    │                                    │
+ ├─────────────────┼──────────────────┤
+ │RYﾘﾌﾚｯｼｭﾃﾞﾊﾞｲｽ                    │                                    │
+ ├─────────────────┼──────────────────┤
+ │ﾘﾓｰﾄ局詳細情報                    │                                    │
+ │格納点数                          │                                    │
+ ├─────────────────┼──────────────────┤
+ │ﾘﾓｰﾄ局詳細情報                    │                                    │
+ │格納先ﾃﾞﾊﾞｲｽ                      │                                    │
+ └─────────────────┴──────────────────┘
+0
+e
+*GW93
+ ┌─────────────────┬──────────────────┐
+ │ﾎﾞｰﾚｰﾄ                            │                                    │
+ ├─────────────────┼──────────────────┤
+ │ﾊﾟﾘﾃｨ                             │                                    │
+ ├─────────────────┼──────────────────┤
+ │ﾃﾞｰﾀﾋﾞｯﾄ                          │                                    │
+ ├─────────────────┼──────────────────┤
+ │ｽﾄｯﾌﾟﾋﾞｯﾄ                         │                                    │
+ └─────────────────┴──────────────────┘
+0
+e
+*GW94
+ ┌───────────────────────────────────┐
+ │簡単位置決め機能                                                      │
+ │  ┌─┬──────────────────┬────────────┤
+ │  │ 1│1軸 S/Wｽﾄﾛｰｸﾘﾐｯﾄｴﾗｰ検出             │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 2│1軸 速度範囲外検出                  │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 3│1軸 0速度検出                       │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 4│1軸 運転中始動検出                  │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 5│2軸 S/Wｽﾄﾛｰｸﾘﾐｯﾄｴﾗｰ検出             │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 6│2軸 速度範囲外検出                  │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 7│2軸 0速度検出                       │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 8│2軸 運転中始動検出                  │                        │
+ └─┴─┴──────────────────┴────────────┘
+ ┌───────────────────────────────────┐
+ │高速ｶｳﾝﾀ機能                                                          │
+ │  ┌─┬──────────────────┬────────────┤
+ │  │ 1│CH.1ｵｰﾊﾞﾌﾛｰ検出                     │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 2│CH.2ｵｰﾊﾞﾌﾛｰ検出                     │                        │
+ └─┴─┴──────────────────┴────────────┘
+ ┌───────────────────────────────────┐
+ │CC-Link/LT通信機能                                                    │
+ │  ┌─┬──────────────────┬────────────┤
+ │  │ 1│全局異常                            │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 2│自己折り返しﾃｽﾄ異常検出             │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 3│リﾘﾓｰﾄ局異常検出                    │                        │
+ │  ├─┼──────────────────┼────────────┤
+ │  │ 4│制御範囲外局検出                    │                        │
+ └─┴─┴──────────────────┴────────────┘
+0
+e
+*GW95
+ ┌─┬───────────┬─────────┐                                                
+ │ 1│汎用入出力機能        │                  │                                                
+ ├─┼───────────┼─────────┤                                                
+ │ 2│高速割込み機能        │                  │                                                
+ ├─┼───────────┼─────────┤                                                
+ │ 3│ﾊﾟﾙｽｷｬｯﾁ機能          │                  │                                                
+ └─┴───────────┴─────────┘                                                
+ ┌─────┬───────────┬─────────┬─────────┬─────────┐
+ │ﾃﾞﾊﾞｲｽ名  │       割付機能       │  入力遅れ時間    │  高速割込み設定  │ ﾊﾟﾙｽｷｬｯﾁ機能設定 │
+ │          │                      │                  │    ｴｯｼﾞ選択      │  ﾊﾟﾙｽｷｬｯﾁﾃﾞﾊﾞｲｽ  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X0    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X1    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X2    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X3    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X4    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X5    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X6    │                      │                  │                  │                  │
+ ├─────┼───────────┼─────────┼─────────┼─────────┤
+ │    X7    │                      │                  │                  │                  │
+ └─────┴───────────┴─────────┴─────────┴─────────┘
+ ┌─────┬───────────┬─────────┐                                        
+ │デバイス名│       割付機能       │  CPUｴﾗｰ時出力    │                                        
+ │          │                      │                  │                                        
+ ├─────┼───────────┼─────────┤                                        
+ │    Y0    │                      │                  │                                        
+ ├─────┼───────────┼─────────┤                                        
+ │    Y1    │                      │                  │                                        
+ ├─────┼───────────┼─────────┤                                        
+ │    Y2    │                      │                  │                                        
+ ├─────┼───────────┼─────────┤                                        
+ │    Y3    │                      │                  │                                        
+ └─────┴───────────┴─────────┘                                        
+0
+e
+*GW100
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━━━┓
+ ┃Redundant param ┃┃Operation settings                ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW101
+ ┏━━━━━━━━┓┏━━━━━━━━━━━━━━━━━┓
+ ┃Redundant param ┃┃Tracking settings                 ┃
+ ┗━━━━━━━━┛┗━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW102
+ ┌─┬─────────────┬───────────┐
+ │ 1│Start mode                │                      │
+ ├─┼─────────────┼───────────┤
+ │ 2│Error in standby system   │                      │
+ ├─┼─────────────┼───────────┤
+ │ 3│Debug mode                │                      │
+ ├─┼─────────────┼───────────┤
+ │ 4│Operat. status consistency│                      │
+ └─┴─────────────┴───────────┘
+0
+e
+*GW103
+ ┌─┬───────────────┬────────────────┐
+ │ 1│Tracking device settings      │                                │
+ ├─┼───────────────┼────────────────┤
+ │ 2│All tracking device capacity  │                                │
+ ├─┼───────────────┼────────────────┤
+ │ 3│Signal flow mem.track setting │                                │
+ ├─┼───────────────┼────────────────┤
+ │ 4│Auto fwd. Tracking block No.1 │                                │
+ └─┴───────────────┴────────────────┘
+0
+e
+*GW104
+ ┌─┬────────────┬─────────────────┐    
+ │ 5│Block No.               │                                  │    
+ │  │┌─────┬─────┼─────┬─────┬─────┤    
+ │  ││   No.    │  Device  │  Points  │  Start   │   End    │    
+ │  │├─────┼─────┼─────┼─────┼─────┤    
+ │  ││          │          │          │          │          │    
+ └─┴┴─────┴─────┴─────┴─────┴─────┘    
+0
+e
+*GW105
+ ┌─┬─────────────────────────┐              
+ │ 6│File register file settings                       │              
+ │  │┌───────┬───────┬────────┤              
+ │  ││  Block No.   │ Target memory│   File name    │              
+ │  │├───────┼───────┼────────┤              
+ │  ││              │              │                │              
+ └─┴┴───────┴───────┴────────┘              
+0
+e
+*GW106
+ ┌─┬───────────────┬──────────────┐    
+ │ 7│Tracking characteristics set  │                            │    
+ └─┴───────────────┴──────────────┘    
+0
+e
+*GW107
+ ┌─┬─────────────────────┐┌─┬──────────┬─────────────┐
+ │ 1│WDT settings                              ││ 4│Constant scan       │                          │
+ │  │┌──────────────┬─────┤├─┼──────────┴─────────────┤
+ │  ││WDT setting                 │          ││ 5│Low speed program execution time                │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Init execution WDT          │          ││  ││Execution time    │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┼─────────────┤
+ │  ││Slow execution WDT          │          ││ 6│Fault history       │                          │
+ ├─┼┴──────────────┴─────┤│  │┌─────────┼─────────────┤
+ │ 2│Operation mode at error                   ││  ││Corresponding mem.│                          │
+ │  │┌──────────────┬─────┤│  │├─────────┼─────────────┤
+ │  ││Operation error             │          ││  ││File name         │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Extended instruction error  │          ││  ││Number of history │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┴─────────────┤
+ │  ││Fuse blown                  │          ││ 7│Memory check                                    │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Module verification error   │          ││  ││Program mem. check│                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Intelligent mod. Access err │          ││  ││Number of steps   │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┴─────────────┤
+ │  ││File access error           │          ││ 8│Module error log (Intelligent function module)  │
+ │  │├──────────────┼─────┤│  │┌────────────┬──────────┤
+ │  ││Memory card operation error │          ││  ││Collect/Not collect     │                    │
+ │  │├──────────────┼─────┤│  │├────────────┼──────────┤
+ │  ││External power supply OFF   │          ││  ││Corresponding memory    │                    │
+ ├─┼┴──────────────┴─────┤│  │├────────────┼──────────┤
+ │ 3│Error check                               ││  ││Log No.                 │                    │
+ │  │┌──────────────┬─────┤│  │├────────────┼──────────┤
+ │  ││Battery check               │          ││  ││Collection No.          │                    │
+ │  │├──────────────┼─────┤└─┴┴────────────┴──────────┘
+ │  ││Fuse blown check            │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Module verify               │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Dev. range for Index setting│          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Redundant power system diag.│          │                                                        
+ └─┴┴──────────────┴─────┘                                                        
+0
+e
+*GW108
+ ┏━━━━━━━━━━━━━━━━━━━━┓
+ ┃Network module redundant group settings ┃
+ ┗━━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW109
+ ┌─────┬─────┬────────────┬──────────┐
+ │Module No.│Start I/O │      Network type      │   Group settings   │
+ ├─────┼─────┼────────────┼──────────┤
+ │       1  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       2  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       3  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       4  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       5  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       6  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       7  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       8  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │       9  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │      10  │          │                        │                    │
+ ├─────┼─────┼────────────┼──────────┤
+ │      11  │          │                        │                    │
+ └─────┴─────┴────────────┴──────────┘
+0
+e
+*GW110
+ ┏━━━━━━━━━━━━━━━┓
+ ┃Ethernet Redundant settings   ┃
+ ┃  Ethernet              XMdl. ┃
+ ┃  Start I/O No.          XXXX ┃
+ ┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW111
+ ┌─┬──────────────────────────────┐        
+ │ 1│System B settings                                           │        
+ │  ├────────────┬─────────────────┤        
+ │  │Station number(System B)│                                  │        
+ │  ├────────────┼─────────────────┤        
+ │  │Mode(System B)          │                                  │        
+ │  ├────────────┼─────────────────┤        
+ │  │IP address(System B)    │                                  │        
+ └─┴────────────┴─────────────────┘        
+ ┌─┬──────────────────────────────┐        
+ │ 2│Issue system switch in Cable disconnection timeout          │        
+ │  ├────────────┬─────────────────┤        
+ │  │Cable disconnect timeout│                                  │        
+ └─┴────────────┴─────────────────┘        
+ ┌─┬──────────────────────────────────┐
+ │ 3│Issue system switch in communication error                          │
+ │  ├────────────────┬─────────────────┤
+ │  │Connection No.1                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.2                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.3                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.4                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.5                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.6                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.7                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.8                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.9                 │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.10                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.11                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.12                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.13                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.14                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.15                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Connection No.16                │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │Auto open UDP port setting      │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │GX Dev. UDP communication port  │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │GX Dev. TCP communication port  │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │FTP communication port setting  │                                  │
+ │  ├────────────────┼─────────────────┤
+ │  │HTTP communication port setting │                                  │
+ └─┴────────────────┴─────────────────┘
+0
+e
+*GW112
+ ┏━━━━━━━━━━━━━━━━━━━┓
+ ┃CC IE / MELSECNET Redundant settings  ┃
+ ┃  CC IE / MELSECNET             XMdl. ┃
+ ┃  Start I/O No.                  XXXX ┃
+ ┗━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW113
+ ┌─┬────────────┬─────────────────┐
+ │ 1│Mode(System B)          │                                  │
+ └─┴────────────┴─────────────────┘
+0
+e
+*GW114
+ ┏━━━━━━━━━━━━━━━┓
+ ┃Ethernet Internet settings    ┃
+ ┃  Ethernet             slot X ┃
+ ┃  Start I/O No.          XXXX ┃
+ ┗━━━━━━━━━━━━━━━┛
+0
+e
+*GW115
+ ┌─┬────────────┬─────────────────┐
+ │ 1│無交信監視時間          │                                  │
+ ├─┼────────────┼─────────────────┤
+ │ 2│ﾌﾞﾛｰﾄﾞﾊﾞﾝﾄﾞﾙｰﾀ設定      │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Router IP address       │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Sub-net address         │                                  │
+ ├─┼────────────┼─────────────────┤
+ │ 3│Mail address            │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Subject                 │                                  │
+ └─┴────────────┴─────────────────┘
+ ┌─┬──────────────────────────────┐
+ │ 4│ｲﾝﾀｰﾈｯﾄ接続ｺﾈｸｼｮﾝ設定                                       │
+ │  ├────────────┬─────────────────┤
+ │  │Connection No.1         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.2         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.3         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.4         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.5         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.6         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.7         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.8         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.9         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.10        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.11        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.12        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.13        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.14        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.15        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │Connection No.16        │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │自動ｵｰﾌﾟﾝUDPﾎﾟｰﾄ設定    │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │GPPW交信UDPﾎﾟｰﾄ設定     │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │GPPW交信TCPﾎﾟｰﾄ設定     │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │FTP交信ﾎﾟｰﾄ設定         │                                  │
+ │  ├────────────┼─────────────────┤
+ │  │HTTP交信ﾎﾟｰﾄ設定        │                                  │
+ └─┴────────────┴─────────────────┘
+0
+e
+*GW116
+ ┌─┬─────────────────────┐┌─┬──────────┬─────────────┐
+ │ 1│WDT settings                              ││ 4│Constant scan       │                          │
+ │  │┌──────────────┬─────┤├─┼──────────┴─────────────┤
+ │  ││WDT setting                 │          ││ 5│Low speed program execution time                │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Init execution WDT          │          ││  ││Execution time    │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┼─────────────┤
+ │  ││Slow execution WDT          │          ││ 6│Fault history       │                          │
+ ├─┼┴──────────────┴─────┤│  │┌─────────┼─────────────┤
+ │ 2│Operation mode at error                   ││  ││Drive             │                          │
+ │  │┌──────────────┬─────┤│  │├─────────┼─────────────┤
+ │  ││Operation error             │          ││  ││File name         │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Extended instruction error  │          ││  ││Number of history │                          │
+ │  │├──────────────┼─────┤└─┴┴─────────┴─────────────┘
+ │  ││Fuse blown                  │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Module verification error   │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Intelligent mod. Access err │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││File access error           │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Memory card operation error │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││External power supply OFF   │          │                                                        
+ ├─┼┴──────────────┴─────┤                                                        
+ │ 3│Error check                               │                                                        
+ │  │┌──────────────┬─────┤                                                        
+ │  ││Battery check               │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Fuse blown check            │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Module verify               │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Device range of index modify│          │                                                        
+ └─┴┴──────────────┴─────┘                                                        
+0
+e
+*GW118
+ │  │                │CPU send range        │   PLC side device    │          
+ │  │                ├───────────┤                      │          
+ │  │    PLC         │Auto refresh area     │                      │          
+ │  │                ├───┬───┬───┼─────┬─────┤          
+ │  │                │Points│Start │End   │   Start  │   End    │          
+ │  │┌───────┼───┼───┼───┼─────┼─────┤          
+0
+e
+*GW119
+ ┏━━━━━━━┓
+ ┃Safety setting┃
+ ┗━━━━━━━┛
+0
+e
+*GW120
+ ┌────────────────────────┬────────────────┐
+ │Cont. RUN of tol. time in Testmode              │                                │
+ ├────────────────────────┼────────────────┤
+ │Ope. set. during CC-Link Safety remote sta. err.│                                │
+ └────────────────────────┴────────────────┘
+0
+e
+*GW121
+ ┌────────────────────────────────────────────┐
+ │Do not boot from standard ROM.                                                          │
+ └────────────────────────────────────────────┘
+ ┌────────────────────────────────────────────┐
+ │This setting is valid only for Test mode.                                               │
+ │Safety mode settings uses standard ROM boot.                                            │
+ └────────────────────────────────────────────┘
+0
+e
+*GW122
+ ├─┼─────────────┴──────────────────┤          
+0
+e
+*GW123
+ │ 8│Multiple CPU high speed transmission area setting (Advanced settings)                     │
+ │  ├────────┬────────────────────────────────────┤
+ │  │                │               CPU send range                                           │
+ │  │                │        ┌─────────────────┬──────┬──────┤
+ │  │                │        │         User setting area        │Auto refresh│            │
+ │  │    PLC         │ Points ├───┬──────┬──────┼──────┤System area │
+ │  │                │  (K)   │Points│   Start    │    End     │  Points    │    (K)     │
+ │  │┌───────┼────┼───┼──────┼──────┼──────┼──────┤
+0
+e
+*GW124
+ │ 8│Multiple CPU high speed transmission area setting                                         │
+ │  ├────────┬─────────────────────────────┬──────┤
+ │  │                │               CPU send range                             │            │
+ │  │                │        ┌─────────────────┬──────┤            │
+ │  │                │        │         User setting area        │Auto refresh│            │
+ │  │    PLC         │ Points ├───┬──────┬──────┼──────┤            │
+ │  │                │  (K)   │Points│   Start    │    End     │  Points    │   ------   │
+ │  │┌───────┼────┼───┼──────┼──────┼──────┼──────┤
+0
+e
+*GW125
+ │  ││              │        │      │            │            │            │            │
+0
+e
+*GW126
+ │  │├───────┼────┼───┼──────┼──────┼──────┼──────┤
+0
+e
+*GW127
+ └─┴┴───────┴────┴───┴──────┴──────┴──────┴──────┘
+0
+e
+*GW128
+ ┌─────────────────────────┐                            
+ │                                                  │                            
+ ├──┬───────────────┬─┬────┴────────┐
+ │    │         Auto refresh         │  │ CPU send range           │
+ │    ├───┬─────┬─────┼─┼──────┬──────┤
+ │NO. │Points│  Start   │   End    │  │   Start    │    End     │
+ ├──┼───┼─────┼─────┼─┼──────┼──────┤
+0
+e
+*GW129
+ │    │      │          │          │  │            │            │
+0
+e
+*GW130
+ ├──┼───┼─────┼─────┼─┼──────┼──────┤
+0
+e
+*GW131
+ └──┴───┴─────┴─────┴─┴──────┴──────┘
+0
+e
+*GW132
+ ┌─────────┬──┬─────┬─────────────────────┬──────────┐
+ │                  │    │          │       Latch range(clear latch key)       │                    │
+ │   Device name    │Sym │ No.of    ├──────────┬──────────┤    Local device    │
+ │                  │    │ Devices  │       Enable       │      Disable       │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Input relay       │  X │[     ]   │                    │                    │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Output relay      │  Y │[     ]   │                    │                    │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Internal relay    │  M │[     ]   │                    │                    │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Latch relay       │  L │[     ]   │                    │[       ]-[       ] │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Link relay        │  B │[     ]   │[       ]-[       ] │[       ]-[       ] │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Annunciator       │  F │[     ]   │[       ]-[       ] │[       ]-[       ] │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Link special relay│ SB │[     ]   │                    │                    │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Edge relay        │  V │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Step relay        │  S │[     ]   │                    │                    │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Timer             │  T │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Accumulated timer │ ST │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Counter           │  C │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Data register     │  D │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Link register     │  W │[     ]   │[       ]-[       ] │[       ]-[       ] │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Link special reg  │ SW │[     ]   │                    │                    │                    │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Index             │  Z │[     ]   │                    │                    │[       ]-[       ] │
+ ├─────────┼──┴─────┴──────────┴──────────┴──────────┤
+ │Total device      │      [     ]K words                                                              │
+ ├─────────┴──┬──────────────────────────────────────┤
+ │File register           │Capacity                                              ┌──────────┤
+ │extended setting        │[     ]Points                                         │    Device range    │
+ ├─────────┬──┼─────┬──────────┬──────────┼──────────┤
+ │File register     │ ZR │[     ]   │                    │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Ext. data register│  D │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┼──┼─────┼──────────┼──────────┼──────────┤
+ │Ext. link register│  W │[     ]   │[       ]-[       ] │[       ]-[       ] │[       ]-[       ] │
+ ├─────────┴──┴─────┼──────────┴──────────┴──────────┤
+ │32 bit Index Setting                │                                                                │
+ └──────────────────┴────────────────────────────────┘
+0
+e
+*GW133
+ │ 2│Host CPU number           │                                    │          
+ ├─┼─────────────┼──────────────────┤          
+0
+e
+*GW134
+ ├─┼┴───────┴───┴───┴───┴─────┴─────┴────────────┐
+0
+e
+*GW135
+ ┌─┬─────────────────────────────────────────────┐
+0
+e
+*GW136
+ ├─┼┴───────┴───┴┬──┴───┴─────┴─────┤          
+ │ 8│High speed transmission   │Not use high speed transmission     │          
+ └─┴─────────────┴──────────────────┘          
+0
+e
+*GW137
+ ┌─┬─────────────┬──────────────────┐          
+ │ 8│High speed transmission   │Not use high speed transmission     │          
+ └─┴─────────────┴──────────────────┘          
+0
+e
+*GW138
+ ┌─┬─────────────────────┐                                                      
+ │17│Intelligent Functional Module             │                                                      
+ │  │┌─────────┬──────────┤                                                      
+ │  ││PLC side          │Intelli mdl. side   │                                                      
+ │  │├────┬────┼─────┬────┤                                                      
+ │  ││Interru.│No.of   │Starting  │Starting│                                                      
+ │  ││Pointer │Interru.│I/O No.   │SI No.  │                                                      
+ │  ││Start.No│Pointers│          │        │                                                      
+ │  │├────┼────┼─────┼────┤                                                      
+*GW139
+ ┏━━━━━━━━━━━━┓
+ ┃ Built-in Ethernet port ┃  Hexadecimal addresses are indicated in ().
+ ┗━━━━━━━━━━━━┛
+0
+e
+*GW140
+ ┌─┬────────────────┬─────────────────────────────────────────┐
+ │ 1│IP address                      │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 2│Subnet mask pattern             │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 3│Default router IP address       │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 4│Communication data code         │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 5│Enable online change            │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 6│No direct connection to MELSOFT │                                                                                  │
+ ├─┼────────────────┼─────────────────────────────────────────┤
+ │ 7│Do not respond to PLC search    │                                                                                  │
+ ├─┼────────────────┴─────────────────────────────────────────┤
+ │ 8│Open settings                                                                                                       │
+ │  │  ┌──────┬─────┬───────┬──────┬──────┬──────────────┬──────┤
+ │  │  │ Connection │          │              │TCP         │  Host      │ Transmission target device │  Target    │
+ │  │  │     No.    │ Protocol │ Open system  │connection  │  port No.  │ IP address                 │  port No.  │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      1     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      2     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      3     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      4     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      5     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      6     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      7     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      8     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │      9     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     10     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     11     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     12     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     13     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     14     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     15     │          │              │            │            │                            │            │
+ │  │  ├──────┼─────┼───────┼──────┼──────┼──────────────┼──────┤
+ │  │  │     16     │          │              │            │            │                            │            │
+ ├─┼─┴──────┴─────┴─┬─────┴──────┴──────┴──────────────┴──────┤
+ │ 9│FTP                             │                                                                                  │
+ │  │  ┌──────────────┼─────────────────────────────────────────┤
+ │  │  │Log-in name                 │[            ]                                                                    │
+ │  │  ├──────────────┼─────────────────────────────────────────┤
+ │  │  │Password                    │(        )                                                                        │
+ │  │  ├──────────────┼─────────────────────────────────────────┤
+ │  │  │Cmd. input monitoring timer │      * 500ms (       sec.)                                                       │
+ ├─┼─┴──────────────┼─────────────────────────────────────────┤
+ │10│Time settings                   │                                                                                  │
+ │  │  ┌──────────────┼─────────────────────────────────────────┤
+ │  │  │SNTP server IP address      │                                                                                  │
+ │  │  ├──────────────┼─────────────────────────────────────────┤
+ │  │  │Time zone                   │                                                                                  │
+ │  │  ├──────────────┼─────────────────────────────────────────┤
+ │  │  │At turn ON/reset            │                                                                                  │
+ │  │  │  ┌────────────┼─────────────────────────────────────────┤
+ │  │  │  │At error occurrence     │                                                                                  │
+ │  │  ├─┴────────────┼─────────────────────────────────────────┤
+ │  │  │Execution interval time     │                                                                                  │
+ └─┴─┴──────────────┴─────────────────────────────────────────┘
+0
+e
+*GW141
+ ┌──────────────────────────────────────┐
+ │Do not set built-in Ethernet of PLC                                         │
+ └──────────────────────────────────────┘
+0
+e
+*GW142
+ ┌─┬─────────────────────────────────────────┐
+ │  │PLC module change setting                                                         │
+ │  ├─────────────────────────────────────────┤
+ │  │Backup setting for memory card by contact                                         │
+ │  │┌─────────────────────────────┬──────────┤
+ │  ││Backup start setup contact                                │                    │
+ │  │├─────────────────────────────┼──────────┤
+ │  ││Backup start contact                                      │                    │
+ │  │├─────────────────────────────┴──────────┤
+ │  ││Backup target data                                                              │
+ │  ││┌────────────────────────────┬──────────┤
+ │  │││Program memory                                          │                    │
+ │  ││├────────────────────────────┼──────────┤
+ │  │││Standard RAM                                            │                    │
+ │  ││├────────────────────────────┼──────────┤
+ │  │││Standard ROM                                            │                    │
+ │  │├┴────────────────────────────┴──────────┤
+ │  ││Options                                                                         │
+ │  ││┌────────────────────────────┬──────────┤
+ │  │││Format memory card before backup                        │                    │
+ │  ││├────────────────────────────┼──────────┤
+ │  │││Auto restore at turn OFF -> ON or reset                 │                    │
+ │  │├┴────────────────────────────┴──────────┤
+ │  ││Title                                                                           │
+ │  ││┌───────────────────────────────────────┤
+ │  │││                                                                              │
+ └─┴┴┴───────────────────────────────────────┘
+0
+e
+*GW143
+ ┏━━━━━━━━━━━━━━━━┓
+ ┃ Built-in I/O function setting  ┃
+ ┗━━━━━━━━━━━━━━━━┛
+0
+e
+*GW144
+ ┌─────────────────────────────────────┐
+ │Positioning / high-speed counter setting                                  │
+ │  ┌─────────────────┬─────────────────┤
+ │  │Positioning axis 1                │                                  │
+ │  ├─────────────────┼─────────────────┤
+ │  │Positioning axis 1                │                                  │
+ │  ├─────────────────┼─────────────────┤
+ │  │High-speed counter CH1            │                                  │
+ │  ├─────────────────┼─────────────────┤
+ │  │High-speed counter CH2            │                                  │
+ └─┴─────────────────┴─────────────────┘
+0
+e
+*GW145
+ ┌──────────────────────────────────────────┐
+ │Input signal                                                                        │
+ │  ┌──┬────────────────┬─────────┬──────────┤
+ │  │    │       Function selection       │  Response time   │Interrupt condition │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn0 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn1 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn2 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn3 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn4 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn5 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn6 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn7 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn8 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │Xn9 │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnA │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnB │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnC │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnD │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnE │                                │                  │                    │
+ │  ├──┼────────────────┼─────────┼──────────┤
+ │  │XnF │                                │                  │                    │
+ └─┴──┴────────────────┴─────────┴──────────┘
+0
+e
+*GW146
+ ┌─────────────────────────────────────┐
+ │Output signal                                                             │
+ │  ┌──┬──────────────┬─────────────────┤
+ │  │    │     Function selection     │      Error time output mode      │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn0 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn1 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn2 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn3 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn4 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn5 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn6 │                            │                                  │
+ │  ├──┼──────────────┼─────────────────┤
+ │  │Yn7 │                            │                                  │
+ └─┴──┴──────────────┴─────────────────┘
+0
+e
+*GW147
+ ┏━━━━━━━━━━━━━━━━━━━┓
+ ┃ Positioning axis 1 detailed setting  ┃
+ ┗━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW148
+ ┏━━━━━━━━━━━━━━━━━━━┓
+ ┃ Positioning axis 2 detailed setting  ┃
+ ┗━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW149
+ ┌─────────────────────────────────────┐
+ │Positioning parameter                                                     │
+ │  ┌──────────────────┬────────────────┤
+ │  │Pulse output mode                   │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Rotation direction setting          │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │S/W stroke upper limit (pulse)      │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │S/W stroke lower limit (pulse)      │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Speed limit value (pulse/s)         │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Bias speed at start (pulse/s)       │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Acceleration/deceleration system    │                                │
+ └─┴──────────────────┴────────────────┘
+0
+e
+*GW150
+ ┌─────────────────────────────────────┐
+ │OPR parameter                                                             │
+ │  ┌──────────────────┬────────────────┤
+ │  │OPR method                          │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │OPR direction                       │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │OP address (pulse)                  │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │OPR speed (pulse/s)                 │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Creep speed (pulse/s)               │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Acceleration/deceleration time (ms) │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │OPR deceleration stop time (ms)     │                                │
+ │  ├──────────────────┼────────────────┤
+ │  │Move after near-point dog ON (pulse)│                                │
+ │  ├──────────────────┼────────────────┤
+ │  │OPR dwell time (ms)                 │                                │
+ └─┴──────────────────┴────────────────┘
+0
+e
+*GW151
+ ┌───────────────────────────────────────────────────────────┐
+ │Positioning data                                                                                                      │
+ │  ┌───┬───────────┬───────┬───────┬────────┬──────┬─────────┤
+ │  │      │                      │Acceleration/ │ Deceleration │                │  Command   │   Positioning    │
+ │  │      │    Control system    │deceleration  │  stop time   │   Dwell time   │   speed    │     address      │
+ │  │      │                      │time (ms)     │     (ms)     │      (ms)      │  (pulse/s) │     (pulse)      │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.1  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.2  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.3  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.4  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.5  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.6  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.7  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.8  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.9  │                      │              │              │                │            │                  │
+ │  ├───┼───────────┼───────┼───────┼────────┼──────┼─────────┤
+ │  │No.10 │                      │              │              │                │            │                  │
+ └─┴───┴───────────┴───────┴───────┴────────┴──────┴─────────┘
+0
+e
+*GW152
+ ┏━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ High speed counter CH1 detailed setting  ┃
+ ┗━━━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW153
+ ┏━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ High speed counter CH2 detailed setting  ┃
+ ┗━━━━━━━━━━━━━━━━━━━━━┛
+0
+e
+*GW154
+ ┌──────────────────────┬───────────────────┐
+ │Operation mode setting                      │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Count source selection                      │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Pulse input mode                            │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Counting speed setting                      │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Z phase (preset) trigger setting            │                                      │
+ ├──────────────────────┼───────────────────┤
+ │External preset (Z phase) request detection │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Counter format                              │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Function input logic setting                │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Counter function selection                  │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Coincidence output time preset setting      │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Coincidence detection interruption (No.1)   │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Coincidence detection interruption (No.2)   │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Sampling time setting (ms)                  │                                      │
+ ├──────────────────────┼───────────────────┤
+ │No. of frequency movement averaging         │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Frequency measurement unit time setting     │                                      │
+ ├──────────────────────┼───────────────────┤
+ │No. of rotation speed movement averaging    │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Rotation speed measurement unit time setting│                                      │
+ ├──────────────────────┼───────────────────┤
+ │Number of pulses per rotation (pulse)       │                                      │
+ ├──────────────────────┼───────────────────┤
+ │Pulse measurement target setting            │                                      │
+ └──────────────────────┴───────────────────┘
+0
+e
+*GW155
+ ┌─┬────────────────┬────────────┐
+ │  │Built-in CC-Link setting        │                        │
+ └─┴────────────────┴────────────┘
+0
+e
+*GW156
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │CPU     │CPU     │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │   10   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │CPU     │Blt. I/O│        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │              │        │    16Pt│        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     ----     │        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │     ----     │        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │     ----     │        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │XYNo          │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Error Output  │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Error Operat. │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │I/O Resp Time │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Switch set   1│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             2│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             3│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             4│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             5│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW157
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │                                      ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐  │
+ │                                      │CPU     │CPU     │CPU     │    0   │    1   │    2   │    3   │    4   │    5   │    6   │    7   │    8   │    9   │  │
+ │                      ┌───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     Pwr      │CPU     │Blt. I/O│CC-Link │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │              │        │    16Pt│    32Pt│        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │     ----     │        │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │     ----     │        │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │     ----     │        │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │XYNo          │  ----  │        │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Error Output  │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Error Operat. │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │I/O Resp Time │  ----  │  ----  │  ----  │        │        │        │        │        │        │        │        │        │        │  │
+ │                      ├───────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤  │
+ │                      │Switch set   1│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             2│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             3│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             4│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      │             5│        │  ----  │        │        │        │        │        │        │        │        │        │        │        │  │
+ │                      └───────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘  │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+0
+e
+*GW158
+ ┌─┬─────────────────────┐┌─┬──────────┬─────────────┐
+ │ 1│WDT settings                              ││ 4│Constant scan       │                          │
+ │  │┌──────────────┬─────┤├─┼──────────┴─────────────┤
+ │  ││WDT setting                 │          ││ 5│Low speed program execution time                │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Init execution WDT          │          ││  ││Execution time    │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┼─────────────┤
+ │  ││Slow execution WDT          │          ││ 6│Error history       │                          │
+ ├─┼┴──────────────┴─────┤│  │┌─────────┼─────────────┤
+ │ 2│Operation mode at error                   ││  ││Corresponding mem.│                          │
+ │  │┌──────────────┬─────┤│  │├─────────┼─────────────┤
+ │  ││Operation error             │          ││  ││File name         │                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Extended instruction error  │          ││  ││Number of history │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┴─────────────┤
+ │  ││Fuse blown                  │          ││ 7│Memory check                                    │
+ │  │├──────────────┼─────┤│  │┌─────────┬─────────────┤
+ │  ││Module verification error   │          ││  ││Program mem. check│                          │
+ │  │├──────────────┼─────┤│  │├─────────┼─────────────┤
+ │  ││Intelligent mod. Access err │          ││  ││Number of steps   │                          │
+ │  │├──────────────┼─────┤├─┼┴─────────┴─────────────┤
+ │  ││File access error           │          ││ 8│Module error log (Intelligent function module)  │
+ │  │├──────────────┼─────┤│  │┌────────────┬──────────┤
+ │  ││Memory card operation error │          ││  ││Collect/Not collect     │                    │
+ │  │├──────────────┼─────┤│  │├────────────┼──────────┤
+ │  ││External power supply OFF   │          ││  ││Corresponding memory    │                    │
+ ├─┼┴──────────────┴─────┤│  │├────────────┼──────────┤
+ │ 3│Error check                               ││  ││Log No.                 │                    │
+ │  │┌──────────────┬─────┤│  │├────────────┼──────────┤
+ │  ││Battery check               │          ││  ││Collection No.          │                    │
+ │  │├──────────────┼─────┤└─┴┴────────────┴──────────┘
+ │  ││Fuse blown check            │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Module verify               │          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Dev. range for Index setting│          │                                                        
+ │  │├──────────────┼─────┤                                                        
+ │  ││Redundant power system diag.│          │                                                        
+ └─┴┴──────────────┴─────┘                                                        
+0
+e
+*GF50
+ ms
+0
+e
+*GF51
+ Not Used
+0
+e
+*GF52
+ X%04X
+0
+e
+*GF53
+ Blw.P%d
+0
+e
+*GF54
+ %dPt
+0
+e
+*GF55
+ Exec.Hgh.Sped.
+0
+e
+*GF56
+ No Hgh.Sped Ex
+0
+e
+*GF57
+ C%d
+0
+e
+*GF58
+ Not used                  
+0
+e
+*GF59
+ Same file name as program 
+0
+e
+*GF60
+ Using the following files 
+0
+e
+*GF61
+ ------
+0
+e
+*GF62
+ Program memory      
+0
+e
+*GF63
+ Memory card(RAM)    
+0
+e
+*GF64
+ Memory card(ROM)    
+0
+e
+*GF65
+ Standard RAM        
+0
+e
+*GF66
+ Standard ROM        
+0
+e
+*GF67
+ [%8s]
+0
+e
+*GF68
+ %dKPt
+0
+e
+*GF69
+ %d  
+0
+e
+*GF70
+ Wait    
+0
+e
+*GF71
+ Scan    
+0
+e
+*GF72
+ Initial 
+0
+e
+*GF73
+ LowSpeed
+0
+e
+*GF74
+ Fix Scan
+0
+e
+*GF75
+ s
+0
+e
+*GF76
+ Use Setin.
+0
+e
+*GF77
+ Not used  
+0
+e
+*GF78
+ Free    
+ Input   
+ Output  
+ Intelli 
+ PLC     
+ I/O Mix 
+ Hi.input
+ Int.    
+         
+         
+         
+         
+         
+         
+         
+         
+ PLC Free
+ PLC     
+0
+e
+*GF79
+ Clr     
+ Str     
+   ----  
+0
+e
+*GF80
+ Pause   
+ Resume  
+   ----  
+0
+e
+*GF81
+ 10ms    
+ 10ms    
+ 10ms    
+ 1ms     
+ 10ms    
+ 5ms     
+ 20ms    
+ 70ms    
+   ----  
+0
+e
+*GF82
+ 0.2ms   
+ 0.1ms   
+ 0.4ms   
+ 0.6ms   
+ 1ms     
+         
+         
+         
+   ----  
+0
+e
+*GF83
+ %6dPt
+0
+e
+*GF84
+ PLC%d
+0
+e
+*GF85
+ Bus Master Control  
+0
+e
+*GF86
+ Parallel mode       
+0
+e
+*GF87
+ Condition is taken    
+0
+e
+*GF88
+ Condition is not taken
+0
+e
+*GF89
+ Nosync
+0
+e
+*GF90
+ Sync  
+0
+e
+*GF91
+ %dMdl.(s)
+0
+e
+*GF92
+ Synchroniz
+0
+e
+*GF93
+ No Synchro
+0
+e
+*GF94
+ Used    
+0
+e
+*GF95
+ Not Used
+0
+e
+*GF182
+ Yes   
+0
+e
+*GF183
+ No    
+0
+e
+*GF184
+ I/O alloc 
+0
+e
+*GF185
+ Free    
+0
+e
+*GF186
+ Inp     
+0
+e
+*GF187
+ Outp    
+0
+e
+*GF188
+ Intelli 
+0
+e
+*GF189
+ %4dPt
+0
+e
+*GF190
+ CC-Link(Mdl. %d)
+0
+e
+*GF191
+     %2d Sta->X%04X
+0
+e
+*GF192
+     %2d Sta->Y%04X
+0
+e
+*GF193
+ PLC network/CC IE(%d)
+0
+e
+*GF194
+ Link (X%04X)->X%04X
+0
+e
+*GF195
+ Link (Y%04X)->X%04X
+0
+e
+*GF196
+ Link (B%04X)->X%04X
+0
+e
+*GF197
+ Link (W%04X)->X%04X
+0
+e
+*GF198
+ Link (X%04X)->Y%04X
+0
+e
+*GF199
+ Link (Y%04X)->Y%04X
+0
+e
+*GF200
+ Link (B%04X)->Y%04X
+0
+e
+*GF201
+ Link (W%04X)->Y%04X
+0
+e
+*GF202
+ MNET/CC IE Mdl. %2d
+0
+e
+*GF203
+ CC-Link
+0
+e
+*GF204
+ Record in program memory  
+0
+e
+*GF205
+ Store into the following  
+0
+e
+*GF206
+ Single Prec.
+0
+e
+*GF207
+ Double Prec.
+0
+e
+*GF208
+ I/O Mix 
+0
+e
+*GF209
+ Hi.input
+0
+e
+*GF210
+ Int.
+0
+e
+*GF211
+ PLC No.%d
+0
+e
+*GF212
+ All station stop by stop error
+0
+e
+*GF213
+ All station don't stop by stop error
+0
+e
+*GF214
+ It does not enter synchronously
+0
+e
+*GF215
+ It enters synchronously
+0
+e
+*GF216
+ Memory card at boot->It automatic-writes in standard ROM
+0
+e
+*GF217
+ Memory card at boot->It doesn't automatic-write in standard ROM
+0
+e
+*GF218
+ Hold
+0
+e
+*GF219
+ Hold Off
+0
+e
+*GF220
+ Valid
+0
+e
+*GF221
+ Invalid
+0
+e
+*GF222
+ Tr. %d
+0
+e
+*GF223
+ Setting %d
+0
+e
+*GF224
+ Rmt I/O
+0
+e
+*GF225
+ Use
+0
+e
+*GF226
+ Do boot from standard ROM.    
+0
+e
+*GF227
+ %dK steps
+0
+e
+*GF228
+ [-------]-[-------]
+0
+e
+*GF229
+ %d.%dKbps
+0
+e
+*GF230
+ No waiting time
+0
+e
+*GF231
+ %dms
+0
+e
+*GF232
+ Permit    
+0
+e
+*GF233
+ Not permit
+0
+e
+*GF234
+   --------------------------------------------------------------  
+0
+e
+*GF235
+ Enable online module change.
+0
+e
+*GF236
+ Disable online module change.
+0
+e
+*GF237
+ Enable with another PLC.
+0
+e
+*GF238
+ Disable with another PLC.
+0
+e
+*GF239
+ Not used
+0
+e
+*GF300
+ 内蔵機能
+0
+e
+*GF301
+ PULSE/SIGN(負）
+0
+e
+*GF302
+ PULSE/SIGN(正）
+0
+e
+*GF303
+ CW/CCW（負）
+0
+e
+*GF304
+ CW/CCW（正）
+0
+e
+*GF305
+ 10μsec
+0
+e
+*GF306
+ 100μsec
+0
+e
+*GF307
+ 1msec
+0
+e
+*GF308
+ 2msec
+0
+e
+*GF309
+ 減少
+0
+e
+*GF310
+ 増加
+0
+e
+*GF311
+ 更新する
+0
+e
+*GF312
+ 更新しない(保持)
+0
+e
+*GF313
+ 正論理
+0
+e
+*GF314
+ 負論理
+0
+e
+*GF315
+ 継続ON
+0
+e
+*GF316
+ 1ｽｷｬﾝのみON
+0
+e
+*GF317
+ 正方向
+0
+e
+*GF318
+ 負方向
+0
+e
+*GF319
+ 近点ドグ式
+0
+e
+*GF320
+ ｽﾄｯﾊﾟ式1
+0
+e
+*GF321
+ ｽﾄｯﾊﾟ式2
+0
+e
+*GF322
+ ｽﾄｯﾊﾟ式3
+0
+e
+*GF323
+ ｶｳﾝﾄ式1
+0
+e
+*GF324
+ ｶｳﾝﾄ式3
+0
+e
+*GF325
+ 位置制御(ABS)
+0
+e
+*GF326
+ 位置制御(INC)
+0
+e
+*GF327
+ 速度制御(正転)
+0
+e
+*GF328
+ 速度制御(逆転)
+0
+e
+*GF329
+ 1相1逓倍
+0
+e
+*GF330
+ 1相2逓倍
+0
+e
+*GF331
+ CW/CCW
+0
+e
+*GF332
+ 2相1逓倍
+0
+e
+*GF333
+ 2相2逓倍
+0
+e
+*GF334
+ 2相4逓倍
+0
+e
+*GF335
+ 60kPPS
+0
+e
+*GF336
+ 10kPPS
+0
+e
+*GF337
+ ﾘﾆｱｶｳﾝﾀ
+0
+e
+*GF338
+ ﾘﾝｸﾞｶｳﾝﾀ
+0
+e
+*GF339
+ ｸﾘｱする
+0
+e
+*GF340
+ ｶｳﾝﾄﾃﾞｨｾｰﾌﾞﾙ機能
+0
+e
+*GF341
+ ﾗｯﾁｶｳﾝﾀ機能
+0
+e
+*GF342
+ 周期ﾊﾟﾙｽｶｳﾝﾀ機能
+0
+e
+*GF343
+ ﾘﾝｸﾓｰﾄﾞ
+0
+e
+*GF344
+ ﾃｽﾄﾓｰﾄﾞ
+0
+e
+*GF345
+ 8点ﾓｰﾄﾞ
+0
+e
+*GF346
+ 4点ﾓｰﾄﾞ
+0
+e
+*GF347
+ 16点ﾓｰﾄﾞ
+0
+e
+*GF348
+ 16点
+0
+e
+*GF349
+ 32点
+0
+e
+*GF350
+ 48点
+0
+e
+*GF351
+ 64点
+0
+e
+*GF352
+ 128点
+0
+e
+*GF353
+ 256点
+0
+e
+*GF354
+ 512点
+0
+e
+*GF355
+ 1024点
+0
+e
+*GF356
+ 156Kbps
+0
+e
+*GF357
+ 625Kbps
+0
+e
+*GF358
+ 2.5Mbps
+0
+e
+*GF359
+ ｸﾘｱする
+0
+e
+*GF360
+ 保持する
+0
+e
+*GF361
+ 2.4Kbps
+0
+e
+*GF362
+ 4.8Kbps
+0
+e
+*GF363
+ 9.6Kbps
+0
+e
+*GF364
+ 19.2Kbps
+0
+e
+*GF365
+ 38.4Kbps
+0
+e
+*GF366
+ 57.6Kbps
+0
+e
+*GF367
+ 115.2Kbps
+0
+e
+*GF368
+ 奇数
+0
+e
+*GF369
+ 偶数
+0
+e
+*GF370
+ 使用なし
+0
+e
+*GF371
+ 点灯する
+0
+e
+*GF372
+ 点滅する
+0
+e
+*GF373
+ 表示しない
+0
+e
+*GF374
+ チェックあり
+0
+e
+*GF375
+ 汎用入出力
+0
+e
+*GF376
+ 割込み機能
+0
+e
+*GF377
+ ﾊﾟﾙｽｷｬｯﾁ機能
+0
+e
+*GF378
+ 原点復帰(1軸)
+0
+e
+*GF379
+ 原点復帰(2軸)
+0
+e
+*GF380
+ 一致信号出力(CH.1)
+0
+e
+*GF381
+ 一致信号出力(CH.2)
+0
+e
+*GF382
+ 遅れなし
+0
+e
+*GF383
+ 0.1ms
+0
+e
+*GF384
+ 0.3ms
+0
+e
+*GF385
+ 0.5ms
+0
+e
+*GF386
+ 1.0ms
+0
+e
+*GF387
+ 1ms
+0
+e
+*GF388
+ 5ms
+0
+e
+*GF389
+ 10ms
+0
+e
+*GF390
+ 20ms
+0
+e
+*GF391
+ 70ms
+0
+e
+*GF392
+ 立ち上がり時検出
+0
+e
+*GF393
+ 立ち下がり時検出
+0
+e
+*GF394
+ 出力を保持する
+0
+e
+*GF395
+ 出力をｸﾘｱする
+0
+e
+*GF400
+ Initial start mode
+0
+e
+*GF401
+ Hot-start mode
+0
+e
+*GF402
+ Do not start
+0
+e
+*GF403
+ Start
+0
+e
+*GF404
+ Internal device block setting
+0
+e
+*GF405
+ Device detail settings
+0
+e
+*GF406
+ Do auto forward
+0
+e
+*GF407
+ Do not auto forward
+0
+e
+*GF408
+ Synchronized tracking mode
+0
+e
+*GF409
+ Program priority mode
+0
+e
+*GF410
+ No tracking
+0
+e
+*GF411
+ Do tracking
+0
+e
+*GF412
+ Mem. card(RAM)
+0
+e
+*GF413
+ Standard RAM
+0
+e
+*GF414
+ Disable
+0
+e
+*GF415
+ Enable
+0
+e
+*GF416
+ No group
+0
+e
+*GF417
+ Group
+0
+e
+*GF418
+ No check
+0
+e
+*GF419
+ Check
+0
+e
+*GF420
+ Do not issue system switch in Cable disconnection timeout
+0
+e
+*GF421
+ Do not issue system switch in communication error
+0
+e
+*GF422
+ (PLC)
+0
+e
+*GF423
+ ｲﾝﾀｰﾈｯﾄ設定あり
+0
+e
+*GF424
+ ｲﾝﾀｰﾈｯﾄ設定なし
+0
+e
+*GF425
+ Redundant settings exist
+0
+e
+*GF426
+ B系設定あり
+0
+e
+*GF427
+ B系設定なし
+0
+e
+*GF428
+ No group
+0
+e
+*GF429
+ Group
+0
+e
+*GF430
+ %.1fSecond
+0
+e
+*GF431
+ x256step
+0
+e
+*GF432
+ Synchronous
+0
+e
+*GF433
+ Asynchronous
+0
+e
+*GF434
+ Auto refresh setting[PLC No.%d]
+0
+e
+*GF435
+ 16bits modify
+0
+e
+*GF436
+ 32bits modify
+0
+e
+*GF437
+ %-2d Times
+0
+e
+*GF438
+ %-.1fms
+0
+e
+*GF440
+ Scan time rate
+0
+e
+*GF441
+ Service process time
+0
+e
+*GF442
+ Service process exec amount
+0
+e
+*GF443
+ Constant scan waiting time
+0
+e
+*GF444
+ %d%%
+0
+e
+*GF445
+ %.1fms
+0
+e
+*GF446
+ %d times
+0
+e
+*GF447
+ after Z%d
+0
+e
+*GF448
+ Yes
+0
+e
+*GF449
+ No
+0
+e
+*GF450
+ No specification
+0
+e
+*GF451
+ Auto refresh setting[PLC No.%d(Send)]
+0
+e
+*GF452
+ Auto refresh setting[PLC No.%d(Receive)]
+0
+e
+*GF453
+ ->
+0
+e
+*GF454
+ <-
+0
+e
+*GF455
+ X 
+0
+e
+*GF456
+ --
+0
+e
+*GF457
+ Use ZZ
+0
+e
+*GF501
+ Binary code
+0
+e
+*GF502
+ ASCII code
+0
+e
+*GF503
+ Enable
+0
+e
+*GF504
+ Disable
+0
+e
+*GF505
+ Respond
+0
+e
+*GF506
+ Not respond
+0
+e
+*GF507
+ TCP
+0
+e
+*GF508
+ UDP
+0
+e
+*GF509
+ MC protocol
+0
+e
+*GF510
+ MELSOFT conn.
+0
+e
+*GF511
+ FTP
+0
+e
+*GF512
+ Used
+0
+e
+*GF513
+ Not used
+0
+e
+*GF514
+ Used
+0
+e
+*GF515
+ Not used
+0
+e
+*GF516
+ Execute
+0
+e
+*GF517
+ Not execute
+0
+e
+*GF518
+ Continue
+0
+e
+*GF519
+ Stop
+0
+e
+*GF520
+ Execution interval %5d min.
+0
+e
+*GF521
+ Execution time 
+0
+e
+*GF522
+ GMT
+0
+e
+*GF523
+ -----
+0
+e
+*GF524
+      
+0
+e
+*GF525
+ Socket comm.
+0
+e
+*GF526
+ Active
+0
+e
+*GF527
+ Unpassive
+0
+e
+*GF528
+ Fullpassive
+0
+e
+*GF529
+ Simultan
+0
+e
+*GF530
+ Restore 1 time only
+0
+e
+*GF531
+ Restore every time
+0
+e
+*GF532
+ Collect
+0
+e
+*GF533
+ Not collect
+0
+e
+*GF534
+ System memory
+0
+e
+*GF535
+ Standard RAM
+0
+e
+*GF536
+ %d Items
+0
+e
+*GF537
+ %d Items/1scan
+0
+e
+*GF538
+ General input
+0
+e
+*GF539
+ Interrupt input
+0
+e
+*GF540
+ Pulse catch
+0
+e
+*GF541
+ Counter CH1 A phase
+0
+e
+*GF542
+ Counter CH1 B phase
+0
+e
+*GF543
+ Counter CH2 A phase
+0
+e
+*GF544
+ Counter CH2 B phase
+0
+e
+*GF545
+ Counter CH1 Z phase
+0
+e
+*GF546
+ Counter CH2 Z phase
+0
+e
+*GF547
+ Counter CH1 Function input
+0
+e
+*GF548
+ Counter CH2 Function input
+0
+e
+*GF549
+ Counter CH1 Latch counter
+0
+e
+*GF550
+ Counter CH2 Latch counter
+0
+e
+*GF551
+ Axis 1 Zero signal
+0
+e
+*GF552
+ Axis 2 Zero signal
+0
+e
+*GF553
+ Axis 1 External command signal
+0
+e
+*GF554
+ Axis 2 External command signal
+0
+e
+*GF555
+ Axis 1 Drive module READY signal
+0
+e
+*GF556
+ Axis 2 Drive module READY signal
+0
+e
+*GF557
+ Axis 1 Near-point dog signal
+0
+e
+*GF558
+ Axis 2 Near-point dog signal
+0
+e
+*GF559
+ Axis 1 Upper limit signal
+0
+e
+*GF560
+ Axis 2 Upper limit signal
+0
+e
+*GF561
+ Axis 1 Lower limit signal
+0
+e
+*GF562
+ Axis 2 Lower limit signal
+0
+e
+*GF563
+ 0.01ms
+0
+e
+*GF564
+ 0.1ms
+0
+e
+*GF565
+ 0.2ms
+0
+e
+*GF566
+ 0.4ms
+0
+e
+*GF567
+ 0.6ms
+0
+e
+*GF568
+ 1ms
+0
+e
+*GF569
+ 5ms
+0
+e
+*GF570
+ 10ms
+0
+e
+*GF571
+ 20ms
+0
+e
+*GF572
+ 70ms
+0
+e
+*GF573
+ Rising
+0
+e
+*GF574
+ Falling
+0
+e
+*GF575
+ Rising+Falling
+0
+e
+*GF576
+ General output
+0
+e
+*GF577
+ Counter CH1 Coinc. No.1
+0
+e
+*GF578
+ Counter CH2 Coinc. No.1
+0
+e
+*GF579
+ Counter CH1 Coinc. No.2
+0
+e
+*GF580
+ Counter CH2 Coinc. No.2
+0
+e
+*GF581
+ Ax. 1 Deviation count clear
+0
+e
+*GF582
+ Ax. 2 Deviation count clear
+0
+e
+*GF583
+ Axis 1 CW/PULSE/A phase
+0
+e
+*GF584
+ Axis 2 CW/PULSE/A phase
+0
+e
+*GF585
+ Axis 1 CCW/SIGN/B phase
+0
+e
+*GF586
+ Axis 2 CCW/SIGN/B phase
+0
+e
+*GF587
+ Clear
+0
+e
+*GF588
+ Hold
+0
+e
+*GF589
+ CW/CCW mode
+0
+e
+*GF590
+ PULSE/SIGN mode
+0
+e
+*GF591
+ A phase/B phase (multiple of 1)
+0
+e
+*GF592
+ A phase/B phase (multiple of 4)
+0
+e
+*GF593
+ Increment w/ forward run pulse
+0
+e
+*GF594
+ Increment w/ reverse run pulse
+0
+e
+*GF595
+ Trapezoid
+0
+e
+*GF596
+ S-curve
+0
+e
+*GF597
+ Near-point dog method
+0
+e
+*GF598
+ Stopper 1
+0
+e
+*GF599
+ Stopper 2
+0
+e
+*GF600
+ Stopper 3
+0
+e
+*GF601
+ Count 1
+0
+e
+*GF602
+ Count 2
+0
+e
+*GF603
+ No method
+0
+e
+*GF604
+ Forward RUN
+0
+e
+*GF605
+ Reverse RUN
+0
+e
+*GF606
+ 1-axis linear (ABS)
+0
+e
+*GF607
+ 1-axis linear (INC)
+0
+e
+*GF608
+ Speed-position (fwd)
+0
+e
+*GF609
+ Speed-position (rev)
+0
+e
+*GF610
+ Current value changing
+0
+e
+*GF611
+ Speed (fwd)
+0
+e
+*GF612
+ Speed (rev)
+0
+e
+*GF613
+ Normal mode
+0
+e
+*GF614
+ Frequency measurement mode
+0
+e
+*GF615
+ Rotation speed measurement mode
+0
+e
+*GF616
+ Pulse measurement mode
+0
+e
+*GF617
+ PWM output mode
+0
+e
+*GF618
+ A phase/B phase
+0
+e
+*GF619
+ Internal clock(0.1us)
+0
+e
+*GF620
+ Internal clock(1us)
+0
+e
+*GF621
+ Internal clock(10us)
+0
+e
+*GF622
+ Internal clock(100us)
+0
+e
+*GF623
+ Other CH coincidence output No.1
+0
+e
+*GF624
+ 1-phase multiple of 1
+0
+e
+*GF625
+ 1-phase multiple of 1 (A phase only)
+0
+e
+*GF626
+ 1-phase multiple of 2
+0
+e
+*GF627
+ 1-phase multiple of 2 (A phase only)
+0
+e
+*GF628
+ 2-phase multiple of 1
+0
+e
+*GF629
+ 2-phase multiple of 1
+0
+e
+*GF630
+ 2-phase multiple of 2
+0
+e
+*GF631
+ 2-phase multiple of 4
+0
+e
+*GF632
+ 10kpps
+0
+e
+*GF633
+ 50kpps
+0
+e
+*GF634
+ 100kpps
+0
+e
+*GF635
+ 200kpps
+0
+e
+*GF636
+ Rising
+0
+e
+*GF637
+ Falling
+0
+e
+*GF638
+ Rising+Falling
+0
+e
+*GF639
+ During ON
+0
+e
+*GF640
+ ON at detection
+0
+e
+*GF641
+ Not ON at detection
+0
+e
+*GF642
+ Linear counter
+0
+e
+*GF643
+ Ring counter
+0
+e
+*GF644
+ Positive logic
+0
+e
+*GF645
+ Negative logic
+0
+e
+*GF646
+ Count disabling function
+0
+e
+*GF647
+ Latch counter function
+0
+e
+*GF648
+ Sampling counter function
+0
+e
+*GF649
+ Count disabling/preset function
+0
+e
+*GF650
+ Latch counter/preset function
+0
+e
+*GF651
+ Not preset
+0
+e
+*GF652
+ Preset
+0
+e
+*GF653
+ 0.01s
+0
+e
+*GF654
+ 0.1s
+0
+e
+*GF655
+ 1s
+0
+e
+*GF656
+ Pulse ON width
+0
+e
+*GF657
+ Pulse OFF width
+0
+e
+*GF658
+ ------
+0
+e
+*GF659
+ Use built-in CC-Link
+0
+e
+*GF660
+ Not use built-in CC-Link
+0
+e
+*GF661
+ CPU
+0
+e
+*GF662
+ Blt. I/O
+0
+e
+*GF663
+ CC-Link
+0
+e
+*GF664
+ Safety(St.%d)->X%04X
+0
+e
+*GF665
+ Safety(St.%d)->Y%04X
+0
+e
+End of file

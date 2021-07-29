@@ -1,0 +1,343 @@
+<GROUP>,,,
+4000-4FFF,"Errors detected by the CPU module,Troubleshooting in the QCPU User's Manual. (Hardware Design, Maintenance and Inspection)",********.csv,
+7000-7FFF,"Errors detected by the serial communication module, etc.",Troubleshooting in the Serial Communication Module User's Manual.,ERR_QJ71C24.csv
+B000-BFFF,Errors detected by the CC-Link system,Troubleshooting in the CC-Link System Master/Local Module User's Manual.,ERR_QJ61BT11.csv
+C000-CFFF,Errors detected by the Ethernet interface module,Troubleshooting in the Ethernet Interface Module User's Manual.,ERR_QJ71E71.csv
+F000-FFFF,Errors detected in the MELSECNET/H or MELSECNET/10 network system,Troubleshooting in the MELSECNET/H or MELSECNET/10 Network System Reference Manual.,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+E000,Network module error,Please consult your local Mitsubishi representative.,
+E001,Network module error,Please consult your local Mitsubishi representative.,
+E002,Network module error,Please consult your local Mitsubishi representative.,
+E003,Network module error,Please consult your local Mitsubishi representative.,
+E004,Network module error,Please consult your local Mitsubishi representative.,
+E005,Network module error,Please consult your local Mitsubishi representative.,
+E006,Receive queue full,"Temporarily stop the transient transmission, and then retry it. Reduce the operation frequency of transient transmission, and then retry the operation. Using the COM instruction, increase the processing frequency of transient transmission. (Section 9.2.1 Precautions for Dedicated Instructions (Common)) If the error persists even after taking the above actions, please consult your local Mitsubishi representative.",
+E007,Network module error,Please consult your local Mitsubishi representative.,
+E008,Network module error,Please consult your local Mitsubishi representative.
+E009,Network module error,Please consult your local Mitsubishi representative.
+E00A,Network module error,Please consult your local Mitsubishi representative.
+E00B,Network module error,Please consult your local Mitsubishi representative.
+E00C,Network module error,Please consult your local Mitsubishi representative.
+E00D,Network module error,Please consult your local Mitsubishi representative.
+E00E,Network module error,Please consult your local Mitsubishi representative.
+E00F,Network module error,Please consult your local Mitsubishi representative.
+E010,Network module error,Please consult your local Mitsubishi representative.
+E011,Network module error,Please consult your local Mitsubishi representative.
+E012,Parameter check result error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E013,Parameter check result error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E014,Network module error,Please consult your local Mitsubishi representative.
+E015,Network module error,Please consult your local Mitsubishi representative.
+E016,Network module error,Please consult your local Mitsubishi representative.
+E017,Network module error,Please consult your local Mitsubishi representative.
+E018,Network module error,Please consult your local Mitsubishi representative.
+E019,CPU module error,Please consult your local Mitsubishi representative.
+E01A,CPU module stop error,"Check the error in ""PLC diagnostics"" of GX Developer, and take corrective actions."
+E01B,CPU module power failure,The CPU module has been powered off. Power it on again.
+E01C,Network module error,Please consult your local Mitsubishi representative.
+E101,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E102,Reserved own station error,"Cancel the reserved station setting in ""Network range assignment"" of the control station. Change the station No. to the one that is not specified as a reserved station."
+E103,Invalid own station No.,Increase the number of total stations in the network setting of the control station. Change the station number to the one that is within the number of total stations.
+E104,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E105,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E106,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E107,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E108,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E109,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E10A,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E10B,Parameter error,"Use a CPU module or CC-Link IE controller network module that supports the added function. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E10C,Parameter error,"Use a CPU module or CC-Link IE controller network module that supports the added function. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E10D,Network module error,Please consult your local Mitsubishi representative.
+E110,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E111,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E112,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E113,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E114,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E115,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E116,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E117,Parameter error,"Write correct network parameters to the PLC. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E11A,Start device No. error (LW),"Check ""LB/LW settings (1)"" in ""Network range assignment"" of the control station."
+E11B,Start device No. error (LB),"Check ""LB/LW settings (1)"" in ""Network range assignment"" of the control station."
+E11C,LB/LW settings (2) error (LW),"Check ""LB/LW settings (2)"" in ""Network range assignment"" of the control station."
+E11D,LB/LW settings (2) error (LB),"Check ""LB/LW settings (2)"" in ""Network range assignment"" of the control station."
+E11E,End device No. error (LW),"Check ""LB/LW settings (1)"" in ""Network range assignment"" of the control station."
+E11F,End device No. error (LB),"Check ""LB/LW settings (1)"" in ""Network range assignment"" of the control station."
+E120,UINI execution at control station,"Setting the station number with the UINI instruction is not allowed for control stations. Set it with a network parameter. Change the station type setting to Normal station, and then retry it."
+E121,Own station No. error (UINI instruction),"Select ""Specify station No. by program."" in Network parameters, and execute it again."
+E122,Duplicated station No. (UINI instruction),"Change the own station No. setting in the control data, and then retry the instruction. Change the other station's No. which is duplicated."
+E123,Station No. already set (UINI instruction),"Station No. setting with the UINI instruction is limited to one time only. Reset the CPU module, and then retry the instruction."
+E130,Pairing setting error,"Check the pairing setting in ""Network range assignment"" of the control station."
+E131,Pairing setting error,"Check the pairing setting in ""Network range assignment"" of the control station."
+E152,Link startup condition error,Execute link startup from the station where cyclic transmission has stopped. Execute the forced link startup.
+E160,Invalid link startup/stop direction,Check the setting and stop or restart cyclic transmission.
+E162,Link startup/stop reexecution error (instructed by other station),Reexecute it after completing the processing for cyclic transmission stop/restart.
+E163,Link startup/stop reexecution error (instructed by own station),Reexecute it after completing the processing for cyclic transmission stop/restart.
+E164,Link startup/stop reexecution error (instructed by entire system),Reexecute it after completing the processing for cyclic transmission stop/restart.
+E165,Link startup/stop station specification error,Check the setting and stop or restart cyclic transmission.
+E166,Link startup/stop group specification error,Check the setting and stop or restart cyclic transmission.
+E170,Network module error,Please consult your local Mitsubishi representative.
+E171,Network module error,Please consult your local Mitsubishi representative.
+E172,Network module error,Please consult your local Mitsubishi representative.
+E173,Communication test retry error,Reexecute it after completing the currently executing communication test.
+E174,Communication test transmission completion signal retried out,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation. Check if the routing parameters are set correctly."
+E175,Communication test monitoring time timeout,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation. Check if the routing parameters are set correctly."
+E176,Communication test transmission completion wait time timed out,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation. Check if the routing parameters are set correctly."
+E177,Network module error,Please consult your local Mitsubishi representative.
+E178,Network module error,Please consult your local Mitsubishi representative.
+E179,Network module error,Please consult your local Mitsubishi representative.
+E17A,Duplicated communication test data reception,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation."
+E17B,Network module error,Please consult your local Mitsubishi representative.
+E17C,Communication test target station specification error,Confirm a correct destination and retry the operation.
+E200,Network module error,Please consult your local Mitsubishi representative.
+E201,Duplicated transient data reception error,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation."
+E202,Network module error,Please consult your local Mitsubishi representative.
+E203,Send buffer full,"Temporarily stop the transient transmission, and then retry it. Reduce the operation frequency of transient transmission, and then retry the operation. Using the COM instruction, increase the processing frequency of transient transmission. (Section 9.2.1 Precautions for Dedicated Instructions (Common)) If the error persists even after taking the above actions, please consult your local Mitsubishi representative."
+E204,Transient data resend count exceeded,"Check the network status in the CC IE Control Network Diagnostics, and retry the operation."
+E205,Receive buffer full,"Temporarily stop the transient transmission, and then retry it. Reduce the operation frequency of transient transmission, and then retry the operation. Using the COM instruction, increase the processing frequency of transient transmission. (Section 9.2.1 Precautions for Dedicated Instructions (Common)) If the error persists even after taking the above actions, please consult your local Mitsubishi representative."
+E206,Network module error,Please consult your local Mitsubishi representative.
+E207,Transient data receiving network No. error,"Check the network numbers of the own and target stations in Network parameters, and execute it again."
+E208,Transient data target station No. error,"Confirm the target station No. on the own station, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E209,Network module error,Please consult your local Mitsubishi representative.
+E20A,Network module error,Please consult your local Mitsubishi representative.
+E20B,Transient data relay count error,Modify the system configuration so that the number of relay stations is seven or less. Check if the routing parameters are set correctly.
+E20C,Network module error,Please consult your local Mitsubishi representative.
+E20D,Network module error,Please consult your local Mitsubishi representative.
+E20E,Network module error,Please consult your local Mitsubishi representative.
+E20F,Transient data target station No. error,"Confirm the target station No. on the own station, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E210,Network module error,Please consult your local Mitsubishi representative.
+E211,Invalid assign control station No. in transient data,"Confirm the target station No. on the own station, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E212,Invalid present control station No. in transient data,"Confirm the target station No. on the own station, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E213,Transient data transmission completion wait time timed out,"Check the network status in the CC IE Control Network Diagnostics. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E214,Network module error,Please consult your local Mitsubishi representative.
+E215,Network module error,Please consult your local Mitsubishi representative.
+E216,Network module error,Please consult your local Mitsubishi representative.
+E217,Network module error,Please consult your local Mitsubishi representative.
+E218,Transient data own station specification error,"Change the target station specification setting to no other station specification or other station No., and then retry it. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E219,Network module error,Please consult your local Mitsubishi representative.
+E21A,Network module error,Please consult your local Mitsubishi representative.
+E21B,Transient transmission with own station No. unspecified,"Specify a station No. in the UINI instruction, and then retry it. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E21C,Network module error,Please consult your local Mitsubishi representative.
+E21D,Network module error,Please consult your local Mitsubishi representative.
+E21E,Network module error,Please consult your local Mitsubishi representative.
+E21F,Network module error,Please consult your local Mitsubishi representative.
+E220,Network module error,Please consult your local Mitsubishi representative.
+E221,Network module error,Please consult your local Mitsubishi representative.
+E222,Network module error,Please consult your local Mitsubishi representative.
+E223,Network module error,Please consult your local Mitsubishi representative.
+E224,Attribute code error (RIRD/RIWT instruction),"Check the Attribute code in the control data, and then retry the instruction. If the error persists even after taking the above action, please consult your  local Mitsubishi representative."
+E225,Access code error (RIRD/RIWT instruction),"Check the Access code in the control data, and then retry the instruction. If the error persists even after taking the above action, please consult your  local Mitsubishi representative."
+E226,Network module error,Please consult your local Mitsubishi representative.
+E227,Network module error,Please consult your local Mitsubishi representative.
+E240,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E241,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E242,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E243,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E244,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E245,Target network module error (Dedicated instruction),Please consult your local Mitsubishi representative.
+E246,Network module error,Please consult your local Mitsubishi representative.
+E247,Network module error,Please consult your local Mitsubishi representative.
+E248,Network module error,Please consult your local Mitsubishi representative.
+E249,Network module error,Please consult your local Mitsubishi representative.
+E24A,Network module error,Please consult your local Mitsubishi representative.
+E24B,Network module error,Please consult your local Mitsubishi representative.
+E24C,Network module error,Please consult your local Mitsubishi representative.
+E24D,Network module error,Please consult your local Mitsubishi representative.
+E24E,Network module error,Please consult your local Mitsubishi representative.
+E24F,Target station No. error (Dedicated instruction),"Confirm the target station No. in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E250,Network module error,Please consult your local Mitsubishi representative.
+E251,Duplicated dedicated instruction reception error,Check the network status in the CC IE Control Network Diagnostics.
+E252,Network module error,Please consult your local Mitsubishi representative.
+E253,Network module error,Please consult your local Mitsubishi representative.
+E254,Target station CPU type error (Dedicated instruction),"Confirm the target station CPU type in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E255,Data size error (Dedicated instruction),"Confirm the data length in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E256,Arrival monitoring time specification error (Dedicated instruction),"Confirm the arrival monitoring time in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E257,Resend count specification error (Dedicated instruction),"Confirm the number of resends in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E258,Target network No. error (Dedicated instruction),"Confirm the target network No. in the control station, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E259,Target station channel error (SEND instruction),"Check the Target station channel in the control data, and then retry the instruction. If the error persists even after taking the above action, please  consult your local Mitsubishi representative."
+E25A,Modification specification error (UINI instruction),"Check the Modification specification in the control data, and then retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E25B,Own station No. error (UINI instruction),"Check the own station No. set in the control data, and then retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E25C,Network module error,Please consult your local Mitsubishi representative.
+E25D,Network module error,Please consult your local Mitsubishi representative.
+E25E,Network module error,Please consult your local Mitsubishi representative.
+E25F,Network module error,Please consult your local Mitsubishi representative.
+E260,Network module error,Please consult your local Mitsubishi representative.
+E261,Network module error,Please consult your local Mitsubishi representative.
+E262,Arrival confirmation error (Dedicated instruction),"Change the execution type in the control data to ""No arrival confirmation"", and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E263,Network module error,Please consult your local Mitsubishi representative.
+E264,Transmission completion wait time timeout error (Dedicated instruction),"Check the network status in the CC IE Control Network Diagnostics. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E265,Response timer timeout error (Dedicated instruction),"Check the network status in the CC IE Control Network Diagnostics. Check the version of the CC-Link IE controller network compatible device on the  target station. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E266,Unsupported request reception error (Dedicated instruction),"Change the target station at the station where the SEND instruction was executed. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E267,Target station No. error (Dedicated instruction),"Confirm the target station No. in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E268,Execution/abnormal completion type error (Dedicated instruction),"Confirm the execution/abnormal completion type in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E269,Request type error (Dedicated instruction),"Confirm the request type in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E26A,No assign/present control station (Dedicated instruction),"Confirm the target station No. in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E26B,Dedicated instruction execution mode error,"Change the circuit test mode of the control station to online mode, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E26C,Channel busy (Dedicated instruction),"Wait for a little while, and retry it. Change the setting of ""Channel used by the own station"" or ""Target station channel"" in the control data."
+E26D,Interrupt setting channel duplication (Dedicated instruction),"Check and correct the Channel used by the own station in the control data, and retry the instruction. Check and correct the channel used for the interrupt setting, and retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E26E,Device specification error (ZNRD/ZNWR instruction),"Check the setting data of the ZNRD/ZNWR instruction, and then retry the instruction."
+E26F,Device specification error (ZNRD/ZNWR instruction),"Check the setting data of the ZNRD/ZNWR instruction, and then retry the instruction."
+E270,Network module error,Please consult your local Mitsubishi representative.
+E271,Operation mode error (RSTOP instruction),"Check and correct the Operation mode setting in the setting data, and then retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E272,Clear mode error (RRUN instruction),"Check and correct the Clear mode setting in the setting data, and then retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E273,Mode error (RRUN instruction),"Check the Mode setting in the setting data, and then retry the instruction. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E274,Network module error,Please consult your local Mitsubishi representative.
+E275,Network module error,Please consult your local Mitsubishi representative.
+E276,Network module error,Please consult your local Mitsubishi representative.
+E277,Network module error,Please consult your local Mitsubishi representative.
+E280,Network module error,Please consult your local Mitsubishi representative.
+E281,Network module error,Please consult your local Mitsubishi representative.
+E282,Network module error,Please consult your local Mitsubishi representative.
+E283,Network module error,Please consult your local Mitsubishi representative.
+E284,Network module error,Please consult your local Mitsubishi representative.
+E285,Network module error,Please consult your local Mitsubishi representative.
+E286,Network module error,Please consult your local Mitsubishi representative.
+E287,Network module error,Please consult your local Mitsubishi representative.
+E288,Network module error,Please consult your local Mitsubishi representative.
+E2A0,Receive buffer full (Transient),Adjust the timing of transient requests from CC-Link IE controller network compatiblle devices so that each request will issued at certain intervals.
+E2A1,Send buffer full (Transient),Adjust the timing of transient requests from CC-Link IE controller network compatiblle devices so that each request will issued at certain intervals.
+E2A2,Transmission completion wait time timed out,"Check the network status in the CC IE Control Network Diagnostics. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E2A3,Frame length (L) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A4,Gate count (GCNT) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A5,Destination address (DA) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A6,Source address (SA) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A7,Destination application type (DAT) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A8,Source application type (SAT) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2A9,Destination network No. (DNA) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2AA,Destination address (DS) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2AB,Source network No. (SNA) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2AC,Source address (SS) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2AD,Data length (L1) error,"Check the contents of the transient frame on the sending end. For details, please consult the manufacturer of the CC-Link IE controller network compabile device."
+E2AE,Target specification error,"Confirm the target station No. in the control data, and retry the operation. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E2AF,Target station No. error (CC-Link dedicated instruction),
+E2B0,Network module error,Please consult your local Mitsubishi representative.
+E300,Network module error,Please consult your local Mitsubishi representative.
+E301,Network module error,Please consult your local Mitsubishi representative.
+E302,Network module error,Please consult your local Mitsubishi representative.
+E310,Network module error,Please consult your local Mitsubishi representative.
+E311,Network module error,Please consult your local Mitsubishi representative.
+E320,Network module error,Please consult your local Mitsubishi representative.
+E321,Network module error,Please consult your local Mitsubishi representative.
+E322,Network module error,Please consult your local Mitsubishi representative.
+E323,Network module error,Please consult your local Mitsubishi representative.
+E324,Network module error,Please consult your local Mitsubishi representative.
+E325,Network module error,Please consult your local Mitsubishi representative.
+E330,Network module error,Please consult your local Mitsubishi representative.
+E331,Network module error,Please consult your local Mitsubishi representative.
+E332,Network module error,Please consult your local Mitsubishi representative.
+E333,Network module error,Please consult your local Mitsubishi representative.
+E340,Network module error,Please consult your local Mitsubishi representative.
+E341,Network module error,Please consult your local Mitsubishi representative.
+E342,Network module error,Please consult your local Mitsubishi representative.
+E343,Network module error,Please consult your local Mitsubishi representative.
+E350,Network module error,Please consult your local Mitsubishi representative.
+E361,Network module error,Please consult your local Mitsubishi representative.
+E362,Network module error,Please consult your local Mitsubishi representative.
+E363,Network module error,Please consult your local Mitsubishi representative.
+E364,Network module error,Please consult your local Mitsubishi representative.
+E365,Network module error,Please consult your local Mitsubishi representative.
+E366,Network module error,Please consult your local Mitsubishi representative.
+E367,Network module error,Please consult your local Mitsubishi representative.
+E368,Network module error,Please consult your local Mitsubishi representative.
+E369,Network module error,Please consult your local Mitsubishi representative.
+E36A,Network module error,Please consult your local Mitsubishi representative.
+E36B,Network module error,Please consult your local Mitsubishi representative.
+E36C,Network module error,Please consult your local Mitsubishi representative.
+E36D,Network module error,Please consult your local Mitsubishi representative.
+E380,Network module error,Please consult your local Mitsubishi representative.
+E381,Network module error,Please consult your local Mitsubishi representative.
+E382,Network module error,Please consult your local Mitsubishi representative.
+E383,Network module error,Please consult your local Mitsubishi representative.
+E390,Network module error,Please consult your local Mitsubishi representative.
+E391,Network module error,Please consult your local Mitsubishi representative.
+E392,Network module error,Please consult your local Mitsubishi representative.
+E393,Network module error,Please consult your local Mitsubishi representative.
+E394,Network module error,Please consult your local Mitsubishi representative.
+E395,Network module error,Please consult your local Mitsubishi representative.
+E396,Network module error,Please consult your local Mitsubishi representative.
+E397,Network module error,Please consult your local Mitsubishi representative.
+E3A0,Network module error,Please consult your local Mitsubishi representative.
+E3A1,Network module error,Please consult your local Mitsubishi representative.
+E3B0,Network module error,Please consult your local Mitsubishi representative.
+E3B1,Network module error,Please consult your local Mitsubishi representative.
+E3B2,Network module error,Please consult your local Mitsubishi representative.
+E3B3,Network module error,Please consult your local Mitsubishi representative.
+E3B4,Network module error,Please consult your local Mitsubishi representative.
+E3B5,Network module error,Please consult your local Mitsubishi representative.
+E3B6,Network module error,Please consult your local Mitsubishi representative.
+E3B7,Network module error,Please consult your local Mitsubishi representative.
+E3B8,Network module error,Please consult your local Mitsubishi representative.
+E3B9,Network module error,Please consult your local Mitsubishi representative.
+E3BA,Network module error,Please consult your local Mitsubishi representative.
+E3BB,Max. number of stations exceeded,Assign some stations to another network so that the total number of stations will be within the setting range.
+E3BC,Network line error,"Check the network status in the CC IE Control Network Diagnostics. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E3BD,Network module error,Please consult your local Mitsubishi representative.
+E3C0,Network module error,Please consult your local Mitsubishi representative.
+E3C1,Network module error,Please consult your local Mitsubishi representative.
+E3C2,Network module error,Please consult your local Mitsubishi representative.
+E501,Network module error,Please consult your local Mitsubishi representative.
+E502,Network module error,Please consult your local Mitsubishi representative.
+E503,Network module error,Please consult your local Mitsubishi representative.
+E504,Transient execution error (no baton passing on the own station),"Execute the dedicated instruction, interlocking with Baton pass status (own station) (SB0047) and Baton pass status of each station (SW00A0 to SW00A7). Check the Cause of baton pass interruption (SW0048) at the own station and restart baton (or token) passing before executing the transient transmission. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E505,Transient execution error with own station number duplicated,Remove the duplication of the own station numbers before executing the transient transmission.
+E506,Network module error,Please consult your local Mitsubishi representative.
+E507,Network module error,Please consult your local Mitsubishi representative.
+E508,Duplication of station No. and control station setting of the own station,"Change the station No. of the own or other station and the control station setting. After taking the above action, reset the error station. After turning on the own station, turn on the other stations to identify the station that has a duplicate station No. and/or control station setting. When the redundant system is in debug mode, connect only one of the two systems to the network. To connect both systems to the network, set the operation mode of the redundant system to backup or separate mode."
+E509,Own station No. duplication error,"Change the station No. of the own or other station. After taking the above action, reset the error station. After turning on the own station, turn on the other stations to identify the station that has a duplicate station No. setting. When the redundant system is in debug mode, connect only one of the two systems to the network. To connect both systems to the network, set the operation mode of the redundant system to backup or separate mode."
+E50A,Duplication of the own station's control station setting,"Change the control station setting of the own or other station. After taking the above action, reset the error station. After turning on the own station, turn on the other stations to identify the station that has a duplicate control station setting."
+E50B,Network No. error,Set the same network No. to the own station and the (sub-) control station.
+E521,Network module error,Please consult your local Mitsubishi representative.
+E522,Network module error,Please consult your local Mitsubishi representative.
+E523,Network module error,Please consult your local Mitsubishi representative.
+E524,Network module error,Please consult your local Mitsubishi representative.
+E5D1,Network module error,Please consult your local Mitsubishi representative.
+E5D2,Network module error,Please consult your local Mitsubishi representative.
+E5D3,Network module error,Please consult your local Mitsubishi representative.
+E5D4,Network module error,Please consult your local Mitsubishi representative.
+E5D5,Network module error,Please consult your local Mitsubishi representative.
+E5E1,Network module error,Please consult your local Mitsubishi representative.
+E5E2,Network module error,Please consult your local Mitsubishi representative.
+E5E3,Network module error,Please consult your local Mitsubishi representative.
+E5E4,Network module error,Please consult your local Mitsubishi representative.
+E5E5,Network module error,Please consult your local Mitsubishi representative.
+E5E6,Network module error,Please consult your local Mitsubishi representative.
+E5E7,Network module error,Please consult your local Mitsubishi representative.
+E5E8,Network module error,Please consult your local Mitsubishi representative.
+E5E9,Network module error,Please consult your local Mitsubishi representative.
+E5F0,Transient execution error (no baton passing on the target station),"Reconnect the target station to the network. Execute the dedicated instruction, interlocking with Baton pass status (own station) (SB0047) and Baton pass status of each station (SW00A0 to SW00A7). Check the Cause of baton pass interruption (SW0048) at another station and restart baton (or token) passing before executing the transient transmission. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+E5F1,Specified station No. duplication error,Change the station No. of the normal station.
+E5F2,Network module error,Please consult your local Mitsubishi representative.
+E5F3,Network module error,Please consult your local Mitsubishi representative.
+E5F4,Network module error,Please consult your local Mitsubishi representative.
+E5F5,Network module error,Please consult your local Mitsubishi representative.
+E5F6,Network module error,Please consult your local Mitsubishi representative.
+E5F7,Network module error,Please consult your local Mitsubishi representative.
+EA00,Network module error,Please consult your local Mitsubishi representative.
+EA01,Network module error,Please consult your local Mitsubishi representative.
+EA02,Network module error,Please consult your local Mitsubishi representative.
+EA03,Network module error,Please consult your local Mitsubishi representative.
+EA04,Network module error,Please consult your local Mitsubishi representative.
+EA10,Network module error,Please consult your local Mitsubishi representative.
+EA11,Network module error,Please consult your local Mitsubishi representative.
+EA12,Network module error,Please consult your local Mitsubishi representative.
+EA13,Network module error,Please consult your local Mitsubishi representative.
+EA14,Network module error,Please consult your local Mitsubishi representative.
+EA15,Network module error,Please consult your local Mitsubishi representative.
+EA16,Network module error,Please consult your local Mitsubishi representative.
+EA17,Network module error,Please consult your local Mitsubishi representative.
+EA18,Network module error,Please consult your local Mitsubishi representative.
+EAE0,Network module error,Please consult your local Mitsubishi representative.
+EAE1,Network module error,Please consult your local Mitsubishi representative.
+EAE2,Network module error,Please consult your local Mitsubishi representative.
+EAE3,Network module error,Please consult your local Mitsubishi representative.
+EAE4,Network module error,Please consult your local Mitsubishi representative.
+EAE5,CPU module error,Please consult your local Mitsubishi representative.
+EAE6,CC IE Control-incompatible CPU error,"Use a CPU module that is compatible with the CC-Link IE controller network module. If the error persists even after taking the above action, please consult your local Mitsubishi representative."
+EAE7,Network module error,Please consult your local Mitsubishi representative.
+EAF0,Network module error,Please consult your local Mitsubishi representative.
+EAF1,Network module error,Please consult your local Mitsubishi representative.
+EAF2,Network module error,Please consult your local Mitsubishi representative.
+EAF3,Network module error,Please consult your local Mitsubishi representative.
+EAF4,Network module error,Please consult your local Mitsubishi representative.
+EAF5,Network module error,Please consult your local Mitsubishi representative.
+EAF6,Network module error,Please consult your local Mitsubishi representative.
+</ERRCODE>,,

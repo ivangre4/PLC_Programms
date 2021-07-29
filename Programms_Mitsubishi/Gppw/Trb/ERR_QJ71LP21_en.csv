@@ -1,0 +1,219 @@
+<GROUP>,,,
+4000-4FFF,Error detected by PLC CPU,Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.),********.csv
+7000-7FFF,"Error detected by the serial communication module,etc.",Take measure referring to the troubleshooting section of the Serial Communication Module User's Manual,ERR_QJ71C24.csv
+B000-BFFF,Error detected by the CC-Link module,Take measure referring to the troubleshooting section of the CC-Link System Master/Local Module User's Manual,ERR_QJ61BT11.csv
+C000-CFFF,Error detected by the Ethernet module,Take measure referring to the troubleshooting section of the Ethernet Interface Module User's Manual,ERR_QJ71E71.csv
+</GROUP>,,,
+<ERRCODE>,,,
+F101,Initial status (Network activated),Wait until SB0047 (baton pass status) and SB0049 (data link status) turns off (normal).,
+F102,Initial status (Network activated),Wait until SB0047 (baton pass status) and SB0049 (data link status) turns off (normal).,
+F103,Initial status (during online test),Wait until SB0047 (baton pass status) and SB0049 (data link status) turns off (normal).,
+F104,Initial status(Control/sub-control station shift),Wait until SB0047 (baton pass status) and SB0049 (data link status) turns off (normal).,
+F105,Initial status (Parameters being processed),Wait until SB0047 (baton pass status) and SB0049 (data link status) turns off (normal).,
+F106,Shift from failed control station to sub-control station,Check the condition of the control station's power supply and of the cables and the status of the control station CPU module.,
+F107,Baton pass error (baton lost),"Check the line status for a faulty cable or a missing terminal resistor, as well as the stations that are not powered on. In the case of frequent transient transmission and when the link scan time may exceed 200ms, adjust the transient setting values to reduce the link scan time.",
+F108,Baton pass error (duplicate baton),"Check for duplicate station numbers and control stations with the setup confirmation test .
+Check for faulty cables, wire breakage, poor connector connections, connection errors, uninstalled or loose terminal resistors, etc.",
+F109,Initial status (during online test),Wait until SB0047 (baton pass status) and SB0049 (data link status) are recovered.,
+F10A,Initial status (online test/offline loop test),"<During execution of an online test>
+Wait until SB0047 (baton pass status) and SB0049 (data link status) are recovered.
+<During execution of an offline test>
+Change the switch setting to online after the test has been completed."
+F10B,Duplicate station number error,"Review the station number setting.
+The setup confirmation test of network diagnosis is effective."
+F10C,Duplicate control station error,"Review the station number setting.
+The setup confirmation test of network diagnosis is effective."
+F10D,Offline status,"Review the mode setting, and change it to online."
+F10E,Number of receive error retries exceeded,"Check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.The setup confirmation test and loop test of network diagnosis are effective."
+F10F,Number of send error retries exceeded,"Check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.The setup confirmation test and loop test of network diagnosis are effective."
+F110,Timeout error,"Check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.The setup confirmation test and loop test of network diagnosis are effective."
+F111,"Corresponding station error
+(Baton pass to the corresponding station not executed)","Review the status of the corresponding station and the parameter and switch settings (to see if there is a parameter error and the corresponding station is the control station and properly set).Confirm the power supply status of the corresponding station (to see if it is repeatedly turned on and off).Check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.The setup confirmation test and loop test of network diagnosis are effective."
+F112,Faulty loop status,"Check for faulty cables, faulty hardware, incorrect cable wiring, and duplication of station numbers, control stations, and remote master stations.Confirm the power supply status of each module (to see if it is repeatedly turned on and off).Confirm whether network modules in MESLECNET/H and MELSECNET/10 modes exist together (confirm the control station type)."
+F113,"Send failure
+(Baton pass to the host station not executed)","Retry after a little while. If the error recurs as a result of a retry, check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.Wait until SB0047 (baton pass status) and SB0049 (data link status) are recovered."
+F114,Send failure,"Retry after a little while. If the error recurs as a result of a retry, check for faulty cables, faulty hardware, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.Wait until SB0047 (baton pass status) and SB0049 (data link status) are recovered."
+F115,Improper function code,"Check for faulty cables, faulty hardware, incorrect wiring, duplication of station numbers, and duplication of control stations."
+F116,Delayed online test processing,"Check for faulty cables, faulty hardware, incorrect wiring, duplication of station numbers, and duplication of control stations."
+F117,Send failure,"Check for faulty cables, hardware failure, noise, incorrect wiring errors, and absence of terminal resistors (when a bus is used)."
+F118,Send failure (baton regeneration),Wait until SB0047 (baton pass status)/SB0049 (data link status) is turned off (normal).
+F11A,"Send failure
+(multiplex transmission stopped)",Wait for a while and execute again.
+F11B,Being disconnected,"Review the parameter and switch settings (to see if there is a parameter error and the corresponding station is the control station or remote master station and properly set).Check for faulty cables, faulty hardware, noise, incorrect wiring, and duplication of station numbers, control stations, and remote master stations."
+F11C,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+F11F,Initial status (no baton addressed to host),"Check for the operation status of the control sub-control station, faulty cables, incorrect cable wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations.Confirm whether network modules in MESLECNET/H and MELSECNET/10 modes exist together (confirm the control station type)."
+F120,Destination station specification error,"Check for faulty cables, faulty hardware, incorrect wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, control stations, and remote master stations."
+F122,Send failure (coaxial bus system),"Check for coaxial cable connection, proper connctor connection, connection of terminating resistor, or faulty cables."
+F221,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+F222,"No free area in the receive buffer
+(buffer-full error)","Retry after a little while.If the error recurs as a result of a retry, review the number of transient communication times and communication interval of the entire system.Turn off the power supply to the entire system, and turn it on again."
+F224,Receive data size error,The hardware of the module on the transient transmission station.Contact your local Mitsubishi representative.
+F225,Logical channel number error,The hardware of the module on the transient source station.Contact your local Mitsubishi representative.
+F226,Channel number error,"Check if the logical channel number designated in the execution source of the SEND instruction is set in the target network module.Alternatively, specify the logical channel number set in the target network module."
+F228,SEND instruction target station error,Review target network number and target station no. in the control data at the execution source of the SEND instruction.
+F301,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F701,"Send-target station number error
+(station No. 0 specified)",The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F702,"Send-target station number error
+(station No. 65 or higher number specified)",The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F703,Destination group number error,Review the destination group number.
+F706,Received data size error,"The cable is faulty, or The hardware of the network module is faulty.If a communication error has occurred, review the cable.If not, the hardware of the network module is faulty.Contact your local Mitsubishi representative."
+F707,Number of relay stations invalid,Set stations to which data can be sent.Review the system.Review the routing parameters.
+F708,Receiving group number error,Review the group number of the target station.
+F709,Receiving network number error,"Review the network No. parameter.If the parameter is not set, the network No. is preset to 1 (default); so check the network No. of other stations."
+F70A,System error,"The cable is faulty, or the hardware of the network module is faulty.If a communication error has occurred, review the cable.If not, the hardware of the network module is faulty.Contact your local Mitsubishi representative."
+F70B,Response wait timeout,Wait until SB0047 (baton pass status) and SB0049 (data link status) are recovered.
+F70C,System error,"The cable is faulty, or there is a problem with the hardware of the network module.If there is a communication error, review the cable.If there is no communication error, there is a problem with the hardware of the network module.Contact your local Mitsubishi representative."
+F70E,System error,"The cable is faulty, or the hardware of the network module is faulty.If a communication error has occurred, review the cable.If not, the hardware of the network module is faulty.Contact your local Mitsubishi representative."
+F710,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F711,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F712,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F781,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F782,Connection target specification error,"Check if C24 connection or CC-Link connection is specified for access to other stations.If the setting is correct, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F783,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F7C1,Host station channel in use,"The same channel cannot be used at the same time.Change the channel number.Alternatively, do not use the same channel at the same time."
+F7C2,Target station channel in use,"Retry the SEND instruction after a little while.Check if the target station uses the channel concerned to execute the instruction, or if RECV processing is executed.Check if another station executes the SEND instruction to the target station's channel."
+F7C3,Arrival monitoring timeout,"<When this error occurs during the execution of the RECV instruction>When another station is trying to execute the SEND instruction, increase the value of the arrival monitoring time.Alternatively, start the RECV instruction by setting the RECV instruction execution request flag to ON.<When this error occurs in other cases>Increase the value of the arrival monitoring time.Confirm the operation status of the target station, the network status , and the relay station status (in the case of sending to other network)."
+F7C4,Resend time count out,"Increase the arrival monitoring time.Re-execute the REMFR/REMTO instruction.Confirm the operation status of the target station, the network status , and the relay station status (in the case of sending to other network)."
+F7C5,SEND instruction target station error,Review the target network number and target station in the request control data of send/receive instructions.
+F7C6,Channel number setting out of range,Set the channel number of the host station and of the target station in the request control data of send/receive instructions with a range between 1 and 64.
+F7C7,"Target station specification error
+(host station specification)",Specify the target station number in the request control data of send/receive instructions to other than the number of host station.
+F7C8,Execution type specification error,"When the execution/abnormal/completion type in the request control data of send/receive instructions is specified for all stations or groups, set ''No arrival confirmation'' for the execution type."
+F7C9,Resend count setting out of range,Set the resent count of the request control data of send/receive instructions within a range between 0 and 15 (times).
+F7CA,Arrival monitoring time setting out of range,Set the arrival monitoring time of the request control data of send/receive instructions within a range between 0 and 32767 (seconds).
+F7CB,Sent data length setting out of range (SEND instruction),Set the sent data length of the request control data of the SEND instruction within a range between 1 and 960 (words).
+F7CD,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F7E1,Control data error,"Confirm the set values (mode, etc.) in the control data of a dedicated instruction."
+F7E2,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F7E3,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F7E4,Target CPU module type error,"Check if the CPU module model of the target station specified in the WRITE, READ, REQ, RRUN, RSTOP, RTMRD, and RTMWR instructions is out of applicable range."
+F7E5,Post-transmission event wait timer time-out,"Re-execute the REMFR or REMTO instruction after a little while.Confirm the operation status of the target station, the network status, and relay station status(in the case of sending to other network)."
+F7E7,Buffer memory address error,Check if the buffer memory address specified in the REMFR and REMTO instructions exceeds 8000H.
+F7E8,Network type error,Check if the network number specified in the REMFR and REMTO instructions represents a PLC to PLC network.
+F7E9,Instruction not executable error,Check if the host station is data-linked when the REMFR or REMTO instruction is executed.
+F800,Mode switch setting error,"Confirm the setting of the mode switch.If the error recurs after resetting, the hardware of the network module is faulty.Contact your local Mitsubishi representative."
+F801,Network number setting error,"Create and write new network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F802,Group number error,"Create and write new network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F803,Station number setting error,"Check if the station number is within a range of 1 to 64.If the error recurs even if the station number is set between 1 and 64, the hardware of the network module is faulty.Contact your local Mitsubishi representative."
+F804,DIP switch setting error,"Create and write new network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F805,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F806,System error,The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F808,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80A,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80B,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80C,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80D,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80E,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F80F,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F811,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F812,System error,The hardware of the network module is faulty.Contact your local Mitsubishi representative.
+F813,Parameter data error (parameter),"Replace the network module of the control or normal station with the one compatible with the MELSECNET/H Extended mode.
+Change the network type of the normal station to that of the control station. Create and write new network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F814,Parameter data error (code),"Create and write new network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F820,Link parameter error,"Replace the network module of the normal station with the one compatible with the MELSECNET/H Extended mode.
+Change the network type of the normal station to that of the control station. Create and write new network parameters to the PLC.
+When the MELSECNET/H twist bus unit is used, it is confirmed The network type is not MELSECNET/10 mode, and that the mode setting is not loop test. Create and write new network parameters to the PLC.
+If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F821,Station-specific parameter error,"Review station-specific inherent parameters.Set common parameters   station-specific inherent parameters for the sending range of the host station.If no station-specific parameters are set, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F822,System error,The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F823,Parameter consistency error,"Set common parameters   station-specific parameters for the sending range of the host station.If no station-specific parameters are set, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F825,CPU parameter check error,"Rewrite the network parameters for the control station to the PLC.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F826,Parameter mismatch error,"Set parameters suitable for the sub control station, or activate it as a control station.Review and reset the parameters for the master and sub master stations.If the error recurs, the hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative."
+F828,No control station shift setting,Set ''with data link by the sub control station when the control station is down.''
+F829,No pairing setting,Set ''with pairing'' to the station connected to the redundant system (QnPRHCPU).
+F82A,Network type mismatch (normal station detected),Match the network type set for the normal station with the one set for the control station.
+F82B,Network type mismatch (control station detected),Match the network type set for the normal station with the one set for the control station.
+F830,System error,The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F831,System error,The hardware of the CPU or network module is faulty.Contact your local Mitsubishi representative.
+F832,Data link startup condition error,"If the data link is stopped under all station specification, start it by all station specification.If the data link is stopped under specific station specification, start it from the station , or forcibly start it."
+F833,Keyword error,"Start the data link from the station where it was discontinued, or forcibly start it."
+F834,System error,"The cable is faulty, or the hardware of the network module is faulty. If a communication error has occurred, review the cable. If not, the hardware of the network module is faulty. Contact your local Mitsubishi representative."
+F835,System error,"The cable is faulty, or the hardware of the network module is faulty. If a communication error has occurred, review the cable. If not, the hardware of the network module is faulty. Contact your local Mitsubishi representative."
+F836,System error,"The cable is faulty, or the hardware of the network module is faulty. If a communication error has occurred, review the cable. If not, the hardware of the network module is faulty. Contact your local Mitsubishi representative."
+F837,Exceeded number of retries,Check the status of the control station and of the remote master station (to see if resetting or an error occurs in the middle of the operation).
+F838,Relevant timer timeout,Check the status of the control station and of the remote master station (to see if resetting or an error occurs in the middle of the operation).
+F839,"No link parameter
+(communication impossible)",Register link parameters
+F83A,SW0000 out of range error,Correct the contents of SW0000.
+F83B,Forced switching impossible error,Check if the following conditions are met:? The system is a multiplexed remote I/O network system.? Check if ''Return as a standby station'' is set as the parameter for the master station.? The host station is operating as a master station.? The operating sub master station is in data-linking.
+F840,Low speed cyclic parameter error,"Create and write network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative."
+F841,System error,"Create and write network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative."
+F842,System error,"Create and write network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative."
+F843,System error,"Create and write network parameters to the PLC.If the error recurs, the hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative."
+F901,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+F902,System error,Check the system configuration to see if there are eight or more relay networks in the MELSECNET/H.
+F903,System error,The hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative.
+F904,System error,The hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative.
+F905,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD01,CRC error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD02,Overrun error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD03,AB. IF error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD04,TIME error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD05,Data error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD06,Under error (offline test),"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD07,Send failure,"There is no need to take corrective measures because the system retries the operation.If the error frequently occurs, check for faulty cables, faulty hardware, noise, absence of terminating resistor (in the case of the bus), and incorrect wiring."
+FD08,Send failure (coaxial bus system),Check if a coaxial cable is not connected or is loose or faulty and the terminating resistor is not connected.
+FD09,Loop status changed (offline loop test),"There is no need to take corrective measures because the system retries the operation (do not switch the loop in the middle of the operation).If the error frequently occurs, check the line and the wiring status."
+FD0A,Unstable communication (offline loop test),"There is no need to take corrective measures because the system retries the operation (do not switch the loop in the middle of the operation).If the error frequently occurs, check the line and the wiring status."
+FD0B,Wiring error (offline loop test),Check the wiring.
+FD0C,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD11,Error occurred during test execution,Execute after the completion of the test from other station.
+FD12,Disconnecting error,Review the cause for why the station is being disconnected.
+FD13,System error,Set the total number of link stations with a common parameter.Set a station number that is equal to the host station number or larger.
+FD14,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD15,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD16,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD17,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD18,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD19,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD1A,Station with duplicated station number,"Check the duplicate station number, and correct it."
+FD1B,Test abort error,The ongoing test was interrupted due to the resetting of the test executing station. There is a faulty station on the networks.
+FD1C,Interruption error due to loop switching during test,"There is no need to take corrective measures because the system retries the operation (do not switch the loop in the middle of the operation).If the error frequently occurs, check the line and the wiring status."
+FD1D,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD1E,"Bus topology,  test disabled error",Conduct a test that can be executed in the bus topology.
+FD20,Mode error,"Create and write new network parameters to the PLC. If the error recurs, the hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative."
+FD21,Hardware error (send interrupt),"The cable was disconnected during the online test.Reconnect the cable, and continue the online test."
+FD22,"Hardware error
+(receive interrupt)","The cable was disconnected during the online test.Reconnect the cable, and continue the online test."
+FD23,Data comparison error,"Check for faulty cables, faulty hardware, incorrect wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, and  control stations."
+FD24,Retry over,"Check for faulty cables, faulty hardware, incorrect wiring, absence of terminating resistor (in the case of the bus), and duplication of station numbers, and  control stations."
+FD25,Input port initial value check error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD26,Light check forward side error,"There is a problem with the cable.Connect a proper cable, and perform an online test."
+FD27,Light check reverse side error,"There is a problem with the cable.Connect a proper cable, and perform an online test."
+FD28,RAM check error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD29,ROM check error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD2A,Timer function check error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD2B,WDT function check error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD31,Online diagnostics request error,Execute online diagnostics after another is completed.
+FD32,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD33,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FD35,Response wait time-out occurred,Retry after a little while passes away.Check the status of the relevant station and of the line.
+FD36,Action wait time-out occurred,Retry after a little while passes away.Check the status of the relevant station and of the line.
+FD37,Another online diagnosis executed,Retry after a little while passes away.Check the status of the relevant station and of the line.
+FD38,Duplicate message error,Retry after a little while passes away.Check the status of the relevant station and of the line.
+FD39,Communication test request destination error (host station),Change the test request destination.
+FD3A,Communication test request destination error (station to which the test cannot be requested),A station to which a test request is not available was specified.
+FE20,Received data error,"Review the routing parameters, or replace the relay CPU module with the AnU or QnA CPU module compatible with the MELECNET/10."
+FE21,ZNRD/ZNWR device range error,Review the range of the device to be accessed with the ZNRD/ZNWR instructions to the ACPU.
+FE22,AnU request error,Check if access to other station is made from GX Developer with a project of a different CPU type.
+FE23,System error,The hardware of the source module starting dedicated instructions and MC protocol. Contact your local Mitsubishi representative.
+FE24,System error,"Confirm the status of the target station and relay station CPU modules.Alternatively, change the CPU module concerned."
+FE25,System error,"Confirm the power supply status(insufficient voltage, instantaneous interruption, overvoltage, etc.) of the target station for transient transmission and the relay station.Alternatively, change the CPU module concerned."
+FE26,System error,"Confirm the operation status (WDT error, etc.) of the target station and relay station CPU modules.Alternatively, change the CPU module concerned."
+FE27,System error,The hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative.
+FE28,System error,The hardware of the target station for transient transmission or host station network module is faulty. Contact your local Mitsubishi representative.
+FE30,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE31,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE32,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE34,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE36,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE37,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE38,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE39,System error,The hardware of the CPU or network module is faulty. Contact your local Mitsubishi representative.
+FE3B,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE3C,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE3D,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE3E,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+FE3F,System error,The hardware of the network module is faulty. Contact your local Mitsubishi representative.
+</ERRCODE>,,

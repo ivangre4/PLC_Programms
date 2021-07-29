@@ -1,0 +1,42 @@
+FUNCTION_BLOCK F+MODSEL (*SF_ModeSelector_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_Mode0:BOOL:;(*Input 0 from mode selector switch*)
+  S_Mode1:BOOL:;(*Input 1 from mode selector switch*)
+  S_Mode2:BOOL:;(*Input 2 from mode selector switch*)
+  S_Mode3:BOOL:;(*Input 3 from mode selector switch*)
+  S_Mode4:BOOL:;(*Input 4 from mode selector switch*)
+  S_Mode5:BOOL:;(*Input 5 from mode selector switch*)
+  S_Mode6:BOOL:;(*Input 6 from mode selector switch*)
+  S_Mode7:BOOL:;(*Input 7 from mode selector switch*)
+  S_Unlock:BOOL:;(*Locks the selected mode*)
+  S_SetMode:BOOL:;(*Sets the selected mode*)
+  AutoSetMode:BOOL:;(*Sets the selected mode*)
+  ModeMonitorTime:DINT:;(*Parameterizes the acknowledgement mode in 10ms steps*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  R_TRIG_S_SetMode:BOOL:;(*Trigger at S_SetMode*)
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates tha the FB is activated*)
+  S_Mode0Sel:BOOL:;(*Indicates that mode 0 is selected and acknowledged*)
+  S_Mode1Sel:BOOL:;(*Indicates that mode 1 is selected and acknowledged*)
+  S_Mode2Sel:BOOL:;(*Indicates that mode 2 is selected and acknowledged*)
+  S_Mode3Sel:BOOL:;(*Indicates that mode 3 is selected and acknowledged*)
+  S_Mode4Sel:BOOL:;(*Indicates that mode 4 is selected and acknowledged*)
+  S_Mode5Sel:BOOL:;(*Indicates that mode 5 is selected and acknowledged*)
+  S_Mode6Sel:BOOL:;(*Indicates that mode 6 is selected and acknowledged*)
+  S_Mode7Sel:BOOL:;(*Indicates that mode 7 is selected and acknowledged*)
+  S_AnyModeSel:BOOL:;(*Indicates that any of the 8 modes is selected and acknowledged*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredTime:DINT:;(*Time value for timer*)
+  State1:INT:;(*State register*)
+  State2:INT:;(*Last input bit pattern*)
+  State3:INT:;(*Input bit pattern when locked*)
+ END_VAR
+END_FUNCTION_BLOCK

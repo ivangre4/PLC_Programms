@@ -1,0 +1,54 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+1,A hardware error of the module,"Power off the module , then on again. If the same error occurs, the module may have failed.
+Please consult your local Mitsubishi representative."
+2,A value other than 0 is set to the Switch 5 in the intelligent function module switch setting.,Set 0 to the Switch 5 in the intelligent function module switch setting of MELSOFT application.
+64,"A wrong setting value or no setting value is written to Two-point setting value (Un\G50 to Un\G54,Un\G56 to Un\G60,Un\G62 to Un\G71） or Two-point calibration value (Un\G80 to Un\G87).
+Otherwise, Two-point calibration is performed with the setting of Conversion enable/disable setting (Un\G0) set to Conversion disable (1H).","Set Conversion enable/disable setting (Un\G0) to Conversion enable (0H) to perform Two-point calibration again, or write a correct value to Two-point calibration value (Un\G80 to Un\G87).
+If the same error occurs, the module may have failed. Please consult your local Mitsubishi representative."
+00A1,The G(P).OGSTOR instruction is executed in the Two-point calibration mode.,Do not execute the G(P).OGSTOR instruction in the Two-point calibration mode.
+00A2,The G(P).OGSTOR instruction is executed consecutively.,Execute the G(P).OGSTOR instruction only once for one module.
+00A3,The G(P).OGSTOR instruction is executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed.,Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model.
+044C,"The value set in Load cell rated capacity (Un\G50, Un\G51) is outside the range of 1 to 999999.","Reset the value of Load cell rated capacity (Un\G50, Un\G51) within the range of 1 to 999999."
+044D,The value set in Load cell rated output (Un\G52) is outside the range of 3 to 30.,Reset the value of Load cell rated output (Un\G52) within the range of 3 to 30.
+044E,The value set in Number of load cells in connection (Un\G53) is outside the range of 1 to 4.,Reset the value of Number of load cells in connection (Un\G53) within the range of 1 to 4.
+044F,The value set in Zero offset (Un\G54) is other than 0H and 1H.,Reset the value of Zero offset (Un\G54) to 0H or 1H.
+456,"The value set in Maximum weighing capacity setting (Un\G56,Un\G57) is outside the range of 1 to 99999.","Reset the value of Maximum weighing capacity setting (Un\G56,Un\G57) within the range of 1 to 99999."
+457,"The value set in Maximum weighing capacity setting (Un\G56,Un\G57) does not meet the condition ""Maximum weighing capacity setting ≦ Load cell rated capacity × Number of load cells in connection.","Reset the value of Load cell rated capacity (Un\G50, Un\G51), Number of load cells in connection (Un\G53), and Maximum weighing capacity setting (Un\G56,Un\G57)."
+458,The value set in Minimum division (Un\G58) is outside the range of 0H to 5H.,Reset the value of Minimum division (Un\G58) within the range of 0H to 5H.
+459,The value set in Decimal point position (Un\G59) is outside the range of 0H to 4H.,Reset the value of Decimal point position (Un\G59) within the range of 0H to 4H.
+045A,The value set in Unit (Un\G60) is outside the range of 0H to 2H.,Reset the value of Unit (Un\G60) within the range of 0H to 2H.
+460,"The value set in Standard weight setting (Un\G62,Un\G63) is outside the range of 1 to 99999.","Reset the value of Standard weight setting (Un\G62,Un\G63) within the range of 1 to 99999."
+461,"The value set in Standard weight setting (Un\G62,Un\G63) does not meet the condition ""Standard weight setting ≦ Maximum weighing capacity"".","Reset the value of Maximum weighing capacity setting (Un\G56,Un\G57) and Standard weight setting (Un\G62,Un\G63)."
+462,"The value set in Installation site gravitational acceleration (Un\G64,Un\G65) is outside the range of 97000 to 99999.","Reset the value of Installation site gravitational acceleration (Un\G64,Un\G65) within the range of 97000 to 99999."
+463,"The value set in Calibration site gravitational acceleration (Un\G66,Un\G67) is outside the range of 97000 to 99999.","Reset the value of Calibration site gravitational acceleration (Un\G66,Un\G67) within the range of 97000 to 99999."
+464,"The value set in Digital output zero correction value (Un\G68,Un\G69) is outside the range of -65536 to 65535.","Reset the value of Digital output zero correction value (Un\G68,Un\G69) within the range of -65536 to 65535."
+465,"The value set in Digital output span correction value (Un\G70,Un\G71) is outside the range of -65536 to 65535.","Reset the value of Digital output span correction value (Un\G70,Un\G71) within the range of -65536 to 65535."
+047E,The value set in Instrumentation amplifier gain setting (Un\G80) is outside the range of 0H to 2H.,Reset Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset Instrumentation amplifier gain setting (Un\G80) within the range of 0H to 2H.
+047F,The setting range of Instrumentation amplifier gain setting (Un\G80) does not meet the range of Load cell rated output (Un\G52).,Reset Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the value of Instrumentation amplifier gain setting (Un\G80) and Load cell rated output (Un\G52).
+480,The value set in A/D converter gain setting (Un\G81) is outside the range of 0H to 5H.,Reset Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the value of A/D converter gain setting (Un\G81) within the range of 0H to 5H.
+481,"The value set in A/D converter gain setting (Un\G81) does not meet the following condition.
+1 ≧ （Capacity setting × Rated output [mV/V] × A/D converter gain setting）／（Rated capacities × Connection numbers × Instrumentation amplifier gain setting） 
+（Set the values corresponding to 1,2,4,8,16, and 32 （multiple） for A/D converter gain setting (Un\G81).）
+（Set 0H for 1.0mV/V, 1H for 2.0mV/V, and 2H for 3.0mV/V respectively for Instrumentation amplifier gain setting (Un\G80).）","Reset the value of Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the value of Load cell rated capacity (Un\G50,Un\G51), Load cell rated output (Un\G52), Number of load cells in connection (Un\G53), Maximum weighing capacity setting (Un\G56,Un\G57), and Instrumentation amplifier gain setting (Un\G80)."
+488,"The value set in Zero offset output value (Un\G82,Un\G83) is outside the range of 0 to 65535.","Reset the value of Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the
+value of Zero offset output value (Un\G82,Un\G83) within the range of 0 to 65535."
+489,"The value set in Two-point zero calibration value (Un\G84,Un\G85) is outside the range of -8388608 to 8388607.","Reset the value of the value of Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the value of Two-point zero calibration value (Un\G84,Un\G85) within the range of -8388608 to 8388607."
+048A,"The value set in Two-point span calibration value (Un\G86,Un\G87) is outside the range of 1 to 8388607.","Reset the value of Two-point calibration method setting (Un\G41) to Automatic setting (0H) to perform Two-point calibration setting or reset the value of Two-point span calibration value (Un\G86,Un\G87) within the range of 1 to 8388607."
+04B0,"The value set in Averaging processing method setting (Un\G1) is other than 0H, 2H, 3H, and 5H.","Reset the value of Averaging processing method setting (Un\G1) to any value of 0H, 2H, 3H, and 5H."
+04B1,The value set in Count average setting (Un\G2) is outside the range of 4 to 255.,Reset the value of Count average setting (Un\G2) within the range of 4 to 255.
+04B2,The value set in Moving average setting (Un\G3) is outside the range of 2 to 255.,Reset the value of Moving average setting (Un\G3) within the range of 2 to 255.
+04B3,The value set in Stable status range setting (Un\G4) is outside the range of 0 to 100.,Reset the value of Stable status range setting (Un\G4) within the range of 0 to 100.
+04B4,The value set in Stable status time setting (Un\G5) is outside the range of 0 to 100.,Reset the value of Stable status time setting (Un\G5) within the range of 0 to 100.
+04B5,The value set in Zero tracking range setting (Un\G6) is outside the range of 0 to 100.,Reset the value of Zero tracking range setting (Un\G6) within the range of 0 to 100.
+04B6,The value set in Zero tracking time setting (Un\G7) is outside the range of 0 to 100.,Reset the value of Zero tracking time setting (Un\G7) within the range of 0 to 100.
+04BA,The value set in Input signal error detection setting (Un\G21) is outside the range of 0 to 250.,Reset the value of Input signal error detection setting (Un\G21) within the range of 0 to 250.
+04BB,The value set in Zero point range setting (Un\G22) is outside the range of 0 to 100.,Reset the value of Zero point range setting (Un\G22) within the range of 0 to 100.
+04C4,The value set in Gross weight lower limit value/upper limit value setting (Un\G24 to Un\G31) is outside the range of -99999 to 99999.,Reset the value of Gross weight lower limit value/upper limit value setting (Un\G24 to Un\G31) within the range of -99999 to 99999.
+04C5,"The value set in Gross weight lower limit value/upper limit value setting (Un\G24 to Un\G31) does not meet the condition ""Lower lower limit value ≦ Lower upper limit value ≦ Upper lower limit value ≦ Upper upper limit value ≦ Maximum weighing capacity setting"".",Reset the value of Gross weight lower limit value/upper limit value setting (Un\G24 to Un\G31).
+04CE,The value set in Two-point calibration request (Un\G43) is set to 3H.,"After Two-point zero calibration, perform Two-point span calibration value.
+（Two-point zero calibration and Two-point span calibration cannot be requested at the same time.）"
+04CF,Two-point span calibration is requested during Two-point zero calibration.,"After Two-point zero calibration completion flag (Un\G143.b0) is set to on, perform Two-point span calibration."
+04D0,Two-point zero calibration is requested during Two-point span calibration.,"After Two-point span calibration completion flag (Un\G143.b1) is set to on, perform Two-point zero calibration."
+</ERRCODE>,,

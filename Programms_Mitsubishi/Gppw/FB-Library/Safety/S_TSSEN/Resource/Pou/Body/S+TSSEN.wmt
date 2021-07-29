@@ -1,0 +1,37 @@
+FUNCTION_BLOCK S+TSSEN (*SF_TestableSafetySensor_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_OSSD_In:BOOL:;(*Status of sensor output,*)
+  StartTest:BOOL:;(*Input to start sensor test.*)
+  TestTime:DINT:;(*Test time of safety sensor in 10ms Steps 0 >= TestTime <= 150ms*)
+  NoExternalTest:BOOL:;(*Indicates if external manual sensor test is supported.*)
+  S_StartReset:BOOL:;(*manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_OSSD_Out:BOOL:;(*indicating the status of the ESPE.*)
+  S_TestOut:BOOL:;(*Coupled with the test input of the sensor*)
+  TestPossible:BOOL:;(*Feedback signal to the process.*)
+  TestExecuted:BOOL:;(*indicates the successful execution of the automatic sensor test.*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  Q_R_Trig_StartTe:BOOL:;(*trigger at StartTest*)
+  Q_R_Trig_Reset:BOOL:;(*trigger at Reset*)
+  Q_F_Trig_OSSD_In:BOOL:;(*falling trigger at OSSD In*)
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  TimeValue8020:DINT:;(*time value for timer in state 8020*)
+  TimeValue8030:DINT:;(*time value for timer in state 8030*)
+  TimeExpired8020:BOOL:;(*indicates if the time limit in state 8020 is expired*)
+  TimeExpired8030:BOOL:;(*indicates if the time limit in state 8030 is expired*)
+  Work:INT:;(*error mask*)
+  TParamOutOfRange:BOOL:;(*Time parameter out of Range 0 < parameter < 60000*)
+  NormTestTime:DINT(2):;(*Test time of safety sensor in 10us steps*)
+  WorkTime1:DINT:;(*cycle time part 1*)
+  WorkTime2:DINT:;(*cycle time part 2*)
+ END_VAR
+END_FUNCTION_BLOCK

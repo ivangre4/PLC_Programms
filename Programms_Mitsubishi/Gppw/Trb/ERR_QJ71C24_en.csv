@@ -1,0 +1,1407 @@
+<GROUP>,,,
+4000-4FFF,"Error detected by PLC CPU","*  Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.)
+*  If this error occurs during CPRTCL instruction execution, identify the CPU error, and correct the CPU device No. that is specified in the Non-conversion or Conversion variable data storage area.",********.csv
+B000-BFFF,Error detected by the CC-Link module,Take measure referring to the troubleshooting section of the CC-Link System Master/Local Module User's Manual,ERR_QJ61BT11.csv
+C000-CFFF,Error detected by the Ethernet module,Take measure referring to the troubleshooting section of the Ethernet Interface Module User's Manual,ERR_QJ71E71.csv
+E000-EFFF,Error detected by the CC IE Control module,Take measure referring to the troubleshooting section of the CC IE Control Network System Reference Manual,ERR_QJ71GP21.csv
+F000-FFFF,Error detected by the MELSECNET/H or MELSECNET/10 module,Take measure referring to the troubleshooting section of the MELSECNET/H or MELSECNET/10 network system reference Manual,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+7101,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7102,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7103,"Programmable controller access error
+*  Cannot communicate with the Q series C24 CPU.","*  Make the watchdog timer (timer 1) time longer.
+*  Perform a self-loopback test, and check if the CPU can communicate.",
+7104,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7105,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7106,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7107,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7108,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7109,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710B,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710C,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710D,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710E,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+710F,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7110,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7111,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7112,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7113,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7114,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7115,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7116,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7140,"Request data error
+*  Number of request points exceeds the range for the command.
+*  A word device was designated in a bit units command.
+*  The last device No. exceeds the range.
+  ( Given device last No. >= Designated head device No. + Designated number of points )","*  Check and correct the external device transmit message and restart data communications.
+*  If no error is found in the device range, clear the programmable controller CPU information and retry."
+7141,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7142,"Device name error
+*  A device that cannot be designated by the given command was designated.","*  Check and correct the external device transmit message and restart data communications.
+*  If no error is found in the device name, clear the programmable controller CPU information and retry."
+7143,"Device No. error
+*  The head device No. is out of range.",*  Check and correct the external device transmit message and restart data communications.
+7144,"Monitor data write error
+*  Monitoring was requested before the device to be monitored was written.",*  Write the device to be monitored before issuing a monitor request.
+7145,"Monitor PC No. error
+*  The written PC No. and PC No. in the monitor request are different.",*  Rewrite the monitor data.
+7146,"Monitor CPU model name error
+*  The written CPU model name and the CPU monitor name in the  monitor request are different.",*  Rewrite the monitor data.
+7147,"Written number of monitoring points overrun error
+*  The written number of monitoring points exceeds the designated range.",*  Check and correct the external device transmit message and restart data communications.
+7148,"Extension R block No. error
+*  A nonexistent extension file register block No. was designated.
+*  A block No. being used as an extension comment area, sampling trace area, or status latch area was designated.",*  Correct the designated block No. and restart data communications.
+7149,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+714A,"Cannot execute a command during RUN
+*  A write command was designated when ""Disable write during RUN"" was set.
+*  Parameter or sequence program was written during RUN.","*  Change the setting to ""Enable write during RUN"" and restart data communications.
+*  Stop the CPU and restart data communications."
+714B,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+714C,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+714D,"Unusable command error
+*  An unusable command is issued to the access target CPU.","*  Check and correct the external device transmit message and restart data communications.
+*  If no error is found in the command, clear the programmable controller CPU information and retry."
+714E,"Monitor network No. error
+*  The written monitor network No. and the monitor request network No. are different.","*  Check and correct the other station access valid module No. in the network parameters.
+*  Rewrite the monitor data."
+7150,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7151,"PC No. designation error
+*  A PC No. other than ""FF"" or ""0 to 120 (00H to 78H)"" was designated.",*  Check and correct the external device transmit message and restart data communications.
+7152,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7153,"Frame length error
+*  The received message length has exceeded the allowable range.","*  Review the transmission message. 
+*  Correct the message format so the number of access points is within the allowable range."
+7154,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7155,"Unwritten monitor data error
+*  Monitoring was requested before monitor data was written.",*  Write the device to be monitored before issuing a monitor request.
+7156,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7160,"Programmable controller access error
+*  CPU model name cannot be confirmed.","*  If there is an error in the CPU, remove the CPU error and restart data communications."
+7161,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7162,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7163,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7164,"Request error
+*  Either the request or the device designation method is wrong.","*  Check the transmission message/request from the external device, make the necessary corrections, and send again."
+7166,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7167,"Cannot execute a command during RUN
+*  A write command was designated when ""Disable write during RUN"" was set.","*  Change the setting to ""Enable write during RUN"" and restart data communications."
+7168,"Cannot execute a command during RUN
+*  A command that cannot be executed during RUN was designated.",*  Stop the CPU and restart data communications.
+7169,"CPU error
+*  Cannot communicate normally with the CPU.","*  If there is an error in the CPU, remove the CPU error and restart data communications."
+716A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+716B,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+716C,"System error
+*  The Q series C24 used is not compatible with the Built-in Ethernet port QCPU. 
+*  The OS of the Q series C24 detected some error.","*  To use a Built-in Ethernet port QCPU, use a Q series C24 of function version B or later, and the first 5 digits of its serial No. must be 10042 or greater.
+*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+716D,"Monitor data write error
+*  Monitor data was not written using QnA compatible 2C/3C/4C frame.
+",*  Rewrite monitor data.
+716E,"Monitor data write error
+*  Monitor data was not written using A compatible 1C frame.",*  Rewrite monitor data.
+716F,"Device error
+*  A nonexistent device was designated.
+*  Device that cannot be specified by the corresponding command was designated.",*  Check and correct the external device transmit message and restart data communications.
+7170,"A compatible 1C frame error
+*  Number of access points exceeded the range.",*  Check and correct the external device transmit message and restart data communications.
+7171,"A compatible 1C frame error
+*  A device that cannot be designated was designated.",*  Check and correct the external device transmit message and restart data communications.
+7172,"A compatible 1C frame error
+*  Written number of monitoring points is incorrect. For example, [0] was designated.",*  Check and correct the external device transmit message and restart data communications.
+7173,"Monitor data write error
+*  Monitor data was written for a CPU other than a Q/QnACPU using QnA compatible 2C/3C/4C frame.",*  Write the monitor data and use the A compatible 1C frame to a CPU other than a Q/QnACPU.
+7D00,"Protocol No. setting error
+*  In control data of the CPRTCL instruction, the specified protocol No. is out of range.","*  Correct the protocol No. setting."
+7D01,"Continuous protocol execution count setting error
+*  The number of protocols to be executed continuously, which is specified with an argument in the CPRTCL instruction, is out of range.","*  Correct the value set for the number of protocols to be executed continuously."
+7D02,"Protocol not-ready error
+*  The protocol was executed while Pre-defined protocol ready (X1D) is OFF.
+*  The CPRTCL instruction was executed during protocol setting data writing.
+*  The CPRTCL instruction was executed with abnormal protocol setting data.","*  Execute the CPRTCL instruction after Pre-defined protocol ready (X1D) turns on.
+*  Set the CPU to STOP before writing protocol setting data so that the CPRTCL instruction cannot be executed during the writing.
+*  Write the protocol setting data again to the Q series C24N, and then execute the CPRTCL instruction.
+*  If this error persists even after rewriting, replace the module."
+7D10,"Protocol unregistered error
+*  The protocol No. specified in control data for the CPRTCL instruction is not registered to the Q series C24N.
+*  The CPRTCL instruction was executed with no protocol setting data written.","*  Check if the specified protocol No. is correct.
+*  Check the Protocol registration area (buffer memory: 4091H to 4098H) to see if the specified protocol No. is registered.
+*  Write the protocol setting data from GX Configurator-SC (Pre-defined protocol support function), and then execute the CPRTCL instruction."
+7D12,"Transmission monitoring timeout error
+*  Transmission monitoring time has timed out.
+   Although the transmission was retried the specified number of times, it did not succeed.","*  Check if the transmission is interrupted due to some reason such as DTR control.
+*  Check if the CS signal is ON.
+*  Check the cables for disconnection."
+7D13,"Receive wait timeout error
+*  Receive wait time has timed out.","*  Check if the reception is interrupted due to some reason such as DTR control.
+*  Check the cables for disconnection.
+*  Check the sending device for an error.
+*  Using the circuit trace function (communication data monitoring function), check if: 
+  (1) Transmissions from external devices are interrupted.
+  (2) Any data are missing due to a receive error.
+  (3) An error exists in the data (packet) sent from the other device."
+7D14,"CPU response monitoring timeout error
+*  CPU response monitoring time has timed out during transmission.
+   Data to be sent to the device could not be acquired from the CPU within the set time.","*  Increase the Response monitoring time (timer 1) value. (Default: 5 seconds)
+*  If an error has occurred in the CPU, refer to the troubleshooting section of the QCPU (Q mode) Userfs Manual (Maintenance and Inspection), and take corrective actions."
+7D15,"CPU response monitoring timeout error
+*  CPU response monitoring time has timed out during reception.
+   Data received from the device could not be stored into the CPU within the set time.","*  Increase the Response monitoring time (timer 1) value. (Default: 5 seconds)
+*  If an error has occurred in the CPU, refer to the troubleshooting section of the QCPU (Q mode) Userfs Manual (Maintenance and Inspection), and take corrective actions."
+7D16,"Protocol cancel request error
+*  A cancel request was accepted during protocol execution, and thereby the CPRTCL instruction failed.
+*  The CPRTCL instruction failed because protocol setting data were written during CPRTCL instruction execution.","*  Check the cancelled protocol in the CPRTCL instruction's control data (execution count result), and eliminate the cause of the cancellation.
+*  If necessary, clear the error information by error clear request (YE/YF).
+*  Set the CPU to STOP before writing protocol setting data so that the CPRTCL instruction cannot be executed during the writing."
+7D17,"Packet size error
+*  A packet of more than 2048 bytes was received.","*  Check the data length of the packet sent from the device.
+*  Divide the packet data into several parts and send them separately."
+7D18,"Too few digits error
+*  When the protocol used for data reception includes a packet that contains a conversion variable (Variable number of data), the data (number of digits) corresponding to the conversion variable is insufficient.","*  Correct the data sent from the device.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the number of digits."
+7D19,"Invalid number of digits error
+*  When the protocol used for data reception includes a packet that contains a conversion variable (Fixed number of data and Variable number of digits), the value of the data corresponding to the conversion variable is 0 bytes (0 digits) or exceeds the maximum number of digits.","*  Correct the data sent from the device.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the number of digits."
+7D1A,"Data length error
+*  In the data received from the external device, the Length value does not match the data length of the conversion variable(s).","*  Check the data sent from the external device to see if:
+  (1)The Length value is correct or not.
+  (2)Any of the data corresponding to the conversion variable is missing or not.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the senderfs packet format to see if an incorrect value is set for the conversion variable."
+7D1B,"Value range error
+*  When the protocol used for data reception includes a packet that contains a conversion variable, the value of the data corresponding to the conversion variable exceeds the range allowed for the Q series C24N.","*  Check the data sent from the external device.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the conversion size.
+  (1)If it exceeds the range for word data, change the conversion size to Double word.
+  (2)If it exceeds the range for double-word data, change the element to Non-conversion variable."
+7D20,"Data length setting error, data quantity setting error
+*  The value set in the data length storage area or the data quantity storage area is out of range.","*  Check the maximum allowable data length, and specify the maximum length or less in the data length storage area.
+*  Check the maximum allowable data quantity, and specify the maximum quantity or less in the data quantity storage area."
+7D21,"Decimal point position error
+*  An out-of-range value is set for the decimal point position when the number of decimals is set to Variable.
+*  The number of decimals is larger than the number of digits for each data.","*  Correct the value set for the decimal point position.
+*  Check the number of digits setting, and set the decimal point position so that the number of decimals is less than the number of digits."
+7E00,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E01,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E02,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E03,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E04,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E05,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E06,"Buffer memory address setting error
+*  Transmit/receive buffer memory addresses are in the special applications area.",*  Change the buffer memory addresses so that they are outside the special applications area.
+7E07,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E08,"Currently inexecutable error
+*  The UINI instruction was executed during programmable controller CPU information clear.",*  Execute the UINI instruction while the programmable controller CPU information clear is not executed.
+7E09,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E0A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E40,"Command error
+*  A nonexistent command or subcommand was designated.",*  Check and correct the external device transmit message and restart data communications.
+7E41,"Data length error
+*  A data length exceeding the number of points that can communicate during random read/write was designated.",*  Check and correct the external device transmit message and restart data communications.
+7E42,"Error count error
+*  Number of requested points exceeds the range for the command.
+
+Protocol setting data write error
+*  Protocol setting data were written to the Q series C24 that does not support the pre-defined protocol communication.","*  Check and correct the external device transmit message and restart data communications.
+
+*  To use the pre-defined protocol function, use a supported Q series C24N.  (Use the QJ71C24N(-R2/4) whose first 5 digits  of serial No. is 10122 or higher.)"
+7E43,"Device error
+*  A nonexistent device was designated.
+*  Device that cannot be specified by the corresponding command was designated.
+*  The head device No. is out of range.",*  Check and correct the external device transmit message and restart data communications.
+7E44,"Timer 1 time-out error
+*  A response message was not returned within the response monitoring time (timer 1) monitoring time.","*  Make the timer 1 monitoring time longer.
+*  When accessing another station's CPU, check if the routing parameters match."
+7E46,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E47,"Continuous request error
+*  The next request was received before a response message was returned for the preceding request.","*  Do not issue continuous requests from the external device.
+*  Set the timer 1 monitoring time to the external device time-out time."
+7E48,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E49,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E4A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E4B,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E4C,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E4D,"Error during data transmission
+*  Mode switching was executed during data transmission.",*  Make arrangements between the target device and programmable controller CPU so that mode switching is not executed during data transmission.
+7E4E,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E4F,"Device point count error
+*  Access point count is incorrect.",*  Check and correct the external device transmit message and restart data communications.
+7E50,"User frame No. designation error
+*  A user frame No. outside the range was designated.","*  Check and correct the external device transmit message and restart data communications.
+*  Recheck the frame No.."
+7E51,"Unwritten user frame error
+*  An unwritten user frame No. was designated.","*  Write the frame beforehand.
+*  Change the frame No. and restart data communications.
+*  Recheck the frame No.."
+7E52,"User frame overwrite error
+*  A written frame No. overwrite request was issued.","*  Change the write destination to an unwritten frame No.
+*  When overwriting, delete the given No. beforehand."
+7E53,"User frame access data error
+*  A nonexistent command was designated in a subcommand.
+*  Byte count exceeding the number of bytes that can be requested was designated.",*  Check and correct the external device transmit message and restart data communications.
+7E54,"Modification allowed error
+*  Flash ROM write allow/prohibit designation from GX Configurator-SC is set to OFF.
+*  At the switch setting on GX Developer, modification allowed switch was set to OFF.","*  Set to ON at GX Configurator-SC.
+*  Set to ON at GX Developer."
+7E55,"User frame data error
+* There is an error in the user frame variable data.",*  Check and correct the external device transmit message and restart data communications.
+7E56,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E57,"Flash ROM write error
+* Cannot write to Flash ROM normally.
+* Power is turned off during writing to Flash ROM.","*  Re-execute the write operation.
+   If the error is generated again, replace the module."
+7E58,"Mode modification error
+*  There was an error in the mode No. or transmission specification designated contents when changing the mode.","*  Check and correct the contents of the external device transmit message and restart data communications.
+*  Recheck the switch setting on the Q series C24."
+7E59,"Flash ROM write count over limit error
+*  Writing to flash ROM was performed 1000 times after power-on.
+*  Writing to flash ROM was performed 100,000 times.","*  Review the program.
+*  Reset the Flash ROM write count (address: 2401H) to 0 and restart data communications.
+*  When the number of writes reached 100,000, replace the module.
+"
+7E5E,"Programmable controller CPU monitoring function registration error
+*  The programmable controller CPU monitoring function is registered for the communication protocol that does not support the function.","*  Correct the communication protocol setting value."
+7E5F,"I/O number error on requested module
+*  I/O number of requested module is incorrect.",*  Correct the I/O number of the module to which data is sent.
+7E60,"Device monitoring duplicate registration error
+*  Programmable controller CPU monitoring registration was performed twice.",*  Cancel the programmable controller CPU monitoring and perform the programmable controller CPU monitoring registration again.
+7E61,"Cycle time units range error
+*  Setting value of cycle time units is out of range.",*  Correct the setting value of the cycle time units.
+7E62,"Programmable controller CPU monitoring function error
+*  Setting value of programmable controller CPU monitoring function is out of range.",*  Correct the setting value of the programmable controller CPU monitoring function.
+7E63,"Transmission measure setting error
+*  Setting of transmission measure of the programmable controller CPU monitoring is incorrect.",*  Correct the setting value of the transmission measure.
+7E64,"Registration point range error
+*  Registration point (word/bit) is out of range.",*  Correct the setting value of the registration point (word/byte).
+7E65,"Programmable controller CPU abnormal monitoring number error
+*  Setting value of the programmable controller CPU abnormal monitoring is out of range.",*  Correct the setting value of the programmable controller CPU abnormal monitoring.
+7E66,"Monitoring condition error of monitoring device
+*  Setting value of transmission condition is out of range.",*  Correct the setting value of the transmission condition.
+7E67,"CPU abnormal monitoring setting value error
+*  Setting value (fixed value) of CPU abnormal monitoring is out of range.",*  Correct the setting value (fixed value) of the CPU abnormal monitoring.
+7E68,"Transmission condition range error of monitoring device
+*  Setting value of transmission condition (condition agreement transmission) is out of range.",*  Correct the setting value of the transmission condition (condition agreement transmission).
+7E69,"CPU abnormal monitoring setting value error
+*  Setting value (fixed value) of CPU abnormal monitoring is out of range.",*  Correct the setting value (fixed value) of the CPU abnormal monitoring.
+7E6A,"Monitoring device read point range error
+*  Read point of monitoring device is out of range.",*  Correct the setting value of the read point of the monitoring device.
+7E6B,"CPU abnormal monitoring setting value error
+*  Setting value (fixed value) of CPU abnormal monitoring is out of range.",*  Correct the setting value (fixed value) of the CPU abnormal monitoring.
+7E6C,"CPU abnormal monitoring setting value error
+*  Setting value (fixed value) of CPU abnormal monitoring is out of range.",*  Correct the setting value (fixed value) of the CPU abnormal monitoring.
+7E6D,"CPU abnormal monitoring setting value error
+*  Setting value (fixed value) of CPU abnormal monitoring is out of range.",*  Correct the setting value (fixed value) of the CPU abnormal monitoring.
+7E6E,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E6F,"Modem connection error
+*  Modem is connected to an incorrect channel.",*  Correct the CH to which notification is sent.
+7E70,"CPU error
+*  The communication with the CPU could not be performed normally.","*  If there is an error in the CPU, eliminate the error on the CPU side and communicate again."
+7E81,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E82,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E83,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E84,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E85,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E86,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E87,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E88,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E89,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E8A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E8B,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E8C,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E8D,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7E8E,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7EC1,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7EC2,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7EC3,"Double send request error
+*  A send request was performed while another send request was being processed.",*  Interlock (handshake) the send requests.
+7EC4,"Transmission data count error
+Transmission/receipt buffer setting error
+*  Data larger than the transmit buffer size was transmitted.
+*  Transmission/receipt buffer settings out of range.","*  Make the transmission data count smaller than the transmit buffer size.
+*  Make the non procedure protocol transmit buffer size larger.
+*  Designate the first address and size of transmission/receipt buffer in the free area range of the user."
+7EC5,"Flash ROM access error
+*  Write to Flash ROM was requested when the setting modification enable/disable switch in the GX Developer was set to OFF.","*  When writing to Flash ROM, set switch shown left of the given interface to ON and restart the Q series C24."
+7EC6,"Flash ROM access error
+*  There is an error in the Flash ROM read/write request contents.
+",*  Check the read/write request data and designate the correct data.
+7F00,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F01,"Buffer full error
+*  The next data was received before processing of the previous data was completed.
+*  Multiple requests was simultaneously issued for one channel.
+","*  Increase the transmission time by performing handshake with the external device, etc.
+*  Perform handshake with the request source external device."
+7F02,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F03,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F04,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F05,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F06,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F20,"ASCII->BIN conversion error
+*  An ASCII code that cannot be converted to binary code was received.
+
+*  An odd number of bytes of data was received during data communications using ASCII<->BIN conversion.
+
+*  When the protocol used for data reception includes a packet that contains a conversion variable, the data corresponding to the conversion variable cannot be converted to binary numbers.
+*  When the protocol used for data reception includes a packet that contains an error check code (ASCII hexadecimal or ASCII decimal), the data corresponding to the error check code cannot be converted to binary numbers.","*  Check and correct the external device transmit message and restart data communications.
+
+*  When communicating using ASCII<->BIN conversion, always transmit the data in even number bytes units.
+
+*  Check the message sent from the device, correct the error, and resend it.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the conversion variable, sign character, number of decimals, delimiter, or number of digits.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the error check code type or data length."
+7F21,"Receive header area error
+*  There is an error in the command (frame) part.
+*  An ASCII code that cannot be converted to binary code was received.",*  Check and correct the external device transmit message and restart data communications.
+7F22,"Command error
+*  A nonexistent command or device was designated.
+*  The remote password length is wrong.",*  Check and correct the external device transmit message and restart data communications.
+7F23,"MC protocol message error
+*  There is no data (ETX, CR-LF, etc.) following the character area, or designation was incorrect.",*  Check and correct the external device transmit message and restart data communications.
+7F24,"Sum check error
+*  The sum check code calculated does not match the sum check code received.
+*  The horizontal parity code calculated does not match the horizontal parity code received.
+*  The calculated error check code does not match the received error check code.","*  Check the sum check code of the external device.
+*  Check the horizontal parity code calculated of the external device.
+*  Check CRC-16 of the external device.
+*  If GX Configurator-SC (Pre-defined protocol support function) was used for protocol editing, check the sender's packet format to see if an incorrect value is set for the processing method, code type, data length, data flow, complement calculation, or calculating range of the error check code."
+7F25,"Data length error
+*  The length of the received data exceeds the receive area size.","*  Correct the ""data length"" that is transmitted from the external device.
+*  Change the ""word/byte units"" set by the Q series C24 to byte units.
+*  Increase the receiving area of the Q series C24.
+"
+7F26,"Command error
+*  Another command was received before an unlock processing while the remote password is registered.",*  Perform the communication after the unlock processing is normally completed.
+7F30,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F31,"Simultaneous transmission error
+*  The Q series C24 and an external device started transmitting simultaneously.","*  Process by agreement with the external device.
+*  When necessary, change the simultaneous transmission data valid/invalid designation setting by GX Configurator-SC. (addresses: 9BH/13BH)"
+7F32,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F40,"Time-out error
+*  No reception watchdog timer (timer 0) time-out occurred.
+
+","*  Check if data was dropped from the receive data.
+*  Check if DTR control, etc. interrupted reception.
+"
+7F41,"Time-out error
+*  Response watchdog timer (timer 1) time-out occurred.","*  Check the status of the message transmission destination and restart data communications, as required.
+"
+7F42,"Time-out error
+*  Transmit watchdog timer (timer 2) time-out occurred.","*  Check if DTR control, etc. interrupted transmission."
+7F50,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F51,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F52,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F53,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F54,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F60,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F61,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F62,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F63,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F64,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F65,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F66,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F67,"Overrun error
+*  The Q series C24 received the next data before it completed receive processing of the previous data.","*  Decrease the data transmission rate and restart data communications.
+*  Check whether a temporary stop has occurred in the station in which the Q series C24 is installed. (For the QCPU this can be checked using special register SD1005.) If a temporary stop has occurred, remove its cause.
+"
+7F68,"Framing error
+*  Data does not match the stop bit setting.
+*  A malfunction occurred in the network because the power source of the partner station was on or off.
+*  Noise occurs in the network.
+*  When the multidrop was connected, data was transmitted simultaneously by multiple devices.","*  Match the Q series C24 and external device settings.
+*  Clear the error information according to the ERR. clear request (YE/YF).
+In addition, when communicating data with the non procedure protocol, execute the INPUT instruction, and read and discard the unnecessary data.
+*  Measure the noise.
+*  When connecting the multidrop, remove the interlock so that data will not be transmitted simultaneously by multiple devices."
+7F69,"Parity error
+*  Data does not match the parity bit setting.
+*  A malfunction occurred in the network because the power source of the partner station was on or off.
+*  Noise occurs in the network.
+*  When the multidrop was connected, data was transmitted simultaneously by multiple devices.","*  Match the Q series C24 and external device settings.
+*  Clear the error information according to the ERR. clear request (YE/YF).
+In addition, when communicating data with the non procedure protocol, execute the INPUT instruction, and read and discard the unnecessary data.
+*  Measure the noise.
+*  When connecting the multidrop, remove the interlock so that data will not be transmitted simultaneously by multiple devices.
+"
+7F6A,"Buffer full error
+*  OS receive buffer overflowed and receive data was skipped.","*  Use DTR and DC control and perform data communications so that the buffer does not become full. (Perform RS/CS control when the modem function is used.)
+*  If the Read Request signal was turned ON, execute read immediately.
+"
+7F6B,"CD signal control error
+*  Data was received when CD signal is OFF when ""CD terminal check enabled"" was designated.","*  Recheck the CD signal control of the external device.(Send while the CD signal is ON.) 
+*  Set ""no CD terminal checking"" and perform communication.
+"
+7F6C,"Transmission error
+*  Data cannot be sent because the line is not connected.",*  Transmit data after line connection processing on the interface side that uses the modem function.
+7F91,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F92,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F93,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F94,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F95,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F96,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F98,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F99,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F9A,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F9D,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7F9E,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FA0,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FA1,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FA2,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FA3,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FA8,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FAA,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FAB,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FAC,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FAD,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FAF,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB0,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB1,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB2,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB5,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB6,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB8,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FB9,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FBA,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FBB,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FBC,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC0,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC1,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC2,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC3,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC4,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FC8,"Protocol setting data error
+*  There is an error in the protocol setting that was edited with GX Configurator-SC (Pre-defined protocol support function).
+*  The protocol setting data written to the Q series C24N includes unsupported function data.
+*  The protocol setting data written to the QJ71C24N(-R2/R4) are corrupted.","*  Check the Protocol setting data error information (buffer memory: 4086H to 4089H) to identify the error protocol, correct the protocol setting, and write the setting data to the Q series C24N again.
+*  Check the version of the Q series C24N, and confirm supported functions. Utilize the pre-defined protocol function within the range of the supported functions.
+*  Write the protocol setting data again to the Q series C24N, and execute the CPRTCL instruction.
+*  If this error persists even after rewriting, replace the module."
+7FC9,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCA,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCB,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCC,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCD,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCE,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FCF,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FD0,"Modem function error
+*  There is an error in the designation of the notification execution.",*  Set 0 to 1 to the notification execution designation.
+7FD1,"Modem function error
+*  There is an error in the designation of the number of connection retries.",*  Set the number of connection retries in the range of 1 to 5.
+7FD2,"Modem function error
+*  There is an error in the designation of the connection retry interval.",*  Set the connection retry interval in the range of 90 to 300 (s).
+7FD3,"Modem function error
+*  There is an error in the initialization/connection time-out designation.",*  Set the initialization/connection time-out in the range of 1 to 60 (s).
+7FD4,"Modem function error
+*  There is an error in the designation of the number of initialization retries.",*  Set the number of initialization retries in the range of 1 to 5.
+7FD5,"Modem function error
+*  There is an error in the designation of the data number for initialization.","*  Designate the registered data number for initialization, or 0."
+7FD6,"Modem function error
+*  There is an error in the data for connection designated by the data number for connection.",*  Recheck the pager receiver designation.
+7FD7,"Modem function error
+*  There is an error in the data for connection designated by the data number for connection.",*  Recheck the dialing number of the external line.
+7FD8,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FD9,"Modem function error
+*  External destination is connected to network or modem has not been initialized.","*  After the modem has been initialized, connect to the network if the external destination is not connected to the network or report it."
+7FDA,"Modem function error
+*  There is an error in the designation of the data number for connection.",*  Designate a registered number for the data for connection.
+7FDB,"Modem function error
+*  There is an error in the designation of the GX Developer connection.",*  Set 0 to 1 to the GX Developer connection designation.
+7FDC,"Modem function error
+*  There is an error in the data for connection designated by the data number for connection.",*  Recheck the waiting time for the notification-message part of the message transmission.
+7FDD,"Modem function error
+*  A connection time-out error occurred.","*  Recheck the telephone number in the data for connection.
+*  Check if the destination is ready for a connection.
+*  Recheck the set value of the connection time-out.
+*  Recheck the initialization command."
+7FDE,"Modem function error
+*  Connection to the modem/TA was unsuccessful, or the modem/TA is not connected.","*  Check if there is any problem with the modem/TA by seeing the operation manual of the modem/TA. 
+*  Connect the modem/TA to the Q series C24.
+*  Check the connection cable by seeing the operation manual of the modem/TA.
+*  Take corrective action in the following procedure.
+(1) Check whether the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether the operating environment of the Q series C24 is within the general specifications range of the CPU module.
+(3) Check whether the power supply capacity is sufficient or not.
+(4) Check whether the hardware of the Q series C24, CPU module and base unit are normal according to the manuals of the corresponding modules.
+If any module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be solved through the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FDF,"Modem function error
+*  Modem connection channel number is not designated.",*  Set 1 to 2 to the modem connection channel designation.
+7FE0,"Modem function error
+*  Designated value of modem connection channel is incorrect.",*  Set 1 to 2 to the modem connection channel designation.
+7FE1,"Modem function error
+*  There is an error in the designation of the user frame number.
+*  There is an error in the designation of the output head pointer.","*  Recheck the user frame number.
+*  Designate the registered user frame number.
+*  Register the designated data for initialization.
+*  Designate the output head pointer in the range of 1 to 100.
+*  Designate the position (n-th position) where the data for initialization number is designated. 
+*  Designate the data for initialization number at the designated position (n-th position)."
+7FE2,"Modem function error
+*  There is an error in the designation of the output frame number.",*  Designate a registered data for initialization number within the range of the designated number of outputs from the location of the output head pointer.
+7FE3,"Modem function error
+*  There is an error in the designation of the number of registered data bytes.","*  Designate the data for initialization in the range of 1 to 78.
+*  Designate 80 for the data for connection."
+7FE4,"Modem function error
+*  There is an error in the data for connection.",*  Recheck the message length of the  message for notification.
+7FE5,"Modem function error
+*  There is an error in the designation of the no-communication interval time.",*  Designate the no-communication interval time in the range of 0 to 120.
+7FE6,"Processing disabled
+*  Remote passwords do not match.",*  Check the remote password and communicate again.
+7FE7,"Processing disabled
+*  The remote password is not registered.
+*  The remote password processing command was received on the interface side where the modem function is not used.
+*  The GX Developer connection is selected in the communication protocol setting on the corresponding CH.","*  A remote password processing command is not necessary when a remote password is not registered.
+*  Perform a remote password unlock processing through GX Developer. Alternatively, change the communication protocol setting of the corresponding CH to the MC protocol."
+7FE8,"Processing disabled / Modem function error
+*  The number of remote password disagreements exceeded the value designated at the address 200DH.
+*  The number of remote password mismatch exceeded the value designated at the address 200DH.",*  Clear the Accumulated count of unlock process abnormal completion processing (address: 22FCH) to 0.
+7FE9,"Modem function error
+*  Callback denial exceeded the value designated at the address 2002H.",*  Clear the callback denial accumulated count (address: 22F1H) to 0.
+7FEF,"Switch setting error
+*  There is an error in the switch setting by the GX Developer.",*  Write CPU to the parameter and reboot after correcting the setting value for the switch.
+7FF0,"Dedicated instructions simultaneous execution error
+*  Executed dedicated instructions simultaneously.",*  Do not use dedicated instructions simultaneously.
+7FF1,"Control data error
+*  Setting value is incorrect. 
+*  Setting value is out of range.",*  Correct the setting value in the control data.
+7FF2,"Communication protocol setting error
+*  Instruction cannot be executed with the current communication protocol.",*  Correct the setting value of the communication protocol.
+7FF3,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FF4,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FF5,"Processing cancelled due to mode switching, transmission sequence initialization, etc.
+*  The processing in operation was cancelled due to execution of the following:
+<Mode switching, transmission sequence initialization, reception data clear (by buffer memory), user frame use enable/disable designation, UINI instruction, programmable controller CPU information clear>",*  Do not execute these functions during any other processing.
+7FF7,"Simultaneous access error
+*  Multiple external devices accessed a remote station on the same network at the same time.",*  Multiple external devices must not access a remote station on the same network at the same time.
+7FF8,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7FFF,"System error
+*  The OS of the Q series C24 detected some error.","*  Counter the problem in the following procedure.
+(1) Check whether or not the Q series C24, power supply module and CPU module are mounted correctly on the base unit.
+(2) Check whether or not the operating environment of the Q series C24 is within the range of general specifications of the CPU module.
+(3) Check whether the power capacity is sufficient or not.
+(4) Check the Q series C24, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+(5) If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+</ERRCODE>,,

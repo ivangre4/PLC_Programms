@@ -1,0 +1,331 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+044C,"Fault
+Hardware is a failure.","Turn OFF and then ON the power, or reset the CPU. If the error code is still stored after taking measures, QD72P3C3 may be at fault. Please consult your local Mitsubishi representative to explain a detailed description of the problem."
+0834,"Fault
+Hardware is a failure.","Turn OFF and then ON the power, or reset the CPU. If the error code is still stored after taking measures, QD72P3C3 may be at fault. Please consult your local Mitsubishi representative to explain a detailed description of the problem."
+0C1C,"Fault
+Hardware is a failure.","Turn OFF and then ON the power, or reset the CPU. If the error code is still stored after taking measures, QD72P3C3 may be at fault. Please consult your local Mitsubishi representative to explain a detailed description of the problem."
+044E,"Stop signal ON at start
+A start requested is executed when the axis stop signal (Y4) is ON.","Check whether the axis stop signal (Y4) is ON or OFF, and turn OFF the axis stop signal (Y4) that is ON."
+0836,"Stop signal ON at start
+A start requested is executed when the axis stop signal (Y5) is ON.","Check whether the axis stop signal (Y5) is ON or OFF, and turn OFF the axis stop signal (Y5) that is ON."
+0C1E,"Stop signal ON at start
+A start requested is executed when the axis stop signal (Y6) is ON.","Check whether the axis stop signal (Y6) is ON or OFF, and turn OFF the axis stop signal (Y6) that is ON."
+044F,"Hardware stroke limit +
+Hardware stroke limit (upper limit signal(FLS)) turned OFF.","After resetting the error, move the upper limit signal (FLS) to where the signal does not turn OFF."
+0837,"Hardware stroke limit +
+Hardware stroke limit (upper limit signal(FLS)) turned OFF.","After resetting the error, move the upper limit signal (FLS) to where the signal does not turn OFF."
+0C1F,"Hardware stroke limit +
+Hardware stroke limit (upper limit signal(FLS)) turned OFF.","After resetting the error, move the upper limit signal (FLS) to where the signal does not turn OFF."
+0450,"Hardware stroke limit -
+Hardware stroke limit (lower limit signal(RLS)) turned OFF.","After resetting the error, move the lower limit signal (RLS) to where the signal does not turn OFF."
+0838,"Hardware stroke limit -
+Hardware stroke limit (lower limit signal(RLS)) turned OFF.","After resetting the error, move the lower limit signal (RLS) to where the signal does not turn OFF."
+0C20,"Hardware stroke limit -
+Hardware stroke limit (lower limit signal(RLS)) turned OFF.","After resetting the error, move the lower limit signal (RLS) to where the signal does not turn OFF."
+0451,"Programmable controller CPU READY OFF during operation
+The programmable controller CPU READY signal (Y0) is turned OFF during operation.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+0839,"Programmable controller CPU READY OFF during operation
+The programmable controller CPU READY signal (Y0) is turned OFF during operation.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+0C21,"Programmable controller CPU READY OFF during operation
+The programmable controller CPU READY signal (Y0) is turned OFF during operation.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+0456,"Programmable controller CPU READY OFF during writing
+The programmable controller CPU READY signal (Y0) is turned OFF immediately after turned ON.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+083E,"Programmable controller CPU READY OFF during writing
+The programmable controller CPU READY signal (Y0) is turned OFF immediately after turned ON.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+0C26,"Programmable controller CPU READY OFF during writing
+The programmable controller CPU READY signal (Y0) is turned OFF immediately after turned ON.","Review the sequence program that turns ON/OFF the programmable controller CPU READY signal (Y0)."
+04B2,"Zero signal ON
+With 'OPR method' being 'Stopper3', the zero signal is input when machine OPR control is started.","Turn OFF the zero signal and then start OPR."
+089A,"Zero signal ON
+With 'OPR method' being 'Stopper3', the zero signal is input when machine OPR control is started.","Turn OFF the zero signal and then start OPR."
+0C82,"Zero signal ON
+With 'OPR method' being 'Stopper3', the zero signal is input when machine OPR control is started.","Turn OFF the zero signal and then start OPR."
+04B3,"Machine OPR not performed
+Fast OPR control was started without performing machine OPR control.","Before starting fast OPR control, execute machine OPR control."
+089B,"Machine OPR not performed
+Fast OPR control was started without performing machine OPR control.","Before starting fast OPR control, execute machine OPR control."
+0C83,"Machine OPR not performed
+Fast OPR control was started without performing machine OPR control.","Before starting fast OPR control, execute machine OPR control."
+05DD,"Out of start method setting range
+The setting value of 'Start method' is other than 0, 9000, or 9001.","Set the 'Start method' within the setting range."
+09C5,"Out of start method setting range
+The setting value of 'Start method' is other than 0, 9000, or 9001.","Set the 'Start method' within the setting range."
+0DAD,"Out of start method setting range
+The setting value of 'Start method' is other than 0, 9000, or 9001.","Set the 'Start method' within the setting range."
+05E0,"Out of operation pattern setting range
+The setting value of 'Operation pattern' is out of the setting range.","Set the 'Operation pattern' within the setting range."
+09C8,"Out of operation pattern setting range
+The setting value of 'Operation pattern' is out of the setting range.","Set the 'Operation pattern' within the setting range."
+0DB0,"Out of operation pattern setting range
+The setting value of 'Operation pattern' is out of the setting range.","Set the 'Operation pattern' within the setting range."
+05E2,"Out of control method setting range
+The setting value of 'Control method' is out of the setting range.","Set the 'Start method' within the setting range."
+09CA,"Out of control method setting range
+The setting value of 'Control method' is out of the setting range.","Set the 'Start method' within the setting range."
+0DB2,"Out of control method setting range
+The setting value of 'Control method' is out of the setting range.","Set the 'Start method' within the setting range."
+05E3,"Out of ACC/DEC time setting range
+Any of the 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' setting values is out of the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' within the setting range."
+09CB,"Out of ACC/DEC time setting range
+Any of the 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' setting values is out of the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' within the setting range."
+0DB3,"Out of ACC/DEC time setting range
+Any of the 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' setting values is out of the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC/DEC time', 'ACC/DEC time', and 'ACC/DEC time at speed change' within the setting range."
+05E5,"Out of positioning address/movement amount setting range
+The setting value of 'Positioning address/movement amount' is out of the setting range.","Set 'Positioning address/movement amount' within the setting range."
+09CD,"Out of positioning address/movement amount setting range
+The setting value of 'Positioning address/movement amount' is out of the setting range.","Set 'Positioning address/movement amount' within the setting range."
+0DB5,"Out of positioning address/movement amount setting range
+The setting value of 'Positioning address/movement amount' is out of the setting range.","Set 'Positioning address/movement amount' within the setting range."
+05EC,"Software stroke limit +
+Positioning control was performed in a position in excess of 'Software stroke limit upper limit value'.
+'Current feed value', 'Positioning address/movement value' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+09D4,"Software stroke limit +
+Positioning control was performed in a position in excess of 'Software stroke limit upper limit value'.
+'Current feed value', 'Positioning address/movement value' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+0DBC,"Software stroke limit +
+Positioning control was performed in a position in excess of 'Software stroke limit upper limit value'.
+'Current feed value', 'Positioning address/movement value' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+05ED,"Software stroke limit -
+Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+'Current feed value', 'Positioning address/movement value'(New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+09D5,"Software stroke limit -
+Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+'Current feed value', 'Positioning address/movement value'(New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+0DBD,"Software stroke limit -
+Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+'Current feed value', 'Positioning address/movement value'(New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Set the 'Current feed value' within the software stroke limit range by JOG operation.
+At current value change:
+Change the new current value within the software stroke limit.
+During operation:
+Correct the 'Positioning address/movement amount'."
+05EE,"Out of current feed value range
+The 'Current feed value' exceeds the 'Positioning range upper limit value'.","* Set the 'Current feed value' within the range of the 'Positioning range upper limit value' in the current value change.
+* Execute OPR."
+09D6,"Out of current feed value range
+The 'Current feed value' exceeds the 'Positioning range upper limit value'.","* Set the 'Current feed value' within the range of the 'Positioning range upper limit value' in the current value change.
+* Execute OPR."
+0DBE,"Out of current feed value range
+The 'Current feed value' exceeds the 'Positioning range upper limit value'.","* Set the 'Current feed value' within the range of the 'Positioning range upper limit value' in the current value change.
+* Execute OPR."
+0708,"Hold error
+The setting for the QD72P3C3 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the CPU module to 'Clear'.
+(Refer to QCPU User's manual.)"
+0AF0,"Hold error
+The setting for the QD72P3C3 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the CPU module to 'Clear'.
+(Refer to QCPU User's manual.)"
+0ED8,"Hold error
+The setting for the QD72P3C3 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the CPU module to 'Clear'.
+(Refer to QCPU User's manual.)"
+070C,"Dedicated instruction error
+* PSTRT1 instruction was executed when the start method was other than 0, 9000, or 9001.
+* DSTRT1 instruction was executed when the control method was other than 1 to 5.
+* DSTRT1 instruction was executed when the ACC/DEC time was other than 1 to 5000.
+* SPCHG1 instruction was executed when the ACC/DEC time was other than 1 to 5000.","* When executing the PSTRT1 instruction, set the start method within the range.
+* When executing the DSTRT1 instruction, set the ACC/DEC time within the range.
+* When executing the SPCHG1 instruction, set the ACC/DEC time within the range."
+0AF4,"Dedicated instruction error
+* PSTRT2 instruction was executed when the start method was other than 0, 9000, or 9001.
+* DSTRT2 instruction was executed when the control method was other than 1 to 5.
+* DSTRT2 instruction was executed when the ACC/DEC time was other than 1 to 5000.
+* SPCHG2 instruction was executed when the ACC/DEC time was other than 1 to 5000.","* When executing the PSTRT2 instruction, set the start method within the range.
+* When executing the DSTRT2 instruction, set the ACC/DEC time within the range.
+* When executing the SPCHG2 instruction, set the ACC/DEC time within the range."
+0EDC,"Dedicated instruction error
+* PSTRT3 instruction was executed when the start method was other than 0, 9000, or 9001.
+* DSTRT3 instruction was executed when the control method was other than 1 to 5.
+* DSTRT3 instruction was executed when the ACC/DEC time was other than 1 to 5000.
+* SPCHG3 instruction was executed when the ACC/DEC time was other than 1 to 5000.","* When executing the PSTRT3 instruction, set the start method within the range.
+* When executing the DSTRT3 instruction, set the ACC/DEC time within the range.
+* When executing the SPCHG3 instruction, set the ACC/DEC time within the range."
+071C,"Programmable controller CPU error
+I/O reset occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+0B04,"Programmable controller CPU error
+I/O reset occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+0EEC,"Programmable controller CPU error
+I/O reset occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+0726,"Watchdog timer error of programmable controller CPU
+Watchdog timer error of programmable controller CPU occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+0B0E,"Watchdog timer error of programmable controller CPU
+Watchdog timer error of programmable controller CPU occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+0EF6,"Watchdog timer error of programmable controller CPU
+Watchdog timer error of programmable controller CPU occurred.","Turn OFF and then ON the power, or reset the programmable controller CPU.
+(Refer to QCPU User's manual)"
+076D,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Set the values to satisfy (Upper limit value) > (Lower limit value)."
+0B55,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Set the values to satisfy (Upper limit value) > (Lower limit value)."
+0F3D,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Set the values to satisfy (Upper limit value) > (Lower limit value)."
+0770,"Out of current feed value during speed control setting range
+The setting value of the 'Current feed value during speed control' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B58,"Out of current feed value during speed control setting range
+The setting value of the 'Current feed value during speed control' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F40,"Out of current feed value during speed control setting range
+The setting value of the 'Current feed value during speed control' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0771,"Out of speed limit value range
+The setting value of the 'Speed limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B59,"Out of speed limit value range
+The setting value of the 'Speed limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F41,"Out of speed limit value range
+The setting value of the 'Speed limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0772,"Out of bias speed at start setting range
+* The setting value of 'Bias speed at start' is out of the setting range.
+* The setting value of the 'Bias speed at start' exceeds the 'Speed limit value'.
+* The setting value of the 'Bias speed at start' is less than pulse unit.","Set the value within the setting range and less than the 'Speed limit value'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B5A,"Out of bias speed at start setting range
+* The setting value of 'Bias speed at start' is out of the setting range.
+* The setting value of the 'Bias speed at start' exceeds the 'Speed limit value'.
+* The setting value of the 'Bias speed at start' is less than pulse unit.","Set the value within the setting range and less than the 'Speed limit value'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F42,"Out of bias speed at start setting range
+* The setting value of 'Bias speed at start' is out of the setting range.
+* The setting value of the 'Bias speed at start' exceeds the 'Speed limit value'.
+* The setting value of the 'Bias speed at start' is less than pulse unit.","Set the value within the setting range and less than the 'Speed limit value'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0773,"Out of deviation counter clear signal output time setting range
+The setting value of the 'Deviation counter clear signal output time' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B5B,"Out of deviation counter clear signal output time setting range
+The setting value of the 'Deviation counter clear signal output time' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F43,"Out of deviation counter clear signal output time setting range
+The setting value of the 'Deviation counter clear signal output time' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0776,"Out of OPR method setting range
+The setting value of the 'OPR method' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B5E,"Out of OPR method setting range
+The setting value of the 'OPR method' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F46,"Out of OPR method setting range
+The setting value of the 'OPR method' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0777,"Out of OPR direction setting range
+The setting value of the 'OPR direction' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B5F,"Out of OPR direction setting range
+The setting value of the 'OPR direction' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F47,"Out of OPR direction setting range
+The setting value of the 'OPR direction' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0778,"Out of OP address setting range
+The setting value of the 'OP address' is out of the setting range.
+The setting of the 'OP address' is out of the positioning range when using the ring counter.
+When the 'Count value selection at OPR' is set to '1: OP address set to count value' for the ring counter, the setting of the 'OP address' is out of the count range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B60,"Out of OP address setting range
+The setting value of the 'OP address' is out of the setting range.
+The setting of the 'OP address' is out of the positioning range when using the ring counter.
+When the 'Count value selection at OPR' is set to '1: OP address set to count value' for the ring counter, the setting of the 'OP address' is out of the count range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F48,"Out of OP address setting range
+The setting value of the 'OP address' is out of the setting range.
+The setting of the 'OP address' is out of the positioning range when using the ring counter.
+When the 'Count value selection at OPR' is set to '1: OP address set to count value' for the ring counter, the setting of the 'OP address' is out of the count range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0779,"Out of OPR speed setting range
+The setting value of the 'OPR speed' is out of the setting range.
+The setting value of the 'OPR speed' is lower than the 'Creep speed'.
+The setting value of the 'OPR speed' exceeds the 'Speed limit value'.","Set the value, which is lower than the 'Speed limit value' and higher than the 'Creep speed'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B61,"Out of OPR speed setting range
+The setting value of the 'OPR speed' is out of the setting range.
+The setting value of the 'OPR speed' is lower than the 'Creep speed'.
+The setting value of the 'OPR speed' exceeds the 'Speed limit value'.","Set the value, which is lower than the 'Speed limit value' and higher than the 'Creep speed'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F49,"Out of OPR speed setting range
+The setting value of the 'OPR speed' is out of the setting range.
+The setting value of the 'OPR speed' is lower than the 'Creep speed'.
+The setting value of the 'OPR speed' exceeds the 'Speed limit value'.","Set the value, which is lower than the 'Speed limit value' and higher than the 'Creep speed'. Then turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+077A,"Out of creep speed setting range
+The setting value of the 'Creep speed' is out of the setting range.
+The setting value of the 'Creep speed' is higher than the 'OPR speed'.
+The setting value of the 'Creep speed' is less than pulse unit.","Set the value within the setting range and lower than the 'OPR speed', and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B62,"Out of creep speed setting range
+The setting value of the 'Creep speed' is out of the setting range.
+The setting value of the 'Creep speed' is higher than the 'OPR speed'.
+The setting value of the 'Creep speed' is less than pulse unit.","Set the value within the setting range and lower than the 'OPR speed', and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F4A,"Out of creep speed setting range
+The setting value of the 'Creep speed' is out of the setting range.
+The setting value of the 'Creep speed' is higher than the 'OPR speed'.
+The setting value of the 'Creep speed' is less than pulse unit.","Set the value within the setting range and lower than the 'OPR speed', and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+077B,"Out of ACC/DEC time at OPR setting range
+The setting value of the 'ACC/DEC time at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B63,"Out of ACC/DEC time at OPR setting range
+The setting value of the 'ACC/DEC time at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F4B,"Out of ACC/DEC time at OPR setting range
+The setting value of the 'ACC/DEC time at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0783,"Out of current feed value, count value simultaneous change function selection setting range
+The setting value of the 'Current feed value, count value simultaneous change selection' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B6B,"Out of current feed value, count value simultaneous change function selection setting range
+The setting value of the 'Current feed value, count value simultaneous change selection' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F53,"Out of current feed value, count value simultaneous change function selection setting range
+The setting value of the 'Current feed value, count value simultaneous change selection' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0784,"Out of coincidence detection setting range
+The setting value of the 'Coincidence detection setting' is out of the setting range.
+Ring counter is set for the counter format of the intelligent function module switch setting, which is set by MELSOFT application.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B6C,"Out of coincidence detection setting range
+The setting value of the 'Coincidence detection setting' is out of the setting range.
+Ring counter is set for the counter format of the intelligent function module switch setting, which is set by MELSOFT application.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F54,"Out of coincidence detection setting range
+The setting value of the 'Coincidence detection setting' is out of the setting range.
+Ring counter is set for the counter format of the intelligent function module switch setting, which is set by MELSOFT application.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0785,"Coincidence detection function/ring counter function setting error
+When ring counter is set for the counter format, the 'Coincidence detection setting' is set to '1: Coincidence detection requested'.","Set the 'Coincidence detection setting' to '0:Coincidence detection not request', and turn OFF and then ON the programmable controller CPU READY signal(Y0).
+Set liner counter for the counter format."
+0B6D,"Coincidence detection function/ring counter function setting error
+When ring counter is set for the counter format, the 'Coincidence detection setting' is set to '1: Coincidence detection requested'.","Set the 'Coincidence detection setting' to '0:Coincidence detection not request', and turn OFF and then ON the programmable controller CPU READY signal(Y0).
+Set liner counter for the counter format."
+0F55,"Coincidence detection function/ring counter function setting error
+When ring counter is set for the counter format, the 'Coincidence detection setting' is set to '1: Coincidence detection requested'.","Set the 'Coincidence detection setting' to '0:Coincidence detection not request', and turn OFF and then ON the programmable controller CPU READY signal(Y0).
+Set liner counter for the counter format."
+0786,"Out of count value selection at OPR setting range
+The setting value of the 'Count value selection at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B6E,"Out of count value selection at OPR setting range
+The setting value of the 'Count value selection at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F56,"Out of count value selection at OPR setting range
+The setting value of the 'Count value selection at OPR' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0787,"Out of ring counter upper limit value setting range
+The setting value of the 'Ring counter upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B6F,"Out of ring counter upper limit value setting range
+The setting value of the 'Ring counter upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F57,"Out of ring counter upper limit value setting range
+The setting value of the 'Ring counter upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0788,"Out of software stroke limit upper limit value setting range
+The setting value of the 'Software stroke limit upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B70,"Out of software stroke limit upper limit value setting range
+The setting value of the 'Software stroke limit upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F58,"Out of software stroke limit upper limit value setting range
+The setting value of the 'Software stroke limit upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0789,"Out of software stroke limit lower limit value setting range
+The setting value of the 'Software stroke limit lower limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B71,"Out of software stroke limit lower limit value setting range
+The setting value of the 'Software stroke limit lower limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F59,"Out of software stroke limit lower limit value setting range
+The setting value of the 'Software stroke limit lower limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+078A,"Out of positioning range upper limit value setting range
+The setting value of the 'Positioning range upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0B72,"Out of positioning range upper limit value setting range
+The setting value of the 'Positioning range upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+0F5A,"Out of positioning range upper limit value setting range
+The setting value of the 'Positioning range upper limit value' is out of the setting range.","Set the value within the setting range and turn OFF and then ON the programmable controller CPU READY signal (Y0)."
+</ERRCODE>,,

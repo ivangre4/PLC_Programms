@@ -1,0 +1,27 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0065,"An invalid value is set in the CH1 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0066,"An invalid value is set in the CH2 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0067,"An invalid value is set in the CH3 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0068,"An invalid value is set in the CH4 input range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006F,"Module error at startup.","Turn the power OFF and ON again. If the error occurs again, the module may be malfunctioning. Contact the nearest distributor or branch office with the description of the problem."
+00A1,"The G(P).OGSTOR instruction was executed in the offset/gain setting mode.","Do not execute the G(P).OGSTOR instruction in the offset/gain setting mode."
+00A2,"* The G(P).OGSTOR instruction was executed consecutively.
+* At the time of offset/gain setting, a set value was written to the E2PROM 26 or more times.","* Execute the G(P).OGSTOR instruction only once for one module.
+* At the time of offset/gain setting, write a set value only once at one time."
+00A3,"The G(P).OGSTOR instruction was executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed.","Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model."
+00C9,"The CH1 average time setting value for buffer memory address 1 (Un\G1) is outside the range of 2 to 5000 ms.","Reset the average time setting to a value within the range of 2 to 5000 ms."
+00CA,"The CH2 average time setting value for buffer memory address 2 (Un\G2) is outside the range of 2 to 5000 ms.","Reset the average time setting to a value within the range of 2 to 5000 ms."
+00CB,"The CH3 average time setting value for buffer memory address 3 (Un\G3) is outside the range of 2 to 5000 ms.","Reset the average time setting to a value within the range of 2 to 5000 ms."
+00CC,"The CH4 average time setting value for buffer memory address 4 (Un\G4) is outside the range of 2 to 5000 ms.","Reset the average time setting to a value within the range of 2 to 5000 ms."
+012D,"The CH1 average number of times setting value for buffer memory address 1 (Un\G1) is outside the range of 4 to 62500 times.","Reset the average number of times setting value to within the range of 4 to 62500 times."
+012E,"The CH2 average number of times setting value for buffer memory address 2 (Un\G2) is outside the range of 4 to 62500 times.","Reset the average number of times setting value to within the range of 4 to 62500 times."
+012F,"The CH3 average number of times setting value for buffer memory address 3 (Un\G3) is outside the range of 4 to 62500 times.","Reset the average number of times setting value to within the range of 4 to 62500 times."
+0130,"The CH4 average number of times setting value for buffer memory address 4 (Un\G4) is outside the range of 4 to 62500 times.","Reset the average number of times setting value to within the range of 4 to 62500 times."
+0191,"The CH1 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0192,"The CH2 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0193,"The CH3 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0194,"The CH4 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+01F4,"The offset/gain channels were set at the same time during offset and gain value settings, or both were set to 0.","Reset the contents of buffer memory addresses 22 and 23 (Un\G22 and Un\G23)."
+</ERRCODE>,,

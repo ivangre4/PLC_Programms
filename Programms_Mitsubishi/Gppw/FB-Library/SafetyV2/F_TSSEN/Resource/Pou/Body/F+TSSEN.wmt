@@ -1,0 +1,30 @@
+FUNCTION_BLOCK F+TSSEN (*SF_TestableSafetySensor_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_OSSD_In:BOOL:;(*Status of sensor output*)
+  StartTest:BOOL:;(*Input to start sensor test.*)
+  TestTime:DINT:;(*Test time of safety sensor in 10ms steps 0>=TestTime <=150ms*)
+  NoExternalTest:BOOL:;(*Indicates if external manual sensor test is supported*)
+  S_StartReset:BOOL:;(*Manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*Manual reset*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  R_TRIG_StartTest:BOOL:;(*Trigger at StartTest*)
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+  F_TRIG_S_OSSD_In:BOOL:;(*Falling trigger at OSSD In*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_OSSD_Out:BOOL:;(*Indicating the status of the ESPE*)
+  S_TestOut:BOOL:;(*Coupled with the test input of the sensor*)
+  TestPossible:BOOL:;(*Feedback signal to the process*)
+  TestExecuted:BOOL:;(*Indicates the successful execution of the automatic sensor test.*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredTime:DINT:;(*Time value for timer*)
+  State:INT:;(*State register*)
+ END_VAR
+END_FUNCTION_BLOCK

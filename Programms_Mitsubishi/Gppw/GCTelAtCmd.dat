@@ -1,0 +1,5 @@
+#GPPW GCTelAtCmd.dat Ver1.00                                    
+[GROUP]   Modem at the GX Developer side                    
+[ATCMD]   Side:GX Developer Default                                   AT&C1Q0V1\N3&D2&K3                                                    
+[GROUP]   Modem at TEL side                                 
+[ATCMD]   Side:A6TEL or Q6TEL or C24 Default                          AT&C1Q0V1\N3&D2&K3E1&S0S0=1                                           

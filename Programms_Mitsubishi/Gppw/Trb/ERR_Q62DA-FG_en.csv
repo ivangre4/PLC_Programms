@@ -1,0 +1,27 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0065,"An invalid value is set in the CH1 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0066,"An invalid value is set in the CH2 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006F,"Module error at startup.","Turn the power ON and OFF again. If the error occurs again, the module may be malfunctioning. Contact the nearest distributor or branch office with a description of the problem."
+0070,"The value set to the intelligent function switch 5 is other than 0.","Re-set the correct parameter value in the parameter setting of MELSOFT application."
+00A1,"The G(P).OGSTOR instruction was executed in the offset/gain setting mode.","Do not execute the G(P).OGSTOR instruction in the offset/gain setting mode."
+00A2,"* The G(P).OGSTOR instruction was executed consecutively.
+* At the time of offset/gain setting, a set value was written to the E2PROM 26 or more times.","* Execute the G(P).OGSTOR instruction only once for one module.
+* At the time of offset/gain setting, write a set value only once at one time."
+00A3,"The G(P).OGSTOR instruction was executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed.","Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model."
+00A4,"The value set to the G(P).OGLOAD instruction, G(P).OGSTOR instruction or pass data classification setting (buffer memory address 200: Un\G200) is outside the range.","Set the value within the range."
+0191,"The CH1 offset value is equal to or larger than the gain value.","Reset so that the offset value becomes smaller than the gain value."
+0192,"The CH2 offset value is equal to or larger than the gain value.","Reset so that the offset value becomes smaller than the gain value."
+01F4,"More than one channel was set at the same time during offset/gain settings.","Set the correct value in buffer memory addresses 22 and 23 (Un\G22 and Un\G23)."
+0259,"The CH1 specified digital value is outside the valid range.","Set a value that is within the valid range."
+025A,"The CH2 specified digital value is outside the valid range.","Set a value that is within the valid range."
+0263,"The CH1 warning output upper/lower limit value setting is outside the range -16384 to 16383.","Correct the contents of the buffer memory addresses 86 and 87 (Un\G86 and 87) to within the range -16384 to 16383."
+0264,"The CH2 warning output upper/lower limit value setting is outside the range -16384 to 16383.","Correct the contents of the buffer memory addresses 88 and 89 (Un\G88 and 89) to within the range -16384 to 16383."
+026D,"The CH1 warning output lower limit value is equal to or greater than the warning output upper limit value.","Make setting so that the warning output upper limit value is greater than the warning output lower limit value."
+026E,"The CH2 warning output lower limit value is equal to or greater than the warning output upper limit value.","Make setting so that the warning output upper limit value is greater than the warning output lower limit value."
+02BC,"The analog adjustment output in the offset/gain setting mode is outside the specified value range.","Change the contents of buffer memory address 24 (Un\G24) so that it is within the range from -3000 to 3000."
+02C6,"The offset/gain range setting is outside the range DH to FH.","Correct the contents of the buffer memory address 25 (Un\G25) to within the range DH to FH."
+0321,"The CH1 increase/decrease digital limit value setting is outside the range 0 to 32000.","Correct the contents of the buffer memory addresses 70 and 71 (Un\G70 and 71) to within the range 0 to 32000."
+0322,"The CH2 increase/decrease digital limit value setting is outside the range 0 to 32000.","Correct the contents of the buffer memory addresses 72 and 73 (Un\G72 and 73) to within the range 0 to 32000."
+</ERRCODE>,,

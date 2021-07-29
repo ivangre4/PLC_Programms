@@ -1,0 +1,15 @@
+[Pass]
+	PassSet:
+		PassFlag	TYPE_BOOL	FALSE
+[App]
+	Project:
+		CpuType	TYPE_STRING	"Q25H"
+		ProjectComment	TYPE_STRING	"Q COMMENT SM,SD,J1\SB,J1\SW"
+		AutoSave	TYPE_BOOL	FALSE
+[Prt]
+[Cmnt]
+	CommInfo:
+		CommCmntNo	TYPE_WORD10	0
+		SepCmntNo	TYPE_WORD10	0
+		CmntChar	TYPE_WORD10	32
+		CmntLength	TYPE_WORD10	32

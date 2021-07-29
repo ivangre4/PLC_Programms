@@ -1,0 +1,37 @@
+FUNCTION_BLOCK F+MUTEP (*SF_MutingPar_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_AOPD_In:BOOL:;(*OSSD signal from AOPD.*)
+  S_MutingSw_11:BOOL:;(*Status of muting sensor 11*)
+  S_MutingSw_12:BOOL:;(*Status of muting sensor 12*)
+  S_MutingSw_21:BOOL:;(*Status of muting sensor 21*)
+  S_MutingSw_22:BOOL:;(*Status of muting sensor 22*)
+  S_MutingLamp:BOOL:;(*Indicates operation of the muting lamp*)
+  DiscTime11_12:DINT:;(*Max. discrepancy time for MutingSw11 and MutingSw12 in 10ms step*)
+  DiscTime21_22:DINT:;(*Max. discrepancy time for MutingSw21 and MutingSw22 in 10ms step*)
+  MaxMutingTime:DINT:;(*Maximum time for complete muting sequence in 10ms steps*)
+  MutingEnable:BOOL:;(*Enables the start of the muting function*)
+  S_StartReset:BOOL:;(*Manual reset*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  RF_TRIG_S_Sw_11:BOOL:;(*Trigger at S_MutingSwitch_11*)
+  RF_TRIG_S_Sw_12:BOOL:;(*Trigger at S_MutingSwitch_12*)
+  RF_TRIG_S_Sw_21:BOOL:;(*Trigger at S_MutingSwitch_21*)
+  RF_TRIG_S_Sw_22:BOOL:;(*Trigger at S_MutingSwitch_22*)
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_AOPD_Out:BOOL:;(*Indicates status of the muted guard*)
+  S_MutingActive:BOOL:;(*Indicates status of muting process*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredDT:DINT:;(*Time value for timer Discrepancy time*)
+  ExpiredMuteT:DINT:;(*Time value for timer in state Muting time*)
+  State1:INT:;(*State register*)
+  State2:INT:;(*Register for state CYx4*)
+ END_VAR
+END_FUNCTION_BLOCK

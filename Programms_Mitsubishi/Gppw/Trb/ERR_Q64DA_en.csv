@@ -1,0 +1,24 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0065,"An invalid value is set in the CH1 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0066,"An invalid value is set in the CH2 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0067,"An invalid value is set in the CH3 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+0068,"An invalid value is set in the CH4 output range setting by the switch setting for intelligent function module in MELSOFT application.","Reset to the correct parameter with MELSOFT application parameter setting."
+006F,"Module error at startup.","Turn the power ON and OFF again. If the error occurs again, the module may be malfunctioning. Contact the nearest distributor or branch office with a description of the problem."
+00A1,"The G(P).OGSTOR instruction was executed in the offset/gain setting mode.","Do not execute the G(P).OGSTOR instruction in the offset/gain setting mode."
+00A2,"* The G(P).OGSTOR instruction was executed consecutively.
+* At the time of offset/gain setting, a set value was written to the E2PROM 26 or more times.","* Execute the G(P).OGSTOR instruction only once for one module.
+* At the time of offset/gain setting, write a set value only once at one time."
+00A3,"The G(P).OGSTOR instruction was executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed.","Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model."
+0191,"The CH1 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0192,"The CH2 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0193,"The CH3 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+0194,"The CH4 offset value is equal to or greater than the gain value at the time of user range setting or user range restoration.","Reset so that the offset value becomes smaller than the gain value."
+01F4,"More than one channel was set at the same time during offset/gain settings.","Set the correct value in buffer memory addresses 22 and 23 (Un\G22 and Un\G23)."
+0259,"The CH1 specified digital value is outside the valid range.","Set a value that is within the valid range."
+025A,"The CH2 specified digital value is outside the valid range.","Set a value that is within the valid range."
+025B,"The CH3 specified digital value is outside the valid range.","Set a value that is within the valid range."
+025C,"The CH4 specified digital value is outside the valid range.","Set a value that is within the valid range."
+02BC,"The analog adjustment output in the offset/gain setting mode is outside the specified value range.","Change the contents of buffer memory address 24 (Un\G24) so that it is within the range from -3000 to 3000."
+</ERRCODE>,,

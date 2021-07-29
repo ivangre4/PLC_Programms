@@ -1,0 +1,892 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+044C,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+0834,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+0C1C,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+1004,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+13EC,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+17D4,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+1BBC,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+1FA4,"Faults
+Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+044D,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+0835,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+0C1D,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+1005,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+13ED,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+17D5,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+1BBD,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+1FA5,"QD70 not prepared
+Start was made when the QD70 was not ready.","After switching power from OFF to ON/resetting the PLC CPU, turn ON the PLC READY signal (Y0) again, make sure that the module READY signal (X0) is ON, and then make a start. (The module is faulty if the module READY signal (X0) does not turn ON.)"
+044E,"Stop signal ON at start
+A start request was given when the axis stop signal (Y10) is ON.","Check whether the axis stop signal (Y10) is ON or OFF and turn OFF the axis stop signal that is ON."
+0836,"Stop signal ON at start
+A start request was given when the axis stop signal (Y11) is ON.","Check whether the axis stop signal (Y11) is ON or OFF and turn OFF the axis stop signal that is ON."
+0C1E,"Stop signal ON at start
+A start request was given when the axis stop signal (Y12) is ON.","Check whether the axis stop signal (Y12) is ON or OFF and turn OFF the axis stop signal that is ON."
+1006,"Stop signal ON at start
+A start request was given when the axis stop signal (Y13) is ON.","Check whether the axis stop signal (Y13) is ON or OFF and turn OFF the axis stop signal that is ON."
+13EE,"Stop signal ON at start
+A start request was given when the axis stop signal (Y14) is ON.","Check whether the axis stop signal (Y14) is ON or OFF and turn OFF the axis stop signal that is ON."
+17D6,"Stop signal ON at start
+A start request was given when the axis stop signal (Y15) is ON.","Check whether the axis stop signal (Y15) is ON or OFF and turn OFF the axis stop signal that is ON."
+1BBE,"Stop signal ON at start
+A start request was given when the axis stop signal (Y16) is ON.","Check whether the axis stop signal (Y16) is ON or OFF and turn OFF the axis stop signal that is ON."
+1FA6,"Stop signal ON at start
+A start request was given when the axis stop signal (Y17) is ON.","Check whether the axis stop signal (Y17) is ON or OFF and turn OFF the axis stop signal that is ON."
+044F,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0837,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0C1F,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1007,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+13EF,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+17D7,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1BBF,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1FA7,"Software stroke limit +
+* Positioning control was carried out in a position in excess of 'Software stroke limit upper limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit upper limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0450,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0838,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0C20,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1008,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+13F0,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+17D8,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1BC0,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+1FA8,"Software stroke limit -
+* Positioning control was carried out in a position in excess of 'Software stroke limit lower limit value'.
+* 'Current feed value' or 'Positioning address/movement amount' (New current value) has exceeded 'Software stroke limit lower limit value'.","At start:
+Perform JOG operation to change 'Current feed value' to within the software stroke limit range.
+Current value changing:
+Change the new current value to within the software stroke limit range.
+During operation:
+Correct 'Positioning address/movement amount'."
+0451,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+0839,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+0C21,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+1009,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+13F1,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+17D9,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+1BC1,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+1FA9,"PLC READY OFF during operation
+The PLC READY signal (Y0) turned OFF during operation.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+0456,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+083E,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+0C26,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+100E,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+13F6,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+17DE,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+1BC6,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+1FAE,"PLC READY OFF during writing
+The PLC READY signal (Y0) turned OFF immediately after turning ON.","Review the sequence program that turns ON/OFF the PLC READY signal (Y0)."
+04B1,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+0899,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+0C81,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+1069,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+1451,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+1839,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+1C21,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+2009,"Start during near-point dog ON
+With 'OPR method' being any of near-point dog method, count 1 and count 2, machine OPR control was started when the near-point dog was ON.","Perform JOG operation to move the axis to the position where the near-point dog turns OFF, and then start machine OPR control."
+04B2,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+089A,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+0C82,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+106A,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+1452,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+183A,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+1C22,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+200A,"Zero signal ON
+With 'OPR method' being either of stopper 2 and stopper 3, the zero signal is input when machine OPR control is started.","After turning OFF the zero signal, start machine OPR control."
+04B3,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+089B,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+0C83,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+106B,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+1453,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+183B,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+1C23,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+200B,"Machine OPR not execute
+Fast OPR control was started though machine OPR control was not yet carried out.","Before starting fast OPR control, perform machine OPR control."
+05DD,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+09C5,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+0DAD,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+1195,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+157D,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+1965,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+1D4D,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+2135,"Setting range outside start method
+The setting value of 'Start method' is other than 0, 9000 and 9001.","Set 'Start method' to within the setting range."
+05DE,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+09C6,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+0DAE,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1196,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+157E,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1966,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1D4E,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+2136,"New current change not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Current value changing'.
+* 'Control method' is 'Current value changing' in the positioning data following the positioning data whose 'Operation pattern' is 'Continuous path control'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+05DF,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+09C7,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+0DAF,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1197,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+157F,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1967,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+1D4F,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+2137,"Continuous path control not possible
+* 'Operation pattern' is 'Continuous path control' in the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.
+* 'Operation pattern' is 'Continuous path control' in the positioning data preceding the positioning data whose 'Control method' is 'Speed.Position Ctrl.'.","* When 'Control method' is 'Current value changing' or 'Speed.Position Ctrl.', do not set 'Continuous path control' in 'Operation pattern'.
+* Do not set 'Current value changing' or 'Speed.Position Ctrl.' in 'Control method' of the positioning data following the positioning data where 'Continuous path control' has been set in 'Operation pattern'."
+05E0,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+09C8,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+0DB0,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+1198,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+1580,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+1968,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+1D50,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+2138,"Setting range outside operation pattern
+The setting value of 'Operation pattern' is outside the setting range.","Set 'Operation pattern' to within the setting range."
+05E1,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+09C9,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+0DB1,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+1199,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+1581,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+1969,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+1D51,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+2139,"Speed 0 error
+At a position control start, 'Command speed' of the positioning data is '0'.","Set 'Command speed' to other than '0'."
+05E2,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+09CA,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+0DB2,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+119A,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+1582,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+196A,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+1D52,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+213A,"Setting range outside control method
+The setting value of 'Control method' is outside the setting range.","Set 'Control method' to within the setting range."
+05E3,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+09CB,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+0DB3,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+119B,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+1583,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+196B,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+1D53,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+213B,"Setting range outside ACC/DEC time
+Any of the 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' setting values is outside the setting range.","Set 'ACC/DEC time at OPR', 'JOG ACC time', 'ACC/DEC time' and 'ACC/DEC time at speed change' to within the setting range."
+05E4,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+09CC,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+0DB4,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+119C,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+1584,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+196C,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+1D54,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+213C,"Setting range outside DEC/STOP time
+Any of the 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' setting values is outside the setting range.","Set 'DEC/STOP time at OPR', 'JOG DEC time', 'DEC/STOP time' and 'DEC/STOP time at speed change' to within the setting range."
+05E6,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+09CE,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+0DB6,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+119E,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+1586,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+196E,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+1D56,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+213E,"Illegal direction for continuous path control
+When 'Operation pattern' is 'Continuous path control' for position control, 'Positioning address/movement amount' has been set to reverse the operation direction.","Correct 'Positioning address/movement amount'."
+05E7,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+09CF,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+0DB7,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+119F,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+1587,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+196F,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+1D57,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+213F,"Insufficient movement amount for continuous path control
+When 'Operation pattern' is 'Continuous path control', 'Positioning address/movement amount' is too small to form a constant-speed part.","Correct 'Positioning address/movement amount'."
+05E8,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+09D0,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+0DB8,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+11A0,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+1588,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+1970,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+1D58,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+2140,"Not complete calculation for continuous path control
+When 'Operation pattern' was 'Continuous path control' for position control, positioning control ended soon since 'Positioning address/movement amount' in current execution was small, and the calculation processing of the next positioning data was not in time.","Correct 'Positioning address/movement amount'."
+05E9,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+09D1,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+0DB9,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+11A1,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+1589,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+1971,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+1D59,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+2141,"Setting range outside movement amount at speed-position switching control
+In 'Control method' of 'Speed-position switching control', a negative value is set in 'Positioning address/movement amount'.","Correct 'Positioning address/movement amount'."
+05EA,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+09D2,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+0DBA,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+11A2,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+158A,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+1972,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+1D5A,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+2142,"Movement amount shortage at 0 bias speed
+The movement amount is short when operation is performed with 0 set to 'Bias speed at start' in the 'control method' setting of '1-axis linear control (ABS)' or '1-axis linear control (INC)'.","* Set 1 pulse/s or more to 'bias speed at start'.
+* If the movement amount is 32 pulse or less, set the value equal to or less than the initial value (1000ms) to 'ACC/DEC time' and 'DEC/STOP time'."
+0708,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+0AF0,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+0ED8,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+12C0,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+16A8,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+1A90,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+1E78,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+2260,"Hold error
+The setting made for the QD70 is 'Hold' in the 'Error time output mode' parameter of the CPU module.","Change the setting of the 'Error time output mode' parameter of the PLC CPU to 'Clear'."
+0712,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+0AFA,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+0EE2,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+12CA,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+16B2,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+1A9A,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+1E82,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+226A,"Switch setting error
+The intelligent function module switch setting made on MELSOFT application is in error.","Set the intelligent function module switches to within the setting ranges."
+071C,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+0B04,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+0EEC,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+12D4,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+16BC,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+1AA4,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+1E8C,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+2274,"PLC CPU error
+The PLC CPU resulted in an error.","Switch power from OFF to ON or reset the PLC CPU."
+0726,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+0B0E,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+0EF6,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+12DE,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+16C6,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+1AAE,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+1E96,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+227E,"PLC CPU watch dog timer error
+The watchdog timer error of the PLC CPU occurred.","Switch power from OFF to ON or reset the PLC CPU."
+0730,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+0B18,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+0F00,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+12E8,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+16D0,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+1AB8,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+1EA0,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+2288,"Module error
+A module power-off error occurred.","Switch power from OFF to ON or reset the PLC CPU."
+076D,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+0B55,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+0F3D,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+1325,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+170D,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+1AF5,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+1EDD,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+22C5,"Software stroke limit upper/lower limit value error
+Upper limit value is equal to or smaller than lower limit value in the software stroke limit upper/lower limit values.","Make setting to satisfy (upper limit value) > (lower limit value)."
+076E,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B56,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F3E,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1326,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+170E,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AF6,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EDE,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22C6,"Setting range outside PULSE/SIGN method selection setup/hold time
+The setting value of 'PULSE/SIGN method selection setup/hold time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+076F,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B57,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F3F,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1327,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+170F,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AF7,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EDF,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22C7,"Setting range outside software stroke limit
+The setting value of 'Software stroke limit valid/invalid setting' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0770,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B58,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F40,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1328,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1710,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AF8,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE0,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22C8,"Setting range outside current feed value during speed control
+The setting value of 'Current feed value during speed control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0771,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B59,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F41,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1329,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1711,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AF9,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE1,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22C9,"Setting range outside speed limit value
+The setting value of 'Speed limit value' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0772,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+0B5A,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+0F42,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+132A,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+1712,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+1AFA,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+1EE2,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+22CA,"Setting range outside bias speed
+* The setting value of 'Bias speed at start' is outside the setting range.
+* The setting value of 'Bias speed at start' is higher than 'Speed limit value'.","Change the setting to within the setting range and to not more than 'Speed limit value', and turn the PLC READY signal (Y0) from OFF to ON."
+0773,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B5B,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F43,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+132B,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1713,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AFB,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE3,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22CB,"Setting range outside deviation counter clear signal output time
+The setting value of 'Deviation counter clear signal output time' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0776,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B5E,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F46,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+132E,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1716,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AFE,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE6,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22CE,"Setting range outside OPR method
+The setting value of 'OPR method' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0777,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B5F,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F47,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+132F,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1717,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1AFF,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE7,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22CF,"Setting range outside OPR direction
+The setting value of 'OPR direction' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0778,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B60,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F48,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1330,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1718,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1B00,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EE8,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22D0,"Setting range outside OP address
+The setting value of 'OP address' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0779,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+0B61,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+0F49,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1331,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1719,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1B01,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1EE9,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+22D1,"Setting range outside OPR speed
+* The setting value of 'OPR speed' is outside the setting range.
+* The setting value of 'OPR speed' is lower than 'Bias speed at start'.
+* The setting value of 'OPR speed' is higher than 'Speed limit value'.","Change the setting to within the setting range, to not more than 'Speed limit value' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+077A,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+0B62,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+0F4A,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1332,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+171A,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1B02,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+1EEA,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+22D2,"Setting range outside creep speed
+* The setting value of 'Creep speed' is outside the setting range.
+* The setting value of 'Creep speed' is higher than 'OPR speed'.
+* The setting value of 'Creep speed' is lower than 'Bias speed at start'.","Change the setting to within the setting range, to not more than 'OPR speed' and to not less than 'Bias speed at start', and turn the PLC READY signal (Y0) from OFF to ON."
+077B,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B63,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F4B,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1333,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+171B,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1B03,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EEB,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22D3,"Setting range outside ACC/DEC time at OPR
+The setting value of 'ACC/DEC time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+077C,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B64,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F4C,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1334,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+171C,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1B04,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EEC,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22D4,"Setting range outside DEC/STOP time at OPR
+The setting value of 'DEC/STOP time at OPR' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+077D,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B65,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F4D,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1335,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+171D,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1B05,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EED,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22D5,"Setting range outside setting for the movement amount after near-point dog ON
+The setting value of 'Setting for the movement amount after near-point dog ON' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+077E,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0B66,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+0F4E,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1336,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+171E,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1B06,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+1EEE,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+22D6,"Setting range outside stop mode during path control
+The setting value of 'Stop mode during path control' is outside the setting range.","Change the setting to within the setting range and turn the PLC READY signal (Y0) from OFF to ON."
+</ERRCODE>,,

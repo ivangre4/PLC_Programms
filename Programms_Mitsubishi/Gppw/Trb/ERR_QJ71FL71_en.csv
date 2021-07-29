@@ -1,0 +1,49 @@
+<GROUP>,,,
+"3E8-3FFF","Error detected by PLC CPU","Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.)",********.csv
+"4000-4FFF","Error detected by PLC CPU","Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.)",********.csv
+</GROUP>,,,
+<ERRCODE>,,,
+"C001","FL-net module's OS error","Replace the FL-net module."
+"C003","Wrong IP address (network address) setting","Correct the IP address."
+"C004","Wrong IP address (host address) setting","Correct the IP address."
+"C005","Wrong mode number setting","Correct the mode number."
+"C021","Wrong IP address (network address) setting","Correct the IP address."
+"C022","Wrong IP address (host address) setting","Correct the IP address."
+"C023","Wrong setting value for common memory area 1 first address","Correct setting value for common memory area 1 first address and perform initial process again."
+"C024","Wrong setting value for common memory area 1 size","Correct setting value for common memory area 1 size and perform initial process again."
+"C025","Setting value for common memory area 1 first address and size outside permissible range","Correct setting value for common memory area 1 first address and size and perform initial process again."
+"C026","Wrong setting value for common memory area 2 first address","Correct setting value for common memory area 2 first address and perform initial process again."
+"C027","Wrong setting value for common memory area 2 size","Correct setting value for common memory area 2 size and perform initial process again."
+"C028","Setting value for common memory area 2 first address and size outside permissible range","Correct setting value for common memory area 2 first address and size and perform initial process again."
+"C029","Wrong setting value for token monitoring time out time","Correct setting value for token monitoring time out time and perform initial process again."
+"C02A","Wrong setting value for minimum permissible frame interval","Correct setting value for minimum permissible frame interval and perform initial process again."
+"C02C","Setting for common memory area overlaps other node setting range","Correct setting value for common memory."
+"C02D","Wrong message data unit selection","Correct selection for message data unit."
+"C104","Multiple PLC system No.1 to 4 error","Confirm the error code of the PLC No.1 to 4, and remove the factor of the error."
+"C105","Error occurred in he interface with the multiple PLC system No.1","Confirm the error code of the PLC No.1, and remove the factor of the error."
+"C106","Error occurred in he interface with the multiple PLC system No.2","Confirm the error code of the PLC No.2, and remove the factor of the error."
+"C107","Error occurred in he interface with the multiple PLC system No.3","Confirm the error code of the PLC No.3, and remove the factor of the error."
+"C108","Error occurred in he interface with the multiple PLC system No.4","Confirm the error code of the PLC No.4, and remove the factor of the error."
+"C112","Error occurred in the interface with the multiple PLC system's control PLC.","Confirm the error code of the control PLC, and remove the factor of the error."
+"C321","Setting value for object node number outside permissible range","Correct setting value for applicable object node number."
+"C322","Object node does not exist","Correct setting value for applicable object node number.
+Confirm operation of corresponding equipment."
+"C323","No response from object node for 10 seconds or more","Correct setting value for applicable object node number.
+Confirm operation of corresponding equipment."
+"C324","Error in send data","Correct send data."
+"C325","FL-net module does not support process indicated in transaction code","Correct transaction code."
+"C326","No empty capacity in object node buffer","Create space and re-execute."
+"C327","Request is broadcast message","Correct the node number."
+"C328","Not participating in token","Check the status of the PLC and wire status.
+Re-evaluate the settings for the initial process."
+"C329","Transaction code is X/Y handshake specification","Correct the transaction code."
+"C421","Setting value for virtual address space word length outside permissible range","Re-evaluate the request data."
+"C422","Address setting value for virtual address space outside permissible range","Re-evaluate the request data."
+"C423","Word block read request data size is not 0","Re-evaluate the request data."
+"C424","Byte length for receive message outside permissible range","Re-evaluate the request data."
+"C425","Address setting for receive message range outside permissible range","Re-evaluate the request data."
+"C42B","No response from other node for 10 seconds or more","Re-evaluate the source node for the address."
+"C501","Self-loopback error","Re-evaluate the cable."
+"C502","Hardware error","Replace the FL-net module."
+"C503","Hardware error","Replace the FL-net module."
+</ERRCODE>,,,

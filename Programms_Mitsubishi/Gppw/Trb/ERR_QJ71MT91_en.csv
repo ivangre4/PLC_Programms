@@ -1,0 +1,1050 @@
+<GROUP>,,,
+03E8-4FFF,Error detected by the programmable controller CPU,Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.),********.csv
+B000-BFFF,Error detected by the CC-Link module,Take measure referring to the troubleshooting section of the CC-Link System Master/Local Module User's Manual,ERR_QJ61BT11.csv
+C000-CFFF,Error detected by the Ethernet module,Take measure referring to the troubleshooting section of the Ethernet Interface Module User's Manual,ERR_QJ71E71.csv
+F000-FFFF,Error detected by the MELSECNET/H or MELSECNET/10 module,Take measure referring to the troubleshooting section of the MELSECNET/H or MELSECNET/10 network system reference Manual,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+7301,"Switch 1 error 
+*  The setting of the intelligent function module switch 1 (operation mode setting) is incorrect.",Review the setting of the intelligent function module switch 1.,
+7302,"Switch 2 error 
+*  The setting of the intelligent function module switch 2 (communication condition setting) is incorrect.",Review the setting of the intelligent function module switch 2.,
+7303,"Switch 3, 4 error 
+*  The setting of the intelligent function module switch 3, 4 (IP address setting) is incorrect.","Review the setting of the intelligent function module switch 3, 4.",
+7305,"Switch 5 error 
+*  The setting of the intelligent function module switch 5 (not used) is incorrect.",Delete the setting of the intelligent function module switch 5.,
+7306,"ROM check error 
+*  An error was detected by the ROM check made at power-on.","It is a QJ71MT91 hardware fault.Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+7307,"RAM check error 
+*  An error was detected by the RAM check made at power-on.","It is a QJ71MT91, programmable controller CPU or base unit failure.Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+730A,"Parameter starting method error 
+*  Parameter setting using GX Configurator-MB was made to the programmable controller CPU while b0, b1 of the intelligent function module switch 2 (communication condition setting) was preset to ""Start with the default parameters"".","*  When using the default parameter setting, delete the QJ71MT91 parameters set to the programmable controller CPU.
+*  When starting the QJ71MT91 with user setting parameters set from GX Configurator-MB or sequence program, turn ON b0, b1 of the intelligent function module switch 2.",
+730B,"Parameter starting method error 
+* After power-on with parameters preset by GX Configurator-MB, before Basic parameter setting existence (X3) turns on, parameter settings were done by any of the following:
+  *  Basic parameter setting request (Y1)
+  *  Automatic communication parameter setting request (Y4)
+  *  MODBUS(R) device assignment parameter setting request (Y8)","When using parameters set by GX Configurator-MB, do not make parameter settings by Y-signals before Basic parameter setting existence (X3) turns on after power-up.",
+7310,"Monitoring timer setting error 
+*  Any of the monitoring timer setting in the basic parameter is incorrect.",Review the monitoring timer setting.,
+7311,"Preferred node specification setting error 
+*  The setting of the preferred node specification in the basic parameter is incorrect.",Review the setting of the preferred node specification.
+7312,"Subnet mask pattern setting error 
+*  The setting of the subnet mask pattern in the basic parameter is incorrect.",Review the setting of the subnet mask pattern.
+7313,"Default router IP address setting error 
+*  The setting of the default router IP address in the basic parameter is incorrect.",Review the setting of the default router IP address.
+7314,"Subnet address setting error 
+*  The setting of the subnet address in the basic parameter is incorrect.",Review the setting of the subnet address.
+7315,"Router IP address setting error 
+* The setting of the router IP address in the basic parameter is incorrect.
+* The net ID of the local station differs from the net ID of the router IP address.",Review the setting of the router IP address.
+7316,"Number of routers setting error 
+*  The setting of the number of routers set in the basic parameter is incorrect.",Review the setting of the number of routers set.
+7317,"KeepAlive setting error 
+*  The KeepAlive-related setting in the basic parameter is incorrect.",Review the KeepAlive-related setting.
+7318,"Number of TCP connections for GX Developer connection setting error
+*  The setting of the number of TCP connections for GX Developer connection in the basic parameter is incorrect.",Review the setting of the number of TCP connections for GX Developer connection.
+7319,"Local slave station port No. error
+*  The setting of the local slave station port No. in the basic parameter is incorrect.",Review the setting of the local slave station port No.
+731A,"Number of TCP connections setting error 
+*  The number of TCP connections for GX Developer connection or the total number of TCP connections set in the preferred node specification in the basic parameter is greater than 64.",Review the setting of the number of TCP connections for GX Developer connection and preferred node specification.
+731B,"Timer setting magnitude relationship error 
+*  The magnitude relationships between various monitoring timer values and CPU response monitoring timer value set in the basic parameters are incorrect.",Review the settings of various monitoring timer values and CPU response monitoring timer value.
+7320,"Port No. setting error for automatic communication function  
+*  The setting of the port No. for automatic communication function in the basic parameter is incorrect.",Review the setting of the port No. for automatic communication function.
+7321,"Target slave port No. setting error for automatic communication function 
+*  The setting of the target slave port No. for automatic communication function in the basic parameter is incorrect.",Review the setting of the target slave port No. for automatic communication function.
+7324,"System area setting error 
+*  Erroneous data have been written to the system area (0031H to 00F1H) of the buffer memory.",Do not write data to the system area (0031H to 00F1H) of the buffer memory.
+7327,"CPU response monitoring timer setting error 
+*  The setting of the CPU response monitoring timer in the basic parameter is incorrect.",Review the setting of the CPU response monitoring timer.
+732A,"Basic parameter setting failure 
+*  Failed in basic parameter setting because the GX Configurator-MB parameters were being set at power-on.","When using GX Configurator-MB, switch the power on and then turn on Basic parameter setting request (Y1) after Basic parameter setting existence (X3) has turned on."
+732E,"Port No. setting error for dedicated instruction  
+*  The setting of the port No. for dedicated instruction in the basic parameter is incorrect.",Review the setting of the port No. for dedicated instruction.
+732F,"Dedicated instruction interruption 
+*  The dedicated instruction being executed was interrupted by the basic parameter setting.",Perform the basic parameter setting after completion of the dedicated instruction.
+7330,"Device code error 
+*  The device code value specified in MODBUS(R) device assignment parameter is incorrect.",Review the setting of the device code.
+7331,"MODBUS(R) device upper limit value over error 
+*  The head MODBUS(R) device number + assignment points in the MODBUS(R) device assignment parameter exceeds the maximum (65535) of the MODBUS(R) device.",Review the setting of the head MODBUS(R) device number and assignment points.
+7332,"MODBUS(R) device assigned range overlap error 
+*  MODBUS(R) device ranges set with the MODBUS(R) device assignment parameters are overlapped.",Review the setting of the head MODBUS(R) device number and assignment points.
+7333,"Buffer memory assigned range error 
+*  The assigned range of the QJ71MT91 buffer memory set with the MODBUS(R) device assignment parameters exceeds the set range of the user free area.",Review the setting of the head device number and assignment points.
+7334,"Device upper limit value over error 
+* The head device number + assignment points in the MODBUS(R) device assignment parameter exceeds the maximum (65535) of the CPU device.",Review the setting of the head device number and assignment points.
+7340,"Target MODBUS(R) device type specification error 
+*  The setting of the target MODBUS(R) device type specification in the automatic communication parameter is incorrect.",Review the setting of the target MODBUS(R) device type specification.
+7343,"Response monitoring timer setting error 
+*  The setting of the response monitoring timer in the automatic communication parameter is outside the setting range.",Review the setting of the response monitoring timer so that it falls within the setting range.
+7344,"Response monitoring timer setting error
+*  The setting of the response monitoring timer in the automatic communication parameter is less than the setting of the split reception monitoring timer value.",Make the response monitoring timer greater than the split reception monitoring timer value.
+7345,"Buffer memory address overlap error 
+*  The setting ranges of the buffer memory in the automatic communication parameter overlap between multiple parameters.",Correct the overlapping buffer memory settings.
+7346,"Buffer memory address range error 
+*  The setting range of the buffer memory in the automatic communication parameter is outside the range of the automatic communication function buffer input/output area.",Correct the buffer memory setting outside the range.
+7347,"IP address setting error 
+*  The setting of the target IP address set in the automatic communication parameter or dedicated instruction's control data is incorrect.",Review the setting of the IP address.
+7348,"MODBUS(R) device number setting range error 
+*  The MODBUS(R) device range of the read/write target set in the automatic communication parameter or dedicated instruction's control data is greater than the maximum value (65536).",Review the setting range of the MODBUS(R) device.
+7349,"MODBUS(R) device points setting error 
+*  The MODBUS(R) device range of the read/write target set in the automatic communication parameter or dedicated instruction's control data is outside the setting range.",Review the setting range of the MODBUS(R) device.
+734A,"Module ID setting error 
+*  The setting of the module ID set in the automatic communication parameter or dedicated instruction's control data is incorrect.",Review the setting of the module ID.
+734B,"Execution type setting error 
+*  The setting of the execution type set in the dedicated instruction's control data is incorrect.",Review the setting of the execution type.
+734C,"Response monitoring timer setting error 
+*  The setting of the response monitoring timer in the dedicated instruction's control data is outside the setting range.",Review the setting of the response monitoring timer so that it falls within the setting range.
+734D,"Response monitoring timer setting error
+*  The setting of the response monitoring timer in the dedicated instruction's control data is less than the setting of the split reception monitoring timer value.",Make the response monitoring timer greater than the split reception monitoring timer value.
+734E,"Write data storage size setting error 
+*  The setting of the write data storage size in the dedicated instruction's control data is incorrect.",Review the setting of the write data storage size.
+734F,"Request message size setting error 
+*  The request message size specified in the argument ((S2)+0) of the MBREQ instruction is incorrect.",Review the setting of the request message size.
+7351,"Automatic communication function start interruption 
+*  The start of the automatic communication function was interrupted due to the processing of the basic parameter setting.","After turning ON the Automatic communication parameter setting/Automatic communication start request (Y4), do not turn ON the Basic parameter setting request (Y1) until the Automatic communication operation status (X6) turns ON."
+7352,"Basic parameter not set 
+*  The automatic communication function was started or stopped without the basic parameter being set.
+
+*  The automatic communication function was started when parameter setting was being made on GX Configurator-MB at power-on.
+","*  Start or stop the automatic communication function with Basic parameter setting existence (X3) on.
+
+*  When using GX Configurator-MB, switch the power on and then turn on Automatic communication parameter setting request/Automatic communication start request (Y4) after Basic parameter setting existence (X3) has turned on.
+"
+7360,"Exception message reception 
+*  When the automatic communication function or dedicated instruction is used, the target slave device returned an exception code in reply to the request message sent by the QJ71MT91.","*  Refer to the exception code returned from the target slave device, and resolve the problem.
+*  Resolve the problem that occurred in the target slave device."
+7361,"Byte count error 
+*  In the automatic communication function or dedicated instruction, the number of bytes in the received response message is less or more than necessary.","On the target slave side, check whether the contents of the returned response message are correct or not."
+7362,"Reference number error 
+*  The value of the reference number in the response message received by the dedicated instruction is incorrect.","On the target slave side, check whether the contents of the returned response message are correct or not."
+7363,"Protocol ID error 
+*  In the automatic communication function or dedicated instruction, the protocol ID of the received response message is other than ""0: MODBUS(R) protocol"".","On the target slave side, check whether the contents of the returned response message are correct or not."
+7365,"Module ID mismatch error 
+*  In the automatic communication function or dedicated instruction, the ""module ID"" in the MBAP header of the received response message does not match the request message.","On the target slave side, check whether the contents of the returned response message are correct or not."
+7366,"Function code mismatch error 
+*  In the automatic communication function or dedicated instruction, the function code of the received response message does not match the request message.","On the target slave side, check whether the contents of the returned response message are correct or not."
+7367,"Response message contents mismatch error 
+*  In the automatic communication function or dedicated instruction, the contents of the received response message does not match the request message. (FC:15, FC:16, FC:21)","On the target slave side, check whether the contents of the returned response message are correct or not."
+7370,"Automatic communication function stop request error 
+*  The automatic communication function stop request (Y6) was made with the automatic communication function stopped.","When the automatic communication function is stopped, do not make the automatic communication function stop request (Y6)."
+7371,"Automatic communication parameter setting request error 
+*  The automatic communication parameter setting request (Y4) was made with the automatic communication function ON.","After stopping the automatic communication function, make the automatic communication parameter setting request (Y4)."
+7378,"Response monitoring timer time-out error 
+*  The response monitoring timer timed out in the automatic communication function.","*  Conduct a PING test, etc. to check whether the target device exists or not.
+*  If an error has occurred in the target device, remove the error.
+*  Set a larger response monitoring timer value."
+7379,"Response monitoring timer time-out error
+*  The response monitoring timer timed out in the dedicated instruction.","*  Conduct a PING test, etc. to check whether the target device exists or not.
+*  If an error has occurred in the target device, remove the error.
+*  Set a larger response monitoring timer value."
+737A,"Dedicated instruction execution impossible 
+*  Since the basic parameters have not yet been set, the dedicated instruction cannot be executed.
+*  The dedicated instruction cannot be executed due to the offline mode.","*  Execute the dedicated instruction after setting the basic parameters.
+*  Execute the dedicated instruction in the online mode."
+7380,"CPU response monitoring timer time-out 
+*  The CPU response monitoring timer timed out in the slave function.","*  If an error has occurred in the programmable controller CPU, remove the error.
+*  Set a larger CPU response monitoring timer value."
+7381,"Function code error 
+*  The request message of the function code not supported by the QJ71MT91 slave function was received.","Confirm the function code supported by the QJ71MT91 slave function, and review the request message to be sent."
+7382,"Sub-code error 
+*  The request message of the sub-code not supported by the QJ71MT91 slave function was received.","Confirm the sub-code supported by the QJ71MT91 slave function, and review the request message to be sent."
+7383,"MODBUS(R) device specification error 
+*  The MODBUS(R) device assignment parameters have not been set for the MODBUS(R)  device specified in the received request message.The MODBUS(R)  device assignment parameter setting is in process.
+","*  Set the MODBUS(R) device assignment parameters for the MODBUS(R) device specified in the received request message.
+*  Adjust the timing for the request message transmission on the master side so that communication is started after the MODBUS(R)  device assignment parameter setting existence (XA) turns ON."
+7384,"MODBUS(R) device specification error 
+*  The range of the MODBUS(R) device specified in the received request message is outside the MODBUS(R)  device assignment parameter setting range.
+",Set the MODBUS(R) device assignment parameter so that the MODBUS(R) device specified in the received request message is within the range.
+7385,"MODBUS(R) device specification error 
+*  The range of the MODBUS(R)  device specified in the received request message exceeds the maximum value(*) of the MODBUS(R) device.  
+(*): The maximum value of the extended file register is ""10000"", and that of any other MODBUS(R) device is ""65536"".
+",Review the specified data of the MODBUS(R) device on the master side from which the request message was sent.
+7386,"MODBUS(R) device specification error 
+*  The access points of the MODBUS(R) device specified in the received request is greater than the maximum access points of the corresponding function.
+",Review the specified data of the MODBUS(R) device on the master side from which the request message was sent.
+7390,"Byte count specification error 
+*  The write points of the received request message does not match the specified byte count.",Review the specified data of the write points and byte count on the master side from which the request message was sent.
+7391,"Received data size error 
+*  The write device data size of the received request message does not match the specified byte count.",Review the specified data of the write device data size and byte count on the master side from which the request message was sent.
+7392,"Reference type error 
+*  The reference number value specified in the received request message (FC:20, FC:21) is incorrect.",Review the specified reference number value on the master side from which the request message was sent.
+7393,"Data unit error 
+*  The contents of the data unit in the received request message are incorrect.
+*  The size of the received request message is smaller than the minimum size or greater than the maximum size required for the relevant function code.",Review the contents of the request message on the master side from which the request message was sent.
+7394,"Online change error 
+*  A write request message was received in an online change disable status.","*  While online change is disabled, do not issue a write request message.
+*  Turn ON b2 of the intelligent function module switch 2 (communication condition setting) to enable the online change."
+7395,"MBAP header error 
+*  The contents of the MBAP header in the received request message are incorrect.",Review the contents of the request message on the master side from which the request message was sent.
+7396,"Slave function busy 
+*  The QJ71MT91 received request messages that exceed the number of simultaneously receivable request messages (64).",Retry after a little while on the master side from which the request message was sent.
+739C,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+* If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+739D,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+* If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+739E,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+* If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+73B1,"PING test setting error 
+*  The settings (communication time check, transmission count, IP address) of the PING test are incorrect.",Review the settings of the PING test.
+73C0,"RAM error 
+*  An error was detected in the RAM test.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Perform the test again.
+*  If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+73C1,"ROM error 
+*  An error was detected in the ROM test.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Perform the test again.
+*  If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+73C2,"Self-loopback test error 
+*  An error was detected in the self-loopback test.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Perform the test again.
+*  If the above does not solve the problem, a probable cause is a hardware error. Check if the programmable controller CPU and base unit are normal referring to the manual for each module.Or, replace either of the modules to check the operation.In case of failure, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the problem."
+73C8,"Offline mode error 
+*  In the offline mode, parameters were set by GX Configurator-MB.
+","In the offline mode, delete GX Configurator-MB parameters set in the programmable controller CPU."
+73C9,"Offline mode error 
+*  In the offline mode, Basic parameter setting request (Y1) was turned on.
+",Do not turn on Basic parameter setting request (Y1) in the offline mode.
+73CA,"Offline mode error 
+*  In the offline mode, Automatic communication start request (Y4) was turned on.
+",Do not turn on Automatic communication start request (Y4) in the offline mode.
+73CB,"Offline mode error 
+*  In the offline mode, Automatic communication stop request (Y6) was turned on.
+",Do not turn on Automatic communication stop request (Y6) in the offline mode.
+73CC,"Offline mode error 
+*  In the offline mode, MODBUS(R)  device assignment parameter setting request (Y8) was turned on.
+",Do not turn on MODBUS(R)  device assignment parameter setting request (Y8) in the offline mode.
+73CD,"Offline mode error 
+*  In the offline mode, PING test execution request (Y1C) was turned on.
+",Do not turn on PING test execution request (Y1C) in the offline mode.
+73D0,"Response message transmission failure 
+*  As the TCP connection was cut off from the target device, the slave function of the QJ71MT91 could not send a response message.
+","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+73D1,"Response message transmission failure 
+*  As the TCP connection was cut off from the target device, the response message could not be returned via GX Developer connection.
+","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+73D2,"Preferred connection count over error 
+*  TCP connections exceeding the number preset in the preferred node specification was attempted to be established.","*  Increase the maximum number of TCP connections with the target node in the preferred node specification.
+*  Decrease the number of connections simultaneously used with the target node."
+73D3,"Response message transmission failure 
+*  As the TCP connection was cut off from the target device, the response message via GX Developer connection could not be returned.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+73D4,"Send/receive processing interruption 
+*  The send/receive processing was forcibly interrupted by the basic parameter setting processing.
+
+*  An error occurred in the TCP connection and the send/receive processing was forcibly interrupted.
+","*  Perform the basic parameter setting processing after the send/receive processing is over.
+
+*  Retry after a little while.
+*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+"
+73D5,"Send/receive processing interruption 
+*  As the TCP connection was being closed, the send/receive processing was interrupted.
+","*  If this occurs at execution of the dedicated instruction, set ÅgTCP connection is not closed after instruction completionÅh in the close option of the execution type.
+*  If the number of connections used exceeds the maximum (64), bring it within the range.
+*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  Retry after a little while."
+73D6,"Send/receive processing interruption 
+*  The send/receive processing was forcibly interrupted by the basic parameter setting processing.",Perform the basic parameter setting processing after the send/receive processing is over.
+73D7,"Error during close processing 
+*  Transmission through the connection being closed was attempted.","*  Retry after a little while.
+*  If this error occurs at execution of the dedicated instruction, set ""TCP connection is not closed after instruction completion"" in the close option of the control data."
+73D8,"Open failure 
+*  Failed to open the TCP connection for the request message transmission.
+","*  Check whether the operation status of the target device is normal or not.
+*  Check the open status of the target device.
+*  Review the IP address, port No. setting and other parameters of the target device.
+*  Check the line status for an error."
+73D9,"Open failure 
+*  Since the normal connection resources were all being used, a new TCP connection could not be opened.
+","*  Retry after a little while.
+*  Decrease the number of TCP connections used simultaneously."
+73DA,"Alive check failure(KeepAlive function) 
+*  Since the existence of the target device could not be confirmed by the KeepAlive function, the TCP connection was disconnected.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7400,"Target device port No. error 
+*  The port number setting of the target device is erroneous.",Review the port number setting of the target device at the time of transmission.
+7401,"Target device IP address error 
+*  The IP address setting of the target device is erroneous.",Review the IP address setting of the target device at the time of transmission.
+7402,"Open failure 
+*  A TCP connection was not established in the open processing.","*  Check whether the operation status of the target device is normal or not.
+*  Check the open status of the target device.
+*  Review the IP address, port No. setting and other parameters of the target device.
+* Check the line status for an error."
+7403,"Send error 
+*  A send error occurred.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while.
+*  Hardware fault."
+7404,"Receive error 
+*  A receive error occurred.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  Hardware fault."
+7405,"Receive error 
+*  The internal receive buffer has no free space.","*  Retry after a little while.
+*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  Hardware fault."
+7410,"Send error 
+*  A send error occurred.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while.
+*  Hardware fault."
+7420,"Broadcast address specification error 
+*  The broadcast address was specified in TCP-based transmission.",Review the IP address setting of the target device at the time of transmission.
+7421,"Ethernet address error 
+*  The Ethernet address of the target device is unknown.","*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while.
+*  Replace the target device with the one having the ARP function."
+7422,"IP check sum error 
+*  A check sum error was detected in the IP protocol.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7423,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7424,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7425,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7426,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7427,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7428,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+7429,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+742A,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+742B,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+742C,"ICMP error packet reception 
+*  The error packet of ICMP was received.","*  Review the setting of the router information.
+*  Check whether the router operates normally.
+*  Check the router communication path for any error.
+*  Check the communication path ahead of the router for any error.
+*  Review the IP address of the target device at the time of transmission.
+*  Check whether the target device with the specified IP address exists on the line or not.
+*  As the line may be busy, retry after a little while.
+*  Review the IP reassembly timer value of the target device."
+742D,"Router relay function error 
+*  Without the routing information setting of the basic parameter, data were attempted to be sent to the target device that has a different IP address class or net ID.
+*  The routing information setting of the basic parameter is erroneous.","*  Review the IP address of the target device at the time of transmission.
+*  Review the setting of the routing information.
+*  Review the setting of the subnet mask pattern."
+7440,"UDP check sum error 
+*  A check sum error was detected in the UDP protocol.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7450,"TCP ULP time-out error 
+*  The TCP ULP timer timed out.
+*  ACK is not returned from the target device.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while.
+*  Review the TCP ULP timer value of the basic parameter."
+7451,"TCP check sum error 
+*  A check sum error was detected in the TCP protocol.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7452,"Connection not open 
+*  Transmission was attempted using the connection not open.
+*  The connection used to send data was already closed.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  Retry after a little while."
+7453,"Connection not open
+*  The connection being closed was used to send data.",Retry after a little while.
+7454,"Connection being closed 
+*  The connection not open was used to send data.",Retry after a little while.
+7455,"TCP receive data size error 
+*  The message greater than the TCP maximum size was received.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7460,"TCP ULP time-out error 
+*  As the TCP ULP timer timed out, the TCP connection was forcibly disconnected from the local station.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while.
+*  Review the TCP ULP timer value of the basic parameter."
+7461,"TCP connection forcibly disconnected 
+*  The TCP connection was disconnected forcibly from the target device.(This error may be ignored when no problems arise from this error.)","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while."
+7462,"TCP connection forcibly disconnected 
+*  The TCP connection was closed forcibly from the local station.
+*  The local station uses 64 or more TCP connections.Hence, the TCP connection was closed forcibly to maintain the TCP connections available for simultaneous opening under frequently opened and closed conditions. (This error may be ignored when no problems arise from this error.)","*  In the preferred node specification, specify the target device with which communication is made frequently.
+*  Decrease the number of TCP connections used simultaneously.
+*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while."
+7463,"TCP protocol error 
+*  As a TCP protocol error was detected, the TCP connection was closed forcibly.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7471,"UDP receive data size error 
+*  The message greater than the UDP maximum size was received.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error."
+7472,"IP address setting error 
+*  The host address bits of the IP address of the request message transmission destination are all ""0"" or all ""1"".",Correct the target IP address set to the dedicated instruction's control data or automatic communication parameter.
+7473,"Connection not open 
+*  The connection not open was used to send data.
+*  The connection used to send data was already closed.","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  Retry after a little while."
+7474,"TCP connection forcibly disconnected 
+*  The TCP connection was disconnected forcibly from the target device.(This error may be ignored when no problems arise from this error.)","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while."
+7475,"TCP connection forcibly disconnected 
+*  The TCP connection was disconnected forcibly from the target device.(This error may be ignored when no problems arise from this error.)","*  Check whether the operation status of the target device is normal or not.
+*  Check the line status for an error.
+*  As the line may be busy, retry after a little while."
+7480,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7481,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7482,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7483,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7484,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7485,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7486,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7487,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7488,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7489,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7490,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7491,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7492,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A1,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A5,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A6,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A7,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A8,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74A9,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AA,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AB,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AC,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AD,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AE,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+74AF,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7500,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7501,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7502,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7503,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7504,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7505,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7506,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7507,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7508,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7509,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750A,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750B,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750C,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750D,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750E,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+750F,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7510,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7511,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7512,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7513,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7514,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7515,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7516,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7517,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7518,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7521,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7522,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7523,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7524,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7527,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7528,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7529,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+752A,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+752B,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+752C,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+752D,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+752E,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7530,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7531,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7532,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7533,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7534,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7535,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7536,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7537,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7538,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7540,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7541,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7542,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+7543,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+75E0,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+75E1,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+75FD,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+75FE,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+75FF,"System error 
+*  The OS of the QJ71MT91 detected error.","Counter the problem in the following procedure.
+*  Check whether or not the QJ71MT91, power supply module and CPU module are mounted correctly on the base unit.
+*  Check whether or not the operating environment of the system is within the range of general specifications of the CPU module.
+*  Check whether the power capacity is sufficient or not.
+*  Check the QJ71MT91, CPU module and base unit to see if the hardware is normal according to the manual of each module.If the module is faulty, please contact your local Mitsubishi service center or representative for repair.
+*  If the problem cannot be resolved in the above steps, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+</ERRCODE>,,

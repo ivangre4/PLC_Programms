@@ -1,0 +1,1452 @@
+:Base .\GPWH_ERR.hlp
+:Title Help of GPPW (Error code list )
+1 A series PLC
+2 AnN,AnS,A0J2H,A2C
+3 [Error code 10 - 17]
+4 [Error code 10]INSTRCT CODE ERR.=ERA_10
+4 [Error code 11]PARAMETER ERROR=ERA_11
+4 [Error code 12]MISSING END INS.=ERA_12
+4 [Error code 13]CAN'T EXECUTE(P)=ERA_13
+4 [Error code 14]CHK FORMAT ERR.=ERA_14
+4 [Error code 15]CAN'T EXECUTE(I)=ERA_15
+4 [Error code 16]CASSETTE ERROR=ERA_16
+4 [Error code 17]ROM ERR=ERA_17
+3 [Error code 20 - 26]
+4 [Error code 20]RAM ERROR=ERA_20
+4 [Error code 21]OPE. CIRCUIT ERR.=ERA_21
+4 [Error code 22]WDT ERROR=ERA_22
+4 [Error code 23]SUB-CPU ERROR=ERA_23
+4 [Error code 24]END NOT EXECUTE=ERA_24
+4 [Error code 25]WDT ERROR=ERA_25
+4 [Error code 26]MAIN CPU DOWN=ERA_26
+3 [Error code 31 - 32]
+4 [Error code 31]UNIT VERIFY ERR.=ERA_31
+4 [Error code 32]FUSE BREAK OFF=ERA_32
+3 [Error code 40 - 47]
+4 [Error code 40]CONTROL-BUS ERR.=ERA_40
+4 [Error code 41]SP. UNIT DOWN=ERA_41
+4 [Error code 42]LINK UNIT ERROR=ERA_42
+4 [Error code 43]I/O INT. ERROR=ERA_43
+4 [Error code 44]SP. UNIT LAY. ERR.=ERA_44
+4 [Error code 46]SP. UNIT ERROR=ERA_46
+4 [Error code 47]LINK PARA. ERROR=ERA_47
+3 [Error code 50 - 70]
+4 [Error code 50]OPERATION ERROR=ERA_50
+4 [Error code 60]MAIN PLC DOWN=ERA_60
+4 [Error code 70]BATTERY ERROR=ERA_70
+3 [Error code 80 - 84]
+4 [Error code 80]SFC PARA. ERROR=ERA_80
+4 [Error code 81]SFC CODE ERROR=ERA_81
+4 [Error code 82]SFC STEP OVER=ERA_82
+4 [Error code 83]SFC EXE. ERROR=ERA_83
+4 [Error code 84]SFC OPE. ERROR=ERA_84
+2 AnA
+3 [Error code 10 - 16]
+4 [Error code 10]INSTRCT CODE ERR.
+5 [Detail error code 101]=ERA_101
+5 [Detail error code 102]=ERA_102
+5 [Detail error code 103]=ERA_103
+5 [Detail error code 104]=ERA_104
+5 [Detail error code 105]=ERA_105
+5 [Detail error code 106]=ERA_106
+5 [Detail error code 107]=ERA_107
+5 [Detail error code 108]=ERA_108
+4 [Error code 11]PARAMETER ERROR
+5 [Detail error code 111]=ERA_111
+5 [Detail error code 112]=ERA_112
+5 [Detail error code 113]=ERA_113
+5 [Detail error code 114]=ERA_114
+5 [Detail error code 115]=ERA_115
+5 [Detail error code 116]=ERA_116
+5 [Detail error code 117]=ERA_117
+5 [Detail error code 118]=ERA_118
+4 [Error code 12]MISSING END INS.
+5 [Detail error code 121]=ERA_121
+5 [Detail error code 122]=ERA_122
+4 [Error code 13]CAN'T EXECUTE(P)
+5 [Detail error code 131]=ERA_131
+5 [Detail error code 132]=ERA_132
+5 [Detail error code 133]=ERA_133
+5 [Detail error code 134]=ERA_134
+5 [Detail error code 135]=ERA_135
+4 [Error code 14]CHK FORMAT ERR.
+5 [Detail error code 141]=ERA_141
+5 [Detail error code 142]=ERA_142
+5 [Detail error code 143]=ERA_143
+5 [Detail error code 144]=ERA_144
+5 [Detail error code 145]=ERA_145
+5 [Detail error code 146]=ERA_146
+5 [Detail error code 147]=ERA_147
+5 [Detail error code 148]=ERA_148
+4 [Error code 15]CAN'T EXECUTE(I)
+5 [Detail error code 151]=ERA_151
+5 [Detail error code 152]=ERA_152
+5 [Detail error code 153]=ERA_153
+4 [Error code 16]CASSETTE ERROR
+5 [Detail error code ]=ERA_16-
+3 [Error code 20 - 26]
+4 [Error code 20]RAM ERROR
+5 [Detail error code 201]=ERA_201
+5 [Detail error code 202]=ERA_202
+5 [Detail error code 203]=ERA_203
+5 [Detail error code 204]=ERA_204
+4 [Error code 21]OPE. CIRCUIT ERR.
+5 [Detail error code 211]=ERA_211
+5 [Detail error code 212]=ERA_212
+5 [Detail error code 213]=ERA_213
+4 [Error code 22]WDT ERROR
+5 [Detail error code ]=ERA_22-
+4 [Error code 24]END NOT EXECUTE
+5 [Detail error code 241]=ERA_241
+4 [Error code 26]MAIN PLC DOWN
+5 [Detail error code ]=ERA_26-
+3 [Error code 31 - 32]
+4 [Error code 31]UNIT VERIFY ERR.
+5 [Detail error code ]=ERA_31-
+4 [Error code 32]FUSE BREAK OFF
+5 [Detail error code ]=ERA_32-
+3 [Error code 40 - 47]
+4 [Error code 40]CONTROL-BUS ERR.
+5 [Detail error code 401]=ERA_401
+5 [Detail error code 402]=ERA_402
+4 [Error code 41]SP. UNIT DOWN
+5 [Detail error code 411]=ERA_411
+5 [Detail error code 412]=ERA_412
+4 [Error code 42]LINK UNIT ERROR
+5 [Detail error code ]=ERA_42-
+4 [Error code 43]I/O INT. ERROR
+5 [Detail error code ]=ERA_43-
+4 [Error code 44]SP. UNIT LAY. ERR.
+5 [Detail error code 441]=ERA_441
+5 [Detail error code 442]=ERA_442
+5 [Detail error code 443]=ERA_443
+5 [Detail error code 444]=ERA_444
+5 [Detail error code 445]=ERA_445
+5 [Detail error code 446]=ERA_446
+5 [Detail error code 447]=ERA_447
+4 [Error code 46]SP. UNIT ERROR
+5 [Detail error code 461]=ERA_461
+5 [Detail error code 462]=ERA_462
+4 [Error code 47]LINK PARA. ERROR
+5 [Detail error code ]=ERA_47-
+3 [Error code 50 - 70]
+4 [Error code 50]OPERATION ERROR
+5 [Detail error code 501]=ERA_501
+5 [Detail error code 502]=ERA_502
+5 [Detail error code 503]=ERA_503
+5 [Detail error code 504]=ERA_504
+5 [Detail error code 505]=ERA_505
+5 [Detail error code 506]=ERA_506
+5 [Detail error code 507]=ERA_507
+5 [Detail error code 509]=ERA_509
+4 [Error code 60]MAIN PLC DOWN
+5 [Detail error code ]=ERA_60-
+4 [Error code 62]MAIN PLC DOWN
+5 [Detail error code ]=ERA_62-
+4 [Error code 70]BATTERY ERROR
+5 [Detail error code ]=ERA_70-
+3 [Error code 80 - 84]
+4 [Error code 80]SFC PARA. ERROR
+5 [Detail error code 801]=ERA_801
+5 [Detail error code 802]=ERA_802
+5 [Detail error code 803]=ERA_803
+5 [Detail error code 804]=ERA_804
+5 [Detail error code 805]=ERA_805
+4 [Error code 81]SFC CODE ERROR
+5 [Detail error code ]=ERA_81-
+4 [Error code 82]SFC STEP OVER
+5 [Detail error code ]=ERA_82-
+4 [Error code 83]SFC EXE. ERROR
+5 [Detail error code 831]=ERA_831
+4 [Error code 84]SFC OPE. ERROR
+5 [Detail error code 84_]=ERA_840
+2 AnU,A2US(H),A2AS(H)
+3 [Error code 10 - 16]
+4 [Error code 10]INSTRCT CODE ERR.
+5 [Detail error code 101]=ERA_101
+5 [Detail error code 102]=ERA_102
+5 [Detail error code 103]=ERA_103
+5 [Detail error code 104]=ERA_104
+5 [Detail error code 105]=ERA_105
+5 [Detail error code 106]=ERA_106
+5 [Detail error code 107]=ERA_107
+5 [Detail error code 108]=ERA_108
+4 [Error code 11]PARAMETER ERROR
+5 [Detail error code 111]=ERA_111
+5 [Detail error code 112]=ERA_112
+5 [Detail error code 113]=ERA_113
+5 [Detail error code 114]=ERA_114
+5 [Detail error code 115]=ERA_115
+5 [Detail error code 116]=ERA_116
+5 [Detail error code 117]=ERA_117
+5 [Detail error code 118]=ERA_118
+4 [Error code 12]MISSING END INS.
+5 [Detail error code 121]=ERA_121
+5 [Detail error code 122]=ERA_122
+5 [Detail error code 123]=ERA_123
+5 [Detail error code 124]=ERA_124
+4 [Error code 13]CAN'T EXECUTE(P)
+5 [Detail error code 131]=ERA_131
+5 [Detail error code 132]=ERA_132
+5 [Detail error code 133]=ERA_133
+5 [Detail error code 134]=ERA_134
+5 [Detail error code 135]=ERA_135
+4 [Error code 14]CHK FORMAT ERR.
+5 [Detail error code 141]=ERA_141
+5 [Detail error code 142]=ERA_142
+5 [Detail error code 143]=ERA_143
+5 [Detail error code 144]=ERA_144
+5 [Detail error code 145]=ERA_145
+5 [Detail error code 146]=ERA_146
+5 [Detail error code 147]=ERA_147
+5 [Detail error code 148]=ERA_148
+4 [Error code 15]CAN'T EXECUTE(I)
+5 [Detail error code 151]=ERA_151
+5 [Detail error code 152]=ERA_152
+5 [Detail error code 153]=ERA_153
+4 [Error code 16]CASSETTE ERROR
+5 [Detail error code ]=ERA_16-
+3 [Error code 20 - 26]
+4 [Error code 20]RAM ERROR
+5 [Detail error code 201]=ERA_201
+5 [Detail error code 202]=ERA_202
+5 [Detail error code 203]=ERA_203
+5 [Detail error code 204]=ERA_204
+4 [Error code 21]OPE. CIRCUIT ERR.
+5 [Detail error code 211]=ERA_211
+5 [Detail error code 212]=ERA_212
+5 [Detail error code 213]=ERA_213
+4 [Error code 22]WDT ERROR
+5 [Detail error code ]=ERA_22-
+4 [Error code 24]END NOT EXECUTE
+5 [Detail error code 241]=ERA_241
+4 [Error code 26]MAIN PLC DOWN
+5 [Detail error code ]=ERA_26-
+3 [Error code 31 - 32]
+4 [Error code 31]UNIT VERIFY ERR.
+5 [Detail error code ]=ERA_31-
+4 [Error code 32]FUSE BREAK OFF
+5 [Detail error code ]=ERA_32-
+3 [Error code 40 - 47]
+4 [Error code 40]CONTROL-BUS ERR.
+5 [Detail error code 401]=ERA_401
+5 [Detail error code 402]=ERA_402
+4 [Error code 41]SP. UNIT DOWN
+5 [Detail error code 411]=ERA_411
+5 [Detail error code 412]=ERA_412
+4 [Error code 42]LINK UNIT ERROR
+5 [Detail error code ]=ERA_42_-
+4 [Error code 43]I/O INT. ERROR
+5 [Detail error code ]=ERA_43-
+4 [Error code 44]SP. UNIT LAY. ERR.
+5 [Detail error code 441]=ERA_441
+5 [Detail error code 442]=ERA_442
+5 [Detail error code 443]=ERA_443
+5 [Detail error code 444]=ERA_444
+5 [Detail error code 445]=ERA_445
+5 [Detail error code 446]=ERA_446
+5 [Detail error code 447]=ERA_447
+5 [Detail error code 448]=ERA_448
+4 [Error code 46]SP. UNIT ERROR
+5 [Detail error code 461]=ERA_461
+5 [Detail error code 462]=ERA_462
+4 [Error code 47]LINK PARA. ERROR
+5 [Detail error code 0]=ERA_47_0
+5 [Detail error code 470]=ERA_470
+5 [Detail error code 471]=ERA_471
+5 [Detail error code 472]=ERA_472
+5 [Detail error code 473]=ERA_473
+5 [Detail error code 474]=ERA_474
+5 [Detail error code 475]=ERA_475
+5 [Detail error code 476]=ERA_476
+3 [Error code 50 - 70]
+4 [Error code 50]OPERATION ERROR
+5 [Detail error code 501]=ERA_501
+5 [Detail error code 502]=ERA_502
+5 [Detail error code 503]=ERA_503
+5 [Detail error code 504]=ERA_504
+5 [Detail error code 505]=ERA_505
+5 [Detail error code 506]=ERA_506
+5 [Detail error code 507]=ERA_507
+5 [Detail error code 509]=ERA_509_
+4 [Error code 60]MAIN CPU DOWN
+5 [Detail error code ]=ERA_60-
+4 [Error code 62]MAIN PLC DOWN
+5 [Detail error code ]=ERA_62-
+4 [Error code 70]BATTERY ERROR
+5 [Detail error code ]=ERA_70-
+3 [Error code 80 - 84]
+4 [Error code 80]SFC PARA. ERROR
+5 [Detail error code 801]=ERA_801
+5 [Detail error code 802]=ERA_802
+5 [Detail error code 803]=ERA_803
+5 [Detail error code 804]=ERA_804
+5 [Detail error code 805]=ERA_805
+4 [Error code 81]SFC CODE ERROR
+5 [Detail error code ]=ERA_81-
+4 [Error code 82]SFC STEP OVER
+5 [Detail error code ]=ERA_82-
+4 [Error code 83]SFC EXE. ERROR
+5 [Detail error code 831]=ERA_831
+4 [Error code 84]SFC OPE. ERROR
+5 [Detail error code 84_]=ERA_840
+2 AnSH
+3 [Error code 10 - 17]
+4 [Error code 10]INSTRCT CODE ERR.
+5 [Detail error code ]=ERASH_10-
+5 [Detail error code 101]=ERASH_101
+5 [Detail error code 103]=ERASH_103
+5 [Detail error code 104]=ERASH_104
+5 [Detail error code 105]=ERASH_105
+4 [Error code 11]PARAMETER ERROR
+5 [Detail error code ]=ERASH_11-
+4 [Error code 12]MISSING END INS.
+5 [Detail error code ]=ERASH_12-
+4 [Error code 13]CAN'T EXECUTE(P)
+5 [Detail error code ]=ERASH_13-
+4 [Error code 14]CHK FORMAT ERR.
+5 [Detail error code ]=ERASH_14-
+4 [Error code 15]CAN'T EXECUTE(I)
+5 [Detail error code ]=ERASH_15-
+4 [Error code 17]ROM ERR.(Only A1SHCPU)
+5 [Detail error code ]=ERASH_17-
+3 [Error code 20 - 25]
+4 [Error code 20]RAM ERROR
+5 [Detail error code ]=ERASH_20-
+4 [Error code 21]OPE. CIRCUIT ERR.
+5 [Detail error code ]=ERASH_21-
+4 [Error code 22]WDT ERROR
+5 [Detail error code ]=ERASH_22-
+4 [Error code 24]END NOT EXECUTE
+5 [Detail error code ]=ERASH_24-
+4 [Error code 25]WDT ERROR
+5 [Detail error code ]=ERASH_25-
+3 [Error code 31 - 32]
+4 [Error code 31]UNIT VERIFY ERR.
+5 [Detail error code ]=ERASH_31-
+4 [Error code 32]FUSE BREAK OFF
+5 [Detail error code ]=ERASH_32-
+3 [Error code 40 - 47]
+4 [Error code 40]CONTROL-BUS ERR.
+5 [Detail error code ]=ERASH_40-
+4 [Error code 41]SP. UNIT DOWN
+5 [Detail error code ]=ERASH_41-
+4 [Error code 43]I/O INT. ERROR
+5 [Detail error code ]=ERASH_43-
+4 [Error code 44]SP. UNIT LAY. ERR.
+5 [Detail error code ]=ERASH_44-
+4 [Error code 46]SP. UNIT ERROR
+5 [Detail error code ]=ERASH_46-
+5 [Detail error code 462]=ERASH_462
+4 [Error code 47]LINK PARA. ERROR
+5 [Detail error code ]=ERASH_47-
+3 [Error code 50 - 70]
+4 [Error code 50]OPERATION ERROR
+5 [Detail error code ]=ERASH_50-
+5 [Detail error code 503]=ERASH_503
+5 [Detail error code 504]=ERASH_504
+5 [Detail error code 509]=ERASH_509
+4 [Error code 70]BATTERY ERROR
+5 [Detail error code ]=ERASH_70-
+3 [Error code 80 - 84]
+4 [Error code 80]SFC PARA. ERROR=ERASH_80
+4 [Error code 81]SFC CODE ERROR=ERASH_81
+4 [Error code 82]SFC STEP OVER=ERASH_82
+4 [Error code 83]SFC EXE. ERROR=ERASH_83
+4 [Error code 84]SFC OPE. ERROR=ERASH_84
+1 QnA series PLC
+2 [Error code 1000 - 1602]
+3 [Error code 1000 - 1012]
+4 [Error code 1000]MAIN CPU DOWN=ERQA_1000
+4 [Error code 1001]MAIN CPU DOWN=ERQA_1001
+4 [Error code 1009]MAIN CPU DOWN=ERQA_1009
+4 [Error code 1010]END NOT EXECUTE=ERQA_1010
+4 [Error code 1011]END NOT EXECUTE=ERQA_1011
+4 [Error code 1012]END NOT EXECUTE=ERQA_1012
+3 [Error code 1101 - 1105]
+4 [Error code 1101]RAM ERROR=ERQA_1101
+4 [Error code 1102]RAM ERROR=ERQA_1102
+4 [Error code 1103]RAM ERROR=ERQA_1103
+4 [Error code 1104]RAM ERROR=ERQA_1104
+4 [Error code 1105]RAM ERROR=ERQA_1105
+3 [Error code 1200 - 1206]
+4 [Error code 1200]OPE. CIRCUIT ERR.=ERQA_1200
+4 [Error code 1201]OPE. CIRCUIT ERR.=ERQA_1201
+4 [Error code 1202]OPE. CIRCUIT ERR.=ERQA_1202
+4 [Error code 1203]OPE. CIRCUIT ERR.=ERQA_1203
+4 [Error code 1204]OPE. CIRCUIT ERR.=ERQA_1204
+4 [Error code 1205]OPE. CIRCUIT ERR.=ERQA_1205
+4 [Error code 1206]OPE. CIRCUIT ERR.=ERQA_1206
+3 [Error code 1300 - 1310]
+4 [Error code 1300]FUSE BREAK OFF=ERQA_1300
+4 [Error code 1310]I/O INT. ERROR=ERQA_1310
+3 [Error code 1401 - 1421]
+4 [Error code 1401]SP. UNIT DOWN=ERQA_1401
+4 [Error code 1402]SP. UNIT DOWN=ERQA_1402
+4 [Error code 1411]CONTROL-BUS. ERR.=ERQA_1411
+4 [Error code 1412]CONTROL-BUS. ERR.=ERQA_1412
+4 [Error code 1421]SYS. UNIT DOWN=ERQA_1421
+3 [Error code 1500 - 1530]
+4 [Error code 1500]AC/DC DOWN=ERQA_1500
+4 [Error code 1510]DUAL DC DOWN 5V=ERQA_1510
+4 [Error code 1520]DC DOWN 5V=ERQA_1520
+4 [Error code 1530]DC DOWN 24V=ERQA_1530
+3 [Error code 1600 - 1602]
+4 [Error code 1600]BATTERY ERROR=ERQA_1600
+4 [Error code 1601]BATTERY ERROR=ERQA_1601
+4 [Error code 1602]BATTERY ERROR=ERQA_1602
+2 [Error code 2000 - 2504]
+3 [Error code 2000]
+4 [Error code 2000]UNIT VERIFY ERR.=ERQA_2000
+3 [Error code 2100 - 2113]
+4 [Error code 2100]SP. UNIT LAY ERR.=ERQA_2100
+4 [Error code 2101]SP. UNIT LAY ERR.=ERQA_2101
+4 [Error code 2102]SP. UNIT LAY ERR.=ERQA_2102
+4 [Error code 2103]SP. UNIT LAY ERR.=ERQA_2103
+4 [Error code 2104]SP. UNIT LAY ERR.=ERQA_2104
+4 [Error code 2105]SP. UNIT LAY ERR.=ERQA_2105
+4 [Error code 2106]SP. UNIT LAY ERR.=ERQA_2106
+4 [Error code 2107]SP. UNIT LAY ERR.=ERQA_2107
+4 [Error code 2108]SP. UNIT LAY ERR.=ERQA_2108
+4 [Error code 2109]SP. UNIT LAY ERR.=ERQA_2109
+4 [Error code 2110]SP. UNIT ERROR=ERQA_2110
+4 [Error code 2111]SP. UNIT ERROR=ERQA_2111
+4 [Error code 2112]SP. UNIT ERROR=ERQA_2112
+4 [Error code 2113]SP. UNIT ERROR=ERQA_2113
+3 [Error code 2200 - 2210]
+4 [Error code 2200]MISSING PARA.=ERQA_2200
+4 [Error code 2210]BOOT ERROR=ERQA_2210
+3 [Error code 2300 - 2302]
+4 [Error code 2300]ICM. OPE. ERROR=ERQA_2300
+4 [Error code 2301]ICM. OPE. ERROR=ERQA_2301
+4 [Error code 2302]ICM. OPE. ERROR=ERQA_2302
+3 [Error code 2400 - 2413]
+4 [Error code 2400]FILE SET ERROR=ERQA_2400
+4 [Error code 2401]FILE SET ERROR=ERQA_2401
+4 [Error code 2402]FILE SET ERROR=ERQA_2402
+4 [Error code 2410]FILE OPE. ERROR=ERQA_2410
+4 [Error code 2411]FILE OPE. ERROR=ERQA_2411
+4 [Error code 2412]FILE OPE. ERROR=ERQA_2412
+4 [Error code 2413]FILE OPE. ERROR=ERQA_2413
+3 [Error code 2500 - 2504]
+4 [Error code 2500]CAN'T EXE. PRG.=ERQA_2500
+4 [Error code 2501]CAN'T EXE. PRG.=ERQA_2501
+4 [Error code 2502]CAN'T EXE. PRG.=ERQA_2502
+4 [Error code 2503]CAN'T EXE. PRG.=ERQA_2503
+4 [Error code 2504]CAN'T EXE. PRG.=ERQA_2504
+2 [Error code 3000 - 3203]
+3 [Error code 3000 - 3004]
+4 [Error code 3000]PARAMETER ERROR=ERQA_3000
+4 [Error code 3001]PARAMETER ERROR=ERQA_3001
+4 [Error code 3002]PARAMETER ERROR=ERQA_3002
+4 [Error code 3003]PARAMETER ERROR=ERQA_3003
+4 [Error code 3004]PARAMETER ERROR=ERQA_3004
+3 [Error code 3100 - 3107]
+4 [Error code 3100]LINK PARA. ERROR=ERQA_3100
+4 [Error code 3101]LINK PARA. ERROR=ERQA_3101
+4 [Error code 3102]LINK PARA. ERROR=ERQA_3102
+4 [Error code 3103]LINK PARA. ERROR=ERQA_3103
+4 [Error code 3104]LINK PARA. ERROR=ERQA_3104
+4 [Error code 3105]LINK PARA. ERROR=ERQA_3105
+4 [Error code 3107]LINK PARA. ERROR=ERQA_3107
+3 [Error code 3200 - 3203]
+4 [Error code 3200]SFC PARA. ERROR=ERQA_3200
+4 [Error code 3201]SFC PARA. ERROR=ERQA_3201
+4 [Error code 3202]SFC PARA. ERROR=ERQA_3202
+4 [Error code 3203]SFC PARA. ERROR=ERQA_3203
+2 [Error code 4000 - 4633]
+3 [Error code 4000 - 4030]
+4 [Error code 4000]INSTRCT. CODE ERR=ERQA_4000
+4 [Error code 4001]INSTRCT. CODE ERR=ERQA_4001
+4 [Error code 4002]INSTRCT. CODE ERR=ERQA_4002
+4 [Error code 4003]INSTRCT. CODE ERR=ERQA_4003
+4 [Error code 4004]INSTRCT. CODE ERR=ERQA_4004
+4 [Error code 4010]MISSING END INS.=ERQA_4010
+4 [Error code 4020]CAN'T SET(P)=ERQA_4020
+4 [Error code 4021]CAN'T SET(P)=ERQA_4021
+4 [Error code 4030]CAN'T SET(I)=ERQA_4030
+3 [Error code 4100 - 4108]
+4 [Error code 4100]OPERATION ERROR=ERQA_4100
+4 [Error code 4101]OPERATION ERROR=ERQA_4101
+4 [Error code 4102]OPERATION ERROR=ERQA_4102
+4 [Error code 4103]OPERATION ERROR=ERQA_4103
+4 [Error code 4104]OPERATION ERROR=ERQA_4104
+4 [Error code 4107]OPERATION ERROR=ERQA_4107
+4 [Error code 4108]OPERATION ERROR=ERQA_4108
+3 [Error code 4200 - 4235]
+4 [Error code 4200]FOR NEXT ERROR=ERQA_4200
+4 [Error code 4201]FOR NEXT ERROR=ERQA_4201
+4 [Error code 4202]FOR NEXT ERROR=ERQA_4202
+4 [Error code 4203]FOR NEXT ERROR=ERQA_4203
+4 [Error code 4210]CAN'T EXECUTE(P)=ERQA_4210
+4 [Error code 4211]CAN'T EXECUTE(P)=ERQA_4211
+4 [Error code 4212]CAN'T EXECUTE(P)=ERQA_4212
+4 [Error code 4213]CAN'T EXECUTE(P)=ERQA_4213
+4 [Error code 4220]CAN'T EXECUTE(I)=ERQA_4220
+4 [Error code 4221]CAN'T EXECUTE(I)=ERQA_4221
+4 [Error code 4223]CAN'T EXECUTE(I)=ERQA_4223
+4 [Error code 4230]INST. FORMAT ERR.=ERQA_4230
+4 [Error code 4231]INST. FORMAT ERR.=ERQA_4231
+4 [Error code 4235]INST. FORMAT ERR.=ERQA_4235
+3 [Error code 4300 - 4301]
+4 [Error code 4300]EXTENDINST. ERR.=ERQA_4300
+4 [Error code 4301]EXTENDINST. ERR.=ERQA_4301
+3 [Error code 4400 - 4422]
+4 [Error code 4400]SFCP. CODE ERROR=ERQA_4400
+4 [Error code 4410]CAN'T SET(BL)=ERQA_4410
+4 [Error code 4411]CAN'T SET(BL)=ERQA_4411
+4 [Error code 4420]CAN'T SET(S)=ERQA_4420
+4 [Error code 4421]CAN'T SET(S)=ERQA_4421
+4 [Error code 4422]CAN'T SET(S)=ERQA_4422
+3 [Error code 4500 - 4504]
+4 [Error code 4500]SFCP. FORMAT ERR.=ERQA_4500
+4 [Error code 4501]SFCP. FORMAT ERR.=ERQA_4501
+4 [Error code 4502]SFCP. FORMAT ERR.=ERQA_4502
+4 [Error code 4503]SFCP. FORMAT ERR.=ERQA_4503
+4 [Error code 4504]SFCP. FORMAT ERR.=ERQA_4504
+3 [Error code 4600 - 4633]
+4 [Error code 4600]SFCP. OPE. ERROR=ERQA_4600
+4 [Error code 4601]SFCP. OPE. ERROR=ERQA_4601
+4 [Error code 4602]SFCP. OPE. ERROR=ERQA_4602
+4 [Error code 4610]SFCP. EXE. ERROR=ERQA_4610
+4 [Error code 4611]SFCP. EXE. ERROR=ERQA_4611
+4 [Error code 4620]BLOCK EXE. ERROR=ERQA_4620
+4 [Error code 4621]BLOCK EXE. ERROR=ERQA_4621
+4 [Error code 4630]STEP EXE. ERROR=ERQA_4630
+4 [Error code 4631]STEP EXE. ERROR=ERQA_4631
+4 [Error code 4632]STEP EXE. ERROR=ERQA_4632
+4 [Error code 4633]STEP EXE. ERROR=ERQA_4633
+2 [Error code 5000 - 5011]
+3 [Error code 5000]WDT ERROR=ERQA_5000
+3 [Error code 5001]WDT ERROR=ERQA_5001
+3 [Error code 5010]PRG. TIME OVER=ERQA_5010
+3 [Error code 5011]PRG. TIME OVER=ERQA_5011
+2 [Error code 6000 - 6230]
+3 [Error code 6000]PRG. VERIFY ERR.=ERQA_6000
+3 [Error code 6010]MODE. VERIFY ERR.=ERQA_6010
+3 [Error code 6100]TRUCKINERR.=ERQA_6100
+3 [Error code 6101]TRUCKINERR.=ERQA_6101
+3 [Error code 6200]CONTROL EXE.=ERQA_6200
+3 [Error code 6210]CONTROL WAIT=ERQA_6210
+3 [Error code 6220]CAN'T EXE. CHANGE=ERQA_6220
+3 [Error code 6221]CAN'T EXE. CHANGE=ERQA_6221
+3 [Error code 6222]CAN'T EXE. CHANGE=ERQA_6222
+3 [Error code 6230]DUAL SYS ERROR=ERQA_6230
+2 [Error code 9000 - 9010]
+3 [Error code 9000]F****=ERQA_9000
+3 [Error code 9010]<CHK>ERR***-***=ERQA_9010
+1 Q series PLC(A Mode)
+2 [Error code 10 - 16]
+3 [Error code 10]INSTRCT CODE ERR.
+4 [Detail error code 101]=ERQ_A_101
+4 [Detail error code 102]=ERQ_A_102
+4 [Detail error code 103]=ERQ_A_103
+4 [Detail error code 104]=ERQ_A_104
+4 [Detail error code 105]=ERQ_A_105
+4 [Detail error code 106]=ERQ_A_106
+4 [Detail error code 107]=ERQ_A_107
+4 [Detail error code 108]=ERQ_A_108
+3 [Error code 11]PARAMETER ERROR
+4 [Detail error code 111]=ERQ_A_111
+4 [Detail error code 112]=ERQ_A_112
+4 [Detail error code 113]=ERQ_A_113
+4 [Detail error code 114]=ERQ_A_114
+4 [Detail error code 115]=ERQ_A_115
+4 [Detail error code 116]=ERQ_A_116
+4 [Detail error code 117]=ERQ_A_117
+4 [Detail error code 118]=ERQ_A_118
+3 [Error code 12]MISSING END INS.
+4 [Detail error code 121]=ERQ_A_121
+4 [Detail error code 122]=ERQ_A_122
+4 [Detail error code 123]=ERQ_A_123
+4 [Detail error code 124]=ERQ_A_124
+3 [Error code 13]CAN'T EXECUTE(P)
+4 [Detail error code 131]=ERQ_A_131
+4 [Detail error code 132]=ERQ_A_132
+4 [Detail error code 133]=ERQ_A_133
+4 [Detail error code 134]=ERQ_A_134
+4 [Detail error code 135]=ERQ_A_135
+3 [Error code 14]CHK FORMAT ERR.
+4 [Detail error code 141]=ERQ_A_141
+4 [Detail error code 142]=ERQ_A_142
+4 [Detail error code 143]=ERQ_A_143
+4 [Detail error code 144]=ERQ_A_144
+4 [Detail error code 145]=ERQ_A_145
+4 [Detail error code 146]=ERQ_A_146
+4 [Detail error code 147]=ERQ_A_147
+4 [Detail error code 148]=ERQ_A_148
+3 [Error code 15]CAN'T EXECUTE(I)
+4 [Detail error code 151]=ERQ_A_151
+4 [Detail error code 152]=ERQ_A_152
+4 [Detail error code 153]=ERQ_A_153
+3 [Error code 16]CASSETTE ERROR
+4 [Detail error code ---]=ERQ_A_16-
+2 [Error code 20 - 26]
+3 [Error code 20]RAM ERROR
+4 [Detail error code 201]=ERQ_A_201
+4 [Detail error code 202]=ERQ_A_202
+4 [Detail error code 203]=ERQ_A_203
+4 [Detail error code 204]=ERQ_A_204
+3 [Error code 21]OPE. CIRCUIT ERR.
+4 [Detail error code 211]=ERQ_A_211
+4 [Detail error code 212]=ERQ_A_212
+4 [Detail error code 213]=ERQ_A_213
+3 [Error code 22]WDT ERROR
+4 [Detail error code ---]=ERQ_A_22-
+3 [Error code 24]END NOT EXECUTE
+4 [Detail error code 241]=ERQ_A_241
+3 [Error code 26]MAIN CPU DOWN
+4 [Detail error code ---]=ERQ_A_26-
+2 [Error code 31 - 32]
+3 [Error code 31]UNIT VERIFY ERR.
+4 [Detail error code ---]=ERQ_A_31-
+3 [Error code 32]FUSE BREAK OFF
+4 [Detail error code ---]=ERQ_A_32-
+2 [Error code 40 - 47]
+3 [Error code 40]CONTROL-BUS ERR.
+4 [Detail error code 401]=ERQ_A_401
+4 [Detail error code 402]=ERQ_A_402
+4 [Detail error code 403]=ERQ_A_403
+4 [Detail error code 405]=ERQ_A_405
+3 [Error code 41]SP. UNIT DOWN
+4 [Detail error code 411]=ERQ_A_411
+4 [Detail error code 412]=ERQ_A_412
+3 [Error code 42]LINK UNIT ERROR
+4 [Detail error code ---]=ERQ_A_42-
+3 [Error code 43]I/O INT. ERROR
+4 [Detail error code ---]=ERQ_A_43-
+3 [Error code 44]SP. UNIT LAY. ERR.
+4 [Detail error code 441]=ERQ_A_441
+4 [Detail error code 442]=ERQ_A_442
+4 [Detail error code 443]=ERQ_A_443
+4 [Detail error code 444]=ERQ_A_444
+4 [Detail error code 445]=ERQ_A_445
+4 [Detail error code 446]=ERQ_A_446
+4 [Detail error code 447]=ERQ_A_447
+4 [Detail error code 448]=ERQ_A_448
+4 [Detail error code 449]=ERQ_A_449
+3 [Error code 46]SP. UNIT ERROR
+4 [Detail error code 461]=ERQ_A_461
+4 [Detail error code 462]=ERQ_A_462
+3 [Error code 47]LINK PARA. ERROR
+4 [Detail error code --]=ERQ_A_47-
+4 [Detail error code 470]=ERQ_A_470
+4 [Detail error code 471]=ERQ_A_471
+4 [Detail error code 472]=ERQ_A_472
+4 [Detail error code 473]=ERQ_A_473
+4 [Detail error code 474]=ERQ_A_474
+4 [Detail error code 475]=ERQ_A_475
+4 [Detail error code 476]=ERQ_A_476
+2 [Error code 50 - 70]
+3 [Error code 50]OPERATION ERROR
+4 [Detail error code 501]=ERQ_A_501
+4 [Detail error code 502]=ERQ_A_502
+4 [Detail error code 503]=ERQ_A_503
+4 [Detail error code 504]=ERQ_A_504
+4 [Detail error code 505]=ERQ_A_505
+4 [Detail error code 506]=ERQ_A_506
+4 [Detail error code 507]=ERQ_A_507
+4 [Detail error code 509]=ERQ_A_509
+3 [Error code 60]MAIN CPU DOWN
+4 [Detail error code ---]=ERQ_A_60-
+3 [Error code 61]MAIN CPU DOWN
+4 [Detail error code ---]=ERQ_A_61-
+3 [Error code 62]MAIN CPU DOWN
+4 [Detail error code ---]=ERQ_A_62-
+3 [Error code 70]BATTERY ERROR
+4 [Detail error code ---]=ERQ_A_70-
+1 Q series PLC(Q Mode)
+2 [Error code 1000 - 1610]
+3 [Error code 1000 - 1035]
+4 [Error code 1000]MAIN CPU DOWN=ERQ-Q_1000
+4 [Error code 1001]MAIN CPU DOWN=ERQ-Q_1001
+4 [Error code 1002]MAIN CPU DOWN=ERQ-Q_1002
+4 [Error code 1003]MAIN CPU DOWN=ERQ-Q_1003
+4 [Error code 1004]MAIN CPU DOWN=ERQ-Q_1004
+4 [Error code 1005]MAIN CPU DOWN=ERQ-Q_1005
+4 [Error code 1006]MAIN CPU DOWN=ERQ-Q_1006
+4 [Error code 1007]MAIN CPU DOWN=ERQ-Q_1007
+4 [Error code 1008]MAIN CPU DOWN=ERQ-Q_1008
+4 [Error code 1009]MAIN CPU DOWN=ERQ-Q_1009
+4 [Error code 1010]END NOT EXECUTE=ERQ-Q_1010
+4 [Error code 1020]SFCP. END ERROR=ERQ-Q_1020
+4 [Error code 1035]MAIN CPU DOWN=ERQ-Q_1035
+3 [Error code 1101 - 1164]
+4 [Error code 1101]RAM ERROR=ERQ-Q_1101
+4 [Error code 1102]RAM ERROR=ERQ-Q_1102
+4 [Error code 1103]RAM ERROR=ERQ-Q_1103
+4 [Error code 1104]RAM ERROR=ERQ-Q_1104
+4 [Error code 1105]RAM ERROR=ERQ-Q_1105
+4 [Error code 1106]RAM ERROR=ERQ-Q_1106
+4 [Error code 1107]RAM ERROR=ERQ-Q_1107
+4 [Error code 1108]RAM ERROR=ERQ-Q_1108
+4 [Error code 1109]RAM ERROR=ERQ-Q_1109
+4 [Error code 1110]TRK. CIR. ERROR=ERQ-Q_1110
+4 [Error code 1111]TRK. CIR. ERROR=ERQ-Q_1111
+4 [Error code 1112]TRK. CIR. ERROR=ERQ-Q_1112
+4 [Error code 1113]TRK. CIR. ERROR=ERQ-Q_1113
+4 [Error code 1115]TRK. CIR. ERROR=ERQ-Q_1115
+4 [Error code 1116]TRK. CIR. ERROR=ERQ-Q_1116
+4 [Error code 1150]RAM ERROR=ERQ-Q_1150
+4 [Error code 1160]RAM ERROR=ERQ-Q_1160
+4 [Error code 1161]RAM ERROR=ERQ-Q_1161
+4 [Error code 1163]RAM ERROR=ERQ-Q_1163
+4 [Error code 1164]RAM ERROR=ERQ-Q_1164
+3 [Error code 1200 - 1205]
+4 [Error code 1200]OPE. CIRCUIT ERR.=ERQ-Q_1200
+4 [Error code 1201]OPE. CIRCUIT ERR.=ERQ-Q_1201
+4 [Error code 1202]OPE. CIRCUIT ERR.=ERQ-Q_1202
+4 [Error code 1203]OPE. CIRCUIT ERR.=ERQ-Q_1203
+4 [Error code 1204]OPE. CIRCUIT ERR.=ERQ-Q_1204
+4 [Error code 1205]OPE. CIRCUIT ERR.=ERQ-Q_1205
+3 [Error code 1300 - 1321]
+4 [Error code 1300]FUSE BREAK OFF=ERQ-Q_1300
+4 [Error code 1310]I/O INT. ERROR=ERQ-Q_1310
+4 [Error code 1311]I/O INT. ERROR=ERQ-Q_1311
+4 [Error code 1320]LAN CTRL. DOWN=ERQ-Q_1320
+4 [Error code 1321]LAN CTRL. DOWN=ERQ-Q_1321
+3 [Error code 1401 - 1439]
+4 [Error code 1401]SP. UNIT DOWN=ERQ-Q_1401
+4 [Error code 1402]SP. UNIT DOWN=ERQ-Q_1402
+4 [Error code 1403]SP. UNIT DOWN=ERQ-Q_1403
+4 [Error code 1411]CONTROL-BUS. ERR.=ERQ-Q_1411
+4 [Error code 1412]CONTROL-BUS. ERR.=ERQ-Q_1412
+4 [Error code 1413]CONTROL-BUS. ERR.=ERQ-Q_1413
+4 [Error code 1414]CONTROL-BUS. ERR.=ERQ-Q_1414
+4 [Error code 1415]CONTROL-BUS. ERR.=ERQ-Q_1415
+4 [Error code 1416]CONTROL-BUS. ERR.=ERQ-Q_1416
+4 [Error code 1417]CONTROL-BUS. ERR.=ERQ-Q_1417
+4 [Error code 1418]CONTROL-BUS. ERR.=ERQ-Q_1418
+4 [Error code 1430]MULTI-C.BUS ERR.=ERQ-Q_1430
+4 [Error code 1431]MULTI-C.BUS ERR.=ERQ-Q_1431
+4 [Error code 1432]MULTI-C.BUS ERR.=ERQ-Q_1432
+4 [Error code 1433]MULTI-C.BUS ERR.=ERQ-Q_1433
+4 [Error code 1434]MULTI-C.BUS ERR.=ERQ-Q_1434
+4 [Error code 1435]MULTI-C.BUS ERR.=ERQ-Q_1435
+4 [Error code 1436]MULTI-C.BUS ERR.=ERQ-Q_1436
+4 [Error code 1437]MULTI-C.BUS ERR.=ERQ-Q_1437
+4 [Error code 1439]MULTI-C.BUS ERR.=ERQ-Q_1439
+3 [Error code 1500 - 1520]
+4 [Error code 1500]AC/DC DOWN=ERQ-Q_1500
+4 [Error code 1510]SINGLE PS. DOWN=ERQ-Q_1510
+4 [Error code 1520]SINGLE PS. ERROR=ERQ-Q_1520
+3 [Error code 1600 - 1610]
+4 [Error code 1600]BATTERY ERROR=ERQ-Q_1600
+4 [Error code 1601]BATTERY ERROR=ERQ-Q_1601
+4 [Error code 1610]FLASH ROM ERROR=ERQ-Q_1610
+2 [Error code 2000 - 2710]
+3 [Error code 2000 - 2020]
+4 [Error code 2000]UNIT VERIFY ERR.=ERQ-Q_2000
+4 [Error code 2001]UNIT VERIFY ERR.=ERQ-Q_2001
+4 [Error code 2010]BASE LAY ERROR=ERQ-Q_2010
+4 [Error code 2011]BASE LAY ERROR=ERQ-Q_2011
+4 [Error code 2012]BASE LAY ERROR=ERQ-Q_2012
+4 [Error code 2013]BASE LAY ERROR=ERQ-Q_2013
+4 [Error code 2020]EXT.CABLE ERR.=ERQ-Q_2020
+3 [Error code 2100 - 2151]
+4 [Error code 2100]SP. UNIT LAY ERR.=ERQ-Q_2100
+4 [Error code 2101]SP. UNIT LAY ERR.=ERQ-Q_2101
+4 [Error code 2102]SP. UNIT LAY ERR.=ERQ-Q_2102
+4 [Error code 2103]SP. UNIT LAY ERR.=ERQ-Q_2103
+4 [Error code 2106]SP. UNIT LAY ERR.=ERQ-Q_2106
+4 [Error code 2107]SP. UNIT LAY ERR.=ERQ-Q_2107
+4 [Error code 2108]SP. UNIT LAY ERR.=ERQ-Q_2108
+4 [Error code 2110]SP. UNIT ERROR=ERQ-Q_2110
+4 [Error code 2111]SP. UNIT ERROR=ERQ-Q_2111
+4 [Error code 2112]SP. UNIT ERROR=ERQ-Q_2112
+4 [Error code 2113]SP. UNIT ERROR=ERQ-Q_2113
+4 [Error code 2114]SP. UNIT ERROR=ERQ-Q_2114
+4 [Error code 2115]SP. UNIT ERROR=ERQ-Q_2115
+4 [Error code 2116]SP. UNIT ERROR=ERQ-Q_2116
+4 [Error code 2117]SP. UNIT ERROR=ERQ-Q_2117
+4 [Error code 2118]SP. UNIT ERROR=ERQ-Q_2118
+4 [Error code 2120]SP. UNIT LAY ERR.=ERQ-Q_2120
+4 [Error code 2121]SP. UNIT LAY ERR.=ERQ-Q_2121
+4 [Error code 2122]SP. UNIT LAY ERR.=ERQ-Q_2122
+4 [Error code 2124]SP. UNIT LAY ERR.=ERQ-Q_2124
+4 [Error code 2125]SP. UNIT LAY ERR.=ERQ-Q_2125
+4 [Error code 2126]SP. UNIT LAY ERR.=ERQ-Q_2126
+4 [Error code 2128]SP. UNIT LAY ERR.=ERQ-Q_2128
+4 [Error code 2150]SP. UNIT VER.ERR.=ERQ-Q_2150
+4 [Error code 2151]SP. UNIT VER.ERR.=ERQ-Q_2151
+3 [Error code 2200 - 2227]
+4 [Error code 2200]MISSING PARA.=ERQ-Q_2200
+4 [Error code 2210]BOOT ERROR=ERQ-Q_2210
+4 [Error code 2211]BOOT ERROR=ERQ-Q_2211
+4 [Error code 2220]RESTORE ERROR=ERQ-Q_2220
+4 [Error code 2221]RESTORE ERROR=ERQ-Q_2221
+4 [Error code 2225]RESTORE ERROR=ERQ-Q_2225
+4 [Error code 2226]RESTORE ERROR=ERQ-Q_2226
+4 [Error code 2227]RESTORE ERROR=ERQ-Q_2227
+3 [Error code 2300 - 2302]
+4 [Error code 2300]ICM. OPE. ERROR=ERQ-Q_2300
+4 [Error code 2301]ICM. OPE. ERROR=ERQ-Q_2301
+4 [Error code 2302]ICM. OPE. ERROR=ERQ-Q_2302
+3 [Error code 2400 - 2413]
+4 [Error code 2400]FILE SET ERROR=ERQ-Q_2400
+4 [Error code 2401]FILE SET ERROR=ERQ-Q_2401
+4 [Error code 2406]FILE SET ERROR=ERQ-Q_2406
+4 [Error code 2410]FILE OPE. ERROR=ERQ-Q_2410
+4 [Error code 2411]FILE OPE. ERROR=ERQ-Q_2411
+4 [Error code 2412]FILE OPE. ERROR=ERQ-Q_2412
+4 [Error code 2413]FILE OPE. ERROR=ERQ-Q_2413
+3 [Error code 2500 - 2710]
+4 [Error code 2500]CAN'T EXE. PRG.=ERQ-Q_2500
+4 [Error code 2501]CAN'T EXE. PRG.=ERQ-Q_2501
+4 [Error code 2502]CAN'T EXE. PRG.=ERQ-Q_2502
+4 [Error code 2503]CAN'T EXE. PRG.=ERQ-Q_2503
+4 [Error code 2504]CAN'T EXE. PRG.=ERQ-Q_2504
+4 [Error code 2700]REMOTE PASS.FAIL=ERQ-Q_2700
+4 [Error code 2710]SNTP OPE.ERROR=ERQ-Q_2710
+2 [Error code 3000 - 3401]
+3 [Error code 3000 - 3042]
+4 [Error code 3000]PARAMETER ERROR=ERQ-Q_3000
+4 [Error code 3001]PARAMETER ERROR=ERQ-Q_3001
+4 [Error code 3002]PARAMETER ERROR=ERQ-Q_3002
+4 [Error code 3003]PARAMETER ERROR=ERQ-Q_3003
+4 [Error code 3004]PARAMETER ERROR=ERQ-Q_3004
+4 [Error code 3005]PARAMETER ERROR=ERQ-Q_3005
+4 [Error code 3006]PARAMETER ERROR=ERQ-Q_3006
+4 [Error code 3007]PARAMETER ERROR=ERQ-Q_3007
+4 [Error code 3009]PARAMETER ERROR=ERQ-Q_3009
+4 [Error code 3010]PARAMETER ERROR=ERQ-Q_3010
+4 [Error code 3012]PARAMETER ERROR=ERQ-Q_3012
+4 [Error code 3013]PARAMETER ERROR=ERQ-Q_3013
+4 [Error code 3014]PARAMETER ERROR=ERQ-Q_3014
+4 [Error code 3015]PARAMETER ERROR=ERQ-Q_3015
+4 [Error code 3016]PARAMETER ERROR=ERQ-Q_3016
+4 [Error code 3040]PARAMETER ERROR=ERQ-Q_3040
+4 [Error code 3041]PARAMETER ERROR=ERQ-Q_3041
+4 [Error code 3042]PARAMETER ERROR=ERQ-Q_3042
+3 [Error code 3100 - 3107]
+4 [Error code 3100]LINK PARA. ERROR=ERQ-Q_3100
+4 [Error code 3101]LINK PARA. ERROR=ERQ-Q_3101
+4 [Error code 3102]LINK PARA. ERROR=ERQ-Q_3102
+4 [Error code 3103]LINK PARA. ERROR=ERQ-Q_3103
+4 [Error code 3104]LINK PARA. ERROR=ERQ-Q_3104
+4 [Error code 3105]LINK PARA. ERROR=ERQ-Q_3105
+4 [Error code 3106]LINK PARA. ERROR=ERQ-Q_3106
+4 [Error code 3107]LINK PARA. ERROR=ERQ-Q_3107
+3 [Error code 3200 - 3203]
+4 [Error code 3200]SFC PARA. ERROR=ERQ-Q_3200
+4 [Error code 3201]SFC PARA. ERROR=ERQ-Q_3201
+4 [Error code 3202]SFC PARA. ERROR=ERQ-Q_3202
+4 [Error code 3203]SFC PARA. ERROR=ERQ-Q_3203
+3 [Error code 3300 - 3303]
+4 [Error code 3300]SP. PARA ERROR=ERQ-Q_3300
+4 [Error code 3301]SP. PARA ERROR=ERQ-Q_3301
+4 [Error code 3302]SP. PARA ERROR=ERQ-Q_3302
+4 [Error code 3303]SP. PARA ERROR=ERQ-Q_3303
+3 [Error code 3400 - 3401]
+4 [Error code 3400]REMOTE PASS. ERR.=ERQ-Q_3400
+4 [Error code 3401]REMOTE PASS. ERR.=ERQ-Q_3401
+2 [Error code 4000 - 10000]
+3 [Error code 4000 - 4030]
+4 [Error code 4000]INSTRCT. CODE ERR=ERQ-Q_4000
+4 [Error code 4001]INSTRCT. CODE ERR=ERQ-Q_4001
+4 [Error code 4002]INSTRCT. CODE ERR=ERQ-Q_4002
+4 [Error code 4003]INSTRCT. CODE ERR=ERQ-Q_4003
+4 [Error code 4004]INSTRCT. CODE ERR=ERQ-Q_4004
+4 [Error code 4010]MISSING END INS.=ERQ-Q_4010
+4 [Error code 4020]CAN'T SET(P)=ERQ-Q_4020
+4 [Error code 4021]CAN'T SET(P)=ERQ-Q_4021
+4 [Error code 4030]CAN'T SET(I)=ERQ-Q_4030
+3 [Error code 4100 - 4141]
+4 [Error code 4100]OPERATION ERROR=ERQ-Q_4100
+4 [Error code 4101]OPERATION ERROR=ERQ-Q_4101
+4 [Error code 4102]OPERATION ERROR=ERQ-Q_4102
+4 [Error code 4103]OPERATION ERROR=ERQ-Q_4103
+4 [Error code 4105]OPERATION ERROR=ERQ-Q_4105
+4 [Error code 4107]OPERATION ERROR=ERQ-Q_4107
+4 [Error code 4109]OPERATION ERROR=ERQ-Q_4109
+4 [Error code 4111]OPERATION ERROR=ERQ-Q_4111
+4 [Error code 4112]OPERATION ERROR=ERQ-Q_4112
+4 [Error code 4113]OPERATION ERROR=ERQ-Q_4113
+4 [Error code 4120]OPERATION ERROR=ERQ-Q_4120
+4 [Error code 4121]OPERATION ERROR=ERQ-Q_4121
+4 [Error code 4122]OPERATION ERROR=ERQ-Q_4122
+4 [Error code 4130]OPERATION ERROR=ERQ-Q_4130
+4 [Error code 4131]OPERATION ERROR=ERQ-Q_4131
+4 [Error code 4140]OPERATION ERROR=ERQ-Q_4140
+4 [Error code 4141]OPERATION ERROR=ERQ-Q_4141
+3 [Error code 4200 - 4355]
+4 [Error code 4200]FOR NEXT ERROR=ERQ-Q_4200
+4 [Error code 4201]FOR NEXT ERROR=ERQ-Q_4201
+4 [Error code 4202]FOR NEXT ERROR=ERQ-Q_4202
+4 [Error code 4203]FOR NEXT ERROR=ERQ-Q_4203
+4 [Error code 4210]CAN'T EXECUTE(P)=ERQ-Q_4210
+4 [Error code 4211]CAN'T EXECUTE(P)=ERQ-Q_4211
+4 [Error code 4212]CAN'T EXECUTE(P)=ERQ-Q_4212
+4 [Error code 4213]CAN'T EXECUTE(P)=ERQ-Q_4213
+4 [Error code 4220]CAN'T EXECUTE(I)=ERQ-Q_4220
+4 [Error code 4221]CAN'T EXECUTE(I)=ERQ-Q_4221
+4 [Error code 4223]CAN'T EXECUTE(I)=ERQ-Q_4223
+4 [Error code 4225]CAN'T EXECUTE(I)=ERQ-Q_4225
+4 [Error code 4230]INST. FORMAT ERR.=ERQ-Q_4230
+4 [Error code 4231]INST. FORMAT ERR.=ERQ-Q_4231
+4 [Error code 4235]INST. FORMAT ERR.=ERQ-Q_4235
+4 [Error code 4350]MULTI-COM. ERROR=ERQ-Q_4350
+4 [Error code 4351]MULTI-COM. ERROR=ERQ-Q_4351
+4 [Error code 4352]MULTI-COM. ERROR=ERQ-Q_4352
+4 [Error code 4353]MULTI-COM. ERROR=ERQ-Q_4353
+4 [Error code 4354]MULTI-COM. ERROR=ERQ-Q_4354
+4 [Error code 4355]MULTI-COM. ERROR=ERQ-Q_4355
+3 [Error code 4400 - 4432]
+4 [Error code 4400]SFCP. CODE ERROR=ERQ-Q_4400
+4 [Error code 4410]CAN'T SET(BL)=ERQ-Q_4410
+4 [Error code 4411]CAN'T SET(BL)=ERQ-Q_4411
+4 [Error code 4420]CAN'T SET(S)=ERQ-Q_4420
+4 [Error code 4421]CAN'T SET(S)=ERQ-Q_4421
+4 [Error code 4422]CAN'T SET(S)=ERQ-Q_4422
+4 [Error code 4423]CAN'T SET(S)=ERQ-Q_4423
+4 [Error code 4430]SFC EXE. ERROR=ERQ-Q_4430
+4 [Error code 4431]SFC EXE. ERROR=ERQ-Q_4431
+4 [Error code 4432]SFC EXE. ERROR=ERQ-Q_4432
+3 [Error code 4500 - 4506]
+4 [Error code 4500]SFCP. FORMAT ERR.=ERQ-Q_4500
+4 [Error code 4501]SFCP. FORMAT ERR.=ERQ-Q_4501
+4 [Error code 4502]SFCP. FORMAT ERR.=ERQ-Q_4502
+4 [Error code 4503]SFCP. FORMAT ERR.=ERQ-Q_4503
+4 [Error code 4504]SFCP. FORMAT ERR.=ERQ-Q_4504
+4 [Error code 4505]SFCP. FORMAT ERR.=ERQ-Q_4505
+4 [Error code 4506]SFCP. FORMAT ERR.=ERQ-Q_4506
+3 [Error code 4600 - 4633]
+4 [Error code 4600]SFCP. OPE. ERROR=ERQ-Q_4600
+4 [Error code 4601]SFCP. OPE. ERROR=ERQ-Q_4601
+4 [Error code 4602]SFCP. OPE. ERROR=ERQ-Q_4602
+4 [Error code 4610]SFCP. EXE. ERROR=ERQ-Q_4610
+4 [Error code 4611]SFCP. EXE. ERROR=ERQ-Q_4611
+4 [Error code 4620]BLOCK EXE. ERROR=ERQ-Q_4620
+4 [Error code 4621]BLOCK EXE. ERROR=ERQ-Q_4621
+4 [Error code 4630]STEP EXE. ERROR=ERQ-Q_4630
+4 [Error code 4631]STEP EXE. ERROR=ERQ-Q_4631
+4 [Error code 4632]STEP EXE. ERROR=ERQ-Q_4632
+4 [Error code 4633]STEP EXE. ERROR=ERQ-Q_4633
+3 [Error code 5000 - 5011]
+4 [Error code 5000]WDT ERROR=ERQ-Q_5000
+4 [Error code 5001]WDT ERROR=ERQ-Q_5001
+4 [Error code 5010]PRG. TIME OVER=ERQ-Q_5010
+4 [Error code 5011]PRG. TIME OVER=ERQ-Q_5011
+3 [Error code 6000 - 6501]
+4 [Error code 6000]FILE DIFF.=ERQ-Q_6000
+4 [Error code 6001]FILE DIFF.=ERQ-Q_6001
+4 [Error code 6010]OPE. MODE DIFF.=ERQ-Q_6010
+4 [Error code 6020]OPE. MODE DIFF.=ERQ-Q_6020
+4 [Error code 6030]UNIT LAY. DIFF.=ERQ-Q_6030
+4 [Error code 6035]UNIT LAY. DIFF.=ERQ-Q_6035
+4 [Error code 6036]UNIT LAY. DIFF.=ERQ-Q_6036
+4 [Error code 6040]CARD TYPE DIFF.=ERQ-Q_6040
+4 [Error code 6041]CARD TYPE DIFF.=ERQ-Q_6041
+4 [Error code 6050]CAN'T EXE. MODE=ERQ-Q_6050
+4 [Error code 6060]CPU MODE DIFF.=ERQ-Q_6060
+4 [Error code 6061]CPU MODE DIFF.=ERQ-Q_6061
+4 [Error code 6062]CPU MODE DIFF.=ERQ-Q_6062
+4 [Error code 6100]TRK. TRANS. ERR.=ERQ-Q_6100
+4 [Error code 6101]TRK. TRANS. ERR.=ERQ-Q_6101
+4 [Error code 6102]TRK. TRANS. ERR.=ERQ-Q_6102
+4 [Error code 6103]TRK. TRANS. ERR.=ERQ-Q_6103
+4 [Error code 6105]TRK. TRANS. ERR.=ERQ-Q_6105
+4 [Error code 6106]TRK. TRANS. ERR.=ERQ-Q_6106
+4 [Error code 6107]TRK. TRANS. ERR.=ERQ-Q_6107
+4 [Error code 6108]TRK. TRANS. ERR.=ERQ-Q_6108
+4 [Error code 6110]TRK. SIZE ERROR=ERQ-Q_6110
+4 [Error code 6111]TRK. SIZE ERROR=ERQ-Q_6111
+4 [Error code 6112]TRK. SIZE ERROR=ERQ-Q_6112
+4 [Error code 6120]TRK. CABLE ERR.=ERQ-Q_6120
+4 [Error code 6130]TRK. DISCONNECT=ERQ-Q_6130
+4 [Error code 6140]TRK. INIT. ERROR=ERQ-Q_6140
+4 [Error code 6200]CONTROL EXE.=ERQ-Q_6200
+4 [Error code 6210]STANDBY=ERQ-Q_6210
+4 [Error code 6220]CAN'T SWITCH=ERQ-Q_6220
+4 [Error code 6300]STANDBY SYS. DOWN=ERQ-Q_6300
+4 [Error code 6310]CONTROL SYS. DOWN=ERQ-Q_6310
+4 [Error code 6311]CONTROL SYS. DOWN=ERQ-Q_6311
+4 [Error code 6312]CONTROL SYS. DOWN=ERQ-Q_6312
+4 [Error code 6313]CONTROL SYS. DOWN=ERQ-Q_6313
+4 [Error code 6400]PRG. MEM. CLEAR=ERQ-Q_6400
+4 [Error code 6410]MEM. COPY EXE.=ERQ-Q_6410
+4 [Error code 6500]TRK. PARA. ERROR=ERQ-Q_6500
+4 [Error code 6501]TRK. PARA. ERROR=ERQ-Q_6501
+3 [Error code 7000 - 8031]
+4 [Error code 7000]MULTI CPU DOWN=ERQ-Q_7000
+4 [Error code 7002]MULTI CPU DOWN=ERQ-Q_7002
+4 [Error code 7003]MULTI CPU DOWN=ERQ-Q_7003
+4 [Error code 7004]MULTI CPU DOWN=ERQ-Q_7004
+4 [Error code 7010]MULTI EXE. ERROR=ERQ-Q_7010
+4 [Error code 7011]MULTI EXE. ERROR=ERQ-Q_7011
+4 [Error code 7013]MULTI EXE. ERROR=ERQ-Q_7013
+4 [Error code 7020]MULTI CPU ERROR=ERQ-Q_7020
+4 [Error code 7030]CPU LAY ERROR=ERQ-Q_7030
+4 [Error code 7031]CPU LAY ERROR=ERQ-Q_7031
+4 [Error code 7032]CPU LAY ERROR=ERQ-Q_7032
+4 [Error code 7035]CPU LAY ERROR=ERQ-Q_7035
+4 [Error code 7036]CPU LAY ERROR=ERQ-Q_7036
+4 [Error code 8031]INCORRECT FILE=ERQ-Q_8031
+3 [Error code 9000 - 9020]
+4 [Error code 9000]F****=ERQ-Q_9000
+4 [Error code 9010]<CHK>ERR***-***=ERQ-Q_9010
+4 [Error code 9020]BOOT OK=ERQ-Q_9020
+3 [Error code 10000]
+4 [Error code 10000]CONT. UNIT ERROR=ERQ-Q_10000
+1 L series PLC
+2 [Error code 1000 - 1730]
+3 [Error code 1000 - 1042]
+4 [Error code 1000]CPU UNIT DOWN=ERQ-Q_1000
+4 [Error code 1001]CPU UNIT DOWN=ERQ-Q_1001
+4 [Error code 1002]CPU UNIT DOWN=ERQ-Q_1002
+4 [Error code 1003]CPU UNIT DOWN=ERQ-Q_1003
+4 [Error code 1004]CPU UNIT DOWN=ERQ-Q_1004
+4 [Error code 1005]CPU UNIT DOWN=ERQ-Q_1005
+4 [Error code 1006]CPU UNIT DOWN=ERQ-Q_1006
+4 [Error code 1009]CPU UNIT DOWN=ERQ-Q_1009
+4 [Error code 1010]END NOT EXECUTE=ERQ-Q_1010
+4 [Error code 1020]SFCP. END ERROR=ERQ-Q_1020
+4 [Error code 1035]CPU UNIT DOWN=ERQ-Q_1035
+4 [Error code 1040]CPU UNIT DOWN=ERQ-Q_1040
+4 [Error code 1041]CPU UNIT DOWN=ERQ-Q_1041
+4 [Error code 1042]CPU UNIT DOWN=ERQ-Q_1042
+3 [Error code 1101 - 1172]
+4 [Error code 1101]RAM ERROR=ERQ-Q_1101
+4 [Error code 1102]RAM ERROR=ERQ-Q_1102
+4 [Error code 1103]RAM ERROR=ERQ-Q_1103
+4 [Error code 1160]RAM ERROR=ERQ-Q_1160
+4 [Error code 1161]RAM ERROR=ERQ-Q_1161
+4 [Error code 1164]RAM ERROR=ERQ-Q_1164
+4 [Error code 1170]RAM ERROR=ERQ-Q_1170
+4 [Error code 1171]RAM ERROR=ERQ-Q_1171
+4 [Error code 1172]RAM ERROR=ERQ-Q_1172
+3 [Error code 1200 - 1202]
+4 [Error code 1200]OPE. CIRCUIT ERR.=ERQ-Q_1200
+4 [Error code 1201]OPE. CIRCUIT ERR.=ERQ-Q_1201
+4 [Error code 1202]OPE. CIRCUIT ERR.=ERQ-Q_1202
+3 [Error code 1310 - 1321]
+4 [Error code 1310]I/O INT. ERROR=ERQ-Q_1310
+4 [Error code 1311]I/O INT. ERROR=ERQ-Q_1311
+4 [Error code 1320]LAN CTRL. DOWN=ERQ-Q_1320
+4 [Error code 1321]LAN CTRL. DOWN=ERQ-Q_1321
+3 [Error code 1401 - 1403]
+4 [Error code 1401]SP. UNIT DOWN=ERQ-Q_1401
+4 [Error code 1402]SP. UNIT DOWN=ERQ-Q_1402
+4 [Error code 1403]SP. UNIT DOWN=ERQ-Q_1403
+3 [Error code 1500]
+4 [Error code 1500]AC/DC DOWN=ERQ-Q_1500
+3 [Error code 1600 - 1730]
+4 [Error code 1600]BATTERY ERROR=ERQ-Q_1600
+4 [Error code 1610]FLASH ROM ERROR=ERQ-Q_1610
+4 [Error code 1700]BUS TIMEOUT ERR.=ERQ-Q_1700
+4 [Error code 1710]UNIT BUS ERROR=ERQ-Q_1710
+4 [Error code 1720]END COVER ERR.=ERQ-Q_1720
+4 [Error code 1730]SYSTEM RST ERR.=ERQ-Q_1730
+2 [Error code 2030 - 2902]
+3 [Error code 2030 - 2040]
+4 [Error code 2030]NO END COVER=ERQ-Q_2030
+4 [Error code 2031]NO END COVER=ERQ-Q_2031
+4 [Error code 2040]UNIT BAD CONNECT=ERQ-Q_2040
+3 [Error code 2100 - 2170]
+4 [Error code 2100]SP. UNIT LAY ERR.=ERQ-Q_2100
+4 [Error code 2107]SP. UNIT LAY ERR.=ERQ-Q_2107
+4 [Error code 2110]SP. UNIT ERROR=ERQ-Q_2110
+4 [Error code 2112]SP. UNIT ERROR=ERQ-Q_2112
+4 [Error code 2124]SP. UNIT LAY ERR.=ERQ-Q_2124
+4 [Error code 2125]SP. UNIT LAY ERR.=ERQ-Q_2125
+4 [Error code 2170]SYSTEM LAY ERR.=ERQ-Q_2170
+3 [Error code 2200 - 2227]
+4 [Error code 2200]MISSING PARA.=ERQ-Q_2200
+4 [Error code 2210]BOOT ERROR=ERQ-Q_2210
+4 [Error code 2211]BOOT ERROR=ERQ-Q_2211
+4 [Error code 2213]BOOT ERROR=ERQ-Q_2213
+4 [Error code 2220]RESTORE ERROR=ERQ-Q_2220
+4 [Error code 2221]RESTORE ERROR=ERQ-Q_2221
+4 [Error code 2225]RESTORE ERROR=ERQ-Q_2225
+4 [Error code 2226]RESTORE ERROR=ERQ-Q_2226
+4 [Error code 2227]RESTORE ERROR=ERQ-Q_2227
+3 [Error code 2300 - 2302]
+4 [Error code 2300]ICM. OPE. ERROR=ERQ-Q_2300
+4 [Error code 2301]ICM. OPE. ERROR=ERQ-Q_2301
+4 [Error code 2302]ICM. OPE. ERROR=ERQ-Q_2302
+3 [Error code 2400 - 2412]
+4 [Error code 2400]FILE SET ERROR=ERQ-Q_2400
+4 [Error code 2401]FILE SET ERROR=ERQ-Q_2401
+4 [Error code 2406]FILE SET ERROR=ERQ-Q_2406
+4 [Error code 2410]FILE OPE. ERROR=ERQ-Q_2410
+4 [Error code 2411]FILE OPE. ERROR=ERQ-Q_2411
+4 [Error code 2412]FILE OPE. ERROR=ERQ-Q_2412
+3 [Error code 2500 - 2902]
+4 [Error code 2500]CAN'T EXE. PRG.=ERQ-Q_2500
+4 [Error code 2501]CAN'T EXE. PRG.=ERQ-Q_2501
+4 [Error code 2502]CAN'T EXE. PRG.=ERQ-Q_2502
+4 [Error code 2503]CAN'T EXE. PRG.=ERQ-Q_2503
+4 [Error code 2504]CAN'T EXE. PRG.=ERQ-Q_2504
+4 [Error code 2700]REMOTE PASS.FAIL=ERQ-Q_2700
+4 [Error code 2710]SNTP OPE.ERROR=ERQ-Q_2710
+4 [Error code 2900]DISPLAY ERROR=ERQ-Q_2900
+4 [Error code 2901]DISPLAY ERROR=ERQ-Q_2901
+4 [Error code 2902]DISPLAY ERROR=ERQ-Q_2902
+2 [Error code 3000 - 3401]
+3 [Error code 3000 - 3107]
+4 [Error code 3000]PARAMETER ERROR=ERQ-Q_3000
+4 [Error code 3001]PARAMETER ERROR=ERQ-Q_3001
+4 [Error code 3002]PARAMETER ERROR=ERQ-Q_3002
+4 [Error code 3003]PARAMETER ERROR=ERQ-Q_3003
+4 [Error code 3004]PARAMETER ERROR=ERQ-Q_3004
+4 [Error code 3105]LINK PARA. ERROR=ERQ-Q_3105
+4 [Error code 3106]LINK PARA. ERROR=ERQ-Q_3106
+4 [Error code 3107]LINK PARA. ERROR=ERQ-Q_3107
+3 [Error code 3200 - 3203]
+4 [Error code 3200]SFC PARA. ERROR=ERQ-Q_3200
+4 [Error code 3203]SFC PARA. ERROR=ERQ-Q_3203
+3 [Error code 3300 - 3302]
+4 [Error code 3300]SP. PARA ERROR=ERQ-Q_3300
+4 [Error code 3301]SP. PARA ERROR=ERQ-Q_3301
+4 [Error code 3302]SP. PARA ERROR=ERQ-Q_3302
+3 [Error code 3400 - 3401]
+4 [Error code 3400]REMOTE PASS. ERR.=ERQ-Q_3400
+4 [Error code 3401]REMOTE PASS. ERR.=ERQ-Q_3401
+2 [Error code 4000 - 9000]
+3 [Error code 4000 - 4030]
+4 [Error code 4000]INSTRCT. CODE ERR=ERQ-Q_4000
+4 [Error code 4001]INSTRCT. CODE ERR=ERQ-Q_4001
+4 [Error code 4002]INSTRCT. CODE ERR=ERQ-Q_4002
+4 [Error code 4003]INSTRCT. CODE ERR=ERQ-Q_4003
+4 [Error code 4004]INSTRCT. CODE ERR=ERQ-Q_4004
+4 [Error code 4010]MISSING END INS.=ERQ-Q_4010
+4 [Error code 4020]CAN'T SET(P)=ERQ-Q_4020
+4 [Error code 4021]CAN'T SET(P)=ERQ-Q_4021
+4 [Error code 4030]CAN'T SET(I)=ERQ-Q_4030
+3 [Error code 4100 - 4141]
+4 [Error code 4100]OPERATION ERROR=ERQ-Q_4100
+4 [Error code 4101]OPERATION ERROR=ERQ-Q_4101
+4 [Error code 4102]OPERATION ERROR=ERQ-Q_4102
+4 [Error code 4103]OPERATION ERROR=ERQ-Q_4103
+4 [Error code 4113]OPERATION ERROR=ERQ-Q_4113
+4 [Error code 4116]OPERATION ERROR=ERQ-Q_4116
+4 [Error code 4131]OPERATION ERROR=ERQ-Q_4131
+4 [Error code 4140]OPERATION ERROR=ERQ-Q_4140
+4 [Error code 4141]OPERATION ERROR=ERQ-Q_4141
+3 [Error code 4200 - 4223]
+4 [Error code 4200]FOR NEXT ERROR=ERQ-Q_4200
+4 [Error code 4201]FOR NEXT ERROR=ERQ-Q_4201
+4 [Error code 4202]FOR NEXT ERROR=ERQ-Q_4202
+4 [Error code 4203]FOR NEXT ERROR=ERQ-Q_4203
+4 [Error code 4210]CAN'T EXECUTE(P)=ERQ-Q_4210
+4 [Error code 4211]CAN'T EXECUTE(P)=ERQ-Q_4211
+4 [Error code 4212]CAN'T EXECUTE(P)=ERQ-Q_4212
+4 [Error code 4213]CAN'T EXECUTE(P)=ERQ-Q_4213
+4 [Error code 4220]CAN'T EXECUTE(I)=ERQ-Q_4220
+4 [Error code 4221]CAN'T EXECUTE(I)=ERQ-Q_4221
+4 [Error code 4223]CAN'T EXECUTE(I)=ERQ-Q_4223
+3 [Error code 4410 - 4432]
+4 [Error code 4410]CAN'T SET(BL)=ERQ-Q_4410
+4 [Error code 4411]CAN'T SET(BL)=ERQ-Q_4411
+4 [Error code 4420]CAN'T SET(S)=ERQ-Q_4420
+4 [Error code 4421]CAN'T SET(S)=ERQ-Q_4421
+4 [Error code 4422]CAN'T SET(S)=ERQ-Q_4422
+4 [Error code 4423]CAN'T SET(S)=ERQ-Q_4423
+4 [Error code 4430]SFC EXE. ERROR=ERQ-Q_4430
+4 [Error code 4431]SFC EXE. ERROR=ERQ-Q_4431
+4 [Error code 4432]SFC EXE. ERROR=ERQ-Q_4432
+3 [Error code 4502 - 4506]
+4 [Error code 4502]SFCP. FORMAT ERR.=ERQ-Q_4502
+4 [Error code 4503]SFCP. FORMAT ERR.=ERQ-Q_4503
+4 [Error code 4504]SFCP. FORMAT ERR.=ERQ-Q_4504
+4 [Error code 4505]SFCP. FORMAT ERR.=ERQ-Q_4505
+4 [Error code 4506]SFCP. FORMAT ERR.=ERQ-Q_4506
+3 [Error code 4621 - 4633]
+4 [Error code 4621]BLOCK EXE. ERROR=ERQ-Q_4621
+4 [Error code 4631]STEP EXE. ERROR=ERQ-Q_4631
+4 [Error code 4632]STEP EXE. ERROR=ERQ-Q_4632
+4 [Error code 4633]STEP EXE. ERROR=ERQ-Q_4633
+3 [Error code 5000 - 8031]
+4 [Error code 5000]WDT ERROR=ERQ-Q_5000
+4 [Error code 5001]WDT ERROR=ERQ-Q_5001
+4 [Error code 5010]PRG. TIME OVER=ERQ-Q_5010
+4 [Error code 8031]INCORRECT FILE=ERQ-Q_8031
+3 [Error code 9000]
+4 [Error code 9000]F****=ERQ-Q_9000
+1 FX series PLC
+2 [Error code 0000]
+3 [Error code 0000]No error=ERFX_0000
+2 [Error code 0*** - 1***]
+3 [Error code 0***,1***]I/O configuration error=ERFX_1000
+2 [Error code 3801 - 3820]
+3 [Error code 3801]Serial communication error 2=ERFX_3801
+3 [Error code 3802]Serial communication error 2=ERFX_3802
+3 [Error code 3803]Serial communication error 2=ERFX_3803
+3 [Error code 3804]Serial communication error 2=ERFX_3804
+3 [Error code 3805]Serial communication error 2=ERFX_3805
+3 [Error code 3806]Serial communication error 2=ERFX_3806
+3 [Error code 3807]Serial communication error 2=ERFX_3807
+3 [Error code 3808]Serial communication error 2=ERFX_3808
+3 [Error code 3812]Serial communication error 2=ERFX_3812
+3 [Error code 3813]Serial communication error 2=ERFX_3813
+3 [Error code 3814]Serial communication error 2=ERFX_3814
+3 [Error code 3820]Serial communication error 2=ERFX_3820
+2 [Error code 6101 - 6115]
+3 [Error code 6101]PLC hardware error=ERFX_6101
+3 [Error code 6102]PLC hardware error=ERFX_6102
+3 [Error code 6103]PLC hardware error=ERFX_6103
+3 [Error code 6104]PLC hardware error=ERFX_6104
+3 [Error code 6105]PLC hardware error=ERFX_6105
+3 [Error code 6106]PLC hardware error=ERFX_6106
+3 [Error code 6107]PLC hardware error=ERFX_6107
+3 [Error code 6112]PLC hardware error=ERFX_6112
+3 [Error code 6113]PLC hardware error=ERFX_6113
+3 [Error code 6114]PLC hardware error=ERFX_6114
+3 [Error code 6115]PLC hardware error=ERFX_6115
+2 [Error code 6201 - 6205]
+3 [Error code 6201]PLC/PP communication error=ERFX_6201
+3 [Error code 6202]PLC/PP communication error=ERFX_6202
+3 [Error code 6203]PLC/PP communication error=ERFX_6203
+3 [Error code 6204]PLC/PP communication error=ERFX_6204
+3 [Error code 6205]PLC/PP communication error=ERFX_6205
+2 [Error code 6301 - 6320]
+3 [Error code 6301]Serial communication error 1=ERFX_6301
+3 [Error code 6302]Serial communication error 1=ERFX_6302
+3 [Error code 6303]Serial communication error 1=ERFX_6303
+3 [Error code 6304]Serial communication error 1=ERFX_6304
+3 [Error code 6305]Serial communication error 1=ERFX_6305
+3 [Error code 6306]Serial communication error 1=ERFX_6306
+3 [Error code 6307]Serial communication error 1=ERFX_6307
+3 [Error code 6308]Serial communication error 1=ERFX_6308
+3 [Error code 6312]Serial communication error 1=ERFX_6312
+3 [Error code 6313]Serial communication error 1=ERFX_6313
+3 [Error code 6314]Serial communication error 1=ERFX_6314
+3 [Error code 6320]Serial communication error 1=ERFX_6320
+2 [Error code 6401 - 6413]
+3 [Error code 6401]Parameter error=ERFX_6401
+3 [Error code 6402]Parameter error=ERFX_6402
+3 [Error code 6403]Parameter error=ERFX_6403
+3 [Error code 6404]Parameter error=ERFX_6404
+3 [Error code 6405]Parameter error=ERFX_6405
+3 [Error code 6406]Parameter error=ERFX_6406
+3 [Error code 6407]Parameter error=ERFX_6407
+3 [Error code 6409]Parameter error=ERFX_6409
+3 [Error code 6411]Parameter error=ERFX_6411
+3 [Error code 6412]Parameter error=ERFX_6412
+3 [Error code 6413]Parameter error=ERFX_6413
+2 [Error code 6501 - 6512]
+3 [Error code 6501]Syntax error=ERFX_6501
+3 [Error code 6502]Syntax error=ERFX_6502
+3 [Error code 6503]Syntax error=ERFX_6503
+3 [Error code 6504]Syntax error=ERFX_6504
+3 [Error code 6505]Syntax error=ERFX_6505
+3 [Error code 6506]Syntax error=ERFX_6506
+3 [Error code 6507]Syntax error=ERFX_6507
+3 [Error code 6508]Syntax error=ERFX_6508
+3 [Error code 6509]Syntax error=ERFX_6509
+3 [Error code 6510]Syntax error=ERFX_6510
+3 [Error code 6511]Syntax error=ERFX_6511
+3 [Error code 6512]Syntax error=ERFX_6512
+2 [Error code 6601 - 6632]
+3 [Error code 6601]Circuit error=ERFX_6601
+3 [Error code 6602]Circuit error=ERFX_6602
+3 [Error code 6603]Circuit error=ERFX_6603
+3 [Error code 6604]Circuit error=ERFX_6604
+3 [Error code 6605]Circuit error=ERFX_6605
+3 [Error code 6606]Circuit error=ERFX_6606
+3 [Error code 6607]Circuit error=ERFX_6607
+3 [Error code 6608]Circuit error=ERFX_6608
+3 [Error code 6609]Circuit error=ERFX_6609
+3 [Error code 6610]Circuit error=ERFX_6610
+3 [Error code 6611]Circuit error=ERFX_6611
+3 [Error code 6612]Circuit error=ERFX_6612
+3 [Error code 6613]Circuit error=ERFX_6613
+3 [Error code 6614]Circuit error=ERFX_6614
+3 [Error code 6615]Circuit error=ERFX_6615
+3 [Error code 6616]Circuit error=ERFX_6616
+3 [Error code 6617]Circuit error=ERFX_6617
+3 [Error code 6618]Circuit error=ERFX_6618
+3 [Error code 6619]Circuit error=ERFX_6619
+3 [Error code 6620]Circuit error=ERFX_6620
+3 [Error code 6621]Circuit error=ERFX_6621
+3 [Error code 6622]Circuit error=ERFX_6622
+3 [Error code 6623]Circuit error=ERFX_6623
+3 [Error code 6624]Circuit error=ERFX_6624
+3 [Error code 6625]Circuit error=ERFX_6625
+3 [Error code 6626]Circuit error=ERFX_6626
+3 [Error code 6627]Circuit error=ERFX_6627
+3 [Error code 6628]Circuit error=ERFX_6628
+3 [Error code 6629]Circuit error=ERFX_6629
+3 [Error code 6630]Circuit error=ERFX_6630
+3 [Error code 6631]Circuit error=ERFX_6631
+3 [Error code 6632]Circuit error=ERFX_6632
+2 [Error code 6701 - 6773]
+3 [Error code 6701]Operation error=ERFX_6701
+3 [Error code 6702]Operation error=ERFX_6702
+3 [Error code 6703]Operation error=ERFX_6703
+3 [Error code 6704]Operation error=ERFX_6704
+3 [Error code 6705]Operation error=ERFX_6705
+3 [Error code 6706]Operation error=ERFX_6706
+3 [Error code 6707]Operation error=ERFX_6707
+3 [Error code 6708]Operation error=ERFX_6708
+3 [Error code 6709]Operation error=ERFX_6709
+3 [Error code 6710]Operation error=ERFX_6710
+3 [Error code 6712]Operation error=ERFX_6712
+3 [Error code 6730]PID operation error=ERFX_6730
+3 [Error code 6732]PID operation error=ERFX_6732
+3 [Error code 6733]PID operation error=ERFX_6733
+3 [Error code 6734]PID operation error=ERFX_6734
+3 [Error code 6735]PID operation error=ERFX_6735
+3 [Error code 6736]PID operation error=ERFX_6736
+3 [Error code 6740]PID operation error=ERFX_6740
+3 [Error code 6742]PID operation error=ERFX_6742
+3 [Error code 6743]PID operation error=ERFX_6743
+3 [Error code 6744]PID operation error=ERFX_6744
+3 [Error code 6745]PID operation error=ERFX_6745
+3 [Error code 6746]PID operation error=ERFX_6746
+3 [Error code 6747]PID operation error=ERFX_6747
+3 [Error code 6748]PID operation error=ERFX_6748
+3 [Error code 6749]PID operation error=ERFX_6749
+3 [Error code 6750]PID operation error=ERFX_6750
+3 [Error code 6751]PID operation error=ERFX_6751
+3 [Error code 6752]PID operation error=ERFX_6752
+3 [Error code 6753]PID operation error=ERFX_6753
+3 [Error code 6754]PID operation error=ERFX_6754
+3 [Error code 6755]PID operation error=ERFX_6755
+3 [Error code 6756]PID operation error=ERFX_6756
+3 [Error code 6757]PID operation error=ERFX_6757
+3 [Error code 6758]PID operation error=ERFX_6758
+3 [Error code 6759]PID operation error=ERFX_6759
+3 [Error code 6760]PID operation error=ERFX_6760
+3 [Error code 6762]PID operation error=ERFX_6762
+3 [Error code 6763]PID operation error=ERFX_6763
+3 [Error code 6764]PID operation error=ERFX_6764
+3 [Error code 6765]PID operation error=ERFX_6765
+3 [Error code 6770]PID operation error=ERFX_6770
+3 [Error code 6771]PID operation error=ERFX_6771
+3 [Error code 6772]PID operation error=ERFX_6772
+3 [Error code 6773]PID operation error=ERFX_6773
+2 [Error code *020 - *090]
+3 [Error code *020]Special block error=ERFX_10020
+3 [Error code *021]Special block error=ERFX_10021
+3 [Error code *080]Special block error=ERFX_10080
+3 [Error code *090]Special block error=ERFX_10090
+1 QS series PLC
+2 [Error code 1000 - 1010]
+3 [Error code 1000]MAIN CPU DOWN=ERQS_1000
+3 [Error code 1001]MAIN CPU DOWN=ERQS_1001
+3 [Error code 1002]MAIN CPU DOWN=ERQS_1002
+3 [Error code 1003]MAIN CPU DOWN=ERQS_1003
+3 [Error code 1004]MAIN CPU DOWN=ERQS_1004
+3 [Error code 1006]MAIN CPU DOWN=ERQS_1006
+3 [Error code 1009]MAIN CPU DOWN=ERQS_1009
+3 [Error code 1010]END NOT EXECUTE=ERQS_1010
+2 [Error code 1030 - 1031]
+3 [Error code 1030]MAIN CPU DOWN=ERQS_1030
+3 [Error code 1031]MAIN CPU DOWN=ERQS_1031
+2 [Error code 1131 - 1146]
+3 [Error code 1131]RAM ERROR=ERQS_1131
+3 [Error code 1132]RAM ERROR=ERQS_1132
+3 [Error code 1133]RAM ERROR=ERQS_1133
+3 [Error code 1136]RAM ERROR=ERQS_1136
+3 [Error code 1137]RAM ERROR=ERQS_1137
+3 [Error code 1141]RAM ERROR=ERQS_1141
+3 [Error code 1142]RAM ERROR=ERQS_1142
+3 [Error code 1143]RAM ERROR=ERQS_1143
+3 [Error code 1146]RAM ERROR=ERQS_1146
+2 [Error code 1210 - 1404]
+3 [Error code 1210]OPERATION CIRCUIT ERROR=ERQS_1210
+3 [Error code 1311]I/O INTERRUPT ERROR=ERQS_1311
+3 [Error code 1401]INTELLIGENT FUNCTION MODULE DOWN=ERQS_1401
+3 [Error code 1403]INTELLIGENT FUNCTION MODULE DOWN=ERQS_1403
+3 [Error code 1404]INTELLIGENT FUNCTION MODULE DOWN=ERQS_1404
+2 [Error code 1411 - 1415]
+3 [Error code 1411]CONTROL-BUS ERROR=ERQS_1411
+3 [Error code 1413]CONTROL-BUS ERROR=ERQS_1413
+3 [Error code 1414]CONTROL-BUS ERROR=ERQS_1414
+3 [Error code 1415]CONTROL-BUS ERROR=ERQS_1415
+2 [Error code 1500]
+3 [Error code 1500]AC/DC DOWN=ERQS_1500
+2 [Error code 1600 - 1610]
+3 [Error code 1600]BATTERY ERROR*1=ERQS_1600
+3 [Error code 1610]EXCEED MAX FLASH ROM REWRIT.ERR.=ERQS_1610
+2 [Error code 2000 - 2210]
+3 [Error code 2000]MODULE VERIFY ERROR=ERQS_2000
+3 [Error code 2100]MODULE LAYOUT ERROR=ERQS_2100
+3 [Error code 2106]MODULE LAYOUT ERROR=ERQS_2106
+3 [Error code 2107]MODULE LAYOUT ERROR=ERQS_2107
+3 [Error code 2112]INTELLIGENT FUNCTION MODULE ERR.=ERQS_2112
+3 [Error code 2124]MODULE LAYOUT ERROR=ERQS_2124
+3 [Error code 2125]MODULE LAYOUT ERROR=ERQS_2125
+3 [Error code 2200]MISSING PARAMETER=ERQS_2200
+3 [Error code 2210]BOOT ERROR=ERQS_2210
+2 [Error code 2500 - 2503]
+3 [Error code 2500]CAN'T EXECUTE PROGRAM=ERQS_2500
+3 [Error code 2501]CAN'T EXECUTE PROGRAM=ERQS_2501
+3 [Error code 2502]CAN'T EXECUTE PROGRAM=ERQS_2502
+3 [Error code 2503]CAN'T EXECUTE PROGRAM=ERQS_2503
+2 [Error code 3000 - 3008]
+3 [Error code 3000]PARAMETER ERROR=ERQS_3000
+3 [Error code 3001]PARAMETER ERROR=ERQS_3001
+3 [Error code 3003]PARAMETER ERROR=ERQS_3003
+3 [Error code 3004]PARAMETER ERROR=ERQS_3004
+3 [Error code 3008]PARAMETER ERROR=ERQS_3008
+2 [Error code 3100 - 3401]
+3 [Error code 3100]NETWORK PARAMETER ERROR=ERQS_3100
+3 [Error code 3101]NETWORK PARAMETER ERROR=ERQS_3101
+3 [Error code 3102]NETWORK PARAMETER ERROR=ERQS_3102
+3 [Error code 3103]NETWORK PARAMETER ERROR=ERQS_3103
+3 [Error code 3104]NETWORK PARAMETER ERROR=ERQS_3104
+3 [Error code 3105]CC-LINK PARAMETER ERROR=ERQS_3105
+3 [Error code 3106]CC-LINK PARAMETER ERROR=ERQS_3106
+3 [Error code 3107]CC-LINK PARAMETER ERROR=ERQS_3107
+3 [Error code 3150]DUPLICAT.NET.NO.=ERQS_3150
+3 [Error code 3400]REMOTE PASSWORD ERROR=ERQS_3400
+3 [Error code 3401]REMOTE PASSWORD ERROR=ERQS_3401
+2 [Error code 4000 - 5010]
+3 [Error code 4000]INSTRUCTION CODE ERROR=ERQS_4000
+3 [Error code 4002]INSTRUCTION CODE ERROR=ERQS_4002
+3 [Error code 4003]INSTRUCTION CODE ERROR=ERQS_4003
+3 [Error code 4004]INSTRUCTION CODE ERROR=ERQS_4004
+3 [Error code 4010]MISSING END INSTRUCTION=ERQS_4010
+3 [Error code 4100]OPERATION ERROR=ERQS_4100
+3 [Error code 4101]OPERATION ERROR=ERQS_4101
+3 [Error code 4102]OPERATION ERROR=ERQS_4102
+3 [Error code 4700]PROGRAM ABORT EXECUTED=ERQS_4700
+3 [Error code 5001]WDT ERROR=ERQS_5001
+3 [Error code 5010]PROGRAM SCAN TIME OVER=ERQS_5010
+2 [Error code 8000 - 8120]
+3 [Error code 8000]INTERNAL REGISTER ERROR=ERQS_8000
+3 [Error code 8010]INTERNAL BUS ERROR=ERQS_8010
+3 [Error code 8020]CPU A & B CAN'T BE SYNCHRONIZED=ERQS_8020
+3 [Error code 8021]CPU A & B CAN'T BE SYNCHRONIZED=ERQS_8021
+3 [Error code 8031]INCORRECT FILE=ERQS_8031
+3 [Error code 8032]INCORRECT FILE=ERQS_8032
+3 [Error code 8050]SAFETY OUTPUT VERIFY ERROR=ERQS_8050
+3 [Error code 8060]INCORRECT FIRMWARE=ERQS_8060
+3 [Error code 8070]INTERNAL CPU COMMUNICATION ERROR=ERQS_8070
+3 [Error code 8071]INTERNAL CPU COMMUNICATION ERROR=ERQS_8071
+3 [Error code 8072]INTERNAL CPU COMMUNICATION ERROR=ERQS_8072
+3 [Error code 8073]INTERNAL CPU COMMUNICATION ERROR=ERQS_8073
+3 [Error code 8074]INTERNAL CPU COMMUNICATION ERROR=ERQS_8074
+3 [Error code 8080]POWER SUPPLY ERROR=ERQS_8080
+3 [Error code 8090]VOLTAGE DIAGNOSIS ERROR=ERQS_8090
+3 [Error code 8100]TEST MODE TIME EXCEEDED=ERQS_8100
+3 [Error code 8120]WDT CLOCK CHECK ERROR=ERQS_8120
+2 [Error code 8300 - 8334]
+3 [Error code 8300]CC-LINK REMOTE DETECTION ERROR=ERQS_8300
+3 [Error code 8310]CC-LINK PRODUCT  INFO. MISMATCH=ERQS_8310
+3 [Error code 8320]CC-LINK DATA RECEPTION TIMEOUT=ERQS_8320
+3 [Error code 8321]CC-LINK DATA RECEPTION TIMEOUT=ERQS_8321
+3 [Error code 8322]CC-LINK DATA RECEPTION TIMEOUT=ERQS_8322
+3 [Error code 8330]CC-LINK RECEIVED DATA ERROR=ERQS_8330
+3 [Error code 8331]CC-LINK RECEIVED DATA ERROR=ERQS_8331
+3 [Error code 8332]CC-LINK RECEIVED DATA ERROR=ERQS_8332
+3 [Error code 8333]CC-LINK RECEIVED DATA ERROR=ERQS_8333
+3 [Error code 8334]CC-LINK RECEIVED DATA ERROR=ERQS_8334
+2 [Error code 8400 - 8440]
+3 [Error code 8400]CC IE ANOTHER MODULE DETECT ERR.=ERQS_8400
+3 [Error code 8410]CC IE PRODUCT INFO. MISMATCH=ERQS_8410
+3 [Error code 8420]CC IE DATA RECEPTION TIMEOUT=ERQS_8420
+3 [Error code 8421]CC IE DATA RECEPTION TIMEOUT=ERQS_8421
+3 [Error code 8422]CC IE DATA RECEPTION TIMEOUT=ERQS_8422
+3 [Error code 8423]CC IE DATA RECEPTION TIMEOUT=ERQS_8423
+3 [Error code 8424]CC IE DATA RECEPTION TIMEOUT=ERQS_8424
+3 [Error code 8425]CC IE DATA RECEPTION TIMEOUT=ERQS_8425
+3 [Error code 8426]CC IE DATA RECEPTION TIMEOUT=ERQS_8426
+3 [Error code 8430]CC IE RECEIVED DATA ERROR=ERQS_8430
+3 [Error code 8431]CC IE RECEIVED DATA ERROR=ERQS_8431
+3 [Error code 8432]CC IE RECEIVED DATA ERROR=ERQS_8432
+3 [Error code 8440]CC IE CONNECTION SETTING ERROR=ERQS_8440
+2 [Error code 9000]
+3 [Error code 9000]F**** *2=ERQS_9000

@@ -1,0 +1,188 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+044C,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (Y8) turns ON but requires the counter to be reset to perform count operation.)"
+0834,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (Y9) turns ON but requires the counter to be reset to perform count operation.)"
+0C1C,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YA) turns ON but requires the counter to be reset to perform count operation.)"
+1004,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YB) turns ON but requires the counter to be reset to perform count operation.)"
+13EC,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YC) turns ON but requires the counter to be reset to perform count operation.)"
+17D4,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YD) turns ON but requires the counter to be reset to perform count operation.)"
+1BBC,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YE) turns ON but requires the counter to be reset to perform count operation.)"
+1FA4,"Overflow error
+When the linear counter was selected, the accumulating count value exceeded 99999999.","Set '1' in the 'counter reset request' of the buffer memory to reset the accumulating count value. (This error is cleared when the error reset request (YF) turns ON but requires the counter to be reset to perform count operation.)"
+04B0,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y8) of the CH1. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0898,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y9) of the CH2. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0C80,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YA) of the CH3. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1068,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YB) of the CH4. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1450,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YC) of the CH5. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1838,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YD) of the CH6. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1C20,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YE) of the CH7. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+2008,"Comparison output setting range outside error
+The value set in the 'comparison output selection' or 'comparison output setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YF) of the CH8. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0514,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y8) of the CH1. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+08FC,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y9) of the CH2. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0CE4,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YA) of the CH3. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+10CC,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YB) of the CH4. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+14B4,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YC) of the CH5. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+189C,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YD) of the CH6. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1C84,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YE) of the CH7. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+206C,"Movement averaging setting range outside error
+The value set in the 'movement averaging processing selection' or 'number of movement averaging processing' of the buffer memory is outside the setting range.","Turn ON the error reset request (YF) of the CH8. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0578,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y8) of the CH1. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0960,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y9) of the CH2. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0D48,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YA) of the CH3. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1130,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YB) of the CH4. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1518,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YC) of the CH5. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1900,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YD) of the CH6. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1CE8,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YE) of the CH7. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+20D0,"Pre-scale setting range outside error
+The value set in the 'pre-scale function selection' or 'pre-scale setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YF) of the CH8. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+05DC,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (Y8) of the CH1. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+09C4,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (Y9) of the CH2. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0DAC,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YA) of the CH3. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1194,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YB) of the CH4. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+157C,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YC) of the CH5. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1964,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YD) of the CH6. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1D4C,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YE) of the CH7. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+2134,"Alarm output setting range outside error
+* The value set in the 'alarm output selection', 'alarm output setting value upper/upper limit', 'alarm output setting value upper/lower limit', 'alarm output setting value lower/upper limit' or 'alarm output setting value lower/lower limit' of the buffer memory is outside the setting range.
+* The upper and lower relationships between the 'alarm output setting values' of the buffer memory are illegal.","Turn ON the error reset request (YF) of the CH8. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0640,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y8) of the CH1. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0A28,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (Y9) of the CH2. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0E10,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YA) of the CH3. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+11F8,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YB) of the CH4. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+15E0,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YC) of the CH5. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+19C8,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YD) of the CH6. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+1DB0,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YE) of the CH7. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+2198,"Count cycle setting range outside error
+The value set in the 'count cycle change function selection' or 'count cycle setting value' of the buffer memory is outside the setting range.","Turn ON the error reset request (YF) of the CH8. After this, set a correct value and then turn ON the operating condition setting request flag (Y1)."
+0712,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+0AFA,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+0EE2,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+12CA,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+16B2,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+1A9A,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+1E82,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+226A,"Switch setting error
+Any of the setting values of setting with the intelligent function module set on MELSOFT application is in error.","Set the correct setting value on MELSOFT application, perform write to PLC, and then switch power from OFF to ON or reset the programmable controller CPU."
+071C,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+0B04,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+0EEC,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+12D4,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+16BC,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+1AA4,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+1E8C,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+2274,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Switch power from OFF to ON or reset the programmable controller CPU."
+0726,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+0B0E,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+0EF6,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+12DE,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+16C6,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+1AAE,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+1E96,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+227E,"Programmable controller CPU watch dog timer error
+The watch dog timer error of the programmable controller CPU occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+0730,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+0B18,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+0F00,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+12E8,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+16D0,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+1AB8,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+1EA0,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+2288,"Module error
+A module power off error occurred.","Switch power from OFF to ON or reset the programmable controller CPU."
+073A,"Hardware error
+Hardware fault.","Change the module."
+0B22,"Hardware error
+Hardware fault.","Change the module."
+0F0A,"Hardware error
+Hardware fault.","Change the module."
+12F2,"Hardware error
+Hardware fault.","Change the module."
+16DA,"Hardware error
+Hardware fault.","Change the module."
+1AC2,"Hardware error
+Hardware fault.","Change the module."
+1EAA,"Hardware error
+Hardware fault.","Change the module."
+2292,"Hardware error
+Hardware fault.","Change the module."
+</ERRCODE>,,

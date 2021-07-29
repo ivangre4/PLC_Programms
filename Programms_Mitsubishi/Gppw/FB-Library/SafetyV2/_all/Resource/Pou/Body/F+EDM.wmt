@@ -1,0 +1,27 @@
+FUNCTION_BLOCK F+EDM (*SF_EDM_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_OutControl:BOOL:;(*Control signal of the preceeding safety FB*)
+  S_EDM1:BOOL:;(*Feedback signal of the first connected actuator.*)
+  S_EDM2:BOOL:;(*Feedback signal of the second connected actuator.*)
+  MonitoringTime:DINT:;(*Max.response time of the connected and monitored in 10ms steps*)
+  S_StartReset:BOOL:;(*Manual reset when PES is started*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  R_TRIG_S_OutCont:BOOL:;(*Trigger at OutControl*)
+  R_TRIG_S_EDM1:BOOL:;(*Trigger at EDM1*)
+  R_TRIG_S_EDM2:BOOL:;(*Trigger at EDM2*)
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_EDM_Out:BOOL:;(*Controls the actuator.*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredTime:DINT:;(*Time value for timer*)
+  State:INT:;(*state register*)
+ END_VAR
+END_FUNCTION_BLOCK

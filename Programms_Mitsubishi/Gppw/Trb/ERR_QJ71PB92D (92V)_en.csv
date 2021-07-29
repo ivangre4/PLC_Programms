@@ -1,0 +1,38 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+F100,Station number of a slave station is duplicated with that of the master station in the parameter settings.,"Check the station numbers of the master station and slave stations, and set correct parameters without duplication."
+F101,No slave stations are set to perform I/O data exchange in the parameter settings. (The slave station is a reserved station.),"Set the slave parameters again so that one or more slave stations will perform I/O data exchange.
+ (Check the ""Slave is active"" slave parameter.)"
+F102,Hardware failure,"Replace the QJ71PB92V.If the same error occurs again, please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F103,Hardware failure,"Replace the QJ71PB92V.If the same error occurs again, please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F104,Hardware failure,"Replace the QJ71PB92V.If the same error occurs again, please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F105,Hardware failure,"Replace the QJ71PB92V.If the same error occurs again, please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F106,Parameters have not been written to the flash ROM.,Write the parameters.
+F107,The parameters or operation mode read from the flash ROM are corrupted.,"Initialize the flash ROM, and then write the parameters and operation mode.If the same error occurs again, replace the QJ71PB92V."
+F108,Unable to access the flash ROM.Or failed to initialize the flash ROM.,"Initialize the flash ROM.If the same error occurs again, replace the QJ71PB92V."
+F109,Parameters of the QJ71PB92D were written with the QJ71PB92D-compatible function disabled.,"Change the module selected in the GX Configurator-DP project to QJ71PB92V, and write the parameters.
+Check Switch 2 of the intelligent function module switches."
+F10A,Parameters of the QJ71PB92V were written with the QJ71PB92D-compatible function enabled.,"Change the module selected in the GX Configurator-DP project to QJ71PB92D, and write the parameters.
+Check Switch 2 of the intelligent function module switches."
+F10B,Unable to read the operation mode registered to the flash ROM.,"Initialize the flash ROM.If the same error occurs again, replace the QJ71PB92V."
+F10C,"In the parameter settings, there is a slave station whose I/O data size is set to 0 byte.","Check the slave parameters, and make the setting again to ensure that the I/O data size of each slave station is 1byte or more."
+F10D,Parameter error,"Initialize the flash ROM.If the same error occurs again, please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F10E,Hardware failure,"Please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F10F,Hardware failure,"Please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F110,"Although Dedicated instruction valid signal (Y0C) is ON, the BBLKRD instruction is not executed.",Modify the sequence program so that the BBLKRD instruction is executed when Dedicated instruction valid signal (Y0C) is ON.
+F111,"Although Dedicated instruction valid signal (Y0C) is ON, the BBLKWR instruction is not executed.",Modify the sequence program so that the BBLKWR instruction is executed when Dedicated instruction valid signal (Y0C) is ON.
+F112,"Although Dedicated instruction valid signal (Y0C) is ON, the BBLKRD and BBLKWR instructions are not executed.",Modify the sequence program so that the BBLKRD and BBLKWR instructions are executed when Dedicated instruction valid signal (Y0C) is ON.
+F113,Dedicated instruction valid signal (Y0C) was turned ON during execution of the data separation prevention function in automatic refresh.,"The data separation prevention function in automatic refresh and dedicated instructions are not concurrently executable. In the master parameter setting of GX Configurator-DP, disable the separation prevention function."
+F120,"Trouble information was generated on a slave station.
+When an error occurs, detailed data about the error are stored.","Check Trouble information area (Un\G2040 to Un\G2079) for trouble information generated in a slave station and take corrective actions.
+In the communication trouble area (Un\G2040 to Un\G2079), error code 0200H is stored."
+F121,There is a master station or slave station that has a duplicated station number on the same line.,"Check the station number of the master station and slave stations, and set correct parameters without duplication."
+F122,An error has been detected on the line.,"Check the wiring status of the bus terminator(s) and PROFIBUS cable(s).If the terminating resistor and PROFIBUS cable wiring status is correct, increase the set value of the master parameter, ""Min. slave interval""."
+F123,An error has been detected on the line.,"Check the wiring status of the bus terminator(s) and PROFIBUS cable(s).If the terminating resistor and PROFIBUS cable wiring status is correct, increase the set value of the master parameter, ""Min. slave interval""."
+F124,An error has been detected on the line.,"Check the wiring status of the bus terminator(s) and PROFIBUS cable(s).If the terminating resistor and PROFIBUS cable wiring status is correct, increase the set value of the master parameter, ""Min. slave interval""."
+F125,The master station is in the clear request transmission status.,"Since ""Error action flag"" is check-marked in the master parameter settings, the clear request has been sent to all slave stations.
+To disable transmission of the clear request, uncheck ""Error action flag""."
+F1FE,Hardware failure,"Please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+F1FF,Hardware failure,"Please consult your local Mitsubishi representative, explaining a detailed description of the problem."
+</ERRCODE>,,

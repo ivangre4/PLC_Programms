@@ -1,0 +1,22 @@
+FUNCTION_BLOCK F+ENBLSW (*SF_EnableSwitch_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_SafetyActive:BOOL:;(*Confirmation of the safe mode*)
+  S_EnableSwCh1:BOOL:;(*Signal of contacts E1 and E2 of the connected enable switch*)
+  S_EnableSwCh2:BOOL:;(*Signal of contacts E3 and E4 of the connected enable switch*)
+  S_AutoReset:BOOL:;(*Manual reset*)
+  Reset:BOOL:;(*Reset of the state machine*)
+ END_VAR
+ VAR
+  R_TRIG_Reset:BOOL:;(*Trigger at Reset*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_EnableSwOut:BOOL:;(*Indicates suspension of guard.*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  State:INT:;(*State register*)
+ END_VAR
+END_FUNCTION_BLOCK

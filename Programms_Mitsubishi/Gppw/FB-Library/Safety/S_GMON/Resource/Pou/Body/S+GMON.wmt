@@ -1,0 +1,31 @@
+FUNCTION_BLOCK S+GMON (*SF_GuardMonitoring_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_GuardSwitch1:BOOL:;(*guard switch 1 input*)
+  S_GuardSwitch2:BOOL:;(*guard switch 2 input*)
+  DiscrepancyTime:DINT:;(*synchronous time between switch 1 and switch 2 in 10ms Steps *)
+  S_StartReset:BOOL:;(*manual reset when PES is started*)
+  S_AutoReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset of the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_GuardMon:BOOL:;(*indicating the status of the guard*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  Q_R_TRIG_Reset:BOOL:;(*trigger on Reset*)
+  Work:INT:;(*error mask*)
+  TParamOutOfRange:BOOL:;(*Time parameter out of Range 0 < parameter < 60000*)
+  TimeValue8004:DINT:;(*time value for timer in state 8004*)
+  TimeValue8014:DINT:;(*time value for timer in state 8014*)
+  TimeExpired8004:BOOL:;(*indicates if the time limit in state 8004 is expired*)
+  TimeExpired8014:BOOL:;(*indicates if the time limit in state 8014 is expired*)
+  NormDiscrepTime:DINT(2):;(*synchronous time between switch 1 and switch 2 in 10us Steps *)
+  WorkTime1:DINT:;(*cycle time part 1*)
+  WorkTime2:DINT:;(*cycle time part 2*)
+ END_VAR
+END_FUNCTION_BLOCK

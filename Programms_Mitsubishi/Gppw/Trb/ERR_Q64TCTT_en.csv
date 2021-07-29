@@ -1,0 +1,14 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0002,"* A value other than 0 was written to the reserved area.","* Make error reset (Yn2 : ON).
+* Delete the program for performing write to the reserved area."
+0003,"* Write to the area writeenabled in the setting mode only was performed in the operation mode.","Make error rest in the following procedure:
+1) Choose the setting mode.
+2) Set a correct value.
+3) Make error reset (Yn2: ON).
+* When changing from the operation mode to the setting mode, make sure that the PID continuation flag (A9H) is 0 and turn off Yn1."
+0004,"* Data outside the setting range was written.","Set data within the range."
+0005,"* The setting of the upper/lower output limiter or upper/lower setting limiter is illegal.","* Make setting so that the upper limit value is greater than the lower limit value."
+0006,"* The set value was changed during default setting registration.","* After making error reset (Yn2: ON), change the set value."
+</ERRCODE>,,

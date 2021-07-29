@@ -1,0 +1,79 @@
+<ERRCODE>,,,,,,,
+8300,302,0,,,CC-Link Safety protocol (Out of receive command range),An unexpected protocol occurred.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,304,0,,,CC-Link Safety protocol division number error (Product information),The continuity of division numbers collapsed in the send/receive processing of product information.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,304,1,,,CC-Link Safety protocol division number error (Safety slave station parameters),The continuity of division numbers collapsed in the send/receive processing of the safety slave station parameters.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,304,2,,,CC-Link Safety protocol division number error (Error information),The continuity of division numbers collapsed in the send/receive processing of error information.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,304,3,,,CC-Link Safety protocol division number error (Safety slave station internal information),The continuity of division numbers collapsed in the safety slave station internal information access processing.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,305,0,,,CC-Link Safety protocol product mismatch (Link ID mismatch),The link ID received from the safety master station and that of the host station are different.,"(1)Check the link ID.
+(2)Check the parameter settings.
+(This error code may not be output due to error check on the master station.)"
+8300,305,1,,,CC-Link Safety protocol product mismatch (Manufacturer code mismatch),The manufacturer code received from the safety master station and that of the host station mismatched in the product information verification processing.,"(1)Check the parameter settings.
+(This error codes may not be output due to error check on the master station.)"
+8300,305,2,,,CC-Link Safety protocol product mismatch (Module inherent code mismatch),The inherent code received from the safety master station and that of the host station mismatched in the product information verification processing.,"(1)Check the parameter settings.
+(This error codes may not be output due to error check on the master station.)"
+8300,305,3,,,CC-Link Safety protocol product mismatch (Module technical version mismatch),The module technical version received from the safety master station and that of the host station mismatched in the product information verification processing.,"(1)Check the parameter settings.
+(This error codes may not be output due to error check on the master station.)"
+8300,305,4,,,CC-Link Safety protocol product mismatch (Production information mismatch),"The production information received from the safety master station and that of the host station mismatched in the product information verification processing.
+Host information 1, 2: Lowest 16 bits of production information
+Host information 7, 8: Highest 16 bits of production information","(1)Check the production information set as parameter.
+(This error code may not be output due to error check on the master station.)"
+8300,305,5,,1,CC-Link Safety protocol product mismatch (Model name information mismatch),The model name information received from the safety master station and that of the host station mismatched in the product information verification processing.,"(1)Check the production information set as parameter.
+(This error code may not be output due to error check on the master station.)"
+8300,306,1,,,CC-Link Safety protocol safety slave station parameter error (Verification request acceptance disabled),"The verification request for the safety slave station parameters is accepted from the safety master station. However, it is not supported by the local station.","Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,306,2,,,Safety slave station parameters Out of parameter number range,The number of the safety slave station parameters is out of range.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,306,3,,,Safety slave station parameters Same parameter number setting,The same number is set for the safety slave station parameters.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,306,4,,,Safety slave station parameter Out of setting range,The settings of the safety slave station parameters are out of range.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,306,5,,,CC-Link Safety protocol safety slave station parameter error (CRC32 mismatch),"For the safety slave station parameters received from the safety master station, the CRC32 calculated from the overall parameters and the received one mismatch.","Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,307,0,,,Protocol version notification error,"No protocol version notification was received from the safety master station. Or, the protocol version notification from the safety master station is abnormal.","Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,307,1,,,Safety data monitoring timer notification error,No safety data monitoring timer notification was received from the safety master station.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,307,2,,,Safety refresh response processing time request error,No safety refresh response processing time request was received from the safety master station.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,307,15,,,Unsupported function notification,Unsupported function data were sent from the safety master station.,"Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+8300,350,719,,,CC-Link Safety protocol safety slave station parameter number error,The received numbers of safety slave station parameters are out of range.,"After checking that the CSP file is not damaged and that the latest CSP file is registered, set the safety remote I/O module parameters again."
+8300,350,917,,6,Safety slave station parameter mismatch,"Refer to the description corresponding to the cord displayed in Individual error information.
+
+<201>Mismatch of ""Time of noise removal filter""
+('Input dark test pulse OFF time' is greater than ""Time of noise removal filter X0,1"")
+
+<601>""Method of wiring of output"" mismatch
+(When ""Source+Source"" is selected as a method of wiring of output, the setting of the paired method of wiring of output is not the same.)
+
+<701>Output dark test selection mismatch
+(When ""Source+Source"" is selected as a method of wiring of output, the setting of output dark test selection is not the same.)","- Determine the mismatch according to the Error contents of error.
+- After checking that the CSP file is not damaged and that the latest CSP file is registered, set the safety remote I/O module parameters again."
+8300,450,102,,2,Double input discrepancy detection time,"A mismatch has been detected in paired inputs (X0 and X1, X2 and X3, etc.) over the double input discrepancy detection time.",Reexamine the connected devices and the wiring.
+8300,450,203,,,Output overload error (Diagnostics before Safety LED turns on),The overcurrent protection or overheat protection has been activated in the output circuit transistor.,"(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,204,,3,Output read-back error (Diagnostics before Safety LED turns on),"The read-back value and the output value do not match.
+(The error of the sink side (-) is not detected.)","(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,209,,,Output overload error (Diagnostics while Safety LED is on),The overcurrent protection or overvoltage protection has been activated in the output circuit transistor.,"(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,210,,3,Output read-back error (Diagnostics while Safety LED is on),"The read-back value and the output value do not match.
+(The error of the sink side (-) is not detected.)","(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,304,,4,Input dark test error,The test pulse could not be detected during the input dark test.,"(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,305,,5,Output dark test error,The test pulse could not be detected during the output dark test.,"(1) Reexamine the connected devices and the wiring.
+(2) Replace the safety remote I/O module."
+8300,450,402,,,External power supply voltage error,Voltage error or hardware failure of external power supply.,"(1) Check the connected devices, wiring, and voltage.
+(2) Adjust the timing of the external power supply ON to the timing of module power supply ON."
+8300,450,404,,,External power supply error,Voltage error or hardware failure of external power supply.,"(1) Check the connected devices, wiring, and voltage.
+(2) Replace the safety remote I/O module"
+8300,450,427,,,Output drive power supply status error,The output driver power supply is in the invalid shutdown/supply status.,"(1) Reexamine the connecting devices and wiring.
+(2) Adjust the timing of the external power supply ON to the timing of module power supply ON."
+8300,450,735,,,Module technical version combination invalid,The module technical version set by a parameter cannot be used in combination with that of the module.,(1) Change the parameter setting to the original module technical version.
+8300,450,908,,,Error history reading status record,"Record of error history reading status.
+The error history reading was attempted in the status where no error history exits.
+Once a new error code is stored, this error code will not be read from the histroy.
+There are two error histories for MPU A and MPU B, and this code is output when either of them has no error history data.
+When both of them have no error history data, two codes are output.","Use the module as is, since it is normal."
+8300,450,911,,,Module forced stop control,"The operation of the safety remote I/O module has stopped by receiving a forced stop command from the master module.
+Module forced stop control.
+However, errors received after an error is sent or errors received at the time of reading error history are eliminated.",Refer to the error history of the safety CPU module/safety master module.
+8300,450,1011,,,External power supply voltage drop,Voltage drop has occurred.,"(1) Check the connected devices and wiring.
+(2) Adjust the timing of the external power supply ON to the timing of module power supply ON.
+(3) Replace the safety remote I/O module."
+8300,450,1213,,,Setting registration switch status error at power-on,The ON status of the setting registration switch is detected at power-on.,"(1) Do not turn ON power supply or reset with pressing the setting registration switch.
+(2) If this error occurs at power-on or reset operation without pressing the setting registration switch, the failure is due to the setting registration switch.
+Replace the module."
+</ERRCODE>,,,,,,,

@@ -1,0 +1,187 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0065,"The CH1 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+0066,"The CH2 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+0067,"The CH3 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+0068,"The CH4 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+0069,"The CH5 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+006A,"The CH6 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+006B,"The CH7 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+006C,"The CH8 thermocouple type is set with a value other than 0 to 7 in the intelligent function module switch setting.","Set a correct parameter value in the parameter setting of MELSOFT application."
+006F,"A hardware error of the module","Switch power off, then on again. If the error recurs, the module may have failed. Consult the Mitsubishi office."
+0070,"The setting of the intelligent function module switch 5 is other than 0.","Set 0 for the intelligent function module switch 5 in the parameter setting of MELSOFT application."
+0078,"An invalid value is set in the offset/gain setting. The number of the error channel can not be identified.","Perform the offset/gain setting again for all of the
+channels that use the user range settings. 
+If the error occurs again, the module may be malfunctioning. 
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+0079,"An invalid value is set in the CH1 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007A,"An invalid value is set in the CH2 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007B,"An invalid value is set in the CH3 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007C,"An invalid value is set in the CH4 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007D,"An invalid value is set in the CH5 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007E,"An invalid value is set in the CH6 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+007F,"An invalid value is set in the CH7 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+0080,"An invalid value is set in the CH8 offset/gain setting.","Perform the offset/gain setting again for all of the channels that the error occurred.
+If the error occurs again, the module may be malfunctioning.
+Please consult your local Mitsubishi representative, explaining the detailed description of the problem."
+00A1,"The G(P).OGSTOR instruction was executed in the offset/gain setting mode.","Do not execute the G(P).OGSTOR instruction in the offset/gain setting mode."
+00A2,"*The G(P).OGSTOR instruction was executed consecutively.
+* At the time of offset/gain setting, a set value was written to the flash memory 26 or more times.","* Execute the G(P).OGSTOR instruction only once for one module.
+* At the time of offset/gain setting, write a set value only once at one time."
+00A3,"* The G(P).OGSTOR instruction was executed for the model that differs from the model for which the G(P).OGLOAD instruction had been executed. 
+* The G(P).OGSTOR instruction had been executed before the G(P).OGLOAD instruction was executed.","* Execute the G(P).OGLOAD and G(P).OGSTOR instructions for the same model.
+* Execute the G(P).OGLOAD instruction first, then G(P).OGSTOR instruction."
+00C9,"The CH1 average time setting value set in Un\G1 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CA,"The CH2 average time setting value set in Un\G2 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CB,"The CH3 average time setting value set in Un\G3 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CC,"The CH4 average time setting value set in Un\G4 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CD,"The CH5 average time setting value set in Un\G5 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CE,"The CH6 average time setting value set in Un\G6 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00CF,"The CH7 average time setting value set in Un\G7 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+00D0,"The CH8 average time setting value set in Un\G8 is outside the range of 1280 to 5000ms.","Reset the average time setting value to within 1280 to 5000ms."
+012D,"The CH1 averaging count setting value set in Un\G1 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+012E,"The CH2 averaging count setting value set in Un\G2 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+012F,"The CH3 averaging count setting value set in Un\G3 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0130,"The CH4 averaging count setting value set in Un\G4 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0131,"The CH5 averaging count setting value set in Un\G5 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0132,"The CH6 averaging count setting value set in Un\G6 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0133,"The CH7 averaging count setting value set in Un\G7 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0134,"The CH8 averaging count setting value set in Un\G8 is outside the range of 4 to 500 times","Reset the average count setting value to within 4 to 500 times."
+0137,"The CH1 moving average count setting value set in Un\G1 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+0138,"The CH2 moving average count setting value set in Un\G2 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+0139,"The CH3 moving average count setting value set in Un\G3 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+013A,"The CH4 moving average count setting value set in Un\G4 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+013B,"The CH5 moving average count setting value set in Un\G5 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+013C,"The CH6 moving average count setting value set in Un\G6 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+013D,"The CH7 moving average count setting value set in Un\G7 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+013E,"The CH8 moving average count setting value set in Un\G8 is outside the range of 2 to 60 times.","Reset the moving average count setting value to within 2 to 60 times."
+0141,"The CH1 time constant setting value for the primary delay filter set in Un\G1 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0142,"The CH2 time constant setting value for the primary delay filter set in Un\G2 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0143,"The CH3 time constant setting value for the primary delay filter set in Un\G3 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0144,"The CH4 time constant setting value for the primary delay filter set in Un\G4 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0145,"The CH5 time constant setting value for the primary delay filter set in Un\G5 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0146,"The CH6 time constant setting value for the primary delay filter set in Un\G6 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0147,"The CH7 time constant setting value for the primary delay filter set in Un\G7 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0148,"The CH8 time constant setting value for the primary delay filter set in Un\G8 is outside the range of 320 to 5000ms.","Reset the time constant setting value to within 320 to 5000ms."
+0191,"On the CH1, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0192,"On the CH2, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0193,"On the CH3, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0194,"On the CH4, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0195,"On the CH5, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0196,"On the CH6, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0197,"On the CH7, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+0198,"On the CH8, (Gain value) - (Offset value) is less than or equal to 0.1 [Celsius degree]","Check the voltage at the thermocouple input terminal."
+019B,"On the CH1, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G28,Un\G29) of the channel number where an error occurred."
+019C,"On the CH2, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G30,Un\G31) of the channel number where an error occurred."
+019D,"On the CH3, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G32,Un\G33) of the channel number where an error occurred."
+019E,"On the CH4, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G34,Un\G35) of the channel number where an error occurred."
+019F,"On the CH5, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G36,Un\G37) of the channel number where an error occurred."
+01A0,"On the CH6, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G38,Un\G39) of the channel number where an error occurred."
+01A1,"On the CH7, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G40,Un\G41) of the channel number where an error occurred."
+01A2,"On the CH8, (Gain temperature setting value) - (Offset temperaturesetting value) is less than or equal to 0.1 [Celsius degree]","Reset the offset/gain temperature setting value (Un\G42,Un\G43) of the channel number where an error occurred."
+01F4,"The offset/gain channels were set at the same time during offset and gain value settings, or both were set to 0.","Reset the contents of offset/gain setting (Offset specification) (Un\G26) and offset/gain setting (Gain specification) (Un\G27)."
+01FF,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH1 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G28,Un\G29) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0200,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH2 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G30,Un\G31) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0201,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH3 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G32,Un\G33) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0202,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH4 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G34,Un\G35) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0203,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH5 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G36,Un\G37) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0204,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH6 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G38,Un\G39) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0205,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH7 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G40,Un\G41) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0206,"When the channel change request (YB) is turned ON, the setting status is in the following either status.
+* The CH8 offset temperature setting value or gain temperature setting value of the specified channel is set outside the measured range.
+* The disconnected channel or the channel for conversion disable is specified.","* Check the measurement range and reset the offset/gain temperature setting value (Un\G42,Un\G43) within the range.
+* Check wire disconnection or specify the channel for conversion enable."
+0259,"The CH1 process alarm upper/lower limit value (Un\G94 to Un\G97) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+025A,"The CH2 process alarm upper/lower limit value (Un\G98 to Un\G101) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+025B,"The CH3 process alarm upper/lower limit value (Un\G102 to Un\G105) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+025C,"The CH4 process alarm upper/lower limit value (Un\G106 to Un\G109) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+025D,"The CH5 process alarm upper/lower limit value (Un\G110 to Un\G113) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+025E,"The CH6 process alarm upper/lower limit value (Un\G114 to Un\G117) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+025F,"The CH7 process alarm upper/lower limit value (Un\G118 to Un\G121) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G118 to Un\G121)."
+0260,"The CH8 process alarm upper/lower limit value (Un\G122 to Un\G125) is set contradictorily.(The lower lower limit value is lower than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G122 to Un\G125)."
+0263,"The CH1 process alarm upper/lower limit value (Un\G94 to Un\G97) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+0264,"The CH2 process alarm upper/lower limit value (Un\G98 to Un\G101) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+0265,"The CH3 process alarm upper/lower limit value (Un\G102 to Un\G105) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+0266,"The CH4 process alarm upper/lower limit value (Un\G106 to Un\G109) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+0267,"The CH5 process alarm upper/lower limit value (Un\G110 to Un\G113) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+0268,"The CH6 process alarm upper/lower limit value (Un\G114 to Un\G117) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+0269,"The CH7 process alarm upper/lower limit value (Un\G118 to Un\G121) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G118 to Un\G121)."
+026A,"The CH8 process alarm upper/lower limit value (Un\G122 to Un\G125) is set contradictorily.(The upper upper limit value is higher than the measurement range.)","Reset the process alarm upper/lower limit value (Un\G122 to Un\G125)."
+026D,"The CH1 process alarm upper/lower limit value (Un\G94 to Un\G97) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+026E,"The CH2 process alarm upper/lower limit value (Un\G98 to Un\G101) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+026F,"The CH3 process alarm upper/lower limit value (Un\G102 to Un\G105) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+0270,"The CH4 process alarm upper/lower limit value (Un\G106 to Un\G109) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+0271,"The CH5 process alarm upper/lower limit value (Un\G110 to Un\G113) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+0272,"The CH6 process alarm upper/lower limit value (Un\G114 to Un\G117) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+0273,"The CH7 process alarm upper/lower limit value (Un\G118 to Un\G121) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G118 to Un\G121)."
+0274,"The CH8 process alarm upper/lower limit value (Un\G122 to Un\G125) is set contradictorily.((Lower lower limit value) > (Lower upper limit value))","Reset the process alarm upper/lower limit value (Un\G122 to Un\G125)."
+0277,"The CH1 process alarm upper/lower limit value (Un\G94 to Un\G97) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+0278,"The CH2 process alarm upper/lower limit value (Un\G98 to Un\G101) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+0279,"The CH3 process alarm upper/lower limit value (Un\G102 to Un\G105) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+027A,"The CH4 process alarm upper/lower limit value (Un\G106 to Un\G109) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+027B,"The CH5 process alarm upper/lower limit value (Un\G110 to Un\G113) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+027C,"The CH6 process alarm upper/lower limit value (Un\G114 to Un\G117) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+027D,"The CH7 process alarm upper/lower limit value (Un\G118 to Un\G121) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G118 to Un\G121)."
+027E,"The CH8 process alarm upper/lower limit value (Un\G122 to Un\G125) is set contradictorily.((Lower upper limit value) > (Upper lower limit value))","Reset the process alarm upper/lower limit value (Un\G122 to Un\G125)."
+0281,"The CH1 process alarm upper/lower limit value (Un\G94 to Un\G97) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G94 to Un\G97)."
+0282,"The CH2 process alarm upper/lower limit value (Un\G98 to Un\G101) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G98 to Un\G101)."
+0283,"The CH3 process alarm upper/lower limit value (Un\G102 to Un\G105) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G102 to Un\G105)."
+0284,"The CH4 process alarm upper/lower limit value (Un\G106 to Un\G109) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G106 to Un\G109)."
+0285,"The CH5 process alarm upper/lower limit value (Un\G110 to Un\G113) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G110 to Un\G113)."
+0286,"The CH6 process alarm upper/lower limit value (Un\G114 to Un\G117) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G114 to Un\G117)."
+0287,"The CH7 process alarm upper/lower limit value (Un\G118 to Un\G121) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G118 to Un\G121)."
+0288,"The CH8 process alarm upper/lower limit value (Un\G122 to Un\G125) is set contradictorily.((Upper lower limit value) > (Upper upper limit value))","Reset the process alarm upper/lower limit value (Un\G122 to Un\G125)."
+02BD,"The CH1 rate alarm warning detection period (Un\G126) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G126) to within 1 to 6000 times."
+02BE,"The CH2 rate alarm warning detection period (Un\G127) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G127) to within 1 to 6000 times."
+02BF,"The CH3 rate alarm warning detection period (Un\G128) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G128) to within 1 to 6000 times."
+02C0,"The CH4 rate alarm warning detection period (Un\G129) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G129) to within 1 to 6000 times."
+02C1,"The CH5 rate alarm warning detection period (Un\G130) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G130) to within 1 to 6000 times."
+02C2,"The CH6 rate alarm warning detection period (Un\G131) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G131) to within 1 to 6000 times."
+02C3,"The CH7 rate alarm warning detection period (Un\G132) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G132) to within 1 to 6000 times."
+02C4,"The CH8 rate alarm warning detection period (Un\G133) is outside the range of 1 to 6000 times","Reset the rate alarm warning detection period (Un\G133) to within 1 to 6000 times."
+0320,"Wire disconnection of the cold junction temperature compensation resistor is detected.","Check wiring status of the cold junction temperature compensation resistor."
+038F,"The setting value in the CH1 scaling range upper/lower limit value (Un\G62,Un\G63) or scaling width upper/lower limit value (Un\G78,Un\G79) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G62,Un\G63) or scaling width upper/lower limit value (Un\G78,Un\G79)."
+0390,"The setting value in the CH2 scaling range upper/lower limit value (Un\G64,Un\G65) or scaling width upper/lower limit value (Un\G80,Un\G81) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G64,Un\G65) or scaling width upper/lower limit value (Un\G80,Un\G81)."
+0391,"The setting value in the CH3 scaling range upper/lower limit value (Un\G66,Un\G67) or scaling width upper/lower limit value (Un\G82,Un\G83) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G66,Un\G67) or scaling width upper/lower limit value (Un\G82,Un\G83)."
+0392,"The setting value in the CH4 scaling range upper/lower limit value (Un\G68,Un\G69) or scaling width upper/lower limit value (Un\G84,Un\G85) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G68,Un\G69) or scaling width upper/lower limit value (Un\G84,Un\G85)."
+0393,"The setting value in the CH5 scaling range upper/lower limit value (Un\G70,Un\G71) or scaling width upper/lower limit value (Un\G86,Un\G87) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G70,Un\G71) or scaling width upper/lower limit value (Un\G86,Un\G87)."
+0394,"The setting value in the CH6 scaling range upper/lower limit value (Un\G72,Un\G73) or scaling width upper/lower limit value (Un\G88,Un\G89) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G72,Un\G73) or scaling width upper/lower limit value (Un\G88,Un\G89)."
+0395,"The setting value in the CH7 scaling range upper/lower limit value (Un\G74,Un\G75) or scaling width upper/lower limit value (Un\G90,Un\G91) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G74,Un\G75) or scaling width upper/lower limit value (Un\G90,Un\G91)."
+0396,"The setting value in the CH8 scaling range upper/lower limit value (Un\G76,Un\G77) or scaling width upper/lower limit value (Un\G92,Un\G93) indicates that (Lower limit) = (Upper limit).","Reset the scaling range upper/lower limit value (Un\G76,Un\G77) or scaling width upper/lower limit value (Un\G92,Un\G93)."
+</ERRCODE>,,

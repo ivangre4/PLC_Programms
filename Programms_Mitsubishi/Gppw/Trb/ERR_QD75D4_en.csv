@@ -1,0 +1,333 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+0001,"Faults
+* Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+0002,"Internal circuit fault
+* Hardware is faulty.","* Check that there is no influence from noise.
+* Check hardware for possibility of fault."
+0065,"PLC READY OFF during operation
+* A PLC READY signal (Y0) is turned OFF during operation.","* Review the sequence program which turns ON/OFF PLC READY signal (Y0).
+* Cancel the error with an axis error reset."
+0066,"Drive unit READY OFF
+* The drive unit READY signal is turned OFF during operation.","Check the drive unit power, wiring with the drive unit, and connection of connectors, and cancel the errorwith an axis error reset."
+0067,"Test mode faults during operation
+* The personal computer cannot communicate with the CPU unit.","Check that there is no error on the personal computer side I/F to which a cable is connected."
+0068,"Hardware stroke limit (+)
+* The hardware stroke limit (upper limit signal FLS) is turned OFF.","After making an axis error reset, perform manual control operation to move the axis to the other position in order that the upper limit signal (FLS) will not turn OFF."
+0069,"Hardware stroke limit (-)
+* The hardware stroke limit (lower limit signal RLS) is turned OFF.","After making an axis error reset, perform manual control operation to move the axis to the other position in order that the lower limit signal (RLS) will not turn OFF."
+006A,"Stop signal ON at start
+* Start is requested when a stop signal is turned ON.","Check whether the stop commands (output signals/external inputs to QD75) are turned ON or OFF. Turn OFF the ON commands.
+* Output signals to QD75
+    Axis 1: Y4, Axis 2: Y5, Axis 3: Y6, Axis 4: Y7
+* External input
+    Connectors for external device connection:Stop signals (STOP)
+After confirming the stop command status, cancel the error with an axis error reset. Then turn ON a start signal."
+006B,"READY OFF ON -> during BUSY
+* The PLC READY signal is turned from OFF to ON when BUSY signal is turned ON.","Turn ON the PLC READY signal (Y0) with the BUSY signals of all axes OFF."
+00C9,"Start at OP
+* When the OPR retry invalid is set,the near-point dog machine OPR is started with the OPR complete flag turned ON.","* Validate the OPR retry function (set value: 1).
+* Move the workpiece from the current position (on OP) using the manual control operation, then carry out a machine OPR again."
+00CB,"Dog detection timing fault
+* The near-point dog signal is turned OFF during the deceleration from an OPR speed to a creep speed by the near-point dog machine OPR.","* Lower the OPR speed.
+* Increase the dog signal input time."
+00CC,"OP detection timing fault
+* The zero signal is turned OFF during the deceleration from an OPR speed to a creep speed by the stopper method 2)-OPR.","* Lower the OPR speed.
+* Input external zero signals during the movement at a creep speed."
+00CD,"Dwell time fault
+* A dwell time is passed during the deceleration from a creep speed to a OPR speed by the stopper method 1)-OPR.","* Lower the OPR speed.
+* Increase the OPR dwell time."
+00CE,"Count method movement amount fault
+* In the count method 1 and 2 machine OPR, a parameter 'Setting of movement amount after nearpoint dog ON' is smaller than a distance necessary for deceleration stop from an OPR speed.","* Lower the OPR speed.
+* Increase the OPR dwell time."
+00CD,"OPR request ON
+* The OPR request flag is turned ON when a fast-OPR is started (positioning start No. 9002).","Execute the machine OPR (positioning No. 9001)."
+00D1,"OPR restart not possible
+* The restart command is turned ON after the machine OPR is stopped using a stop signal.","Start the machine OPR (positioning start No. 9001) again."
+00D5,"ABS transmission time
+* Communication cannot be carried out with the servo-amplifier using an absolute position restoration instruction.","* Review the wiring.
+* Review the sequence program."
+00D6,"ABS transmission SUM
+* Communication cannot be carried out with the servo-amplifier using an absolute position restoration instruction.","* Review the wiring.
+* Review the sequence program. 
+* Review the dedicated instruction parameters."
+012C,"Outside JOG speed range
+* At the time of JOG starting, the JOG speed comes out of a specified range.","Bring the JOG speed into the setting range."
+012D,"Inching movement amount error
+* The inching movement amount exceeds the JOG speed limit","Reduce the inching movement amount."
+01F4,"Illegal condition data No.
+* The condition data No. is outside the setting range when a block using the condition data is started by a special starting (conditional start, wait start, simultaneous start, FOR (condition)). (1 <= Condition data <= No. 10)","Review the condition data No."
+01F5,"Error before simultaneous start
+<When blocks are started simultaneously>
+* The partner axis for simultaneous start is BUSY.
+<When multiple axes are started and controlled simultaneously>
+* The partner axis for simultaneous start is BUSY.
+* The 'Simultaneous start axis start data No.' of the start axis is 0 or is outside the setting range.
+* The 'Simultaneous start axis start data No.' of those axes other than the start axis is outside the setting range.","<When blocks are started simultaneously>
+Normalize the condition operators.
+<When multiple axes are started and controlled simultaneously>
+Normalize the simultaneous start axis start data No."
+01F6,"Illegal data No.
+* The positioning data No. tried to be executed is outside the ranges of 1 to 600, 7000 to 7004, and 9001 to 9004.
+* The designation of a JUMP destination is executed currently.
+* The designation of a JUMP destination is outside the ranges of 1 to 600.","Normalize the positioning start No., positioning start data (in block start), and positioning data (in JUMP instruction)."
+01F7,"No command speed
+* At the start of positioning, a current speed (-1) is set for the command speed of the positioning data to be initially executed.
+* The current speed is set by speed control.
+* The current speed is set for speedposition switching control.","Normalize the positioning data."
+01F8,"Outside linear movement amount range
+* When the parameter 'interpolation speed designation method' performs a linear interpolation in setting a 'composite speed', the axis movement amount for each positioni ng data exceeds 1073741824(2^30).
+* The positioning address is -360.00000 or less or 360.00000 or more using INC instruction, where the control unit is set to 'degree' and software stroke limit upper lim it is not equal to the software stroke limit lower limit.","Review the positioning address."
+01FA,"Large arc error deviation
+When an arc is interpolated by the designation of the center point, a difference between a radius of start point-center point and a radius of end point-center point exce eds the parameter 'Circular interpolation error allowable limit'.","* Correct the center point address (positioning address)
+* Correct the end address (arc address)
+* Correct the circular interpolation error allowable limit value."
+01FB,"Software stroke limit+
+* Positioning is carried out at a position beyond the software stroke limit upper limit.
+* The positioning address and new current value exceed the software stroke limit upper limit.
+* In the circular interpolation by the designation of the sub points, the sub points exceed the software stroke limit upper limit.","At start: Bring the current feed value into the software stroke limit using the manual control operation. Correct the positioning address (Also check the arc address in circular interpolation with sub points designated).
+New current value: Bring the new current value into the software stroke limit.
+During operation: Correct the positioning address."
+01FC,"Software stroke limit-
+* Positioning is carried out at a position beyond the software stroke limit lower limit.
+* The positioning address and new current value exceed the software stroke limit lower limit.
+* In the circular interpolation by the designation of the sub points, the sub points exceed the software stroke limit lower limit.","At start: Bring the current feed value into the software stroke limit using the manual control operation. Correct the positioning address (Also check the arc address in circular interpolation with sub points designated).
+New current value: Bring the new current value into the software stroke limit.
+During operation: Correct the positioning address."
+0202,"Outside new current value range
+The new current address is outside the ranges of 0 to 359.99999, where the control unit is set to 'degree'.","Bring the new current value into the setting range."
+0203,"New current value not possible
+* The control system sets an operation pattern (continuous path control) using new current positioning data.
+* The operation pattern sets a 'new current value' in the control system using the data following the 'continuous path control' positioning data.","* Do not designate a current value changing using the positioning data following the continuous path control.
+* Do not designate a "current value changing" using the positioning data following the continuous path control."
+0204,"Continuous path control not possible
+* The continuous path control is designated using a control system which is not allowed to use for continuous path control such as speed control, speed-position switching control, position-speed switching control, and fixed-feed.
+* The previous data such as those on speed control, speed-position switching control, position-speed switching control, and fixed-feed shows a continuous path control. 
+* The continuous positioning control is designated for speed control or position-speed switching control.","* Do not designate a speed control, fixed-feed, speedposition switching control, and position-speed switching control using the positioning data following the continuous path control data.
+* Do not carry out the fixed-feed, speed control, speedposition switching control, and position-speed switching control using the continuous path control operation pattern.
+* Do not carry out the speed control and position-speed switching control using the continuous path control operation pattern."
+0206,"Outside operation pattern range
+* The operation pattern set value is 2.
+* A target position change is requested on those control systems other than ABS1 and INC1.
+* A target position change is carried out in continuous path control.
+* A changed address is outside the software stroke limit.
+* A target position change is carried out during deceleration stop.","Correct the operation pattern."
+0207,"Interpolation while interpolation axis BUSY
+Interpolation is started during the operation of the interpolation axis.","Correct the control system."
+0208,"Unit group unmatched
+The reference and interpolation axis units are different at the parameter 'interpolation speed designation method' setting of 'composite speed'.","Correct the positioning data or change the parameter "Unit setting" of the axis to be interpolated."
+0209,"Illegal interpolation description command
+* The number of axes necessary for interpolation operation is not present in the unit.
+* In 2-axis interpolation, the axis to be interpolated is the self axis or an axis not present.","Correct the command speed."
+020A,"Command speed setting error
+The command speed is outside the setting range. 
+Linear interpolation, circular interpolation: Reference axis is outside the setting range.
+Speed control interpolation: Either of reference axis and interpolation axis is outside the speed range.","Correct the command speed."
+020B,"Interpolation mode error
+* For starting, a composite speed is designated in the reference axis parameter 'Interpolation speed designation method' using the speed interpolation control or 4-axis linear interpolation control.
+* For starting, a reference axis speed is designated in the reference axis parameter 'Interpolation speed designation method' using the circular interpolation control.","Set the "Interpolation speed designation method"correctly."
+020C,"Control system setting error
+* The control system setting value is outside the specified limit.
+* The number of control axes differs from the previous data when continuous positioning control or continuous path control is to be exercised for continuously.
+* Machine OPR, fast OPR, or speedposition or position-speed switching control was performed in the wiring-less mode.
+* The NOP instruction was set to the control system of positioning data No. 600.
+* Any value other than 0 was set at buffer memory address 1906 (use prohibited area).","* Correct the control system or parameter.
+* Do not make setting at buffer memory address 1906 (use prohibited area)."
+020D,"Sub point setting error
+Either of the following applies in the circular interpolation with sub points designated.
+* Start point = sub point
+* End point = sub point
+* Start point, end point, and sub point are in line with each other.
+* Sub point address and center point address are outside the range of -2147483648 to 2147483647.","Correct the sub address (arc address)."
+020E,"End point setting error
+* Start point is equal to end point in the circular interpolation with sub points designated.
+* End point address is outside the range of -2147483648 to 2147483647 in the circular interpolation with auxiliary point designation and center point designation.","Correct the end address (positioning address)."
+020F,"Center point setting error
+Circular interpolation with center point designation applicable to one of the followings.
+* Start point = Center point
+* End point = Center point
+* Center point address is outside the range of -2147483648 to 2147483647.","Correct the center point address (arc address)."
+0212,"Outside address range
+* In the speed-position switching control and the position-speed switching control, the setting value of a positioning address is negative.
+* In ABS1, ABS2, ABS3 and ABS4, the setting value of a positioning address is outside the range of 0 to 359.99999 degrees.","Correct the positioning address."
+0214,"Simultaneous start not possible
+Among the axes to be started simultaneously, there is an axis on which an error other than this error occurs.","In the error history, check the axis where the error other than this error occurred, and remove the error factor. Correct the block start data and positioning data."
+0215,"Condition data error
+* The condition setting values are not set or outside the setting range.
+* The condition operator setting values are not set or outside the setting range.
+* The condition operator is a bit operator, and the parameter 1 is 32 or more.
+* An unusable condition operator is set for the set condition.
+* The conditional operator has been [parameter 1 is greater than or equal to parameter 2] with 05H (P1 <= ** <= P2)."
+0216,"Special start instruction error
+* The partner axis designation for simultaneous start includes the self-axis.
+* No applicable special start instruction is present.","Correct the instruction code of the special start data."
+0217,"Circular interpolation not possible
+Circular interpolation is carried out on an axis in the unit of degree.","Correct the control system."
+0218,"M code ON signal start
+The positioning start is carried out when an M code ON signal (X4 to X7) is turned ON.","After turning OFF the M code ON signal, start the system."
+0219,"PLC READY OFF start
+The positioning start is carried out when the PLC READY signal (Y0) is turned OFF.","Check the sequence program which turns ON/OFF the PLC READY signal (Y0), and turn ON the PLC READY signal. Then start the system."
+021A,"READY OFF start
+The positioning start is carried out when the QD75 READY signal (X0) is turned OFF.","Check the QD75 READY ON signal, and then start the system."
+021F,"Outside start No. range
+* At the start of positioning, the setting value of the 'positioning start No.' of the axis control data is outside the ranges of 1 to 600, 7000 to 7004, and 9000 to 9004.
+* At a Pre-reading start, the 'positioning start No.' setting of the axis control data is other than 1 to 600.","Normalize the positioning start No."
+0220,"Outside radius range
+The arc radius exceeds 536870912.","Correct the positioning data."
+0221,"Control system LOOP setting error
+Control system LOOP setting error","Set 1 to 65535 in LOOP."
+0222,"Illegal setting of ABS direction in unit of degree
+The setting value of ABS direction in the unit of degree is as follows.
+* Set outside the setting range.
+* A figure other than '0' is set when the software stroke limit is valid."
+0320,"Hold error
+In the PLC CPU unit parameter 'Output at error stop', the setting for QD75 is 'Hold'.","Invalidate the software stroke limit. (To invalidate, set the software stroke limit upper limit value to the software stroke limit lower limit value.)"
+0321,"Flash ROM write error
+Data is not written to the flash ROM.","Clear the setting of the PLC CPU module parameter 'Output at error stop'.(Refer to 'QCPU Userfs Manual')"
+0322,"Flash ROM sum check error
+While data is written to the flash ROM, the power is turned OFF.","The flash ROM is expected to be at the end of its writable life. Replace the flash ROM with a new one."
+0323,"PLC CPU error
+The PLC CPU resulted in an error.","Clear the setting of the PLC CPU module parameter 'Output at error stop'."
+0324,"Dedicated instruction error
+* The ABRST instruction is executed with the status set to other than 0.
+* The PSTRT instruction is executed with the start No. set to other than 10 to 600, 7000 to 7004 and 9001 to 9004.
+* The TEACH instruction is executed with the teaching data selection set to other than 0 and 1.
+* The TEACH instruction is executed with the positioning data No. set to other than 1 to 600.
+* The instruction of a non-existent axis is specified by the ABRST , PSTRT or TEACH instruction.","* When executing the ABRST instruction, set the status to 0.
+* When executing the PSTRT instruction, set the start No. to within the setting range.
+* When executing the TEACH instruction, set the teaching data selection and positioning data No. to within the setting range.
+* Do not specify the instruction of a non-existent axis by the ABRST , PSTRT and TEACH instructions."
+0325,"Flash ROM write number error
+Data is written to the flash ROM continuously 25 times or more from the sequence program.","Review the sequence program so that data is not written continuously to the flash ROM. (If this error has occurred in a proper using method, writing is enabled by resetting the error, switching power OFF, then ON, or resetting the PLC CPU.)"
+0326,"Dedicated instruction I/F error,
+Mismatching occurs between the PLC CPU and QD75.","A trouble occurs. Repair."
+0384,"Outside unit setting range
+The set range of the basic parameter 1 'Unit setting' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0385,"Outside pulse number per rotation range
+The set range of the basic parameter 1 'No. of pulses per rotation' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0386,"Outside movement amount per rotation range
+The set range of the basic parameter 1 'Movement amount per rotation' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0387,"Outside unit magnification range
+The set range of the basic parameter 1 'Unit magnification' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0388,"Pulse output mode error
+The set range of the basic parameter 1 'Pulse output mode' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0389,"Rotation direction setting error
+The set range of the basic parameter 1 'Rotation direction setting' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+038A,"Outside bias speed range
+* The set range of the basic parameter 1 'Bias speed at start' is outside the setting range.
+* The bias speed exceeds the speed limit.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+038E,"Outside speed limit value range
+* The set range of the basic parameter 2 'Speed limit value' is outside the setting range.
+* The value obtained by the conversion of the speed limit value with respect to the frequency exceeds the maximum output frequency of the unit.
+* The speed limit value is smaller than the OPR speed.","Set the bias speed to not more than the speed limit value.
+With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+038F,"Outside acceleration time 0 range
+The set range of the basic parameter 2 'Acceleration time 0' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+0390,"Outside deceleration time 0 range
+The set range of the basic parameter 2 'Deceleration time 0' is outside the setting range.","With the setting brought into the setting range, turn thePLC READY signal [Y0] from OFF to ON."
+0398,"Backlash compensation amount error
+The value converted into pulse number using the movement amount per pulse is 256 pulses or more.","Set the value converted into the pulse number using 'the movement amount per pulse' to less than 256 pulses."
+0399,"Software stroke limit upper limit
+* In the unit of degree, the set value of the detailed parameter 1 'Software stroke limit upper limit value' is outside the setting range.
+* In a unit other than degree, the software stroke limit upper limit value is smaller than the software stroke limit lower limit value.","* Bring the setting into the setting range.
+* In a unit other than degree, set the setting so that the lower limit value is smaller than the upper limit value."
+039A,"Software stroke limit lower limit
+* In the unit of degree, the set range of the detailed parameter 1 'Software stroke limit lower limit value' is outside the setting range.
+* In a unit other than degree, the software stroke limit upper limit value is smaller than the software stroke limit lower limit value.","* Bring the setting into the setting range.
+* In a unit other than degree, set so that the lower limit value is smaller than the upper limit value."
+039B,"Software stroke limit selection
+The set range of the detailed parameter 1 'Software stroke limit selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+039C,"Software stroke limit valid/invalid setting
+The set range of the detailed parameter 1 'Software stroke limit valid/invalid setting' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+039D,"Command in-position width
+The set range of the detailed parameter 1 'Command in-position width' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+039E,"Illegal torque limit setting value
+The set range of the detailed parameter 1 'Torque limit setting value' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+039F,"M code ON timing error
+The set range of the detailed parameter 1 'M code ON signal output timing' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03A0,"Speed changeover mode error
+The set range of the detailed parameter 1 'Speed changeover mode' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03A1,"Interpolation speed designation method error
+The set range of the detailed parameter 1 'Interpolation speed designation method' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03A2,"Current value update request error
+The set range of the detailed parameter 1 'Current feed value during speed control' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03A4,"Manual pulse generator input mode error
+The set range of the detailed parameter 1 'Manual pulse generator input selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03A7,"Speed-position function selection error
+The detailed parameter 1 'speedposition function selection' is preset to 2 and the following three conditions are not satisfied:
+1) Unit is 'degree'.
+2) Software stroke limits are invalid.
+3) Update current feed value.","Speed-position switching control (ABS mode) should satisfy the conditions 1) to 3) given on the left. When speed-position switching control (ABS mode) is not to be exercised, set 0 to speed-position function selection and turn the PLC READY signal (Y0) from OFF to ON."
+03B6,"Acceleration time 1 setting error
+The set range of the detailed parameter 2 'Acceleration time 1' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03B7,"Acceleration time 2 setting error
+The set range of the detailed parameter 2 'Acceleration time 2' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03B8,"Acceleration time 3 setting error
+The set range of the detailed parameter 2 'Acceleration time 3' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03B9,"Deceleration time 1 setting error
+The set range of the detailed parameter 2 'Deceleration time 1' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03BA,"Deceleration time 2 setting error
+The set range of the detailed parameter 2 'Deceleration time 2' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03BB,"Deceleration time 3 setting error
+The set range of the detailed parameter 2 'Deceleration time 3' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03BC,"JOG speed limit value error
+* The set range of the detailed parameter 2 'JOG speed limit value' is outside the setting range.
+* The set range of the detailed parameter 2 'JOG speed limit value' exceeds the speed limit.","* With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON.
+* Bring the setting into the speed limit value or below."
+03BD,"JOG acceleration time selection setting error
+The set range of the detailed parameter 2 'JOG acceleration time selection setting' is outside the setting range.","* With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON.
+* Bring the setting into the speed limit value or below."
+03BE,"JOG deceleration time selection setting error
+The set range of the detailed parameter 2 'JOG deceleration time selection setting' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03BF,"Acceleration/deceleration process selection setting error
+The set range of the detailed parameter 2 'Acceleration/deceleration process selection setting' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C0,"S-curve ratio setting error
+The set range of the detailed parameter 2 'S-curve ratio' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C1,"Illegal sudden stop deceleration time
+The set range of the detailed parameter 2 'Sudden stop deceleration time' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C2,"Stop group 1 sudden stop selection error
+The set range of the detailed parameter 2 'Stop group 1 sudden stop selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C3,"Stop group 2 sudden stop selection error
+The set range of the detailed parameter 2 'Stop group 2 sudden stop selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C4,"Stop group 3 sudden stop selection error
+The set range of the detailed parameter 2 'Stop group 3 sudden stop selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C6,"Outside allowance circular interpolation error width
+The set range of the detailed parameter 2 'Allowance circular interpolation error width' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03C7,"External command function selection error
+The set range of the detailed parameter 2 'External command function selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03D4,"OPR method error
+The set range of the OPR basic parameter 'OPR method' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03D5,"OPR direction error
+The set range of the OPR basic parameter 'OPR direction' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03D6,"OP address setting error
+The set range of the OPR basic parameter 'OP address' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03D7,"OPR speed error
+* The set range of the OPR basic parameter 'OPR speed' is outside the setting range.
+* The set range of the OPR basic parameter 'OPR speed' is smaller than the bias speed at start.","* Bring the setting into the setting range.
+* Set the speed to the bias speed at start or higher."
+03D8,"Creep speed error
+* The set range of the OPR basic parameter 'Creep speed' is outside the setting range.
+* The set range of the OPR basic parameter 'Creep speed' is larger than the OPR speed.
+* The set range of the OPR basic parameter 'Creep speed' is smaller than the bias speed at start.","* Bring the setting into the setting range.
+* Set the speed to that below the OPR speed.
+* Set the value to the bias speed at start or higher."
+03D9,"OPR retry error
+The set range of the OPR basic parameter 'OPR retry' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03DE,"OPR dwell time error
+The set range of the OPR detailed parameter 'OPR dwell time' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03DF,"Setting for the movement amount after near-point dog ON error
+The set range of the OPR detailed parameter 'Setting for the movement amount after near-point dog ON' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03E0,"OPR acceleration time selection error
+The set range of the OPR detailed parameter 'OPR acceleration time selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03E1,"OPR deceleration time selection error
+The set range of the OPR detailed parameter 'OPR deceleration time selection' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03E3,"OPR torque limit value error
+* The set range of the OPR detailed parameter 'OPR torque limit value' is outside the setting range. 
+* The OPR detailed parameter 'OPR torque limit value' has exceeded the detailed parameter 1 'Torque limit setting value'.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03E4,"Deviation counter clear signal output time setting error
+The set range of the OPR detailed parameter 'Deviation counter clear signal output time' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+03E5,"Speed designation during OP shift error
+The set range of the OPR detailed parameter 'Speed designation during OP shift' is outside the setting range.","With the setting brought into the setting range, turn the PLC READY signal [Y0] from OFF to ON."
+</ERRCODE>,,

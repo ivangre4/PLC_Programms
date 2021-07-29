@@ -1,0 +1,637 @@
+<GROUP>,,,
+4000-4FFF,Errors detected by the CPU module,"Troubleshooting in the CPU User's Manual. (Hardware Design, Maintenance and Inspection)",********.csv
+7000-7FFF,"Errors detected by the serial communication module, etc.",Troubleshooting in the Serial Communication Module User's Manual.,ERR_QJ71C24.csv
+B000-BFFF,Errors detected by the CC-Link system,Troubleshooting in the CC-Link System Master/Local Module User's Manual.,ERR_QS0J61BT12.csv
+C000-CFFF,Errors detected by the Ethernet interface module,Troubleshooting in the Ethernet Interface Module User's Manual.,ERR_QJ71E71.csv
+E000-EFFF,Errors detected by the CC-Link IE controller network module,"Take corrective actions, referring to the troubleshooting section of the CC-Link IE Controller Network Reference Manual.",ERR_QJ71GP21.csv
+F000-FFFF,Errors detected in the MELSECNET/H or MELSECNET/10 network system,Troubleshooting in the MELSECNET/H or MELSECNET/10 Network System Reference Manual.,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+D000,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D001,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D002,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D003,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D004,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D005,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D006,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem.",
+D007,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D00F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D010,Parameter error (RX size over),Correct the points assigned to the RX devices.
+D011,Parameter error (RY size over),Correct the points assigned to the RY devices.
+D012,Parameter error (RWw size over),Correct the points assigned to the RWw devices.
+D013,Parameter error (RWr size over),Correct the points assigned to the RWr devices.
+D014,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D015,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D016,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D018,Parameter error (constant link scan time error),Correct the constant link scan time.
+D019,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D01A,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D01B,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D01C,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D020,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D030,Connection failure,Correct the wiring.
+D031,Connection failure,Correct the wiring.
+D032,Connection failure,Correct the wiring.
+D033,Connection failure,Correct the wiring.
+D035,Connection failure,Correct the wiring.
+D036,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D037,Incorrect number of stations,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*If the number of slave stations per network is more than 120, reduce it to 120 or less."
+D040,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D041,Incorrect number of stations,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*If the number of slave stations per network is more than 120, reduce it to 120 or less."
+D080,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D081,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D082,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D083,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D084,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0A0,Transient data transmission response wait timeout,"*If the own station, target station, or relay station is disconnected from the network, identify the cause of the disconnection and take action.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*When the target station or the relay station is overloaded and cannot receive transient data, reduce the frequency of transient transmission and retry the operation."
+D0A1,Transient data transmission completion wait timeout,"*Check if the cables and the switching hub are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0A2,Transient data transmission processing wait timeout,"*Reduce the frequency of transient transmission, and retry the operation.
+*Check if the switching hub and the cables at the request source are connected properly."
+D0A3,Transient data transmission error,"*If the own station, target station, or relay station is disconnected from the network, identify the cause of the disconnection and take action.
+*Correct the number of the station for which transient data is to be sent, and retry the operation.
+*If the station for which transient data is to be sent is on another network, check if the routing parameters for each station are correctly set."
+D0A4,Transient transmission failed,"*Check if the cables and the switching hub are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0A5,Transient transmission failed,"*Check if the cables and the switching hub are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0A6,Transient transmission failed,"*Check if the cables and the switching hub are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0A7,Transient reception failed,"*Check if the cables and the switching hub are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D0C0,Reserved station specification failed (another process in progress),"Wait for a while, and reserve the station again."
+D0C1,Reserved station cancellation failed (another process in progress),"Wait for a while, and cancel the reserved station setting again."
+D0C2,Data link stop failed (another process in progress),"Wait for a while, and instruct the data link stop again."
+D0C3,Data link start failed (another process in progress),"Wait for a while, and instruct the data link start again."
+D0C4,Temporary error invalid station setting failed (another process in progress),"Wait for a while, and set the temporary error invalid station again."
+D0C5,Temporary error invalid station cancellation failed (another process in progress),"Wait for a while, and cancel the temporary error invalid station setting again."
+D0C6,Another station number change failed (another process in progress),"Wait for a while, and set the station number of another station."
+D0D0,Another station number setting failed (another process in progress),"Wait for a while, and set the station number of another station."
+D0E0,Station type mismatch,"In ""Network Configuration Setting"" for the master station, change the station type to that of the own station."
+D0E1,Own station reserved,"*In ""Network Configuration Setting"" for the master station, cancel the reserved station setting.
+*Change the station number of the own station to a station number that is not reserved."
+D0E2,Station No. duplication (own station),"*Set a unique station number.
+*After taking the above action, power off and on all the stations that detected the station number duplication error, or reset them."
+D0E3,Own station No. out of range,"Add information of the own station to ""Network Configuration Setting"" of the master station."
+D0E4,Multiple master stations (including own station),"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Check if the cables and the switching hub are connected properly.
+*After taking the above action, power off and on all the stations that detected this error, or reset them."
+D0F0,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D100,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D101,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D110,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D111,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D112,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D113,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D200,Transient data received twice,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Check if the cables and the switching hub are connected properly.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D201,Header information error in transient transmission,"Correct the header information at the request source, and retry the operation."
+D202,Send buffer full,"*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the cables and the switching hub are connected properly."
+D203,Read/write address error in transient transmission,"Correct the read/write address at the request source, and retry the operation."
+D204,Network No. error in transient transmission,"*Correct the network number at the request source, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D205,Target station No. error in transient transmission,"Correct the target station number at the request source, and retry the operation."
+D206,Network No. error in transient transmission,"*Correct the network number at the request source, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D207,Invalid number of relays in transient transmission,"*Change the system configuration so that the number of relay stations may be seven or less.
+*Check if the routing parameters are correctly set."
+D208,Network No. error in transient transmission,"*Correct the network number at the request source, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D209,Target station No. error in transient transmission,"Correct the target station number at the request source, and retry the operation."
+D20A,Target station No. error in transient transmission,"Correct the target station number at the request source, and retry the operation."
+D20B,Specified master station No. error in transient transmission,"Correct the target station number at the request source, and retry the operation."
+D20C,Current master station No. error in transient transmission,"Correct the target station number at the request source, and retry the operation."
+D20D,Transient data transmission completion wait timeout,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*When the own station, target station, or relay station detected an error, identify the cause of the error and take action.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the switching hub and the cables at the request source are connected properly."
+D20E,Header information error in transient transmission,"Correct the header information at the request source, and retry the operation."
+D20F,Target station No. error in transient transmission,"Check that the command can be requested to all or a group of stations at the request source, and retry the operation."
+D210,Target station No. error in transient transmission,"Correct the header information at the request source, and retry the operation."
+D211,Own station No. not set (dedicated instruction),"Set the station number in the parameter setting, and retry the operation."
+D212,Transient transmission failed,"*Check if the switching hub and the cables at the request source are connected properly.
+*Exchange the cable connected to PORT1 with that connected to PORT2 at the request source, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation."
+D213,Transient data command error,"Correct the request command at the request source, and retry the operation."
+D214,Transient data length error,"Correct the data length at the request source, and retry the operation."
+D215,Transient data request error,"Change the mode to Online, and retry the operation."
+D216,Transient data command error,"Correct the request command at the request source, and retry the operation."
+D217,Transient data command error,"Correct the request command at the request source, and retry the operation."
+D218,Incorrect number of read/write transient data ,"Correct the number of read/write device data at the request source, and retry the operation."
+D219,Transient data attribute code error,"Correct the attribute code at the request source, and retry the operation."
+D21A,Transient data access code error,"Correct the access code at the request source, and retry the operation."
+D21B,Transient data request error,"*Abnormal transient data were issued from the CPU module.
+*Replace the CPU module and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D21C,Transient data request error,"*Abnormal transient data were issued from the CPU module.
+*Replace the CPU module and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D21D,Network No. error in transient transmission,"*A cable test cannot be executed for a different network.
+Correct ""Testing Station Setting"", and execute the cable test again.
+*Transient data that cannot be sent to a different network were received. Correct the network number or the target station number at the request source, and retry the operation."
+D21E,Target station No. error in transient transmission,"*A communication test cannot be executed on a sending (relay) station.
+Correct the ""Target Station"" setting, and execute the communication test again.
+*Transient data of the application type that cannot be executed on the own station were received. Correct the application type or the target station number at the request source, and retry the operation."
+D21F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D220,No master station,Add a master station to the network.
+D222,Transient data command error,"Correct the request command at the request source, and retry the operation."
+D223,Transient error,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Check if the cables and the switching hub are connected properly.
+*If the request source is on another network, check if the routing parameters are correctly set.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D22E,Station No. setting not available for the target station,"*Although change of the target station number was attempted online from the master station, the target station does not have the online station number setting function.
+*Check the manual for the target station if the station number setting function is available.
+*If the function is supported by the model, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D22F,No baton pass executed in the target station,Check the communication status of the station whose station number is to be changed.
+D230,Invalid station No. setting,"*The station number change was attempted for the own station (master station).
+*Check that no station number is set for the target station."
+D231,Station No. already set in the target station,"*The station number has been already set for the target station.
+*Check that no station number is set for the target station."
+D232,Station No. setting target not exist,"*The station where the station number change was attempted does not exist.
+*Check that no station number is set for the target station."
+D233,Station No. setting out of range,"Set the station number within 1 to 120, and retry the operation."
+D240,Target network No. error (dedicated instruction),"*Correct the network number at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D241,Target station No. error (dedicated instruction),"*Correct the target station number at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D242,Command code error (dedicated instruction),"*Correct the command code at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D243,Used channel error (dedicated instruction),"*Set the used channel within the allowable range at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D244,Incorrect transient data,"*Correct the transient data at the request source, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D245,Target station No. error (dedicated instruction),"*Correct the target station number at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D246,Incorrect transient data,"*Correct the transient data at the request source, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D247,Dedicated instruction received twice,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Check if the switching hub and the cables at the request source are connected properly.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D248,Incorrect transient data,"*Correct the transient data at the request source, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D249,Target stationÅfs CPU type error (dedicated instruction),"*Correct the target stationÅfs CPU type at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D24A,Arrival monitoring time error (dedicated instruction),"*Correct the arrival monitoring time at the request source of the dedicated instruction, and retry the operation.
+*When the own station, target station, or relay station detected an error, identify the cause of the error and take action.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the switching hub and the cables at the request source are connected properly."
+D24B,Number of resends error (dedicated instruction),"*Correct the number of resends at the request source of the dedicated instruction, and retry the operation.
+*When the own station, target station, or relay station detected an error, identify the cause of the error and take action.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the switching hub and the cables at the request source are connected properly."
+D24C,Target network No. error (dedicated instruction),"*Correct the network number at the request source of the dedicated instruction, and retry the operation.
+*If the request source is on another network, check if the routing parameters are correctly set."
+D24D,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D24E,Target station setting error (dedicated instruction),"*A value set for the control block of the dedicated instruction is out of range. Correct the value, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D24F,Own station No. not set (dedicated instruction),"*Set the station number in the network parameter dialog box, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D250,Flash ROM failure,"*The flash ROM may be faulty. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D251,Arrival check error (dedicated instruction),"*Increase the number of resends at the request source of the dedicated instruction, and retry the operation.
+*When the own station, target station, or relay station detected an error, identify the cause of the error and take action.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the switching hub and the cables at the request source are connected properly."
+D252,Transmission completion wait timeout (dedicated instruction),"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Increase the number of resends at the request source of the dedicated instruction, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Correct the number of link dedicated instructions that is simultaneously executed within the range. (For details, refer to ""Precautions for link dedicated instructions"" in this manual.)
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D253,Response timer timeout (dedicated instruction),"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Increase the number of resends at the request source of the dedicated instruction, and retry the operation.
+*Reduce the frequency of transient transmission and retry the operation.
+*Correct the number of link dedicated instructions that is simultaneously executed within the range. (For details, refer to ""Precautions for link dedicated instructions"" in this manual.)
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D254,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D255,Target station No. error (dedicated instruction),"*Correct the value in Target station number (control data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D256,Execution/abnormal end type error (dedicated instruction),"*Correct the value in Execution/abnormal end type (control data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D257,Request type error (REQ),"*Correct the value in Request type (request data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D258,Specified/current control station not exist (dedicated instruction),"*Correct the value in Target station number (control data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D259,Mode error during dedicated instruction execution,"*Change the mode of the master station from loop test to online, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D25A,Channel in use (dedicated instruction),"*Retry the operation after a while.
+*Change the value in Channels used by own station or Target station's channel (control data)."
+D25B,Channel in use (dedicated instruction),Change the value in Channels used by own station or Target station's channel (control data).
+D25C,Invalid function version (dedicated instruction),"*A value set for the control block of the dedicated instruction is out of range. Correct the value, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D25D,Incorrect transient data,"*Correct the transient data at the request source, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D25E,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D25F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D260,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D262,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D263,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D264,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D265,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D266,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D267,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D268,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D269,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D26A,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D26B,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D26C,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D26D,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D280,Transient data request error,"Correct the request command at the request source, and retry the operation."
+D281,Transient reception failed,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool. 
+*When the target station or the relay station is overloaded and cannot receive transient data, send the data to the target/relay station after the load on the station is reduced."
+D282,Receive queue full,"*Once pausing the transient transmission, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D283,Transient transmission failed,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*Exchange the cable connected to PORT1 with that connected to PORT2 at the request source, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation."
+D2A0,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A1,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A2,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A3,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A4,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A5,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A6,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A7,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A8,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2A9,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AA,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AB,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AC,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AD,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AE,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2AF,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D2B0,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D602,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D603,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D604,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D605,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D606,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D607,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D608,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D609,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D60A,Parameter error (link scan mode/constant link scan time setting error),"*Write the network parameters to the CPU module again.
+*Set ""Asynchronous"" to the link scan mode, or do not set the constant link scan time.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D60D,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D60E,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D60F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D610,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D611,Parameter error (device range assignment error (RWw)),"*Write the network parameters to the CPU module again.
+*Correct the value in the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D612,Parameter error (device range assignment error (RWw)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D613,Parameter error (device range assignment error (RWr)),"*Write the network parameters to the CPU module again.
+*Correct the value in the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D614,Parameter error (device range assignment error (RWr)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D615,Parameter error (device range assignment error (RY)),"*Write the network parameters to the CPU module again.
+*Correct the value in the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D616,Parameter error (device range assignment error (RY)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D617,Parameter error (device range assignment error (RX)),"*Write the network parameters to the CPU module again.
+*Correct the value in the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D618,Parameter error (device range assignment error (RX)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D619,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61A,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61B,Parameter error (device duplication (RWw)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset or the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61C,Parameter error (device duplication (RWr)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset or the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61D,Parameter error (device duplication (RY)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset or the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61E,Parameter error (device duplication (RX)),"*Write the network parameters to the CPU module again.
+*Correct the value in the offset or the size of the link device in the slave station(s) (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D61F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D620,Incorrect transient data,"*Check the transient data at the request source, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D621,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D622,Parameter error (total number of slave stations error),"*Write the network parameters to the CPU module again.
+*Correct the total number of slave stations, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D623,Parameter error (link scan mode error),"*Write the network parameters to the CPU module again.
+*Correct the link scan mode, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D624,Parameter error (constant link scan time setting error),"*Write the network parameters to the CPU module again.
+*Correct the constant link scan time, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D625,Parameter error (block data assurance per station setting error),"*Write the network parameters to the CPU module again.
+*Correct the setting in ""Block Data Assurance per Station"", and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D626,Parameter error (loopback setting error),"*Write the network parameters to the CPU module again.
+*Correct the loopback function setting, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D627,Parameter error (slave station setting information error),"*Write the network parameters to the CPU module again.
+*Correct the value in the slave station setting information (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D628,Parameter error (station type error),"*Write the network parameters to the CPU module again.
+*Correct the value in the station type (setting data), and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D629,Parameter error (station No. range error),"*Write the network parameters to the CPU module again.
+*Correct the value in the station No. (setting data) within 1 to 120, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D62A,Parameter error (data link faulty station setting error),"*Write the network parameters to the CPU module again.
+*Correct the data link faulty station setting, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D62B,Parameter error (output status setting for CPU STOP error),"*Write the network parameters to the CPU module again.
+*Correct the output status setting for CPU STOP, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D62C,Parameter error (interrupt setting error),"*Write the network parameters to the CPU module again.
+*Correct the interrupt setting, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D62D,Data link start failed,"Data link start failed due to any of the following causes. Remove the error cause, and retry the operation.
+*Station No. not set
+*CPU module error on the own station
+*Master station duplication
+*Station type mismatch
+*Master station lost
+*Own station No. out of range
+*Station No. duplication (own station)
+*Own station reserved
+*Parameter error
+*Parameter communication in progress
+*Parameters not received (master station only and no slave station exists)
+*Link stop command"
+D630,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D701,Temporary reserved station cancel/temporary error invalid station setting not set,"Set the target station(s) in Reserved station function disable/temporary error invalid station setting (SW0010 to SW0017), and retry the operation."
+D706,Request error of temporary error invalid station setting/cancel or reserved station cancel/restoration (when the own station is a local station),Temporary error invalid station setting/cancel or reserved station cancel/restoration cannot be executed from a local station. Retry the operation from the master station.
+D70B,Request error of temporary error invalid station setting/cancel or reserved station cancel/restoration (when different settings are simultaneously performed),"*Temporary error invalid station setting/cancel using SB0010 and SB0011 or reserved station cancel/restoration using SB0012 and SB0013 cannot be simultaneously executed.
+*Retry the operation so that only one bit in SB0010 to SB0013 may turn on after all bits in them are turned off."
+D720,Data link start/stop instruction out of range,"Check the setting, and stop or start data link."
+D721,Data link start/stop retry error (another station),Retry the operation after the stop or restart of data link is completed.
+D722,Data link start/stop retry error (own station),Retry the operation after the stop or restart of data link is completed.
+D723,Data link start/stop retry error (entire system),Retry the operation after the stop or restart of data link is completed.
+D724,Data link start/stop station error,"Check the setting, and stop or start data link."
+D725,Station type error (station that starts/stops data link throughout the entire system),A local station cannot start or stop data link of all or multiple stations. Perform these operations from the master station.
+D726,Transient data command error,"Correct the request command at the request station, and retry the operation."
+D727,Data link start/stop command-instructing stations different,"*Data link start was instructed from a station different from the one that had instructed the data link stop. Instruct data link start and data link stop from the same station.
+*The method of the data link start differs from that of the data link stop. Instruct the data link start using the same method as the data link stop (ex. Data link is stopped using the CC-Link IE Field Network diagnostics, and the data link is started using a program).
+*Data link start failed. Forcibly restart the data link."
+D728,Data link start/stop command-instructing stations different,Data link start was instructed during execution of data link. Instruct data link stop then data link start.
+D72B,Illegal access to network module error,Data were written to a use-prohibited SB/SW or buffer memory. Correct the destination address.
+D72C,Illegal access to network module error,Data were written to a use-prohibited SB/SW or buffer memory. Correct the destination address.
+D730,Illegal access to network module error,Data were written to SB/SW and buffer memory which are prohibited to use. Please don't write data to the use prohibited area.
+D780,History acquisition setting data full,The area for writing history acquisition setting data for network event history is insufficient. Reset or power off and on the CPU module.
+D781,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D782,History acquisition setting data error,The previous history acquisition setting data for network event history were not written successfully. Reset or power off and on the CPU module.
+D783,Transient data request error,"*The read request by the CC-Link IE Field Network diagnostics of the programming tool is incorrect. Close the ""CC IE Field Diagnostics"" window, and request it again.
+*Check the read request data at the request station, and retry the operation."
+D784,Transient data request error,"*The read request by the CC-Link IE Field Network diagnostics of the programming tool is incorrect. Close the ""CC IE Field Diagnostics"" window, and request it again.
+*Check the read request data at the request station, and retry the operation."
+D785,Flash ROM failure,The maximum number of writes to the flash ROM is exceeded. Replace the master/local module.
+D786,Flash ROM failure,"The flash ROM may be faulty. Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D800,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D803,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D804,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D805,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D806,Receive queue full,"*Reduce the frequency of transient transmission, and retry the operation.
+*Check if the cables and the switching hub are connected properly."
+D807,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80A,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80B,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80C,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80D,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80E,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D80F,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D812,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D813,Parameter error,"*Write the network parameters to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D814,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D816,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D819,CPU module failure,"*Replace the CPU module.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D81A,CPU module stop error,"Check the error in the ""PLC Diagnostics"" window of the programming tool."
+D81B,Programmable controller power failure,The power is off. Turn it on.
+D81D,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D81F,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D820,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D821,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D822,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D823,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D824,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D825,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D826,Flash ROM failure,"*The maximum number of writes to the flash ROM is exceeded.  
+*Reset the CPU module. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D827,Communication RAM failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D902,Incorrect online test data,"*Correct the data at the station that started the online test, and retry the operation.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+D903,Communication test retry error,"After completion of the communication test, retry the operation."
+D905,Communication monitoring timeout in communication test,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool, take action, and retry the operation.
+*Check if the routing parameters are correctly set."
+D906,Communication test transmission completion wait timeout,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool, take action, and retry the operation.
+*Reduce the frequency of transient transmission, and retry the operation.
+*When the mode of the master station is ""Online (High Speed Mode)"", change it to ""Online (Normal Mode)"" and retry the operation.
+*Check if the routing parameters are correctly set."
+D909,Header information error in transient transmission,"Correct the header information at the request source, and retry the operation."
+D90A,Communication test data received twice,"Check the network status using the CC-Link IE Field Network diagnostics of the programming tool, take action, and retry the operation."
+D90B,Incorrect number of stations,"*Check the network status using the CC-Link IE Field Network diagnostics of the programming tool.
+*If the number of slave stations per network is more than 120, reduce it to 120 or less."
+D90C,Invalid communication test target station ,"*Correct the ""Target Station"" setting in the ""Communication Test"" window, and retry the operation.
+*Under ""Target Station"", set a station including a different CPU module from the station set in ""Connected Station (Own)""."
+D90D,Cable test retry error,"After completion of the cable test, retry the operation."
+DA00,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA01,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA10,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA11,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA12,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA13,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA14,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA15,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA16,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA17,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DA18,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAD0,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAD1,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAD2,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAD3,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAD4,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE0,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE1,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE2,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE3,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE4,CPU module failure,"*Execute hardware and self-loopback tests.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE5,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE6,CC-Link IE Field not supported by the CPU,"*Use a CPU module compatible with the master/local module.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE7,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAE8,Switch setting information error,"*Clear the intelligent function module switch setting, and write the setting data to the CPU module again.
+*If this error persists, please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF1,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF2,Flash ROM failure,"*The flash ROM may be faulty. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF3,Flash ROM failure,"*The flash ROM may be faulty. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF5,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF6,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF7,Network module failure,"*A malfunction may have occurred due to noise. Check the wire and cable distances and grounding condition of each device, and take measures against noise.
+*Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF8,Flash ROM failure,"The flash ROM may be faulty. Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+DAF9,Flash ROM failure,"The flash ROM may be faulty. Execute hardware and self-loopback tests. If a failure occurs again, the hardware of the master/local module may be faulty. Please consult your local Mitsubishi service center or representative, explaining a detailed description of the problem."
+</ERRCODE>,,

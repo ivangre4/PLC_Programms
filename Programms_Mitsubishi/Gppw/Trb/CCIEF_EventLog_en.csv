@@ -1,0 +1,153 @@
+,,X+0A,Display pattern,pattern,2,,,,256,1,512,2,768,3,1024,4,1280,5,1536,6,1792,7,2048,8,2304,9,2560,10,2816,11,3072,12,3328,13,3584,14,3840,15,4096,16,33024,17,33280,18,33536,19,33792,20,34048,21,34304,22,34560,23,34816,24,35072,25,35328,26,0,27,-,28
+1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1,X+0E,Port No.,16,2,0,15,1,1,PORT1,2,PORT2,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,2,X+10,Type of link up or link down,16,2,0,15,1,0,Link up,1,Link down,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1,X+0E,Baton pass status,16,2,0,15,1,0,Normal,1,Error,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,2,X+10,Cause of baton pass interruption(SW0048),16,2,0,15,1,0,Normal communication,48,Cable disconnection,51,Disconnection or reconnection processing,64,Offline mode,65,Hardware test,66,Self-loopback test,69,Self-diagnostics in execution,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1,X+0E,Data link status,16,2,0,15,1,0,Normal,1,Error,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,2,X+10,Cause of data link stop(SW0049),16,2,0,15,1,0,Normal communication,1,Stop directed,2,Monitoring timeout,5,Slave station Absence,16,Parameter unreceived,17,Own station No. that is out of range,18,Setting where own station is reserved station,19,Own station No. duplication,20,Master station duplication,22,Station No. unset,24,Parameter error,25,Parameter communication in execution,26,Station type does not match,32,CPU module stop error,96,Incorrectly configured to ring topology,-,No information,,,,,,,,,,,,,,,,,,,,,,
+
+4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Data link startup directed,2,Data link stop directed,-,No information,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,2,X+10,The station who directed starting or the stop ,16,2,0,15,1,125,Master station,256,Own station(Station No. unset),-,Own Station,,,,,,,,
+
+5,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Stops data link of own station,2,Restarts data link of own station,3,Specified stations data link stop,4,Specified stations data link restart,5,All stations data link stop,6,All stations data link restart,-,No information
+,2,X+10,Direction (station numbers   1 to  16),11,2,0,15,1,,,,,,,,,,,,,,
+,3,X+12,Direction (station numbers  17 to  32),11,2,0,15,1,,,,,,,,,,,,,,
+,4,X+14,Direction (station numbers  33 to  48),11,2,0,15,1,,,,,,,,,,,,,,
+,5,X+16,Direction (station numbers  49 to  64),11,2,0,15,1,,,,,,,,,,,,,,
+,6,X+18,Direction (station numbers  65 to  80),11,2,0,15,1,,,,,,,,,,,,,,
+,7,X+1A,Direction (station numbers  81 to  96),11,2,0,15,1,,,,,,,,,,,,,,
+,8,X+1C,Direction (station numbers  97 to 112),11,2,0,15,1,,,,,,,,,,,,,,
+,9,X+1E,Direction (station numbers 113 to 120),11,2,0,15,1,,,,,,,,,,,,,,
+
+6,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Temporary error invalid station setting,2,Temporary error invalid station cancel,-,No information,,,,,,,,
+
+7,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Temporary error invalid station setting,2,Temporary error invalid station cancel,-,No information
+,2,X+10,Direction (station numbers   1 to  16),11,2,0,15,1,,,,,,,,,,,,,,
+,3,X+12,Direction (station numbers  17 to  32),11,2,0,15,1,,,,,,,,,,,,,,
+,4,X+14,Direction (station numbers  33 to  48),11,2,0,15,1,,,,,,,,,,,,,,
+,5,X+16,Direction (station numbers  49 to  64),11,2,0,15,1,,,,,,,,,,,,,,
+,6,X+18,Direction (station numbers  65 to  80),11,2,0,15,1,,,,,,,,,,,,,,
+,7,X+1A,Direction (station numbers  81 to  96),11,2,0,15,1,,,,,,,,,,,,,,
+,8,X+1C,Direction (station numbers  97 to 112),11,2,0,15,1,,,,,,,,,,,,,,
+,9,X+1E,Direction (station numbers 113 to 120),11,2,0,15,1,,,,,,,,,,,,,,
+
+8,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Reserved station function disable,2,reserved station function enable,-,No information
+
+9,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Reserved station function disable,2,reserved station function enable,-,No information
+,2,X+10,Direction (station numbers   1 to  16),11,2,0,15,1,,,,,,,,,,,,,,
+,3,X+12,Direction (station numbers  17 to  32),11,2,0,15,1,,,,,,,,,,,,,,
+,4,X+14,Direction (station numbers  33 to  48),11,2,0,15,1,,,,,,,,,,,,,,
+,5,X+16,Direction (station numbers  49 to  64),11,2,0,15,1,,,,,,,,,,,,,,
+,6,X+18,Direction (station numbers  65 to  80),11,2,0,15,1,,,,,,,,,,,,,,
+,7,X+1A,Direction (station numbers  81 to  96),11,2,0,15,1,,,,,,,,,,,,,,
+,8,X+1C,Direction (station numbers  97 to 112),11,2,0,15,1,,,,,,,,,,,,,,
+,9,X+1E,Direction (station numbers 113 to 120),11,2,0,15,1,,,,,,,,,,,,,,
+
+10,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,
+,1,X+0E,Setting station No.,1,2,0,15,1,,,,,,
+,2,X+10,Setting result of station No.,16,2,0,15,1,0,Station No. decision,1,Station No. setting error,-,No information
+
+11,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,
+,1,X+0E,Setting station No.,1,2,0,15,1,,,,,,
+
+12,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Change type,16,2,0,15,1,1,Changed by PLC CPU,2,Changed by dedicated instruction (CCPASET),3,Changed by buffer memory,4,Changed by master station,-,No information
+
+13,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,RUN status,16,2,0,15,1,0,RUN or STEP-RUN,1,STOP/PAUSE/ERROR,-,No information,,,,
+
+14,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Port No.,16,2,0,15,1,1,PORT1,2,PORT2,-,No information,,,,
+,2,X+10,The number of receiving error,1,2,0,15,1,,,,,,,,,,
+
+15,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Error code,2,2,0,15,1,,,,,,,,,,
+
+16,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Minor error,2,Moderate or Major error,-,No information,,,,
+
+17,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,0,Baton pass normal all stations,1,Baton pass normal,2,Baton pass error,-,No information
+
+18,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,0,Data link normal all stations,1,Data link normal,2,Data link error,-,No information
+
+19,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Temporary error invalid station cancel,2,Temporary error invalid station setting,-,No information,,
+
+20,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Reserved station function disable,2,reserved station function enable,-,No information,,
+
+21,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,RUN status,16,2,0,15,1,0,RUN or STEP-RUN,1,STOP/PAUSE/ERROR,-,No information,,
+
+22,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,
+,1,X+0E,Port No.,16,2,0,15,1,1,PORT1,2,PORT2,-,No information,,,,
+,2,X+10,Type,16,2,0,15,1,1,Error,2,Normal,-,No information,,,,
+
+23,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Stop error in process,2,Stop error cancellation,3,Continue error in process,4,Continue error cancellation,-,No information
+
+24,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Parameter error in process,2,Parameter error cancellation,-,No information,,,,
+
+25,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Duplication of master station,2,duplication of station No.,-,No information,,,,
+
+26,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,1,Loopback occurred,2,Normal,-,No information,,,,
+,2,X+10,Loopback station 1,16,1,0,7,1,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,20,20,21,21,22,22,23,23,24,24,25,25,26,26,27,27,28,28,29,29,30,30,31,31,32,32,33,33,34,34,35,35,36,36,37,37,38,38,39,39,40,40,41,41,42,42,43,43,44,44,45,45,46,46,47,47,48,48,49,49,50,50,51,51,52,52,53,53,54,54,55,55,56,56,57,57,58,58,59,59,60,60,61,61,62,62,63,63,64,64,65,65,66,66,67,67,68,68,69,69,70,70,71,71,72,72,73,73,74,74,75,75,76,76,77,77,78,78,79,79,80,80,81,81,82,82,83,83,84,84,85,85,86,86,87,87,88,88,89,89,90,90,91,91,92,92,93,93,94,94,95,95,96,96,97,97,98,98,99,99,100,100,101,101,102,102,103,103,104,104,105,105,106,106,107,107,108,108,109,109,110,110,111,111,112,112,113,113,114,114,115,115,116,116,117,117,118,118,119,119,120,120,125,Master station,65535,Station No. unset,-,No information
+,3,X+12,Loopback station 2,16,1,0,7,1,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,20,20,21,21,22,22,23,23,24,24,25,25,26,26,27,27,28,28,29,29,30,30,31,31,32,32,33,33,34,34,35,35,36,36,37,37,38,38,39,39,40,40,41,41,42,42,43,43,44,44,45,45,46,46,47,47,48,48,49,49,50,50,51,51,52,52,53,53,54,54,55,55,56,56,57,57,58,58,59,59,60,60,61,61,62,62,63,63,64,64,65,65,66,66,67,67,68,68,69,69,70,70,71,71,72,72,73,73,74,74,75,75,76,76,77,77,78,78,79,79,80,80,81,81,82,82,83,83,84,84,85,85,86,86,87,87,88,88,89,89,90,90,91,91,92,92,93,93,94,94,95,95,96,96,97,97,98,98,99,99,100,100,101,101,102,102,103,103,104,104,105,105,106,106,107,107,108,108,109,109,110,110,111,111,112,112,113,113,114,114,115,115,116,116,117,117,118,118,119,119,120,120,125,Master station,65535,Station No. unset,-,No information
+
+27,,,,,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay,,,,,,,,,,
+,1,X+0E,Type,16,2,0,15,1,-,-,,,,,,,,
+
+28,,,,,,,,,,,,,,,,,,
+,Display order,Offset,Name,Data format,Data size,Significant bit start,Significant bit end,Display or Nondisplay
+,1,X+0E,(When event code not define),1,2,0,15,0
+,2,X+10,(When event code not define),1,2,0,15,0
+,3,X+12,(When event code not define),1,2,0,15,0
+,4,X+14,(When event code not define),1,2,0,15,0
+,5,X+16,(When event code not define),1,2,0,15,0
+,6,X+18,(When event code not define),1,2,0,15,0
+,7,X+1A,(When event code not define),1,2,0,15,0
+,8,X+1C,(When event code not define),1,2,0,15,0
+,9,X+1E,(When event code not define),1,2,0,15,0

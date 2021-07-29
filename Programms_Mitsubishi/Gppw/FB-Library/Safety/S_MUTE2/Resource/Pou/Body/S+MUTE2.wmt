@@ -1,0 +1,43 @@
+FUNCTION_BLOCK S+MUTE2 (*SF_MutingPar_2Sensor_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_AOPD_In:BOOL:;(*OSSD signal from AOPD.*)
+  S_MutingSw_11:BOOL:;(*status of muting sensor 11*)
+  S_MutingSw_12:BOOL:;(*status of muting sensor 12*)
+  S_MutingLamp:BOOL:;(*indicates operation of the muting lamp*)
+  DiscTimeEntry:DINT:;(*Max. discrepancy time for MutingSw11 and MutingSw12 in 10ms Step*)
+  MaxMutingTime:DINT:;(*Maximum time for complete muting sequence in 10ms Steps*)
+  MutingEnable:BOOL:;(*enables the start of the muting function*)
+  S_StartReset:BOOL:;(*manual reset*)
+  Reset:BOOL:;(*reset the state machine*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_AOPD_Out:BOOL:;(*indicates status of the muted guard*)
+  S_MutingActive:BOOL:;(*indicates status of muting process.*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  State2:INT:;(*register for state CYx4*)
+  Q_R_TRIG_Reset:BOOL:;(*trigger on Reset*)
+  Q_R_TRIG_MS11:BOOL:;(*trigger on S_MutinSwitch_11*)
+  Q_R_TRIG_MS12:BOOL:;(*trigger on S_MutinSwitch_12*)
+  IntDiagCodeX:INT:;(*Status Sensor x in CYx4*)
+  MutingError:INT:;(*errorcode of mutingsequence error*)
+  TimeValueDisc:DINT:;(*time value for timer Discrepancy time*)
+  TimeValueMut:DINT:;(*time value for timer in state Muting time*)
+  TimeExpiredDisc:BOOL:;(*indicates if the time limit for Discrepancy is expired*)
+  TimeExpiredMut:BOOL:;(*indicates if the time limit for Muting is expired*)
+  Work:INT:;(*error mask*)
+  TParamOutOfRange:BOOL:;(*indicates that the input of a time parameter  is out of range*)
+  NormDiscTime:DINT(2):;(*max. response time of the connected and monitored in 10us steps*)
+  NormMonTime:DINT(2):;(*max. response time of the connected and monitored in 10us steps*)
+  WorkTime1:DINT:;(*cycle time part 1*)
+  WorkTime2:DINT:;(*cycle time part 2*)
+  OR_8x11:BOOL:;(*State 8011 or 8311*)
+  OR_8x11_8012:BOOL:;(*State 8011 or 8311 or 8012*)
+ END_VAR
+END_FUNCTION_BLOCK

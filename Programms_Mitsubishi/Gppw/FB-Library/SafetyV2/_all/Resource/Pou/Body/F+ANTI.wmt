@@ -1,0 +1,18 @@
+FUNCTION_BLOCK F+ANTI (*SF_Antivalent_V2_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*Activate FB*)
+  S_ChannelNC:BOOL:;(*NC stands for normally closed*)
+  S_ChannelNO:BOOL:;(*NO stands for normally open*)
+  DiscrepancyTime:DINT:;(*Max.monitor time for discrepancy of both inputs in 10ms steps*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*Indicates that the FB is activated*)
+  S_AntivalentOut:BOOL:;(*Safety related output*)
+  Error:BOOL:;(*Indicates that an error has occurred*)
+  DiagCode:INT:;(*Diagnostics register*)
+ END_VAR
+ VAR
+  ExpiredTime:DINT:;(*Time value for timer*)
+  State:INT:;(*State register*)
+ END_VAR
+END_FUNCTION_BLOCK

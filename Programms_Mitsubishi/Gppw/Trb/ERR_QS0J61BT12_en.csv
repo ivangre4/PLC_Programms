@@ -1,0 +1,596 @@
+<GROUP>,,,
+4000-4FFF,Error detected by PLC CPU,Take measures referring to the QCPU User's Manual (Hardware Design Maintenance and Inspection.),********.csv
+7000-7FFF,"Error detected by the serial communication module,etc.",Take measure referring to the troubleshooting section of the Serial Communication Module User's Manual,ERR_QJ71C24.csv
+C000-CFFF,Error detected by the Ethernet module,Take measure referring to the troubleshooting section of the Ethernet Interface Module User's Manual,ERR_QJ71E71.csv
+F000-FFFF,Error detected by the MELSECNET/H or MELSECNET/10 module,Take measure referring to the troubleshooting section of the MELSECNET/H or MELSECNET/10 network system reference Manual,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+B000,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B001,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B002,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B003,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B008,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B084,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B085,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B086,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B087,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code.",
+B088,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B100,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B102,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B103,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B104,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B105,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B106,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B108,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B120,"Forced termination of the remote device station initialize procedure registration.
+In the remote device station initialize procedure registration, the instruction device of the registration was turned off before completion of all procedures.",Turn off the instruction device of the remote device station initialize procedure registration after completion of all procedures.
+B122,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B123,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B124,"Target station error for the remote device station initialize procedure registration.
+The remote device station initialize procedure registration instruction device for a station other than the master station was turned on.",Turn on the remote device station initialization procedure registration instruction device for the master station (station No.0).
+B125,"Parameter for the remote device station initialize procedure registration has not been set.
+The remote device station initialize procedure registration instruction device was turned on without setting the procedure registration.",Set the remote device station initialize procedure registration before turning on the instruction device of the registration.
+B126,"Remote device station initialize procedure registration setting change error.
+The initialize procedure execution setting was changed after the initialize procedure start was instructed.",Set the remote device station initialize procedure registration before turning on the instruction device of the registration.
+B200,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B300,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B301,"Processing request error during link stop.
+Line test request was issued while the link was stopped.",Perform a line test while the link is active.
+B304,"Error station detected by line test.
+An error was detected in a remote station when a line test was performed.",Check that the remote station is operational and that the cable is not disconnected.
+B305,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B307,"Data link error on all stations.
+Prohibited SB was turned on.",Do not turn on prohibited SB.
+B308,"Station number setting error (installation status).
+The station number of the slave station is outside of the range between ""1 and 64"".","Set the station number of the slave station within the range between ""1 and 64""."
+B309,"Station number overlap error.
+The station number of the connected module was duplicated (including number of occupied stations). However, this excludes the duplicate head station number is excluded.",Check the modules' station numbers.
+B30A,"Loading/parameter compatibility error.
+The station type of the module is different from parameter settings.",Set the correct parameters.
+B30B,"Loading/parameter compatibility error.
+The actual installation status is different from the network parameter setting.",Make the actual installation status and the network parameter setting matched.
+B30D,"Initial status.
+Line test request was issued before starting the link.",Issue the requests after the data link.
+B310,"Data link restart error.
+Prohibited SB was turned on.",Do not turn on prohibited SB.
+B311,"Data link stop error.
+Prohibited SB was turned on.",Do not turn on prohibited SB.
+B384,"Station number setting error (parameter).
+The network parameter is corrupted.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B385,"Error in total number of stations (parameter).
+The parameter for the total number of occupied stations set in the station information exceeded 64.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B386,"Setting error in number of occupied stations (parameter).
+All parameters for the number of occupied stations set in the station information was set to ""0"".","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B388,"Station type setting error (parameter).
+The parameter for the station type in the station information was set to ""other than 0 and1"".","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B38B,"Station information setting error (parameter).
+The parameter for the total number of emote device stations and safety remote I/O stations set to ""43 or more"" in the station information.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B391,"Retry count setting error (parameter).
+The retry count parameter was set to a value other than ""1 to 7"".","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B392,"PLC down select error (parameter).
+The network parameter is corrupted.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B393,"Scan mode setting error(parameter).
+The network parameter is corrupted.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B394,"Automatic reconnection station count setting error (parameter).
+The parameter for the number of automatic return stations was set to a value other than ""1 to 10"".","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B395,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B396,"Station number overlap error (parameter).
+A duplicate station number was specified with the station information parameter.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B397,"Station information setting error (parameter).
+The station information parameter setting
+does not meet the following condition:
+{16 A + 54 (B + C)} <= 2304
+A: Number of standard remote I/O stations
+B: Number of remote device stations
+C: Number of safety remote I/O stations","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B398,"Exclusive station count setting error (parameter).
+The number of occupied stations set as the station information parameter is outside the following range.
+Safety remote station: 1 to 2
+Standard remote station: 1 to 4","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B399,"All connect count setting error (parameter).
+The number of connected modules was set to a value other than ""1 to 64"".","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B39B,"Reserved station setting error.
+All stations were set as reserved stations.","(1) Correct the network parameter and write it to the PLC.
+(2) If the error persists after the correction, there is a hardware error on the safety master module. Consult your local Mitsubishi representative."
+B3F1,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B3F2,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B3F3,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B400,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B500,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B600,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B700,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B800,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B900,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B981,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B982,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B983,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B984,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B986,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+B9FF,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA00,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA01,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA02,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA03,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA05,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA06,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA07,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA08,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA0A,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA0C,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA0D,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA0E,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA0F,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA10,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA11,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA12,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA13,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA14,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA15,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA16,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA17,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA19,"Tested station error.
+Communication of the station being tested was disabled during loop test 2.",Check the cables and the station.
+BA1A,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BA1B,"All stations error.
+Communication of all stations was disabled during loop test 1.",Check the cables.
+BA1E,"MFP send buffer switching error.
+MFP send buffer could not be switched during diagnosis of RAM.",There is a hardware error on the safety CPU module. Contact your local Mitsubishi representative.
+BA1F,"RAM diagnostics error.
+In diagnosis of RAM, the value written to the target RAM is not matched with the read-out value.",There is a hardware error on the safety CPU module. Contact your local Mitsubishi representative.
+BB00,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBC2,"Station number setting error.
+The station number setting switch on the module is set to other than ""0 to 64"". Or, the last station number is greater than 64.",Check the station number and the number of occupied stations of the module.
+BBC5,"Master station overlapping error.
+Multiple master stations exist on the same line. Or, line noise was detected at power-on.","Reduce the number of master stations on the same line to one. Or, check the line status."
+BBC7,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBC8,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBC9,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBD1,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBD2,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BBD3,"CPU module type error.
+The installed CPU module is not a safety CPU module.",Check the CPU module installed.
+BC00,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BD85,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BD86,"CPU error is detected.
+A hardware error is detected on any of the safety CPU module, safety master module and safety base.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BD87,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+BF00,"System error
+* The OS detected some error.","Take the following steps:
+(1) Check if the power supply module, PLC CPU and QS0J61BT12 are correctly mounted on the base unit.
+(2) Confirm that the system is operated within the general specifications of the PLC CPU.
+(3) Check if the power capacity is sufficient. 
+(4) A probable cause is a hardware error.Check if the PLC CPU, base unit and QS0J61BT12 are normal referring to the manual for each module.Or, replace any of the modules to check the operation.
+(5) If the above does not solve the problem, please consult your local Mitsubishi system service center or representative, explaining a detailed description of the error occurrence, the GX Developer project and/or the error code."
+</ERRCODE>,,

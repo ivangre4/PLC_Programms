@@ -1,0 +1,584 @@
+<GROUP>,,,
+3E8-3FFF,Errors detected by the CPU module,"Troubleshooting in the QCPU User's Manual.(Hardware Design, Maintenance and Inspection)",********.csv
+4000-4FFF,Errors detected by the CPU module,"Troubleshooting in the QCPU User's Manual.(Hardware Design, Maintenance and Inspection)",********.csv
+7000-7FFF,"Errors detected by the serial communication module, etc.",Troubleshooting in the Serial Communication Module User's Manual.,ERR_QJ71C24.csv
+B000-BFFF,Errors detected by the CC-Link system,Troubleshooting in the CC-Link System Master/Local Module User's Manual.,ERR_QJ61BT11.csv
+C000-CFFF,Errors detected by the Ethernet interface module,Troubleshooting in the Ethernet Interface Module User's Manual.,ERR_QJ71E71.csv
+E000-EFFF,Errors detected by the CC-Link IE controller network module.,Troubleshooting in the CC-Link IE Controller Network Reference Manual.,ERR_QJ71GP21.csv
+F000-FFFF,Errors detected in the MELSECNET/H or MELSECNET/10 network system,Troubleshooting in the MELSECNET/H or MELSECNET/10 Network System Reference Manual.,ERR_QJ71LP21.csv
+</GROUP>,,,
+<ERRCODE>,,,
+0055,The external device requested to write data while the programmable controller CPU is in RUN state when the online change is disabled in [PLC parameter] -> [Built-in Ethernet port] in GX Developer.,"Enable the online change in [PLC parameter]-> [Built-in Ethernet port] in GX Developer and then write data.
+Stop the CPU module and then write data.",
+0A8C,The count of remote password mismatches reached the upper limit.,"Check for illegal accesses. If any illegal access is identified, take actions such as disabling communication of the connection.
+If no illegal access is identified, clear the error and perform the following.
+(Clearing the error also clears the count of remote password mismatches.)
+* Check if the remote password sent is correct.
+* Check if the remote password has been locked.
+* Check if concurrent access was made from multiple devices to one connection by UDP.
+* Check if the upper limit of the remote password mismatch count is too low.",
+0A96,Time setting failed when the programmable controller was powered ON or reset.,"* Check if the time setting function is set up correctly.
+* Check if the specified SNTP server is operating normally, or if any failure has occurred on the network connected to the specified SNTP server computer.",
+4000,Serial communication sum check error,"* Connect the serial communication cable correctly.
+* Take noise reduction measures.",
+4001,Unsupported request was executed.,"* Check the command data of the MC protocol, etc.
+* Check the CPU module model name selected in the peripheral device.",
+4002,Unsupported request was executed.,"* Check the command data of the MC protocol, etc.
+* Check the CPU module model name selected in the peripheral device.",
+4003,Command for which a global request cannot be performed was executed.,"Check the command data of the MC protocol, etc."
+4004,"Any operation for the CPU module is prohibited by the system protect function provided against the following events.
+* The system protect switch is ON.
+* The CPU module is starting.","* Set the system protect switch of the CPU module to OFF.
+* Perform operation again after the CPU module has completed starting."
+4005,The volume of data handled according to the specified request is too large.,"Check the command data of the MC protocol, etc."
+4006,Serial communication could not be initialized.,"* Check with the external device maker for the support condition.
+* Check the CPU module model name selected in the peripheral device."
+4008,"The CPU module is BUSY.
+(The buffer is not vacant).","After the free time has passed, reexecute the request."
+4010,"Since the CPU module is running, the request contents cannot be executed.",Execute after setting the CPU module to STOP status.
+4013,"Since the CPU module is not in a STOP status, the request contents cannot be executed.",Execute after setting the CPU module to STOP status.
+4021,The specified drive memory does not exist or there is an error.,"* Check the specified drive memory status.
+* After backing up the data in the CPU module, execute PLC memory format."
+4022,The file with the specified file name or file No. does not exist.,Check the specified file name and file No.
+4023,The file name and file No. of the specified file do not match.,Delete the file and then recreate the file.
+4024,The specified file cannot be handled by a user.,Do not access the specified file.
+4025,The specified file is processing the request from the other peripheral device.,"Forcibly execute the request, or make the request again after the processing from the other peripheral device is completed."
+4026,The file password or drive keyword set to the target drive (memory) must be specified.,Make access after specifying the file password or drive keyword set to the target drive (memory).
+4027,The specified range exceeds the file range.,Check the specified range and access within that range.
+4028,The same file already exists.,"Forcefully execute the request forcibly.
+Or reexecute after changing the file name."
+4029,The specified file capacity cannot be obtained.,"Revise the specified file contents.
+Or reexecute after cleaning up and reorganizing the specified drive memory."
+402A,The specified file is abnormal.,"After backing up the data in the CPU module, execute PLC memory format."
+402B,The request contents cannot be executed in the specified drive memory.,"Execute again after setting the CPU module to the STOP status.
+Execute PLC memory arrangement to increase the continuous free space of the drive (memory)."
+402C,The requested operation cannot be executed currently.,Execute again after a while.
+4030,The specified device name cannot be handled.,Check the specified device name.
+4031,The specified device No. is outside the range.,"* Check the specified device No.
+* Check the device assignment parameters of the CPU module."
+4032,"There is a mistake in the specified device qualification.
+The unusable device name (TS,TC,SS,SC,CS,CC) must be specified in MC protocol random reading, random writing (word), monitor registeration and monitor command.","* Check the specified device qualification method.
+* Check the specified device name."
+4033,Writing cannot be done because the specified device is for system use.,"Do not write the data in the specified device, and do not turn on or off."
+4034,Cannot be executed since the completion device for the dedicated instruction cannot be turned ON.,"Since the completion device for the target station CPU module cannot be turned ON by the SREAD instruction/ SWRITE instruction, execute again after setting the operating status of the target station CPU module to the RUN status."
+4040,The request contents cannot be executed in the specified intelligent function module.,Check whether the specified module is the intelligent function module having the buffer memory.
+4041,The access range exceeds the buffer memory range of the specified intelligent function module.,Check the header address and access number of points and access using a range that exists in the intelligent function module.
+4042,The specified intelligent function module cannot be accessed.,"* Check that the specified intelligent function module is operating normally.
+* Check the specified module for a hardware fault."
+4043,The intelligent function module does not exist in the specified position.,Check the I/O No. of the specified intelligent function module.
+4044,A control bus error occurred during access to the intelligent function module.,Check the specified intelligent function module and other modules and base units for a hardware fault.
+4050,The request contents cannot be executed because the memory card write protect switch is on.,Turn off the memory card write protect switch.
+4051,The specified device memory cannot be accessed.,"Check the following and make it countermeasures.
+* Is the memory one that can be used?
+* Is the specified drive memory correctly installed?"
+4052,The specified file attribute is read only so the data cannot be written.,"Do not write data in the specified file.
+Or change the file attribute."
+4053,An error occurred when writing data to the specified drive memory.,"Check the specified drive memory.
+Or reexecute write after changing the corresponding drive memory."
+4054,An error occurred when deleting the data in the specified drive memory.,"Check the specified drive memory.
+Or re-erase after replacing the corresponding drive memory."
+4060,The online debug function is being executed by the other peripheral device.,"* Execute the function again after the operation of the other peripheral device has ended.
+* When the operation was suspended by the other peripheral device, execute the function again after executing it on the other peripheral device to normally complete the operation."
+4061,Communication of the online debug function was unsuccessful.,"* Execute communication after the registering the online debug function (e.g.online program change/trace/ conditional monitor).
+* Execute again after checking the communication route such as the communication cable."
+4063,The registered number of locked files exceeded the maximum value.,Execute again after file access by the other peripheral device has ended.
+4064,The specified data of the online debug function is incorrect.,"* Check the set data of the online debug function (e.g. online program change/trace/conditional monitor).
+* Execute again after checking the communication route such as the communication cable."
+4065,The device allocation information differs from the parameter.,Check the device assignment parameters of the CPU module or the device assignment of the request data.
+4066,The specified drive keyword/file password is wrong.,"* Correct the drive keyword of the specified drive.
+* Correct the file password of the specified file."
+4067,Monitor communication was unsuccessful.,"* Check the system area capacity of the user setting specified for PLC memory format.
+* Execute again after checking the communication route such as the communication cable."
+4068,Operation is disabled since the same operation is being executed from the other peripheral device.,Execute the function again after the operation from the other peripheral device has been ended.
+406A,The drive (memory) number that cannot be handled (other than 0 to 4) was specified.,Check the specified drive and specify the correct drive.
+4070,The program not yet corrected and the one corrected by online program change are different.,"Execute read from PLC to make the program of the peripheral device the same as that of the CPU module, and then execute online program change again."
+4080,Request data error,"Check the request data specified in the MC protocol, etc."
+4081,The sort subject cannot be detected.,Check the data to be searched.
+4082,The specified command is executing and therefore cannot be executed.,Execute the command again after the request from the other peripheral device is completed.
+4083,An attempt was made to perform operation for the program not registered to the parameters.,Register the program to the parameters.
+4084,"The specified pointer P, I did not exist.","Check the pointer P, I in the specified data."
+4085,"Pointer P, I cannot be specified because the program is not specified in the parameter.","Specify pointer P, I after registering the program to be executed in the parameter."
+4086,"Pointer P, I has already been added.",Check the pointer No. to be added and make correction.
+4087,"Trying to specify too many pointer P, I.","Check the specified pointer P, I and make a correction."
+4088,"* The specified step No. is not the start of the instruction.
+* Program stored in the CPU is different from the relevant program.","* Check and correct the specified step No.
+* Read from PLC to make the program of the peripheral device the same as that of the CPU module, and write to PLC during RUN again."
+4089,An attempt was made to insert/delete the END instruction by online program change.,"* Check the specified program file contents.
+* Write the program after setting the CPU module to the STOP status."
+408A,The file capacity was exceeded by the write during Run.,"* Check the capacity of the specified program file.
+* Write the program after setting the CPU module to the STOP status."
+408B,The remote request cannot be executed.,"* Reexecute after the CPU module is in a status where the mode request can be executed.
+* For remote operation, set the parameter to ""Enable remote reset""."
+408C,"An attempt was made to remote-start the program, which uses the CHK instruction, as a low speed program.",* The program including the CHK instruction cannot be executed at low speed. Execute again after checking the program.
+408D,The instruction code that cannot be handled exists.,"* Check whether the model of the used CPU module is correct or not.
+* The sequence program where online program change was attempted includes the instruction that cannot be handled by the CPU module model name set in the project. Reexamine the sequence program and delete that instruction."
+408E,The write step is illegal.,"* Write the program after setting the CPU module to the STOP status.
+* The starting position of online program change is not specified with the correct program step No. Check whether the used peripheral device supports the CPU module model name and CPU module version set in the project."
+40A0,A block No. outside the range was specified.,Check the setting contents and make a correction.
+40A1,A number of blocks that exceeds the range was specified.,Check the number of settings and make a correction.
+40A2,A step No. that is outside the range was specified.,Check the setting contents and make a correction.
+40A3,Step range limit exceeded,Check the number of settings and make a correction.
+40A4,The specified sequence step No. is outside the range.,Check the setting contents and make a correction.
+40A5,The specified device is outside the range.,Check the number of settings and make a correction.
+40A6,The block specification pattern and step specification pattern were wrong.,Check the setting contents and make a correction.
+40B0,The drive (memory) specified in SFC file operation is wrong.,Check the setting contents and make a correction.
+40B1,The SFC program specified in SFC file operation does not exist.,Check the specified file name and make a correction.
+40B2,The program specified in SFC file operation is not an SFC program.,Check the specified file name and make a correction.
+40B3,"Using online program change of SFC, an attempt was made to execute rewrite operation of the ""SFC dedicated instruction"", such as the ""STEP start instruction or transition start instruction"", that shows an SFC chart.
+(SFC dedicated instruction cannot be written during RUN.)",Write the program after setting the CPU module to the STOP status.
+4100,CPU module hardware fault,Change the CPU module.
+4101,Serial communication connection was executed for a different CPU module series.,Check the CPU module series.
+4102,An attempt was made to erase the Flash ROM during use of the file register.,Execute again after setting the CPU module to the STOP status.
+4103,The instruction written during RUN is wrong or illegal.,"Execute online program change again, or write the program after setting the CPU module to the STOP status."
+4105,CPU module internal memory hardware fault,Change the CPU module.
+4106,The command cannot be executed since the CPU module is performing system initialization processing.,Execute the operation again after the CPU module has started.
+4107,An attempt was made to perform the operation of the function unavailable for the target CPU module model name.,Do not execute the function unsupported by the target CPU module.
+4108,Operation cannot be made normally by device monitor/test.,"Execute device monitor/test again. Before execution, check that access is not made to the access prohibited area."
+4109,"The specified operation cannot be executed since the monitoring, set the condition for other application in same computer, is in execution.",Execute the request again after deregistering the monitoring condition on the same screen.
+410A,The specified command cannot be executed because of online prgram change.,Execute the request again after the online program change.
+410B,The registration of monitoring condition was canceled because of online program change.,Execute the registration of monitoring condition again after the online program change.
+4110,"Since the CPU module is in a stop error status, it cannot execute the request.",Execute the request again after resetting the CPU module.
+4111,The requested operation cannot be performed since the other CPU modules have not yet started in the multiple CPU system.,Execute the request again after the other CPU modules have started.
+4121,The specified drive (memory) or file does not exist.,Execute again after checking the specified drive (memory) or file.
+4122,The specified drive (memory) or file does not exist.,Execute again after checking the specified drive (memory) or file.
+4123,The specified drive (memory) is abnormal.,"Execute PLC memory format to make the drive (memory) normal.
+In the case of the Flash ROM, check the data to be written to the Flash ROM, and write them to the Flash ROM."
+4124,The specified drive (memory) is abnormal.,"Execute PLC memory format to make the drive (memory) normal.
+In the case of the Flash ROM, check the data to be written to the Flash ROM, and write them to the Flash ROM."
+4125,The specified drive (memory) or file is performing processing.,Execute again after a while.
+4126,The specified drive (memory) or file is performing processing.,Execute again after a while.
+4127,File password mismatch,Execute again after checking the file password.
+4128,File password mismatch with copy destination,Execute again after checking the file password.
+4129,Cannot be executed since the specified drive (memory) is ROM.,Execute again after changing the target drive (memory).
+412A,Cannot be executed since the specified drive (memory) is ROM.,Execute again after changing the target drive (memory).
+412B,The specified drive (memory) is write-inhibited.,Execute again after changing the write inhibit condition or drive (memory).
+412C,The specified drive (memory) is write-inhibited.,Execute again after changing the write inhibit condition or drive (memory).
+412D,The specified drive (memory) does not have enough free space.,Execute again after increasing the free space of the drive (memory).
+412E,The specified drive (memory) does not have enough free space.,Execute again after increasing the free space of the drive (memory).
+412F,The drive (memory) capacity differs between the drive (memory) copy destination and copy source.,Execute again after checking the drive (memory) copy destination and copy source.
+4130,The drive (memory) type differs between the drive (memory) copy destination and copy source.,Execute again after checking the drive (memory) copy destination and copy source.
+4131,The file name of the file copy destination is the same as that of the copy source.,Execute again after checking the file names.
+4132,The specified number of files does not exist.,Execute again after checking the specified data.
+4133,The specified drive (memory) has no free space.,Execute again after increasing the free space of the drive (memory).
+4134,The attribute specification data of the file is wrong.,Execute again after checking the specified data.
+4135,The date/time data of the peripheral device (personal computer) is beyond the range.,Execute again after checking the clock setting of the peripheral device (personal computer).
+4136,The specified file already exists.,Execute again after checking the specified file name.
+4137,The specified file is read-only.,Execute again after changing the condition of the specified file.
+4138,Simultaneously accessible files exceeded the maximum.,Execute again after decreasing file operations.
+4139,The specified file has exceeded the already existing file range.,Execute again after checking the size of the specified file.
+413A,The specified file has exceeded the already existing file size.,Execute again after checking the size of the specified file.
+413B,The same file was accessed simultaneously from different peripheral devices.,Execute again after a while.
+413C,The specified file is write-inhibited.,Execute again after changing the file condition.
+413D,The specified file capacity cannot be secured.,Execute again after increasing the capacity of the specified drive (memory).
+413E,Operation is disabled for the specified drive (memory).,Execute again after changing the target drive (memory).
+413F,The file is inhibited from write to the standard RAM.,Execute again after changing the specified drive (memory).
+4150,An attempt was made to format the drive protected by the system.,Do not format the target drive (memory) as it cannot be formatted.
+4151,An attempt was made to delete the file protected by the system.,Do not delete the target file as it cannot be deleted.
+4160,The registered number of forced inputs/outputs exceeded the maximum value.,Deregister the unused forced inputs/outputs.
+4165,The multiple-block online change system file does not exist.,Execute again after securing the area that enables multiple-block online change at the time of PLC memory format.
+4166,Cannot be executed since file batch online change is being made by the same starting source.,"Since the file batch online change executed previously remains abnormally terminated for some reason (example: communication disturbance during execution), file batch online change is disabled.
+Forcibly perform new file batch online change."
+4167,Cannot be executed since file batch online change is being made from the other starting source.,"Since the file batch online change executed previously from the other communication route remains abnormally terminated for some reason (example: communication disturbance during execution), file batch online change is disabled.
+If file batch online change is not being executed by the other peripheral device, forcibly perform new file batch online change."
+4168,The registered number of device test with executing condition exceeds 32.,"Deregister the device test with executing condition in CPU module, or decrease the number of registering device test with executing condition at one time."
+4169,The device test with executing condition has never been registered.,Deregister the device test with executing condition after checking the registered number of device test with executing condition in CPU module.
+416A,"The specified executing condition does not exist.
+(Device test with executing condition)","Check whether the specified executing conditions (program, step No. operation timing, device name) in deregistering are registered."
+416B,"The specified program is SFC program.
+(Device test with executing condition)",Check the specifing program name in de/registering the device test with executing condition.
+414A,Operation was executed for the intelligent function module of the non-control group in the multiple CPU system.,Execute the operation again from the control CPU of the target module.
+414C,The I/O address of the specified CPU module is wrong.,Execute again after checking the I/O address of the specified CPU module.
+41C1,The format information data of the specified drive (memory) is abnormal.,"The file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41C2,File open specification data for file access is wrong.,Execute again after checking the specification data.
+41C3,Simultaneously accessible files exceeded the maximum.,Execute again after decreasing file operations.
+41C4,Simultaneously accessible files exceeded the maximum.,Execute again after decreasing file operations.
+41C5,The specified file does not exist.,Execute again after checking the file.
+41C7,The specified file or drive (memory) does not exist.,Execute again after checking the file or drive (memory).
+41C8,The specified file has exceeded the already existing file range.,"Execute again after checking the size of the specified file.
+If the error recurs after re-execution, the file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41C9,"Access to the file sector was unsuccessful.
+The format information data of the target drive  (memory) is abnormal.","After backing up the data in the CPU module, execute PLC memory format."
+4170,The passward is wrong.,"Check the specified remote passward then, execute the lock/unlock processing of the remote password again."
+4171,The port for communication use is at remote passsword locking status.,Execute communication after unlocking the remote password processing.
+4174,Requested for a wrong module to unlock remote password.,"* Stop transmitting from several modules simultaneously when setting a remote password and using User Datagram Protocol (UDP) in MELSOFT connection.
+* The MELSOFT connection can be used with Transmission Control protocol (TCP) when setting a remote password."
+4176,Communication error occured in direct connection.,"* Do not specify the direct connection when using other connection setting.
+* Do not turn off the CPU power during communication, reset the power, and plug out the cable in direct connection."
+4178,"* File operation is disabled since File Transfer Protocol (FTP) function is in operation.
+* Online operation that requires file access is performed while File Transfer Protocol (FTP) function is in operation.",Retry after the operation for FTP function is completed.
+4180,System error.(The setting data in OS is abnormal.),"* Check whether the power module and the programmable controller CPU are attached properly.
+* Check whether the systemÅfs use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware must be abnormal. Please contact with system service stations, agencies, or branch offices nearby and consult forl the problems."
+4181,Transmission to the receiving modules is unsuccessful.,"* Check the receiving module operation.
+* Check the status of the lines, such as cables, hubs and routes,connected to receiving modules.
+* Some line packets may be engaged. Retry to communicate a little while later."
+4182,Communication with receiving modules caused a time-out error.,"* Check the receiving module operation.
+* Check the status of the lines such as a cable, a hub and a route to receiving modules.
+* Some line packets may be engaged. Retry to communicate a little while later."
+4183,Communication with receiving modules was interrupted.,"* Check the receiving module operation.
+* Check the status of the lines such as cables, hubs and routes connected to receiving modules."
+4184,"* Communication processing buffer has been ran out since requests were consecutively received in MC protocol.
+* Communication processing buffer has been ran out since received data read is not performed or cannot keep up with the volume. 
+* Communication processing is not available since the communication processing buffer has been ran out. ","* For MC protocol, send a request after receiving a response to the previous request.
+* For socket communication, enable received data read.
+* For socket communication, decrease the number of data sent from the target device."
+4185,"* The connection to the target device is disconnected before sending a response using MC protocol.
+* The connection to the target device is disconnected during communication.","* For MC protocol, keep the connection until a response is sent.
+* Keep the connection until a sequence of communication is completed.
+* Other error such as 4184H may be the cause. If any other error has occurred, take corrective action of that error."
+4186,System error (The argument data in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4187,System error (The wait processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4188,System error (The data length in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4189,System error (The protocol information in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418A,System error (The address data of communicating module in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418B,System error (The protocol information in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418C,System error (The protocol specification processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418D,"System error
+ÅiThe typed data in OS is abnormal.)","* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418E,System error (The expedited data processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+418F,System error (The protocol information in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4190,System error (The protocol information in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4191,System error (The address data of communicating module in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4192,System error (The host module address processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4193,System error (The transmission processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4194,System error (The transmission processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4195,System error (The transmission processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+"
+4196",System error (The transmission processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4197,System error (The connection processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4198,System error (The connection processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+4199,System error (The connection termination processing is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+419A,System error (The connection processing in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+419B,System error (The connection termination processing is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+419C,System error (The processing order in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+419D,System error (The processing order in OS is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system service, agency, or branch office nearby and tell the problems."
+419E,Connection to the module was unsuccessful or interrupped.,"* Check the receiving module operation.
+* Check the status of the lines such as a cable, a hub and a route to receiving modules
+* Retry to connect a little while later, if the error occurred in communication."
+419F,System error (The I/O control processing is abnormal.),"* Check whether the power module and programmable controller CPU are attached properly.
+* Check whether the system use environment is within the range of the programmable controller CPU genaral specifications.
+* Check whether the power capacity is sufficient.
+* Reset the CPU module.
+If the error is shown once again, the CPU module hardware is abnormal. Please contact with system"
+41A0,Data cannot be sent since the target device has no free space in receive area (TCP window size is zero).,"* Retry after a while
+* Check the behavior of the target device.
+* Check whether the target device is processing data receiving.
+* Check whether the QnUDE(H)CPU is sending any unnecessary data."
+41A1,The port number setting for the Built-in Ethernet port QCPU is invalid.,Correct the port number.
+41A2,The port number setting for the target device is invalid.,Correct the port number.
+41A3,"* For TCP/IP, the same Host station port No. is specified as MC protocol.
+* For TCP/IP, a connection with the same host station No. and the same destination port No. are already specified to one communication target.","* Specify a port number that is not duplicated with that of MC protocol.
+* Review port numbers of the Built-in Ethernet port QCPU and correct if duplicated."
+41A4,"* For UDP/IP, the same Host station port No. is specified as MC protocol.
+* For UDP/IP, the specified host station No. is duplicated.","* Specify a port number that is not duplicated with that of MC protocol.
+* Review port numbers of the Built-in Ethernet port QCPU and correct if duplicated."
+41A5,The IP address setting of the target device for OPEN processing is invalid.,"Correct the IP address. Specify A, B, or C for the class."
+41A6,Connection was not established in OPEN processing for TCP connection.,"* Check the bihavior of the target device.
+* Check OPEN processing of the target device.
+* Correct the port No. of the Built-in Ethernet port QCPU and the IP address, port No., and open processing method of the target device.
+* Check whether the cables are securely connected."
+41A8,Data length is out of permissible range.,"* Correct the data length.
+* If the data is longer than the range, split the data and send them."
+41AB,Failed to send data due to resend timeout in TCP.,"* Review the IP address and Ethernet address of the target device.
+* Check whether the target device has the ARP function. If not, communicate with the one that has the ARP function.
+* Check the bihavior of the target device.
+* The line may be congested with packets. Resend data after a while.
+* Check whether the cables are securely connected."
+41AC,The target device cannot be found.,"* Check the bihavior of the target device.
+* Check whether the cables are securely connected."
+41AD,Data cannot be send due to no connection or disconnection of the cable.,"* Check whether the cables are securely connected.
+* Check the line status by PING test from the target device.
+* Check the status of Built-in Ethernet port QCPU by self diagnosticÅ@test (Built-in Ethernet port QCPU reset)
+* Send data again."
+41B4,The connection number setting is invalid.,"* Specify the connection No. within 1 to 16.
+* Check whether ""Socket communication"" is selected for ""Open system"" parameter."
+41B6,The specified connection has already completed OPEN processing.,Perform CLOSE processing and then OPEN processing.
+41B7,The specified connection has not completed OPEN processing.,Reexecute after OPEN processing is completed.
+41B9,"* Contents of control data is not correct.
+* Open instruction was executed through open settings parameter even though parameters are not set for ""Open settings"".","* Correct the contents of control data.
+* Configure the open settings parameters or execute the OPEN instruction through control data."
+41CA,"Access to the file sector was unsuccessful.
+The format information data of the target drive  (memory) is abnormal.","After backing up the data in the CPU module, execute PLC memory format."
+41CB,The file name is specified in a wrong method.,Execute again after checking the file name.
+41CC,The specified file does not exist.,Execute again after checking the file.
+41CD,Access to the file is inhibited by the system.,Do not access the specified file.
+41CE,The specified file is write-disabled since its attribute is read-only.,The specified file is write-inhibited. Execute again after checking the attribute.
+41CF,The specified drive (memory) capacity was exceeded.,Execute again after checking the drive (memory) capacity.
+41D0,The specified drive (memory) has no free space.,Execute again after increasing the free space of the drive (memory).
+41D1,The file name is specified in a wrong method.,"Execute again after checking the file name.
+If the error recurs after re-execution, the file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41D4,The specified file has exceeded the already existing file range.,"Execute again after checking the size of the specified file.
+If the error recurs after re-execution, the file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41D5,The file of the same name exists.,"Forcibly execute the request, or execute after changing the file name."
+41D6,The format information data of the specified drive  (memory) is abnormal.,"The file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41D7,The format information data of the specified drive  (memory) is abnormal.,"The file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41D8,The specified file is being accessed.,Execute again after a while.
+41DF,The specified drive (memory) is write-protected.,Execute again after canceling the write protect of the specified drive (memory).
+41E0,The specified drive (memory) is abnormal or does not exist.,"* Execute again after checking whether the memory card has been installed.
+* After backing up the data, execute PLC memory format."
+41E1,Access to the flash ROM was unsuccessful.,"* After backing up the data, execute write to PLC (Flash ROM).
+* Execute again after checking whether the specified drive is the Flash ROM card and whether the memory card size is correct."
+41E4,Access to the memory card was unsuccessful.,"* Execute again after checking whether the memory card has been installed.
+* Execute again after replacing the memory card.
+* After backing up the data, execute PLC memory format."
+41E7,The format information data of the specified drive (memory) is abnormal.,"The file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41E8,The format information data of the specified drive  (memory) is abnormal.,"The file information data may be corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41E9,The specified file is being accessed.,Execute again after some time.
+41EB,The file name is specified in a wrong method.,Execute again after checking the file name.
+41EC,The file system of the specified drive (memory) is logically corrupted.,"The file information data may have been corrupted.
+After backing up the data in the CPU module, execute PLC memory format."
+41ED,"The specified drive (memory) does not have continuous free space.
+(The free space for file is sufficient but the continuous free space is insufficient.)",Execute again after deleting unnecessary files or executing PLC memory arrangement.
+41EF,Creation of power failure backup for the specified drive (memory) was unsuccessful.,Execute again after checking whether the memory card has been installed.
+41F0,The power failure backup data of the specified drive (memory) are corrupted.,Execute again after checking whether the memory card has been installed.
+41F1,The power failure backup for the specified drive (memory) has a repair command.,Execute again after checking whether the memory card has been installed.
+41F2,Operation cannot be performed since the specified drive (memory) is Flash ROM.,"Execute again after checking the specified drive (memory).
+When performing operation for the Flash ROM, use write to PLC (Flash ROM)."
+41F8,The identical data is being accessed by the other peripheral devices.,"PLC write to the program memory or transfer to the backup memory is in execution.
+Access the data again after checking that the above-mentioned function has been completed."
+41FA,Program was written beyond the area where the program can be executed.,Execute again after reducing either the already written program or newly written program.
+41FB,Operation is being performed for the file already specified for the same peripheral device.,Execute again after the currently performed operation is completed.
+41FC,An attempt was made to erase the drive (memory) being used.,The specified drive (memory) is being used and cannot be erased.
+41FD,There are no data written to the Flash ROM.,Write a file by executing write to PLC (Flash ROM).
+41FE,The memory card has not been inserted.,Insert or re-insert the memory card.
+41FF,The memory card type differs.,Check the memory card type.
+4200,The requested processing cannot be performed since online module change is not enabled in the setting of the multiple CPU setting parameter.,"Do not make a request where an error occurred, or make a request again after enabling online module change in the setting of the multiple CPU setting parameter."
+4201,The requested processing cannot be performed since online module change is enabled in the setting of the multiple CPU setting parameter.,"Do not make a request where an error occurred, or make a request again after disabling online module change in the setting of the multiple CPU setting parameter."
+4202,The requested processing cannot be performed since an online module change is being performed.,Make a request again after completion of the online module change.
+4203,The module mounted on the main base unit cannot be replaced online since the extension base unit is mounted.,"Take following procedures to replace the module mounted on the main base unit.
+* Switch the system where the target module to be replaced is mounted to the standby system.
+* Turn OFF power supply of the standby system.
+* Replace the target module."
+4204,The specified module of the extension base unit cannot be replaced online since it is connected to the standby system.,Change the connection destination to the control system and perform the online module change again. (This corrective action can be made to the module mounted on the extension base unit only.)
+4210,The specified head I/O number is outside the range.,"When making a request, specify the head I/O number of the module that will be changed online."
+4211,An online module change request is abnormal.,Check the command used to make a request.
+4212,An online module change is already being made for other equipment.,"Make a request again after completion of the online module change, or continue after changing the connection path."
+4213,The specified head I/O number differs from the one registered for online module change.,"When making a request, specify the head I/O number of the module being changed online."
+4214,The specified module differs from the one changed online.,Make a request again after mounting the module that is the same as the one changed online.
+4215,The specified module does not exist.,"When making a request, specify the head I/O number of the module that will be changed online, or make a request again after mounting the module."
+4216,The specified module is faulty.,Make a request again after changing the module.
+4217,There is no response from the specified module.,Continue the online module changing operation.
+4218,The specified module is incompatible with online module change.,"Do not make a request where an error occurred, or make a request again to the module compatible with online module change."
+4219,The specified module is mounted on the extension base unit of the type that requires no power supply module.,Do not make a request to any modules mounted on the extension base unit of the type that requires no power supply module and the main base unit.
+421A,The specified module is not in a control group.,Make a request to the CPU module that controls the specified module.
+421B,An error occurred in the setting of the initial setting parameter of the intelligent function module.,Resume processing after checking the contents of the intelligent function module buffer memory.
+421C,Cannot be executed as the parameter file has been rewritten.,Operation cannot be performed. Operation is interrupted.
+421D,System switching occurs during the online module change.,"Connect GX Developer to the new control system and check the status of the online module change. According to the status of online module change, take procedures for it."
+421E,"The information of the online module change cannot be sent to the standby system. When the system switching occurs during the online module change, the online module change may not be continued.","The tracking cable may be faulty or the standby system may have an error.
+* Check the mounting status of the tracking cable or replace the tracking cable.
+* Check the status of the standby system. When a stop error was detected by the standby system, perform troubleshooting."
+421F,The module mounted on the extension base unit cannot be replaced online when the connection destination is set to the standby system in the separate mode.,"* Set the connection destination of a programming tool to the present control system.
+* Perform the online module change to the module mounted on the extension base unit again."
+4240,"Any of the following unsupported operations was executed for the standby system.
+* Operation mode change
+* System switching
+* Memory copy from control system to standby system",Execute the operation again after changing the transfer setup to the control system.
+4241,Communication cannot be made since the standby system has been powered off or reset or is in a user watchdog timer error or CPU module hardware fault status.,Request communication after powering on the standby system or setting its Reset switch to the neutral position.
+4242,Communication with the standby system cannot be made since the tracking cable is faulty or disconnected.,Cannot be executed since the tracking cable is disconnected or faulty. Execute again after checking the tracking cable for disconnection or changing it for a normal one.
+4243,The command cannot be executed since the standby system is in stop error.,Execute again after removing the stop error of the standby system.
+4244,The command cannot be executed since the operation status differs from that of the standby system.,Execute again after placing the standby system in the same operation status (RUN/STOP) as the control system.
+4245,Other system CPU module status error,Check that the other system CPU module has normally started up and that the tracking cable is connected.
+4246,The command cannot be executed since operation mode (separate/backup) change or system (control/standby system) switching is being executed.,Execute again after the operation mode change or system switching being executed is completed.
+4247,Memory copy from control system to standby system is already being executed.,"Execute again after memory copy from control system to standby system is completed.
+Check the following and take corrective action.
+* Is SM1596 of the control system or standby system ON?
+(ON: Memory copy being executed)
+Execute again after SM1596 has turned OFF since it is turned OFF by the system on completion of memory copy.
+* Is SM1597 of the control system ON?
+(ON: Memory copy completed)
+Execute again after turning OFF SM1597 of the control system."
+4248,"* Communication was made during system switching.
+* The system specified in the transfer setup (request destination module I/O number) does not exist.","* Execute again after system switching.
+* After checking whether the specified system exists or not, restart communication."
+4249,"The redundant system is not established.
+(Control system/standby system or System A/ System B not yet definite)","* Normally start the system as the redundant system.
+(Make communication again after establishing the system.)
+* Execute again after changing the transfer setup
+(request destination module I/O number) to ""No settings have been made"" (03FFH)."
+424A,The command that could not be processed was executed when the transfer setup (request destination module I/O number) is Control system/Standby system/System A/System B.,"Execute again after changing the transfer setup (request destination module I/O number) to ""No settings have been made"" (03FFH)."
+424B,The command cannot be executed since system switching is inhibited by the manual system switching enable flag (SM1592).,Manual system switching is inhibited by the manual system switching enable flag (SM1592). Execute again after turning ON SM1592.
+424C,The specified command cannot be executed during online program change operation.,Execute again after the online program change operation is finished.
+424D,The transfer setup or function unavailable for the debug mode was used.,"* Execute again after changing to the backup mode.
+* Execute again after changing the transfer setup
+(request destination module I/O number) to System A or control system."
+424E,The control system/standby system specifying method is not supported.,This function cannot be executed since it is not supported.
+424F,System switching was executed by the other condition during execution of system switching by GX Developer.,"Although system switching was executed from GX Developer, system switching was executed first by the other condition. Check the system for any problem and execute the operation again as necessary."
+4250,Sum check error occurred in tracking communication.,"Execute communication again after changing the tracking cable.
+If the same error recurs after the tracking cable is changed, the cause is the hardware fault of the CPU module.
+(Please contact your local nearest Mitsubishi or representative, explaining a detailed description of the problem.)"
+4251,The command cannot be executed in the separate mode.,Execute again after changing to the backup mode.
+4252,System switching was not executed since an error occurred in the redundant system compatible network module of the standby system.,"By monitoring SD1690 (other system network module No. that issued system switching request), identify the faulty redundant-compatible intelligent module of the standby system, then remove the module fault, and execute again."
+4253,"Since a communication error or system switching occurred during online program change to the control system CPU module, online program change to the standby CPU module cannot be executed.","Since a communication error or system switching occurred during execution of online program change to the control system CPU module, online program change redundant tracking was suspended.
+Execute online program change again after confirming that communication with the control system CPU module and standby system CPU module can be normally  made.
+When long time is taken for communication between GX Developer and control system CPU module or standby system CPU module, the error may be avoided by adjusting SD1710 (standby system online program change start waiting time)."
+4254,The command cannot be executed since an error was detected in the tracking communication hardware.,"The tracking cable may not be connected correctly, or the tracking communication hardware of the CPU module may be faulty. Check the connection status of the tracking cable.
+If the condition is not restored to normal after the cable connection status is corrected, the possible cause is the hardware fault of the CPU module."
+4255,The command cannot be executed since tracking communication is being prepared.,Tracking communication is being prepared when it is connected. Execute the operation again after a while (about 1 second).
+4256,The command cannot be executed since a time-out error occurred in tracking communication.,"The tracking cable may not be connected correctly, or the tracking communication hardware of the CPU module may be faulty. Check the connection status of the tracking cable.
+If the condition is not restored to normal after the cable connection status is corrected, the possible cause is the hardware fault of the CPU module."
+4257,The command cannot be executed since the host system CPU module is in a watchdog timer error or CPU module hardware fault status.,The command cannot be executed since the host system is in a watchdog timer error or CPU module hardware fault status. Execute again after checking the host system status.
+4258,Operation mode being changed (from backup mode to separate mode),Execute again after completing the operation mode change by changing the status from STOP to RUN using the RUN/STOP switch of the CPU module whose RUN LED is flickering or remote operation.
+4259,Operation mode change is being executed in the communication route different from the current one from the other peripheral device.,Execute again in the same communication route as the one where the operation mode change was executed.
+425B,"Although the communication was made via the intelligent function module mounted on the extension base unit, the combination of the connection destination specification (Redundant CPU specification) and the command is unsupported.",Change the combination of the connection destination specification and the command to the supported combination.
+425C,System switching cannot be made since the module mounted on the extension base unit is being replaced online.,Switch systems after the online module change has been completed.
+425D,Operation mode cannot be changed since the module mounted on the extension base unit is being replaced online.,Change the operation mode after the online module change has been completed.
+4A00,"* Access to the specified station cannot be made since the routing parameters are not set to the start source CPU module and/or relay CPU module.
+* For routing via a multiple CPU system, the control CPU of the network module for data routing has not started.
+* When System A/System B is not yet identified in a redundant system configuration, communication was made with the other station via the network module.","* Set to the related stations the routing parameters for access to the specified station.
+* Retry after a while, or start communication after confirming that the system for data routing has started.
+* In a redundant system configuration, connect the tracking cable, start System A/System B normally, and then restart communication."
+4A01,The network of the No. set to the routing parameters does not exist.,Check and correct the routing parameters set to the related stations.
+4A02,Access to the specified station cannot be made.,"* Check the network module/link module for an error or offline status.
+* Check to see if the network number/PC number setting has no mistake."
+4A03,A request for network test was issued.,"Check the request data of the MC protocol, etc."
+4B00,"An error occurred in the access destination or relay station, or the specified transfer setup (request destination module I/O number) is illegal.","* Take corrective action after checking the error that occurred at the specified access destination or the relay station to the accessed station.
+* Check the transfer setup (request destination module I/O number or PLC number) in the request data of the  MC protocol, etc."
+4B01,The target is not the No. 1 CPU of the multiple CPU system.,Execute the request for the No. 1 CPU of the multiple CPU system.
+4B02,The request is not addressed to the CPU module.,Perform operation for the module that can execute the specified function.
+4B03,"* The specified route is not supported by the specified CPU module version.
+* The communication target CPU is not mounted.",Check whether the specified route is supported or not
+4B04,The specified transfer setup (request destination module I/O number) is not supported.,"In the target setup, an illegal value is set as the head I/O number of the target module."
+4C00,The specified device is unavailable for the motion CPU or outside the device range.,Check the request data contents.
+4C08,There are a total of 33 or more DDWR and DDRD requests.,Execute again after reducing the number of DDWR and DDRD requests to be executed simultaneously.
+4C09,The specification of the requested CPU module No. is illegal.,Check the request data contents.
+C050,ASCII code data that cannot be converted to binary code is received when ASCII code communication is set in the communication data code setting. ,"Select the binary code communication in the communication data code setting, and restart the QnUDE(H)CPU. 
+Correct the data sent from the external side and send it again."
+C051,The number of read/write points is outside the allowable range. ,Correct the number of read/write points and send the data to the QnUDE(H)CPU again.
+C052,The number of read/write points is outside the allowable range. ,Correct the number of read/write points and send the data to the QnUDE(H)CPU again.
+C053,The number of read/write points is outside the allowable range. ,Correct the number of read/write points and send the data to the QnUDE(H)CPU again.
+C054,The number of read/write points is outside the allowable range. ,Correct the number of read/write points and send the data to the QnUDE(H)CPU again.
+C056,Read/Write request exceeds the maximum address.,"Correct the head address or the number of read/write points and send the data to the QnUDE(H)CPU again.
+(The maximum address must not be exceeded.)"
+C058,Request data length after ASCII-binary conversion does not match with data count in character area (part of text).,"Review and correct the content of the text area or the request data length of the header, and send the data to the QnUDE(H)CPU again. "
+C059,"Incorrect designation of command and subcommand.
+The command and subcommand are not applicable to the QnUDE(H)CPU.","Review the content of the request.
+Send a command and subcommand applicable to the QnUDE(H)CPU."
+C05B,The QnUDE(H)CPU cannot read from/write to the designated device. ,Examine the device to be read/written.
+C05C,"The content of a request is incorrect.
+(Requesting read/write in bit units to word devices.)","Correct the content of the request and send it to the QnUDE(H)CPU.
+(Correction of subcommand, etc.)"
+C05D,Monitor registration is not executed. ,Monitor after executing monitor registration. 
+C05F,The request could not be executed on the target programmable controller. ,"Correct the network number, PC number, request destination module I/O number and request destination module station number.
+Correct the content of the read/write request."
+C060,"The content of a request is incorrect.
+(Incorrect data was designated for bit devices, etc.)","Correct the content of the request and send it to the QnUDE(H)CPU.
+(Correction of data, etc.)"
+C061,Request data length does not match with the number of data in character area (part of text).,"Review and correct the content of the text area or the request data length of the header, and send the data to the QnUDE(H)CPU again. "
+C06F,"ASCII request message is received when the communication data code is set to binary code.
+Or, binary request message is received when the communication data code is set to ASCII code.
+(This error code is only registered in error history and does not return abnormal response.)","Send a request message matched with the communication data code setting.
+Change the communication data code setting to match with the request message."
+C070,Extension of device memory cannot be designated for the target station. ,Read/Write without designating extension.
+C0B5,Data that could not be processed by the programmable controller CPU/Ethernet module was designated.,"Review the content of the request.
+Cancel the current request."
+C200,There is an error in the remote password.,Review the remote password and then execute the remote password unlock/lock processing again.
+C201,"Remote password is locked on the port used for communication.
+Or, when the communication data code is set to ASCII code, subcommand and its subsequent cannot be converted to binary code because the remote password is locked. ",Unlock the remote password and then execute communication.
+C204,The device is different from the one requesting the remote password unlock.,Request the remote password lock processing from the external device that has requested the remote password unlock processing.
+</ERRCODE>

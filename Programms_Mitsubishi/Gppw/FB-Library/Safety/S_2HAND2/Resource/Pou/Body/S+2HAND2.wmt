@@ -1,0 +1,18 @@
+FUNCTION_BLOCK S+2HAND2 (*SF_TwoHandControlTypeII_V1_00*)
+ VAR_INPUT
+  Activate:BOOL:;(*activate FB*)
+  S_Button1:BOOL:;(*input of button 1*)
+  S_Button2:BOOL:;(*input of button 2*)
+ END_VAR
+ VAR_OUTPUT
+  Ready:BOOL:;(*indicates that the FB is activated*)
+  S_TwoHandOut:BOOL:;(*safety related output signal*)
+  Error:BOOL:;(*indicates that an error has occurred*)
+  DiagCode:INT:;(*diagnostic register*)
+ END_VAR
+ VAR
+  State:INT:;(*state register*)
+  State1:INT:;(*state register during one cycle*)
+  Work:INT:;(*error mask*)
+ END_VAR
+END_FUNCTION_BLOCK

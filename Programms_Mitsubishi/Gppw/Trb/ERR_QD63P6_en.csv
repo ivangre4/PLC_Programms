@@ -1,0 +1,118 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+044C,"Overflow error
+The present value A (Un\G10 and 11) / present value B (Un\G200 and 201) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y02)."
+0834,"Overflow error
+The present value A (Un\G40 and 41) / present value B (Un\G202 and 203) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y07)."
+0C1C,"Overflow error
+The present value A (Un\G70 and 71) / present value B (Un\G204 and 205) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y0C)."
+1004,"Overflow error
+The present value A (Un\G100 and 101) / present value B (Un\G206 and 207) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y11)."
+13EC,"Overflow error
+The present value A (Un\G130 and 131) / present value B (Un\G208 and 209) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y16)."
+17D4,"Overflow error
+The present value A (Un\G160 and 161) / present value B (Un\G210 and 211) exceeds the following range when the linear counter function is selected.
+-2147483648 to 2147483647","Perform preset (Y1B)."
+05DC,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G0 and 1) > ring counter upper limit value (Un\G2 and 3)' was made when the ring counter function was selected and the count enable command (Y04) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G0 and 1) is equal to or smaller than ring counter upper limit value (Un\G2 and 3)' is satisfied, and change the count enable command (Y04) from OFF to ON."
+09C4,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G30 and 31) > ring counter upper limit value (Un\G32 and 33)' was made when the ring counter function was selected and the count enable command (Y09) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G30 and 31) is equal to or smaller than ring counter upper limit value (Un\G32 and 33)' is satisfied, and change the count enable command (Y09) from OFF to ON."
+0DAC,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G60 and 61) > ring counter upper limit value (Un\G62 and 63)' was made when the ring counter function was selected and the count enable command (Y0E) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G60 and 61) is equal to or smaller than ring counter upper limit value (Un\G62 and 63)' is satisfied, and change the count enable command (Y0E) from OFF to ON."
+1194,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G90 and 91) > ring counter upper limit value (Un\G92 and 93)' was made when the ring counter function was selected and the count enable command (Y13) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G90 and 91) is equal to or smaller than ring counter upper limit value (Un\G92 and 93)' is satisfied, and change the count enable command (Y13) from OFF to ON."
+157C,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G120 and 121) > ring counter upper limit value (Un\G122 and 123)' was made when the ring counter function was selected and the count enable command (Y18) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G120 and 121) is equal to or smaller than ring counter upper limit value (Un\G122 and 123)' is satisfied, and change the count enable command (Y18) from OFF to ON."
+1964,"Ring counter upper/lower limit value setting error
+The setting which meets the condition 'ring counter lower limit value (Un\G150 and 151) > ring counter upper limit value (Un\G152 and 153)' was made when the ring counter function was selected and the count enable command (Y1D) was turned ON.","Set them so that the condition 'ring counter lower limit value (Un\G150 and 151) is equal to or smaller than ring counter upper limit value (Un\G152 and 153)' is satisfied, and change the count enable command (Y1D) from OFF to ON."
+0640,"Period setting error
+The period setting (Un\G9) was set to 0 and the periodic pulse counter start command (Y05) was turned ON.","Make the period setting (Un\G9) within the range from 1 to 65535 and change the periodic pulse counter start command (Y05) from OFF to ON."
+0A28,"Period setting error
+The period setting (Un\G39) was set to 0 and the periodic pulse counter start command (Y0A) was turned ON.","Make the period setting (Un\G39) within the range from 1 to 65535 and change the periodic pulse counter start command (Y0A) from OFF to ON."
+0E10,"Period setting error
+The period setting (Un\G69) was set to 0 and the periodic pulse counter start command (Y0F) was turned ON.","Make the period setting (Un\G69) within the range from 1 to 65535 and change the periodic pulse counter start command (Y0F) from OFF to ON."
+11F8,"Period setting error
+The period setting (Un\G99) was set to 0 and the periodic pulse counter start command (Y14) was turned ON.","Make the period setting (Un\G99) within the range from 1 to 65535 and change the periodic pulse counter start command (Y14) from OFF to ON."
+15E0,"Period setting error
+The period setting (Un\G129) was set to 0 and the periodic pulse counter start command (Y19) was turned ON.","Make the period setting (Un\G129) within the range from 1 to 65535 and change the periodic pulse counter start command (Y19) from OFF to ON."
+19C8,"Period setting error
+The period setting (Un\G159) was set to 0 and the periodic pulse counter start command (Y1E) was turned ON.","Make the period setting (Un\G159) within the range from 1 to 65535 and change the periodic pulse counter start command (Y1E) from OFF to ON."
+0712,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+0AFA,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+0EE2,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+12CA,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+16B2,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+1A9A,"Switch setting error
+The value of the intelligent function module switch setting made with MELSOFT application is incorrect.","Set the correct value using MELSOFT application and perform [Write to PLC].
+After that, power OFF and then ON the programmable controller CPU or reset it."
+071C,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0B04,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0EEC,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+12D4,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+16BC,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+1AA4,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0726,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0B0E,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0EF6,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+12DE,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+16C6,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+1AAE,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF and then ON the programmable controller CPU or reset it."
+0730,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+0B18,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+0F00,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+12E8,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+16D0,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+1AB8,"Module error
+An error occurred in the module.","Power OFF and then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+073A,"Hardware error
+An error occurred in the hardware.","Replace the module."
+0B22,"Hardware error
+An error occurred in the hardware.","Replace the module."
+0F0A,"Hardware error
+An error occurred in the hardware.","Replace the module."
+12F2,"Hardware error
+An error occurred in the hardware.","Replace the module."
+16DA,"Hardware error
+An error occurred in the hardware.","Replace the module."
+1AC2,"Hardware error
+An error occurred in the hardware.","Replace the module."
+</ERRCODE>,,

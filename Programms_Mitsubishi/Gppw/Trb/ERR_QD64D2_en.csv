@@ -1,0 +1,96 @@
+<GROUP>,,
+</GROUP>,,
+<ERRCODE>,,
+044C,"Overflow error
+The present value (Un\G12 and 13) exceeded the following range.
+- 2147483648 to 2147483647
+(Only for the linear counter function)","Perform the preset."
+0834,"Overflow error
+The present value (Un\G212 and 213) exceeded the following range.
+- 2147483648 to 2147483647
+(Only for the linear counter function)","Perform the preset."
+04B1,"Continuous comparison No.1 start point setting error
+The continuous comparison No.1 start point setting (Un\G50) is set to other than 1 to 16.","Set a value from 1 to 16."
+0899,"Continuous comparison No.1 start point setting error
+The continuous comparison No.1 start point setting (Un\G250) is set to other than 1 to 16.","Set a value from 1 to 16."
+04B2,"Continuous comparison No.2 start point setting error
+The continuous comparison No.2 start point setting (Un\G100) is set to other than 1 to 16.","Set a value from 1 to 16."
+089A,"Continuous comparison No.2 start point setting error
+The continuous comparison No.2 start point setting (Un\G300) is set to other than 1 to 16.","Set a value from 1 to 16."
+04BB,"Continuous comparison No.1 repeat point setting error
+The continuous comparison No.1 repeat point setting (Un\G51) is set to other than 1 to 16.","Set a value from 1 to 16."
+08A3,"Continuous comparison No.1 repeat point setting error
+The continuous comparison No.1 repeat point setting (Un\G251) is set to other than 1 to 16.","Set a value from 1 to 16."
+04BC,"Continuous comparison No.2 repeat point setting error
+The continuous comparison No.2 repeat point setting (Un\G101) is set to other than 1 to 16.","Set a value from 1 to 16."
+08A4,"Continuous comparison No.2 repeat point setting error
+The continuous comparison No.2 repeat point setting (Un\G301) is set to other than 1 to 16.","Set a value from 1 to 16."
+04C5,"Continuous comparison No.1 ON time setting error
+The continuous comparison No.1 ON time setting (Un\G52) is set to other than 1 to 10.","Set a value from 1 to 10."
+08AD,"Continuous comparison No.1 ON time setting error
+The continuous comparison No.1 ON time setting (Un\G252) is set to other than 1 to 10.","Set a value from 1 to 10."
+04C6,"Continuous comparison No.2 ON time setting error
+The continuous comparison No.2 ON time setting (Un\G102) is set to other than 1 to 10.","Set a value from 1 to 10."
+08AE,"Continuous comparison No.2 ON time setting error
+The continuous comparison No.2 ON time setting (Un\G302) is set to other than 1 to 10.","Set a value from 1 to 10."
+0514,"Count enable execution not possible error
+The count enable command (Y06) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y0B)
+* Coincidence output No.2 test command (Y0C)","Turn OFF the coincidence output test command which is ON."
+08FC,"Count enable execution not possible error
+The count enable command (Y16) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y1B)
+* Coincidence output No.2 test command (Y1C)","Turn OFF the coincidence output test command which is ON."
+051F,"Continuous comparison No.1 execution not possible error
+The continuous comparison No.1 execution command (Y09) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y0B)
+* Coincidence output No.2 test command (Y0C)","Turn OFF the coincidence output test command, then turn ON the continuous comparison execution command."
+0907,"Continuous comparison No.1 execution not possible error
+The continuous comparison No.1 execution command (Y19) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y1B)
+* Coincidence output No.2 test command (Y1C)","Turn OFF the coincidence output test command, then turn ON the continuous comparison execution command."
+0520,"Continuous comparison No.2 execution not possible error
+The continuous comparison No.2 execution command (Y0A) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y0B)
+* Coincidence output No.2 test command (Y0C)","Turn OFF the coincidence output test command, then turn ON the continuous comparison execution command."
+0908,"Continuous comparison No.2 execution not possible error
+The continuous comparison No.2 execution command (Y1A) is turned ON while one of the following is ON.
+* Coincidence output No.1 test command (Y1B)
+* Coincidence output No.2 test command (Y1C)","Turn OFF the coincidence output test command, then turn ON the continuous comparison execution command."
+05DC,"Ring counter upper/lower limit value setting error
+The count enable command (Y06) is turned ON under the following condition.
+(Ring counter lower limit value (Un\G0 and 1)) > (Ring counter upper limit value (Un\G2 and 3))
+(Only for the ring counter function)","Set a value which satisfies lower limit value is equal to or smaller than upper limit value."
+09C4,"Ring counter upper/lower limit value setting error
+The count enable command (Y16) is turned ON under the following condition.
+(Ring counter lower limit value (Un\G200 and 201)) > (Ring counter upper limit value (Un\G202 and 203))
+(Only for the ring counter function)","Set a value which satisfies lower limit value is equal to or smaller than upper limit value."
+0712,"Switch setting error
+An invalid value is set in the switch setting for intelligent function module in MELSOFT application.","Set a correct value in MELSOFT application and perform [Write to PLC]. After that, power OFF then ON the programmable controller CPU or reset it."
+0AFA,"Switch setting error
+An invalid value is set in the switch setting for intelligent function module in MELSOFT application.","Set a correct value in MELSOFT application and perform [Write to PLC]. After that, power OFF then ON the programmable controller CPU or reset it."
+071C,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF then ON the programmable controller CPU or reset it."
+0B04,"Programmable controller CPU error
+An error occurred in the programmable controller CPU.","Power OFF then ON the programmable controller CPU or reset it."
+0726,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF then ON the programmable controller CPU or reset it."
+0B0E,"Watchdog timer error of programmable controller CPU
+A watchdog timer error occurred in the programmable controller CPU.","Power OFF then ON the programmable controller CPU or reset it."
+0730,"Module error
+An error occurred in the module.","Power OFF then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+0B18,"Module error
+An error occurred in the module.","Power OFF then ON the programmable controller CPU or reset it.
+If an error occurs again, replace the module."
+073A,"Hardware error
+A hardware error occurred.","Replace the module."
+0B22,"Hardware error
+A hardware error occurred.","Replace the module."
+0744,"Blown fuse error
+The fuse of the external coincidence output part is blown.","* For replacement of fuse, please consult your local Mitsubishi representative.
+* When temporarily using the module with a blown fuse, do not apply a voltage to the external coincidence output power supply terminal and power OFF then ON or reset the programmable controller CPU."
+0B2C,"Blown fuse error
+The fuse of the external coincidence output part is blown.","* For replacement of fuse, please consult your local Mitsubishi representative.
+* When temporarily using the module with a blown fuse, do not apply a voltage to the external coincidence output power supply terminal and power OFF then ON or reset the programmable controller CPU."
+</ERRCODE>,,
